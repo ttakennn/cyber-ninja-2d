@@ -19,7 +19,7 @@ export type LevelVisual = Readonly<{
   shapeId: string;
   color: number;
   opacity: number;
-}> & (Readonly<{ kind: 'rectangle' }> | Readonly<{ kind: 'ladder'; rungSpacing: number; structureOpacity: number; railHighlight?: number }>);
+}> & (Readonly<{ kind: 'rectangle'; bottom?: number; z?: number }> | Readonly<{ kind: 'ladder'; rungSpacing: number; structureOpacity: number; railHighlight?: number }>);
 
 export interface LevelData {
   readonly version: 1;
@@ -129,7 +129,13 @@ export function parseLevelData(value: unknown): LevelData {
     const opacity = visual.opacity === undefined ? 1 : finite(visual.opacity, `${path}.opacity`);
     if (opacity < 0 || opacity > 1) fail(`${path}.opacity`, 'phải nằm trong 0..1');
     const base = { shapeId, color: color(visual.color, `${path}.color`), opacity };
-    if (kind === 'rectangle') return { ...base, kind };
+    if (kind === 'rectangle') {
+      const bottom = visual.bottom === undefined ? undefined : finite(visual.bottom, `${path}.bottom`);
+      if (bottom !== undefined && (bottom >= shape.position.y + shape.height / 2 || !Number.isFinite(shape.position.y + shape.height / 2 - bottom))) fail(`${path}.bottom`, 'phải thấp hơn đỉnh hình và tạo chiều cao hữu hạn');
+      const z = visual.z === undefined ? undefined : finite(visual.z, `${path}.z`);
+      if (z !== undefined && (z <= -90 || z >= 10)) fail(`${path}.z`, 'phải nằm trong frustum (-90,10)');
+      return { ...base, kind, ...(bottom === undefined ? {} : { bottom }), ...(z === undefined ? {} : { z }) };
+    }
     if (!climbables.some((zone) => zone.id === shapeId)) fail(`${path}.shapeId`, 'phải tham chiếu vùng leo khi vẽ ladder');
     const rungSpacing = visual.rungSpacing === undefined ? 0.4 : finite(visual.rungSpacing, `${path}.rungSpacing`);
     if (rungSpacing <= 0) fail(`${path}.rungSpacing`, 'phải lớn hơn 0');

@@ -22,7 +22,7 @@ const prop = { id: 'vine', image: 'vine.png', pixelSize: [10, 20], z: 2, layer: 
 
 describe('Task 008 Fix: neo world và foreground', () => {
   it('ladder thêm highlight/pát chỉ ở pilot, không đổi vùng leo; màu sai báo rõ', () => {
-    expect(parseLevelData(pilot).visuals[0]).toMatchObject({ railHighlight: 0x8b98aa, opacity: 0 });
+    expect(parseLevelData(pilot).visuals[0]).toMatchObject({ railHighlight: 0xffe6a3, opacity: 0 });
     const level = new TestLevel(pilot);
     const old = new TestLevel(graybox);
     expect(level.climbables).toEqual(old.climbables);
@@ -105,7 +105,7 @@ describe('Task 008 Fix: neo world và foreground', () => {
     }
     expect(pilot.environment.decorations.filter((entry) => 'layer' in entry && entry.layer === 'foreground')).toHaveLength(2);
     const near = pilot.environment.backgrounds.find(({ id }) => id === 'buildings-near')!;
-    expect(near).toMatchObject({ verticalAnchor: 'world', worldBottom: -2.7, bottomOffset: 0 });
+    expect(near).toMatchObject({ verticalAnchor: 'world', worldBottom: -3, bottomOffset: 0 });
     expect(new Set(pilot.tilemap.layers.flatMap(({ cells }) => cells.flat().filter((tile) => tile !== null))))
       .toEqual(new Set([2, 3, 10, 11]));
   });

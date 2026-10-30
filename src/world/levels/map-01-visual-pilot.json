@@ -103,6 +103,15 @@
       },
       "width": 10,
       "height": 1
+    },
+    {
+      "id": "upper-roof-support",
+      "position": {
+        "x": 42.5,
+        "y": -1.75
+      },
+      "width": 11,
+      "height": 5.5
     }
   ],
   "climbables": [
@@ -121,11 +130,51 @@
     {
       "shapeId": "alley-ladder",
       "kind": "ladder",
-      "color": "#3e536e",
+      "color": "#ba8a3f",
       "opacity": 0,
-      "structureOpacity": 0.9,
+      "structureOpacity": 1,
       "rungSpacing": 0.4,
-      "railHighlight": "#8b98aa"
+      "railHighlight": "#ffe6a3"
+    },
+    {
+      "kind": "rectangle",
+      "shapeId": "street",
+      "color": "#182656",
+      "opacity": 1,
+      "bottom": -4.5,
+      "z": -0.6
+    },
+    {
+      "kind": "rectangle",
+      "shapeId": "roof-2",
+      "color": "#182656",
+      "opacity": 1,
+      "bottom": -4.5,
+      "z": -0.6
+    },
+    {
+      "kind": "rectangle",
+      "shapeId": "roof-3",
+      "color": "#182656",
+      "opacity": 1,
+      "bottom": -4.5,
+      "z": -0.6
+    },
+    {
+      "kind": "rectangle",
+      "shapeId": "roof-4",
+      "color": "#182656",
+      "opacity": 1,
+      "bottom": -4.5,
+      "z": -0.6
+    },
+    {
+      "kind": "rectangle",
+      "shapeId": "upper-roof-support",
+      "color": "#182656",
+      "opacity": 1,
+      "bottom": -4.5,
+      "z": -0.6
     }
   ],
   "tilemap": {
@@ -435,7 +484,7 @@
         "z": -2,
         "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "verticalAnchor": "world",
-        "worldBottom": -2.7,
+        "worldBottom": -3,
         "bottomOffset": 0
       }
     ],
@@ -467,7 +516,7 @@
         "image": "assets/environments/map01/props/props/signs/sign-pho-247.png",
         "worldPosition": {
           "x": 4.7,
-          "y": -0.8
+          "y": -0.8677236363636364
         },
         "worldSize": {
           "width": 1.65,
@@ -488,8 +537,8 @@
         "id": "props-sign-pharmacy-2",
         "image": "assets/environments/map01/props/props/signs/sign-pharmacy.png",
         "worldPosition": {
-          "x": 19,
-          "y": 0.5
+          "x": 16.35,
+          "y": 2
         },
         "worldSize": {
           "width": 0.6562,
@@ -504,50 +553,6 @@
         "pixelSize": [
           120,
           224
-        ]
-      },
-      {
-        "id": "props-street-tree-3",
-        "image": "assets/environments/map01/props/props/street/street-tree.png",
-        "worldPosition": {
-          "x": 24,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.2032,
-          "height": 1.7937
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.35,
-        "collision": false,
-        "pixelSize": [
-          220,
-          328
-        ]
-      },
-      {
-        "id": "props-aircon-unit-4",
-        "image": "assets/environments/map01/props/props/alley/aircon-unit.png",
-        "worldPosition": {
-          "x": 36,
-          "y": -0.9
-        },
-        "worldSize": {
-          "width": 0.7984,
-          "height": 0.618
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.25,
-        "collision": false,
-        "pixelSize": [
-          146,
-          113
         ]
       },
       {
@@ -643,7 +648,7 @@
         "image": "assets/environments/map01/foreground/individual/street_shop_awning.png",
         "worldPosition": {
           "x": 4.7,
-          "y": -2.5
+          "y": -2.5677236363636364
         },
         "worldSize": {
           "width": 2.28,
@@ -820,7 +825,7 @@
         "z": 2
       },
       {
-        "id": "foreground-parapet_wall-17",
+        "id": "foreground-parapet_wall-15",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -849,7 +854,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-18",
+        "id": "foreground-parapet_wall-16",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -878,7 +883,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-19",
+        "id": "foreground-parapet_wall-17",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -907,7 +912,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-20",
+        "id": "foreground-parapet_wall-18",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -936,7 +941,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-21",
+        "id": "foreground-parapet_wall-19",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -965,7 +970,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-22",
+        "id": "foreground-parapet_wall-20",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -994,7 +999,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-23",
+        "id": "foreground-parapet_wall-21",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1023,7 +1028,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-24",
+        "id": "foreground-parapet_wall-22",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1052,7 +1057,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-25",
+        "id": "foreground-parapet_wall-23",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1081,7 +1086,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-26",
+        "id": "foreground-parapet_wall-24",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1110,7 +1115,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-27",
+        "id": "foreground-parapet_wall-25",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1139,7 +1144,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-28",
+        "id": "foreground-parapet_wall-26",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1168,7 +1173,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-29",
+        "id": "foreground-parapet_wall-27",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1197,7 +1202,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-30",
+        "id": "foreground-parapet_wall-28",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1226,7 +1231,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-31",
+        "id": "foreground-parapet_wall-29",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1255,7 +1260,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-32",
+        "id": "foreground-parapet_wall-30",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1284,7 +1289,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-33",
+        "id": "foreground-parapet_wall-31",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1313,7 +1318,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-34",
+        "id": "foreground-parapet_wall-32",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1342,7 +1347,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-35",
+        "id": "foreground-parapet_wall-33",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1371,7 +1376,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-36",
+        "id": "foreground-parapet_wall-34",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1400,7 +1405,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-37",
+        "id": "foreground-parapet_wall-35",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1429,7 +1434,7 @@
         }
       },
       {
-        "id": "foreground-parapet_wall-38",
+        "id": "foreground-parapet_wall-36",
         "image": "assets/environments/map01/foreground/individual/parapet_wall.png",
         "pixelSize": [
           525,
@@ -1622,35 +1627,6 @@
         "worldSize": {
           "width": 1.5,
           "height": 6.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.3
-      },
-      {
-        "id": "production-wall-b-ac-mount",
-        "image": "assets/environments/map01/production/atlases/architecture-1.png",
-        "pixelSize": [
-          1920,
-          864
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 600,
-          "width": 256,
-          "height": 256
-        },
-        "worldPosition": {
-          "x": 36,
-          "y": -1.5
-        },
-        "worldSize": {
-          "width": 2,
-          "height": 2
         },
         "anchor": {
           "x": 0.5,

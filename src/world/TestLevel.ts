@@ -32,7 +32,10 @@ export class TestLevel {
     const shapes = new Map([...data.solids, ...data.climbables].map((shape) => [shape.id, shape]));
     for (const visual of data.visuals) {
       const shape = shapes.get(visual.shapeId)!;
-      this.addPlatform(shape, visual.color, visual.opacity);
+      if (visual.kind === 'rectangle' && visual.bottom !== undefined) {
+        const top = shape.position.y + shape.height / 2;
+        this.addPlatform({ position: { x: shape.position.x, y: (top + visual.bottom) / 2 }, width: shape.width, height: top - visual.bottom }, visual.color, visual.opacity, visual.z ?? 0);
+      } else this.addPlatform(shape, visual.color, visual.opacity, visual.kind === 'rectangle' ? visual.z ?? 0 : 0);
       if (visual.kind === 'ladder') this.addLadder(shape, visual.color, visual.rungSpacing, visual.structureOpacity, visual.railHighlight);
     }
     this.tilemap = data.tilemap ? new TilemapRenderer(data.tilemap) : null;

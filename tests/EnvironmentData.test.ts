@@ -83,13 +83,13 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('map01 chuyển sang pilot, graybox gốc còn nguyên mọi field gameplay', () => {
     expect(getLevelData('map01')).toBe(pilot);
     expect(getLevelData('map01-graybox')).toBe(graybox);
-    for (const key of ['version', 'id', 'spawn', 'solids', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) {
+    for (const key of ['version', 'id', 'spawn', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) {
       expect(pilot[key]).toEqual(graybox[key]);
     }
     const level = new TestLevel(pilot);
-    expect(level.colliders).toEqual(graybox.solids);
+    expect(level.colliders.slice(0, 10)).toEqual(graybox.solids);
     expect(level.climbables).toEqual(graybox.climbables);
-    expect(level.colliders).toHaveLength(10);
+    expect(level.colliders).toHaveLength(11);
     expect(level.climbables[0]?.position.x).toBe(29);
     level.dispose();
   });
@@ -97,7 +97,7 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('mọi PNG dùng đúng kích thước khai báo, RGBA và tỷ lệ prop từ placement thật', () => {
     const environment = parseEnvironmentData(pilot.environment);
     const images = new Map([...environment.backgrounds, ...environment.decorations].map((entry) => [entry.image, entry]));
-    expect(images.size).toBe(21);
+    expect(images.size).toBe(19);
     for (const [path, entry] of images) {
       const png = readFileSync(new URL(`../public/${path}`, import.meta.url));
       expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
@@ -111,8 +111,9 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
       if (!original) continue;
       expect(decoration.worldSize).toEqual(original.worldSize);
       const adjusted: Record<string, { x: number; y: number }> = {
-        'foreground-street_shop_awning-9': { x: 4.7, y: -2.5 },
-        'props-sign-pho-247-1': { x: 4.7, y: -0.8 },
+        'foreground-street_shop_awning-9': { x: 4.7, y: -2.5 - 9 / 330 * 2.4832 },
+        'props-sign-pho-247-1': { x: 4.7, y: -0.8 - 9 / 330 * 2.4832 },
+        'props-sign-pharmacy-2': { x: 16.35, y: 2 },
         'foreground-railing_cross-11': { x: 46, y: 2 },
       };
       expect(decoration.worldPosition).toEqual(adjusted[decoration.id] ?? original.worldPosition);

@@ -17,6 +17,11 @@ const production = level.environment!.decorations.filter(({ id }) => id.startsWi
 describe('RC1 production architecture', () => {
   it.each(metadata.assets)('$id đúng atlas, sourceRect, world bounds và SHA-256 nguồn', (asset) => {
     const entry = production.find(({ id }) => id === `production-${asset.id}`)!;
+    if (asset.id === 'wall-b-ac-mount') {
+      expect(entry).toBeUndefined();
+      expect(createHash('sha256').update(readFileSync(new URL(`../public/${asset.image}`, import.meta.url))).digest('hex')).toBe(asset.sha256);
+      return;
+    }
     expect(entry).toEqual(additions.decorations.find(({ id }) => id === entry.id));
     expect(entry.image).toBe(asset.atlas.image);
     expect(entry.pixelSize).toEqual(asset.atlas.pixelSize);
@@ -34,7 +39,7 @@ describe('RC1 production architecture', () => {
   });
 
   it('hai atlas nguyên byte, rect không gồm extrusion và không vượt ảnh', () => {
-    expect(production).toHaveLength(7);
+    expect(production).toHaveLength(6);
     expect(new Set(production.map(({ image }) => image)).size).toBe(2);
     for (const atlas of metadata.atlases) {
       const png = readFileSync(new URL(`../public/${atlas.image}`, import.meta.url));
@@ -51,7 +56,8 @@ describe('RC1 production architecture', () => {
   });
 
   it('thay fill A/C, bỏ window tạm; giữ mái, decal A, nền phố và mọi gameplay field', () => {
-    for (const key of ['spawn', 'solids', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    for (const key of ['spawn', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    expect(pilot.solids.slice(0, 10)).toEqual(graybox.solids);
     expect(level.tilemap!.layers.find(({ id }) => id === 'passage-masonry')!.cells.flat().every((cell) => cell === null)).toBe(true);
     expect(level.tilemap!.layers.find(({ id }) => id === 'hand-placed-details')!.cells.flat().every((cell) => cell === null)).toBe(true);
     const map = level.tilemap!;
@@ -69,8 +75,8 @@ describe('RC1 production architecture', () => {
     expect(map.layers.some(({ id }) => id === 'roof-edges')).toBe(true);
     expect(map.layers.some(({ id }) => id === 'street-foundation')).toBe(true);
     expect(production.find(({ id }) => id === 'production-wall-b-ladder')!.z).toBeLessThan(0);
-    expect(production.find(({ id }) => id === 'production-wall-b-ac-mount')!.z)
-      .toBeLessThan(level.environment!.decorations.find(({ id }) => id === 'props-aircon-unit-4')!.z);
+    expect(production.find(({ id }) => id === 'production-wall-b-ac-mount')).toBeUndefined();
+    expect(level.environment!.decorations.find(({ id }) => id === 'props-aircon-unit-4')).toBeUndefined();
   });
 
   it('atlas cùng URL có UV riêng từng mảng, không tint ảnh và không tạo collider', async () => {

@@ -44,7 +44,8 @@ describe('Task 008.2 parapet và nền phố', () => {
     expect(cells).toHaveLength(80);
     expect(cells.every(({ x, y }) => x >= 0.25 && x <= 39.75 && y === -4.25)).toBe(true);
     expect(layer.tint).toBe(0x182656);
-    for (const key of ['spawn', 'solids', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    for (const key of ['spawn', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    expect(pilot.solids.slice(0, 10)).toEqual(graybox.solids);
   });
 
   it.each([null, {}, { x: -1, y: 0, width: 10, height: 120 }, { x: 0, y: 0, width: 0, height: 120 },

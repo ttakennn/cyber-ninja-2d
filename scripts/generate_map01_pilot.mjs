@@ -7,7 +7,7 @@ const props = read('../public/assets/environments/map01/props/props.json').props
 const foreground = read('../public/assets/environments/map01/foreground/foreground.json').assets;
 const production = read('../integration/map01-production-additions.json');
 const base = 'assets/environments/map01/';
-const decorations = source.decorations.map((entry) => {
+const decorations = source.decorations.filter(({ id }) => id !== 'props-street-tree-3' && id !== 'props-aircon-unit-4').map((entry) => {
   const match = /^(props|foreground)-(.+)-\d+$/.exec(entry.id);
   if (!match) throw new Error(`ID placement không hợp lệ: ${entry.id}`);
   const catalog = match[1] === 'props' ? props : foreground;
@@ -16,10 +16,12 @@ const decorations = source.decorations.map((entry) => {
   const size = asset.sizePx ?? asset.pixelSize;
   return { ...entry, image: `${base}${match[1]}/${asset.image}`, pixelSize: [size.width, size.height] };
 });
-// Hiệu chỉnh placement nhìn thấy qua Three.js, không sửa kích thước/PNG hay gameplay.
+// Chân mái hiên kết thúc ở hàng pixel 320/330; bù alpha để phần nhìn thấy chạm đường.
+const shopFootPadding = 9 / 330 * decorations.find(({ id }) => id === 'foreground-street_shop_awning-9').worldSize.height;
 for (const decoration of decorations) {
-  if (decoration.id === 'foreground-street_shop_awning-9') decoration.worldPosition = { x: 4.7, y: -2.5 };
-  if (decoration.id === 'props-sign-pho-247-1') decoration.worldPosition = { x: 4.7, y: -0.8 };
+  if (decoration.id === 'foreground-street_shop_awning-9') decoration.worldPosition = { x: 4.7, y: -2.5 - shopFootPadding };
+  if (decoration.id === 'props-sign-pho-247-1') decoration.worldPosition = { x: 4.7, y: -0.8 - shopFootPadding };
+  if (decoration.id === 'props-sign-pharmacy-2') decoration.worldPosition = { x: 16.35, y: 2 };
   if (decoration.id === 'foreground-railing_cross-11') decoration.worldPosition = { x: 46, y: 2 };
 }
 function facade(id, assetId, x, y, layer = 'behind-player') {
@@ -57,9 +59,14 @@ for (const solid of level.solids.filter(({ id }) => id === 'upper-roof' || /^roo
   strip(465, 60);
 }
 level.environment = { backgrounds: source.backgrounds.map((layer) => layer.id === 'buildings-near'
-  ? { ...layer, verticalAnchor: 'world', worldBottom: -2.7, worldHeight: 8, bottomOffset: 0 }
-  : { ...layer, bottomOffset: 0 }), decorations: [...decorations, ...production.decorations] };
-level.visuals[0] = { ...level.visuals[0], color: '#3e536e', opacity: 0, structureOpacity: 0.9, railHighlight: '#8b98aa' };
+  ? { ...layer, verticalAnchor: 'world', worldBottom: -3, worldHeight: 8, bottomOffset: 0 }
+  : { ...layer, bottomOffset: 0 }), decorations: [...decorations, ...production.decorations.filter(({ id }) => id !== 'production-wall-b-ac-mount')] };
+level.visuals[0] = { ...level.visuals[0], color: '#ba8a3f', opacity: 0, structureOpacity: 1, railHighlight: '#ffe6a3' };
+// Người dùng yêu cầu chặn lối dưới upper-roof tại X=37; các nền mái khác chỉ che hình.
+level.solids.push({ id: 'upper-roof-support', position: { x: 42.5, y: -1.75 }, width: 11, height: 5.5 });
+for (const shape of level.solids.filter(({ id }) => id === 'street' || id === 'upper-roof-support' || /^roof-\d$/.test(id))) {
+  level.visuals.push({ kind: 'rectangle', shapeId: shape.id, color: '#182656', opacity: 1, bottom: -4.5, z: -0.6 });
+}
 level.tilemap.tileset = { image: `${base}tilesets/terrain-64-atlas.png`, imageWidth: 1024, imageHeight: 1024, tileWidth: 64, tileHeight: 64 };
 const grid = () => Array.from({ length: level.tilemap.rows }, () => Array(level.tilemap.columns).fill(null));
 const terrain = grid();
@@ -75,6 +82,7 @@ function paint(cells, left, bottom, right, top, id) {
   }
 }
 for (const solid of level.solids) {
+  if (solid.id === 'upper-roof-support') continue;
   const left = solid.position.x - solid.width / 2;
   const right = solid.position.x + solid.width / 2;
   const bottom = solid.position.y - solid.height / 2;
