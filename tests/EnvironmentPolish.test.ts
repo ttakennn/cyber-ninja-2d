@@ -107,7 +107,7 @@ describe('Task 008 Fix: neo world và foreground', () => {
     const near = pilot.environment.backgrounds.find(({ id }) => id === 'buildings-near')!;
     expect(near).toMatchObject({ verticalAnchor: 'world', worldBottom: -2.7, bottomOffset: 0 });
     expect(new Set(pilot.tilemap.layers.flatMap(({ cells }) => cells.flat().filter((tile) => tile !== null))))
-      .toEqual(new Set([2, 3, 4, 8, 10, 11]));
+      .toEqual(new Set([2, 3, 10, 11]));
   });
 
   it('generator tái tạo đúng JSON đã review, không ghi file trong chế độ check', () => {
@@ -122,7 +122,7 @@ describe('Task 008 Fix: neo world và foreground', () => {
     const data = parseTilemapData(pilot.tilemap);
     const renderer = new TilemapRenderer(data);
     await renderer.load(async () => new Texture({ width: 1024, height: 1024 } as HTMLImageElement));
-    const wall = renderer.visual.children.find(({ name }) => name === 'passage-masonry')! as Mesh;
+    const wall = renderer.visual.children.find(({ name }) => name === 'terrain')! as Mesh;
     const uv = wall.geometry.getAttribute('uv');
     expect(uv.getX(0)).toBeCloseTo((3 * 64 + 20.5) / 1024);
     expect(uv.getX(1)).toBeCloseTo((4 * 64 - 20.5) / 1024);

@@ -185,8 +185,8 @@ describe('environment Three.js theo camera', () => {
     const renderer = new TilemapRenderer(map);
     await renderer.load(async () => new Texture({ width: 1024, height: 1024 } as HTMLImageElement));
     const meshes = renderer.visual.children as Mesh<PlaneGeometry, MeshBasicMaterial>[];
-    expect(meshes.find(({ name }) => name === 'passage-masonry')!.material.color.getHex()).toBe(0x687da6);
-    expect(meshes.find(({ name }) => name === 'hand-placed-details')!.material.color.getHex()).toBe(0xffffff);
+    expect(meshes.find(({ name }) => name === 'terrain')!.material.color.getHex()).toBe(0x687da6);
+    expect(meshes.find(({ name }) => name === 'markers')!.material.color.getHex()).toBe(0xffffff);
     renderer.dispose();
   });
 });

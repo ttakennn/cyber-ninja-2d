@@ -97,7 +97,7 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('mọi PNG dùng đúng kích thước khai báo, RGBA và tỷ lệ prop từ placement thật', () => {
     const environment = parseEnvironmentData(pilot.environment);
     const images = new Map([...environment.backgrounds, ...environment.decorations].map((entry) => [entry.image, entry]));
-    expect(images.size).toBe(19);
+    expect(images.size).toBe(21);
     for (const [path, entry] of images) {
       const png = readFileSync(new URL(`../public/${path}`, import.meta.url));
       expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
@@ -141,9 +141,9 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
     expect([png.readUInt32BE(16), png.readUInt32BE(20)]).toEqual([1024, 1024]);
     const roof = map.layers.find(({ id }) => id === 'passage-masonry')!;
     expect(roof.tint).toBe(0x687da6);
-    expect(new Set(roof.cells.flat().filter((tile) => tile !== null))).toEqual(new Set([3]));
+    expect(roof.cells.flat().filter((tile) => tile !== null)).toHaveLength(0);
     const details = map.layers.find(({ id }) => id === 'hand-placed-details')!;
-    expect(details.cells.flatMap((row) => row.slice(24, 34)).filter((tile) => tile === 8)).toHaveLength(2);
+    expect(details.cells.flatMap((row) => row.slice(24, 34)).filter((tile) => tile === 8)).toHaveLength(0);
   });
 
   it.each([-1, 0x1000000, NaN, null, '#ZZZZZZ', 'white'])('tint sai được báo đúng layer: %s', (tint) => {

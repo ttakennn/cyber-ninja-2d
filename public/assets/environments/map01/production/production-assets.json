@@ -1,0 +1,399 @@
+{
+  "schema": "cyber-ninja-map01-production-architecture/v1",
+  "version": "RC1",
+  "baselineCommit": "0eb00b7198763611a0e34a6f16ec3ff14e60e2d4",
+  "status": "READY_FOR_INTEGRATION_HUMAN_ART_AND_THREEJS_ACCEPTANCE_PENDING",
+  "pixelsPerWorldUnit": 128,
+  "coordinateSystem": "world X right / Y up; sourceRect top-left pixels; anchor bottom-center",
+  "colorSpace": "sRGB",
+  "filter": "LinearFilter",
+  "generateMipmaps": false,
+  "atlases": [
+    {
+      "image": "assets/environments/map01/production/atlases/architecture-0.png",
+      "pixelSize": [
+        1536,
+        1728
+      ],
+      "sha256": "0d0bb0032b4d47939999be5dc7da61da9f643bbb98656ec38b08aae0f640b984",
+      "edgeExtrusionPixels": 4,
+      "rotation": false
+    },
+    {
+      "image": "assets/environments/map01/production/atlases/architecture-1.png",
+      "pixelSize": [
+        1920,
+        864
+      ],
+      "sha256": "22dc585cd49accd487207577222a029623a4c48638195432bcc4ae1c8d9d739c",
+      "edgeExtrusionPixels": 4,
+      "rotation": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "facade-a-passage",
+      "image": "assets/environments/map01/production/individual/facade-a-passage.png",
+      "pixelSize": [
+        640,
+        640
+      ],
+      "worldBounds": {
+        "minX": 12,
+        "minY": -1.5,
+        "maxX": 17,
+        "maxY": 3.5
+      },
+      "worldPosition": {
+        "x": 14.5,
+        "y": -1.5
+      },
+      "worldSize": {
+        "width": 5,
+        "height": 5.0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-1.png",
+        "pixelSize": [
+          1920,
+          864
+        ],
+        "sourceRect": {
+          "x": 1048,
+          "y": 8,
+          "width": 640,
+          "height": 640
+        }
+      },
+      "sha256": "416f250ee634d451ec0da92e2446552ebdd233048b65219b93eb13cac9470065",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/facade-a-passage.png",
+        "originalSha256": "e368b266ef21cabd8189d15ace1d721d7738140d6b6b2f2617064e9aa5b43855",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    },
+    {
+      "id": "facade-c-upper",
+      "image": "assets/environments/map01/production/individual/facade-c-upper.png",
+      "pixelSize": [
+        1408,
+        448
+      ],
+      "worldBounds": {
+        "minX": 37,
+        "minY": -2.5,
+        "maxX": 48,
+        "maxY": 1
+      },
+      "worldPosition": {
+        "x": 42.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 11,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-0.png",
+        "pixelSize": [
+          1536,
+          1728
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1408,
+          "height": 448
+        }
+      },
+      "sha256": "0490dc7c6ecc1522fcfc5ab06f23332691c8626dab40ffc6bc838226e1e826fa",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/facade-c-upper.png",
+        "originalSha256": "e08e55909acbb40f949b3a4ca414075b3c9675c45070c2d071b62cd2a318ec8d",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    },
+    {
+      "id": "facade-c-roof2",
+      "image": "assets/environments/map01/production/individual/facade-c-roof2.png",
+      "pixelSize": [
+        1024,
+        576
+      ],
+      "worldBounds": {
+        "minX": 50,
+        "minY": -2.5,
+        "maxX": 58,
+        "maxY": 2
+      },
+      "worldPosition": {
+        "x": 54.0,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-1.png",
+        "pixelSize": [
+          1920,
+          864
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1024,
+          "height": 576
+        }
+      },
+      "sha256": "d00a66e6657fcb7f0d0dbd6d4b4a5ead321ea5e8b8e55dcfd9c65aaaa0113127",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/facade-c-roof2.png",
+        "originalSha256": "05c3c4530fcf6b0d0bbcaacdde1547e4c6ba222faa9e4a9bcfb5da56157faf12",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    },
+    {
+      "id": "facade-c-roof3",
+      "image": "assets/environments/map01/production/individual/facade-c-roof3.png",
+      "pixelSize": [
+        1024,
+        640
+      ],
+      "worldBounds": {
+        "minX": 60,
+        "minY": -2.5,
+        "maxX": 68,
+        "maxY": 2.5
+      },
+      "worldPosition": {
+        "x": 64.0,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 5.0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-0.png",
+        "pixelSize": [
+          1536,
+          1728
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 472,
+          "width": 1024,
+          "height": 640
+        }
+      },
+      "sha256": "6e7d2ce384cf439ae97aa43fc03d057ff1294d581642a1c55fae9e1a0221b464",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/facade-c-roof3.png",
+        "originalSha256": "4f65ef0db1b219cba6611a7aac545856b404059cd5a605eb0d93c3c97a8db45e",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    },
+    {
+      "id": "facade-c-roof4",
+      "image": "assets/environments/map01/production/individual/facade-c-roof4.png",
+      "pixelSize": [
+        1280,
+        576
+      ],
+      "worldBounds": {
+        "minX": 70,
+        "minY": -2.5,
+        "maxX": 80,
+        "maxY": 2
+      },
+      "worldPosition": {
+        "x": 75.0,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-0.png",
+        "pixelSize": [
+          1536,
+          1728
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 1128,
+          "width": 1280,
+          "height": 576
+        }
+      },
+      "sha256": "a5b0cb311ac5cae42f5d5eafbb60f8b798f434e8a9aee04eca81a7ac92474e18",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/facade-c-roof4.png",
+        "originalSha256": "c44ebb1cdcd1af4dd666babe32df0ba039457fa4e54949fafb9b774d783291d4",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    },
+    {
+      "id": "wall-b-ladder",
+      "image": "assets/environments/map01/production/individual/wall-b-ladder.png",
+      "pixelSize": [
+        192,
+        832
+      ],
+      "worldBounds": {
+        "minX": 28.25,
+        "minY": -2.5,
+        "maxX": 29.75,
+        "maxY": 4
+      },
+      "worldPosition": {
+        "x": 29.0,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.5,
+        "height": 6.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-1.png",
+        "pixelSize": [
+          1920,
+          864
+        ],
+        "sourceRect": {
+          "x": 1704,
+          "y": 8,
+          "width": 192,
+          "height": 832
+        }
+      },
+      "sha256": "146a3b225db37d0e4cecd4ef4237b146c1633484e5d73d47992b829360d72992",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/wall-b-ladder.png",
+        "originalSha256": "fd1a7fcf6c6cfbfe063504d242daac2e485b5d94ce2d4ad4ae6fd74085acd6d5",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    },
+    {
+      "id": "wall-b-ac-mount",
+      "image": "assets/environments/map01/production/individual/wall-b-ac-mount.png",
+      "pixelSize": [
+        256,
+        256
+      ],
+      "worldBounds": {
+        "minX": 35,
+        "minY": -1.5,
+        "maxX": 37,
+        "maxY": 0.5
+      },
+      "worldPosition": {
+        "x": 36.0,
+        "y": -1.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 2.0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false,
+      "atlas": {
+        "image": "assets/environments/map01/production/atlases/architecture-1.png",
+        "pixelSize": [
+          1920,
+          864
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 600,
+          "width": 256,
+          "height": 256
+        }
+      },
+      "sha256": "0736d80b0b8cecf72704638b0ca4701aef45e9ec7a95712809563503d6ab79ce",
+      "artStatus": "CANDIDATE_VISUALLY_INSPECTED_GAMEPLAY_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen (built-in)",
+        "original": "sources/generated/wall-b-ac-mount.png",
+        "originalSha256": "e31096b35a5aefe3b3d74098aaf472cd8c5038e7d49388c555d62afde61610d7",
+        "reference": "sources/user-handoff-architecture-reference.png",
+        "sourceRights": "User-provided reference; no separate source license supplied in handoff.",
+        "license": "No separate asset license assigned by this package."
+      }
+    }
+  ],
+  "notes": [
+    "All rectangles are background decoration, never collision.",
+    "Atlas sourceRect excludes extrusion; do not change rectangles to include the padding.",
+    "Use atlas or individual placements, never both.",
+    "C2/C3 contain small painted decorative AC details, with no collision or interaction.",
+    "Standalone Zone B AC, steel ladder and A doors/awning/light remain separate."
+  ]
+}

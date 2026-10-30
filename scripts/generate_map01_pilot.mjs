@@ -5,6 +5,7 @@ const level = read('../src/world/levels/map-01-graybox.json');
 const source = read('./map01-environment-pilot.input.json');
 const props = read('../public/assets/environments/map01/props/props.json').props;
 const foreground = read('../public/assets/environments/map01/foreground/foreground.json').assets;
+const production = read('../integration/map01-production-additions.json');
 const base = 'assets/environments/map01/';
 const decorations = source.decorations.map((entry) => {
   const match = /^(props|foreground)-(.+)-\d+$/.exec(entry.id);
@@ -57,7 +58,7 @@ for (const solid of level.solids.filter(({ id }) => id === 'upper-roof' || /^roo
 }
 level.environment = { backgrounds: source.backgrounds.map((layer) => layer.id === 'buildings-near'
   ? { ...layer, verticalAnchor: 'world', worldBottom: -2.7, worldHeight: 8, bottomOffset: 0 }
-  : { ...layer, bottomOffset: 0 }), decorations };
+  : { ...layer, bottomOffset: 0 }), decorations: [...decorations, ...production.decorations] };
 level.visuals[0] = { ...level.visuals[0], color: '#3e536e', opacity: 0, structureOpacity: 0.9, railHighlight: '#8b98aa' };
 level.tilemap.tileset = { image: `${base}tilesets/terrain-64-atlas.png`, imageWidth: 1024, imageHeight: 1024, tileWidth: 64, tileHeight: 64 };
 const grid = () => Array.from({ length: level.tilemap.rows }, () => Array(level.tilemap.columns).fill(null));
@@ -78,25 +79,15 @@ for (const solid of level.solids) {
   const right = solid.position.x + solid.width / 2;
   const bottom = solid.position.y - solid.height / 2;
   const top = solid.position.y + solid.height / 2;
-  if (solid.id === 'upper-roof' || /^roof-\d$/.test(solid.id)) {
-    // Mặt đứng hậu cảnh nối mái xuống phố; không thêm mặt sàn/collider.
-    paint(terrain, left, -2.5, right, bottom, 3);
-    for (let x = left + 1; x < right - 0.5; x += 3) paint(details, x, -0.5, x + 0.5, 0, 8);
-  }
   if (solid.id === 'passage-roof') {
-    // Khối tối, chỉ hai chi tiết đặt tay; không lát cửa sổ/biển sáng toàn mái hầm.
-    paint(masonry, left, bottom, right, top, 3);
+    // RC1 thay fill/pilaster tạm, giữ mép solid và decal cửa/đèn riêng.
     paint(edges, left, top - 0.5, right, top, 11);
     paint(edges, left, bottom, right, bottom + 0.5, 11);
-    paint(details, left, bottom + 0.5, left + 0.5, top - 0.5, 4);
-    paint(details, right - 0.5, bottom + 0.5, right, top - 0.5, 4);
   } else {
     paint(solid.id.endsWith('crate') ? edges : terrain, left, bottom, right, top, solid.id.endsWith('crate') ? 2 : 3);
     if (!solid.id.endsWith('crate')) paint(edges, left, top - 0.5, right, top, 11);
   }
 }
-paint(details, 13.5, 1.5, 14, 2, 8);
-paint(details, 16, 0, 16.5, 0.5, 8);
 paint(markers, 27, 0, 27.5, 0.5, 10);
 paint(markers, 77.5, 3, 78.5, 5.5, 10);
 paint(foundation, 0, -4.5, 40, -4, 3);

@@ -18,7 +18,7 @@ h1 span { color: #58e7db; }
 .controls { position: absolute; bottom: 12px; left: 50%; width: calc(100% - 32px); max-width: 1120px; transform: translateX(-50%); margin: 0; padding: 8px 12px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; color: #dce6f3; text-align: center; font-size: 14px; line-height: 2; pointer-events: none; }
 .controls > span { margin: 0 10px; color: #6c819a; }
 kbd { padding: 3px 6px; border: 1px solid #4b5d73; border-radius: 3px; color: #e2eaf3; font: inherit; }
-.debug-overlay { position: absolute; top: 16px; left: 16px; margin: 0; padding: 14px 16px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; color: #bff7eb; font-size: 12px; line-height: 1.8; pointer-events: none; }
+.debug-overlay { position: absolute; top: 16px; left: 16px; max-width: calc(100% - 32px); max-height: min(180px, 18vh); overflow: auto; margin: 0; padding: 10px 12px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; color: #bff7eb; font-size: 12px; line-height: 1.8; pointer-events: auto; }
 .debug-overlay[hidden] { display: none; }
 .startup-error { position: absolute; top: 40%; left: 10%; right: 10%; padding: 24px; background: #291b24; color: #ffcecb; line-height: 1.6; }
 
