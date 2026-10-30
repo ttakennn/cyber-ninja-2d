@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="64" viewBox="0 0 128 64" shape-rendering="crispEdges">
+  <!-- Atlas thử Task 006: 4 cột x 2 hàng, mỗi ô 32 x 32, ID tăng từ trái sang phải. -->
+  <g>
+    <path fill="#253c50" d="M0 0h32v32H0z"/>
+    <path fill="#63d9cf" d="M0 0h32v3H0z"/>
+    <path fill="#37556a" d="M1 6h30v23H1z"/>
+    <path fill="#162737" d="M2 15h28v2H2zM14 7h2v8h-2zM22 17h2v11h-2z"/>
+    <path fill="#203244" d="M32 0h32v32H32z"/>
+    <path fill="#30495c" d="M33 1h30v14H33zM33 17h30v14H33z"/>
+    <path fill="#152536" d="M46 1h2v14h-2zM54 17h2v14h-2z"/>
+    <path fill="#87613c" d="M64 0h32v32H64z"/>
+    <path fill="#c69a60" d="M66 2h28v28H66z"/>
+    <path fill="#6a4d35" d="M69 6h22v20H69z"/>
+    <path fill="none" stroke="#d3ad72" stroke-width="3" d="m69 6 22 20m0-20L69 26"/>
+    <path fill="#68757e" d="M96 0h32v32H96z"/>
+    <path fill="#334552" d="M98 2h28v22H98z"/>
+    <path fill="#e1b85e" d="M96 25h32v7H96z"/>
+    <path fill="#3b3e3e" d="m98 25 7 7h6l-7-7zm16 0 7 7h6l-7-7z"/>
+  </g>
+  <g>
+    <path fill="#3c6177" d="M0 32h32v32H0z"/>
+    <path fill="#74e3de" d="M0 32h32v3H0z"/>
+    <path fill="#1e354a" d="M2 38h28v22H2z"/>
+    <path fill="#58798b" d="M5 41h3v16H5zM24 41h3v16h-3z"/>
+    <path fill="#182632" d="M32 32h32v32H32z"/>
+    <path fill="#243a49" d="M34 34h28v28H34z"/>
+    <path fill="#15222e" d="M36 38h24v2H36zM36 46h24v2H36zM36 54h24v2H36z"/>
+    <path fill="#203545" d="M64 32h32v32H64z"/>
+    <path fill="#0e202b" d="M67 35h26v26H67z"/>
+    <path fill="#6bbfbf" d="M70 39h20v4H70z"/>
+    <path fill="#345b67" d="M70 47h8v3h-8zM81 47h9v3h-9zM70 54h20v2H70z"/>
+    <path fill="#e1b85e" d="m112 36 13 23H99z"/>
+    <path fill="#233442" d="M111 43h3v8h-3zM111 54h3v3h-3z"/>
+  </g>
+</svg>

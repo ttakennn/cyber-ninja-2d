@@ -1,0 +1,31 @@
+:root {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  color: #b5c4d8;
+  background: #0b101b;
+  color-scheme: dark;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+#game { position: relative; width: 100%; height: 100vh; height: 100dvh; overflow: hidden; }
+canvas { display: block; width: 100%; height: 100%; }
+.scene-label { position: absolute; top: 32px; right: 36px; text-align: right; pointer-events: none; }
+.eyebrow { color: #6c819a; font-size: 10px; letter-spacing: 0.16em; }
+h1 { margin: 10px 0 6px; color: #e2eaf3; font-size: clamp(16px, 2.2vw, 26px); letter-spacing: 0.07em; }
+h1 span { color: #58e7db; }
+.scene-label p { margin: 0; color: #8191a8; font-size: 11px; }
+.controls { position: absolute; bottom: 20px; left: 24px; right: 24px; margin: 0; text-align: center; font-size: 11px; line-height: 2.2; pointer-events: none; }
+.controls > span { margin: 0 10px; color: #6c819a; }
+kbd { padding: 3px 6px; border: 1px solid #4b5d73; border-radius: 3px; color: #e2eaf3; font: inherit; }
+.debug-overlay { position: absolute; top: 16px; left: 16px; margin: 0; padding: 14px 16px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; color: #bff7eb; font-size: 12px; line-height: 1.8; pointer-events: none; }
+.debug-overlay[hidden] { display: none; }
+.startup-error { position: absolute; top: 40%; left: 10%; right: 10%; padding: 24px; background: #291b24; color: #ffcecb; line-height: 1.6; }
+
+@media (max-width: 600px) {
+  .scene-label { top: 20px; right: 20px; }
+  .eyebrow { font-size: 8px; }
+  .debug-overlay { top: 100px; left: 12px; padding: 10px; font-size: 10px; }
+  .controls { bottom: 12px; left: 12px; right: 12px; font-size: 10px; }
+  .controls > span { margin: 0 3px; }
+}

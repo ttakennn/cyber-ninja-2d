@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "id": "tiles",
+  "spawn": {
+    "x": 0,
+    "y": 1.8
+  },
+  "solids": [
+    {
+      "id": "floor",
+      "position": {
+        "x": 2,
+        "y": -3
+      },
+      "width": 20,
+      "height": 1
+    },
+    {
+      "id": "block",
+      "position": {
+        "x": 3,
+        "y": -2
+      },
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "roof",
+      "position": {
+        "x": -4.5,
+        "y": -1.25
+      },
+      "width": 3,
+      "height": 0.5
+    },
+    {
+      "id": "platform",
+      "position": {
+        "x": 8.5,
+        "y": -0.25
+      },
+      "width": 3,
+      "height": 0.5
+    }
+  ],
+  "climbables": [
+    {
+      "id": "tiles-ladder",
+      "kind": "ladder",
+      "position": {
+        "x": 6,
+        "y": 0.25
+      },
+      "width": 1,
+      "height": 5.5
+    }
+  ],
+  "visuals": [
+    {
+      "shapeId": "tiles-ladder",
+      "kind": "ladder",
+      "color": "#6bafa9",
+      "opacity": 0.12,
+      "structureOpacity": 1,
+      "rungSpacing": 0.4
+    }
+  ],
+  "tilemap": {
+    "origin": {
+      "x": -8,
+      "y": 4.5
+    },
+    "columns": 40,
+    "rows": 16,
+    "tileSize": {
+      "width": 0.5,
+      "height": 0.5
+    },
+    "tileset": {
+      "image": "assets/environments/test-tileset.svg",
+      "imageWidth": 128,
+      "imageHeight": 64,
+      "tileWidth": 32,
+      "tileHeight": 32
+    },
+    "layers": [
+      {
+        "id": "background",
+        "opacity": 0.6,
+        "cells": [
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,6,5,5,5,5,6,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,6,5,5,5,5,6,5,5,5,6,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,7,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,5,5,5,5,5,5,5,5,5,5,5,null,null,null,null,null,null,null,null,null,null,null,5,5,5,5,5,5,5,5,5,5,5,5,5,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+        ]
+      },
+      {
+        "id": "terrain",
+        "opacity": 1,
+        "cells": [
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,4,4,4,4,4,4,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+          [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        ]
+      }
+    ]
+  }
+}
