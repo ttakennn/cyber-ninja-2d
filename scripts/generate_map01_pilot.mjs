@@ -21,13 +21,38 @@ for (const decoration of decorations) {
   if (decoration.id === 'props-sign-pho-247-1') decoration.worldPosition = { x: 4.7, y: -0.8 };
   if (decoration.id === 'foreground-railing_cross-11') decoration.worldPosition = { x: 46, y: 2 };
 }
-level.environment = { backgrounds: source.backgrounds.map((layer) => ({ ...layer, bottomOffset: layer.repeatX ? 1.5 : 0 })), decorations };
+function facade(id, assetId, x, y, layer = 'behind-player') {
+  const asset = foreground.find((entry) => entry.id === assetId);
+  if (!asset || !asset.artReviewStatus.startsWith('APPROVED_')) throw new Error(`Asset chưa duyệt: ${assetId}`);
+  decorations.push({ id, image: `${base}foreground/${asset.image}`, pixelSize: [asset.pixelSize.width, asset.pixelSize.height],
+    worldPosition: { x, y }, worldSize: asset.worldSize, anchor: { x: 0.5, y: 1 }, collision: false, layer, z: layer === 'foreground' ? 2 : -0.1 });
+}
+facade('facade-shutter', 'shutter_shop', 13.4, -1.5);
+facade('facade-shop', 'street_shop_awning', 15.55, -1.5);
+facade('facade-light', 'wall_light_amber', 14.5, 2);
+facade('foreground-vine_strip_01-12', 'vine_strip_01', 2.8, -4.15, 'foreground');
+facade('foreground-vine_strip_01-13', 'vine_strip_01', 39.5, -4.15, 'foreground');
+for (const solid of level.solids.filter(({ id }) => id === 'upper-roof' || /^roof-\d$/.test(id))) {
+  const left = solid.position.x - solid.width / 2;
+  const right = solid.position.x + solid.width / 2;
+  const top = solid.position.y + solid.height / 2;
+  const count = Math.ceil(solid.width / 3.8);
+  for (let index = 0; index < count; index += 1) {
+    facade(`foreground-parapet_wall-${decorations.length}`, 'parapet_wall',
+      Math.min(left + 1.9 + index * 3.8, right - 1.9), top - 0.8686);
+  }
+}
+level.environment = { backgrounds: source.backgrounds.map((layer) => layer.id === 'buildings-near'
+  ? { ...layer, verticalAnchor: 'world', worldBottom: -2.7, worldHeight: 8, bottomOffset: 0 }
+  : { ...layer, bottomOffset: 0 }), decorations };
+level.visuals[0] = { ...level.visuals[0], color: '#3e536e', opacity: 0, structureOpacity: 0.9, railHighlight: '#8b98aa' };
 level.tilemap.tileset = { image: `${base}tilesets/terrain-64-atlas.png`, imageWidth: 1024, imageHeight: 1024, tileWidth: 64, tileHeight: 64 };
 const grid = () => Array.from({ length: level.tilemap.rows }, () => Array(level.tilemap.columns).fill(null));
 const terrain = grid();
 const masonry = grid();
 const details = grid();
 const markers = grid();
+const edges = grid();
 function paint(cells, left, bottom, right, top, id) {
   const { origin, tileSize } = level.tilemap;
   for (let row = (origin.y - top) / tileSize.height; row < (origin.y - bottom) / tileSize.height; row += 1) {
@@ -39,12 +64,21 @@ for (const solid of level.solids) {
   const right = solid.position.x + solid.width / 2;
   const bottom = solid.position.y - solid.height / 2;
   const top = solid.position.y + solid.height / 2;
+  if (solid.id === 'upper-roof' || /^roof-\d$/.test(solid.id)) {
+    // Mặt đứng hậu cảnh nối mái xuống phố; không thêm mặt sàn/collider.
+    paint(terrain, left, -2.5, right, bottom, 3);
+    for (let x = left + 1; x < right - 0.5; x += 3) paint(details, x, -0.5, x + 0.5, 0, 8);
+  }
   if (solid.id === 'passage-roof') {
     // Khối tối, chỉ hai chi tiết đặt tay; không lát cửa sổ/biển sáng toàn mái hầm.
-    paint(masonry, left, bottom, right, top, 12);
+    paint(masonry, left, bottom, right, top, 3);
+    paint(edges, left, top - 0.5, right, top, 11);
+    paint(edges, left, bottom, right, bottom + 0.5, 11);
+    paint(details, left, bottom + 0.5, left + 0.5, top - 0.5, 4);
+    paint(details, right - 0.5, bottom + 0.5, right, top - 0.5, 4);
   } else {
-    paint(terrain, left, bottom, right, top, solid.id.endsWith('crate') ? 2 : 12);
-    if (!solid.id.endsWith('crate')) paint(terrain, left, top - 0.5, right, top, 11);
+    paint(solid.id.endsWith('crate') ? edges : terrain, left, bottom, right, top, solid.id.endsWith('crate') ? 2 : 3);
+    if (!solid.id.endsWith('crate')) paint(edges, left, top - 0.5, right, top, 11);
   }
 }
 paint(details, 13.5, 1.5, 14, 2, 8);
@@ -52,9 +86,10 @@ paint(details, 16, 0, 16.5, 0.5, 8);
 paint(markers, 27, 0, 27.5, 0.5, 10);
 paint(markers, 77.5, 3, 78.5, 5.5, 10);
 level.tilemap.layers = [
-  { id: 'terrain', tint: '#a5afc8', cells: terrain },
-  { id: 'passage-masonry', tint: '#2d3a54', cells: masonry },
+  { id: 'terrain', tint: '#687da6', sampleInset: 20, cells: terrain },
+  { id: 'passage-masonry', tint: '#687da6', sampleInset: 20, cells: masonry },
   { id: 'hand-placed-details', cells: details },
+  { id: 'roof-edges', tint: '#a5afc8', cells: edges },
   { id: 'markers', cells: markers },
 ];
 let output = JSON.stringify(level, null, 2);
@@ -62,4 +97,7 @@ for (const layer of level.tilemap.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');
   output = output.replace(expanded, `[\n${layer.cells.map((row) => `          ${JSON.stringify(row)}`).join(',\n')}\n        ]`);
 }
-writeFileSync(new URL('../src/world/levels/map-01-visual-pilot.json', import.meta.url), `${output}\n`);
+const destination = new URL('../src/world/levels/map-01-visual-pilot.json', import.meta.url);
+if (process.argv.includes('--check')) {
+  if (readFileSync(destination, 'utf8') !== `${output}\n`) throw new Error('JSON pilot không khớp generator');
+} else writeFileSync(destination, `${output}\n`);

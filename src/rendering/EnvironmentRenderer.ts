@@ -60,6 +60,7 @@ export class EnvironmentRenderer {
       }
       for (const definition of this.data.decorations) {
         const mesh = this.addMesh(definition.id, loaded.get(definition.image)!, definition.z);
+        mesh.renderOrder = definition.layer === 'foreground' ? 1 : 0;
         mesh.position.set(definition.worldPosition.x, definition.worldPosition.y + definition.worldSize.height / 2, definition.z);
         mesh.scale.set(definition.worldSize.width, definition.worldSize.height, 1);
       }
@@ -96,7 +97,9 @@ export class EnvironmentRenderer {
         texture.repeat.set(width / worldWidth, 1);
         texture.offset.x = ((phase % 1) + 1) % 1;
         mesh.scale.set(width, definition.worldHeight, 1);
-        mesh.position.y = camera.position.y * (1 - definition.parallaxY) - height / 2 + definition.bottomOffset + definition.worldHeight / 2;
+        mesh.position.y = definition.verticalAnchor === 'world'
+          ? definition.worldBottom! + definition.worldHeight / 2
+          : camera.position.y * (1 - definition.parallaxY) - height / 2 + definition.bottomOffset + definition.worldHeight / 2;
       }
     }
   }

@@ -13,6 +13,8 @@ export interface EnvironmentBackground extends EnvironmentImage {
   readonly repeatX: boolean;
   readonly worldHeight: number;
   readonly bottomOffset: number;
+  readonly verticalAnchor?: 'camera' | 'world';
+  readonly worldBottom?: number;
 }
 
 export interface EnvironmentDecoration extends EnvironmentImage {
@@ -20,6 +22,7 @@ export interface EnvironmentDecoration extends EnvironmentImage {
   readonly worldSize: Readonly<{ width: number; height: number }>;
   readonly anchor: Readonly<{ x: 0.5; y: 1 }>;
   readonly collision: false;
+  readonly layer?: 'behind-player' | 'foreground';
 }
 
 export interface EnvironmentData {
@@ -77,14 +80,22 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     const worldHeight = number(layer.worldHeight, `${path}.worldHeight`, Number.MIN_VALUE);
     const bottomOffset = layer.bottomOffset === undefined ? 0 : number(layer.bottomOffset, `${path}.bottomOffset`);
     if (!layer.repeatX && bottomOffset !== 0) fail(`${path}.bottomOffset`, 'ảnh cover cố định dùng offset bằng 0');
+    const verticalAnchor = layer.verticalAnchor;
+    if (verticalAnchor !== undefined && verticalAnchor !== 'camera' && verticalAnchor !== 'world') fail(`${path}.verticalAnchor`, 'phải là camera hoặc world');
+    if (verticalAnchor === 'world' && !layer.repeatX) fail(`${path}.verticalAnchor`, 'world chỉ dùng cho layer lặp ngang');
+    const worldBottom = verticalAnchor === 'world' ? number(layer.worldBottom, `${path}.worldBottom`) : undefined;
+    if (verticalAnchor !== 'world' && layer.worldBottom !== undefined) fail(`${path}.worldBottom`, 'chỉ dùng với verticalAnchor world');
+    if (verticalAnchor === 'world' && (parallaxY !== 0 || bottomOffset !== 0)) fail(path, 'world không dùng parallaxY hoặc bottomOffset');
     if (!Number.isFinite(worldHeight * base.pixelSize[0] / base.pixelSize[1])) fail(`${path}.worldHeight`, 'làm chiều rộng ảnh tràn số');
-    return { ...base, parallaxX, parallaxY, repeatX: layer.repeatX, worldHeight, bottomOffset };
+    return { ...base, parallaxX, parallaxY, repeatX: layer.repeatX, worldHeight, bottomOffset,
+      ...(verticalAnchor === undefined ? {} : { verticalAnchor }), ...(worldBottom === undefined ? {} : { worldBottom }) };
   });
   const decorations = Array.from(data.decorations, (entry, index): EnvironmentDecoration => {
     const path = `environment.decorations[${index}]`;
     const prop = object(entry, path);
     const base = image(prop, path, ids, dimensions);
-    if (base.z <= -0.45 || base.z >= 0) fail(`${path}.z`, 'vật trang trí pilot phải nằm giữa terrain và ladder/player (-0.45 < Z < 0)');
+    if (prop.layer !== undefined && prop.layer !== 'behind-player' && prop.layer !== 'foreground') fail(`${path}.layer`, 'phải là behind-player hoặc foreground');
+    if (prop.layer === 'foreground' ? base.z <= 1 || base.z >= 9 : base.z <= -0.45 || base.z >= 0) fail(`${path}.z`, 'behind-player cần -0.45 < Z < 0; foreground cần 1 < Z < 9');
     if (prop.collision !== false) fail(`${path}.collision`, 'phải bằng false, collider khai báo riêng');
     const point = object(prop.worldPosition, `${path}.worldPosition`);
     const worldPosition = { x: number(point.x, `${path}.worldPosition.x`), y: number(point.y, `${path}.worldPosition.y`) };
@@ -93,7 +104,8 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     const anchor = object(prop.anchor, `${path}.anchor`);
     if (anchor.x !== 0.5 || anchor.y !== 1) fail(`${path}.anchor`, 'pilot dùng bottom-center (x=0.5, y=1)');
     if (![worldPosition.x - worldSize.width / 2, worldPosition.x + worldSize.width / 2, worldPosition.y + worldSize.height].every(Number.isFinite)) fail(path, 'biên vật trang trí tràn số');
-    return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false };
+    return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false,
+      ...(prop.layer === undefined ? {} : { layer: prop.layer }) };
   });
   return { backgrounds, decorations };
 }

@@ -50,6 +50,7 @@ export class TilemapRenderer {
     const { tileset, tileSize } = this.data;
     const atlasColumns = tileset.imageWidth / tileset.tileWidth;
     for (const [layerIndex, layer] of this.data.layers.entries()) {
+      const inset = 0.5 + (layer.sampleInset ?? 0);
       const positions: number[] = [];
       const uvs: number[] = [];
       const indices: number[] = [];
@@ -64,10 +65,10 @@ export class TilemapRenderer {
           const x = tile % atlasColumns * tileset.tileWidth;
           const y = Math.floor(tile / atlasColumns) * tileset.tileHeight;
           // Inset nửa texel tránh lấy pixel của ô atlas kế cận; texture dùng nearest, không mipmap.
-          const u0 = (x + 0.5) / tileset.imageWidth;
-          const u1 = (x + tileset.tileWidth - 0.5) / tileset.imageWidth;
-          const v0 = 1 - (y + 0.5) / tileset.imageHeight;
-          const v1 = 1 - (y + tileset.tileHeight - 0.5) / tileset.imageHeight;
+          const u0 = (x + inset) / tileset.imageWidth;
+          const u1 = (x + tileset.tileWidth - inset) / tileset.imageWidth;
+          const v0 = 1 - (y + inset) / tileset.imageHeight;
+          const v1 = 1 - (y + tileset.tileHeight - inset) / tileset.imageHeight;
           const offset = positions.length / 3;
           positions.push(left, top, 0, right, top, 0, left, bottom, 0, right, bottom, 0);
           uvs.push(u0, v0, u1, v0, u0, v1, u1, v1);

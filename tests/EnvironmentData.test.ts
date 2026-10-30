@@ -83,7 +83,7 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('map01 chuyển sang pilot, graybox gốc còn nguyên mọi field gameplay', () => {
     expect(getLevelData('map01')).toBe(pilot);
     expect(getLevelData('map01-graybox')).toBe(graybox);
-    for (const key of ['version', 'id', 'spawn', 'solids', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY', 'visuals'] as const) {
+    for (const key of ['version', 'id', 'spawn', 'solids', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) {
       expect(pilot[key]).toEqual(graybox[key]);
     }
     const level = new TestLevel(pilot);
@@ -97,7 +97,7 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('mọi PNG dùng đúng kích thước khai báo, RGBA và tỷ lệ prop từ placement thật', () => {
     const environment = parseEnvironmentData(pilot.environment);
     const images = new Map([...environment.backgrounds, ...environment.decorations].map((entry) => [entry.image, entry]));
-    expect(images.size).toBe(15);
+    expect(images.size).toBe(19);
     for (const [path, entry] of images) {
       const png = readFileSync(new URL(`../public/${path}`, import.meta.url));
       expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
@@ -107,7 +107,8 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
     expect(environment.backgrounds.map(({ parallaxX, z, repeatX }) => [parallaxX, z, repeatX]))
       .toEqual([[0, -8, false], [0.15, -6, true], [0.35, -4, true], [0.65, -2, true]]);
     for (const decoration of environment.decorations) {
-      const original = placements.decorations.find(({ id }) => id === decoration.id)!;
+      const original = placements.decorations.find(({ id }) => id === decoration.id);
+      if (!original) continue;
       expect(decoration.worldSize).toEqual(original.worldSize);
       const adjusted: Record<string, { x: number; y: number }> = {
         'foreground-street_shop_awning-9': { x: 4.7, y: -2.5 },
@@ -139,10 +140,10 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
     const png = readFileSync(new URL(`../public/${map.tileset.image}`, import.meta.url));
     expect([png.readUInt32BE(16), png.readUInt32BE(20)]).toEqual([1024, 1024]);
     const roof = map.layers.find(({ id }) => id === 'passage-masonry')!;
-    expect(roof.tint).toBe(0x2d3a54);
-    expect(new Set(roof.cells.flat().filter((tile) => tile !== null))).toEqual(new Set([12]));
+    expect(roof.tint).toBe(0x687da6);
+    expect(new Set(roof.cells.flat().filter((tile) => tile !== null))).toEqual(new Set([3]));
     const details = map.layers.find(({ id }) => id === 'hand-placed-details')!;
-    expect(details.cells.flat().filter((tile) => tile !== null)).toHaveLength(2);
+    expect(details.cells.flatMap((row) => row.slice(24, 34)).filter((tile) => tile === 8)).toHaveLength(2);
   });
 
   it.each([-1, 0x1000000, NaN, null, '#ZZZZZZ', 'white'])('tint sai được báo đúng layer: %s', (tint) => {

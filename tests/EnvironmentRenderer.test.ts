@@ -18,9 +18,9 @@ describe('environment Three.js theo camera', () => {
     const renderer = new EnvironmentRenderer(data);
     const loader = vi.fn(async (url: string) => texture(url));
     await Promise.all([renderer.load(loader), renderer.load(loader)]);
-    expect(loader).toHaveBeenCalledTimes(15);
+    expect(loader).toHaveBeenCalledTimes(definitions.size);
     const meshes = renderer.visual.children as Mesh<PlaneGeometry, MeshBasicMaterial>[];
-    expect(meshes).toHaveLength(16);
+    expect(meshes).toHaveLength(data.backgrounds.length + data.decorations.length);
     expect(new Set(meshes.map((mesh) => mesh.geometry)).size).toBe(1);
     for (const mesh of meshes) {
       expect(mesh.material.transparent).toBe(true);
@@ -60,7 +60,8 @@ describe('environment Three.js theo camera', () => {
           expect(mesh.material.map?.wrapS).toBe(RepeatWrapping);
           expect(mesh.material.map?.offset.x).toBeCloseTo(modulo((x * layer.parallaxX - viewWidth / 2) / worldWidth));
           expect(mesh.material.map?.repeat.x).toBeCloseTo(viewWidth / worldWidth);
-          expect(mesh.position.y - y).toBeCloseTo(-viewHeight / 2 + layer.bottomOffset + layer.worldHeight / 2);
+          expect(mesh.position.y).toBeCloseTo(layer.verticalAnchor === 'world' ? layer.worldBottom! + layer.worldHeight / 2
+            : y * (1 - layer.parallaxY) - viewHeight / 2 + layer.bottomOffset + layer.worldHeight / 2);
         } else {
           expect(mesh.material.map?.repeat.toArray()).toEqual([1, 1]);
           expect(mesh.material.map?.offset.toArray()).toEqual([0, 0]);
@@ -114,7 +115,7 @@ describe('environment Three.js theo camera', () => {
     expect(renderer.visual.children).toEqual(meshes);
     expect(meshes.every((mesh) => mesh.geometry === geometry)).toBe(true);
     expect(prop.position).toEqual(position);
-    expect(loader).toHaveBeenCalledTimes(15);
+    expect(loader).toHaveBeenCalledTimes(definitions.size);
     renderer.dispose();
   });
 
@@ -145,7 +146,7 @@ describe('environment Three.js theo camera', () => {
       textures.push(result); spies.push(vi.spyOn(result, 'dispose'));
       return result;
     })).rejects.toThrow('environment image: assets/environments/map01/backgrounds/sky.png');
-    expect(textures).toHaveLength(14);
+    expect(textures).toHaveLength(definitions.size - 1);
     for (const spy of spies) expect(spy).toHaveBeenCalledTimes(1);
     expect(renderer.visual.children).toHaveLength(0);
     renderer.dispose();
@@ -184,7 +185,7 @@ describe('environment Three.js theo camera', () => {
     const renderer = new TilemapRenderer(map);
     await renderer.load(async () => new Texture({ width: 1024, height: 1024 } as HTMLImageElement));
     const meshes = renderer.visual.children as Mesh<PlaneGeometry, MeshBasicMaterial>[];
-    expect(meshes.find(({ name }) => name === 'passage-masonry')!.material.color.getHex()).toBe(0x2d3a54);
+    expect(meshes.find(({ name }) => name === 'passage-masonry')!.material.color.getHex()).toBe(0x687da6);
     expect(meshes.find(({ name }) => name === 'hand-placed-details')!.material.color.getHex()).toBe(0xffffff);
     renderer.dispose();
   });

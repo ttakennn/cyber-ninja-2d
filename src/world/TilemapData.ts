@@ -12,6 +12,7 @@ export interface TileLayerData {
   readonly id: string;
   readonly opacity: number;
   readonly tint?: number;
+  readonly sampleInset?: number;
   readonly cells: readonly (readonly (number | null)[])[];
 }
 
@@ -84,6 +85,8 @@ export function parseTilemapData(value: unknown): TilemapData {
     if (opacity < 0 || opacity > 1) fail(`${path}.opacity`, 'phải nằm trong 0..1');
     const tint = typeof layer.tint === 'string' && /^#[\da-f]{6}$/i.test(layer.tint) ? Number.parseInt(layer.tint.slice(1), 16) : layer.tint;
     if (tint !== undefined && (typeof tint !== 'number' || !Number.isInteger(tint) || tint < 0 || tint > 0xffffff)) fail(`${path}.tint`, 'phải là #RRGGBB hoặc số nguyên 0..16777215');
+    const sampleInset = layer.sampleInset;
+    if (sampleInset !== undefined && (typeof sampleInset !== 'number' || !Number.isInteger(sampleInset) || sampleInset < 0 || sampleInset * 2 >= Math.min(tileset.tileWidth, tileset.tileHeight))) fail(`${path}.sampleInset`, 'phải là số nguyên không âm nhỏ hơn nửa kích thước tile');
     if (!Array.isArray(layer.cells) || layer.cells.length !== rows) fail(`${path}.cells`, `phải có đúng ${rows} hàng`);
     const cells = Array.from(layer.cells, (value, row) => {
       const rowPath = `${path}.cells[${row}]`;
@@ -96,7 +99,8 @@ export function parseTilemapData(value: unknown): TilemapData {
         return tile;
       });
     });
-    return { id: layer.id, opacity, cells, ...(tint === undefined ? {} : { tint: tint as number }) };
+    return { id: layer.id, opacity, cells, ...(tint === undefined ? {} : { tint: tint as number }),
+      ...(sampleInset === undefined ? {} : { sampleInset: sampleInset as number }) };
   });
   return { origin, columns, rows, tileSize, tileset, layers };
 }

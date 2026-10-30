@@ -19,7 +19,7 @@ export type LevelVisual = Readonly<{
   shapeId: string;
   color: number;
   opacity: number;
-}> & (Readonly<{ kind: 'rectangle' }> | Readonly<{ kind: 'ladder'; rungSpacing: number; structureOpacity: number }>);
+}> & (Readonly<{ kind: 'rectangle' }> | Readonly<{ kind: 'ladder'; rungSpacing: number; structureOpacity: number; railHighlight?: number }>);
 
 export interface LevelData {
   readonly version: 1;
@@ -137,7 +137,8 @@ export function parseLevelData(value: unknown): LevelData {
     // opacity giữ nghĩa nền vùng leo của Task 005; ray/bậc có opacity riêng.
     const structureOpacity = visual.structureOpacity === undefined ? 1 : finite(visual.structureOpacity, `${path}.structureOpacity`);
     if (structureOpacity < 0 || structureOpacity > 1) fail(`${path}.structureOpacity`, 'phải nằm trong 0..1');
-    return { ...base, kind, rungSpacing, structureOpacity };
+    return { ...base, kind, rungSpacing, structureOpacity,
+      ...(visual.railHighlight === undefined ? {} : { railHighlight: color(visual.railHighlight, `${path}.railHighlight`) }) };
   });
   return { version: 1, id, spawn, solids, climbables, visuals,
     ...(cameraBounds === undefined ? {} : { cameraBounds }),
