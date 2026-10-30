@@ -80,7 +80,7 @@ export class TilemapRenderer {
       geometry.setAttribute('uv', new Float32BufferAttribute(uvs, 2));
       geometry.setIndex(indices);
       const mesh = new Mesh(geometry, new MeshBasicMaterial({ map: texture, transparent: true,
-        opacity: layer.opacity, alphaTest: 0.01, depthWrite: false }));
+        opacity: layer.opacity, color: layer.tint ?? 0xffffff, alphaTest: 0.01, depthWrite: false }));
       mesh.name = layer.id;
       // Layer sau gần camera hơn, vẫn ở sau hình chữ nhật cũ (Z=0) và nhân vật (Z=1).
       mesh.position.z = -0.5 + layerIndex * 0.01;

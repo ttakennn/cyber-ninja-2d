@@ -1,6 +1,8 @@
 import { Group, Mesh, MeshBasicMaterial, PlaneGeometry } from 'three';
 import type { AABB, ClimbableZone, Vector2 } from '../physics/Collision';
 import { TilemapRenderer } from '../rendering/TilemapRenderer';
+import { EnvironmentRenderer } from '../rendering/EnvironmentRenderer';
+import type { OrthographicCamera } from 'three';
 import { parseLevelData } from './LevelData';
 import type { CameraBounds } from './LevelData';
 import playground from './levels/playground.json';
@@ -16,6 +18,7 @@ export class TestLevel {
   readonly deathY?: number;
   private readonly meshes: Mesh<PlaneGeometry, MeshBasicMaterial>[] = [];
   private readonly tilemap: TilemapRenderer | null;
+  private readonly environment: EnvironmentRenderer | null;
 
   constructor(value: unknown = playground) {
     const data = parseLevelData(value);
@@ -34,10 +37,17 @@ export class TestLevel {
     }
     this.tilemap = data.tilemap ? new TilemapRenderer(data.tilemap) : null;
     if (this.tilemap) this.visual.add(this.tilemap.visual);
+    this.environment = data.environment ? new EnvironmentRenderer(data.environment) : null;
+    if (this.environment) this.visual.add(this.environment.visual);
   }
 
   async loadVisuals(): Promise<void> {
     await this.tilemap?.load();
+    await this.environment?.load();
+  }
+
+  updateVisuals(camera: OrthographicCamera): void {
+    this.environment?.update(camera);
   }
 
   private addLadder(ladder: AABB, color: number, rungSpacing: number, opacity: number): void {
@@ -65,6 +75,7 @@ export class TestLevel {
   dispose(): void {
     this.visual.removeFromParent();
     this.tilemap?.dispose();
+    this.environment?.dispose();
     for (const mesh of this.meshes) {
       mesh.geometry.dispose();
       mesh.material.dispose();

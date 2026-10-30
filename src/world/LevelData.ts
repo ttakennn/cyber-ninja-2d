@@ -1,6 +1,8 @@
 import type { AABB, ClimbableZone, Vector2 } from '../physics/Collision';
 import { parseTilemapData } from './TilemapData';
 import type { TilemapData } from './TilemapData';
+import { parseEnvironmentData } from './EnvironmentData';
+import type { EnvironmentData } from './EnvironmentData';
 
 export interface LevelSolid extends AABB {
   readonly id: string;
@@ -30,6 +32,7 @@ export interface LevelData {
   readonly cameraBounds?: CameraBounds;
   readonly cameraFollowY?: boolean;
   readonly deathY?: number;
+  readonly environment?: EnvironmentData;
 }
 
 function fail(path: string, message: string): never {
@@ -140,5 +143,6 @@ export function parseLevelData(value: unknown): LevelData {
     ...(cameraBounds === undefined ? {} : { cameraBounds }),
     ...(data.cameraFollowY === undefined ? {} : { cameraFollowY: data.cameraFollowY as boolean }),
     ...(deathY === undefined ? {} : { deathY }),
+    ...(data.environment === undefined ? {} : { environment: parseEnvironmentData(data.environment) }),
     ...(data.tilemap === undefined ? {} : { tilemap: parseTilemapData(data.tilemap) }) };
 }

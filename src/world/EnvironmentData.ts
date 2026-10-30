@@ -1,0 +1,99 @@
+import type { Vector2 } from '../physics/Collision';
+
+interface EnvironmentImage {
+  readonly id: string;
+  readonly image: string;
+  readonly pixelSize: readonly [number, number];
+  readonly z: number;
+}
+
+export interface EnvironmentBackground extends EnvironmentImage {
+  readonly parallaxX: number;
+  readonly parallaxY: number;
+  readonly repeatX: boolean;
+  readonly worldHeight: number;
+  readonly bottomOffset: number;
+}
+
+export interface EnvironmentDecoration extends EnvironmentImage {
+  readonly worldPosition: Readonly<Vector2>;
+  readonly worldSize: Readonly<{ width: number; height: number }>;
+  readonly anchor: Readonly<{ x: 0.5; y: 1 }>;
+  readonly collision: false;
+}
+
+export interface EnvironmentData {
+  readonly backgrounds: readonly EnvironmentBackground[];
+  readonly decorations: readonly EnvironmentDecoration[];
+}
+
+function fail(path: string, message: string): never {
+  throw new Error(`Dữ liệu level không hợp lệ: ${path} ${message}`);
+}
+
+function object(value: unknown, path: string): Record<string, unknown> {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) fail(path, 'phải là object');
+  return value as Record<string, unknown>;
+}
+
+function number(value: unknown, path: string, min = -Infinity, max = Infinity): number {
+  if (typeof value !== 'number' || !Number.isFinite(value) || value < min || value > max) fail(path, `phải là số hữu hạn trong ${min}..${max}`);
+  return value;
+}
+
+function image(value: Record<string, unknown>, path: string, ids: Set<string>, dimensions: Map<string, string>): EnvironmentImage {
+  if (typeof value.id !== 'string' || !value.id.trim()) fail(`${path}.id`, 'phải là chuỗi không rỗng');
+  if (ids.has(value.id)) fail(`${path}.id`, `bị trùng: ${value.id}`);
+  ids.add(value.id);
+  if (typeof value.image !== 'string' || !value.image.trim()) fail(`${path}.image`, 'phải là đường dẫn ảnh không rỗng');
+  if (!Array.isArray(value.pixelSize) || value.pixelSize.length !== 2) fail(`${path}.pixelSize`, 'phải có [width, height] pixel');
+  const pixelSize: [number, number] = [number(value.pixelSize[0], `${path}.pixelSize[0]`, 1), number(value.pixelSize[1], `${path}.pixelSize[1]`, 1)];
+  if (!pixelSize.every(Number.isSafeInteger)) fail(`${path}.pixelSize`, 'phải là số nguyên dương an toàn');
+  const declared = `${pixelSize[0]}x${pixelSize[1]}`;
+  if (dimensions.has(value.image) && dimensions.get(value.image) !== declared) fail(`${path}.pixelSize`, 'không nhất quán với cùng đường dẫn ảnh');
+  dimensions.set(value.image, declared);
+  const z = number(value.z, `${path}.z`);
+  if (z <= -90 || z >= 10) fail(`${path}.z`, 'phải nằm giữa -90 và 10 để ở trong frustum');
+  return { id: value.id, image: value.image, pixelSize, z };
+}
+
+export function parseEnvironmentData(value: unknown): EnvironmentData {
+  const data = object(value, 'environment');
+  if (!Array.isArray(data.backgrounds) || data.backgrounds.length > 8) fail('environment.backgrounds', 'phải là mảng tối đa 8 layer');
+  if (!Array.isArray(data.decorations) || data.decorations.length > 256) fail('environment.decorations', 'phải là mảng tối đa 256 vật trang trí');
+  const ids = new Set<string>();
+  const dimensions = new Map<string, string>();
+  let previousZ = -90;
+  const backgrounds = Array.from(data.backgrounds, (entry, index): EnvironmentBackground => {
+    const path = `environment.backgrounds[${index}]`;
+    const layer = object(entry, path);
+    const base = image(layer, path, ids, dimensions);
+    if (base.z >= -1 || base.z <= previousZ) fail(`${path}.z`, 'background phải tăng từ sau ra trước và ở sau terrain (Z < -1)');
+    previousZ = base.z;
+    const parallaxX = number(layer.parallaxX, `${path}.parallaxX`, 0, 1);
+    const parallaxY = number(layer.parallaxY, `${path}.parallaxY`, 0, 1);
+    if (typeof layer.repeatX !== 'boolean') fail(`${path}.repeatX`, 'phải là boolean');
+    if (!layer.repeatX && (parallaxX !== 0 || parallaxY !== 0)) fail(path, 'ảnh cover không lặp phải cố định theo camera (parallax bằng 0)');
+    const worldHeight = number(layer.worldHeight, `${path}.worldHeight`, Number.MIN_VALUE);
+    const bottomOffset = layer.bottomOffset === undefined ? 0 : number(layer.bottomOffset, `${path}.bottomOffset`);
+    if (!layer.repeatX && bottomOffset !== 0) fail(`${path}.bottomOffset`, 'ảnh cover cố định dùng offset bằng 0');
+    if (!Number.isFinite(worldHeight * base.pixelSize[0] / base.pixelSize[1])) fail(`${path}.worldHeight`, 'làm chiều rộng ảnh tràn số');
+    return { ...base, parallaxX, parallaxY, repeatX: layer.repeatX, worldHeight, bottomOffset };
+  });
+  const decorations = Array.from(data.decorations, (entry, index): EnvironmentDecoration => {
+    const path = `environment.decorations[${index}]`;
+    const prop = object(entry, path);
+    const base = image(prop, path, ids, dimensions);
+    if (base.z <= -0.45 || base.z >= 0) fail(`${path}.z`, 'vật trang trí pilot phải nằm giữa terrain và ladder/player (-0.45 < Z < 0)');
+    if (prop.collision !== false) fail(`${path}.collision`, 'phải bằng false, collider khai báo riêng');
+    const point = object(prop.worldPosition, `${path}.worldPosition`);
+    const worldPosition = { x: number(point.x, `${path}.worldPosition.x`), y: number(point.y, `${path}.worldPosition.y`) };
+    const size = object(prop.worldSize, `${path}.worldSize`);
+    const worldSize = { width: number(size.width, `${path}.worldSize.width`, Number.MIN_VALUE), height: number(size.height, `${path}.worldSize.height`, Number.MIN_VALUE) };
+    const anchor = object(prop.anchor, `${path}.anchor`);
+    if (anchor.x !== 0.5 || anchor.y !== 1) fail(`${path}.anchor`, 'pilot dùng bottom-center (x=0.5, y=1)');
+    if (![worldPosition.x - worldSize.width / 2, worldPosition.x + worldSize.width / 2, worldPosition.y + worldSize.height].every(Number.isFinite)) fail(path, 'biên vật trang trí tràn số');
+    return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false };
+  });
+  return { backgrounds, decorations };
+}

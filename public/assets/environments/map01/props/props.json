@@ -1,0 +1,885 @@
+{
+  "version": 1,
+  "name": "Cyber Ninja 2D — Map 01 Step 06 Props",
+  "status": "asset-ready / integration-not-tested",
+  "visualStyle": "2D stylized cel-shaded, simplified Vietnamese urban night",
+  "pixelDensity": {
+    "pixelsPerWorldUnit": 128,
+    "worldUnitsPer64pxTile": 0.5
+  },
+  "atlas": {
+    "image": "atlases/map01-props-atlas.png",
+    "width": 2048,
+    "height": 2048,
+    "coordinateSystem": "top-left pixels",
+    "paddingPx": 8
+  },
+  "props": [
+    {
+      "id": "scooter-red",
+      "category": "street",
+      "image": "props/street/scooter-red.png",
+      "sizePx": {
+        "width": 224,
+        "height": 140
+      },
+      "worldSize": {
+        "width": 1.75,
+        "height": 1.0938
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A",
+      "description": "Xe máy tay ga màu đỏ nhìn ngang",
+      "alphaBounds": [
+        28,
+        23,
+        194,
+        131
+      ],
+      "atlasRect": {
+        "x": 8,
+        "y": 8,
+        "width": 224,
+        "height": 140
+      }
+    },
+    {
+      "id": "crate-wood",
+      "category": "street",
+      "image": "props/street/crate-wood.png",
+      "sizePx": {
+        "width": 124,
+        "height": 124
+      },
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Thùng gỗ trang trí hoặc đặt collider thủ công",
+      "alphaBounds": [
+        7,
+        7,
+        117,
+        117
+      ],
+      "atlasRect": {
+        "x": 240,
+        "y": 8,
+        "width": 124,
+        "height": 124
+      }
+    },
+    {
+      "id": "crate-metal",
+      "category": "street",
+      "image": "props/street/crate-metal.png",
+      "sizePx": {
+        "width": 124,
+        "height": 124
+      },
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Thùng kim loại trang trí hoặc đặt collider thủ công",
+      "alphaBounds": [
+        7,
+        7,
+        117,
+        117
+      ],
+      "atlasRect": {
+        "x": 372,
+        "y": 8,
+        "width": 124,
+        "height": 124
+      }
+    },
+    {
+      "id": "trash-bin-green",
+      "category": "street",
+      "image": "props/street/trash-bin-green.png",
+      "sizePx": {
+        "width": 120,
+        "height": 148
+      },
+      "worldSize": {
+        "width": 0.9375,
+        "height": 1.1562
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B",
+      "description": "Thùng rác có bánh xe",
+      "alphaBounds": [
+        15,
+        17,
+        104,
+        141
+      ],
+      "atlasRect": {
+        "x": 504,
+        "y": 8,
+        "width": 120,
+        "height": 148
+      }
+    },
+    {
+      "id": "trash-bin-blue",
+      "category": "street",
+      "image": "props/street/trash-bin-blue.png",
+      "sizePx": {
+        "width": 120,
+        "height": 148
+      },
+      "worldSize": {
+        "width": 0.9375,
+        "height": 1.1562
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B",
+      "description": "Thùng rác có bánh xe",
+      "alphaBounds": [
+        15,
+        17,
+        104,
+        141
+      ],
+      "atlasRect": {
+        "x": 632,
+        "y": 8,
+        "width": 120,
+        "height": 148
+      }
+    },
+    {
+      "id": "traffic-cone",
+      "category": "street",
+      "image": "props/street/traffic-cone.png",
+      "sizePx": {
+        "width": 126,
+        "height": 130
+      },
+      "worldSize": {
+        "width": 0.9844,
+        "height": 1.0156
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A",
+      "description": "Cọc tiêu công trình",
+      "alphaBounds": [
+        14,
+        14,
+        112,
+        128
+      ],
+      "atlasRect": {
+        "x": 760,
+        "y": 8,
+        "width": 126,
+        "height": 130
+      }
+    },
+    {
+      "id": "street-bench",
+      "category": "street",
+      "image": "props/street/street-bench.png",
+      "sizePx": {
+        "width": 228,
+        "height": 160
+      },
+      "worldSize": {
+        "width": 1.7812,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A",
+      "description": "Ghế dài đặt dọc vỉa hè",
+      "alphaBounds": [
+        21,
+        45,
+        203,
+        149
+      ],
+      "atlasRect": {
+        "x": 894,
+        "y": 8,
+        "width": 228,
+        "height": 160
+      }
+    },
+    {
+      "id": "street-lamp",
+      "category": "street",
+      "image": "props/street/street-lamp.png",
+      "sizePx": {
+        "width": 146,
+        "height": 294
+      },
+      "worldSize": {
+        "width": 1.1406,
+        "height": 2.2969
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Cột đèn đường ánh vàng, dạng 2D",
+      "alphaBounds": [
+        12,
+        12,
+        130,
+        293
+      ],
+      "atlasRect": {
+        "x": 1130,
+        "y": 8,
+        "width": 146,
+        "height": 294
+      }
+    },
+    {
+      "id": "potted-plant",
+      "category": "street",
+      "image": "props/street/potted-plant.png",
+      "sizePx": {
+        "width": 150,
+        "height": 168
+      },
+      "worldSize": {
+        "width": 1.1719,
+        "height": 1.3125
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Chậu cây lá bản xanh",
+      "alphaBounds": [
+        35,
+        35,
+        115,
+        157
+      ],
+      "atlasRect": {
+        "x": 1284,
+        "y": 8,
+        "width": 150,
+        "height": 168
+      }
+    },
+    {
+      "id": "street-tree",
+      "category": "street",
+      "image": "props/street/street-tree.png",
+      "sizePx": {
+        "width": 220,
+        "height": 328
+      },
+      "worldSize": {
+        "width": 1.7188,
+        "height": 2.5625
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "A",
+      "description": "Cây vỉa hè; tán giản lược không che gameplay quá nhiều",
+      "alphaBounds": [
+        15,
+        22,
+        192,
+        320
+      ],
+      "atlasRect": {
+        "x": 1442,
+        "y": 8,
+        "width": 220,
+        "height": 328
+      }
+    },
+    {
+      "id": "planter-box",
+      "category": "street",
+      "image": "props/street/planter-box.png",
+      "sizePx": {
+        "width": 200,
+        "height": 110
+      },
+      "worldSize": {
+        "width": 1.5625,
+        "height": 0.8594
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Bồn cây dài đặt nền nhà phố",
+      "alphaBounds": [
+        4,
+        5,
+        195,
+        106
+      ],
+      "atlasRect": {
+        "x": 1670,
+        "y": 8,
+        "width": 200,
+        "height": 110
+      }
+    },
+    {
+      "id": "sign-pho-247",
+      "category": "signs",
+      "image": "props/signs/sign-pho-247.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "worldSize": {
+        "width": 2.0625,
+        "height": 0.8281
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "A",
+      "description": "Biển hiệu PHỞ 24/7 màu đỏ ấm",
+      "alphaBounds": [
+        1,
+        6,
+        263,
+        100
+      ],
+      "atlasRect": {
+        "x": 8,
+        "y": 344,
+        "width": 264,
+        "height": 106
+      }
+    },
+    {
+      "id": "sign-pharmacy",
+      "category": "signs",
+      "image": "props/signs/sign-pharmacy.png",
+      "sizePx": {
+        "width": 120,
+        "height": 224
+      },
+      "worldSize": {
+        "width": 0.9375,
+        "height": 1.75
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "A",
+      "description": "Biển hiệu NHÀ THUỐC màu xanh ngọc",
+      "alphaBounds": [
+        5,
+        4,
+        113,
+        222
+      ],
+      "atlasRect": {
+        "x": 280,
+        "y": 344,
+        "width": 120,
+        "height": 224
+      }
+    },
+    {
+      "id": "sign-coffee",
+      "category": "signs",
+      "image": "props/signs/sign-coffee.png",
+      "sizePx": {
+        "width": 264,
+        "height": 111
+      },
+      "worldSize": {
+        "width": 2.0625,
+        "height": 0.8672
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "A/B",
+      "description": "Biển hiệu quán cà phê màu cam",
+      "alphaBounds": [
+        6,
+        7,
+        257,
+        104
+      ],
+      "atlasRect": {
+        "x": 408,
+        "y": 344,
+        "width": 264,
+        "height": 111
+      }
+    },
+    {
+      "id": "sign-tea",
+      "category": "signs",
+      "image": "props/signs/sign-tea.png",
+      "sizePx": {
+        "width": 180,
+        "height": 115
+      },
+      "worldSize": {
+        "width": 1.4062,
+        "height": 0.8984
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "B/C",
+      "description": "Biển TRÀ ĐÁ VỈA HÈ màu tím",
+      "alphaBounds": [
+        3,
+        2,
+        176,
+        110
+      ],
+      "atlasRect": {
+        "x": 680,
+        "y": 344,
+        "width": 180,
+        "height": 115
+      }
+    },
+    {
+      "id": "metal-ladder",
+      "category": "alley",
+      "image": "props/alley/metal-ladder.png",
+      "sizePx": {
+        "width": 92,
+        "height": 394
+      },
+      "worldSize": {
+        "width": 0.7188,
+        "height": 3.0781
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "B",
+      "description": "Thang kim loại, dùng như visual riêng; ClimbableZone khai báo riêng",
+      "alphaBounds": [
+        15,
+        2,
+        76,
+        388
+      ],
+      "atlasRect": {
+        "x": 868,
+        "y": 344,
+        "width": 92,
+        "height": 394
+      }
+    },
+    {
+      "id": "aircon-unit",
+      "category": "alley",
+      "image": "props/alley/aircon-unit.png",
+      "sizePx": {
+        "width": 146,
+        "height": 113
+      },
+      "worldSize": {
+        "width": 1.1406,
+        "height": 0.8828
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "B/C",
+      "description": "Máy lạnh gắn tường",
+      "alphaBounds": [
+        7,
+        13,
+        139,
+        102
+      ],
+      "atlasRect": {
+        "x": 968,
+        "y": 344,
+        "width": 146,
+        "height": 113
+      }
+    },
+    {
+      "id": "wall-pipe",
+      "category": "alley",
+      "image": "props/alley/wall-pipe.png",
+      "sizePx": {
+        "width": 140,
+        "height": 246
+      },
+      "worldSize": {
+        "width": 1.0938,
+        "height": 1.9219
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "B/C",
+      "description": "Ống nước cong gắn tường",
+      "alphaBounds": [
+        22,
+        0,
+        121,
+        245
+      ],
+      "atlasRect": {
+        "x": 1122,
+        "y": 344,
+        "width": 140,
+        "height": 246
+      }
+    },
+    {
+      "id": "electric-meter",
+      "category": "alley",
+      "image": "props/alley/electric-meter.png",
+      "sizePx": {
+        "width": 136,
+        "height": 175
+      },
+      "worldSize": {
+        "width": 1.0625,
+        "height": 1.3672
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "B",
+      "description": "Tủ điện treo tường",
+      "alphaBounds": [
+        15,
+        13,
+        122,
+        162
+      ],
+      "atlasRect": {
+        "x": 1270,
+        "y": 344,
+        "width": 136,
+        "height": 175
+      }
+    },
+    {
+      "id": "utility-pole",
+      "category": "alley",
+      "image": "props/alley/utility-pole.png",
+      "sizePx": {
+        "width": 216,
+        "height": 391
+      },
+      "worldSize": {
+        "width": 1.6875,
+        "height": 3.0547
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "foreground",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Cột điện nhỏ và dây ngắn, dùng tiết chế ở background/foreground",
+      "alphaBounds": [
+        5,
+        15,
+        211,
+        388
+      ],
+      "atlasRect": {
+        "x": 1414,
+        "y": 344,
+        "width": 216,
+        "height": 391
+      }
+    },
+    {
+      "id": "rooftop-water-tank",
+      "category": "rooftop",
+      "image": "props/rooftop/rooftop-water-tank.png",
+      "sizePx": {
+        "width": 229,
+        "height": 280
+      },
+      "worldSize": {
+        "width": 1.7891,
+        "height": 2.1875
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "B/C",
+      "description": "Bồn nước kim loại trên khung chân",
+      "alphaBounds": [
+        37,
+        16,
+        190,
+        264
+      ],
+      "atlasRect": {
+        "x": 1638,
+        "y": 344,
+        "width": 229,
+        "height": 280
+      }
+    },
+    {
+      "id": "antenna",
+      "category": "rooftop",
+      "image": "props/rooftop/antenna.png",
+      "sizePx": {
+        "width": 194,
+        "height": 259
+      },
+      "worldSize": {
+        "width": 1.5156,
+        "height": 2.0234
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "C",
+      "description": "Ăng-ten mái nhà",
+      "alphaBounds": [
+        29,
+        23,
+        167,
+        250
+      ],
+      "atlasRect": {
+        "x": 8,
+        "y": 746,
+        "width": 194,
+        "height": 259
+      }
+    },
+    {
+      "id": "balcony-railing",
+      "category": "rooftop",
+      "image": "props/rooftop/balcony-railing.png",
+      "sizePx": {
+        "width": 266,
+        "height": 125
+      },
+      "worldSize": {
+        "width": 2.0781,
+        "height": 0.9766
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "B/C",
+      "description": "Lan can kim loại ban công có thể lặp theo cạnh",
+      "alphaBounds": [
+        8,
+        10,
+        253,
+        114
+      ],
+      "atlasRect": {
+        "x": 210,
+        "y": 746,
+        "width": 266,
+        "height": 125
+      }
+    },
+    {
+      "id": "roof-vent",
+      "category": "rooftop",
+      "image": "props/rooftop/roof-vent.png",
+      "sizePx": {
+        "width": 164,
+        "height": 193
+      },
+      "worldSize": {
+        "width": 1.2812,
+        "height": 1.5078
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "C",
+      "description": "Ống thông gió mái nhà",
+      "alphaBounds": [
+        19,
+        44,
+        142,
+        184
+      ],
+      "atlasRect": {
+        "x": 484,
+        "y": 746,
+        "width": 164,
+        "height": 193
+      }
+    },
+    {
+      "id": "satellite-dish",
+      "category": "rooftop",
+      "image": "props/rooftop/satellite-dish.png",
+      "sizePx": {
+        "width": 158,
+        "height": 178
+      },
+      "worldSize": {
+        "width": 1.2344,
+        "height": 1.3906
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "nearBackground",
+      "collision": "none",
+      "zone": "C",
+      "description": "Chảo vệ tinh trên mái",
+      "alphaBounds": [
+        26,
+        5,
+        139,
+        168
+      ],
+      "atlasRect": {
+        "x": 656,
+        "y": 746,
+        "width": 158,
+        "height": 178
+      }
+    },
+    {
+      "id": "wooden-pallet",
+      "category": "rooftop",
+      "image": "props/rooftop/wooden-pallet.png",
+      "sizePx": {
+        "width": 212,
+        "height": 150
+      },
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "A/B/C",
+      "description": "Pallet gỗ đơn giản",
+      "alphaBounds": [
+        12,
+        43,
+        198,
+        143
+      ],
+      "atlasRect": {
+        "x": 822,
+        "y": 746,
+        "width": 212,
+        "height": 150
+      }
+    }
+  ],
+  "notes": [
+    "All props are RGBA with transparent background.",
+    "props[].worldSize is a reference derived from 128 px per world unit; gameplay can override sizes.",
+    "No props generate collision automatically.",
+    "Metal ladder is a visual prop; keep climbable zone defined separately.",
+    "Do not put props into ninja sprite atlases.",
+    "Sign text is environmental art and is not machine-readable localization."
+  ]
+}

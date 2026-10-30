@@ -1,0 +1,4595 @@
+{
+  "version": 3,
+  "image": "terrain-64-atlas.png",
+  "tileWidth": 64,
+  "tileHeight": 64,
+  "columns": 16,
+  "rows": 16,
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "worldTileSize": {
+    "width": 0.5,
+    "height": 0.5
+  },
+  "pixelsPerWorldUnit": 128,
+  "sourceImage": "references/nighttime_city_pixel_art_tileset.png",
+  "approach": "runtime curated: IDs 1-12 verified repeatable, IDs 13-255 replaced with verified base fills; original AI decorative atlas archived for future manual object extraction",
+  "collisionRule": "visual only: preserve existing map01-graybox solids and climbables",
+  "cautions": [
+    "Do NOT treat original 13..255 as independent usable decorations; originals archived under references.",
+    "All colliders remain explicit; do not derive physics from this atlas.",
+    "Old graybox map tile ID references must be intentionally remapped and appearance verified in Three.js."
+  ],
+  "tileCatalog": [
+    {
+      "id": 0,
+      "name": "empty",
+      "category": "empty",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": false,
+      "repeatableY": false,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 1,
+      "name": "seamless-concrete-01",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 64,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 2,
+      "name": "seamless-concrete-02",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 128,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 3,
+      "name": "seamless-concrete-03",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 192,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 4,
+      "name": "seamless-concrete-04",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 256,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 5,
+      "name": "seamless-concrete-05",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 320,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 6,
+      "name": "seamless-concrete-06",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 384,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 7,
+      "name": "seamless-concrete-07",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 448,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 8,
+      "name": "seamless-concrete-08",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 512,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 9,
+      "name": "seamless-concrete-09",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 576,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 10,
+      "name": "seamless-concrete-10",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 640,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 11,
+      "name": "seamless-concrete-11",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 704,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 12,
+      "name": "seamless-concrete-12",
+      "category": "repeatable-base",
+      "sourceRect": {
+        "x": 768,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": null
+    },
+    {
+      "id": 13,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 13,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 14,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 14,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 15,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 15,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 16,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 16,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 17,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 17,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 18,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 18,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 19,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 19,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 20,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 20,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 21,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 21,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 22,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 22,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 23,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 23,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 24,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 24,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 25,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 25,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 26,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 26,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 27,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 27,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 28,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 28,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 29,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 29,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 30,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 30,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 31,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 31,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 32,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 32,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 33,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 33,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 34,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 34,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 35,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 35,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 36,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 36,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 37,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 37,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 38,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 38,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 39,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 39,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 40,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 40,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 41,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 41,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 42,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 42,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 43,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 43,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 44,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 44,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 45,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 45,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 46,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 46,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 47,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 128,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 47,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 48,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 48,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 49,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 49,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 50,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 50,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 51,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 51,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 52,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 52,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 53,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 53,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 54,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 54,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 55,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 55,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 56,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 56,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 57,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 57,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 58,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 58,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 59,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 59,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 60,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 60,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 61,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 61,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 62,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 62,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 63,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 192,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 63,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 64,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 64,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 65,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 65,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 66,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 66,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 67,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 67,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 68,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 68,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 69,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 69,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 70,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 70,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 71,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 71,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 72,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 72,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 73,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 73,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 74,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 74,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 75,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 75,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 76,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 76,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 77,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 77,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 78,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 78,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 79,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 256,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 79,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 80,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 80,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 81,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 81,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 82,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 82,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 83,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 83,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 84,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 84,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 85,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 85,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 86,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 86,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 87,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 87,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 88,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 88,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 89,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 89,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 90,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 90,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 91,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 91,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 92,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 92,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 93,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 93,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 94,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 94,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 95,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 320,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 95,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 96,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 96,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 97,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 97,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 98,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 98,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 99,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 99,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 100,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 100,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 101,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 101,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 102,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 102,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 103,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 103,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 104,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 104,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 105,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 105,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 106,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 106,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 107,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 107,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 108,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 108,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 109,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 109,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 110,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 110,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 111,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 384,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 111,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 112,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 112,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 113,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 113,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 114,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 114,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 115,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 115,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 116,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 116,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 117,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 117,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 118,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 118,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 119,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 119,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 120,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 120,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 121,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 121,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 122,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 122,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 123,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 123,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 124,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 124,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 125,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 125,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 126,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 126,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 127,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 448,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 127,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 128,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 128,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 129,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 129,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 130,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 130,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 131,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 131,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 132,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 132,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 133,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 133,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 134,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 134,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 135,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 135,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 136,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 136,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 137,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 137,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 138,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 138,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 139,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 139,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 140,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 140,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 141,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 141,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 142,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 142,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 143,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 512,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 143,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 144,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 144,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 145,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 145,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 146,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 146,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 147,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 147,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 148,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 148,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 149,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 149,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 150,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 150,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 151,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 151,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 152,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 152,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 153,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 153,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 154,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 154,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 155,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 155,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 156,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 156,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 157,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 157,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 158,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 158,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 159,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 576,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 159,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 160,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 160,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 161,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 161,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 162,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 162,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 163,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 163,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 164,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 164,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 165,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 165,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 166,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 166,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 167,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 167,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 168,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 168,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 169,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 169,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 170,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 170,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 171,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 171,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 172,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 172,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 173,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 173,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 174,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 174,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 175,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 640,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 175,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 176,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 176,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 177,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 177,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 178,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 178,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 179,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 179,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 180,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 180,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 181,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 181,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 182,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 182,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 183,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 183,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 184,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 184,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 185,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 185,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 186,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 186,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 187,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 187,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 188,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 188,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 189,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 189,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 190,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 190,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 191,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 704,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 191,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 192,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 192,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 193,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 193,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 194,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 194,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 195,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 195,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 196,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 196,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 197,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 197,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 198,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 198,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 199,
+      "name": "fallback-repeat-fill-02",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 2,
+      "originalDecorativeTileId": 199,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 200,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 200,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 201,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 201,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 202,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 202,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 203,
+      "name": "fallback-repeat-fill-03",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 3,
+      "originalDecorativeTileId": 203,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 204,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 204,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 205,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 205,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 206,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 206,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 207,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 768,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 207,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 208,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 208,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 209,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 209,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 210,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 210,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 211,
+      "name": "fallback-repeat-fill-04",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 4,
+      "originalDecorativeTileId": 211,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 212,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 212,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 213,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 213,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 214,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 214,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 215,
+      "name": "fallback-repeat-fill-05",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 5,
+      "originalDecorativeTileId": 215,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 216,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 216,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 217,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 217,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 218,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 218,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 219,
+      "name": "fallback-repeat-fill-06",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 6,
+      "originalDecorativeTileId": 219,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 220,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 220,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 221,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 221,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 222,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 222,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 223,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 832,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 223,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 224,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 224,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 225,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 225,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 226,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 226,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 227,
+      "name": "fallback-repeat-fill-07",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 7,
+      "originalDecorativeTileId": 227,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 228,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 228,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 229,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 229,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 230,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 230,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 231,
+      "name": "fallback-repeat-fill-08",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 8,
+      "originalDecorativeTileId": 231,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 232,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 232,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 233,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 233,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 234,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 234,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 235,
+      "name": "fallback-repeat-fill-09",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 9,
+      "originalDecorativeTileId": 235,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 236,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 236,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 237,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 237,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 238,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 238,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 239,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 896,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 239,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 240,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 0,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 240,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 241,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 64,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 241,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 242,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 128,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 242,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 243,
+      "name": "fallback-repeat-fill-10",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 192,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 10,
+      "originalDecorativeTileId": 243,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 244,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 256,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 244,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 245,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 320,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 245,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 246,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 384,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 246,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 247,
+      "name": "fallback-repeat-fill-11",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 448,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 11,
+      "originalDecorativeTileId": 247,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 248,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 512,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 248,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 249,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 576,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 249,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 250,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 640,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 250,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 251,
+      "name": "fallback-repeat-fill-12",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 704,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 12,
+      "originalDecorativeTileId": 251,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 252,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 768,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 252,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 253,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 832,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 253,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 254,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 896,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 254,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    },
+    {
+      "id": 255,
+      "name": "fallback-repeat-fill-01",
+      "category": "verified-safe-fallback",
+      "sourceRect": {
+        "x": 960,
+        "y": 960,
+        "width": 64,
+        "height": 64
+      },
+      "repeatableX": true,
+      "repeatableY": true,
+      "collision": false,
+      "note": "decorative tiles require hand selection",
+      "sourceTileId": 1,
+      "originalDecorativeTileId": 255,
+      "review": "REPLACED: original artwork was a sheet fragment, not verified as standalone/seamless tile"
+    }
+  ],
+  "runtimeSafety": "ONLY verified seamless fills; decorative surfaces must come from separate properly authored props/foreground"
+}

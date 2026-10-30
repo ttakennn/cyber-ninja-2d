@@ -1,0 +1,123 @@
+{
+  "browser": "IAB (được người dùng cho phép thay Chrome/Edge)",
+  "fpsMethod": "Mẫu Render FPS trên F3, không phải benchmark GPU; các mẫu cách nhau không đều, có thao tác chụp/resize.",
+  "samples": [
+    {
+      "timeMs": 1793348855922,
+      "fps": 37
+    },
+    {
+      "timeMs": 1793348946672,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793348982964,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793348983080,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349110880,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349430459,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349431575,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349432500,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349445848,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349446392,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349446863,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349447307,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349457140,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349464326,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349465193,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349466057,
+      "fps": 56
+    },
+    {
+      "timeMs": 1793349478947,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349479823,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349480973,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349481840,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349489942,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349491444,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349492329,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349493696,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349501561,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349503580,
+      "fps": 60
+    },
+    {
+      "timeMs": 1793349503917,
+      "fps": 60
+    }
+  ],
+  "summary": {
+    "count": 27,
+    "min": 37,
+    "max": 60,
+    "median": 60,
+    "spanSeconds": 647.995
+  },
+  "map01WarningsAndErrors": [],
+  "directGLGetErrorChecked": false
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "cyber-ninja-map01-assets/v3",
+  "mapId": "map01",
+  "packStatus": "STATIC_ART_CURATED_THREEJS_RUNTIME_PENDING",
+  "world": {
+    "width": 80,
+    "tileWorldSize": 0.5,
+    "pixelsPerWorldUnit": 128
+  },
+  "baseUrl": "/assets/environments/map01/",
+  "paletteLock": {
+    "night_navy": "#071638",
+    "indigo_city": "#182656",
+    "dusk_violet": "#433075",
+    "deep_blue": "#152C5A",
+    "concrete_blue": "#2B3D60",
+    "stone_highlight": "#62779C",
+    "cyan": "#35D8E9",
+    "amber": "#F7B25A",
+    "restrained_red": "#F04D52",
+    "leaf_green": "#406F53"
+  },
+  "metadataPaths": {
+    "backgrounds": "backgrounds.json",
+    "terrain": "tilesets/terrain-64-tiles.json",
+    "props": "props/props.json",
+    "foreground": "foreground/foreground.json"
+  },
+  "assetCount": {
+    "backgrounds": 4,
+    "tiles": 256,
+    "props": 26,
+    "foreground": 65
+  },
+  "integrationWarnings": [
+    "Terrain original decorative IDs 13..255 replaced with safe repeating fills; original imagery archived. Do not assume same visuals as previously.",
+    "6 foreground ids alias known-good intact sprites in foreground.json. Use metadata, never hardcode old image filenames.",
+    "Three.js runtime inspection still required: not verified in current environment.",
+    "Maintain existing graybox collision/spawn/ladder/camera and map positions; remap source tile IDs deliberately."
+  ]
+}

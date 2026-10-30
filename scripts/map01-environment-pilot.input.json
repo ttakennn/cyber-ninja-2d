@@ -1,0 +1,309 @@
+{
+  "schema": "cyber-ninja-map01-task008-pilot/v1",
+  "status": "integration-input-not-runtime-tested",
+  "level": "map01",
+  "preserveGameplay": {
+    "spawn": true,
+    "solids": true,
+    "climbables": true,
+    "cameraBounds": true,
+    "deathY": true
+  },
+  "backgrounds": [
+    {
+      "id": "sky",
+      "pixelSize": [
+        2048,
+        1024
+      ],
+      "parallaxX": 0.0,
+      "parallaxY": 0,
+      "repeatX": false,
+      "worldHeight": 9.0,
+      "z": -8.0,
+      "image": "assets/environments/map01/backgrounds/sky.png"
+    },
+    {
+      "id": "city-far",
+      "pixelSize": [
+        2048,
+        640
+      ],
+      "parallaxX": 0.15,
+      "parallaxY": 0,
+      "repeatX": true,
+      "worldHeight": 4.0,
+      "z": -6.0,
+      "image": "assets/environments/map01/backgrounds/city-far.png"
+    },
+    {
+      "id": "city-mid",
+      "pixelSize": [
+        2048,
+        720
+      ],
+      "parallaxX": 0.35,
+      "parallaxY": 0,
+      "repeatX": true,
+      "worldHeight": 4.7,
+      "z": -4.0,
+      "image": "assets/environments/map01/backgrounds/city-mid.png"
+    },
+    {
+      "id": "buildings-near",
+      "pixelSize": [
+        2048,
+        832
+      ],
+      "parallaxX": 0.65,
+      "parallaxY": 0,
+      "repeatX": true,
+      "worldHeight": 5.4,
+      "z": -2.0,
+      "image": "assets/environments/map01/backgrounds/buildings-near.png"
+    }
+  ],
+  "decorations": [
+    {
+      "id": "props-scooter-red-0",
+      "image": "assets/environments/map01/props/props/street/scooter-red.png",
+      "worldPosition": {
+        "x": 8.9,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.225,
+        "height": 0.7657
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.2,
+      "collision": false
+    },
+    {
+      "id": "props-sign-pho-247-1",
+      "image": "assets/environments/map01/props/props/signs/sign-pho-247.png",
+      "worldPosition": {
+        "x": 5,
+        "y": -0.1
+      },
+      "worldSize": {
+        "width": 1.65,
+        "height": 0.6625
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.2,
+      "collision": false
+    },
+    {
+      "id": "props-sign-pharmacy-2",
+      "image": "assets/environments/map01/props/props/signs/sign-pharmacy.png",
+      "worldPosition": {
+        "x": 19,
+        "y": 0.5
+      },
+      "worldSize": {
+        "width": 0.6562,
+        "height": 1.225
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.2,
+      "collision": false
+    },
+    {
+      "id": "props-street-tree-3",
+      "image": "assets/environments/map01/props/props/street/street-tree.png",
+      "worldPosition": {
+        "x": 24,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.2032,
+        "height": 1.7937
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.35,
+      "collision": false
+    },
+    {
+      "id": "props-aircon-unit-4",
+      "image": "assets/environments/map01/props/props/alley/aircon-unit.png",
+      "worldPosition": {
+        "x": 36,
+        "y": -0.9
+      },
+      "worldSize": {
+        "width": 0.7984,
+        "height": 0.618
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.25,
+      "collision": false
+    },
+    {
+      "id": "props-rooftop-water-tank-5",
+      "image": "assets/environments/map01/props/props/rooftop/rooftop-water-tank.png",
+      "worldPosition": {
+        "x": 44.7,
+        "y": 2
+      },
+      "worldSize": {
+        "width": 1.1629,
+        "height": 1.4219
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.25,
+      "collision": false
+    },
+    {
+      "id": "props-satellite-dish-6",
+      "image": "assets/environments/map01/props/props/rooftop/satellite-dish.png",
+      "worldPosition": {
+        "x": 55,
+        "y": 3
+      },
+      "worldSize": {
+        "width": 0.7406,
+        "height": 0.8344
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.25,
+      "collision": false
+    },
+    {
+      "id": "props-antenna-7",
+      "image": "assets/environments/map01/props/props/rooftop/antenna.png",
+      "worldPosition": {
+        "x": 63.2,
+        "y": 3.5
+      },
+      "worldSize": {
+        "width": 1.0609,
+        "height": 1.4164
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.25,
+      "collision": false
+    },
+    {
+      "id": "props-rooftop-water-tank-8",
+      "image": "assets/environments/map01/props/props/rooftop/rooftop-water-tank.png",
+      "worldPosition": {
+        "x": 75.6,
+        "y": 3
+      },
+      "worldSize": {
+        "width": 1.0735,
+        "height": 1.3125
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.25,
+      "collision": false
+    },
+    {
+      "id": "foreground-street_shop_awning-9",
+      "image": "assets/environments/map01/foreground/individual/street_shop_awning.png",
+      "worldPosition": {
+        "x": 4.7,
+        "y": -0.5
+      },
+      "worldSize": {
+        "width": 2.28,
+        "height": 2.4832
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false
+    },
+    {
+      "id": "foreground-wire_electrical_box-10",
+      "image": "assets/environments/map01/foreground/individual/wire_electrical_box.png",
+      "worldPosition": {
+        "x": 9,
+        "y": 5.7
+      },
+      "worldSize": {
+        "width": 3.04,
+        "height": 0.9322
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.3,
+      "collision": false
+    },
+    {
+      "id": "foreground-railing_cross-11",
+      "image": "assets/environments/map01/foreground/individual/railing_cross.png",
+      "worldPosition": {
+        "x": 46,
+        "y": 2.6
+      },
+      "worldSize": {
+        "width": 2.1125,
+        "height": 1.0852
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "z": -0.25,
+      "collision": false
+    }
+  ],
+  "terrain": {
+    "image": "assets/environments/map01/tilesets/terrain-64-atlas.png",
+    "tileSizePixels": 64,
+    "atlasPixels": [
+      1024,
+      1024
+    ],
+    "worldTileSize": 0.5,
+    "runtimeIDs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "note": "Do not auto remap original tile IDs by index: manually map visual categories preserving collision."
+  }
+}
