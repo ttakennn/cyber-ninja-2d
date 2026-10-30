@@ -1,0 +1,66 @@
+{
+  "task": "008.3",
+  "baseline": "0eb00b7198763611a0e34a6f16ec3ff14e60e2d4",
+  "branch": "codex/task-008-production-assets",
+  "codeCommit": "dee186fa7070b2c3edacfbd8ee1db7ef51361c1c",
+  "status": "partial-browser-acceptance-blocked",
+  "url": "http://127.0.0.1:4174/?level=map01",
+  "browser": "Google Chrome",
+  "browserVersion": null,
+  "dpr": null,
+  "console": null,
+  "fps": null,
+  "productionJavaScript": "index-B4E9ZVG3.js",
+  "productionJavaScriptSHA256": "76ada5c7155082309e21ef56d36d4655ff5a8c4e3d6654a00a81609022176104",
+  "assetMetadata": "public/assets/environments/map01/production/production-assets.json",
+  "assetMetadataStatus": "READY_FOR_INTEGRATION_HUMAN_ART_AND_THREEJS_ACCEPTANCE_PENDING",
+  "productionFilesCompared": 10,
+  "productionSourceHashMismatches": 0,
+  "observed": [
+    "Chrome URL verified via accessibility",
+    "RC1 architecture visible in running Three.js",
+    "narrow window observed, then maximized"
+  ],
+  "screenshot": {
+    "file": "chrome-current-window.jpg",
+    "nativeWindowPixels": [
+      1536,
+      816
+    ],
+    "acceptedViewportEvidence": false,
+    "cssViewport": null,
+    "sha256": "d46c9c442d4163db8023c388b6dd73f55e57b398eb97bf76bf9858c9a23b3e5e"
+  },
+  "blockedAction": "F3",
+  "blockReason": "Computer Use could not determine current browser URL confidently enough to enforce policy; no further browser input",
+  "unverified": [
+    "browser version/DPR",
+    "console",
+    "1920x1080",
+    "1280x720",
+    "1024x768",
+    "540x960",
+    "full route",
+    "crouch/headroom",
+    "both ladder limits/directions/stop/dismount",
+    "all rooftop gaps",
+    "camera bounds",
+    "fall/respawn",
+    "legacy smoke",
+    "title/help/debug/F4 occlusion",
+    "all A/B/C art joins and style approval"
+  ],
+  "tests": {
+    "files": 28,
+    "total": 378,
+    "log": "test.log",
+    "passed": 378,
+    "durationSeconds": 2.91
+  },
+  "build": {
+    "exitCode": 0,
+    "log": "build.log",
+    "durationSeconds": 3.0
+  },
+  "step09Ready": false
+}

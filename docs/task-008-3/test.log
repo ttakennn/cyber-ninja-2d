@@ -1,0 +1,16 @@
+
+> cyber-ninja-2d-hd@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.5 C:/Users/anhthaitrong/Downloads/Games/cyber-ninja-2d
+
+
+ Test Files  28 passed (28)
+      Tests  378 passed (378)
+   Start at  21:12:49
+   Duration  2.91s (transform 49%, import 37%, tests 11%, worker 4%)
+
+    Isolate  28 workers spawned · ~540ms startup each (spawn + environment, per file)
+             at least ~624ms faster with isolate: false — reuses workers across files instead of one per file
+
