@@ -8,6 +8,7 @@ import { GameCamera } from '../rendering/GameCamera';
 import { Renderer } from '../rendering/Renderer';
 import { TestLevel } from '../world/TestLevel';
 import { GameLoop } from './GameLoop';
+import { FallRecovery } from './FallRecovery';
 
 export class Game {
   private readonly renderer: Renderer;
@@ -19,6 +20,7 @@ export class Game {
   private readonly debug: DebugOverlay;
   private readonly collisionDebug: CollisionDebug;
   private readonly loop: GameLoop;
+  private readonly recovery: FallRecovery;
   private readonly resizeObserver: ResizeObserver;
   private started = false;
   private disposed = false;
@@ -36,8 +38,9 @@ export class Game {
       this.level.dispose();
       throw error;
     }
-    this.camera = new GameCamera();
+    this.camera = new GameCamera(this.level.cameraBounds, this.level.cameraFollowY);
     this.player = new Player(this.level.spawn);
+    this.recovery = new FallRecovery(this.level.spawn, this.level.deathY);
     this.input = new InputManager();
     this.debug = new DebugOverlay(container, this.level.id);
     this.collisionDebug = new CollisionDebug(this.level.colliders, this.level.climbables);
@@ -48,6 +51,7 @@ export class Game {
     window.addEventListener('resize', this.resize);
     document.addEventListener('visibilitychange', this.onVisibilityChange);
     this.resize();
+    this.camera.reset(this.player.visual.position);
     void this.player.loadSprite();
   }
 
@@ -97,6 +101,7 @@ export class Game {
       jump: this.input.wasPressed('jump'),
       detachJump: this.input.wasPressed('detachJump'),
     });
+    if (this.recovery.update(this.player, this.input, this.camera)) return;
     this.player.updateState(landed);
     this.player.updateAnimation(delta, landed);
     this.input.endStep();
@@ -104,10 +109,10 @@ export class Game {
 
   private readonly render = (frameDelta: number, alpha: number): void => {
     this.player.syncVisual(alpha);
-    this.camera.followX(this.player.visual.position.x);
+    this.camera.follow(this.player.visual.position);
     this.collisionDebug.update(this.player.visual.position.x, this.player.visual.position.y, this.player.body.width, this.player.renderHeight);
     this.renderer.render(this.camera.camera);
-    this.debug.update(frameDelta, this.player, alpha);
+    this.debug.update(frameDelta, this.player, alpha, this.camera, this.recovery.count, this.level.deathY);
   };
 
   private readonly resize = (): void => {

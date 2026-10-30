@@ -6,6 +6,13 @@ export interface LevelSolid extends AABB {
   readonly id: string;
 }
 
+export interface CameraBounds {
+  readonly minX: number;
+  readonly maxX: number;
+  readonly minY: number;
+  readonly maxY: number;
+}
+
 export type LevelVisual = Readonly<{
   shapeId: string;
   color: number;
@@ -20,6 +27,9 @@ export interface LevelData {
   readonly climbables: readonly ClimbableZone[];
   readonly visuals: readonly LevelVisual[];
   readonly tilemap?: TilemapData;
+  readonly cameraBounds?: CameraBounds;
+  readonly cameraFollowY?: boolean;
+  readonly deathY?: number;
 }
 
 function fail(path: string, message: string): never {
@@ -77,6 +87,22 @@ export function parseLevelData(value: unknown): LevelData {
   if (data.version !== 1) fail('version', 'phải bằng 1');
   const id = text(data.id, 'id');
   const spawn = position(data.spawn, 'spawn');
+  let cameraBounds: CameraBounds | undefined;
+  if (data.cameraBounds !== undefined) {
+    const bounds = object(data.cameraBounds, 'cameraBounds');
+    cameraBounds = {
+      minX: finite(bounds.minX, 'cameraBounds.minX'), maxX: finite(bounds.maxX, 'cameraBounds.maxX'),
+      minY: finite(bounds.minY, 'cameraBounds.minY'), maxY: finite(bounds.maxY, 'cameraBounds.maxY'),
+    };
+    if (cameraBounds.minX >= cameraBounds.maxX || !Number.isFinite(cameraBounds.maxX - cameraBounds.minX)) fail('cameraBounds', 'cần minX < maxX và chiều rộng hữu hạn');
+    if (cameraBounds.minY >= cameraBounds.maxY || !Number.isFinite(cameraBounds.maxY - cameraBounds.minY)) fail('cameraBounds', 'cần minY < maxY và chiều cao hữu hạn');
+    if (spawn.x < cameraBounds.minX || spawn.x > cameraBounds.maxX || spawn.y < cameraBounds.minY || spawn.y > cameraBounds.maxY) {
+      fail('spawn', 'phải nằm trong cameraBounds');
+    }
+  }
+  if (data.cameraFollowY !== undefined && typeof data.cameraFollowY !== 'boolean') fail('cameraFollowY', 'phải là boolean');
+  const deathY = data.deathY === undefined ? undefined : finite(data.deathY, 'deathY');
+  if (deathY !== undefined && deathY >= spawn.y) fail('deathY', 'phải thấp hơn tâm spawn để tránh hồi sinh lặp');
   const solids = list(data.solids, 'solids').map((value, index) => rectangle(value, `solids[${index}]`));
   const climbables = list(data.climbables, 'climbables').map((value, index): ClimbableZone => {
     const path = `climbables[${index}]`;
@@ -111,5 +137,8 @@ export function parseLevelData(value: unknown): LevelData {
     return { ...base, kind, rungSpacing, structureOpacity };
   });
   return { version: 1, id, spawn, solids, climbables, visuals,
+    ...(cameraBounds === undefined ? {} : { cameraBounds }),
+    ...(data.cameraFollowY === undefined ? {} : { cameraFollowY: data.cameraFollowY as boolean }),
+    ...(deathY === undefined ? {} : { deathY }),
     ...(data.tilemap === undefined ? {} : { tilemap: parseTilemapData(data.tilemap) }) };
 }

@@ -1,6 +1,6 @@
 # Cyber Ninja 2D HD
 
-**Hiện tại: Task 006 đã hoàn tất.** Xem [báo cáo Task 006 — tilemap và tileset](docs/TASK-006.md) để biết schema grid/atlas/layer, opacity thang, cách thêm level và kết quả nghiệm thu. Mở `?level=tiles` để thử tilemap; playground mặc định và `?level=small` vẫn được giữ. [Task 005](docs/TASK-005.md), [Task 004](docs/TASK-004.md), [Task 003](docs/TASK-003.md), [Task 002](docs/TASK-002.md) và phần Task 001 bên dưới được giữ làm mốc lịch sử. Atlas phát triển cũ vẫn có tại `development-animations.json`; runtime dùng `animations.json` production.
+**Hiện tại: Task 007 đã hoàn tất.** Mở `?level=map01` để chơi Map 1 graybox gồm đường phố, hẻm/thang và mái nhà; level này có camera bounds và hồi về spawn khi rơi. Xem [báo cáo Task 007](docs/TASK-007.md) để biết layout, schema, kiểm thử và giới hạn nghiệm thu. Playground mặc định, `?level=small` và `?level=tiles` giữ hành vi cũ. [Task 006](docs/TASK-006.md), [Task 005](docs/TASK-005.md), [Task 004](docs/TASK-004.md), [Task 003](docs/TASK-003.md), [Task 002](docs/TASK-002.md) và phần Task 001 bên dưới được giữ làm mốc lịch sử. Atlas phát triển cũ vẫn có tại `development-animations.json`; runtime dùng `animations.json` production.
 
 Task 001: a fresh engine foundation using Vite, strict TypeScript, Three.js, and Vitest. No code or assets were migrated from the existing games.
 

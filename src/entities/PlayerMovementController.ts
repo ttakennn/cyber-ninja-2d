@@ -42,6 +42,17 @@ export class PlayerMovementController {
     if (this.activeClimbable) this.body.velocity.y = 0;
   }
 
+  reset(): void {
+    this.activeClimbable = null;
+    this.stance = 'standing';
+    this.standingBlocked = false;
+    this.body.width = gameConfig.player.width;
+    this.body.height = gameConfig.player.height;
+    this.body.velocity.x = 0;
+    this.body.velocity.y = 0;
+    this.body.isGrounded = false;
+  }
+
   step(world: PhysicsWorld, delta: number, input: MovementInput): CollisionResult {
     if (this.activeClimbable && !overlaps(this.body, this.activeClimbable)) this.detach();
     if (!this.activeClimbable) {

@@ -122,6 +122,13 @@ export class Player {
     this.resetInterpolation();
   }
 
+  respawn(spawn: Readonly<Vector2>): void {
+    this.movement.reset();
+    this.animator.reset();
+    this.state = 'fall';
+    this.setPosition(spawn.x, spawn.y);
+  }
+
   updateAnimation(delta: number, landed: boolean): void {
     this.animator.update(delta, this.body, landed, this.movement);
   }

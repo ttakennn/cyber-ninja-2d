@@ -2,6 +2,7 @@ import { Group, Mesh, MeshBasicMaterial, PlaneGeometry } from 'three';
 import type { AABB, ClimbableZone, Vector2 } from '../physics/Collision';
 import { TilemapRenderer } from '../rendering/TilemapRenderer';
 import { parseLevelData } from './LevelData';
+import type { CameraBounds } from './LevelData';
 import playground from './levels/playground.json';
 
 export class TestLevel {
@@ -10,6 +11,9 @@ export class TestLevel {
   readonly spawn: Readonly<Vector2>;
   readonly colliders: readonly AABB[];
   readonly climbables: readonly ClimbableZone[];
+  readonly cameraBounds?: CameraBounds;
+  readonly cameraFollowY?: boolean;
+  readonly deathY?: number;
   private readonly meshes: Mesh<PlaneGeometry, MeshBasicMaterial>[] = [];
   private readonly tilemap: TilemapRenderer | null;
 
@@ -19,6 +23,9 @@ export class TestLevel {
     this.spawn = data.spawn;
     this.colliders = data.solids;
     this.climbables = data.climbables;
+    this.cameraBounds = data.cameraBounds;
+    this.cameraFollowY = data.cameraFollowY;
+    this.deathY = data.deathY;
     const shapes = new Map([...data.solids, ...data.climbables].map((shape) => [shape.id, shape]));
     for (const visual of data.visuals) {
       const shape = shapes.get(visual.shapeId)!;

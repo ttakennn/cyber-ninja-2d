@@ -34,6 +34,14 @@ export class PlayerAnimator {
     this.controller = this.createController(clips, initial);
   }
 
+  reset(): void {
+    this.facing = 'right';
+    this.climbDirection = 'idle';
+    this.climbing = false;
+    this.controller.setPlaybackSpeed(1);
+    this.controller.play('fall', true);
+  }
+
   update(delta: number, body: Readonly<PhysicsBody>, landed: boolean,
     movement?: Readonly<{ mode: LocomotionMode; stance: PlayerStance }>): string | null {
     if (body.velocity.x < 0) this.facing = 'left';
