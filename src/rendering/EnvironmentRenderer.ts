@@ -59,7 +59,16 @@ export class EnvironmentRenderer {
         this.backgrounds.push({ definition, mesh, texture });
       }
       for (const definition of this.data.decorations) {
-        const mesh = this.addMesh(definition.id, loaded.get(definition.image)!, definition.z);
+        let texture = loaded.get(definition.image)!;
+        if (definition.sourceRect) {
+          const rect = definition.sourceRect;
+          texture = texture.clone();
+          texture.repeat.set(rect.width / definition.pixelSize[0], rect.height / definition.pixelSize[1]);
+          texture.offset.set(rect.x / definition.pixelSize[0], 1 - (rect.y + rect.height) / definition.pixelSize[1]);
+          texture.needsUpdate = true;
+          this.textures.add(texture);
+        }
+        const mesh = this.addMesh(definition.id, texture, definition.z);
         mesh.renderOrder = definition.layer === 'foreground' ? 1 : 0;
         mesh.position.set(definition.worldPosition.x, definition.worldPosition.y + definition.worldSize.height / 2, definition.z);
         mesh.scale.set(definition.worldSize.width, definition.worldSize.height, 1);

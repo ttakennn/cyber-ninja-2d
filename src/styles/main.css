@@ -10,12 +10,12 @@
 body { margin: 0; overflow: hidden; }
 #game { position: relative; width: 100%; height: 100vh; height: 100dvh; overflow: hidden; }
 canvas { display: block; width: 100%; height: 100%; }
-.scene-label { position: absolute; top: 32px; right: 36px; text-align: right; pointer-events: none; }
-.eyebrow { color: #6c819a; font-size: 10px; letter-spacing: 0.16em; }
+.scene-label { position: absolute; top: 16px; right: 16px; max-width: calc(100% - 32px); padding: 10px 14px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; text-align: right; pointer-events: none; }
+.eyebrow { color: #b5c4d8; font-size: 11px; letter-spacing: 0.12em; }
 h1 { margin: 10px 0 6px; color: #e2eaf3; font-size: clamp(16px, 2.2vw, 26px); letter-spacing: 0.07em; }
 h1 span { color: #58e7db; }
-.scene-label p { margin: 0; color: #8191a8; font-size: 11px; }
-.controls { position: absolute; bottom: 20px; left: 24px; right: 24px; margin: 0; text-align: center; font-size: 11px; line-height: 2.2; pointer-events: none; }
+.scene-label p { margin: 0; color: #c4cfde; font-size: 12px; }
+.controls { position: absolute; bottom: 12px; left: 50%; width: calc(100% - 32px); max-width: 1120px; transform: translateX(-50%); margin: 0; padding: 8px 12px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; color: #dce6f3; text-align: center; font-size: 14px; line-height: 2; pointer-events: none; }
 .controls > span { margin: 0 10px; color: #6c819a; }
 kbd { padding: 3px 6px; border: 1px solid #4b5d73; border-radius: 3px; color: #e2eaf3; font: inherit; }
 .debug-overlay { position: absolute; top: 16px; left: 16px; margin: 0; padding: 14px 16px; border: 1px solid #34495d; border-radius: 4px; background: #080e18ed; color: #bff7eb; font-size: 12px; line-height: 1.8; pointer-events: none; }
@@ -23,9 +23,9 @@ kbd { padding: 3px 6px; border: 1px solid #4b5d73; border-radius: 3px; color: #e
 .startup-error { position: absolute; top: 40%; left: 10%; right: 10%; padding: 24px; background: #291b24; color: #ffcecb; line-height: 1.6; }
 
 @media (max-width: 600px) {
-  .scene-label { top: 20px; right: 20px; }
-  .eyebrow { font-size: 8px; }
-  .debug-overlay { top: 100px; left: 12px; padding: 10px; font-size: 10px; }
-  .controls { bottom: 12px; left: 12px; right: 12px; font-size: 10px; }
+  .scene-label { top: 12px; right: 12px; }
+  .eyebrow { font-size: 10px; }
+  .debug-overlay { top: 120px; left: 12px; padding: 10px; font-size: 10px; }
+  .controls { bottom: 8px; width: calc(100% - 24px); font-size: 13px; }
   .controls > span { margin: 0 3px; }
 }

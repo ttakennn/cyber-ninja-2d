@@ -36,11 +36,24 @@ for (const solid of level.solids.filter(({ id }) => id === 'upper-roof' || /^roo
   const left = solid.position.x - solid.width / 2;
   const right = solid.position.x + solid.width / 2;
   const top = solid.position.y + solid.height / 2;
-  const count = Math.ceil(solid.width / 3.8);
-  for (let index = 0; index < count; index += 1) {
-    facade(`foreground-parapet_wall-${decorations.length}`, 'parapet_wall',
-      Math.min(left + 1.9 + index * 3.8, right - 1.9), top - 0.8686);
+  // Tách trụ trái 0..80px, thân 80..465px, trụ phải 465..525px.
+  // Mỗi mái chỉ có hai end-cap; phần dư cắt UV thân, không ép/chồng module.
+  const scale = 3.8 / 525;
+  let cursor = left;
+  const strip = (x, pixels) => {
+    const width = pixels * scale;
+    facade(`foreground-parapet_wall-${decorations.length}`, 'parapet_wall', cursor + width / 2, top - 0.8686);
+    const entry = decorations.at(-1);
+    entry.worldSize = { width, height: 0.8686 };
+    entry.sourceRect = { x, y: 0, width: pixels, height: 120 };
+    cursor += width;
+  };
+  strip(0, 80);
+  const bodyEnd = right - 60 * scale;
+  while (bodyEnd - cursor > 1e-8) {
+    strip(80, Math.min(385, (bodyEnd - cursor) / scale));
   }
+  strip(465, 60);
 }
 level.environment = { backgrounds: source.backgrounds.map((layer) => layer.id === 'buildings-near'
   ? { ...layer, verticalAnchor: 'world', worldBottom: -2.7, worldHeight: 8, bottomOffset: 0 }
@@ -53,6 +66,7 @@ const masonry = grid();
 const details = grid();
 const markers = grid();
 const edges = grid();
+const foundation = grid();
 function paint(cells, left, bottom, right, top, id) {
   const { origin, tileSize } = level.tilemap;
   for (let row = (origin.y - top) / tileSize.height; row < (origin.y - bottom) / tileSize.height; row += 1) {
@@ -85,12 +99,14 @@ paint(details, 13.5, 1.5, 14, 2, 8);
 paint(details, 16, 0, 16.5, 0.5, 8);
 paint(markers, 27, 0, 27.5, 0.5, 10);
 paint(markers, 77.5, 3, 78.5, 5.5, 10);
+paint(foundation, 0, -4.5, 40, -4, 3);
 level.tilemap.layers = [
   { id: 'terrain', tint: '#687da6', sampleInset: 20, cells: terrain },
   { id: 'passage-masonry', tint: '#687da6', sampleInset: 20, cells: masonry },
   { id: 'hand-placed-details', cells: details },
   { id: 'roof-edges', tint: '#a5afc8', cells: edges },
   { id: 'markers', cells: markers },
+  { id: 'street-foundation', tint: '#182656', sampleInset: 20, cells: foundation },
 ];
 let output = JSON.stringify(level, null, 2);
 for (const layer of level.tilemap.layers) {

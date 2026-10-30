@@ -88,7 +88,10 @@ describe('Task 008 Fix: neo world và foreground', () => {
     for (const decoration of pilot.environment.decorations.filter(({ id }) => id.startsWith('facade-') || id.includes('parapet_wall'))) {
       const asset = metadata.assets.find(({ image }) => decoration.image.endsWith(`/${image}`))!;
       expect(asset.artReviewStatus).toMatch(/^APPROVED_/);
-      expect(decoration.worldSize).toEqual(asset.worldSize);
+      if ('sourceRect' in decoration && decoration.sourceRect) {
+        expect(decoration.worldSize.width).toBeCloseTo(decoration.sourceRect.width * asset.worldSize.width / asset.pixelSize.width);
+        expect(decoration.worldSize.height).toBe(asset.worldSize.height);
+      } else expect(decoration.worldSize).toEqual(asset.worldSize);
       const bytes = readFileSync(new URL(`../public/${decoration.image}`, import.meta.url));
       expect([bytes.readUInt32BE(16), bytes.readUInt32BE(20)]).toEqual(decoration.pixelSize);
       expect(createHash('sha256').update(bytes).digest('hex')).toBe(asset.sha256);

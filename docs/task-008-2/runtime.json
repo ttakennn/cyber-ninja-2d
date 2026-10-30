@@ -1,0 +1,48 @@
+{
+  "task": "008.2",
+  "baseline": "e8e88df",
+  "branch": "codex/task-008-visual-closure",
+  "status": "not-run",
+  "reason": "Computer Use stopped: current Chrome URL could not be determined confidently enough to enforce access policy.",
+  "browserDetected": "Google Chrome",
+  "browserVersion": null,
+  "dpr": null,
+  "viewports": [
+    {
+      "height": 1080,
+      "width": 1920,
+      "status": "not-tested"
+    },
+    {
+      "height": 720,
+      "width": 1280,
+      "status": "not-tested"
+    },
+    {
+      "height": 768,
+      "width": 1024,
+      "status": "not-tested"
+    },
+    {
+      "height": 960,
+      "width": 540,
+      "status": "not-tested"
+    }
+  ],
+  "console": null,
+  "fps": null,
+  "screenshots": [],
+  "artStatus": "Awaiting user-supplied assets; see docs/TASK-008-2-ART-BRIEF.md",
+  "sourceSHA256": {
+    "scripts/generate_map01_pilot.mjs": "59e9a92be904182c52af09485faeca1d629f9cc308b93dde54f34cdb06debc4a",
+    "src/world/EnvironmentData.ts": "a76fb672ea68a05f17881409e33a641e7dba6cdd6f43795b6693e7dd86c3ce87",
+    "src/rendering/EnvironmentRenderer.ts": "a7dd939adb12d1c83c08dc6b1e8166c2349320aa4bb6568592b59227422b03a4",
+    "src/styles/main.css": "131cdc7eb0e243dee510b478d6442ed6033425984b8de8f78e542c006a7a9a9c",
+    "src/world/levels/map-01-visual-pilot.json": "942ec6616b08c5b801ead93930f43e21c933a6c723d1049e223b21e1e092d38b",
+    "tests/VisualClosure.test.ts": "14efc22017140a3a59e0b69b74e937f97a7d13cbd203e48effe952c0487981a9",
+    "tests/EnvironmentPolish.test.ts": "216708ed7da04fefde21d1f1f8dc2a8ea8791506b70da47ffc373bd968b3d2c3"
+  },
+  "productionJavaScript": "index-C3bS-xNM.js",
+  "testLog": "test.log",
+  "buildLog": "build.log"
+}

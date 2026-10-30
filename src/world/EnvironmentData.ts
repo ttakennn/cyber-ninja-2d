@@ -23,6 +23,7 @@ export interface EnvironmentDecoration extends EnvironmentImage {
   readonly anchor: Readonly<{ x: 0.5; y: 1 }>;
   readonly collision: false;
   readonly layer?: 'behind-player' | 'foreground';
+  readonly sourceRect?: Readonly<{ x: number; y: number; width: number; height: number }>;
 }
 
 export interface EnvironmentData {
@@ -104,7 +105,15 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     const anchor = object(prop.anchor, `${path}.anchor`);
     if (anchor.x !== 0.5 || anchor.y !== 1) fail(`${path}.anchor`, 'pilot dùng bottom-center (x=0.5, y=1)');
     if (![worldPosition.x - worldSize.width / 2, worldPosition.x + worldSize.width / 2, worldPosition.y + worldSize.height].every(Number.isFinite)) fail(path, 'biên vật trang trí tràn số');
+    let sourceRect: EnvironmentDecoration['sourceRect'];
+    if (prop.sourceRect !== undefined) {
+      const rect = object(prop.sourceRect, `${path}.sourceRect`);
+      sourceRect = { x: number(rect.x, `${path}.sourceRect.x`, 0), y: number(rect.y, `${path}.sourceRect.y`, 0),
+        width: number(rect.width, `${path}.sourceRect.width`, Number.MIN_VALUE), height: number(rect.height, `${path}.sourceRect.height`, Number.MIN_VALUE) };
+      if (sourceRect.x + sourceRect.width > base.pixelSize[0] || sourceRect.y + sourceRect.height > base.pixelSize[1]) fail(`${path}.sourceRect`, 'vượt kích thước ảnh');
+    }
     return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false,
+      ...(sourceRect === undefined ? {} : { sourceRect }),
       ...(prop.layer === undefined ? {} : { layer: prop.layer }) };
   });
   return { backgrounds, decorations };
