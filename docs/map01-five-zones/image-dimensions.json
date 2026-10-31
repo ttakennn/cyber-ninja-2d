@@ -1,0 +1,162 @@
+[
+  {
+    "File": "arena-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "arena-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "arena-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "arena-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "arena-debug-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "arena-debug-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "arena-debug-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "arena-debug-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "exit-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "exit-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "exit-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "exit-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "landing-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "landing-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "landing-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "landing-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "market-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "market-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "market-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "market-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "noodle-shop-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "noodle-shop-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "noodle-shop-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "noodle-shop-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "respawn-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "respawn-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "respawn-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "respawn-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  },
+  {
+    "File": "spawn-1024x768.jpg",
+    "Width": 1024,
+    "Height": 768
+  },
+  {
+    "File": "spawn-1280x720.jpg",
+    "Width": 1280,
+    "Height": 720
+  },
+  {
+    "File": "spawn-1920x1080.jpg",
+    "Width": 1920,
+    "Height": 1061
+  },
+  {
+    "File": "spawn-540x960.jpg",
+    "Width": 540,
+    "Height": 960
+  }
+]

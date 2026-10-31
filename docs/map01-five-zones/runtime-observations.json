@@ -1,0 +1,81 @@
+{
+  "method": "Các điểm được chép từ AX HUD đã đọc bằng công cụ trong lượt kiểm thực tế; không phải trace từng frame",
+  "browser": "IAB",
+  "observations": [
+    {
+      "x": 13.14,
+      "stage": "crouch",
+      "standingBlocked": true,
+      "y": -2.05
+    },
+    {
+      "x": 29,
+      "stage": "ladder-top",
+      "y": 3.2
+    },
+    {
+      "x": 31.8,
+      "stage": "balcony",
+      "y": 1.8
+    },
+    {
+      "x": 39.2,
+      "stage": "upper-roof",
+      "y": 2.8
+    },
+    {
+      "x": 50.7,
+      "stage": "roof-2",
+      "y": 3.8
+    },
+    {
+      "x": 59.9,
+      "stage": "roof-3",
+      "y": 4.3
+    },
+    {
+      "x": 76.3,
+      "stage": "roof-4",
+      "y": 3.8
+    },
+    {
+      "x": 82.4,
+      "respawns": 0,
+      "stage": "landing",
+      "y": -1.7
+    },
+    {
+      "x": 93,
+      "stage": "noodle-shop",
+      "y": -1.7
+    },
+    {
+      "x": 104.5,
+      "stage": "market",
+      "y": -1.7
+    },
+    {
+      "x": 127.4,
+      "stage": "arena",
+      "y": -1.7
+    },
+    {
+      "x": 142.2,
+      "stage": "exit",
+      "cameraX": 136,
+      "y": -1.7
+    },
+    {
+      "x": 2,
+      "respawns": 1,
+      "stage": "respawn",
+      "y": -1.7
+    },
+    {
+      "x": 2,
+      "stage": "jump-after-respawn",
+      "y": 0.227
+    }
+  ],
+  "console": []
+}

@@ -1,5 +1,7 @@
 # Cyber Ninja 2D HD
 
+Bản thử năm zone: mở `?level=map01-five-zones`. Đây là graybox có placeholder ghi nhãn, chưa phải production; xem [báo cáo và ảnh bốn viewport](docs/MAP01-FIVE-ZONES.md). Alias `map01` và các level cũ giữ nguyên.
+
 **Hiện tại: Task 008 đã tích hợp visual pilot, chờ duyệt hình ảnh.** Mở `?level=map01` để chơi Map 1 với môi trường Vietnamese Urban Night; `?level=map01-graybox` giữ bản Task 007 để đối chiếu. Xem [báo cáo Task 008](docs/TASK-008.md) để biết schema, ảnh chạy thật, kiểm thử và giới hạn còn lại. Chưa tạo Step 09 Final Production Asset Pack. Playground mặc định, `?level=small` và `?level=tiles` giữ hành vi cũ. [Task 007](docs/TASK-007.md), [Task 006](docs/TASK-006.md), [Task 005](docs/TASK-005.md), [Task 004](docs/TASK-004.md), [Task 003](docs/TASK-003.md), [Task 002](docs/TASK-002.md) và phần Task 001 bên dưới được giữ làm mốc lịch sử. Atlas phát triển cũ vẫn có tại `development-animations.json`; runtime dùng `animations.json` production.
 
 Task 001: a fresh engine foundation using Vite, strict TypeScript, Three.js, and Vitest. No code or assets were migrated from the existing games.

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "map01",
+    "state": "Level        map01\nPosition     X 2.000  Y -1.700\nCamera       X 8.000  Y 0.000\nBounds       0..80 / -4.5..11.5",
+    "console": []
+  },
+  {
+    "id": "map01-graybox",
+    "state": "Level        map01\nPosition     X 2.000  Y -1.700\nCamera       X 8.000  Y 0.000\nBounds       0..80 / -4.5..11.5",
+    "console": []
+  },
+  {
+    "id": "playground",
+    "state": "Level        playground\nPosition     X 0.000  Y 0.322\nCamera       X 0.000  Y 0.000\nBounds       —",
+    "console": []
+  },
+  {
+    "id": "small",
+    "state": "Level        small\nPosition     X -2.000  Y -1.700\nCamera       X -2.000  Y 0.000\nBounds       —",
+    "console": []
+  },
+  {
+    "id": "tiles",
+    "state": "Level        tiles\nPosition     X 0.000  Y -0.533\nCamera       X 0.000  Y 0.000\nBounds       —",
+    "console": []
+  }
+]

@@ -1,0 +1,480 @@
+{
+  "codeCommit": "12244bf98183262bb312b164c4d550ad6e968945",
+  "baseline": "6492090e33da4f6925681ef42a18cf4329a043c4",
+  "branch": "codex/map01-five-zones",
+  "status": "GRAYBOX_NOT_PRODUCTION",
+  "browser": "IAB",
+  "productionJS": "index-D8rgOncG.js",
+  "productionSHA256": "3e9e9ce8e9a3ec77548af88fda652d01f93a686ba12f63de3844a705482713a4",
+  "screenshots": [
+    {
+      "file": "arena-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "3f4ca64452b05e16e0b21951b6116a6afe8c6a62b43fbad064ecaaaf05ad66ff"
+    },
+    {
+      "file": "arena-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "81e9416c8f2e52bc6f2d28e6b983ee2e4915db20c18748d1484ad33c8a010404"
+    },
+    {
+      "file": "arena-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "b9a9a43739b94c1770ae230292520347df24ca2cf6504f04db8a83745055cdd5"
+    },
+    {
+      "file": "arena-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "68f2cb07ac6355530c5996b15312272abb36a3ada79b576e4cc87b6589679a19"
+    },
+    {
+      "file": "arena-debug-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "b1f80a321582ff70c3d54fa087853d21f5000c30f89444c9255a3ac8739e6146"
+    },
+    {
+      "file": "arena-debug-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "12c8264f18578f1abc171c8b353bfe5f46312c1e1690885eaedc209b852eea41"
+    },
+    {
+      "file": "arena-debug-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "b4fd3687822d37e9d2d4d5962cf70db83b3f1538304a9239245fb24e3b36c1fa"
+    },
+    {
+      "file": "arena-debug-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "a59542b45034edf3b0e5446ceadcea7065e7334037cd46ed8f5c492f93b8b478"
+    },
+    {
+      "file": "exit-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "19df4a5f4e3da45829445a23e69e38b4ce3b6f94900f17ba08dc4c1d7071058c"
+    },
+    {
+      "file": "exit-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "50f0e7ff3eb8932cfe989a5379d1049eba1618b9462a933b1349239f5eee7d8e"
+    },
+    {
+      "file": "exit-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "213386ffb815935a05c20bfd5b75deb373809e58629c5941fc2598d912fb9c06"
+    },
+    {
+      "file": "exit-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "d2324b1c251112456a8e52b55ae1dc747c6848b8769ee1eb3ef2ed2c243a0a15"
+    },
+    {
+      "file": "landing-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "8229eefa911468fca2558a45af3d3343e6333486bfd28e695fd77494162968d2"
+    },
+    {
+      "file": "landing-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "0ac2887471dea9597405c045fe5efbc26956937a6a599bdcde277775a8ba1398"
+    },
+    {
+      "file": "landing-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "bea0a31a95fddaab8e7aefdb41633a4cfd891ad43fa2f43aa66b3c5bbfa72387"
+    },
+    {
+      "file": "landing-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "3030d6218a9f7a96e6008b0562f6e1f1e6db252e6d9665d6cc7a5bf3dba05eb7"
+    },
+    {
+      "file": "market-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "2a4321deb3421d3b98499d4f105538c2326e260d975e9a42291bbee10c9573ed"
+    },
+    {
+      "file": "market-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "419a4918f3de0d2a8e49d3ffc7f592b97e2e3dd231b6a184514afa2644e1485d"
+    },
+    {
+      "file": "market-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "81c64bf300e03fab787f5fea46a6626fd80d4d3705a2714a71b4d1c8de61ee28"
+    },
+    {
+      "file": "market-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "655fb67480684a4214df9fc477b7a19359f0b335d00ce0c33392808662aed027"
+    },
+    {
+      "file": "noodle-shop-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "09374bcbfd7575c5ba3bf5bc46b146002a237b505ce8473801bfc2ac03586d7a"
+    },
+    {
+      "file": "noodle-shop-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "df82854e1b1c1d2fb2a261e8fea26816bdcda867f6e177137848c948ebaa86e0"
+    },
+    {
+      "file": "noodle-shop-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "cac8b526e73923537d8cdb78bf378d545a50ca3d60aec0e1543084aa2d286387"
+    },
+    {
+      "file": "noodle-shop-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "c0e4fae9ff9fa9868072fb6e3315f6c2f67f3cce5d9f096a4567ae789926b89b"
+    },
+    {
+      "file": "respawn-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "0bead21ec0d34ce9f3c621fd10341cd2673179e3a10da34d35780dab3ea2b07d"
+    },
+    {
+      "file": "respawn-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "4b0633837b28acb22e6b9294e5b8f00903974510fa96a29dce815d090ebab185"
+    },
+    {
+      "file": "respawn-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "7f8ef51b04208746a56479ca811733e79675af909d43619c1a480e06c5c64efa"
+    },
+    {
+      "file": "respawn-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "a56130de58071a76b1c3f5129e2b1524571f3efcb1b60279a9aa1738a59191e1"
+    },
+    {
+      "file": "spawn-1024x768.jpg",
+      "requestedViewport": [
+        1024,
+        768
+      ],
+      "imagePixels": [
+        1024,
+        768
+      ],
+      "sha256": "87b55add7f122fe1c937d8638c50548916b777ba7f35ef81e2a962827a3ed77f"
+    },
+    {
+      "file": "spawn-1280x720.jpg",
+      "requestedViewport": [
+        1280,
+        720
+      ],
+      "imagePixels": [
+        1280,
+        720
+      ],
+      "sha256": "d4e5d0d67f687e0f538ffc97fa97b2e358fc4779db4716aa4636c7880cf1316a"
+    },
+    {
+      "file": "spawn-1920x1080.jpg",
+      "requestedViewport": [
+        1920,
+        1080
+      ],
+      "imagePixels": [
+        1920,
+        1061
+      ],
+      "sha256": "e3773275a9501d6e132d132ea720c647470f04f52ccab9099afe6a5948a8bc75"
+    },
+    {
+      "file": "spawn-540x960.jpg",
+      "requestedViewport": [
+        540,
+        960
+      ],
+      "imagePixels": [
+        540,
+        960
+      ],
+      "sha256": "697fb084567a3d564d5c61365ce5170cf5dd0ea0825422a8f165ea5ffbc0441f"
+    }
+  ],
+  "observations": [
+    {
+      "x": 13.14,
+      "stage": "crouch",
+      "standingBlocked": true,
+      "y": -2.05
+    },
+    {
+      "x": 29,
+      "stage": "ladder-top",
+      "y": 3.2
+    },
+    {
+      "x": 31.8,
+      "stage": "balcony",
+      "y": 1.8
+    },
+    {
+      "x": 39.2,
+      "stage": "upper-roof",
+      "y": 2.8
+    },
+    {
+      "x": 50.7,
+      "stage": "roof-2",
+      "y": 3.8
+    },
+    {
+      "x": 59.9,
+      "stage": "roof-3",
+      "y": 4.3
+    },
+    {
+      "x": 76.3,
+      "stage": "roof-4",
+      "y": 3.8
+    },
+    {
+      "x": 82.4,
+      "respawns": 0,
+      "stage": "landing",
+      "y": -1.7
+    },
+    {
+      "x": 93,
+      "stage": "noodle-shop",
+      "y": -1.7
+    },
+    {
+      "x": 104.5,
+      "stage": "market",
+      "y": -1.7
+    },
+    {
+      "x": 127.4,
+      "stage": "arena",
+      "y": -1.7
+    },
+    {
+      "x": 142.2,
+      "stage": "exit",
+      "cameraX": 136,
+      "y": -1.7
+    },
+    {
+      "x": 2,
+      "respawns": 1,
+      "stage": "respawn",
+      "y": -1.7
+    },
+    {
+      "x": 2,
+      "stage": "jump-after-respawn",
+      "y": 0.227
+    }
+  ],
+  "console": [],
+  "limitations": [
+    "Chrome/Edge not tested in this task",
+    "1920x1080 screenshot API returns 1920x1061; CSS viewport is 1920x1080",
+    "browser version/userAgent not exposed in read-only scope",
+    "jump-off-edge transition checked by unit simulation; browser traversal used running drop",
+    "not a production art pack; twelve missing artworks remain placeholders",
+    "legacy levels load smoke only; not full replay of each"
+  ]
+}
