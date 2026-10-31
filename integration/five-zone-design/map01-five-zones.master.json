@@ -1,0 +1,855 @@
+{
+  "schema": "cyber-ninja-map01-five-zone-master/v1",
+  "status": "DESIGN_PROPOSAL",
+  "baselineCommit": "6492090e33da4f6925681ef42a18cf4329a043c4",
+  "zones": [
+    {
+      "id": "zone-1",
+      "legacyId": "A",
+      "name": "Phố vào",
+      "minX": 0,
+      "maxX": 26,
+      "status": "EXISTING_PRESERVE",
+      "role": "Spawn, thùng, hầm cúi, bậc"
+    },
+    {
+      "id": "zone-2",
+      "legacyId": "B",
+      "name": "Hẻm và thang",
+      "minX": 26,
+      "maxX": 40,
+      "status": "EXISTING_PRESERVE",
+      "role": "Thang X29, ban công, lên mái"
+    },
+    {
+      "id": "zone-3",
+      "legacyId": "C",
+      "name": "Tuyến mái",
+      "minX": 40,
+      "maxX": 80,
+      "status": "EXISTING_PRESERVE",
+      "role": "Giữ ba khe nhảy 2 unit"
+    },
+    {
+      "id": "zone-4",
+      "legacyId": null,
+      "name": "Phố Hủ tiếu",
+      "minX": 80,
+      "maxX": 112,
+      "groundY": -2.5,
+      "status": "PROPOSED",
+      "role": "Tiếp đất, quán Hủ tiếu nam vang, Siêu thị, đèn, chậu hoa"
+    },
+    {
+      "id": "zone-5",
+      "legacyId": null,
+      "name": "Sân giao hàng",
+      "minX": 112,
+      "maxX": 144,
+      "groundY": -2.5,
+      "status": "PROPOSED",
+      "role": "Tiền sảnh, lõi đấu boss 16 unit, lối ra"
+    }
+  ],
+  "subareas": [
+    {
+      "id": "landing-apron",
+      "zoneId": "zone-4",
+      "minX": 80,
+      "maxX": 88,
+      "groundY": -2.5,
+      "keepClear": true
+    },
+    {
+      "id": "noodle-frontage",
+      "zoneId": "zone-4",
+      "minX": 88,
+      "maxX": 98
+    },
+    {
+      "id": "shop-separator",
+      "zoneId": "zone-4",
+      "minX": 98,
+      "maxX": 100
+    },
+    {
+      "id": "supermarket-frontage",
+      "zoneId": "zone-4",
+      "minX": 100,
+      "maxX": 110
+    },
+    {
+      "id": "zone4-exit",
+      "zoneId": "zone-4",
+      "minX": 110,
+      "maxX": 112
+    },
+    {
+      "id": "arena-approach",
+      "zoneId": "zone-5",
+      "minX": 112,
+      "maxX": 120
+    },
+    {
+      "id": "combat-core",
+      "zoneId": "zone-5",
+      "minX": 120,
+      "maxX": 136,
+      "groundY": -2.5,
+      "keepClear": true
+    },
+    {
+      "id": "arena-exit",
+      "zoneId": "zone-5",
+      "minX": 136,
+      "maxX": 144
+    }
+  ],
+  "geometry": {
+    "proposedLevelId": "map01-five-zones",
+    "baseLevelId": "map01",
+    "preserveOriginalSolids": [
+      {
+        "id": "street",
+        "position": {
+          "x": 20,
+          "y": -3.25
+        },
+        "width": 40,
+        "height": 1.5
+      },
+      {
+        "id": "street-crate",
+        "position": {
+          "x": 7.5,
+          "y": -2
+        },
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "passage-roof",
+        "position": {
+          "x": 14.5,
+          "y": 1
+        },
+        "width": 5,
+        "height": 5
+      },
+      {
+        "id": "raised-step",
+        "position": {
+          "x": 22.5,
+          "y": -2
+        },
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "balcony",
+        "position": {
+          "x": 33.25,
+          "y": 0.75
+        },
+        "width": 6.5,
+        "height": 0.5
+      },
+      {
+        "id": "balcony-crate",
+        "position": {
+          "x": 34,
+          "y": 1.25
+        },
+        "width": 1,
+        "height": 0.5
+      },
+      {
+        "id": "upper-roof",
+        "position": {
+          "x": 42.5,
+          "y": 1.5
+        },
+        "width": 11,
+        "height": 1
+      },
+      {
+        "id": "roof-2",
+        "position": {
+          "x": 54,
+          "y": 2.5
+        },
+        "width": 8,
+        "height": 1
+      },
+      {
+        "id": "roof-3",
+        "position": {
+          "x": 64,
+          "y": 3
+        },
+        "width": 8,
+        "height": 1
+      },
+      {
+        "id": "roof-4",
+        "position": {
+          "x": 75,
+          "y": 2.5
+        },
+        "width": 10,
+        "height": 1
+      },
+      {
+        "id": "upper-roof-support",
+        "position": {
+          "x": 42.5,
+          "y": -1.75
+        },
+        "width": 11,
+        "height": 5.5
+      }
+    ],
+    "preserveOriginalClimbables": [
+      {
+        "id": "alley-ladder",
+        "kind": "ladder",
+        "position": {
+          "x": 29,
+          "y": 0.75
+        },
+        "width": 1,
+        "height": 6.5
+      }
+    ],
+    "spawn": {
+      "x": 2,
+      "y": -1.7
+    },
+    "cameraFollowY": true,
+    "deathY": -8,
+    "appendSolids": [
+      {
+        "id": "street-extension-z45",
+        "position": {
+          "x": 112,
+          "y": -3.25
+        },
+        "width": 64,
+        "height": 1.5
+      }
+    ],
+    "appendClimbables": [],
+    "newGroundY": -2.5,
+    "cameraBounds": {
+      "minX": 0,
+      "maxX": 144,
+      "minY": -4.5,
+      "maxY": 11.5
+    },
+    "tilemapPlan": {
+      "origin": {
+        "x": 0,
+        "y": 11.5
+      },
+      "tileSize": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "rows": 32,
+      "columns": 288,
+      "retainLayerCount": 6,
+      "declaredCells": 55296,
+      "sourceCellLimit": 65536,
+      "maximumLayersAtThisSize": 7,
+      "instructions": "Extend each existing row to 288 columns. Paint new ground X80..144/Y-4..-2.5 and visual-only foundation to -4.5 into existing layers; no dense wall fill."
+    },
+    "oldFinishMarker": {
+      "bounds": {
+        "minX": 77.5,
+        "maxX": 78.5,
+        "minY": 3,
+        "maxY": 5.5
+      },
+      "change": "Retire old finish visual only, or replace with direction cue; source has no win trigger."
+    },
+    "proposedFinalExitFoot": {
+      "x": 142,
+      "y": -2.5
+    },
+    "transition": {
+      "from": "roof-4",
+      "to": "landing-apron",
+      "roofTopY": 3,
+      "streetTopY": -2.5,
+      "dropHeight": 5.5,
+      "clearLandingMinX": 80,
+      "clearLandingMaxX": 88,
+      "directionality": "ONE_WAY_PROPOSAL_WITH_EXISTING_MOVEMENT",
+      "note": "Current jump rises about 2.16 units, so cannot climb back 5.5 units. A return ladder is a separate decision, not silently added. Current source has fall recovery but no fall-damage subsystem."
+    }
+  },
+  "placements": [
+    {
+      "id": "z4-noodle-building",
+      "assetId": "z4-noodle-facade",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 93,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-noodle-sign",
+      "assetId": "z4-sign-hu-tieu-nam-vang",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 93,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 7,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-market-building",
+      "assetId": "z4-supermarket-facade",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 105,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-market-sign",
+      "assetId": "z4-sign-sieu-thi",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 105,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 6,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-lamp-1",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 88.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-lamp-2",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 99,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-lamp-3",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 110.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-1",
+      "assetId": "z4-flowerpot-pink",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 89,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-2",
+      "assetId": "z4-flowerpot-amber",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 97.2,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-3",
+      "assetId": "z4-flowerpot-amber",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 100.8,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-4",
+      "assetId": "z4-flowerpot-pink",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 110,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-hanging-flowers",
+      "assetId": "reuse-flower_basket_pink",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 97.2,
+        "y": 0.5
+      },
+      "worldSize": {
+        "width": 1.0,
+        "height": 1.2381
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.15,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-entry-sidewall",
+      "assetId": "z5-service-sidewall",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 116,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-arena-wall",
+      "assetId": "z5-arena-backwall",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 128,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-exit-sidewall",
+      "assetId": "z5-service-sidewall",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-backdrop-shutter",
+      "assetId": "z5-cargo-shutter",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 128,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-entry-gate-open",
+      "assetId": "z5-yard-gate",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 118.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.18,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-exit-gate-open",
+      "assetId": "z5-yard-gate",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 137.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.18,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-floor-edge-stripe",
+      "assetId": "z5-hazard-edge",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 128,
+        "y": -2.75
+      },
+      "worldSize": {
+        "width": 12,
+        "height": 0.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-wall-light-1",
+      "assetId": "reuse-wall_light_amber",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 122.5,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-wall-light-2",
+      "assetId": "reuse-wall_light_amber",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 133.5,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-edge-lamp-1",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 114,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-edge-lamp-2",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 141,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-wood-crate-background",
+      "assetId": "reuse-crate-wood",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 115,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-pallet-background",
+      "assetId": "reuse-wooden-pallet",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27,
+      "runtimeEnabledWhen": "map-art-integration"
+    }
+  ],
+  "encounter": {
+    "status": "DESIGN_ONLY_NOT_RUNTIME_SUPPORTED",
+    "enabled": false,
+    "theme": "Sân giao hàng sau siêu thị, cửa cuốn tối, đèn amber, chi tiết thép navy/cyan tiết chế.",
+    "bossConcept": {
+      "workingName": "Thiết Vệ",
+      "role": "Vệ sĩ cơ khí của khu giao hàng",
+      "visualIdea": "Giáp navy/indigo, điểm amber nhỏ; silhouette rõ trên tường tối. Sprite/animation chưa được tạo.",
+      "hp": null,
+      "attacks": null,
+      "ai": null,
+      "hitboxes": null
+    },
+    "combatCore": {
+      "minX": 120,
+      "maxX": 136,
+      "groundY": -2.5
+    },
+    "playerEntryFoot": {
+      "x": 122,
+      "y": -2.5
+    },
+    "bossSpawnFoot": {
+      "x": 132,
+      "y": -2.5
+    },
+    "proposedFutureTrigger": {
+      "crossingX": 120,
+      "enabled": false
+    },
+    "gateCollisionEnabled": false,
+    "cameraLockEnabled": false,
+    "checkpointEnabled": false,
+    "cameraNote": "16-unit core fits reference 16:9 only when centered X128. Keep existing follow for map preview; no claim of full-arena framing at 4:3/portrait. Combat camera requires later design.",
+    "preserveCurrentRespawn": true,
+    "keepCombatForegroundClear": true
+  }
+}

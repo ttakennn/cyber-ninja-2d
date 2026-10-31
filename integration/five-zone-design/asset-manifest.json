@@ -1,0 +1,1061 @@
+{
+  "schema": "cyber-ninja-map01-five-zone-asset-manifest/v1",
+  "version": "design-v1",
+  "status": "DESIGN_HANDOFF_NOT_PRODUCTION_ASSET_PACK",
+  "baseline": {
+    "repo": "ttakennn/cyber-ninja-2d",
+    "localBranch": "codex/task-008-production-assets",
+    "commit": "6492090e33da4f6925681ef42a18cf4329a043c4",
+    "baseManifest": "assets/environments/map01/asset-manifest.json",
+    "preservedSolidCount": 11,
+    "preservedClimbableCount": 1,
+    "productionCatalog": "assets/environments/map01/production/production-assets.json"
+  },
+  "world": {
+    "width": 144,
+    "height": 16,
+    "tileWorldSize": 0.5,
+    "pixelsPerWorldUnit": 128,
+    "coordinates": "X right, Y up; placements bottom-center; collision AABB center-based"
+  },
+  "paletteLock": {
+    "night_navy": "#071638",
+    "indigo_city": "#182656",
+    "dusk_violet": "#433075",
+    "deep_blue": "#152C5A",
+    "concrete_blue": "#2B3D60",
+    "stone_highlight": "#62779C",
+    "cyan": "#35D8E9",
+    "amber": "#F7B25A",
+    "restrained_red": "#F04D52",
+    "leaf_green": "#406F53"
+  },
+  "zones": [
+    {
+      "id": "zone-1",
+      "legacyId": "A",
+      "name": "Phố vào",
+      "minX": 0,
+      "maxX": 26,
+      "status": "EXISTING_PRESERVE",
+      "role": "Spawn, thùng, hầm cúi, bậc"
+    },
+    {
+      "id": "zone-2",
+      "legacyId": "B",
+      "name": "Hẻm và thang",
+      "minX": 26,
+      "maxX": 40,
+      "status": "EXISTING_PRESERVE",
+      "role": "Thang X29, ban công, lên mái"
+    },
+    {
+      "id": "zone-3",
+      "legacyId": "C",
+      "name": "Tuyến mái",
+      "minX": 40,
+      "maxX": 80,
+      "status": "EXISTING_PRESERVE",
+      "role": "Giữ ba khe nhảy 2 unit"
+    },
+    {
+      "id": "zone-4",
+      "legacyId": null,
+      "name": "Phố Hủ tiếu",
+      "minX": 80,
+      "maxX": 112,
+      "groundY": -2.5,
+      "status": "PROPOSED",
+      "role": "Tiếp đất, quán Hủ tiếu nam vang, Siêu thị, đèn, chậu hoa"
+    },
+    {
+      "id": "zone-5",
+      "legacyId": null,
+      "name": "Sân giao hàng",
+      "minX": 112,
+      "maxX": 144,
+      "groundY": -2.5,
+      "status": "PROPOSED",
+      "role": "Tiền sảnh, lõi đấu boss 16 unit, lối ra"
+    }
+  ],
+  "assets": [
+    {
+      "id": "z4-noodle-facade",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z4-noodle-facade.png",
+      "pixelSize": [
+        1280,
+        768
+      ],
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Mặt tiền quán, để trống chỗ biển và cửa; không bake biển chữ/đèn/chậu vào tường.",
+      "proofFiles": []
+    },
+    {
+      "id": "z4-sign-hu-tieu-nam-vang",
+      "availability": "DRAFT_VECTOR_PROOF",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z4-sign-hu-tieu-nam-vang.png",
+      "pixelSize": [
+        896,
+        160
+      ],
+      "worldSize": {
+        "width": 7,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Biển đỏ trầm/amber, chữ đúng nguyên văn: Hủ tiếu nam vang.",
+      "proofFiles": [
+        "proofs/z4-sign-hu-tieu-nam-vang.svg",
+        "proofs/z4-sign-hu-tieu-nam-vang.png"
+      ],
+      "text": "Hủ tiếu nam vang",
+      "proofArtifacts": [
+        {
+          "file": "proofs/z4-sign-hu-tieu-nam-vang.svg",
+          "bytes": 1143,
+          "sha256": "a339603bc69d48479dde2a9ae2ee303e58657a908a37d81eaac647235ae1fe92",
+          "status": "DRAFT_TYPOGRAPHY_PROOF_NOT_PRODUCTION_ART"
+        },
+        {
+          "file": "proofs/z4-sign-hu-tieu-nam-vang.png",
+          "bytes": 11849,
+          "sha256": "eaf194a25b84faa81c61419ce4e961344337bc8c377db55e4c4e5f68ebe329d5",
+          "status": "DRAFT_TYPOGRAPHY_PROOF_NOT_PRODUCTION_ART",
+          "pixelSize": [
+            896,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z4-supermarket-facade",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z4-supermarket-facade.png",
+      "pixelSize": [
+        1280,
+        768
+      ],
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Siêu thị nhỏ đô thị Việt Nam, indigo/cyan vừa phải; biển tách riêng.",
+      "proofFiles": []
+    },
+    {
+      "id": "z4-sign-sieu-thi",
+      "availability": "DRAFT_VECTOR_PROOF",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z4-sign-sieu-thi.png",
+      "pixelSize": [
+        768,
+        160
+      ],
+      "worldSize": {
+        "width": 6,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Biển navy/teal, chữ đúng nguyên văn: Siêu thị.",
+      "proofFiles": [
+        "proofs/z4-sign-sieu-thi.svg",
+        "proofs/z4-sign-sieu-thi.png"
+      ],
+      "text": "Siêu thị",
+      "proofArtifacts": [
+        {
+          "file": "proofs/z4-sign-sieu-thi.svg",
+          "bytes": 1134,
+          "sha256": "d32502195718b0f8729d5d00d1db5bb0664384fda6d392b7cbb8e33fd776c5b5",
+          "status": "DRAFT_TYPOGRAPHY_PROOF_NOT_PRODUCTION_ART"
+        },
+        {
+          "file": "proofs/z4-sign-sieu-thi.png",
+          "bytes": 7902,
+          "sha256": "e1512aad06b85e7405136afaecec2114df89e8e31d61bb0758a6b5e548877627",
+          "status": "DRAFT_TYPOGRAPHY_PROOF_NOT_PRODUCTION_ART",
+          "pixelSize": [
+            768,
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z45-street-lamp",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z45-street-lamp.png",
+      "pixelSize": [
+        128,
+        448
+      ],
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Đèn phố kim loại navy, kính vàng amber; ánh sáng không che player. Phong cách illustrated RC1.",
+      "proofFiles": []
+    },
+    {
+      "id": "z4-flowerpot-pink",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z4-flowerpot-pink.png",
+      "pixelSize": [
+        160,
+        192
+      ],
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Chậu đặt sàn có hoa hồng/tím, không phải giỏ treo; chân phẳng và alpha sạch.",
+      "proofFiles": []
+    },
+    {
+      "id": "z4-flowerpot-amber",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z4-flowerpot-amber.png",
+      "pixelSize": [
+        160,
+        192
+      ],
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Chậu đặt sàn có hoa vàng/cam; cùng chất liệu và tỷ lệ với biến thể hồng.",
+      "proofFiles": []
+    },
+    {
+      "id": "z5-arena-backwall",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z5-arena-backwall.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Mặt tường sân giao hàng, trống trung tâm cho cửa cuốn tách riêng; không bake boss/đèn/cổng.",
+      "proofFiles": []
+    },
+    {
+      "id": "z5-cargo-shutter",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z5-cargo-shutter.png",
+      "pixelSize": [
+        1280,
+        576
+      ],
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Cửa cuốn công nghiệp sau boss; bề mặt tối, điểm amber nhỏ; không phải sàn/collider.",
+      "proofFiles": []
+    },
+    {
+      "id": "z5-yard-gate",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z5-yard-gate.png",
+      "pixelSize": [
+        256,
+        576
+      ],
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Một cổng hai trụ hoặc cửa rút gọn; artwork open-state cho giai đoạn map, không tự khóa đường.",
+      "proofFiles": []
+    },
+    {
+      "id": "z5-hazard-edge",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z5-hazard-edge.png",
+      "pixelSize": [
+        1536,
+        32
+      ],
+      "worldSize": {
+        "width": 12,
+        "height": 0.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Vạch vàng trầm nằm dưới mặt đường; chỉ tín hiệu thị giác, không gây sát thương.",
+      "proofFiles": []
+    },
+    {
+      "id": "z5-service-sidewall",
+      "availability": "REQUIRES_AUTHORING",
+      "runtimeReady": false,
+      "plannedImage": "assets/environments/map01/expansion-z45/z5-service-sidewall.png",
+      "pixelSize": [
+        1024,
+        768
+      ],
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": null,
+      "artBrief": "Mảng tường sân phụ ở đầu/cuối Zone5, có chỗ gắn đèn; có thể dùng chung hai placement.",
+      "proofFiles": []
+    },
+    {
+      "id": "reuse-flower_basket_pink",
+      "availability": "AVAILABLE_REUSE_CANDIDATE",
+      "runtimeReady": true,
+      "image": "assets/environments/map01/foreground/individual/flower_basket_pink.png",
+      "pixelSize": [
+        231,
+        286
+      ],
+      "worldSize": {
+        "width": 1.0,
+        "height": 1.2381
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": "288d0df9d2c199fdf59a409f9befc265e7bd6e13d637796aa2d6020ef870c362",
+      "sourceCatalog": "assets/environments/map01/foreground/foreground.json",
+      "sourceId": "flower_basket_pink",
+      "sourceReviewStatus": "APPROVED_VISUAL",
+      "artNote": "Đánh giá lại trong cảnh mới; không tự đổi trạng thái source."
+    },
+    {
+      "id": "reuse-wall_light_amber",
+      "availability": "AVAILABLE_REUSE_CANDIDATE",
+      "runtimeReady": true,
+      "image": "assets/environments/map01/foreground/individual/wall_light_amber.png",
+      "pixelSize": [
+        172,
+        153
+      ],
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": "60e23c4a0a72679e1bafedbcb82f278cd3ee18741fa164d0d0a91157f2337f5f",
+      "sourceCatalog": "assets/environments/map01/foreground/foreground.json",
+      "sourceId": "wall_light_amber",
+      "sourceReviewStatus": "APPROVED_VISUAL",
+      "artNote": "Đánh giá lại trong cảnh mới; không tự đổi trạng thái source."
+    },
+    {
+      "id": "reuse-crate-wood",
+      "availability": "AVAILABLE_REUSE_CANDIDATE",
+      "runtimeReady": true,
+      "image": "assets/environments/map01/props/props/street/crate-wood.png",
+      "pixelSize": [
+        124,
+        124
+      ],
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": "43556dad84998ffff0fef940b9b9e534dd4bc9487f7896a3c8d03b83cb9e735f",
+      "sourceCatalog": "assets/environments/map01/props/props.json",
+      "sourceId": "crate-wood",
+      "sourceReviewStatus": "Not individually approved in source metadata",
+      "artNote": "Đánh giá lại trong cảnh mới; không tự đổi trạng thái source."
+    },
+    {
+      "id": "reuse-wooden-pallet",
+      "availability": "AVAILABLE_REUSE_CANDIDATE",
+      "runtimeReady": true,
+      "image": "assets/environments/map01/props/props/rooftop/wooden-pallet.png",
+      "pixelSize": [
+        212,
+        150
+      ],
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "sha256": "95c02475dff0db5545af99123e0a6b6ef1ec763ccac78c7dda66bc27df457452",
+      "sourceCatalog": "assets/environments/map01/props/props.json",
+      "sourceId": "wooden-pallet",
+      "sourceReviewStatus": "Not individually approved in source metadata",
+      "artNote": "Đánh giá lại trong cảnh mới; không tự đổi trạng thái source."
+    }
+  ],
+  "placements": [
+    {
+      "id": "z4-noodle-building",
+      "assetId": "z4-noodle-facade",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 93,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-noodle-sign",
+      "assetId": "z4-sign-hu-tieu-nam-vang",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 93,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 7,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-market-building",
+      "assetId": "z4-supermarket-facade",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 105,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-market-sign",
+      "assetId": "z4-sign-sieu-thi",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 105,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 6,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-lamp-1",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 88.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-lamp-2",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 99,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-lamp-3",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 110.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-1",
+      "assetId": "z4-flowerpot-pink",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 89,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-2",
+      "assetId": "z4-flowerpot-amber",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 97.2,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-3",
+      "assetId": "z4-flowerpot-amber",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 100.8,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-flowerpot-4",
+      "assetId": "z4-flowerpot-pink",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 110,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z4-hanging-flowers",
+      "assetId": "reuse-flower_basket_pink",
+      "zoneId": "zone-4",
+      "worldPosition": {
+        "x": 97.2,
+        "y": 0.5
+      },
+      "worldSize": {
+        "width": 1.0,
+        "height": 1.2381
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.15,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-entry-sidewall",
+      "assetId": "z5-service-sidewall",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 116,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-arena-wall",
+      "assetId": "z5-arena-backwall",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 128,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-exit-sidewall",
+      "assetId": "z5-service-sidewall",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-backdrop-shutter",
+      "assetId": "z5-cargo-shutter",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 128,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-entry-gate-open",
+      "assetId": "z5-yard-gate",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 118.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.18,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-exit-gate-open",
+      "assetId": "z5-yard-gate",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 137.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.18,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-floor-edge-stripe",
+      "assetId": "z5-hazard-edge",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 128,
+        "y": -2.75
+      },
+      "worldSize": {
+        "width": 12,
+        "height": 0.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-wall-light-1",
+      "assetId": "reuse-wall_light_amber",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 122.5,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-wall-light-2",
+      "assetId": "reuse-wall_light_amber",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 133.5,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-edge-lamp-1",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 114,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-edge-lamp-2",
+      "assetId": "z45-street-lamp",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 141,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "runtimeEnabledWhen": "asset-authored-and-approved"
+    },
+    {
+      "id": "z5-wood-crate-background",
+      "assetId": "reuse-crate-wood",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 115,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27,
+      "runtimeEnabledWhen": "map-art-integration"
+    },
+    {
+      "id": "z5-pallet-background",
+      "assetId": "reuse-wooden-pallet",
+      "zoneId": "zone-5",
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27,
+      "runtimeEnabledWhen": "map-art-integration"
+    }
+  ],
+  "inheritExistingAssets": {
+    "preserveKeysAndFiles": true,
+    "boundsX": [
+      0,
+      80
+    ],
+    "catalogs": {
+      "backgrounds": "backgrounds.json",
+      "terrain": "tilesets/terrain-64-tiles.json",
+      "props": "props/props.json",
+      "foreground": "foreground/foreground.json"
+    },
+    "productionCatalog": "production/production-assets.json"
+  },
+  "referenceOnly": [
+    {
+      "sourceId": "street-lamp",
+      "reason": "Existing simplified lamp inspected; use as layout reference, author illustrated replacement matching RC1."
+    },
+    {
+      "sourceId": "potted-plant",
+      "reason": "Existing green plant does not provide requested floor flowers."
+    }
+  ],
+  "counts": {
+    "newAssetsToAuthor": 12,
+    "newAssetsWithVectorTextProof": 2,
+    "reuseCandidates": 4,
+    "newPlacements": 25
+  },
+  "runtimeContract": {
+    "loadableByCurrentLevelParser": false,
+    "reason": "This is master design data, not LevelData. Resolve assets and map placements into existing environment schema first.",
+    "missingPlannedImagesMustNotBeRequested": true,
+    "noSourceCatalogOverwrite": true,
+    "newAtlasPolicy": {
+      "maximumPageEdge": 2048,
+      "paddingPixels": 8,
+      "edgeExtrusionPixels": 4,
+      "rotation": false,
+      "filter": "LinearFilter",
+      "generateMipmaps": false,
+      "atlasRects": null,
+      "note": "Rects/pages are assigned after artwork exists. Do not invent atlas hashes or coordinates."
+    }
+  }
+}

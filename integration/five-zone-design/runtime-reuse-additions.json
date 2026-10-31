@@ -1,0 +1,120 @@
+{
+  "backgrounds": [],
+  "decorations": [
+    {
+      "id": "z4-hanging-flowers",
+      "worldPosition": {
+        "x": 97.2,
+        "y": 0.5
+      },
+      "worldSize": {
+        "width": 1.0,
+        "height": 1.2381
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.15,
+      "image": "assets/environments/map01/foreground/individual/flower_basket_pink.png",
+      "pixelSize": [
+        231,
+        286
+      ]
+    },
+    {
+      "id": "z5-wall-light-1",
+      "worldPosition": {
+        "x": 122.5,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "image": "assets/environments/map01/foreground/individual/wall_light_amber.png",
+      "pixelSize": [
+        172,
+        153
+      ]
+    },
+    {
+      "id": "z5-wall-light-2",
+      "worldPosition": {
+        "x": 133.5,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 0.9,
+        "height": 0.8006
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12,
+      "image": "assets/environments/map01/foreground/individual/wall_light_amber.png",
+      "pixelSize": [
+        172,
+        153
+      ]
+    },
+    {
+      "id": "z5-wood-crate-background",
+      "worldPosition": {
+        "x": 115,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27,
+      "image": "assets/environments/map01/props/props/street/crate-wood.png",
+      "pixelSize": [
+        124,
+        124
+      ]
+    },
+    {
+      "id": "z5-pallet-background",
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27,
+      "image": "assets/environments/map01/props/props/rooftop/wooden-pallet.png",
+      "pixelSize": [
+        212,
+        150
+      ]
+    }
+  ]
+}

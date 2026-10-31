@@ -1,0 +1,137 @@
+{
+  "status": "GRAYBOX_ONLY",
+  "assets": [
+    {
+      "id": "z4-noodle-facade",
+      "image": "assets/environments/map01/five-zone-graybox/z4-noodle-facade.svg",
+      "pixelSize": [
+        1280,
+        768
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z4-noodle-facade.png",
+      "sha256": "7ff5fdc59e5ec75e624371c854e4b89fcfafbd24ef150c4794b8899324f8e372"
+    },
+    {
+      "id": "z4-sign-hu-tieu-nam-vang",
+      "image": "assets/environments/map01/five-zone-graybox/z4-sign-hu-tieu-nam-vang.svg",
+      "pixelSize": [
+        896,
+        160
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z4-sign-hu-tieu-nam-vang.png",
+      "sha256": "9e1d4ea9b95288ed2fd16fa606985574e9c912bc8056b61d26e5768f653af34d"
+    },
+    {
+      "id": "z4-supermarket-facade",
+      "image": "assets/environments/map01/five-zone-graybox/z4-supermarket-facade.svg",
+      "pixelSize": [
+        1280,
+        768
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z4-supermarket-facade.png",
+      "sha256": "e8bad957966e1ceca87279506a11fca7c9ab241e764bb2eae48d27132e1582ed"
+    },
+    {
+      "id": "z4-sign-sieu-thi",
+      "image": "assets/environments/map01/five-zone-graybox/z4-sign-sieu-thi.svg",
+      "pixelSize": [
+        768,
+        160
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z4-sign-sieu-thi.png",
+      "sha256": "f1fc080b534f47a4ab8b0278927e87e714f203f90d2fcd266047aaa66df7e19d"
+    },
+    {
+      "id": "z45-street-lamp",
+      "image": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg",
+      "pixelSize": [
+        128,
+        448
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z45-street-lamp.png",
+      "sha256": "cf4b64f72e2a5ab99b95f10bc9f0b468f749a9a174549d8b209d2076919d4fef"
+    },
+    {
+      "id": "z4-flowerpot-pink",
+      "image": "assets/environments/map01/five-zone-graybox/z4-flowerpot-pink.svg",
+      "pixelSize": [
+        160,
+        192
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z4-flowerpot-pink.png",
+      "sha256": "19c984734c3eec0b7f009cb4bba76549a7bcf093199394c226ede1f6911e623c"
+    },
+    {
+      "id": "z4-flowerpot-amber",
+      "image": "assets/environments/map01/five-zone-graybox/z4-flowerpot-amber.svg",
+      "pixelSize": [
+        160,
+        192
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z4-flowerpot-amber.png",
+      "sha256": "629cd382c013bef0f1b266092f68ca2868df2465d4209463f02fff85790fdc40"
+    },
+    {
+      "id": "z5-arena-backwall",
+      "image": "assets/environments/map01/five-zone-graybox/z5-arena-backwall.svg",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z5-arena-backwall.png",
+      "sha256": "6505aa8fbd0ef033c3bc166ce8b126e3ee714cd52c00dcca22c3450b59fe1bbd"
+    },
+    {
+      "id": "z5-cargo-shutter",
+      "image": "assets/environments/map01/five-zone-graybox/z5-cargo-shutter.svg",
+      "pixelSize": [
+        1280,
+        576
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z5-cargo-shutter.png",
+      "sha256": "bd1c6fafd07d876300740983cb2b34dd92a79a276b25d9d1411120a272fb7133"
+    },
+    {
+      "id": "z5-yard-gate",
+      "image": "assets/environments/map01/five-zone-graybox/z5-yard-gate.svg",
+      "pixelSize": [
+        256,
+        576
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z5-yard-gate.png",
+      "sha256": "0677ac04f4a314018c3dd9f15a8a498a9a843594b5c28f3c08ee66b8524196d2"
+    },
+    {
+      "id": "z5-hazard-edge",
+      "image": "assets/environments/map01/five-zone-graybox/z5-hazard-edge.svg",
+      "pixelSize": [
+        1536,
+        32
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z5-hazard-edge.png",
+      "sha256": "678e20a1025d1e8c7f6a14fd7a79b2cb26df327ed75b27d8314e7fdc576cbbde"
+    },
+    {
+      "id": "z5-service-sidewall",
+      "image": "assets/environments/map01/five-zone-graybox/z5-service-sidewall.svg",
+      "pixelSize": [
+        1024,
+        768
+      ],
+      "status": "GRAYBOX_PLACEHOLDER_NOT_PRODUCTION",
+      "replacesPlannedImage": "assets/environments/map01/expansion-z45/z5-service-sidewall.png",
+      "sha256": "beba7a37d23c1717463505ff032ca7bfda24e6a83d9dc6c4005f443e0e03ef98"
+    }
+  ]
+}

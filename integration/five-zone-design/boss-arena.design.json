@@ -1,0 +1,37 @@
+{
+  "status": "DESIGN_ONLY_NOT_RUNTIME_SUPPORTED",
+  "enabled": false,
+  "theme": "Sân giao hàng sau siêu thị, cửa cuốn tối, đèn amber, chi tiết thép navy/cyan tiết chế.",
+  "bossConcept": {
+    "workingName": "Thiết Vệ",
+    "role": "Vệ sĩ cơ khí của khu giao hàng",
+    "visualIdea": "Giáp navy/indigo, điểm amber nhỏ; silhouette rõ trên tường tối. Sprite/animation chưa được tạo.",
+    "hp": null,
+    "attacks": null,
+    "ai": null,
+    "hitboxes": null
+  },
+  "combatCore": {
+    "minX": 120,
+    "maxX": 136,
+    "groundY": -2.5
+  },
+  "playerEntryFoot": {
+    "x": 122,
+    "y": -2.5
+  },
+  "bossSpawnFoot": {
+    "x": 132,
+    "y": -2.5
+  },
+  "proposedFutureTrigger": {
+    "crossingX": 120,
+    "enabled": false
+  },
+  "gateCollisionEnabled": false,
+  "cameraLockEnabled": false,
+  "checkpointEnabled": false,
+  "cameraNote": "16-unit core fits reference 16:9 only when centered X128. Keep existing follow for map preview; no claim of full-arena framing at 4:3/portrait. Combat camera requires later design.",
+  "preserveCurrentRespawn": true,
+  "keepCombatForegroundClear": true
+}
