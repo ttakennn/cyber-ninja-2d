@@ -1739,11 +1739,17 @@
         "collision": false,
         "layer": "behind-player",
         "z": -0.27,
-        "image": "assets/environments/map01/props/props/street/crate-wood.png",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          124,
-          124
-        ]
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 776,
+          "y": 408,
+          "width": 124,
+          "height": 124
+        }
       },
       {
         "id": "z5-pallet-background",
@@ -1762,19 +1768,31 @@
         "collision": false,
         "layer": "behind-player",
         "z": -0.27,
-        "image": "assets/environments/map01/props/props/rooftop/wooden-pallet.png",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          212,
-          150
-        ]
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 916,
+          "y": 408,
+          "width": 212,
+          "height": 150
+        }
       },
       {
         "id": "z4-noodle-building",
-        "image": "assets/environments/map01/five-zone-graybox/z4-noodle-facade.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
         "pixelSize": [
-          1280,
-          768
+          1312,
+          1568
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1280,
+          "height": 768
+        },
         "worldPosition": {
           "x": 93,
           "y": -2.5
@@ -1793,11 +1811,17 @@
       },
       {
         "id": "z4-noodle-sign",
-        "image": "assets/environments/map01/five-zone-graybox/z4-sign-hu-tieu-nam-vang.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          896,
-          160
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 896,
+          "height": 160
+        },
         "worldPosition": {
           "x": 93,
           "y": 1.5
@@ -1816,11 +1840,17 @@
       },
       {
         "id": "z4-market-building",
-        "image": "assets/environments/map01/five-zone-graybox/z4-supermarket-facade.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
         "pixelSize": [
-          1280,
-          768
+          1312,
+          1568
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 792,
+          "width": 1280,
+          "height": 768
+        },
         "worldPosition": {
           "x": 105,
           "y": -2.5
@@ -1839,11 +1869,17 @@
       },
       {
         "id": "z4-market-sign",
-        "image": "assets/environments/map01/five-zone-graybox/z4-sign-sieu-thi.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          768,
-          160
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 184,
+          "width": 768,
+          "height": 160
+        },
         "worldPosition": {
           "x": 105,
           "y": 1.5
@@ -1862,11 +1898,17 @@
       },
       {
         "id": "z4-lamp-1",
-        "image": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          128,
-          448
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 408,
+          "width": 128,
+          "height": 448
+        },
         "worldPosition": {
           "x": 88.5,
           "y": -2.5
@@ -1885,11 +1927,17 @@
       },
       {
         "id": "z4-lamp-2",
-        "image": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          128,
-          448
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 408,
+          "width": 128,
+          "height": 448
+        },
         "worldPosition": {
           "x": 99,
           "y": -2.5
@@ -1908,11 +1956,17 @@
       },
       {
         "id": "z4-lamp-3",
-        "image": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          128,
-          448
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 408,
+          "width": 128,
+          "height": 448
+        },
         "worldPosition": {
           "x": 110.5,
           "y": -2.5
@@ -1931,11 +1985,17 @@
       },
       {
         "id": "z4-flowerpot-1",
-        "image": "assets/environments/map01/five-zone-graybox/z4-flowerpot-pink.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          160,
-          192
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 152,
+          "y": 408,
+          "width": 160,
+          "height": 192
+        },
         "worldPosition": {
           "x": 89,
           "y": -2.5
@@ -1954,11 +2014,17 @@
       },
       {
         "id": "z4-flowerpot-2",
-        "image": "assets/environments/map01/five-zone-graybox/z4-flowerpot-amber.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          160,
-          192
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 328,
+          "y": 408,
+          "width": 160,
+          "height": 192
+        },
         "worldPosition": {
           "x": 97.2,
           "y": -2.5
@@ -1977,11 +2043,17 @@
       },
       {
         "id": "z4-flowerpot-3",
-        "image": "assets/environments/map01/five-zone-graybox/z4-flowerpot-amber.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          160,
-          192
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 328,
+          "y": 408,
+          "width": 160,
+          "height": 192
+        },
         "worldPosition": {
           "x": 100.8,
           "y": -2.5
@@ -2000,11 +2072,17 @@
       },
       {
         "id": "z4-flowerpot-4",
-        "image": "assets/environments/map01/five-zone-graybox/z4-flowerpot-pink.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          160,
-          192
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 152,
+          "y": 408,
+          "width": 160,
+          "height": 192
+        },
         "worldPosition": {
           "x": 110,
           "y": -2.5
@@ -2023,11 +2101,17 @@
       },
       {
         "id": "z5-entry-sidewall",
-        "image": "assets/environments/map01/five-zone-graybox/z5-service-sidewall.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
         "pixelSize": [
-          1024,
-          768
+          1312,
+          1376
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1024,
+          "height": 768
+        },
         "worldPosition": {
           "x": 116,
           "y": -2.5
@@ -2046,11 +2130,17 @@
       },
       {
         "id": "z5-arena-wall",
-        "image": "assets/environments/map01/five-zone-graybox/z5-arena-backwall.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-backwall.png",
         "pixelSize": [
           2048,
           768
         ],
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 768
+        },
         "worldPosition": {
           "x": 128,
           "y": -2.5
@@ -2069,11 +2159,17 @@
       },
       {
         "id": "z5-exit-sidewall",
-        "image": "assets/environments/map01/five-zone-graybox/z5-service-sidewall.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
         "pixelSize": [
-          1024,
-          768
+          1312,
+          1376
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1024,
+          "height": 768
+        },
         "worldPosition": {
           "x": 140,
           "y": -2.5
@@ -2092,11 +2188,17 @@
       },
       {
         "id": "z5-backdrop-shutter",
-        "image": "assets/environments/map01/five-zone-graybox/z5-cargo-shutter.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
         "pixelSize": [
-          1280,
-          576
+          1312,
+          1376
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 792,
+          "width": 1280,
+          "height": 576
+        },
         "worldPosition": {
           "x": 128,
           "y": -2.5
@@ -2115,11 +2217,17 @@
       },
       {
         "id": "z5-entry-gate-open",
-        "image": "assets/environments/map01/five-zone-graybox/z5-yard-gate.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          256,
-          576
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 504,
+          "y": 408,
+          "width": 256,
+          "height": 576
+        },
         "worldPosition": {
           "x": 118.5,
           "y": -2.5
@@ -2138,11 +2246,17 @@
       },
       {
         "id": "z5-exit-gate-open",
-        "image": "assets/environments/map01/five-zone-graybox/z5-yard-gate.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          256,
-          576
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 504,
+          "y": 408,
+          "width": 256,
+          "height": 576
+        },
         "worldPosition": {
           "x": 137.5,
           "y": -2.5
@@ -2161,11 +2275,17 @@
       },
       {
         "id": "z5-floor-edge-stripe",
-        "image": "assets/environments/map01/five-zone-graybox/z5-hazard-edge.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          1536,
-          32
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 360,
+          "width": 1536,
+          "height": 32
+        },
         "worldPosition": {
           "x": 128,
           "y": -2.75
@@ -2184,11 +2304,17 @@
       },
       {
         "id": "z5-edge-lamp-1",
-        "image": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          128,
-          448
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 408,
+          "width": 128,
+          "height": 448
+        },
         "worldPosition": {
           "x": 114,
           "y": -2.5
@@ -2207,11 +2333,17 @@
       },
       {
         "id": "z5-edge-lamp-2",
-        "image": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg",
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
-          128,
-          448
+          1568,
+          1008
         ],
+        "sourceRect": {
+          "x": 8,
+          "y": 408,
+          "width": 128,
+          "height": 448
+        },
         "worldPosition": {
           "x": 141,
           "y": -2.5

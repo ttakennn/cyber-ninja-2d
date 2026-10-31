@@ -39,8 +39,9 @@ describe('Map01 five zones graybox', () => {
     expect(map.layers.find(({ id }) => id === 'roof-edges')!.cells[28]!.slice(160)).toEqual(Array(128).fill(11));
   });
 
-  it('chỉ tải URL có thật; plannedImage chưa có được thay bằng SVG có nhãn graybox', () => {
+  it('chỉ tải URL có thật; không tải plannedImage hoặc SVG reference khi đã resolve RC1', () => {
     const runtime = JSON.stringify(five);
+    expect(runtime).not.toContain('assets/environments/map01/five-zone-graybox/');
     for (const asset of manifest.assets.filter(({ runtimeReady }) => !runtimeReady)) {
       expect(runtime).not.toContain(asset.plannedImage!);
       const svg = readFileSync(new URL(`../public/assets/environments/map01/five-zone-graybox/${asset.id}.svg`, import.meta.url), 'utf8');
@@ -70,7 +71,7 @@ describe('Map01 five zones graybox', () => {
     expect(body.position.y).toBeCloseTo(-1.7);
   });
 
-  it('generator tái tạo SVG/catalog/JSON đã review', () => {
+  it('generator tái tạo JSON atlas RC1 đã review', () => {
     expect(() => execFileSync(process.execPath, [fileURLToPath(new URL('../scripts/generate_map01_five_zones.mjs', import.meta.url)), '--check'])).not.toThrow();
   });
 });

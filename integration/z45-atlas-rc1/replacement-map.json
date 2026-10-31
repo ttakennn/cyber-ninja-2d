@@ -1,0 +1,122 @@
+{
+  "mode": "REPLACE_EXISTING_BY_ID_NOT_APPEND",
+  "targetLevel": "map01-five-zones",
+  "count": 22,
+  "entries": [
+    {
+      "placementId": "z4-noodle-building",
+      "assetId": "z4-noodle-facade",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-noodle-facade.svg"
+    },
+    {
+      "placementId": "z4-noodle-sign",
+      "assetId": "z4-sign-hu-tieu-nam-vang",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-sign-hu-tieu-nam-vang.svg"
+    },
+    {
+      "placementId": "z4-market-building",
+      "assetId": "z4-supermarket-facade",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-supermarket-facade.svg"
+    },
+    {
+      "placementId": "z4-market-sign",
+      "assetId": "z4-sign-sieu-thi",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-sign-sieu-thi.svg"
+    },
+    {
+      "placementId": "z4-lamp-1",
+      "assetId": "z45-street-lamp",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg"
+    },
+    {
+      "placementId": "z4-lamp-2",
+      "assetId": "z45-street-lamp",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg"
+    },
+    {
+      "placementId": "z4-lamp-3",
+      "assetId": "z45-street-lamp",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg"
+    },
+    {
+      "placementId": "z4-flowerpot-1",
+      "assetId": "z4-flowerpot-pink",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-flowerpot-pink.svg"
+    },
+    {
+      "placementId": "z4-flowerpot-2",
+      "assetId": "z4-flowerpot-amber",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-flowerpot-amber.svg"
+    },
+    {
+      "placementId": "z4-flowerpot-3",
+      "assetId": "z4-flowerpot-amber",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-flowerpot-amber.svg"
+    },
+    {
+      "placementId": "z4-flowerpot-4",
+      "assetId": "z4-flowerpot-pink",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z4-flowerpot-pink.svg"
+    },
+    {
+      "placementId": "z5-entry-sidewall",
+      "assetId": "z5-service-sidewall",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-service-sidewall.svg"
+    },
+    {
+      "placementId": "z5-arena-wall",
+      "assetId": "z5-arena-backwall",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-arena-backwall.svg"
+    },
+    {
+      "placementId": "z5-exit-sidewall",
+      "assetId": "z5-service-sidewall",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-service-sidewall.svg"
+    },
+    {
+      "placementId": "z5-backdrop-shutter",
+      "assetId": "z5-cargo-shutter",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-cargo-shutter.svg"
+    },
+    {
+      "placementId": "z5-entry-gate-open",
+      "assetId": "z5-yard-gate",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-yard-gate.svg"
+    },
+    {
+      "placementId": "z5-exit-gate-open",
+      "assetId": "z5-yard-gate",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-yard-gate.svg"
+    },
+    {
+      "placementId": "z5-floor-edge-stripe",
+      "assetId": "z5-hazard-edge",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z5-hazard-edge.svg"
+    },
+    {
+      "placementId": "z5-edge-lamp-1",
+      "assetId": "z45-street-lamp",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg"
+    },
+    {
+      "placementId": "z5-edge-lamp-2",
+      "assetId": "z45-street-lamp",
+      "previousImage": "assets/environments/map01/five-zone-graybox/z45-street-lamp.svg"
+    },
+    {
+      "placementId": "z5-wood-crate-background",
+      "assetId": "reuse-crate-wood",
+      "previousImage": "assets/environments/map01/props/props/street/crate-wood.png"
+    },
+    {
+      "placementId": "z5-pallet-background",
+      "assetId": "reuse-wooden-pallet",
+      "previousImage": "assets/environments/map01/props/props/rooftop/wooden-pallet.png"
+    }
+  ],
+  "keepExistingReusePlacementIds": [
+    "z4-hanging-flowers",
+    "z5-wall-light-1",
+    "z5-wall-light-2"
+  ]
+}

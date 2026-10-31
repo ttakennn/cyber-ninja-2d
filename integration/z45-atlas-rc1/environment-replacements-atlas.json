@@ -1,0 +1,642 @@
+{
+  "decorations": [
+    {
+      "id": "z4-noodle-building",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
+      "pixelSize": [
+        1312,
+        1568
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 8,
+        "width": 1280,
+        "height": 768
+      },
+      "worldPosition": {
+        "x": 93,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35
+    },
+    {
+      "id": "z4-noodle-sign",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 8,
+        "width": 896,
+        "height": 160
+      },
+      "worldPosition": {
+        "x": 93,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 7,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2
+    },
+    {
+      "id": "z4-market-building",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
+      "pixelSize": [
+        1312,
+        1568
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 792,
+        "width": 1280,
+        "height": 768
+      },
+      "worldPosition": {
+        "x": 105,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35
+    },
+    {
+      "id": "z4-market-sign",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 184,
+        "width": 768,
+        "height": 160
+      },
+      "worldPosition": {
+        "x": 105,
+        "y": 1.5
+      },
+      "worldSize": {
+        "width": 6,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2
+    },
+    {
+      "id": "z4-lamp-1",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 408,
+        "width": 128,
+        "height": 448
+      },
+      "worldPosition": {
+        "x": 88.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12
+    },
+    {
+      "id": "z4-lamp-2",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 408,
+        "width": 128,
+        "height": 448
+      },
+      "worldPosition": {
+        "x": 99,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12
+    },
+    {
+      "id": "z4-lamp-3",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 408,
+        "width": 128,
+        "height": 448
+      },
+      "worldPosition": {
+        "x": 110.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12
+    },
+    {
+      "id": "z4-flowerpot-1",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 152,
+        "y": 408,
+        "width": 160,
+        "height": 192
+      },
+      "worldPosition": {
+        "x": 89,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25
+    },
+    {
+      "id": "z4-flowerpot-2",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 328,
+        "y": 408,
+        "width": 160,
+        "height": 192
+      },
+      "worldPosition": {
+        "x": 97.2,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25
+    },
+    {
+      "id": "z4-flowerpot-3",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 328,
+        "y": 408,
+        "width": 160,
+        "height": 192
+      },
+      "worldPosition": {
+        "x": 100.8,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25
+    },
+    {
+      "id": "z4-flowerpot-4",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 152,
+        "y": 408,
+        "width": 160,
+        "height": 192
+      },
+      "worldPosition": {
+        "x": 110,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25
+    },
+    {
+      "id": "z5-entry-sidewall",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
+      "pixelSize": [
+        1312,
+        1376
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 8,
+        "width": 1024,
+        "height": 768
+      },
+      "worldPosition": {
+        "x": 116,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35
+    },
+    {
+      "id": "z5-arena-wall",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-backwall.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 768
+      },
+      "worldPosition": {
+        "x": 128,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35
+    },
+    {
+      "id": "z5-exit-sidewall",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
+      "pixelSize": [
+        1312,
+        1376
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 8,
+        "width": 1024,
+        "height": 768
+      },
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.35
+    },
+    {
+      "id": "z5-backdrop-shutter",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
+      "pixelSize": [
+        1312,
+        1376
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 792,
+        "width": 1280,
+        "height": 576
+      },
+      "worldPosition": {
+        "x": 128,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3
+    },
+    {
+      "id": "z5-entry-gate-open",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 504,
+        "y": 408,
+        "width": 256,
+        "height": 576
+      },
+      "worldPosition": {
+        "x": 118.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.18
+    },
+    {
+      "id": "z5-exit-gate-open",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 504,
+        "y": 408,
+        "width": 256,
+        "height": 576
+      },
+      "worldPosition": {
+        "x": 137.5,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.18
+    },
+    {
+      "id": "z5-floor-edge-stripe",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 360,
+        "width": 1536,
+        "height": 32
+      },
+      "worldPosition": {
+        "x": 128,
+        "y": -2.75
+      },
+      "worldSize": {
+        "width": 12,
+        "height": 0.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3
+    },
+    {
+      "id": "z5-edge-lamp-1",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 408,
+        "width": 128,
+        "height": 448
+      },
+      "worldPosition": {
+        "x": 114,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12
+    },
+    {
+      "id": "z5-edge-lamp-2",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 8,
+        "y": 408,
+        "width": 128,
+        "height": 448
+      },
+      "worldPosition": {
+        "x": 141,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.12
+    },
+    {
+      "id": "z5-wood-crate-background",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 776,
+        "y": 408,
+        "width": 124,
+        "height": 124
+      },
+      "worldPosition": {
+        "x": 115,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27
+    },
+    {
+      "id": "z5-pallet-background",
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sourceRect": {
+        "x": 916,
+        "y": 408,
+        "width": 212,
+        "height": 150
+      },
+      "worldPosition": {
+        "x": 140,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.27
+    }
+  ]
+}

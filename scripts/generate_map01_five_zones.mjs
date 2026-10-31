@@ -7,6 +7,10 @@ const plan = read('../integration/five-zone-design/level-extension.plan.json');
 const master = read('../integration/five-zone-design/map01-five-zones.master.json');
 const manifest = read('../integration/five-zone-design/asset-manifest.json');
 const reuse = read('../integration/five-zone-design/runtime-reuse-additions.json');
+const replacementMap = read('../integration/z45-atlas-rc1/replacement-map.json');
+const replacementEntries = read('../integration/z45-atlas-rc1/environment-replacements-atlas.json').decorations;
+const replacements = new Map(replacementEntries.map((entry) => [entry.id, entry]));
+if (replacements.size !== replacementEntries.length) throw new Error('Replacement ID bị trùng');
 const check = process.argv.includes('--check');
 const output = (path, text) => {
   const file = new URL(path, import.meta.url);
@@ -20,6 +24,7 @@ const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').r
 const catalog = [];
 const placeholders = new Map();
 for (const asset of manifest.assets.filter(({ runtimeReady }) => !runtimeReady)) {
+  if (replacementMap.entries.some((entry) => entry.assetId === asset.id)) continue;
   const [width, height] = asset.pixelSize;
   const title = asset.text ?? asset.id;
   const font = Math.min(40, width / Math.max(title.length * 0.65, 9), height / 7);
@@ -59,12 +64,24 @@ for (const entry of reuse.decorations) {
   level.environment.decorations.push(entry);
 }
 for (const placement of master.placements) {
-  const placeholder = placeholders.get(placement.assetId);
+  if (reuse.decorations.some(({ id }) => id === placement.id)) continue;
+  const replacement = replacements.get(placement.id);
+  const placeholder = replacement ? { image: replacement.image, pixelSize: replacement.pixelSize, sourceRect: replacement.sourceRect } : placeholders.get(placement.assetId);
   if (!placeholder) continue;
   level.environment.decorations.push({ id: placement.id, ...placeholder, worldPosition: placement.worldPosition,
     worldSize: placement.worldSize, anchor: placement.anchor, collision: false, layer: placement.layer, z: placement.z });
 }
-output(`${folder}catalog.json`, `${JSON.stringify({ status: 'GRAYBOX_ONLY', assets: catalog }, null, 2)}\n`);
+const replaced = new Set();
+level.environment.decorations = level.environment.decorations.map((entry) => {
+  const replacement = replacements.get(entry.id);
+  if (!replacement) return entry;
+  if (replaced.has(entry.id)) throw new Error(`Placement bị trùng: ${entry.id}`);
+  if (!existsSync(new URL(`../public/${replacement.image}`, import.meta.url))) throw new Error(`Thiếu ảnh RC1: ${replacement.image}`);
+  replaced.add(entry.id);
+  return { ...entry, image: replacement.image, pixelSize: replacement.pixelSize, sourceRect: replacement.sourceRect };
+});
+if (replaced.size !== replacements.size || replacementMap.entries.some(({ placementId }) => !replaced.has(placementId))) throw new Error('Chưa resolve đủ replacement RC1');
+if (catalog.length) output(`${folder}catalog.json`, `${JSON.stringify({ status: 'GRAYBOX_ONLY', assets: catalog }, null, 2)}\n`);
 let json = JSON.stringify(level, null, 2);
 for (const layer of map.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

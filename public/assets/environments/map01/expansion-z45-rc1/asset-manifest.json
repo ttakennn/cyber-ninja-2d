@@ -1,0 +1,741 @@
+{
+  "schema": "cyber-ninja-z45-assets/v1",
+  "status": "RC1_ART_CANDIDATE_READY_FOR_INTEGRATION",
+  "sourceCommit": "fe4ff7d5c6540053857394357ff70dec9b092d3a",
+  "sourceCodeCommit": "12244bf98183262bb312b164c4d550ad6e968945",
+  "pixelsPerWorldUnit": 128,
+  "filter": "LinearFilter",
+  "colorSpace": "SRGBColorSpace",
+  "generateMipmaps": false,
+  "rotation": false,
+  "atlases": [
+    {
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
+      "pixelSize": [
+        1312,
+        1568
+      ],
+      "sha256": "860a1e65470948de2fb09c55831b78646b46785302b9077d7818803fd9ed4cf4",
+      "edgeExtrusionPixels": 4,
+      "paddingPixels": 8,
+      "rotation": false,
+      "standalone": false,
+      "note": "Rects exclude 4px copied edge extrusion."
+    },
+    {
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
+      "pixelSize": [
+        1312,
+        1376
+      ],
+      "sha256": "511954a4afcf9d62f1db156f6dd8b83df5a236098a9fd46e52b42cbcb9df6eee",
+      "edgeExtrusionPixels": 4,
+      "paddingPixels": 8,
+      "rotation": false,
+      "standalone": false,
+      "note": "Rects exclude 4px copied edge extrusion."
+    },
+    {
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+      "pixelSize": [
+        1568,
+        1008
+      ],
+      "sha256": "6f8a866f5e710b809bbfffd1785b7784ef4429c4e554064d81196c140f318992",
+      "edgeExtrusionPixels": 4,
+      "paddingPixels": 8,
+      "rotation": false,
+      "standalone": false,
+      "note": "Rects exclude 4px copied edge extrusion."
+    },
+    {
+      "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-backwall.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "sha256": "4f824b17adf5bf15fd49bf16cc28e52249aa8f0f303f9daed9010a4f98cdf958",
+      "edgeExtrusionPixels": 0,
+      "paddingPixels": 0,
+      "rotation": false,
+      "standalone": true,
+      "note": "Full-page single image, no adjacent sprites. Keep default ClampToEdgeWrapping; do not repeat or add mipmaps."
+    }
+  ],
+  "assets": [
+    {
+      "id": "z4-noodle-facade",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-noodle-facade.png",
+      "pixelSize": [
+        1280,
+        768
+      ],
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "4c8a9781915a7e7bfe91abae6781cf44f4b4fb9305fd77404f67804801e2eb37",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z4-noodle-facade.png",
+        "originalSha256": "69b7d7bd005585d3c99867827a6164b74a23c4666a4feaa769a32e21af05a344",
+        "originalPixelSize": [
+          1619,
+          971
+        ],
+        "sourceRegion": {
+          "left": 0,
+          "top": 0,
+          "width": 1619,
+          "height": 971
+        },
+        "normalization": "Aspect-preserving cover resize; center crop only if aspect differs; no stretch.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
+        "pixelSize": [
+          1312,
+          1568
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1280,
+          "height": 768
+        }
+      }
+    },
+    {
+      "id": "z4-sign-hu-tieu-nam-vang",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-sign-hu-tieu-nam-vang.png",
+      "pixelSize": [
+        896,
+        160
+      ],
+      "worldSize": {
+        "width": 7,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "977ae985d993747f77b89e1c164fb9db020ae57e9206c11a6ecf25059e31b23d",
+      "provenance": {
+        "tool": "native SVG typography/geometric stripe rendered with sharp",
+        "source": "sources/z4-sign-hu-tieu-nam-vang.svg",
+        "sourceSha256": "98800b728e320c1ffe014199be906ca5647ff63defbd79ed0615e33976618e92",
+        "text": "Hủ tiếu nam vang",
+        "font": "Segoe UI Bold (Windows rasterization)"
+      },
+      "text": "Hủ tiếu nam vang",
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 896,
+          "height": 160
+        }
+      }
+    },
+    {
+      "id": "z4-supermarket-facade",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-supermarket-facade.png",
+      "pixelSize": [
+        1280,
+        768
+      ],
+      "worldSize": {
+        "width": 10,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "fcea46e7d79914cc4318c3a29e4e6831559d1a5b6e035b97d642746ab27139e0",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z4-supermarket-facade.png",
+        "originalSha256": "de34bdac2d80c274b009c378cb825efdb7ed43f69f297bd9c01008389d595c2c",
+        "originalPixelSize": [
+          1619,
+          971
+        ],
+        "sourceRegion": {
+          "left": 0,
+          "top": 0,
+          "width": 1619,
+          "height": 971
+        },
+        "normalization": "Aspect-preserving cover resize; center crop only if aspect differs; no stretch.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
+        "pixelSize": [
+          1312,
+          1568
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 792,
+          "width": 1280,
+          "height": 768
+        }
+      }
+    },
+    {
+      "id": "z4-sign-sieu-thi",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-sign-sieu-thi.png",
+      "pixelSize": [
+        768,
+        160
+      ],
+      "worldSize": {
+        "width": 6,
+        "height": 1.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "769694b56e548bf3f870cf974b092e202b7690f807e56ad1a4f9d1d5743193d6",
+      "provenance": {
+        "tool": "native SVG typography/geometric stripe rendered with sharp",
+        "source": "sources/z4-sign-sieu-thi.svg",
+        "sourceSha256": "0d1830f320ba20729fceda636d8c02bb5ef3b4fcb7e5aad926e5c3996c7b9502",
+        "text": "Siêu thị",
+        "font": "Segoe UI Bold (Windows rasterization)"
+      },
+      "text": "Siêu thị",
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 184,
+          "width": 768,
+          "height": 160
+        }
+      }
+    },
+    {
+      "id": "z45-street-lamp",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z45-street-lamp.png",
+      "pixelSize": [
+        128,
+        448
+      ],
+      "worldSize": {
+        "width": 1,
+        "height": 3.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "0721605272e46617be4e491e5ab4a44638756b2f6928292da3a60aeb650d1e2e",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z45-street-lamp.png",
+        "originalSha256": "23b428cbae2bc4b79b3590ed53f30c21e35b1b3584ce2f9a92f3ab3aa1be505f",
+        "originalPixelSize": [
+          948,
+          1659
+        ],
+        "sourceRegion": {
+          "left": 357,
+          "top": 21,
+          "width": 201,
+          "height": 1606
+        },
+        "normalization": "Alpha bounding box; aspect-preserving contain; bottom-center alignment; no recoloring.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 408,
+          "width": 128,
+          "height": 448
+        }
+      }
+    },
+    {
+      "id": "z4-flowerpot-pink",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-flowerpot-pink.png",
+      "pixelSize": [
+        160,
+        192
+      ],
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "630692f746b90e238779d9ea3656e8e2edc5f94a4536fc7e5033030f7a0a20cc",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z4-flowerpot-pink.png",
+        "originalSha256": "72e864c96830fe7724aa458ee79a0fc8f5f91136629d35c3c895e5307adc090d",
+        "originalPixelSize": [
+          1145,
+          1374
+        ],
+        "sourceRegion": {
+          "left": 75,
+          "top": 198,
+          "width": 994,
+          "height": 1029
+        },
+        "normalization": "Alpha bounding box; aspect-preserving contain; bottom-center alignment; no recoloring.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 152,
+          "y": 408,
+          "width": 160,
+          "height": 192
+        }
+      }
+    },
+    {
+      "id": "z4-flowerpot-amber",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-flowerpot-amber.png",
+      "pixelSize": [
+        160,
+        192
+      ],
+      "worldSize": {
+        "width": 1.25,
+        "height": 1.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "d254b14fc1d706db62be3e9a14eabe9d544dbbcb3eb18a9933323acde0a46501",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z4-flowerpot-amber.png",
+        "originalSha256": "b4d85d515257df04c143c768fa6d2409df362c48b3379ced18cc67fa2100b38e",
+        "originalPixelSize": [
+          1145,
+          1374
+        ],
+        "sourceRegion": {
+          "left": 141,
+          "top": 313,
+          "width": 861,
+          "height": 894
+        },
+        "normalization": "Alpha bounding box; aspect-preserving contain; bottom-center alignment; no recoloring.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 328,
+          "y": 408,
+          "width": 160,
+          "height": 192
+        }
+      }
+    },
+    {
+      "id": "z5-arena-backwall",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z5-arena-backwall.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "3fb4eb697ad89fbfc181e89add1817213e8d88671b78ee1d163bf4d1a7c41552",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z5-arena-backwall.png",
+        "originalSha256": "e4835d205ac11b501cf2d820a37bdff403fe99971ec41e27dcb129fff84bbfba",
+        "originalPixelSize": [
+          2048,
+          768
+        ],
+        "sourceRegion": {
+          "left": 0,
+          "top": 0,
+          "width": 2048,
+          "height": 768
+        },
+        "normalization": "Aspect-preserving cover resize; center crop only if aspect differs; no stretch.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-backwall.png",
+        "pixelSize": [
+          2048,
+          768
+        ],
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 768
+        }
+      }
+    },
+    {
+      "id": "z5-cargo-shutter",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z5-cargo-shutter.png",
+      "pixelSize": [
+        1280,
+        576
+      ],
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "cc8967d1a819fc99db54c1fade80b83155cef49a904659ef5f39c487cb0a6c6b",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z5-cargo-shutter.png",
+        "originalSha256": "9edab9bfeb6506e8cc0f626a625d610ef4ee6d84b73f3e68ce26de913de7c266",
+        "originalPixelSize": [
+          1871,
+          840
+        ],
+        "sourceRegion": {
+          "left": 0,
+          "top": 0,
+          "width": 1871,
+          "height": 840
+        },
+        "normalization": "Aspect-preserving cover resize; center crop only if aspect differs; no stretch.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
+        "pixelSize": [
+          1312,
+          1376
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 792,
+          "width": 1280,
+          "height": 576
+        }
+      }
+    },
+    {
+      "id": "z5-yard-gate",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z5-yard-gate.png",
+      "pixelSize": [
+        256,
+        576
+      ],
+      "worldSize": {
+        "width": 2,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "c6f2ce9a2fdfc0317e66bf524bb641d8f7025c852c80b52a28c0c767de979b37",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z5-yard-gate.png",
+        "originalSha256": "6a1aa0c3ad4c49375a6af2b26770020f27368ce3d23b7c01579c670e58b44873",
+        "originalPixelSize": [
+          836,
+          1881
+        ],
+        "sourceRegion": {
+          "left": 23,
+          "top": 107,
+          "width": 795,
+          "height": 1675
+        },
+        "normalization": "Alpha bounding box; aspect-preserving contain; bottom-center alignment; no recoloring.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 504,
+          "y": 408,
+          "width": 256,
+          "height": 576
+        }
+      }
+    },
+    {
+      "id": "z5-hazard-edge",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z5-hazard-edge.png",
+      "pixelSize": [
+        1536,
+        32
+      ],
+      "worldSize": {
+        "width": 12,
+        "height": 0.25
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "725aed9c2dc45f29feadb8b1fbc68aa05593bd334efa80f2aada32bc679bb3fd",
+      "provenance": {
+        "tool": "native SVG typography/geometric stripe rendered with sharp",
+        "source": "sources/z5-hazard-edge.svg",
+        "sourceSha256": "9cdf98a36333d0f0bf4a8d3f59fd386c2d6448ad4c8bc1be499d34340e169d34",
+        "text": null,
+        "font": null
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 360,
+          "width": 1536,
+          "height": 32
+        }
+      }
+    },
+    {
+      "id": "z5-service-sidewall",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/z5-service-sidewall.png",
+      "pixelSize": [
+        1024,
+        768
+      ],
+      "worldSize": {
+        "width": 8,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "88c6945f0b5ce061ba7bc23757c3135cce459cb69fb41c34cc99268af553337f",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/z5-service-sidewall.png",
+        "originalSha256": "35264998766980c1f0f4379a41ecfe93e75b5f7565c2ede5d4855cec975b34ac",
+        "originalPixelSize": [
+          1448,
+          1086
+        ],
+        "sourceRegion": {
+          "left": 0,
+          "top": 0,
+          "width": 1448,
+          "height": 1086
+        },
+        "normalization": "Aspect-preserving cover resize; center crop only if aspect differs; no stretch.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
+        "pixelSize": [
+          1312,
+          1376
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 1024,
+          "height": 768
+        }
+      }
+    },
+    {
+      "id": "reuse-crate-wood",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/reuse-crate-wood.png",
+      "pixelSize": [
+        124,
+        124
+      ],
+      "worldSize": {
+        "width": 0.9688,
+        "height": 0.9688
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "1e917f0d258093d807bcfda0642a3532d5df49aed7360ac3a9ecfdd2be69c425",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/reuse-crate-wood.png",
+        "originalSha256": "ef4709d5c9178d4aedead21a7ddeb0809c7dbc53de58dc017c60dea9a7d8deaf",
+        "originalPixelSize": [
+          1254,
+          1254
+        ],
+        "sourceRegion": {
+          "left": 222,
+          "top": 251,
+          "width": 808,
+          "height": 776
+        },
+        "normalization": "Alpha bounding box; aspect-preserving contain; bottom-center alignment; no recoloring.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 776,
+          "y": 408,
+          "width": 124,
+          "height": 124
+        }
+      }
+    },
+    {
+      "id": "reuse-wooden-pallet",
+      "image": "assets/environments/map01/expansion-z45-rc1/individual/reuse-wooden-pallet.png",
+      "pixelSize": [
+        212,
+        150
+      ],
+      "worldSize": {
+        "width": 1.6562,
+        "height": 1.1719
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "runtimeReady": true,
+      "artStatus": "RC1_CANDIDATE_RUNTIME_ACCEPTANCE_PENDING",
+      "sha256": "142e86392d3d2f931d853dda618d5eb1886812b6b0fe454ea0c80707d9ec454d",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "sources/generated/reuse-wooden-pallet.png",
+        "originalSha256": "aefaaa0272760f5dbd5e4326e1edfea2002e020099fc0835fc7c3da94d09e728",
+        "originalPixelSize": [
+          1492,
+          1054
+        ],
+        "sourceRegion": {
+          "left": 225,
+          "top": 90,
+          "width": 1061,
+          "height": 879
+        },
+        "normalization": "Alpha bounding box; aspect-preserving contain; bottom-center alignment; no recoloring.",
+        "promptFile": "sources/generation-prompts.json"
+      },
+      "atlas": {
+        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "pixelSize": [
+          1568,
+          1008
+        ],
+        "sourceRect": {
+          "x": 916,
+          "y": 408,
+          "width": 212,
+          "height": 150
+        }
+      }
+    }
+  ],
+  "runtimeAcceptance": "NOT_RUN",
+  "humanArtApproval": "PENDING"
+}
