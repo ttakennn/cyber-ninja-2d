@@ -1,0 +1,885 @@
+{
+  "status": "ART_CANDIDATE_RUNTIME_PENDING",
+  "baselineCommit": "5d8674d62cd1e7fcf843ffc60d6fc90dadd79dc2",
+  "tool": "image_gen.imagegen built-in",
+  "promptFile": "generation-prompts.json",
+  "originalPropsPreserved": true,
+  "originalBackgroundsPreserved": true,
+  "assets": [
+    {
+      "id": "scooter-red",
+      "image": "props/street/scooter-red.png",
+      "sizePx": {
+        "width": 224,
+        "height": 140
+      },
+      "sha256": "5b82f574da83b17403e0c79e81dcfa6868a0c79017cb0dbfe9b30dcb8c65d139",
+      "bytes": 10675,
+      "original": "originals/scooter-red.png",
+      "originalSha256": "2d3088e7d9a6537d06d186fe076d39d60f0b7d9385d5195f857449b707a60f5d",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 82,
+          "top": 59,
+          "width": 1389,
+          "height": 902
+        },
+        "targetBox": [
+          28,
+          23,
+          194,
+          131
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "crate-wood",
+      "image": "props/street/crate-wood.png",
+      "sizePx": {
+        "width": 124,
+        "height": 124
+      },
+      "sha256": "446b2edaf9ce723709c8992f4cb8b887713b7594d7861e7bffd86e5349d016ea",
+      "bytes": 11536,
+      "original": "originals/crate-wood.png",
+      "originalSha256": "b0e5e58fecd95e16a36d0245f71107c3bd4cfdb8a9e7031197411f915bb885a8",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 195,
+          "top": 197,
+          "width": 896,
+          "height": 843
+        },
+        "targetBox": [
+          7,
+          7,
+          117,
+          117
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "crate-metal",
+      "image": "props/street/crate-metal.png",
+      "sizePx": {
+        "width": 124,
+        "height": 124
+      },
+      "sha256": "031bfa95c816a7b167ba82ffd0872237341aeff0d1463bc6e7389295560c9277",
+      "bytes": 10571,
+      "original": "originals/crate-metal.png",
+      "originalSha256": "24bc9f931159a80a2121d6ed8c9936d4a387acaf3ce9c5586d466b60e993a188",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 139,
+          "top": 95,
+          "width": 1099,
+          "height": 983
+        },
+        "targetBox": [
+          7,
+          7,
+          117,
+          117
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "trash-bin-green",
+      "image": "props/street/trash-bin-green.png",
+      "sizePx": {
+        "width": 120,
+        "height": 148
+      },
+      "sha256": "01588ba6feba7a4458a740c7cd0f377db58350199383c5e38afe8b5c7ba9f618",
+      "bytes": 8723,
+      "original": "originals/trash-bin-green.png",
+      "originalSha256": "3b54bcf6c0feef7e60c912716b2f8e89ca37b19659c4ab4e7aa2c22f9a25f9d1",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 228,
+          "top": 176,
+          "width": 794,
+          "height": 1007
+        },
+        "targetBox": [
+          15,
+          17,
+          104,
+          141
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "trash-bin-blue",
+      "image": "props/street/trash-bin-blue.png",
+      "sizePx": {
+        "width": 120,
+        "height": 148
+      },
+      "sha256": "8b9a702b93e212af1085056e56ef664ededa81ef476de10c4f27506df9c3468e",
+      "bytes": 9008,
+      "original": "originals/trash-bin-blue.png",
+      "originalSha256": "c73d3adaf41427593a2e2ed75e205daf8b1729978d0be721e6c1656679a700ef",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 321,
+          "top": 108,
+          "width": 751,
+          "height": 955
+        },
+        "targetBox": [
+          15,
+          17,
+          104,
+          141
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "traffic-cone",
+      "image": "props/street/traffic-cone.png",
+      "sizePx": {
+        "width": 126,
+        "height": 130
+      },
+      "sha256": "2d0f33207dba6e6ba3df7ceeee9b13497fc7770d5ac43a8b6196d6172e810868",
+      "bytes": 6414,
+      "original": "originals/traffic-cone.png",
+      "originalSha256": "a2bc7ee3fa68163e444046e5b5c6a01518acc6b05b6cf5fc607b97b42a947218",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 233,
+          "top": 120,
+          "width": 805,
+          "height": 998
+        },
+        "targetBox": [
+          14,
+          14,
+          112,
+          128
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "street-bench",
+      "image": "props/street/street-bench.png",
+      "sizePx": {
+        "width": 228,
+        "height": 160
+      },
+      "sha256": "c26f180d4475683e8d7bd84b743dd9104a6ddc3d2e4d2ce9512c42cd7a74b5b5",
+      "bytes": 10216,
+      "original": "originals/street-bench.png",
+      "originalSha256": "ca7497fda8b740d85b6d131c4f61d11b89eb0eec9f50a0ac8457f706cd422336",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 59,
+          "top": 183,
+          "width": 1411,
+          "height": 701
+        },
+        "targetBox": [
+          21,
+          45,
+          203,
+          149
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "street-lamp",
+      "image": "props/street/street-lamp.png",
+      "sizePx": {
+        "width": 146,
+        "height": 294
+      },
+      "sha256": "99f9993a83890de70ce468ce1a5fbadc70db8d77eabc78d1a7b311ec2a5ed2ed",
+      "bytes": 10445,
+      "original": "originals/street-lamp.png",
+      "originalSha256": "104aa0b71c72c5bea8e5bab8649dd88d240640c2dc27f7f68fda22497f68aedd",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 269,
+          "top": 73,
+          "width": 621,
+          "height": 1274
+        },
+        "targetBox": [
+          12,
+          12,
+          130,
+          293
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "potted-plant",
+      "image": "props/street/potted-plant.png",
+      "sizePx": {
+        "width": 150,
+        "height": 168
+      },
+      "sha256": "2f46ecf4064882bf17563f54191d1bd02e16a610bab48d4cf2070a6ef0582299",
+      "bytes": 5741,
+      "original": "originals/potted-plant.png",
+      "originalSha256": "407443a6d06d72e16abe0354c19b07dd597c0800d10d2b701b35ebc1d59f35b1",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 135,
+          "top": 203,
+          "width": 1002,
+          "height": 976
+        },
+        "targetBox": [
+          35,
+          35,
+          115,
+          157
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "street-tree",
+      "image": "props/street/street-tree.png",
+      "sizePx": {
+        "width": 220,
+        "height": 328
+      },
+      "sha256": "1e321e3eb5c9f745e1c6f1ac3ec3b74894b7cc0c5efe08f40b8699ad4e2db6f6",
+      "bytes": 20609,
+      "original": "originals/street-tree.png",
+      "originalSha256": "817da909bf03ea0076fcd3d6bafba2199da460c80f5499c3bb689b63e430d21b",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 40,
+          "top": 34,
+          "width": 1060,
+          "height": 1312
+        },
+        "targetBox": [
+          15,
+          22,
+          192,
+          320
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "planter-box",
+      "image": "props/street/planter-box.png",
+      "sizePx": {
+        "width": 200,
+        "height": 110
+      },
+      "sha256": "ea11cc570b4db429663930616029acf4e4d045bfac5b2de5e20f0850f90b5d90",
+      "bytes": 14829,
+      "original": "originals/planter-box.png",
+      "originalSha256": "5e9415da70f3537929a931945e3ac3543c2c04a4b59ad8ad70b7d49725e90e5b",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 103,
+          "top": 217,
+          "width": 1384,
+          "height": 719
+        },
+        "targetBox": [
+          4,
+          5,
+          195,
+          106
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-pho-247",
+      "image": "props/signs/sign-pho-247.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "6a185b4a27d4113d82e0ccba30573059406c6e362e88f5a140a01f6e340c41d1",
+      "bytes": 13874,
+      "original": "originals/sign-pho-247.png",
+      "originalSha256": "289e8228d298c1f8583134727558b8db0024c83f8e40a3a5c71cd43ea82edf23",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 104,
+          "top": 195,
+          "width": 1775,
+          "height": 407
+        },
+        "targetBox": [
+          1,
+          6,
+          263,
+          100
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-pharmacy",
+      "image": "props/signs/sign-pharmacy.png",
+      "sizePx": {
+        "width": 120,
+        "height": 224
+      },
+      "sha256": "2482dbdf9972e937e8fcac6a5125ed971400de96bd2d76fd7a0085a8793f3686",
+      "bytes": 17807,
+      "original": "originals/sign-pharmacy.png",
+      "originalSha256": "e85ab75686c825bb96d9d32ca6a54212c3b0038865d46fd3891c9f72c01c3fe2",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 103,
+          "top": 130,
+          "width": 714,
+          "height": 1460
+        },
+        "targetBox": [
+          5,
+          4,
+          113,
+          222
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-coffee",
+      "image": "props/signs/sign-coffee.png",
+      "sizePx": {
+        "width": 264,
+        "height": 111
+      },
+      "sha256": "05d156f1328f1c86b0073cf508da8c24a0877d0336cf1e4fc56338c079397f65",
+      "bytes": 12613,
+      "original": "originals/sign-coffee.png",
+      "originalSha256": "ce35f49b88fe0c64b18916829a716e918edb203a6bfc4cbe422f8c5ff9859782",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 60,
+          "top": 192,
+          "width": 1814,
+          "height": 424
+        },
+        "targetBox": [
+          6,
+          7,
+          257,
+          104
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-tea",
+      "image": "props/signs/sign-tea.png",
+      "sizePx": {
+        "width": 180,
+        "height": 115
+      },
+      "sha256": "6b4321342d3205f295ec2c867af5ae2f26f10f830a7ca5bc60f5774496b2d90d",
+      "bytes": 11271,
+      "original": "originals/sign-tea.png",
+      "originalSha256": "a18fcd4abd471c4331da5c6ad82cafb966b4cc295af070bec031ea8484dda7a1",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 51,
+          "top": 183,
+          "width": 1466,
+          "height": 663
+        },
+        "targetBox": [
+          3,
+          2,
+          176,
+          110
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "metal-ladder",
+      "image": "props/alley/metal-ladder.png",
+      "sizePx": {
+        "width": 92,
+        "height": 394
+      },
+      "sha256": "efa003c13178490285754b78696027a598545d333cc94feed8c00ae02b6a9da3",
+      "bytes": 10550,
+      "original": "originals/metal-ladder.png",
+      "originalSha256": "abbc2425464a677b6f802774d0912cb678acd85813758b7bc2287778e8f74895",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 375,
+          "top": 54,
+          "width": 279,
+          "height": 1427
+        },
+        "targetBox": [
+          15,
+          2,
+          76,
+          388
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "aircon-unit",
+      "image": "props/alley/aircon-unit.png",
+      "sizePx": {
+        "width": 146,
+        "height": 113
+      },
+      "sha256": "fa7471dcc18775840191a0a1277b7e37203d4feb5cd3f75c2168807871f4438f",
+      "bytes": 9478,
+      "original": "originals/aircon-unit.png",
+      "originalSha256": "8ee9a81162e5e657d4023c18f88db8f48cb86b41b4446fff93a56ff20bacb845",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 167,
+          "top": 166,
+          "width": 1151,
+          "height": 846
+        },
+        "targetBox": [
+          7,
+          13,
+          139,
+          102
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "wall-pipe",
+      "image": "props/alley/wall-pipe.png",
+      "sizePx": {
+        "width": 140,
+        "height": 246
+      },
+      "sha256": "2e744d48a551c7219042cc95aae51a2f141c792fbe1c2a0e8b7ea427cdd9b8d0",
+      "bytes": 7808,
+      "original": "originals/wall-pipe.png",
+      "originalSha256": "6a83a7284e46e97bdb360c57c6af1e1f5345e505c7c33ae3bb2d8c1d0af38d39",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 427,
+          "top": 33,
+          "width": 403,
+          "height": 1435
+        },
+        "targetBox": [
+          22,
+          0,
+          121,
+          245
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "electric-meter",
+      "image": "props/alley/electric-meter.png",
+      "sizePx": {
+        "width": 136,
+        "height": 175
+      },
+      "sha256": "f716597fa9a632371844c282b1f4268fa030616e3e29884c2d92f98d9c2e652e",
+      "bytes": 9331,
+      "original": "originals/electric-meter.png",
+      "originalSha256": "ac2e10c62c2899450d54da6e438e4521f37cd18a8c41c9059c8486fac0b44bfa",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 420,
+          "top": 58,
+          "width": 581,
+          "height": 1071
+        },
+        "targetBox": [
+          15,
+          13,
+          122,
+          162
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "utility-pole",
+      "image": "props/alley/utility-pole.png",
+      "sizePx": {
+        "width": 216,
+        "height": 391
+      },
+      "sha256": "87df6a9217e21cc5885b473ca0c1c59dfa94858497f89dc94e2f4f5bbd05daa0",
+      "bytes": 17192,
+      "original": "originals/utility-pole.png",
+      "originalSha256": "38628d44ba7f2869cb28082b5587ad1d01ee7b8753b73f0de692f01d7e8d5eda",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 256,
+          "top": 38,
+          "width": 601,
+          "height": 1460
+        },
+        "targetBox": [
+          5,
+          15,
+          211,
+          388
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "rooftop-water-tank",
+      "image": "props/rooftop/rooftop-water-tank.png",
+      "sizePx": {
+        "width": 229,
+        "height": 280
+      },
+      "sha256": "9a9936b1135d120aabc1fd6794b1a367a4504a86ffa6f7dcc811a277f4b3baca",
+      "bytes": 26944,
+      "original": "originals/rooftop-water-tank.png",
+      "originalSha256": "f1769ad5d1a3de037b44c7adc766a8e079cbd107af8f0991bdad6fece2545c62",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 238,
+          "top": 88,
+          "width": 720,
+          "height": 1161
+        },
+        "targetBox": [
+          37,
+          16,
+          190,
+          264
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "antenna",
+      "image": "props/rooftop/antenna.png",
+      "sizePx": {
+        "width": 194,
+        "height": 259
+      },
+      "sha256": "ee9ee0630867550c647803bce3db2736ace69f30949b4352302a2c51b11f04a4",
+      "bytes": 7435,
+      "original": "originals/antenna.png",
+      "originalSha256": "b37946fc48f494178983b274a67d8f7b471be0133034b950bd8d83cd5b41593f",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 170,
+          "top": 33,
+          "width": 904,
+          "height": 1300
+        },
+        "targetBox": [
+          29,
+          23,
+          167,
+          250
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "balcony-railing",
+      "image": "props/rooftop/balcony-railing.png",
+      "sizePx": {
+        "width": 266,
+        "height": 125
+      },
+      "sha256": "0956b5baac50487c31c98eeff1b3709543c8effa82f4c280b3967d43b5896ad4",
+      "bytes": 12070,
+      "original": "originals/balcony-railing.png",
+      "originalSha256": "63933e768389b0e2118fd74520a098b727937c33c35765dac07e9ac7bf8b8234",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 32,
+          "top": 119,
+          "width": 1710,
+          "height": 659
+        },
+        "targetBox": [
+          8,
+          10,
+          253,
+          114
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "roof-vent",
+      "image": "props/rooftop/roof-vent.png",
+      "sizePx": {
+        "width": 164,
+        "height": 193
+      },
+      "sha256": "16ea16fe8608751440b81f95ceaed16f17aa1d8b898b8b423224db9bc8eee058",
+      "bytes": 9781,
+      "original": "originals/roof-vent.png",
+      "originalSha256": "ba699bd26c6b3ce33b6b7f3327bda20c213dc07f7be808af480f5ec43071ec97",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 120,
+          "top": 117,
+          "width": 1089,
+          "height": 942
+        },
+        "targetBox": [
+          19,
+          44,
+          142,
+          184
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "satellite-dish",
+      "image": "props/rooftop/satellite-dish.png",
+      "sizePx": {
+        "width": 158,
+        "height": 178
+      },
+      "sha256": "c9383c7317d4b8e0ff27c6c206de6973f194c1fd189d1aabadd14fc304ab653b",
+      "bytes": 8974,
+      "original": "originals/satellite-dish.png",
+      "originalSha256": "5ace0bdf1fec2a9cfdece0c1188b529bfbe901d5e2eb437716eee622d79b2482",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 266,
+          "top": 81,
+          "width": 880,
+          "height": 1032
+        },
+        "targetBox": [
+          26,
+          5,
+          139,
+          168
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "wooden-pallet",
+      "image": "props/rooftop/wooden-pallet.png",
+      "sizePx": {
+        "width": 212,
+        "height": 150
+      },
+      "sha256": "419d0283e927f4041ee55c32e0f47faccd9385b7239f3a403d101429b04ccd67",
+      "bytes": 11579,
+      "original": "originals/wooden-pallet.png",
+      "originalSha256": "b161072c81f6c82de6c70931668c10e5032cd7d038158617cb491d1925828647",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 125,
+          "top": 179,
+          "width": 1123,
+          "height": 872
+        },
+        "targetBox": [
+          12,
+          43,
+          198,
+          143
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-supermarket",
+      "image": "props/signs/sign-supermarket.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "dbed3269b760f38b5227541d1224ef3acc5dfd53257505f39d2f903b27ee53c1",
+      "bytes": 13261,
+      "original": "originals/sign-supermarket.png",
+      "originalSha256": "9c524d526ab05e99830097ac95955cc21b6855fec4c940f908e734c5a4a33507",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 66,
+          "top": 157,
+          "width": 1847,
+          "height": 486
+        },
+        "targetBox": [
+          4,
+          4,
+          259,
+          101
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-com-tam",
+      "image": "props/signs/sign-com-tam.png",
+      "sizePx": {
+        "width": 180,
+        "height": 115
+      },
+      "sha256": "5c168a93da7834a955712b59c7c1dcc6b3c9a34af0186aa5d9169e4b71baf91b",
+      "bytes": 11837,
+      "original": "originals/sign-com-tam.png",
+      "originalSha256": "c0bf5e5bcc6851ffaafd44dccde343355ad75a6cd876b17417374fccd4a2ae88",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 83,
+          "top": 197,
+          "width": 1403,
+          "height": 621
+        },
+        "targetBox": [
+          4,
+          4,
+          175,
+          110
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-hu-tieu",
+      "image": "props/signs/sign-hu-tieu.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "d65e26b219bd7c879adbee03ae57cfcf0fca64113558e1a84b1b57fdef3f2a95",
+      "bytes": 16621,
+      "original": "originals/sign-hu-tieu.png",
+      "originalSha256": "491e22e8077f9c22e210221e9de6c5b23f18ad271c1fdce9d7dedc5542933318",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 121,
+          "top": 142,
+          "width": 1735,
+          "height": 509
+        },
+        "targetBox": [
+          4,
+          4,
+          259,
+          101
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "sign-banh-mi",
+      "image": "props/signs/sign-banh-mi.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "0b99a20035028e38524dc133ceb75006612facf30c057fc917376b6fae181c77",
+      "bytes": 12070,
+      "original": "originals/sign-banh-mi.png",
+      "originalSha256": "7e4d40629bc92039fe33e4a41a418b8879c629fa31c24940a299348f415cbc1a",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 51,
+          "top": 201,
+          "width": 1877,
+          "height": 380
+        },
+        "targetBox": [
+          4,
+          4,
+          259,
+          101
+        ],
+        "fit": "contain, bottom center",
+        "paletteColours": 256
+      }
+    },
+    {
+      "id": "buildings-near",
+      "image": "../backgrounds-v2/buildings-near.png",
+      "sizePx": {
+        "width": 2048,
+        "height": 832
+      },
+      "bytes": 493453,
+      "sha256": "995a24e452a496c45b4bd7fb698cb2990e7e7cd2fa69e1d93fb65ac4e11ac86f",
+      "normalization": {
+        "sourceAlphaBox": {
+          "left": 12,
+          "top": 160,
+          "width": 1947,
+          "height": 575
+        },
+        "targetAlphaBox": {
+          "left": 21,
+          "top": 285,
+          "width": 2007,
+          "height": 514
+        },
+        "fit": "row occupies original strip bounding box; exact canvas and baseline retained"
+      },
+      "seamStatus": "PENDING_SCROLL_REVIEW"
+    }
+  ],
+  "atlas": {
+    "path": "props-v2/atlases/map01-props-atlas.png",
+    "size": [
+      2048,
+      2048
+    ],
+    "sha256": "d265683b4f5083dc2a509ad1b5eafadcea0003ec4b3794c0a57f0f9c1cdc5ce3"
+  },
+  "runtimeTests": "NOT_RUN"
+}

@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 const level = read('../src/world/levels/map-01-graybox.json');
 const source = read('./map01-environment-pilot.input.json');
-const props = read('../public/assets/environments/map01/props/props.json').props;
+const props = read('../public/assets/environments/map01/props-v2/props.json').props;
 const foreground = read('../public/assets/environments/map01/foreground/foreground.json').assets;
 const production = read('../integration/map01-production-additions.json');
 const base = 'assets/environments/map01/';
@@ -14,7 +14,7 @@ const decorations = source.decorations.filter(({ id }) => id !== 'props-street-t
   const asset = catalog.find((candidate) => candidate.id === match[2]);
   if (!asset) throw new Error(`Không có metadata cho ${entry.id}`);
   const size = asset.sizePx ?? asset.pixelSize;
-  return { ...entry, image: `${base}${match[1]}/${asset.image}`, pixelSize: [size.width, size.height] };
+  return { ...entry, image: `${base}${match[1] === 'props' ? 'props-v2' : match[1]}/${asset.image}`, pixelSize: [size.width, size.height] };
 });
 // Chân mái hiên kết thúc ở hàng pixel 320/330; bù alpha để phần nhìn thấy chạm đường.
 const shopFootPadding = 9 / 330 * decorations.find(({ id }) => id === 'foreground-street_shop_awning-9').worldSize.height;

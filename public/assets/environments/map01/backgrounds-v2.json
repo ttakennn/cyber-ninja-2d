@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "status": "V2_ART_CANDIDATE_RUNTIME_AND_SCROLL_SEAM_PENDING",
+  "coordinateSystem": "world X right/Y up; camera-relative 2D rendering",
+  "referenceViewport": {
+    "worldWidth": 16,
+    "worldHeight": 9
+  },
+  "notes": [
+    "These are assets and a PROPOSED Task008 schema, not currently understood by Task007",
+    "Sky never repeats; no repeated moon",
+    "Other strips have exact pixel-edge continuity; visual seam still requires scrolling review",
+    "Maintain level solids and climbables independently of background pixels"
+  ],
+  "backgrounds": [
+    {
+      "id": "sky",
+      "image": "backgrounds-v2/sky.png",
+      "pixelSize": [
+        2048,
+        1024
+      ],
+      "parallaxX": 0,
+      "parallaxY": 0,
+      "repeatX": false,
+      "transparent": false,
+      "worldHeight": 9,
+      "z": -8,
+      "placement": "cover-viewport-no-repeat",
+      "sourceImage": "references/moonlit_violet_cloudscape.png"
+    },
+    {
+      "id": "city-far",
+      "image": "backgrounds-v2/city-far.png",
+      "pixelSize": [
+        2048,
+        640
+      ],
+      "parallaxX": 0.15,
+      "parallaxY": 0,
+      "repeatX": true,
+      "transparent": true,
+      "worldHeight": 4,
+      "z": -6,
+      "placement": "repeat-x-bottom-aligned",
+      "sourceImage": "references/neon_noir_city_skyline_strip.png"
+    },
+    {
+      "id": "city-mid",
+      "image": "backgrounds-v2/city-mid.png",
+      "pixelSize": [
+        2048,
+        720
+      ],
+      "parallaxX": 0.35,
+      "parallaxY": 0,
+      "repeatX": true,
+      "transparent": true,
+      "worldHeight": 4.7,
+      "z": -4,
+      "placement": "repeat-x-bottom-aligned",
+      "sourceImage": "references/neon_pixel_city_rooftops.png"
+    },
+    {
+      "id": "buildings-near",
+      "image": "backgrounds-v2/buildings-near.png",
+      "pixelSize": [
+        2048,
+        832
+      ],
+      "parallaxX": 0.65,
+      "parallaxY": 0,
+      "repeatX": true,
+      "transparent": true,
+      "worldHeight": 5.4,
+      "z": -2,
+      "placement": "repeat-x-bottom-aligned",
+      "sourceImage": "references/neon_vietnamese_shophouse_skyline.png"
+    }
+  ],
+  "depthValidation": "Task007 camera z=10, near=0.1 far=100; visible meshes must lie at world z between -90 and +9.9. Background negative; player z=0; foreground z positive less than 9.9."
+}

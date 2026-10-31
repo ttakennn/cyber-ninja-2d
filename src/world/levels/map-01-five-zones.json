@@ -457,7 +457,7 @@
         "repeatX": false,
         "worldHeight": 9,
         "z": -8,
-        "image": "assets/environments/map01/backgrounds/sky.png",
+        "image": "assets/environments/map01/backgrounds-v2/sky.png",
         "bottomOffset": 0
       },
       {
@@ -471,7 +471,7 @@
         "repeatX": true,
         "worldHeight": 4,
         "z": -6,
-        "image": "assets/environments/map01/backgrounds/city-far.png",
+        "image": "assets/environments/map01/backgrounds-v2/city-far.png",
         "bottomOffset": 0
       },
       {
@@ -485,7 +485,7 @@
         "repeatX": true,
         "worldHeight": 4.7,
         "z": -4,
-        "image": "assets/environments/map01/backgrounds/city-mid.png",
+        "image": "assets/environments/map01/backgrounds-v2/city-mid.png",
         "bottomOffset": 0
       },
       {
@@ -499,7 +499,7 @@
         "repeatX": true,
         "worldHeight": 8,
         "z": -2,
-        "image": "assets/environments/map01/backgrounds/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
         "verticalAnchor": "world",
         "worldBottom": -3,
         "bottomOffset": 0
@@ -508,7 +508,7 @@
     "decorations": [
       {
         "id": "props-scooter-red-0",
-        "image": "assets/environments/map01/props/props/street/scooter-red.png",
+        "image": "assets/environments/map01/props-v2/props/street/scooter-red.png",
         "worldPosition": {
           "x": 8.9,
           "y": -2.5
@@ -530,7 +530,7 @@
       },
       {
         "id": "props-sign-pho-247-1",
-        "image": "assets/environments/map01/props/props/signs/sign-pho-247.png",
+        "image": "assets/environments/map01/props-v2/props/signs/sign-pho-247.png",
         "worldPosition": {
           "x": 4.7,
           "y": -0.8677236363636364
@@ -552,7 +552,7 @@
       },
       {
         "id": "props-sign-pharmacy-2",
-        "image": "assets/environments/map01/props/props/signs/sign-pharmacy.png",
+        "image": "assets/environments/map01/props-v2/props/signs/sign-pharmacy.png",
         "worldPosition": {
           "x": 16.35,
           "y": 2
@@ -574,7 +574,7 @@
       },
       {
         "id": "props-rooftop-water-tank-5",
-        "image": "assets/environments/map01/props/props/rooftop/rooftop-water-tank.png",
+        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
         "worldPosition": {
           "x": 44.7,
           "y": 2
@@ -596,7 +596,7 @@
       },
       {
         "id": "props-satellite-dish-6",
-        "image": "assets/environments/map01/props/props/rooftop/satellite-dish.png",
+        "image": "assets/environments/map01/props-v2/props/rooftop/satellite-dish.png",
         "worldPosition": {
           "x": 55,
           "y": 3
@@ -618,7 +618,7 @@
       },
       {
         "id": "props-antenna-7",
-        "image": "assets/environments/map01/props/props/rooftop/antenna.png",
+        "image": "assets/environments/map01/props-v2/props/rooftop/antenna.png",
         "worldPosition": {
           "x": 63.2,
           "y": 3.5
@@ -640,7 +640,7 @@
       },
       {
         "id": "props-rooftop-water-tank-8",
-        "image": "assets/environments/map01/props/props/rooftop/rooftop-water-tank.png",
+        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
         "worldPosition": {
           "x": 75.6,
           "y": 3

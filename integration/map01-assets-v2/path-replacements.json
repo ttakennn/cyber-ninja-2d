@@ -1,0 +1,12 @@
+{
+  "status": "HANDOFF_NOT_APPLIED",
+  "preserveRuntimeGeometry": true,
+  "propsCatalog": { "from": "public/assets/environments/map01/props/props.json", "to": "public/assets/environments/map01/props-v2/props.json" },
+  "propsImagePrefix": { "from": "assets/environments/map01/props/", "to": "assets/environments/map01/props-v2/" },
+  "nearBackground": { "from": "assets/environments/map01/backgrounds/buildings-near.png", "to": "assets/environments/map01/backgrounds-v2/buildings-near.png", "pixelSize": [2048, 832] },
+  "generators": ["scripts/generate_map01_pilot.mjs", "scripts/generate_map01_five_zones.mjs"],
+  "backgroundInput": "scripts/map01-environment-pilot.input.json",
+  "keepExistingPrefixes": ["assets/environments/map01/foreground/", "assets/environments/map01/production/", "assets/environments/map01/expansion-z45-rc1/"],
+  "newUnplacedSigns": ["sign-supermarket", "sign-com-tam", "sign-hu-tieu", "sign-banh-mi"],
+  "runtimeAcceptance": "PENDING"
+}
