@@ -111,21 +111,22 @@ if (merged.length !== streetLayout.mergeDecorationIds.length) throw new Error('T
 level.environment.backgrounds = level.environment.backgrounds.filter(({ id }) => id !== near.id);
 level.environment.decorations = level.environment.decorations.filter(({ id }) => !streetLayout.mergeDecorationIds.includes(id));
 const streetScale = streetLayout.scale;
+const streetHeightScale = streetScale * streetLayout.heightScale;
 const nearWidth = near.worldHeight * near.pixelSize[0] / near.pixelSize[1];
 let streetIndex = 0;
 for (const [left, right] of streetLayout.baseSpans) for (let x = left; x < right - 1e-9; x += nearWidth) {
   const width = Math.min(nearWidth, right - x);
   level.environment.decorations.push({ id: `street-mix-near-${streetIndex++}`, image: near.image, pixelSize: near.pixelSize,
     worldPosition: { x: (x + width / 2) * streetScale,
-      y: streetLayout.groundY - streetLayout.nearBottomPaddingPixels / near.pixelSize[1] * near.worldHeight * streetScale },
-    worldSize: { width: width * streetScale, height: near.worldHeight * streetScale }, anchor: { x: 0.5, y: 1 },
+      y: streetLayout.groundY - streetLayout.nearBottomPaddingPixels / near.pixelSize[1] * near.worldHeight * streetHeightScale },
+    worldSize: { width: width * streetScale, height: near.worldHeight * streetHeightScale }, anchor: { x: 0.5, y: 1 },
     collision: false, layer: 'background', z: near.z, parallaxX: near.parallaxX,
     sourceRect: { x: 0, y: 0, width: Math.min(near.pixelSize[0], width / nearWidth * near.pixelSize[0]), height: near.pixelSize[1] } });
 }
 for (const entry of merged) level.environment.decorations.push({ ...entry, id: `street-mix-${entry.id}`,
   layer: 'background', z: near.z, parallaxX: near.parallaxX,
-  worldPosition: { x: entry.worldPosition.x * streetScale, y: streetLayout.groundY + (entry.worldPosition.y - streetLayout.groundY) * streetScale },
-  worldSize: { width: entry.worldSize.width * streetScale, height: entry.worldSize.height * streetScale } });
+  worldPosition: { x: entry.worldPosition.x * streetScale, y: streetLayout.groundY + (entry.worldPosition.y - streetLayout.groundY) * streetHeightScale },
+  worldSize: { width: entry.worldSize.width * streetScale, height: entry.worldSize.height * streetHeightScale } });
 let json = JSON.stringify(level, null, 2);
 for (const layer of map.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

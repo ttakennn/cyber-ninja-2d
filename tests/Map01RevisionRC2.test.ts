@@ -92,7 +92,7 @@ describe('Map01 visual revision RC2', () => {
     for (const id of ['rc2-noodle-sign', 'rc2-market-sign']) {
       const before = revision.appendDecorations.find((entry) => entry.id === id)!;
       const after = five.environment.decorations.find((entry) => entry.id === `street-mix-${id}`)!;
-      expect(after.worldPosition.y).toBeCloseTo(streetLayout.groundY + (before.worldPosition.y - 42 / 128 - streetLayout.groundY) * streetLayout.scale);
+      expect(after.worldPosition.y).toBeCloseTo(streetLayout.groundY + (before.worldPosition.y - 42 / 128 - streetLayout.groundY) * streetLayout.scale * streetLayout.heightScale);
     }
   });
 

@@ -3,6 +3,7 @@
   "backgroundId": "buildings-near",
   "groundY": -2.5,
   "scale": 0.65,
+  "heightScale": 1.4,
   "nearBottomPaddingPixels": 34,
   "baseSpans": [[-32, 88], [144, 176]],
   "mergeDecorationIds": [

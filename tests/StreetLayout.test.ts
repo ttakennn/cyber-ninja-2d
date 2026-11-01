@@ -26,7 +26,7 @@ describe('phố hỗn hợp cùng mặt phẳng', () => {
       expect(actual[0]).toMatchObject({ image: original.image, pixelSize: original.pixelSize, layer: 'background', z: -2, parallaxX: 0.65, collision: false });
       expect(actual[0]!.worldPosition.x).toBeCloseTo(original.worldPosition.x * layout.scale);
       expect(actual[0]!.worldSize.width).toBeCloseTo(original.worldSize.width * layout.scale);
-      expect(actual[0]!.worldSize.height).toBeCloseTo(original.worldSize.height * layout.scale);
+      expect(actual[0]!.worldSize.height).toBeCloseTo(original.worldSize.height * layout.scale * layout.heightScale);
     }
     const panels = data.decorations.filter(({ id }) => id.startsWith('street-mix-near-') || id.startsWith('street-mix-rc2-zone'))
       .sort((a, b) => a.worldPosition.x - b.worldPosition.x);
@@ -38,6 +38,7 @@ describe('phố hỗn hợp cùng mặt phẳng', () => {
       expect(panel.worldPosition.y + padding / panel.pixelSize[1] * panel.worldSize.height).toBeCloseTo(layout.groundY);
     }
     expect(edge).toBeCloseTo(176 * layout.scale, 10);
+    expect(data.decorations.find(({ id }) => id === 'street-mix-near-0')!.worldSize.height).toBeCloseTo(7.28);
   });
 
   it.each([
