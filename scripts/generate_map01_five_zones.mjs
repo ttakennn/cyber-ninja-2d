@@ -123,10 +123,13 @@ for (const [left, right] of streetLayout.baseSpans) for (let x = left; x < right
     collision: false, layer: 'background', z: near.z, parallaxX: near.parallaxX,
     sourceRect: { x: 0, y: 0, width: Math.min(near.pixelSize[0], width / nearWidth * near.pixelSize[0]), height: near.pixelSize[1] } });
 }
-for (const entry of merged) level.environment.decorations.push({ ...entry, id: `street-mix-${entry.id}`,
-  layer: 'background', z: near.z, parallaxX: near.parallaxX,
-  worldPosition: { x: entry.worldPosition.x * streetScale, y: streetLayout.groundY + (entry.worldPosition.y - streetLayout.groundY) * streetHeightScale },
-  worldSize: { width: entry.worldSize.width * streetScale, height: entry.worldSize.height * streetHeightScale } });
+for (const entry of merged) {
+  const heightScale = entry.id.startsWith('rc2-zone5-yard-backdrop-') ? streetScale * streetLayout.zone5HeightScale : streetHeightScale;
+  level.environment.decorations.push({ ...entry, id: `street-mix-${entry.id}`,
+    layer: 'background', z: near.z, parallaxX: near.parallaxX,
+    worldPosition: { x: entry.worldPosition.x * streetScale, y: streetLayout.groundY + (entry.worldPosition.y - streetLayout.groundY) * heightScale },
+    worldSize: { width: entry.worldSize.width * streetScale, height: entry.worldSize.height * heightScale } });
+}
 let json = JSON.stringify(level, null, 2);
 for (const layer of map.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

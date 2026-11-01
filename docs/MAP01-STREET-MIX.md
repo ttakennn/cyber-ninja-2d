@@ -10,7 +10,7 @@ Người dùng xác nhận: đưa quán Hủ tiếu, Siêu thị và sân Zone5 
 - Chỉ alias `map01-five-zones` đổi bố cục. `map01` và các alias cũ tiếp tục dùng dữ liệu hiện tại.
 - Bỏ background lặp `buildings-near` khỏi alias năm zone và bỏ sáu decoration backdrop/biển riêng của Zone4/5. PNG được tái sử dụng trong layout mới, không xoá hoặc sửa ảnh nguồn.
 - Dùng ảnh phố v2 cho đoạn trước X88; X88..112 dùng hai trang quán RC2 và hai biển props-v2; X112..144 dùng hai trang sân RC2. Không vẽ thêm phố cũ phía sau các đoạn đã thay.
-- Các mảnh cùng Z=−2, parallaxX=0.65, baseline Y=−2.5. Hệ số ngang là 0.65; theo ảnh đường vàng bổ sung, `heightScale=1.4` tăng riêng chiều cao 40% trên nền hệ số 0.65. Biển được biến đổi cùng quán nên giữ vị trí tương đối, không còn đứng cố định phía trước một lớp phố khác.
+- Các mảnh cùng Z=−2, parallaxX=0.65, baseline Y=−2.5. Hệ số ngang là 0.65; theo ảnh đường vàng bổ sung, `heightScale=1.4` tăng riêng chiều cao 40% trên nền hệ số 0.65. Riêng sân Zone5 dùng `zone5HeightScale=2.3` để phần nhà nhìn thấy cân với phố. Biển được biến đổi cùng quán nên giữ vị trí tương đối, không còn đứng cố định phía trước một lớp phố khác.
 - Tọa độ X tác giả được đổi sang không gian parallax bằng `x × scale`. Renderer đặt X thực bằng `x dữ liệu + cameraX × (1 − parallaxX)`. Với scale=parallax=0.65, khi camera tới khu vực của quán thì quán vẫn nằm tại khu vực đó trong khung hình.
 - Bù padding alpha dưới chân: ảnh phố v2 có 34 hàng rỗng (đã đọc pixel PNG), quán RC2 42 hàng, sân RC2 95 hàng. Tất cả chân hình chạm cùng baseline đường sau biến đổi. Sky, city-far và city-mid giữ nguyên.
 - Layout hữu hạn có đoạn đệm phía ngoài map X−32..0 và X144..176 để phủ viewport ở hai đầu. Các mảnh phố cuối đoạn crop UV, giữ tỷ lệ ảnh; không tạo một PNG khổng lồ hoặc dependency mới.
@@ -33,6 +33,8 @@ Metadata/provenance nguồn props-v2, backgrounds-v2, RC1 và RC2 không đổi.
 ## Kết quả thực tế và mục còn mở
 
 Điều chỉnh theo đường vàng: tăng toàn bộ dãy `street-mix-*` từ chiều cao nền 5.2 lên 7.28 unit; quán/sân/biển cũng tăng chiều cao cùng hệ số 1.4, neo quanh đường Y−2.5 và bù alpha tương ứng. Không đổi bề ngang, tọa độ X, đường nối, parallax, camera, terrain hoặc gameplay. Đây là mức ước lượng theo ảnh (khoảng 40%), chưa đối chiếu vị trí đường vàng bằng ảnh runtime mới. Đã sửa cấu hình/generator rồi sinh lại JSON (exit 0); các test kỳ vọng chiều cao được cập nhật nhưng NOT_RUN.
+
+Sửa riêng Zone5 theo ảnh tiếp theo: PNG sân có alpha trong hàng 280..672 và 290..672; phần trên trống làm nhà nhìn thấp khi dùng cùng heightScale1.4. Thêm `zone5HeightScale=2.3` thay cho hệ số chung ở hai mảnh sân; chiều cao canvas tăng 5.46→8.97 unit, phần nhà nhìn thấy khoảng 4.59/4.47 unit. Neo chân alpha ở Y−2.5, giữ chung tỷ lệ Y cho cả hai trang để đường nối giữa sân không lệch. Các đoạn phố/quán khác, chiều ngang, tọa độ X, parallax và gameplay không đổi. Đã sinh lại JSON (exit 0); cập nhật test chiều cao nhìn thấy nhưng NOT_RUN, chưa có ảnh runtime mới.
 
 Đã đọc source, metadata, ảnh phố v2, và sinh lại JSON bằng generator năm zone (exit 0). Chưa chạy generator `--check`, test, build, lint, formatter hoặc typecheck riêng. Chưa khởi chạy/đi lại trong trình duyệt, chưa cập nhật dist, chưa chụp ảnh mới, chưa thu console/DPR/FPS.
 
