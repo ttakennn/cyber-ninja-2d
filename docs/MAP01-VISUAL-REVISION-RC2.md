@@ -80,6 +80,8 @@ Theo SOL-TASK và AGENTS, lượt thực thi này chưa có yêu cầu rõ chạ
 
 Yêu cầu bổ sung phủ kín chân tường Zone2/3: generator pilot thêm tám đoạn `street-cap-ivy` tại X40..70/Y−4.5..−2.5, nối dải đã có thành chân tường liên tục X0..80 (năm zone kế thừa rồi nối tới X144). Đoạn X68..70 crop UV còn 256 px, giữ mật độ ảnh. Chỉ thêm decoration `collision: false`, không thêm collider, thay tile, lấp khe mái hoặc thay physics/vùng rơi. Đã sinh lại hai JSON; cập nhật test kiểm độ liên tục và non-collision, chưa chạy test/build hay nghiệm thu trình duyệt.
 
+Điều chỉnh theo ảnh hai đường vàng: yêu cầu chân tường phải ngắt theo khoảng hở giữa mái. Generator hiện lấy mép mái thật để chỉ phủ các đoạn X40..48, X50..58, X60..68; giữ trống xuyên xuống dưới tại X48..50, X58..60, X68..70. Phần mô tả phủ liên tục ở trên là bước trước điều chỉnh này. Giữ nguyên collider, mặt mái, physics và mọi phần tường ngoài khe. Đã sinh lại cả hai level; cập nhật test không có decoration tường lấn vào khe và chỉ nối liên tục trên từng khối. Test/build và kiểm tra trình duyệt vẫn NOT_RUN.
+
 ## Mục còn mở trước nghiệm thu
 
 - Nhập/rời thang từ ground và balcony, dừng/đổi chiều/hai đầu; xác nhận không xuyên slab, không collider vô hình của hầm/bậc/chậu bị xoá.

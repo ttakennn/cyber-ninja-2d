@@ -84,13 +84,17 @@ for (const entry of revision.appendDecorations) {
       worldSize: { ...entry.worldSize, width }, sourceRect: { ...rect, width: rect.width * width / entry.worldSize.width } });
   }
 }
-// Nối kín chân tường Zone2/3; đây chỉ là skin dưới Y=-2.5, không thêm sàn ở vùng rơi.
+// Chân tường bám theo mép mái; giữ khe giữa các mái thông thẳng xuống dưới.
 const streetSkin = revision.appendDecorations.find(({ id }) => id === 'rc2-street-0');
-for (let x = 40; x < 70; x += streetSkin.worldSize.width) {
-  const width = Math.min(streetSkin.worldSize.width, 70 - x);
-  level.environment.decorations.push({ ...streetSkin, id: `rc2-street-${x}`,
-    worldPosition: { x: x + width / 2, y: streetSkin.worldPosition.y }, worldSize: { ...streetSkin.worldSize, width },
-    ...(width < streetSkin.worldSize.width ? { sourceRect: { x: 0, y: 0, width: width * 128, height: streetSkin.pixelSize[1] } } : {}) });
+for (const roof of level.solids.filter(({ id }) => id === 'upper-roof' || /^roof-\d$/.test(id))) {
+  const left = Math.max(40, roof.position.x - roof.width / 2);
+  const right = Math.min(70, roof.position.x + roof.width / 2);
+  for (let x = left; x < right; x += streetSkin.worldSize.width) {
+    const width = Math.min(streetSkin.worldSize.width, right - x);
+    level.environment.decorations.push({ ...streetSkin, id: `rc2-street-${x}`,
+      worldPosition: { x: x + width / 2, y: streetSkin.worldPosition.y }, worldSize: { ...streetSkin.worldSize, width },
+      ...(width < streetSkin.worldSize.width ? { sourceRect: { x: 0, y: 0, width: width * 128, height: streetSkin.pixelSize[1] } } : {}) });
+  }
 }
 level.tilemap.tileset = { image: `${base}tilesets/terrain-64-atlas.png`, imageWidth: 1024, imageHeight: 1024, tileWidth: 64, tileHeight: 64 };
 const grid = () => Array.from({ length: level.tilemap.rows }, () => Array(level.tilemap.columns).fill(null));

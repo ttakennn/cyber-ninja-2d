@@ -72,7 +72,7 @@ describe('Map01 visual revision RC2', () => {
     }
   });
 
-  it.each([pilot, five])('$id nối kín chân tường bằng skin, không thêm tile/sàn ở khe mái', (source) => {
+  it.each([pilot, five])('$id chân tường khớp mép mái, các khe thông thẳng xuống dưới', (source) => {
     const data = parseLevelData(source);
     const map = data.tilemap!;
     for (const layer of map.layers) for (const [row, cells] of layer.cells.entries()) for (const [column, cell] of cells.entries()) {
@@ -86,7 +86,10 @@ describe('Map01 visual revision RC2', () => {
       .sort((a, b) => a.worldPosition.x - b.worldPosition.x)) {
       const left = entry.worldPosition.x - entry.worldSize.width / 2;
       const right = entry.worldPosition.x + entry.worldSize.width / 2;
+      const gap = revision.tilemapEdits.keepRoofGaps.find(([start]) => start === edge);
+      if (gap) edge = gap[1]!;
       expect(left).toBe(edge);
+      for (const [gapLeft, gapRight] of revision.tilemapEdits.keepRoofGaps) expect(left < gapRight! && right > gapLeft!).toBe(false);
       expect(entry.collision).toBe(false);
       edge = right;
       expect(entry.worldPosition.y + entry.worldSize.height).toBe(-2.5);

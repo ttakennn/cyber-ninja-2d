@@ -1850,14 +1850,14 @@
         "z": -0.4
       },
       {
-        "id": "rc2-street-48",
+        "id": "rc2-street-50",
         "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
         "pixelSize": [
           512,
           256
         ],
         "worldPosition": {
-          "x": 50,
+          "x": 52,
           "y": -4.5
         },
         "worldSize": {
@@ -1873,37 +1873,14 @@
         "z": -0.4
       },
       {
-        "id": "rc2-street-52",
+        "id": "rc2-street-54",
         "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
         "pixelSize": [
           512,
           256
         ],
         "worldPosition": {
-          "x": 54,
-          "y": -4.5
-        },
-        "worldSize": {
-          "width": 4,
-          "height": 2
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.4
-      },
-      {
-        "id": "rc2-street-56",
-        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
-        "pixelSize": [
-          512,
-          256
-        ],
-        "worldPosition": {
-          "x": 58,
+          "x": 56,
           "y": -4.5
         },
         "worldSize": {
@@ -1963,35 +1940,6 @@
         "collision": false,
         "layer": "behind-player",
         "z": -0.4
-      },
-      {
-        "id": "rc2-street-68",
-        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
-        "pixelSize": [
-          512,
-          256
-        ],
-        "worldPosition": {
-          "x": 69,
-          "y": -4.5
-        },
-        "worldSize": {
-          "width": 2,
-          "height": 2
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.4,
-        "sourceRect": {
-          "x": 0,
-          "y": 0,
-          "width": 256,
-          "height": 256
-        }
       }
     ]
   }
