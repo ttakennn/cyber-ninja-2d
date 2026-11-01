@@ -57,7 +57,8 @@ describe('RC1 production architecture', () => {
   });
 
   it('RC2 bỏ decal A/tường thang; giữ kiến trúc mái và các field ngoài revision', () => {
-    for (const key of ['spawn', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    for (const key of ['spawn', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    expect(pilot.cameraBounds).toEqual({ ...graybox.cameraBounds, minY: -3.5 });
     const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
     expect(pilot.solids.slice(0, retained.length)).toEqual(retained);
     expect(pilot.climbables).toEqual(revision.replaceClimbables);

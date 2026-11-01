@@ -8,6 +8,8 @@ const foreground = read('../public/assets/environments/map01/foreground/foregrou
 const production = read('../integration/map01-production-additions.json');
 const revision = read('../integration/map01-revision-rc2/map-revision-plan.json');
 const base = 'assets/environments/map01/';
+// Đáy khung hình bám đáy tường thấp, không lộ background dưới mặt đường.
+level.cameraBounds.minY = -3.5;
 level.solids = level.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
 level.climbables = level.climbables.map((entry) => revision.replaceClimbables.find(({ id }) => id === entry.id) ?? entry);
 const decorations = source.decorations.filter(({ id }) => id !== 'props-street-tree-3' && id !== 'props-aircon-unit-4').map((entry) => {

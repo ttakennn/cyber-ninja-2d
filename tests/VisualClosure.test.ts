@@ -44,7 +44,8 @@ describe('Task 008.2 parapet và nền phố', () => {
     const cells = layer.cells.flatMap((row, y) => row.flatMap((tile, x) => tile === null ? [] : [tilePosition(map, x, y)]));
     expect(cells).toHaveLength(0);
     expect(layer.tint).toBe(0x182656);
-    for (const key of ['spawn', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    for (const key of ['spawn', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    expect(pilot.cameraBounds).toEqual({ ...graybox.cameraBounds, minY: -3.5 });
     const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
     expect(pilot.solids.slice(0, retained.length)).toEqual(retained);
     expect(pilot.climbables).toEqual(revision.replaceClimbables);

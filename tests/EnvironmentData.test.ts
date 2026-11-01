@@ -84,9 +84,10 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('map01 chuyển sang pilot, graybox gốc còn nguyên mọi field gameplay', () => {
     expect(getLevelData('map01')).toBe(pilot);
     expect(getLevelData('map01-graybox')).toBe(graybox);
-    for (const key of ['version', 'id', 'spawn', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) {
+    for (const key of ['version', 'id', 'spawn', 'cameraFollowY', 'deathY'] as const) {
       expect(pilot[key]).toEqual(graybox[key]);
     }
+    expect(pilot.cameraBounds).toEqual({ ...graybox.cameraBounds, minY: -3.5 });
     const level = new TestLevel(pilot);
     const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
     expect(level.colliders.slice(0, retained.length)).toEqual(retained);

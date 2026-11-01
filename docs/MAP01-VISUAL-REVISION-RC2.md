@@ -86,6 +86,10 @@ Yêu cầu bổ sung phủ kín chân tường Zone2/3: generator pilot thêm t�
 
 Giảm chân tường theo xác nhận mới: chỉ dải gạch dưới đường giảm từ 2 xuống 1 unit trên toàn `map01` và `map01-five-zones`. Top giữ Y−2.5, bottom mới Y−3.5; crop nửa trên PNG (`sourceRect.height=128`), không nén đá/lá. Rectangle nền đỡ cắt tới Y−3.5. Hai dải vine foreground giữ nguyên điểm bám trên, cắt phần dưới bằng UV theo chiều cao mới để không thò dưới tường. Giữ mép các khe, chiều cao mặt đứng nhà, background/sign đã căn chân ở đường, camera, geometry và gameplay. Đã sửa generator rồi sinh lại JSON; cập nhật các kỳ vọng crop/nền/vine trong test, chưa chạy test/build hoặc trình duyệt.
 
+## Hạ bố cục sát đáy khung hình
+
+Theo ảnh bổ sung, cần hạ bố cục xuống sát đáy thay vì để lộ background dưới tường thấp. Generator pilot đặt `cameraBounds.minY=-3.5`, trùng đáy chân tường, năm zone kế thừa. Khi đi trên đường, camera clamp Y=1 thay cho Y=0, mặt đường nằm cách đáy khung 1 unit trong viewport cao 9 unit; tường phủ tới đáy, không có dải camera nhìn xuống phía dưới tường. Giữ world position mặt đường/mái, geometry, spawn, deathY, followY và mọi asset/background đã căn chân; giới hạn X và maxY không đổi. Chỉ hai alias Map01 nhận biên dưới mới, các alias khác giữ nguyên. Đã sinh lại JSON; thêm test camera ở bốn viewport/đứng-cúi/reset và cập nhật kỳ vọng bounds hiện hành, tất cả NOT_RUN; chưa có ảnh nghiệm thu mới.
+
 ## Mục còn mở trước nghiệm thu
 
 - Nhập/rời thang từ ground và balcony, dừng/đổi chiều/hai đầu; xác nhận không xuyên slab, không collider vô hình của hầm/bậc/chậu bị xoá.

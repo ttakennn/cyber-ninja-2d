@@ -17,7 +17,7 @@ describe('dữ liệu camera và fall boundary', () => {
     const input = structuredClone(map01);
     const level = parseLevelData(getLevelData('map01'));
     expect(level.id).toBe('map01');
-    expect(level.cameraBounds).toEqual({ minX: 0, maxX: 80, minY: -4.5, maxY: 11.5 });
+    expect(level.cameraBounds).toEqual({ minX: 0, maxX: 80, minY: -3.5, maxY: 11.5 });
     expect(level.cameraFollowY).toBe(true);
     expect(level.deathY).toBe(-8);
     expect(level.tilemap?.columns).toBe(160);

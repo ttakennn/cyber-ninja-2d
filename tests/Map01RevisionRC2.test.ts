@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
 import { PhysicsWorld } from '../src/physics/PhysicsWorld';
+import { GameCamera } from '../src/rendering/GameCamera';
 import { parseLevelData } from '../src/world/LevelData';
 import { tilePosition } from '../src/world/TilemapData';
 import pilot from '../src/world/levels/map-01-visual-pilot.json';
@@ -12,6 +13,25 @@ import props from '../public/assets/environments/map01/props-v2/props.json';
 import metadata from '../public/assets/environments/map01/revision-rc2/asset-manifest.json';
 
 describe('Map01 visual revision RC2', () => {
+  it.each([[1920, 1080], [1280, 720], [1024, 768], [540, 960]])('tường chạm đáy khung hình khi đứng/cúi/respawn trên đường ở %s×%s', (width, height) => {
+    for (const source of [pilot, five]) {
+      const data = parseLevelData(source);
+      const camera = new GameCamera(data.cameraBounds, data.cameraFollowY);
+      camera.resize(width!, height!);
+      for (const x of [data.spawn.x, data.cameraBounds!.maxX - 2]) {
+        camera.reset({ x, y: -1.7 });
+        for (const bodyHeight of [1.6, 0.9, 1.6]) {
+          camera.follow({ x, y: -2.5 + bodyHeight / 2 }, bodyHeight);
+          const viewBottom = camera.camera.position.y + camera.camera.bottom;
+          expect(viewBottom).toBe(-3.5);
+          expect((-2.5 - viewBottom) / (camera.camera.top - camera.camera.bottom)).toBeCloseTo(1 / 9);
+        }
+      }
+      expect(data.cameraBounds?.minY).toBe(-3.5);
+      expect(data.environment!.backgrounds.find(({ id }) => id === 'buildings-near')).toMatchObject({ verticalAnchor: 'world', worldBottom: -3 });
+    }
+  });
+
   it('resolve 41 additions đúng một lần, xoá đúng ID và giữ nguyên hazard RC1', () => {
     const data = parseLevelData(five);
     const decorations = data.environment!.decorations;
