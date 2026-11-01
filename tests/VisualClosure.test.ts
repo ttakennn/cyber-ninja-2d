@@ -10,7 +10,7 @@ import graybox from '../src/world/levels/map-01-graybox.json';
 import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 const data = parseEnvironmentData(pilot.environment);
-const fragment = data.decorations.find((entry) => entry.sourceRect)!;
+const fragment = data.decorations.find((entry) => entry.id.includes('parapet_wall') && entry.sourceRect)!;
 
 describe('Task 008.2 parapet và nền phố', () => {
   it.each(['upper-roof', 'roof-2', 'roof-3', 'roof-4'])('%s có hai end-cap, thân nối liên tục không chồng đầu/lấn khe', (id) => {

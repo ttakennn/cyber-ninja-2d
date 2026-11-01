@@ -25,7 +25,7 @@ describe('Map01: sửa theo năm ảnh người dùng', () => {
     expect(panels).toHaveLength(3);
     expect(level.colliders).toHaveLength(8);
     expect(parseLevelData(pilot).visuals.filter((entry) => entry.kind === 'rectangle')
-      .every((entry) => entry.opacity === 1 && entry.kind === 'rectangle' && entry.bottom === -4.5)).toBe(true);
+      .every((entry) => entry.opacity === 1 && entry.kind === 'rectangle' && entry.bottom === -3.5)).toBe(true);
     level.dispose();
   });
 

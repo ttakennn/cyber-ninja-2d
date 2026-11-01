@@ -82,6 +82,10 @@ Yêu cầu bổ sung phủ kín chân tường Zone2/3: generator pilot thêm t�
 
 Điều chỉnh theo ảnh hai đường vàng: yêu cầu chân tường phải ngắt theo khoảng hở giữa mái. Generator hiện lấy mép mái thật để chỉ phủ các đoạn X40..48, X50..58, X60..68; giữ trống xuyên xuống dưới tại X48..50, X58..60, X68..70. Phần mô tả phủ liên tục ở trên là bước trước điều chỉnh này. Giữ nguyên collider, mặt mái, physics và mọi phần tường ngoài khe. Đã sinh lại cả hai level; cập nhật test không có decoration tường lấn vào khe và chỉ nối liên tục trên từng khối. Test/build và kiểm tra trình duyệt vẫn NOT_RUN.
 
+## Giảm chiều cao chân tường
+
+Giảm chân tường theo xác nhận mới: chỉ dải gạch dưới đường giảm từ 2 xuống 1 unit trên toàn `map01` và `map01-five-zones`. Top giữ Y−2.5, bottom mới Y−3.5; crop nửa trên PNG (`sourceRect.height=128`), không nén đá/lá. Rectangle nền đỡ cắt tới Y−3.5. Hai dải vine foreground giữ nguyên điểm bám trên, cắt phần dưới bằng UV theo chiều cao mới để không thò dưới tường. Giữ mép các khe, chiều cao mặt đứng nhà, background/sign đã căn chân ở đường, camera, geometry và gameplay. Đã sửa generator rồi sinh lại JSON; cập nhật các kỳ vọng crop/nền/vine trong test, chưa chạy test/build hoặc trình duyệt.
+
 ## Mục còn mở trước nghiệm thu
 
 - Nhập/rời thang từ ground và balcony, dừng/đổi chiều/hai đầu; xác nhận không xuyên slab, không collider vô hình của hầm/bậc/chậu bị xoá.

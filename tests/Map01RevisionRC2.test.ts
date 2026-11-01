@@ -24,10 +24,12 @@ describe('Map01 visual revision RC2', () => {
     };
     for (const entry of revision.appendDecorations) {
       const actual = five.environment.decorations.filter(({ id }) => id === entry.id);
+      const expected = /^rc2-street-\d+$/.test(entry.id) ? { ...entry, worldPosition: { ...entry.worldPosition, y: -3.5 },
+        worldSize: { ...entry.worldSize, height: 1 }, sourceRect: { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 } } : entry;
       expect(actual).toHaveLength(1);
-      expect({ ...actual[0], worldPosition: entry.worldPosition }).toEqual(entry);
+      expect({ ...actual[0], worldPosition: expected.worldPosition }).toEqual(expected);
       expect(actual[0]!.worldPosition.x).toBe(entry.worldPosition.x);
-      expect(actual[0]!.worldPosition.y).toBeCloseTo(floorAlignedY[entry.id] ?? entry.worldPosition.y, 12);
+      expect(actual[0]!.worldPosition.y).toBeCloseTo(floorAlignedY[entry.id] ?? expected.worldPosition.y, 12);
     }
     for (const id of revision.removeDecorationIds) expect(decorations.find((entry) => entry.id === id)).toBeUndefined();
     expect(five.environment.decorations.find(({ id }) => id === 'z5-floor-edge-stripe')).toEqual(rc1.decorations.find(({ id }) => id === 'z5-floor-edge-stripe'));
@@ -46,7 +48,7 @@ describe('Map01 visual revision RC2', () => {
       expect(entry.worldPosition.x + entry.worldSize.width / 2).toBeLessThanOrEqual(80);
     }
     expect(data.environment!.decorations.find(({ id }) => id === 'rc2-street-78')).toMatchObject({
-      worldPosition: { x: 79, y: -4.5 }, worldSize: { width: 2, height: 2 }, sourceRect: { x: 0, y: 0, width: 256, height: 256 },
+      worldPosition: { x: 79, y: -3.5 }, worldSize: { width: 2, height: 1 }, sourceRect: { x: 0, y: 0, width: 256, height: 128 },
     });
     expect(data.environment!.decorations.some(({ id }) => /rc2-(zone[45]|noodle|market|roof4)/.test(id))).toBe(false);
   });
@@ -92,10 +94,18 @@ describe('Map01 visual revision RC2', () => {
       for (const [gapLeft, gapRight] of revision.tilemapEdits.keepRoofGaps) expect(left < gapRight! && right > gapLeft!).toBe(false);
       expect(entry.collision).toBe(false);
       edge = right;
+      expect(entry.worldSize.height).toBe(1);
+      expect(entry.worldPosition.y).toBe(-3.5);
+      expect(entry.sourceRect?.height).toBe(128);
       expect(entry.worldPosition.y + entry.worldSize.height).toBe(-2.5);
       expect(entry.worldSize.width / (entry.sourceRect?.width ?? entry.pixelSize[0])).toBe(1 / 128);
     }
     expect(edge).toBe(data.cameraBounds!.maxX);
+    expect(data.visuals.filter((entry) => entry.kind === 'rectangle').every((entry) => entry.kind === 'rectangle' && entry.bottom === -3.5)).toBe(true);
+    for (const vine of data.environment!.decorations.filter(({ id }) => id.startsWith('foreground-vine_strip_01-'))) {
+      expect(vine.worldPosition.y).toBeGreaterThanOrEqual(-3.5);
+      expect(vine.worldPosition.y + vine.worldSize.height).toBeCloseTo(-4.15 + 1.5833);
+    }
   });
 
   it('alpha crate/bench/ladder/planter đúng mục tiêu, thang không xuyên mép ban công', () => {

@@ -90,6 +90,11 @@ level.environment.decorations = level.environment.decorations.filter(({ id }) =>
 level.environment.decorations.push(...revision.appendDecorations);
 // PNG có 42/95 hàng alpha rỗng dưới chân; hạ cả biển Zone4 cùng nền (128 px/unit).
 for (const entry of level.environment.decorations) {
+  if (/^rc2-street-\d+$/.test(entry.id)) {
+    entry.worldPosition = { ...entry.worldPosition, y: -3.5 };
+    entry.worldSize = { ...entry.worldSize, height: 1 };
+    entry.sourceRect = { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 };
+  }
   const bottomPadding = entry.id.startsWith('rc2-zone4-shops-backdrop-') || ['rc2-noodle-sign', 'rc2-market-sign'].includes(entry.id) ? 42
     : entry.id.startsWith('rc2-zone5-yard-backdrop-') ? 95 : 0;
   if (bottomPadding) entry.worldPosition = { ...entry.worldPosition, y: entry.worldPosition.y - bottomPadding / 128 };

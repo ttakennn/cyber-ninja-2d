@@ -150,7 +150,7 @@
       "shapeId": "roof-2",
       "color": "#182656",
       "opacity": 1,
-      "bottom": -4.5,
+      "bottom": -3.5,
       "z": -0.6
     },
     {
@@ -158,7 +158,7 @@
       "shapeId": "roof-3",
       "color": "#182656",
       "opacity": 1,
-      "bottom": -4.5,
+      "bottom": -3.5,
       "z": -0.6
     },
     {
@@ -166,7 +166,7 @@
       "shapeId": "upper-roof-support",
       "color": "#182656",
       "opacity": 1,
-      "bottom": -4.5,
+      "bottom": -3.5,
       "z": -0.6
     }
   ],
@@ -689,11 +689,11 @@
         ],
         "worldPosition": {
           "x": 2.8,
-          "y": -4.15
+          "y": -3.4952518796992487
         },
         "worldSize": {
           "width": 0.5,
-          "height": 1.5833
+          "height": 0.9285518796992481
         },
         "anchor": {
           "x": 0.5,
@@ -701,7 +701,13 @@
         },
         "collision": false,
         "layer": "foreground",
-        "z": 2
+        "z": 2,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 84,
+          "height": 156
+        }
       },
       {
         "id": "foreground-vine_strip_01-13",
@@ -712,11 +718,11 @@
         ],
         "worldPosition": {
           "x": 39.5,
-          "y": -4.15
+          "y": -3.4952518796992487
         },
         "worldSize": {
           "width": 0.5,
-          "height": 1.5833
+          "height": 0.9285518796992481
         },
         "anchor": {
           "x": 0.5,
@@ -724,7 +730,13 @@
         },
         "collision": false,
         "layer": "foreground",
-        "z": 2
+        "z": 2,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 84,
+          "height": 156
+        }
       },
       {
         "id": "foreground-parapet_wall-15",
@@ -1460,11 +1472,11 @@
         ],
         "worldPosition": {
           "x": 42,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1472,7 +1484,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-44",
@@ -1483,11 +1501,11 @@
         ],
         "worldPosition": {
           "x": 46,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1495,7 +1513,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-50",
@@ -1506,11 +1530,11 @@
         ],
         "worldPosition": {
           "x": 52,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1518,7 +1542,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-54",
@@ -1529,11 +1559,11 @@
         ],
         "worldPosition": {
           "x": 56,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1541,7 +1571,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-60",
@@ -1552,11 +1588,11 @@
         ],
         "worldPosition": {
           "x": 62,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1564,7 +1600,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-64",
@@ -1575,11 +1617,11 @@
         ],
         "worldPosition": {
           "x": 66,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1587,7 +1629,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "z5-floor-edge-stripe",
@@ -1742,11 +1790,11 @@
         ],
         "worldPosition": {
           "x": 2,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1754,7 +1802,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-4",
@@ -1765,11 +1819,11 @@
         ],
         "worldPosition": {
           "x": 6,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1777,7 +1831,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-8",
@@ -1788,11 +1848,11 @@
         ],
         "worldPosition": {
           "x": 10,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1800,7 +1860,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-12",
@@ -1811,11 +1877,11 @@
         ],
         "worldPosition": {
           "x": 14,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1823,7 +1889,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-16",
@@ -1834,11 +1906,11 @@
         ],
         "worldPosition": {
           "x": 18,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1846,7 +1918,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-20",
@@ -1857,11 +1935,11 @@
         ],
         "worldPosition": {
           "x": 22,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1869,7 +1947,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-24",
@@ -1880,11 +1964,11 @@
         ],
         "worldPosition": {
           "x": 26,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1892,7 +1976,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-28",
@@ -1903,11 +1993,11 @@
         ],
         "worldPosition": {
           "x": 30,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1915,7 +2005,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-32",
@@ -1926,11 +2022,11 @@
         ],
         "worldPosition": {
           "x": 34,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1938,7 +2034,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-36",
@@ -1949,11 +2051,11 @@
         ],
         "worldPosition": {
           "x": 38,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1961,7 +2063,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-70",
@@ -1972,11 +2080,11 @@
         ],
         "worldPosition": {
           "x": 72,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -1984,7 +2092,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-74",
@@ -1995,11 +2109,11 @@
         ],
         "worldPosition": {
           "x": 76,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2007,7 +2121,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-78",
@@ -2018,11 +2138,11 @@
         ],
         "worldPosition": {
           "x": 80,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2030,7 +2150,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-82",
@@ -2041,11 +2167,11 @@
         ],
         "worldPosition": {
           "x": 84,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2053,7 +2179,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-86",
@@ -2064,11 +2196,11 @@
         ],
         "worldPosition": {
           "x": 88,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2076,7 +2208,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-90",
@@ -2087,11 +2225,11 @@
         ],
         "worldPosition": {
           "x": 92,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2099,7 +2237,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-94",
@@ -2110,11 +2254,11 @@
         ],
         "worldPosition": {
           "x": 96,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2122,7 +2266,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-98",
@@ -2133,11 +2283,11 @@
         ],
         "worldPosition": {
           "x": 100,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2145,7 +2295,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-102",
@@ -2156,11 +2312,11 @@
         ],
         "worldPosition": {
           "x": 104,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2168,7 +2324,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-106",
@@ -2179,11 +2341,11 @@
         ],
         "worldPosition": {
           "x": 108,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2191,7 +2353,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-110",
@@ -2202,11 +2370,11 @@
         ],
         "worldPosition": {
           "x": 112,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2214,7 +2382,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-114",
@@ -2225,11 +2399,11 @@
         ],
         "worldPosition": {
           "x": 116,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2237,7 +2411,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-118",
@@ -2248,11 +2428,11 @@
         ],
         "worldPosition": {
           "x": 120,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2260,7 +2440,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-122",
@@ -2271,11 +2457,11 @@
         ],
         "worldPosition": {
           "x": 124,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2283,7 +2469,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-126",
@@ -2294,11 +2486,11 @@
         ],
         "worldPosition": {
           "x": 128,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2306,7 +2498,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-130",
@@ -2317,11 +2515,11 @@
         ],
         "worldPosition": {
           "x": 132,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2329,7 +2527,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-134",
@@ -2340,11 +2544,11 @@
         ],
         "worldPosition": {
           "x": 136,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2352,7 +2556,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-138",
@@ -2363,11 +2573,11 @@
         ],
         "worldPosition": {
           "x": 140,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 4,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2375,7 +2585,13 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.4
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 128
+        }
       },
       {
         "id": "rc2-street-142",
@@ -2386,11 +2602,11 @@
         ],
         "worldPosition": {
           "x": 143,
-          "y": -4.5
+          "y": -3.5
         },
         "worldSize": {
           "width": 2,
-          "height": 2
+          "height": 1
         },
         "anchor": {
           "x": 0.5,
@@ -2403,7 +2619,7 @@
           "x": 0,
           "y": 0,
           "width": 256,
-          "height": 256
+          "height": 128
         }
       },
       {

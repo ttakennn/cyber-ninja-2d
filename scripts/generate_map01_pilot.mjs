@@ -38,6 +38,14 @@ facade('facade-shop', 'street_shop_awning', 15.55, -1.5);
 facade('facade-light', 'wall_light_amber', 14.5, 2);
 facade('foreground-vine_strip_01-12', 'vine_strip_01', 2.8, -4.15, 'foreground');
 facade('foreground-vine_strip_01-13', 'vine_strip_01', 39.5, -4.15, 'foreground');
+for (const vine of decorations.filter(({ id }) => id.startsWith('foreground-vine_strip_01-'))) {
+  const top = vine.worldPosition.y + vine.worldSize.height;
+  const pixels = Math.floor((top + 3.5) / vine.worldSize.height * vine.pixelSize[1]);
+  const height = vine.worldSize.height * pixels / vine.pixelSize[1];
+  vine.sourceRect = { x: 0, y: 0, width: vine.pixelSize[0], height: pixels };
+  vine.worldSize = { ...vine.worldSize, height };
+  vine.worldPosition = { ...vine.worldPosition, y: top - height };
+}
 for (const solid of level.solids.filter(({ id }) => id === 'upper-roof' || /^roof-\d$/.test(id))) {
   const left = solid.position.x - solid.width / 2;
   const right = solid.position.x + solid.width / 2;
@@ -68,7 +76,7 @@ level.visuals[0] = { ...level.visuals[0], color: '#ba8a3f', opacity: 0, structur
 // Người dùng yêu cầu chặn lối dưới upper-roof tại X=37; các nền mái khác chỉ che hình.
 level.solids.push({ id: 'upper-roof-support', position: { x: 42.5, y: -1.75 }, width: 11, height: 5.5 });
 for (const shape of level.solids.filter(({ id }) => id === 'street' || id === 'upper-roof-support' || /^roof-\d$/.test(id))) {
-  level.visuals.push({ kind: 'rectangle', shapeId: shape.id, color: '#182656', opacity: 1, bottom: -4.5, z: -0.6 });
+  level.visuals.push({ kind: 'rectangle', shapeId: shape.id, color: '#182656', opacity: 1, bottom: -3.5, z: -0.6 });
 }
 level.visuals = level.visuals.filter(({ shapeId }) => !revision.removeVisualShapeIds.includes(shapeId) && !revision.removeSolidIds.includes(shapeId)
   && shapeId !== 'street' && shapeId !== 'roof-4');
@@ -95,6 +103,12 @@ for (const roof of level.solids.filter(({ id }) => id === 'upper-roof' || /^roof
       worldPosition: { x: x + width / 2, y: streetSkin.worldPosition.y }, worldSize: { ...streetSkin.worldSize, width },
       ...(width < streetSkin.worldSize.width ? { sourceRect: { x: 0, y: 0, width: width * 128, height: streetSkin.pixelSize[1] } } : {}) });
   }
+}
+// Cắt nửa dưới ảnh, giữ tỷ lệ đá/lá và top đường Y=-2.5.
+for (const entry of level.environment.decorations.filter(({ id }) => /^rc2-street-\d+$/.test(id))) {
+  entry.worldPosition = { ...entry.worldPosition, y: -3.5 };
+  entry.worldSize = { ...entry.worldSize, height: 1 };
+  entry.sourceRect = { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 };
 }
 level.tilemap.tileset = { image: `${base}tilesets/terrain-64-atlas.png`, imageWidth: 1024, imageHeight: 1024, tileWidth: 64, tileHeight: 64 };
 const grid = () => Array.from({ length: level.tilemap.rows }, () => Array(level.tilemap.columns).fill(null));

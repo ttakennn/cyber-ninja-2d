@@ -92,7 +92,7 @@ describe('Task 008 Fix: neo world và foreground', () => {
       expect(asset.artReviewStatus).toMatch(/^APPROVED_/);
       if ('sourceRect' in decoration && decoration.sourceRect) {
         expect(decoration.worldSize.width).toBeCloseTo(decoration.sourceRect.width * asset.worldSize.width / asset.pixelSize.width);
-        expect(decoration.worldSize.height).toBe(asset.worldSize.height);
+        expect(decoration.worldSize.height).toBeCloseTo(decoration.sourceRect.height * asset.worldSize.height / asset.pixelSize.height);
       } else expect(decoration.worldSize).toEqual(asset.worldSize);
       const bytes = readFileSync(new URL(`../public/${decoration.image}`, import.meta.url));
       expect([bytes.readUInt32BE(16), bytes.readUInt32BE(20)]).toEqual(decoration.pixelSize);
