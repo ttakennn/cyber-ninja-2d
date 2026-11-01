@@ -69,6 +69,13 @@ Các trang backdrop runtime: Zone4 2×1536×768, Zone5 2×2048×768. Hai strip a
 
 Theo SOL-TASK và AGENTS, lượt thực thi này chưa có yêu cầu rõ chạy test/build/validation. Không dùng log hoặc ảnh bản trước để chứng minh RC2. Không có log test/build mới; chưa xác nhận các test đã viết đều pass.
 
+## Sửa tiếp theo bốn ảnh người dùng (2026-11-01)
+
+- Hình1: xoá marker tile X27..27.5/Y0..0.5 trong generator pilot; thang và hình nền phố giữ nguyên.
+- Hình2: sửa phép quét rơi của `PhysicsWorld.moveY` dùng cùng dung sai tiếp xúc 1e-9 với `canOccupy`. Sau `tryResize` từ đứng sang cúi, tâm có thể thấp hơn ngưỡng mặt mái một sai số số thực rất nhỏ; điều kiện `start >= top` cũ bỏ qua mặt mái và nhân vật lọt xuống. Không thêm collider, đổi chiều cao nhân vật, gravity, input S hoặc quy tắc leo. Dung sai chỉ áp tại mặt tiếp xúc khi rơi, không giải xuyên sâu hoặc giữ nhân vật trên khoảng hở.
+- Hình3/4: đọc alpha PNG cho thấy hai trang Zone4 có hàng alpha cuối 725/768 (42 hàng trống dưới), hai trang Zone5 có hàng alpha cuối 672/768 (95 hàng trống dưới). Generator năm zone bù Y lần lượt −42/128 và −95/128 unit, đưa chân hình sát top đường −2.5. Hai biển Zone4 hạ cùng −42/128 để giữ vị trí tương đối với quán. Giữ scale, ảnh/UV, mặt đường, hazard và geometry; không sửa PNG nguồn hoặc global parallax.
+- Đã sinh lại JSON từ hai generator (exit 0). Thêm test giữ/nhả S qua physics thật trên bốn mái và cập nhật test marker/alpha alignment; các test này **NOT_RUN**. Chưa thao tác lại game hoặc chụp ảnh mới; chưa có xác nhận runtime cho bốn lỗi.
+
 ## Mục còn mở trước nghiệm thu
 
 - Nhập/rời thang từ ground và balcony, dừng/đổi chiều/hai đầu; xác nhận không xuyên slab, không collider vô hình của hầm/bậc/chậu bị xoá.

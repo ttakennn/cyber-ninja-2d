@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { gameConfig } from '../src/config/game.config';
 import type { AABB } from '../src/physics/Collision';
 import { dt, floor, noInput, roof, setup } from './movement.fixtures';
+import pilot from '../src/world/levels/map-01-visual-pilot.json';
 
 describe('truy vấn khoảng trống và đổi collider', () => {
   it('phân biệt khối rắn với vùng leo, cho phép tiếp xúc cạnh', () => {
@@ -28,6 +29,22 @@ describe('truy vấn khoảng trống và đổi collider', () => {
 });
 
 describe('cúi người', () => {
+  it.each(['upper-roof', 'roof-2', 'roof-3', 'roof-4'])('giữ/nhả S trên %s không lọt qua mặt mái do sai số resize', (id) => {
+    const platform = pilot.solids.find((entry) => entry.id === id)!;
+    const top = platform.position.y + platform.height / 2;
+    const { body, world, movement } = setup(pilot.solids, []);
+    body.position = { x: platform.position.x, y: top + body.height / 2 };
+    for (let step = 0; step < 240; step += 1) {
+      const crouch = step % 60 < 30;
+      movement.step(world, dt, { ...noInput, crouch });
+      expect(movement.stance).toBe(crouch ? 'crouching' : 'standing');
+      expect(body.position.y - body.height / 2).toBeCloseTo(top, 12);
+      expect(body.isGrounded).toBe(true);
+      expect(body.velocity.y).toBe(0);
+      expect(world.canOccupy(body)).toBe(true);
+    }
+  });
+
   it('đổi tư thế và chiều cao khi có nền, giữ nguyên vị trí chân', () => {
     const { body, world, movement } = setup();
     const feet = body.position.y - body.height / 2;

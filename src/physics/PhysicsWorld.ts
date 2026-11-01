@@ -83,7 +83,8 @@ export class PhysicsWorld {
       const separation = (body.height + collider.height) / 2;
       const top = collider.position.y + separation;
       const bottom = collider.position.y - separation;
-      if (distance < 0 && start >= top && end <= top) {
+      // tryResize cho phép sai số tiếp xúc 1e-9; sweep cũng phải giữ mặt sàn sau khi cúi.
+      if (distance < 0 && start >= top - 1e-9 && end <= top) {
         end = top;
         body.isGrounded = true;
         blocked = true;

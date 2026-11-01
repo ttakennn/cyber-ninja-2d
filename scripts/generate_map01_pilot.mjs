@@ -113,7 +113,6 @@ for (const solid of level.solids) {
     if (!solid.id.endsWith('crate')) paint(edges, left, top - 0.5, right, top, 11);
   }
 }
-paint(markers, 27, 0, 27.5, 0.5, 10);
 paint(markers, 77.5, 3, 78.5, 5.5, 10);
 paint(foundation, 0, -4.5, 40, -4, 3);
 level.tilemap.layers = [

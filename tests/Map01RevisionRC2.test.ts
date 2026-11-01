@@ -17,7 +17,18 @@ describe('Map01 visual revision RC2', () => {
     const decorations = data.environment!.decorations;
     expect(revision.appendDecorations).toHaveLength(41);
     expect(new Set(decorations.map(({ id }) => id)).size).toBe(decorations.length);
-    for (const entry of revision.appendDecorations) expect(five.environment.decorations.filter(({ id }) => id === entry.id)).toEqual([entry]);
+    const floorAlignedY: Record<string, number> = {
+      'rc2-zone4-shops-backdrop-0': -2.828125, 'rc2-zone4-shops-backdrop-1': -2.828125,
+      'rc2-zone5-yard-backdrop-0': -3.2421875, 'rc2-zone5-yard-backdrop-1': -3.2421875,
+      'rc2-noodle-sign': -0.56875, 'rc2-market-sign': -0.978125,
+    };
+    for (const entry of revision.appendDecorations) {
+      const actual = five.environment.decorations.filter(({ id }) => id === entry.id);
+      expect(actual).toHaveLength(1);
+      expect({ ...actual[0], worldPosition: entry.worldPosition }).toEqual(entry);
+      expect(actual[0]!.worldPosition.x).toBe(entry.worldPosition.x);
+      expect(actual[0]!.worldPosition.y).toBeCloseTo(floorAlignedY[entry.id] ?? entry.worldPosition.y, 12);
+    }
     for (const id of revision.removeDecorationIds) expect(decorations.find((entry) => entry.id === id)).toBeUndefined();
     expect(five.environment.decorations.find(({ id }) => id === 'z5-floor-edge-stripe')).toEqual(rc1.decorations.find(({ id }) => id === 'z5-floor-edge-stripe'));
     for (const id of revision.removeSolidIds) expect(data.solids.find((entry) => entry.id === id)).toBeUndefined();
@@ -38,6 +49,27 @@ describe('Map01 visual revision RC2', () => {
       worldPosition: { x: 79, y: -4.5 }, worldSize: { width: 2, height: 2 }, sourceRect: { x: 0, y: 0, width: 256, height: 256 },
     });
     expect(data.environment!.decorations.some(({ id }) => /rc2-(zone[45]|noodle|market|roof4)/.test(id))).toBe(false);
+  });
+
+  it('bỏ marker X27 và bù alpha để chân backdrop chạm đường, biển đi cùng nền', () => {
+    for (const source of [pilot, five]) {
+      const map = parseLevelData(source).tilemap!;
+      const column = (27 - map.origin.x) / map.tileSize.width;
+      const row = (map.origin.y - 0.5) / map.tileSize.height;
+      expect(map.layers.find(({ id }) => id === 'markers')!.cells[row]![column]).toBeNull();
+    }
+    for (const [id, padding] of [
+      ['rc2-zone4-shops-backdrop-0', 42], ['rc2-zone4-shops-backdrop-1', 42],
+      ['rc2-zone5-yard-backdrop-0', 95], ['rc2-zone5-yard-backdrop-1', 95],
+    ] as const) {
+      const entry = five.environment.decorations.find((entry) => entry.id === id)!;
+      expect(entry.worldPosition.y + padding / entry.pixelSize[1]! * entry.worldSize.height).toBeCloseTo(-2.5);
+    }
+    for (const id of ['rc2-noodle-sign', 'rc2-market-sign']) {
+      const before = revision.appendDecorations.find((entry) => entry.id === id)!;
+      const after = five.environment.decorations.find((entry) => entry.id === id)!;
+      expect(after.worldPosition.y - before.worldPosition.y).toBeCloseTo(-42 / 128);
+    }
   });
 
   it.each([pilot, five])('$id bỏ skin tile/rectangle cũ, không skin vùng chết hoặc khe mái', (source) => {

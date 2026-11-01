@@ -88,6 +88,12 @@ level.visuals = level.visuals.filter(({ shapeId }) => shapeId !== ground.id);
 level.environment.decorations = level.environment.decorations.filter(({ id }) => !revision.removeDecorationIds.includes(id)
   && !revision.appendDecorations.some((entry) => entry.id === id));
 level.environment.decorations.push(...revision.appendDecorations);
+// PNG có 42/95 hàng alpha rỗng dưới chân; hạ cả biển Zone4 cùng nền (128 px/unit).
+for (const entry of level.environment.decorations) {
+  const bottomPadding = entry.id.startsWith('rc2-zone4-shops-backdrop-') || ['rc2-noodle-sign', 'rc2-market-sign'].includes(entry.id) ? 42
+    : entry.id.startsWith('rc2-zone5-yard-backdrop-') ? 95 : 0;
+  if (bottomPadding) entry.worldPosition = { ...entry.worldPosition, y: entry.worldPosition.y - bottomPadding / 128 };
+}
 for (const layer of map.layers) for (const region of revision.tilemapEdits.suppressStreetSkinRegions) {
   paint(layer.id, region.minX, region.minY, region.maxX, region.maxY, null);
 }
