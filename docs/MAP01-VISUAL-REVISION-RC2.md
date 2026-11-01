@@ -92,6 +92,8 @@ Theo ảnh bổ sung, cần hạ bố cục xuống sát đáy thay vì để l�
 
 ## Mục còn mở trước nghiệm thu
 
+Theo xác nhận tiếp theo, dãy nhà Zone4/5 được ghép vào cùng lớp phố phía sau thay vì giữ hai hàng nhà chồng nhau. Sáu ID backdrop/biển riêng đã được thay bởi các mảnh `street-mix-*` cùng Z−2, scale0.65 và parallaxX0.65; lớp `buildings-near` cũ không chạy đồng thời trong alias năm zone. [Báo cáo dãy phố ghép](MAP01-STREET-MIX.md) ghi cấu trúc, file đổi và nghiệm thu còn mở. Metadata/asset RC2 nguồn vẫn giữ nguyên; phần bố cục tách lớp trong các mốc trước là lịch sử. Chưa chạy test/build hoặc trình duyệt cho bản ghép.
+
 - Nhập/rời thang từ ground và balcony, dừng/đổi chiều/hai đầu; xác nhận không xuyên slab, không collider vô hình của hầm/bậc/chậu bị xoá.
 - Nhảy ngược từ đường X84.5 qua ba bậc về mái X80, đi xuống không mắc góc, chặn thật dưới roof4. Không yêu cầu tự bước lên bậc cao 1.5 khi chỉ giữ D.
 - Cúi/đứng tại chỗ ít nhất 20 lần trên mái 2/3/4; kiểm chân, camera/background/terrain Y, resize/chuyển tab, jump/climb/respawn.

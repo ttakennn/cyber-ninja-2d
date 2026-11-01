@@ -1,6 +1,6 @@
 import { Group, LinearFilter, Mesh, MeshBasicMaterial, PlaneGeometry, RepeatWrapping, SRGBColorSpace, TextureLoader } from 'three';
 import type { OrthographicCamera, Texture } from 'three';
-import type { EnvironmentBackground, EnvironmentData } from '../world/EnvironmentData';
+import type { EnvironmentBackground, EnvironmentData, EnvironmentDecoration } from '../world/EnvironmentData';
 
 interface BackgroundMesh {
   readonly definition: EnvironmentBackground;
@@ -14,6 +14,7 @@ export class EnvironmentRenderer {
   private readonly textures = new Set<Texture>();
   private readonly materials: MeshBasicMaterial[] = [];
   private readonly backgrounds: BackgroundMesh[] = [];
+  private readonly parallaxDecorations: { definition: EnvironmentDecoration; mesh: Mesh<PlaneGeometry, MeshBasicMaterial> }[] = [];
   private loading: Promise<void> | null = null;
   private disposed = false;
 
@@ -72,6 +73,7 @@ export class EnvironmentRenderer {
         mesh.renderOrder = definition.layer === 'foreground' ? 1 : 0;
         mesh.position.set(definition.worldPosition.x, definition.worldPosition.y + definition.worldSize.height / 2, definition.z);
         mesh.scale.set(definition.worldSize.width, definition.worldSize.height, 1);
+        if (definition.parallaxX !== undefined) this.parallaxDecorations.push({ definition, mesh });
       }
     } catch (error) {
       this.dispose();
@@ -91,6 +93,9 @@ export class EnvironmentRenderer {
 
   update(camera: OrthographicCamera): void {
     if (this.disposed) return;
+    for (const { definition, mesh } of this.parallaxDecorations) {
+      mesh.position.x = definition.worldPosition.x + camera.position.x * (1 - definition.parallaxX!);
+    }
     const width = (camera.right - camera.left) / camera.zoom;
     const height = (camera.top - camera.bottom) / camera.zoom;
     for (const { definition, mesh, texture } of this.backgrounds) {
@@ -122,6 +127,7 @@ export class EnvironmentRenderer {
     for (const texture of this.textures) texture.dispose();
     this.textures.clear();
     this.backgrounds.length = 0;
+    this.parallaxDecorations.length = 0;
     this.visual.clear();
   }
 }

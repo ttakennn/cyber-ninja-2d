@@ -1,0 +1,16 @@
+{
+  "status": "ART_PREVIEW_RUNTIME_PENDING",
+  "backgroundId": "buildings-near",
+  "groundY": -2.5,
+  "scale": 0.65,
+  "nearBottomPaddingPixels": 34,
+  "baseSpans": [[-32, 88], [144, 176]],
+  "mergeDecorationIds": [
+    "rc2-zone4-shops-backdrop-0",
+    "rc2-zone4-shops-backdrop-1",
+    "rc2-zone5-yard-backdrop-0",
+    "rc2-zone5-yard-backdrop-1",
+    "rc2-noodle-sign",
+    "rc2-market-sign"
+  ]
+}

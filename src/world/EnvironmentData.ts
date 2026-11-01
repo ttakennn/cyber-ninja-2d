@@ -22,7 +22,8 @@ export interface EnvironmentDecoration extends EnvironmentImage {
   readonly worldSize: Readonly<{ width: number; height: number }>;
   readonly anchor: Readonly<{ x: 0.5; y: 1 }>;
   readonly collision: false;
-  readonly layer?: 'behind-player' | 'foreground';
+  readonly layer?: 'background' | 'behind-player' | 'foreground';
+  readonly parallaxX?: number;
   readonly sourceRect?: Readonly<{ x: number; y: number; width: number; height: number }>;
 }
 
@@ -95,8 +96,10 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     const path = `environment.decorations[${index}]`;
     const prop = object(entry, path);
     const base = image(prop, path, ids, dimensions);
-    if (prop.layer !== undefined && prop.layer !== 'behind-player' && prop.layer !== 'foreground') fail(`${path}.layer`, 'phải là behind-player hoặc foreground');
-    if (prop.layer === 'foreground' ? base.z <= 1 || base.z >= 9 : base.z <= -0.45 || base.z >= 0) fail(`${path}.z`, 'behind-player cần -0.45 < Z < 0; foreground cần 1 < Z < 9');
+    if (prop.layer !== undefined && prop.layer !== 'background' && prop.layer !== 'behind-player' && prop.layer !== 'foreground') fail(`${path}.layer`, 'phải là background, behind-player hoặc foreground');
+    if (prop.layer === 'background' ? base.z >= -1 : prop.layer === 'foreground' ? base.z <= 1 || base.z >= 9 : base.z <= -0.45 || base.z >= 0) fail(`${path}.z`, 'background cần Z < -1; behind-player cần -0.45 < Z < 0; foreground cần 1 < Z < 9');
+    if (prop.parallaxX !== undefined && prop.layer !== 'background') fail(`${path}.parallaxX`, 'chỉ dùng với lớp background');
+    const parallaxX = prop.parallaxX === undefined ? undefined : number(prop.parallaxX, `${path}.parallaxX`, 0, 1);
     if (prop.collision !== false) fail(`${path}.collision`, 'phải bằng false, collider khai báo riêng');
     const point = object(prop.worldPosition, `${path}.worldPosition`);
     const worldPosition = { x: number(point.x, `${path}.worldPosition.x`), y: number(point.y, `${path}.worldPosition.y`) };
@@ -114,6 +117,7 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     }
     return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false,
       ...(sourceRect === undefined ? {} : { sourceRect }),
+      ...(parallaxX === undefined ? {} : { parallaxX }),
       ...(prop.layer === undefined ? {} : { layer: prop.layer }) };
   });
   return { backgrounds, decorations };

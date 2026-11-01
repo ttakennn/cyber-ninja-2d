@@ -11,6 +11,7 @@ import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 import rc1 from '../integration/z45-atlas-rc1/environment-replacements-atlas.json';
 import props from '../public/assets/environments/map01/props-v2/props.json';
 import metadata from '../public/assets/environments/map01/revision-rc2/asset-manifest.json';
+import streetLayout from '../integration/map01-street-layout.json';
 
 describe('Map01 visual revision RC2', () => {
   it.each([[1920, 1080], [1280, 720], [1024, 768], [540, 960]])('tường chạm đáy khung hình khi đứng/cúi/respawn trên đường ở %s×%s', (width, height) => {
@@ -28,7 +29,8 @@ describe('Map01 visual revision RC2', () => {
         }
       }
       expect(data.cameraBounds?.minY).toBe(-3.5);
-      expect(data.environment!.backgrounds.find(({ id }) => id === 'buildings-near')).toMatchObject({ verticalAnchor: 'world', worldBottom: -3 });
+      if (source === pilot) expect(data.environment!.backgrounds.find(({ id }) => id === 'buildings-near')).toMatchObject({ verticalAnchor: 'world', worldBottom: -3 });
+      else expect(data.environment!.decorations.find(({ id }) => id === 'street-mix-rc2-zone4-shops-backdrop-0')).toMatchObject({ layer: 'background', parallaxX: 0.65 });
     }
   });
 
@@ -37,19 +39,19 @@ describe('Map01 visual revision RC2', () => {
     const decorations = data.environment!.decorations;
     expect(revision.appendDecorations).toHaveLength(41);
     expect(new Set(decorations.map(({ id }) => id)).size).toBe(decorations.length);
-    const floorAlignedY: Record<string, number> = {
-      'rc2-zone4-shops-backdrop-0': -2.828125, 'rc2-zone4-shops-backdrop-1': -2.828125,
-      'rc2-zone5-yard-backdrop-0': -3.2421875, 'rc2-zone5-yard-backdrop-1': -3.2421875,
-      'rc2-noodle-sign': -0.56875, 'rc2-market-sign': -0.978125,
-    };
     for (const entry of revision.appendDecorations) {
       const actual = five.environment.decorations.filter(({ id }) => id === entry.id);
+      if (streetLayout.mergeDecorationIds.includes(entry.id)) {
+        expect(actual).toHaveLength(0);
+        expect(five.environment.decorations.filter(({ id }) => id === `street-mix-${entry.id}`)).toHaveLength(1);
+        continue;
+      }
       const expected = /^rc2-street-\d+$/.test(entry.id) ? { ...entry, worldPosition: { ...entry.worldPosition, y: -3.5 },
         worldSize: { ...entry.worldSize, height: 1 }, sourceRect: { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 } } : entry;
       expect(actual).toHaveLength(1);
       expect({ ...actual[0], worldPosition: expected.worldPosition }).toEqual(expected);
       expect(actual[0]!.worldPosition.x).toBe(entry.worldPosition.x);
-      expect(actual[0]!.worldPosition.y).toBeCloseTo(floorAlignedY[entry.id] ?? expected.worldPosition.y, 12);
+      expect(actual[0]!.worldPosition.y).toBeCloseTo(expected.worldPosition.y, 12);
     }
     for (const id of revision.removeDecorationIds) expect(decorations.find((entry) => entry.id === id)).toBeUndefined();
     expect(five.environment.decorations.find(({ id }) => id === 'z5-floor-edge-stripe')).toEqual(rc1.decorations.find(({ id }) => id === 'z5-floor-edge-stripe'));
@@ -84,13 +86,13 @@ describe('Map01 visual revision RC2', () => {
       ['rc2-zone4-shops-backdrop-0', 42], ['rc2-zone4-shops-backdrop-1', 42],
       ['rc2-zone5-yard-backdrop-0', 95], ['rc2-zone5-yard-backdrop-1', 95],
     ] as const) {
-      const entry = five.environment.decorations.find((entry) => entry.id === id)!;
+      const entry = five.environment.decorations.find((entry) => entry.id === `street-mix-${id}`)!;
       expect(entry.worldPosition.y + padding / entry.pixelSize[1]! * entry.worldSize.height).toBeCloseTo(-2.5);
     }
     for (const id of ['rc2-noodle-sign', 'rc2-market-sign']) {
       const before = revision.appendDecorations.find((entry) => entry.id === id)!;
-      const after = five.environment.decorations.find((entry) => entry.id === id)!;
-      expect(after.worldPosition.y - before.worldPosition.y).toBeCloseTo(-42 / 128);
+      const after = five.environment.decorations.find((entry) => entry.id === `street-mix-${id}`)!;
+      expect(after.worldPosition.y).toBeCloseTo(streetLayout.groundY + (before.worldPosition.y - 42 / 128 - streetLayout.groundY) * streetLayout.scale);
     }
   });
 

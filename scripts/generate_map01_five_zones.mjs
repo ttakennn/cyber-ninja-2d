@@ -8,6 +8,7 @@ const master = read('../integration/five-zone-design/map01-five-zones.master.jso
 const manifest = read('../integration/five-zone-design/asset-manifest.json');
 const reuse = read('../integration/five-zone-design/runtime-reuse-additions.json');
 const revision = read('../integration/map01-revision-rc2/map-revision-plan.json');
+const streetLayout = read('../integration/map01-street-layout.json');
 const replacementMap = read('../integration/z45-atlas-rc1/replacement-map.json');
 const replacementEntries = read('../integration/z45-atlas-rc1/environment-replacements-atlas.json').decorations;
 const replacements = new Map(replacementEntries.map((entry) => [entry.id, entry]));
@@ -102,6 +103,29 @@ for (const entry of level.environment.decorations) {
 for (const layer of map.layers) for (const region of revision.tilemapEdits.suppressStreetSkinRegions) {
   paint(layer.id, region.minX, region.minY, region.maxX, region.maxY, null);
 }
+// Một dãy phố hữu hạn: ảnh nền cũ và nhà Zone4/5 cùng mặt phẳng, tỷ lệ và parallax.
+const near = level.environment.backgrounds.find(({ id }) => id === streetLayout.backgroundId);
+if (!near) throw new Error(`Thiếu background phố: ${streetLayout.backgroundId}`);
+const merged = level.environment.decorations.filter(({ id }) => streetLayout.mergeDecorationIds.includes(id));
+if (merged.length !== streetLayout.mergeDecorationIds.length) throw new Error('Thiếu decoration để ghép dãy phố');
+level.environment.backgrounds = level.environment.backgrounds.filter(({ id }) => id !== near.id);
+level.environment.decorations = level.environment.decorations.filter(({ id }) => !streetLayout.mergeDecorationIds.includes(id));
+const streetScale = streetLayout.scale;
+const nearWidth = near.worldHeight * near.pixelSize[0] / near.pixelSize[1];
+let streetIndex = 0;
+for (const [left, right] of streetLayout.baseSpans) for (let x = left; x < right - 1e-9; x += nearWidth) {
+  const width = Math.min(nearWidth, right - x);
+  level.environment.decorations.push({ id: `street-mix-near-${streetIndex++}`, image: near.image, pixelSize: near.pixelSize,
+    worldPosition: { x: (x + width / 2) * streetScale,
+      y: streetLayout.groundY - streetLayout.nearBottomPaddingPixels / near.pixelSize[1] * near.worldHeight * streetScale },
+    worldSize: { width: width * streetScale, height: near.worldHeight * streetScale }, anchor: { x: 0.5, y: 1 },
+    collision: false, layer: 'background', z: near.z, parallaxX: near.parallaxX,
+    sourceRect: { x: 0, y: 0, width: Math.min(near.pixelSize[0], width / nearWidth * near.pixelSize[0]), height: near.pixelSize[1] } });
+}
+for (const entry of merged) level.environment.decorations.push({ ...entry, id: `street-mix-${entry.id}`,
+  layer: 'background', z: near.z, parallaxX: near.parallaxX,
+  worldPosition: { x: entry.worldPosition.x * streetScale, y: streetLayout.groundY + (entry.worldPosition.y - streetLayout.groundY) * streetScale },
+  worldSize: { width: entry.worldSize.width * streetScale, height: entry.worldSize.height * streetScale } });
 let json = JSON.stringify(level, null, 2);
 for (const layer of map.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

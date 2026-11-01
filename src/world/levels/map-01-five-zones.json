@@ -463,22 +463,6 @@
         "z": -4,
         "image": "assets/environments/map01/backgrounds-v2/city-mid.png",
         "bottomOffset": 0
-      },
-      {
-        "id": "buildings-near",
-        "pixelSize": [
-          2048,
-          832
-        ],
-        "parallaxX": 0.65,
-        "parallaxY": 0,
-        "repeatX": true,
-        "worldHeight": 8,
-        "z": -2,
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
-        "verticalAnchor": "world",
-        "worldBottom": -3,
-        "bottomOffset": 0
       }
     ],
     "decorations": [
@@ -2623,144 +2607,6 @@
         }
       },
       {
-        "id": "rc2-zone4-shops-backdrop-0",
-        "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-0.png",
-        "pixelSize": [
-          1536,
-          768
-        ],
-        "worldPosition": {
-          "x": 94,
-          "y": -2.828125
-        },
-        "worldSize": {
-          "width": 12,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.44
-      },
-      {
-        "id": "rc2-zone4-shops-backdrop-1",
-        "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-1.png",
-        "pixelSize": [
-          1536,
-          768
-        ],
-        "worldPosition": {
-          "x": 106,
-          "y": -2.828125
-        },
-        "worldSize": {
-          "width": 12,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.44
-      },
-      {
-        "id": "rc2-zone5-yard-backdrop-0",
-        "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-0.png",
-        "pixelSize": [
-          2048,
-          768
-        ],
-        "worldPosition": {
-          "x": 120,
-          "y": -3.2421875
-        },
-        "worldSize": {
-          "width": 16,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.44
-      },
-      {
-        "id": "rc2-zone5-yard-backdrop-1",
-        "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-1.png",
-        "pixelSize": [
-          2048,
-          768
-        ],
-        "worldPosition": {
-          "x": 136,
-          "y": -3.2421875
-        },
-        "worldSize": {
-          "width": 16,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.44
-      },
-      {
-        "id": "rc2-noodle-sign",
-        "image": "assets/environments/map01/props-v2/props/signs/sign-hu-tieu.png",
-        "pixelSize": [
-          264,
-          106
-        ],
-        "worldPosition": {
-          "x": 94.2,
-          "y": -0.56875
-        },
-        "worldSize": {
-          "width": 5.98125,
-          "height": 2.4015625
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.43
-      },
-      {
-        "id": "rc2-market-sign",
-        "image": "assets/environments/map01/props-v2/props/signs/sign-supermarket.png",
-        "pixelSize": [
-          264,
-          106
-        ],
-        "worldPosition": {
-          "x": 106,
-          "y": -0.978125
-        },
-        "worldSize": {
-          "width": 6.6000000000000005,
-          "height": 2.6500000000000004
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.43
-      },
-      {
         "id": "rc2-roof4-sealed-support",
         "image": "assets/environments/map01/production/atlases/architecture-0.png",
         "pixelSize": [
@@ -2788,6 +2634,420 @@
           "width": 1280,
           "height": 576
         }
+      },
+      {
+        "id": "street-mix-near-0",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": -14.4,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-1",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": -1.599999999999999,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-2",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 11.200000000000003,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-3",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 24.000000000000004,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-4",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 36.800000000000004,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-5",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 49.60000000000001,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-6",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 56.6,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 1.1999999999999957,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 191.99999999999932,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-7",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 100,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 12.8,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 2048,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-near-8",
+        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "pixelSize": [
+          2048,
+          832
+        ],
+        "worldPosition": {
+          "x": 110.4,
+          "y": -2.7125
+        },
+        "worldSize": {
+          "width": 8.000000000000009,
+          "height": 5.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280.0000000000014,
+          "height": 832
+        }
+      },
+      {
+        "id": "street-mix-rc2-zone4-shops-backdrop-0",
+        "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-0.png",
+        "pixelSize": [
+          1536,
+          768
+        ],
+        "worldPosition": {
+          "x": 61.1,
+          "y": -2.71328125
+        },
+        "worldSize": {
+          "width": 7.800000000000001,
+          "height": 3.9000000000000004
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65
+      },
+      {
+        "id": "street-mix-rc2-zone4-shops-backdrop-1",
+        "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-1.png",
+        "pixelSize": [
+          1536,
+          768
+        ],
+        "worldPosition": {
+          "x": 68.9,
+          "y": -2.71328125
+        },
+        "worldSize": {
+          "width": 7.800000000000001,
+          "height": 3.9000000000000004
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65
+      },
+      {
+        "id": "street-mix-rc2-zone5-yard-backdrop-0",
+        "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-0.png",
+        "pixelSize": [
+          2048,
+          768
+        ],
+        "worldPosition": {
+          "x": 78,
+          "y": -2.982421875
+        },
+        "worldSize": {
+          "width": 10.4,
+          "height": 3.9000000000000004
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65
+      },
+      {
+        "id": "street-mix-rc2-zone5-yard-backdrop-1",
+        "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-1.png",
+        "pixelSize": [
+          2048,
+          768
+        ],
+        "worldPosition": {
+          "x": 88.4,
+          "y": -2.982421875
+        },
+        "worldSize": {
+          "width": 10.4,
+          "height": 3.9000000000000004
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65
+      },
+      {
+        "id": "street-mix-rc2-noodle-sign",
+        "image": "assets/environments/map01/props-v2/props/signs/sign-hu-tieu.png",
+        "pixelSize": [
+          264,
+          106
+        ],
+        "worldPosition": {
+          "x": 61.230000000000004,
+          "y": -1.2446875
+        },
+        "worldSize": {
+          "width": 3.8878125000000003,
+          "height": 1.561015625
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65
+      },
+      {
+        "id": "street-mix-rc2-market-sign",
+        "image": "assets/environments/map01/props-v2/props/signs/sign-supermarket.png",
+        "pixelSize": [
+          264,
+          106
+        ],
+        "worldPosition": {
+          "x": 68.9,
+          "y": -1.51078125
+        },
+        "worldSize": {
+          "width": 4.290000000000001,
+          "height": 1.7225000000000004
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "background",
+        "z": -2,
+        "parallaxX": 0.65
       }
     ]
   }
