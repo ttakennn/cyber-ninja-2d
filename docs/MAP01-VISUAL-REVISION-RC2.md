@@ -76,6 +76,10 @@ Theo SOL-TASK và AGENTS, lượt thực thi này chưa có yêu cầu rõ chạ
 - Hình3/4: đọc alpha PNG cho thấy hai trang Zone4 có hàng alpha cuối 725/768 (42 hàng trống dưới), hai trang Zone5 có hàng alpha cuối 672/768 (95 hàng trống dưới). Generator năm zone bù Y lần lượt −42/128 và −95/128 unit, đưa chân hình sát top đường −2.5. Hai biển Zone4 hạ cùng −42/128 để giữ vị trí tương đối với quán. Giữ scale, ảnh/UV, mặt đường, hazard và geometry; không sửa PNG nguồn hoặc global parallax.
 - Đã sinh lại JSON từ hai generator (exit 0). Thêm test giữ/nhả S qua physics thật trên bốn mái và cập nhật test marker/alpha alignment; các test này **NOT_RUN**. Chưa thao tác lại game hoặc chụp ảnh mới; chưa có xác nhận runtime cho bốn lỗi.
 
+## Bổ sung chân tường Zone2/3
+
+Yêu cầu bổ sung phủ kín chân tường Zone2/3: generator pilot thêm tám đoạn `street-cap-ivy` tại X40..70/Y−4.5..−2.5, nối dải đã có thành chân tường liên tục X0..80 (năm zone kế thừa rồi nối tới X144). Đoạn X68..70 crop UV còn 256 px, giữ mật độ ảnh. Chỉ thêm decoration `collision: false`, không thêm collider, thay tile, lấp khe mái hoặc thay physics/vùng rơi. Đã sinh lại hai JSON; cập nhật test kiểm độ liên tục và non-collision, chưa chạy test/build hay nghiệm thu trình duyệt.
+
 ## Mục còn mở trước nghiệm thu
 
 - Nhập/rời thang từ ground và balcony, dừng/đổi chiều/hai đầu; xác nhận không xuyên slab, không collider vô hình của hầm/bậc/chậu bị xoá.

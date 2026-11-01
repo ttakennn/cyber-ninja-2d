@@ -72,7 +72,7 @@ describe('Map01 visual revision RC2', () => {
     }
   });
 
-  it.each([pilot, five])('$id bỏ skin tile/rectangle cũ, không skin vùng chết hoặc khe mái', (source) => {
+  it.each([pilot, five])('$id nối kín chân tường bằng skin, không thêm tile/sàn ở khe mái', (source) => {
     const data = parseLevelData(source);
     const map = data.tilemap!;
     for (const layer of map.layers) for (const [row, cells] of layer.cells.entries()) for (const [column, cell] of cells.entries()) {
@@ -81,13 +81,18 @@ describe('Map01 visual revision RC2', () => {
       if (point.x > 7 && point.x < 8 && point.y > -2.5 && point.y < -1.5) expect(cell).toBeNull();
       if (revision.tilemapEdits.keepRoofGaps.some(([left, right]) => point.x > left! && point.x < right!)) expect(cell).toBeNull();
     }
-    for (const entry of data.environment!.decorations.filter(({ id }) => id.startsWith('rc2-street-'))) {
+    let edge = 0;
+    for (const entry of data.environment!.decorations.filter(({ id }) => /^rc2-street-\d+$/.test(id))
+      .sort((a, b) => a.worldPosition.x - b.worldPosition.x)) {
       const left = entry.worldPosition.x - entry.worldSize.width / 2;
       const right = entry.worldPosition.x + entry.worldSize.width / 2;
-      expect(left >= 70 || right <= 40).toBe(true);
+      expect(left).toBe(edge);
+      expect(entry.collision).toBe(false);
+      edge = right;
       expect(entry.worldPosition.y + entry.worldSize.height).toBe(-2.5);
       expect(entry.worldSize.width / (entry.sourceRect?.width ?? entry.pixelSize[0])).toBe(1 / 128);
     }
+    expect(edge).toBe(data.cameraBounds!.maxX);
   });
 
   it('alpha crate/bench/ladder/planter đúng mục tiêu, thang không xuyên mép ban công', () => {

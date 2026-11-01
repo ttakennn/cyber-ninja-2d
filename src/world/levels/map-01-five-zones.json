@@ -1452,6 +1452,196 @@
         "z": -0.3
       },
       {
+        "id": "rc2-street-40",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 42,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-44",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 46,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-48",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 50,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-52",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 54,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-56",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 58,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-60",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 62,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-64",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 66,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-68",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 69,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 2,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 256,
+          "height": 256
+        }
+      },
+      {
         "id": "z5-floor-edge-stripe",
         "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
