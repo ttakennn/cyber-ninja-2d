@@ -8,9 +8,9 @@ if (!container) throw new Error('Missing game container');
 try {
   const levelId = new URLSearchParams(window.location.search).get('level') ?? 'playground';
   if (levelId === 'map01-five-zones') {
-    document.title = 'Cyber Ninja 2D HD — Map01 Five Zones Art Preview RC1';
-    container.querySelector('.eyebrow')!.textContent = 'MAP01 / FIVE ZONES / ART PREVIEW RC1';
-    container.querySelector('.scene-label p')!.textContent = 'Artwork RC1 · chưa duyệt production';
+    document.title = 'Cyber Ninja 2D HD — Map01 Five Zones Art Preview RC2';
+    container.querySelector('.eyebrow')!.textContent = 'MAP01 / FIVE ZONES / ART PREVIEW RC2';
+    container.querySelector('.scene-label p')!.textContent = 'Artwork RC2 · chưa duyệt production';
   }
   const game = new Game(container, getLevelData(levelId));
   void game.loadLevelVisuals().then(() => game.start()).catch((error: unknown) => {

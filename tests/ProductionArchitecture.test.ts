@@ -10,6 +10,7 @@ import pilot from '../src/world/levels/map-01-visual-pilot.json';
 import graybox from '../src/world/levels/map-01-graybox.json';
 import additions from '../integration/map01-production-additions.json';
 import metadata from '../public/assets/environments/map01/production/production-assets.json';
+import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 const level = parseLevelData(pilot);
 const production = level.environment!.decorations.filter(({ id }) => id.startsWith('production-'));
@@ -17,7 +18,7 @@ const production = level.environment!.decorations.filter(({ id }) => id.startsWi
 describe('RC1 production architecture', () => {
   it.each(metadata.assets)('$id đúng atlas, sourceRect, world bounds và SHA-256 nguồn', (asset) => {
     const entry = production.find(({ id }) => id === `production-${asset.id}`)!;
-    if (asset.id === 'wall-b-ac-mount') {
+    if (asset.id === 'wall-b-ac-mount' || revision.removeDecorationIds.includes(`production-${asset.id}`)) {
       expect(entry).toBeUndefined();
       expect(createHash('sha256').update(readFileSync(new URL(`../public/${asset.image}`, import.meta.url))).digest('hex')).toBe(asset.sha256);
       return;
@@ -39,7 +40,7 @@ describe('RC1 production architecture', () => {
   });
 
   it('hai atlas nguyên byte, rect không gồm extrusion và không vượt ảnh', () => {
-    expect(production).toHaveLength(6);
+    expect(production).toHaveLength(3);
     expect(new Set(production.map(({ image }) => image)).size).toBe(2);
     for (const atlas of metadata.atlases) {
       const png = readFileSync(new URL(`../public/${atlas.image}`, import.meta.url));
@@ -55,9 +56,11 @@ describe('RC1 production architecture', () => {
     }
   });
 
-  it('thay fill A/C, bỏ window tạm; giữ mái, decal A, nền phố và mọi gameplay field', () => {
-    for (const key of ['spawn', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
-    expect(pilot.solids.slice(0, 10)).toEqual(graybox.solids);
+  it('RC2 bỏ decal A/tường thang; giữ kiến trúc mái và các field ngoài revision', () => {
+    for (const key of ['spawn', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
+    expect(pilot.solids.slice(0, retained.length)).toEqual(retained);
+    expect(pilot.climbables).toEqual(revision.replaceClimbables);
     expect(level.tilemap!.layers.find(({ id }) => id === 'passage-masonry')!.cells.flat().every((cell) => cell === null)).toBe(true);
     expect(level.tilemap!.layers.find(({ id }) => id === 'hand-placed-details')!.cells.flat().every((cell) => cell === null)).toBe(true);
     const map = level.tilemap!;
@@ -71,10 +74,10 @@ describe('RC1 production architecture', () => {
         }
       }
     }
-    for (const id of ['facade-shutter', 'facade-shop', 'facade-light']) expect(level.environment!.decorations.some((entry) => entry.id === id)).toBe(true);
+    for (const id of ['facade-shutter', 'facade-shop', 'facade-light']) expect(level.environment!.decorations.some((entry) => entry.id === id)).toBe(false);
     expect(map.layers.some(({ id }) => id === 'roof-edges')).toBe(true);
     expect(map.layers.some(({ id }) => id === 'street-foundation')).toBe(true);
-    expect(production.find(({ id }) => id === 'production-wall-b-ladder')!.z).toBeLessThan(0);
+    expect(production.find(({ id }) => id === 'production-wall-b-ladder')).toBeUndefined();
     expect(production.find(({ id }) => id === 'production-wall-b-ac-mount')).toBeUndefined();
     expect(level.environment!.decorations.find(({ id }) => id === 'props-aircon-unit-4')).toBeUndefined();
   });

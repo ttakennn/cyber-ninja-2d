@@ -49,6 +49,26 @@ describe('camera theo viewport và biên level', () => {
     player.dispose();
   });
 
+  it.each([[1920, 1080], [1280, 720], [1024, 768], [540, 960]])('cúi/đứng 20 lần giữ chân nội suy và camera Y trên mái ở %s×%s', (width, height) => {
+    const camera = new GameCamera(bounds, true);
+    camera.resize(width!, height!);
+    for (const [x, footY] of [[54, 3], [64, 3.5], [75, 3]] as const) {
+      const player = new Player({ x, y: footY + 0.8 });
+      for (let cycle = 0; cycle < 20; cycle += 1) {
+        player.capturePreviousPosition();
+        player.body.height = cycle % 2 === 0 ? 0.9 : 1.6;
+        player.body.position.y = footY + player.body.height / 2;
+        for (const alpha of [0, 0.25, 0.5, 1]) {
+          player.syncVisual(alpha);
+          camera.follow(player.visual.position, player.renderHeight);
+          expect(player.visual.position.y - player.renderHeight / 2).toBeCloseTo(footY);
+          expect(camera.camera.position.y).toBeCloseTo(footY + 0.8);
+        }
+      }
+      player.dispose();
+    }
+  });
+
   it('resize re-clamp ngay cả trước frame follow kế tiếp', () => {
     const camera = new GameCamera(bounds, true);
     camera.resize(800, 600);

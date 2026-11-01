@@ -1,0 +1,959 @@
+{
+  "decorations": [
+    {
+      "id": "rc2-street-crate",
+      "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+      "pixelSize": [
+        124,
+        124
+      ],
+      "worldPosition": {
+        "x": 7.495495495495495,
+        "y": -2.5576923076923075
+      },
+      "worldSize": {
+        "width": 1.117117117117117,
+        "height": 1.1923076923076923
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2
+    },
+    {
+      "id": "rc2-bench",
+      "image": "assets/environments/map01/props-v2/props/street/street-bench.png",
+      "pixelSize": [
+        228,
+        160
+      ],
+      "worldPosition": {
+        "x": 22.520491803278688,
+        "y": -2.60989010989011
+      },
+      "worldSize": {
+        "width": 3.1147540983606556,
+        "height": 1.7582417582417582
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2
+    },
+    {
+      "id": "rc2-ladder",
+      "image": "assets/environments/map01/props-v2/props/alley/metal-ladder.png",
+      "pixelSize": [
+        92,
+        394
+      ],
+      "worldPosition": {
+        "x": 29.55655737704918,
+        "y": -2.586750788643533
+      },
+      "worldSize": {
+        "width": 1.2065573770491804,
+        "height": 6.83596214511041
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2
+    },
+    {
+      "id": "rc2-balcony-planter",
+      "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+      "pixelSize": [
+        200,
+        110
+      ],
+      "worldPosition": {
+        "x": 34,
+        "y": 0.9805
+      },
+      "worldSize": {
+        "width": 1.5625,
+        "height": 0.715
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.2
+    },
+    {
+      "id": "rc2-z4-stairs",
+      "image": "assets/environments/map01/revision-rc2/z4-return-steps.png",
+      "pixelSize": [
+        576,
+        512
+      ],
+      "worldPosition": {
+        "x": 82.25,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 4.5,
+        "height": 4
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.25
+    },
+    {
+      "id": "rc2-street-0",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 2,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-4",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 6,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-8",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 10,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-12",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 14,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-16",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 18,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-20",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 22,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-24",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 26,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-28",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 30,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-32",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 34,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-36",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 38,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-70",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 72,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-74",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 76,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-78",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 80,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-82",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 84,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-86",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 88,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-90",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 92,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-94",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 96,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-98",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 100,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-102",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 104,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-106",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 108,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-110",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 112,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-114",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 116,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-118",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 120,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-122",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 124,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-126",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 128,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-130",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 132,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-134",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 136,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-138",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 140,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 4,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4
+    },
+    {
+      "id": "rc2-street-142",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "worldPosition": {
+        "x": 143,
+        "y": -4.5
+      },
+      "worldSize": {
+        "width": 2,
+        "height": 2
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.4,
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "rc2-zone4-shops-backdrop-0",
+      "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-0.png",
+      "pixelSize": [
+        1536,
+        768
+      ],
+      "worldPosition": {
+        "x": 94,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 12,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.44
+    },
+    {
+      "id": "rc2-zone4-shops-backdrop-1",
+      "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-1.png",
+      "pixelSize": [
+        1536,
+        768
+      ],
+      "worldPosition": {
+        "x": 106,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 12,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.44
+    },
+    {
+      "id": "rc2-zone5-yard-backdrop-0",
+      "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-0.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "worldPosition": {
+        "x": 120,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.44
+    },
+    {
+      "id": "rc2-zone5-yard-backdrop-1",
+      "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-1.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "worldPosition": {
+        "x": 136,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 16,
+        "height": 6
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.44
+    },
+    {
+      "id": "rc2-noodle-sign",
+      "image": "assets/environments/map01/props-v2/props/signs/sign-hu-tieu.png",
+      "pixelSize": [
+        264,
+        106
+      ],
+      "worldPosition": {
+        "x": 94.2,
+        "y": -0.24062499999999998
+      },
+      "worldSize": {
+        "width": 5.98125,
+        "height": 2.4015625
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.43
+    },
+    {
+      "id": "rc2-market-sign",
+      "image": "assets/environments/map01/props-v2/props/signs/sign-supermarket.png",
+      "pixelSize": [
+        264,
+        106
+      ],
+      "worldPosition": {
+        "x": 106,
+        "y": -0.65
+      },
+      "worldSize": {
+        "width": 6.6000000000000005,
+        "height": 2.6500000000000004
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.43
+    },
+    {
+      "id": "rc2-roof4-sealed-support",
+      "image": "assets/environments/map01/production/atlases/architecture-0.png",
+      "pixelSize": [
+        1536,
+        1728
+      ],
+      "worldPosition": {
+        "x": 75,
+        "y": -2.5
+      },
+      "worldSize": {
+        "width": 10,
+        "height": 4.5
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "collision": false,
+      "layer": "behind-player",
+      "z": -0.3,
+      "sourceRect": {
+        "x": 8,
+        "y": 1128,
+        "width": 1280,
+        "height": 576
+      }
+    }
+  ]
+}

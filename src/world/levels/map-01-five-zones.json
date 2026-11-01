@@ -33,39 +33,12 @@
       "height": 1
     },
     {
-      "id": "passage-roof",
-      "position": {
-        "x": 14.5,
-        "y": 1
-      },
-      "width": 5,
-      "height": 5
-    },
-    {
-      "id": "raised-step",
-      "position": {
-        "x": 22.5,
-        "y": -2
-      },
-      "width": 3,
-      "height": 1
-    },
-    {
       "id": "balcony",
       "position": {
         "x": 33.25,
         "y": 0.75
       },
       "width": 6.5,
-      "height": 0.5
-    },
-    {
-      "id": "balcony-crate",
-      "position": {
-        "x": 34,
-        "y": 1.25
-      },
-      "width": 1,
       "height": 0.5
     },
     {
@@ -121,6 +94,42 @@
       },
       "width": 64,
       "height": 1.5
+    },
+    {
+      "id": "roof4-sealed-support",
+      "position": {
+        "x": 75,
+        "y": -0.25
+      },
+      "width": 10,
+      "height": 4.5
+    },
+    {
+      "id": "z4-step-high",
+      "position": {
+        "x": 80.75,
+        "y": -0.5
+      },
+      "width": 1.5,
+      "height": 4
+    },
+    {
+      "id": "z4-step-middle",
+      "position": {
+        "x": 82.25,
+        "y": -1.25
+      },
+      "width": 1.5,
+      "height": 2.5
+    },
+    {
+      "id": "z4-step-low",
+      "position": {
+        "x": 83.75,
+        "y": -2
+      },
+      "width": 1.5,
+      "height": 1
     }
   ],
   "climbables": [
@@ -128,31 +137,14 @@
       "id": "alley-ladder",
       "kind": "ladder",
       "position": {
-        "x": 29,
-        "y": 0.75
+        "x": 29.55,
+        "y": 0.25
       },
       "width": 1,
-      "height": 6.5
+      "height": 5.5
     }
   ],
   "visuals": [
-    {
-      "shapeId": "alley-ladder",
-      "kind": "ladder",
-      "color": "#ba8a3f",
-      "opacity": 0,
-      "structureOpacity": 1,
-      "rungSpacing": 0.4,
-      "railHighlight": "#ffe6a3"
-    },
-    {
-      "kind": "rectangle",
-      "shapeId": "street",
-      "color": "#182656",
-      "opacity": 1,
-      "bottom": -4.5,
-      "z": -0.6
-    },
     {
       "kind": "rectangle",
       "shapeId": "roof-2",
@@ -171,23 +163,7 @@
     },
     {
       "kind": "rectangle",
-      "shapeId": "roof-4",
-      "color": "#182656",
-      "opacity": 1,
-      "bottom": -4.5,
-      "z": -0.6
-    },
-    {
-      "kind": "rectangle",
       "shapeId": "upper-roof-support",
-      "color": "#182656",
-      "opacity": 1,
-      "bottom": -4.5,
-      "z": -0.6
-    },
-    {
-      "kind": "rectangle",
-      "shapeId": "street-extension-z45",
       "color": "#182656",
       "opacity": 1,
       "bottom": -4.5,
@@ -244,11 +220,11 @@
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-          [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-          [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
         ]
       },
@@ -348,19 +324,19 @@
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
@@ -439,7 +415,7 @@
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
           [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
-          [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
+          [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
         ]
       }
     ]
@@ -548,28 +524,6 @@
         "pixelSize": [
           264,
           106
-        ]
-      },
-      {
-        "id": "props-sign-pharmacy-2",
-        "image": "assets/environments/map01/props-v2/props/signs/sign-pharmacy.png",
-        "worldPosition": {
-          "x": 16.35,
-          "y": 2
-        },
-        "worldSize": {
-          "width": 0.6562,
-          "height": 1.225
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.2,
-        "collision": false,
-        "pixelSize": [
-          120,
-          224
         ]
       },
       {
@@ -725,75 +679,6 @@
           364,
           187
         ]
-      },
-      {
-        "id": "facade-shutter",
-        "image": "assets/environments/map01/foreground/individual/shutter_shop.png",
-        "pixelSize": [
-          297,
-          346
-        ],
-        "worldPosition": {
-          "x": 13.4,
-          "y": -1.5
-        },
-        "worldSize": {
-          "width": 2.65,
-          "height": 3.0872
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.1
-      },
-      {
-        "id": "facade-shop",
-        "image": "assets/environments/map01/foreground/individual/street_shop_awning.png",
-        "pixelSize": [
-          303,
-          330
-        ],
-        "worldPosition": {
-          "x": 15.55,
-          "y": -1.5
-        },
-        "worldSize": {
-          "width": 2.85,
-          "height": 3.104
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.1
-      },
-      {
-        "id": "facade-light",
-        "image": "assets/environments/map01/foreground/individual/wall_light_amber.png",
-        "pixelSize": [
-          172,
-          153
-        ],
-        "worldPosition": {
-          "x": 14.5,
-          "y": 2
-        },
-        "worldSize": {
-          "width": 0.9,
-          "height": 0.8006
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.1
       },
       {
         "id": "foreground-vine_strip_01-12",
@@ -1480,35 +1365,6 @@
         }
       },
       {
-        "id": "production-facade-a-passage",
-        "image": "assets/environments/map01/production/atlases/architecture-1.png",
-        "pixelSize": [
-          1920,
-          864
-        ],
-        "sourceRect": {
-          "x": 1048,
-          "y": 8,
-          "width": 640,
-          "height": 640
-        },
-        "worldPosition": {
-          "x": 14.5,
-          "y": -1.5
-        },
-        "worldSize": {
-          "width": 5,
-          "height": 5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.3
-      },
-      {
         "id": "production-facade-c-upper",
         "image": "assets/environments/map01/production/atlases/architecture-0.png",
         "pixelSize": [
@@ -1596,684 +1452,6 @@
         "z": -0.3
       },
       {
-        "id": "production-facade-c-roof4",
-        "image": "assets/environments/map01/production/atlases/architecture-0.png",
-        "pixelSize": [
-          1536,
-          1728
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 1128,
-          "width": 1280,
-          "height": 576
-        },
-        "worldPosition": {
-          "x": 75,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 10,
-          "height": 4.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.3
-      },
-      {
-        "id": "production-wall-b-ladder",
-        "image": "assets/environments/map01/production/atlases/architecture-1.png",
-        "pixelSize": [
-          1920,
-          864
-        ],
-        "sourceRect": {
-          "x": 1704,
-          "y": 8,
-          "width": 192,
-          "height": 832
-        },
-        "worldPosition": {
-          "x": 29,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.5,
-          "height": 6.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.3
-      },
-      {
-        "id": "z4-hanging-flowers",
-        "worldPosition": {
-          "x": 97.2,
-          "y": 0.5
-        },
-        "worldSize": {
-          "width": 1,
-          "height": 1.2381
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.15,
-        "image": "assets/environments/map01/foreground/individual/flower_basket_pink.png",
-        "pixelSize": [
-          231,
-          286
-        ]
-      },
-      {
-        "id": "z5-wall-light-1",
-        "worldPosition": {
-          "x": 122.5,
-          "y": 1.5
-        },
-        "worldSize": {
-          "width": 0.9,
-          "height": 0.8006
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.12,
-        "image": "assets/environments/map01/foreground/individual/wall_light_amber.png",
-        "pixelSize": [
-          172,
-          153
-        ]
-      },
-      {
-        "id": "z5-wall-light-2",
-        "worldPosition": {
-          "x": 133.5,
-          "y": 1.5
-        },
-        "worldSize": {
-          "width": 0.9,
-          "height": 0.8006
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.12,
-        "image": "assets/environments/map01/foreground/individual/wall_light_amber.png",
-        "pixelSize": [
-          172,
-          153
-        ]
-      },
-      {
-        "id": "z5-wood-crate-background",
-        "worldPosition": {
-          "x": 115,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 0.9688,
-          "height": 0.9688
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.27,
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 776,
-          "y": 408,
-          "width": 124,
-          "height": 124
-        }
-      },
-      {
-        "id": "z5-pallet-background",
-        "worldPosition": {
-          "x": 140,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.6562,
-          "height": 1.1719
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.27,
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 916,
-          "y": 408,
-          "width": 212,
-          "height": 150
-        }
-      },
-      {
-        "id": "z4-noodle-building",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
-        "pixelSize": [
-          1312,
-          1568
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 8,
-          "width": 1280,
-          "height": 768
-        },
-        "worldPosition": {
-          "x": 93,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 10,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.35
-      },
-      {
-        "id": "z4-noodle-sign",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 8,
-          "width": 896,
-          "height": 160
-        },
-        "worldPosition": {
-          "x": 93,
-          "y": 1.5
-        },
-        "worldSize": {
-          "width": 7,
-          "height": 1.25
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.2
-      },
-      {
-        "id": "z4-market-building",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z4-facades.png",
-        "pixelSize": [
-          1312,
-          1568
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 792,
-          "width": 1280,
-          "height": 768
-        },
-        "worldPosition": {
-          "x": 105,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 10,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.35
-      },
-      {
-        "id": "z4-market-sign",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 184,
-          "width": 768,
-          "height": 160
-        },
-        "worldPosition": {
-          "x": 105,
-          "y": 1.5
-        },
-        "worldSize": {
-          "width": 6,
-          "height": 1.25
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.2
-      },
-      {
-        "id": "z4-lamp-1",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 408,
-          "width": 128,
-          "height": 448
-        },
-        "worldPosition": {
-          "x": 88.5,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1,
-          "height": 3.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.12
-      },
-      {
-        "id": "z4-lamp-2",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 408,
-          "width": 128,
-          "height": 448
-        },
-        "worldPosition": {
-          "x": 99,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1,
-          "height": 3.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.12
-      },
-      {
-        "id": "z4-lamp-3",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 408,
-          "width": 128,
-          "height": 448
-        },
-        "worldPosition": {
-          "x": 110.5,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1,
-          "height": 3.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.12
-      },
-      {
-        "id": "z4-flowerpot-1",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 152,
-          "y": 408,
-          "width": 160,
-          "height": 192
-        },
-        "worldPosition": {
-          "x": 89,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.25,
-          "height": 1.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.25
-      },
-      {
-        "id": "z4-flowerpot-2",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 328,
-          "y": 408,
-          "width": 160,
-          "height": 192
-        },
-        "worldPosition": {
-          "x": 97.2,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.25,
-          "height": 1.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.25
-      },
-      {
-        "id": "z4-flowerpot-3",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 328,
-          "y": 408,
-          "width": 160,
-          "height": 192
-        },
-        "worldPosition": {
-          "x": 100.8,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.25,
-          "height": 1.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.25
-      },
-      {
-        "id": "z4-flowerpot-4",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 152,
-          "y": 408,
-          "width": 160,
-          "height": 192
-        },
-        "worldPosition": {
-          "x": 110,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.25,
-          "height": 1.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.25
-      },
-      {
-        "id": "z5-entry-sidewall",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
-        "pixelSize": [
-          1312,
-          1376
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 8,
-          "width": 1024,
-          "height": 768
-        },
-        "worldPosition": {
-          "x": 116,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 8,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.35
-      },
-      {
-        "id": "z5-arena-wall",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-backwall.png",
-        "pixelSize": [
-          2048,
-          768
-        ],
-        "sourceRect": {
-          "x": 0,
-          "y": 0,
-          "width": 2048,
-          "height": 768
-        },
-        "worldPosition": {
-          "x": 128,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 16,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.35
-      },
-      {
-        "id": "z5-exit-sidewall",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
-        "pixelSize": [
-          1312,
-          1376
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 8,
-          "width": 1024,
-          "height": 768
-        },
-        "worldPosition": {
-          "x": 140,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 8,
-          "height": 6
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.35
-      },
-      {
-        "id": "z5-backdrop-shutter",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z5-structures.png",
-        "pixelSize": [
-          1312,
-          1376
-        ],
-        "sourceRect": {
-          "x": 8,
-          "y": 792,
-          "width": 1280,
-          "height": 576
-        },
-        "worldPosition": {
-          "x": 128,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 10,
-          "height": 4.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.3
-      },
-      {
-        "id": "z5-entry-gate-open",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 504,
-          "y": 408,
-          "width": 256,
-          "height": 576
-        },
-        "worldPosition": {
-          "x": 118.5,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 2,
-          "height": 4.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.18
-      },
-      {
-        "id": "z5-exit-gate-open",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
-        "pixelSize": [
-          1568,
-          1008
-        ],
-        "sourceRect": {
-          "x": 504,
-          "y": 408,
-          "width": 256,
-          "height": 576
-        },
-        "worldPosition": {
-          "x": 137.5,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 2,
-          "height": 4.5
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.18
-      },
-      {
         "id": "z5-floor-edge-stripe",
         "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
         "pixelSize": [
@@ -2303,25 +1481,19 @@
         "z": -0.3
       },
       {
-        "id": "z5-edge-lamp-1",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "id": "rc2-street-crate",
+        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
         "pixelSize": [
-          1568,
-          1008
+          124,
+          124
         ],
-        "sourceRect": {
-          "x": 8,
-          "y": 408,
-          "width": 128,
-          "height": 448
-        },
         "worldPosition": {
-          "x": 114,
-          "y": -2.5
+          "x": 7.495495495495495,
+          "y": -2.5576923076923075
         },
         "worldSize": {
-          "width": 1,
-          "height": 3.5
+          "width": 1.117117117117117,
+          "height": 1.1923076923076923
         },
         "anchor": {
           "x": 0.5,
@@ -2329,28 +1501,22 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.12
+        "z": -0.2
       },
       {
-        "id": "z5-edge-lamp-2",
-        "image": "assets/environments/map01/expansion-z45-rc1/atlases/z45-props.png",
+        "id": "rc2-bench",
+        "image": "assets/environments/map01/props-v2/props/street/street-bench.png",
         "pixelSize": [
-          1568,
-          1008
+          228,
+          160
         ],
-        "sourceRect": {
-          "x": 8,
-          "y": 408,
-          "width": 128,
-          "height": 448
-        },
         "worldPosition": {
-          "x": 141,
-          "y": -2.5
+          "x": 22.520491803278688,
+          "y": -2.60989010989011
         },
         "worldSize": {
-          "width": 1,
-          "height": 3.5
+          "width": 3.1147540983606556,
+          "height": 1.7582417582417582
         },
         "anchor": {
           "x": 0.5,
@@ -2358,7 +1524,916 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.12
+        "z": -0.2
+      },
+      {
+        "id": "rc2-ladder",
+        "image": "assets/environments/map01/props-v2/props/alley/metal-ladder.png",
+        "pixelSize": [
+          92,
+          394
+        ],
+        "worldPosition": {
+          "x": 29.55655737704918,
+          "y": -2.586750788643533
+        },
+        "worldSize": {
+          "width": 1.2065573770491804,
+          "height": 6.83596214511041
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.2
+      },
+      {
+        "id": "rc2-balcony-planter",
+        "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+        "pixelSize": [
+          200,
+          110
+        ],
+        "worldPosition": {
+          "x": 34,
+          "y": 0.9805
+        },
+        "worldSize": {
+          "width": 1.5625,
+          "height": 0.715
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.2
+      },
+      {
+        "id": "rc2-z4-stairs",
+        "image": "assets/environments/map01/revision-rc2/z4-return-steps.png",
+        "pixelSize": [
+          576,
+          512
+        ],
+        "worldPosition": {
+          "x": 82.25,
+          "y": -2.5
+        },
+        "worldSize": {
+          "width": 4.5,
+          "height": 4
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.25
+      },
+      {
+        "id": "rc2-street-0",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 2,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-4",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 6,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-8",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 10,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-12",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 14,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-16",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 18,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-20",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 22,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-24",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 26,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-28",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 30,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-32",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 34,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-36",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 38,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-70",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 72,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-74",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 76,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-78",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 80,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-82",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 84,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-86",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 88,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-90",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 92,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-94",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 96,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-98",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 100,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-102",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 104,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-106",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 108,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-110",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 112,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-114",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 116,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-118",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 120,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-122",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 124,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-126",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 128,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-130",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 132,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-134",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 136,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-138",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 140,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 4,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4
+      },
+      {
+        "id": "rc2-street-142",
+        "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+        "pixelSize": [
+          512,
+          256
+        ],
+        "worldPosition": {
+          "x": 143,
+          "y": -4.5
+        },
+        "worldSize": {
+          "width": 2,
+          "height": 2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.4,
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "width": 256,
+          "height": 256
+        }
+      },
+      {
+        "id": "rc2-zone4-shops-backdrop-0",
+        "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-0.png",
+        "pixelSize": [
+          1536,
+          768
+        ],
+        "worldPosition": {
+          "x": 94,
+          "y": -2.5
+        },
+        "worldSize": {
+          "width": 12,
+          "height": 6
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.44
+      },
+      {
+        "id": "rc2-zone4-shops-backdrop-1",
+        "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-1.png",
+        "pixelSize": [
+          1536,
+          768
+        ],
+        "worldPosition": {
+          "x": 106,
+          "y": -2.5
+        },
+        "worldSize": {
+          "width": 12,
+          "height": 6
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.44
+      },
+      {
+        "id": "rc2-zone5-yard-backdrop-0",
+        "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-0.png",
+        "pixelSize": [
+          2048,
+          768
+        ],
+        "worldPosition": {
+          "x": 120,
+          "y": -2.5
+        },
+        "worldSize": {
+          "width": 16,
+          "height": 6
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.44
+      },
+      {
+        "id": "rc2-zone5-yard-backdrop-1",
+        "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-1.png",
+        "pixelSize": [
+          2048,
+          768
+        ],
+        "worldPosition": {
+          "x": 136,
+          "y": -2.5
+        },
+        "worldSize": {
+          "width": 16,
+          "height": 6
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.44
+      },
+      {
+        "id": "rc2-noodle-sign",
+        "image": "assets/environments/map01/props-v2/props/signs/sign-hu-tieu.png",
+        "pixelSize": [
+          264,
+          106
+        ],
+        "worldPosition": {
+          "x": 94.2,
+          "y": -0.24062499999999998
+        },
+        "worldSize": {
+          "width": 5.98125,
+          "height": 2.4015625
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.43
+      },
+      {
+        "id": "rc2-market-sign",
+        "image": "assets/environments/map01/props-v2/props/signs/sign-supermarket.png",
+        "pixelSize": [
+          264,
+          106
+        ],
+        "worldPosition": {
+          "x": 106,
+          "y": -0.65
+        },
+        "worldSize": {
+          "width": 6.6000000000000005,
+          "height": 2.6500000000000004
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.43
+      },
+      {
+        "id": "rc2-roof4-sealed-support",
+        "image": "assets/environments/map01/production/atlases/architecture-0.png",
+        "pixelSize": [
+          1536,
+          1728
+        ],
+        "worldPosition": {
+          "x": 75,
+          "y": -2.5
+        },
+        "worldSize": {
+          "width": 10,
+          "height": 4.5
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.3,
+        "sourceRect": {
+          "x": 8,
+          "y": 1128,
+          "width": 1280,
+          "height": 576
+        }
       }
     ]
   }

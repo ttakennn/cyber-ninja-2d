@@ -7,6 +7,7 @@ import { tilePosition } from '../src/world/TilemapData';
 import { parseLevelData } from '../src/world/LevelData';
 import pilot from '../src/world/levels/map-01-visual-pilot.json';
 import graybox from '../src/world/levels/map-01-graybox.json';
+import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 const data = parseEnvironmentData(pilot.environment);
 const fragment = data.decorations.find((entry) => entry.sourceRect)!;
@@ -36,16 +37,17 @@ describe('Task 008.2 parapet và nền phố', () => {
     }
   });
 
-  it('nền phố phủ chính xác dải -4.5..-4, không thêm collision hoặc thay gameplay', () => {
+  it('RC2 bỏ nền phố tile để dùng street-cap, giữ geometry ngoài danh sách revision', () => {
     const level = parseLevelData(pilot);
     const map = level.tilemap!;
     const layer = map.layers.find(({ id }) => id === 'street-foundation')!;
     const cells = layer.cells.flatMap((row, y) => row.flatMap((tile, x) => tile === null ? [] : [tilePosition(map, x, y)]));
-    expect(cells).toHaveLength(80);
-    expect(cells.every(({ x, y }) => x >= 0.25 && x <= 39.75 && y === -4.25)).toBe(true);
+    expect(cells).toHaveLength(0);
     expect(layer.tint).toBe(0x182656);
-    for (const key of ['spawn', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
-    expect(pilot.solids.slice(0, 10)).toEqual(graybox.solids);
+    for (const key of ['spawn', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) expect(pilot[key]).toEqual(graybox[key]);
+    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
+    expect(pilot.solids.slice(0, retained.length)).toEqual(retained);
+    expect(pilot.climbables).toEqual(revision.replaceClimbables);
   });
 
   it.each([null, {}, { x: -1, y: 0, width: 10, height: 120 }, { x: 0, y: 0, width: 0, height: 120 },

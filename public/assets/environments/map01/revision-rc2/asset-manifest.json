@@ -1,0 +1,111 @@
+{
+  "schema": "map01-rc2-assets/v1",
+  "status": "ART_READY_FOR_INTEGRATION_RUNTIME_PENDING",
+  "assets": [
+    {
+      "id": "street-cap-ivy",
+      "image": "assets/environments/map01/revision-rc2/street-cap-ivy.png",
+      "pixelSize": [
+        512,
+        256
+      ],
+      "sha256": "a69eb9b23652b9f331edbe9a61068493687cfd7438f404ecb684b1441e50afcd",
+      "status": "ART_CANDIDATE_RUNTIME_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "originals/street-cap-ivy.png",
+        "originalSha256": "c68b1f40eba8d69026685cd560540018c57030f1f97904d22db6ff1907e44584",
+        "normalization": "Resized to authored target canvas; full image retained. World aspect specified by placement."
+      }
+    },
+    {
+      "id": "zone4-shops-backdrop",
+      "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop.png",
+      "pixelSize": [
+        3072,
+        768
+      ],
+      "sha256": "a5d20144fb62d0a77f7aba8ac77b6df9a6c036e0c285d80e8da628d3ea01d917",
+      "status": "ART_CANDIDATE_RUNTIME_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "originals/zone4-shops-backdrop.png",
+        "originalSha256": "2600cc87e32fa19f0e0edc85b4a32039f708cf16d928c007b56dca21a3a2993a",
+        "normalization": "Resized to authored target canvas; full image retained. World aspect specified by placement."
+      }
+    },
+    {
+      "id": "zone5-yard-backdrop",
+      "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop.png",
+      "pixelSize": [
+        4096,
+        768
+      ],
+      "sha256": "22b12e44ff6e9bbc54d9495a30899163ab25209425836635091f91be6d2839e5",
+      "status": "ART_CANDIDATE_RUNTIME_PENDING",
+      "provenance": {
+        "tool": "image_gen.imagegen built-in",
+        "original": "originals/zone5-yard-backdrop.png",
+        "originalSha256": "07bec6cfda42c18cce6bf561f0897c9c4a1a1d48decbb9a0dfb4d8a2d8b2e0ce",
+        "normalization": "Resized to authored target canvas; full image retained. World aspect specified by placement."
+      }
+    },
+    {
+      "id": "z4-return-steps",
+      "image": "assets/environments/map01/revision-rc2/z4-return-steps.png",
+      "pixelSize": [
+        576,
+        512
+      ],
+      "sha256": "a13c064ae6622349872026f3baee49b33dd90e44f1ec0051255823d68bc79619",
+      "status": "DERIVED_ROAD_ART_RUNTIME_PENDING"
+    },
+    {
+      "id": "zone4-shops-backdrop-0",
+      "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-0.png",
+      "pixelSize": [
+        1536,
+        768
+      ],
+      "sha256": "45b2bbc4b19c20ea8c6654745169d8cdbfbb4bdc2631d7aa23c7a145ef871d27",
+      "status": "FULL_PAGE_FINITE_BACKDROP_NO_REPEAT"
+    },
+    {
+      "id": "zone4-shops-backdrop-1",
+      "image": "assets/environments/map01/revision-rc2/zone4-shops-backdrop-1.png",
+      "pixelSize": [
+        1536,
+        768
+      ],
+      "sha256": "0dc9aefe16cd2daa97ed7d90e36461563fb6d3e0fc5200ad0805be1ca1f5b2b5",
+      "status": "FULL_PAGE_FINITE_BACKDROP_NO_REPEAT"
+    },
+    {
+      "id": "zone5-yard-backdrop-0",
+      "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-0.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "sha256": "19d4a49d0b55fd45a354fa21e26af1ed91f1aa32c63ac38a9cc65921dcecf41c",
+      "status": "FULL_PAGE_FINITE_BACKDROP_NO_REPEAT"
+    },
+    {
+      "id": "zone5-yard-backdrop-1",
+      "image": "assets/environments/map01/revision-rc2/zone5-yard-backdrop-1.png",
+      "pixelSize": [
+        2048,
+        768
+      ],
+      "sha256": "fa4513844e38b5b5f6d44f289d7519f9e9bd558395c5151ef6a7007bc8cd0d08",
+      "status": "FULL_PAGE_FINITE_BACKDROP_NO_REPEAT"
+    }
+  ],
+  "existingPropsCatalog": "assets/environments/map01/props-v2/props.json",
+  "sourceRectConvention": "top-left; pixelSize is entire page",
+  "filter": "LinearFilter",
+  "mipmaps": false,
+  "referencePixelsPerWorldUnit": 128,
+  "roadTopY": -2.5,
+  "roadBottomY": -4.5
+}

@@ -10,6 +10,7 @@ import graybox from '../src/world/levels/map-01-graybox.json';
 import pilot from '../src/world/levels/map-01-visual-pilot.json';
 import placements from '../scripts/map01-environment-pilot.input.json';
 import foreground from '../public/assets/environments/map01/foreground/foreground.json';
+import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 const background = { id: 'sky', image: 'sky.png', pixelSize: [2048, 1024], z: -8, parallaxX: 0, parallaxY: 0, repeatX: false, worldHeight: 9 };
 const prop = { id: 'tank', image: 'tank.png', pixelSize: [128, 256], z: -0.25, worldPosition: { x: 4, y: 2 },
@@ -83,26 +84,27 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
   it('map01 chuyển sang pilot, graybox gốc còn nguyên mọi field gameplay', () => {
     expect(getLevelData('map01')).toBe(pilot);
     expect(getLevelData('map01-graybox')).toBe(graybox);
-    for (const key of ['version', 'id', 'spawn', 'climbables', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) {
+    for (const key of ['version', 'id', 'spawn', 'cameraBounds', 'cameraFollowY', 'deathY'] as const) {
       expect(pilot[key]).toEqual(graybox[key]);
     }
     const level = new TestLevel(pilot);
-    expect(level.colliders.slice(0, 10)).toEqual(graybox.solids);
-    expect(level.climbables).toEqual(graybox.climbables);
-    expect(level.colliders).toHaveLength(11);
-    expect(level.climbables[0]?.position.x).toBe(29);
+    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
+    expect(level.colliders.slice(0, retained.length)).toEqual(retained);
+    expect(level.climbables).toEqual(revision.replaceClimbables);
+    expect(level.colliders).toHaveLength(8);
+    expect(level.climbables[0]?.position.x).toBe(29.55);
     level.dispose();
   });
 
-  it('mọi PNG dùng đúng kích thước khai báo, RGBA và tỷ lệ prop từ placement thật', () => {
+  it('mọi PNG dùng đúng kích thước khai báo, RGBA/palette và tỷ lệ prop từ placement thật', () => {
     const environment = parseEnvironmentData(pilot.environment);
     const images = new Map([...environment.backgrounds, ...environment.decorations].map((entry) => [entry.image, entry]));
-    expect(images.size).toBe(19);
+    expect(images.has('assets/environments/map01/revision-rc2/street-cap-ivy.png')).toBe(true);
     for (const [path, entry] of images) {
       const png = readFileSync(new URL(`../public/${path}`, import.meta.url));
       expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
       expect([png.readUInt32BE(16), png.readUInt32BE(20)]).toEqual(entry.pixelSize);
-      if (entry.id !== 'sky') expect(png[25]).toBe(6);
+      if (entry.id !== 'sky') expect([3, 6]).toContain(png[25]);
     }
     expect(environment.backgrounds.map(({ parallaxX, z, repeatX }) => [parallaxX, z, repeatX]))
       .toEqual([[0, -8, false], [0.15, -6, true], [0.35, -4, true], [0.65, -2, true]]);

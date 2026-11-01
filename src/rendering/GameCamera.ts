@@ -30,9 +30,9 @@ export class GameCamera {
     this.clampPosition();
   }
 
-  follow(position: Readonly<Vector2>): void {
+  follow(position: Readonly<Vector2>, height: number = gameConfig.player.height): void {
     this.camera.position.x = position.x;
-    if (this.followY) this.camera.position.y = position.y;
+    if (this.followY) this.camera.position.y = position.y - height / 2 + gameConfig.player.height / 2;
     this.clampPosition();
   }
 

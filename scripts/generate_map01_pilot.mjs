@@ -6,7 +6,10 @@ const source = read('./map01-environment-pilot.input.json');
 const props = read('../public/assets/environments/map01/props-v2/props.json').props;
 const foreground = read('../public/assets/environments/map01/foreground/foreground.json').assets;
 const production = read('../integration/map01-production-additions.json');
+const revision = read('../integration/map01-revision-rc2/map-revision-plan.json');
 const base = 'assets/environments/map01/';
+level.solids = level.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
+level.climbables = level.climbables.map((entry) => revision.replaceClimbables.find(({ id }) => id === entry.id) ?? entry);
 const decorations = source.decorations.filter(({ id }) => id !== 'props-street-tree-3' && id !== 'props-aircon-unit-4').map((entry) => {
   const match = /^(props|foreground)-(.+)-\d+$/.exec(entry.id);
   if (!match) throw new Error(`ID placement không hợp lệ: ${entry.id}`);
@@ -67,6 +70,20 @@ level.solids.push({ id: 'upper-roof-support', position: { x: 42.5, y: -1.75 }, w
 for (const shape of level.solids.filter(({ id }) => id === 'street' || id === 'upper-roof-support' || /^roof-\d$/.test(id))) {
   level.visuals.push({ kind: 'rectangle', shapeId: shape.id, color: '#182656', opacity: 1, bottom: -4.5, z: -0.6 });
 }
+level.visuals = level.visuals.filter(({ shapeId }) => !revision.removeVisualShapeIds.includes(shapeId) && !revision.removeSolidIds.includes(shapeId)
+  && shapeId !== 'street' && shapeId !== 'roof-4');
+level.environment.decorations = level.environment.decorations.filter(({ id }) => !revision.removeDecorationIds.includes(id));
+for (const entry of revision.appendDecorations) {
+  const left = entry.worldPosition.x - entry.worldSize.width / 2;
+  if (left >= level.cameraBounds.maxX || entry.id === 'rc2-roof4-sealed-support') continue;
+  const width = Math.min(entry.worldSize.width, level.cameraBounds.maxX - left);
+  if (width === entry.worldSize.width) level.environment.decorations.push(entry);
+  else {
+    const rect = entry.sourceRect ?? { x: 0, y: 0, width: entry.pixelSize[0], height: entry.pixelSize[1] };
+    level.environment.decorations.push({ ...entry, worldPosition: { ...entry.worldPosition, x: left + width / 2 },
+      worldSize: { ...entry.worldSize, width }, sourceRect: { ...rect, width: rect.width * width / entry.worldSize.width } });
+  }
+}
 level.tilemap.tileset = { image: `${base}tilesets/terrain-64-atlas.png`, imageWidth: 1024, imageHeight: 1024, tileWidth: 64, tileHeight: 64 };
 const grid = () => Array.from({ length: level.tilemap.rows }, () => Array(level.tilemap.columns).fill(null));
 const terrain = grid();
@@ -82,7 +99,7 @@ function paint(cells, left, bottom, right, top, id) {
   }
 }
 for (const solid of level.solids) {
-  if (solid.id === 'upper-roof-support') continue;
+  if (solid.id === 'upper-roof-support' || revision.tilemapEdits.removeSolidPaintIds.includes(solid.id)) continue;
   const left = solid.position.x - solid.width / 2;
   const right = solid.position.x + solid.width / 2;
   const bottom = solid.position.y - solid.height / 2;
@@ -107,6 +124,9 @@ level.tilemap.layers = [
   { id: 'markers', cells: markers },
   { id: 'street-foundation', tint: '#182656', sampleInset: 20, cells: foundation },
 ];
+for (const layer of level.tilemap.layers) for (const region of revision.tilemapEdits.suppressStreetSkinRegions) {
+  paint(layer.cells, region.minX, region.minY, Math.min(region.maxX, level.cameraBounds.maxX), region.maxY, null);
+}
 let output = JSON.stringify(level, null, 2);
 for (const layer of level.tilemap.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

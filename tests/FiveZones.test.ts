@@ -10,6 +10,7 @@ import base from '../src/world/levels/map-01-visual-pilot.json';
 import five from '../src/world/levels/map-01-five-zones.json';
 import manifest from '../integration/five-zone-design/asset-manifest.json';
 import plan from '../integration/five-zone-design/level-extension.plan.json';
+import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 describe('Map01 five zones graybox', () => {
   it('alias riêng, giữ source gameplay mới nhất và đúng một ground mới', () => {
@@ -17,12 +18,12 @@ describe('Map01 five zones graybox', () => {
     expect(getLevelData('map01-five-zones')).toBe(five);
     const parsed = parseLevelData(five);
     expect(parsed.solids.slice(0, base.solids.length)).toEqual(base.solids);
-    expect(parsed.solids.slice(base.solids.length)).toEqual(plan.appendSolids);
+    expect(parsed.solids.slice(base.solids.length)).toEqual([...plan.appendSolids, ...revision.appendSolids]);
     for (const key of ['spawn', 'climbables', 'cameraFollowY', 'deathY'] as const) expect(parsed[key]).toEqual(base[key]);
     expect(parsed.cameraBounds).toEqual({ ...base.cameraBounds, maxX: 144 });
-    expect(parsed.solids).toHaveLength(12);
+    expect(parsed.solids).toHaveLength(13);
     expect(five.environment.backgrounds).toEqual(base.environment.backgrounds);
-    expect(five.environment.decorations.slice(0, base.environment.decorations.length)).toEqual(base.environment.decorations);
+    for (const entry of base.environment.decorations.filter(({ id }) => id !== 'rc2-street-78')) expect(five.environment.decorations.find(({ id }) => id === entry.id)).toEqual(entry);
   });
 
   it('grid đúng ngân sách, giữ ô cũ trừ marker kết thúc, sàn mới phẳng', () => {
@@ -36,7 +37,7 @@ describe('Map01 five zones graybox', () => {
         expect(cells[column]).toBe(retired ? null : base.tilemap.layers[index]!.cells[row]![column]);
       }
     }
-    expect(map.layers.find(({ id }) => id === 'roof-edges')!.cells[28]!.slice(160)).toEqual(Array(128).fill(11));
+    expect(map.layers.find(({ id }) => id === 'roof-edges')!.cells[28]!.slice(160)).toEqual(Array(128).fill(null));
   });
 
   it('chỉ tải URL có thật; không tải plannedImage hoặc SVG reference khi đã resolve RC1', () => {
@@ -50,7 +51,8 @@ describe('Map01 five zones graybox', () => {
     }
     for (const entry of five.environment.decorations) expect(() => readFileSync(new URL(`../public/${entry.image}`, import.meta.url))).not.toThrow();
     expect(five.environment.decorations.filter((entry) => entry.worldPosition.x >= 80).every((entry) => entry.collision === false && entry.layer === 'behind-player')).toBe(true);
-    expect(five.environment.decorations.some((entry) => entry.worldPosition.x > 80 && entry.worldPosition.x - entry.worldSize.width / 2 < 88)).toBe(false);
+    expect(five.environment.decorations.filter((entry) => entry.worldPosition.x > 80 && entry.worldPosition.x - entry.worldSize.width / 2 < 88)
+      .every(({ id }) => id === 'rc2-z4-stairs' || id.startsWith('rc2-street-'))).toBe(true);
     expect(five).not.toHaveProperty('encounter');
   });
 
@@ -71,7 +73,7 @@ describe('Map01 five zones graybox', () => {
     expect(body.position.y).toBeCloseTo(-1.7);
   });
 
-  it('generator tái tạo JSON atlas RC1 đã review', () => {
+  it('generator tái tạo JSON revision RC2 đã review', () => {
     expect(() => execFileSync(process.execPath, [fileURLToPath(new URL('../scripts/generate_map01_five_zones.mjs', import.meta.url)), '--check'])).not.toThrow();
   });
 });

@@ -14,6 +14,7 @@ import graybox from '../src/world/levels/map-01-graybox.json';
 import { parseEnvironmentData } from '../src/world/EnvironmentData';
 import pilot from '../src/world/levels/map-01-visual-pilot.json';
 import metadata from '../public/assets/environments/map01/foreground/foreground.json';
+import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 const city = { id: 'city', image: 'city.png', pixelSize: [200, 100], z: -2, repeatX: true,
   parallaxX: 0.65, parallaxY: 0, worldHeight: 8 };
@@ -21,14 +22,15 @@ const prop = { id: 'vine', image: 'vine.png', pixelSize: [10, 20], z: 2, layer: 
   worldPosition: { x: 2, y: -4 }, worldSize: { width: 0.5, height: 1 }, anchor: { x: 0.5, y: 1 }, collision: false };
 
 describe('Task 008 Fix: neo world và foreground', () => {
-  it('ladder thêm highlight/pát chỉ ở pilot, không đổi vùng leo; màu sai báo rõ', () => {
-    expect(parseLevelData(pilot).visuals[0]).toMatchObject({ railHighlight: 0xffe6a3, opacity: 0 });
+  it('RC2 thay ladder dựng bằng PNG/vùng leo mới, giữ graybox cũ; màu sai báo rõ', () => {
+    expect(parseLevelData(pilot).visuals.some(({ shapeId }) => shapeId === 'alley-ladder')).toBe(false);
     const level = new TestLevel(pilot);
     const old = new TestLevel(graybox);
-    expect(level.climbables).toEqual(old.climbables);
-    expect(level.visual.children.filter((mesh) => mesh.position.z === 0.02)).toHaveLength(2);
+    expect(level.climbables).toEqual(revision.replaceClimbables);
+    expect(old.climbables[0]?.position.x).toBe(29);
+    expect(level.visual.children.filter((mesh) => mesh.position.z === 0.02)).toHaveLength(0);
     expect(old.visual.children.filter((mesh) => mesh.position.z === 0.02)).toHaveLength(0);
-    expect(() => parseLevelData({ ...pilot, visuals: [{ ...pilot.visuals[0], railHighlight: 'wrong' }] })).toThrow('visuals[0].railHighlight');
+    expect(() => parseLevelData({ ...pilot, visuals: [{ ...graybox.visuals[0], railHighlight: 'wrong' }] })).toThrow('visuals[0].railHighlight');
     level.dispose(); old.dispose();
   });
   it('dữ liệu cũ mặc định giữ neo camera và lớp sau player', () => {
@@ -107,7 +109,7 @@ describe('Task 008 Fix: neo world và foreground', () => {
     const near = pilot.environment.backgrounds.find(({ id }) => id === 'buildings-near')!;
     expect(near).toMatchObject({ verticalAnchor: 'world', worldBottom: -3, bottomOffset: 0 });
     expect(new Set(pilot.tilemap.layers.flatMap(({ cells }) => cells.flat().filter((tile) => tile !== null))))
-      .toEqual(new Set([2, 3, 10, 11]));
+      .toEqual(new Set([3, 10, 11]));
   });
 
   it('generator tái tạo đúng JSON đã review, không ghi file trong chế độ check', () => {

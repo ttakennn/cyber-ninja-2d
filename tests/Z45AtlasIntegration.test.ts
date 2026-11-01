@@ -7,21 +7,22 @@ import mapping from '../integration/z45-atlas-rc1/replacement-map.json';
 import master from '../integration/five-zone-design/map01-five-zones.master.json';
 import reuse from '../integration/five-zone-design/runtime-reuse-additions.json';
 import metadata from '../public/assets/environments/map01/expansion-z45-rc1/asset-manifest.json';
+import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 describe('Zone4/5 atlas RC1 integration', () => {
-  it('thay đúng 22 ID một lần, giữ placement và ba reuse không thay', () => {
+  it('giữ nguồn 22 replacement RC1; runtime chỉ giữ các ID không bị RC2 xoá', () => {
     const decorations = five.environment.decorations;
     expect(new Set(decorations.map(({ id }) => id)).size).toBe(decorations.length);
     expect(mapping.entries).toHaveLength(22);
     expect(replacements.decorations).toHaveLength(22);
     for (const entry of replacements.decorations) {
       const actual = decorations.filter(({ id }) => id === entry.id);
-      expect(actual).toHaveLength(1);
-      expect(actual[0]).toEqual(entry);
+      if (revision.removeDecorationIds.includes(entry.id)) expect(actual).toHaveLength(0);
+      else expect(actual).toEqual([entry]);
       const original = master.placements.find(({ id }) => id === entry.id)!;
-      for (const key of ['worldPosition', 'worldSize', 'anchor', 'collision', 'layer', 'z'] as const) expect(actual[0]![key]).toEqual(original[key]);
+      for (const key of ['worldPosition', 'worldSize', 'anchor', 'collision', 'layer', 'z'] as const) expect(entry[key]).toEqual(original[key]);
     }
-    for (const id of mapping.keepExistingReusePlacementIds) expect(decorations.find((entry) => entry.id === id)).toEqual(reuse.decorations.find((entry) => entry.id === id));
+    for (const id of mapping.keepExistingReusePlacementIds) expect(decorations.find((entry) => entry.id === id)).toEqual(revision.removeDecorationIds.includes(id) ? undefined : reuse.decorations.find((entry) => entry.id === id));
     expect(decorations.some(({ image }) => image.includes('five-zone-graybox/'))).toBe(false);
     expect(decorations.filter(({ image }) => image.includes('expansion-z45-rc1/')).every(({ image }) => image.includes('/atlases/'))).toBe(true);
   });

@@ -109,7 +109,7 @@ export class Game {
 
   private readonly render = (frameDelta: number, alpha: number): void => {
     this.player.syncVisual(alpha);
-    this.camera.follow(this.player.visual.position);
+    this.camera.follow(this.player.visual.position, this.player.renderHeight);
     this.level.updateVisuals(this.camera.camera);
     this.collisionDebug.update(this.player.visual.position.x, this.player.visual.position.y, this.player.body.width, this.player.renderHeight);
     this.renderer.render(this.camera.camera);

@@ -7,6 +7,7 @@ const plan = read('../integration/five-zone-design/level-extension.plan.json');
 const master = read('../integration/five-zone-design/map01-five-zones.master.json');
 const manifest = read('../integration/five-zone-design/asset-manifest.json');
 const reuse = read('../integration/five-zone-design/runtime-reuse-additions.json');
+const revision = read('../integration/map01-revision-rc2/map-revision-plan.json');
 const replacementMap = read('../integration/z45-atlas-rc1/replacement-map.json');
 const replacementEntries = read('../integration/z45-atlas-rc1/environment-replacements-atlas.json').decorations;
 const replacements = new Map(replacementEntries.map((entry) => [entry.id, entry]));
@@ -82,6 +83,14 @@ level.environment.decorations = level.environment.decorations.map((entry) => {
 });
 if (replaced.size !== replacements.size || replacementMap.entries.some(({ placementId }) => !replaced.has(placementId))) throw new Error('Chưa resolve đủ replacement RC1');
 if (catalog.length) output(`${folder}catalog.json`, `${JSON.stringify({ status: 'GRAYBOX_ONLY', assets: catalog }, null, 2)}\n`);
+level.solids.push(...revision.appendSolids);
+level.visuals = level.visuals.filter(({ shapeId }) => shapeId !== ground.id);
+level.environment.decorations = level.environment.decorations.filter(({ id }) => !revision.removeDecorationIds.includes(id)
+  && !revision.appendDecorations.some((entry) => entry.id === id));
+level.environment.decorations.push(...revision.appendDecorations);
+for (const layer of map.layers) for (const region of revision.tilemapEdits.suppressStreetSkinRegions) {
+  paint(layer.id, region.minX, region.minY, region.maxX, region.maxY, null);
+}
 let json = JSON.stringify(level, null, 2);
 for (const layer of map.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');
