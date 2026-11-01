@@ -6,6 +6,8 @@ Bản thử năm zone: mở `?level=map01-five-zones`. Map01 đang dùng Visual 
 
 Riêng `?level=map01-five-zones` dùng [dãy phố ghép](docs/MAP01-STREET-MIX.md): quán Zone4 và sân Zone5 đã chuyển vào cùng lớp phố phía sau, bỏ lớp nhà riêng đứng trước. Bản ghép chưa nghiệm thu runtime.
 
+[Polish RC3 theo bảy ảnh](docs/MAP01-POLISH-RC3.md) bổ sung biển Phố Sài Gòn/LED, vật cản và prop mái; bản này chưa chạy nghiệm thu test/build/runtime.
+
 Task 001: a fresh engine foundation using Vite, strict TypeScript, Three.js, and Vitest. No code or assets were migrated from the existing games.
 
 ## Run

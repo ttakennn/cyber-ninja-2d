@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { applyStairPolish } from './map01-polish.mjs';
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 const level = read('../src/world/levels/map-01-visual-pilot.json');
@@ -86,9 +87,10 @@ if (replaced.size !== replacements.size || replacementMap.entries.some(({ placem
 if (catalog.length) output(`${folder}catalog.json`, `${JSON.stringify({ status: 'GRAYBOX_ONLY', assets: catalog }, null, 2)}\n`);
 level.solids.push(...revision.appendSolids);
 level.visuals = level.visuals.filter(({ shapeId }) => shapeId !== ground.id);
+const polishedProps = new Map(level.environment.decorations.filter(({ id }) => ['rc2-street-crate', 'rc2-bench', 'rc2-balcony-planter'].includes(id)).map((entry) => [entry.id, entry]));
 level.environment.decorations = level.environment.decorations.filter(({ id }) => !revision.removeDecorationIds.includes(id)
   && !revision.appendDecorations.some((entry) => entry.id === id));
-level.environment.decorations.push(...revision.appendDecorations);
+level.environment.decorations.push(...revision.appendDecorations.map((entry) => polishedProps.get(entry.id) ?? entry));
 // PNG có 42/95 hàng alpha rỗng dưới chân; hạ cả biển Zone4 cùng nền (128 px/unit).
 for (const entry of level.environment.decorations) {
   if (/^rc2-street-\d+$/.test(entry.id)) {
@@ -112,13 +114,23 @@ level.environment.backgrounds = level.environment.backgrounds.filter(({ id }) =>
 level.environment.decorations = level.environment.decorations.filter(({ id }) => !streetLayout.mergeDecorationIds.includes(id));
 const streetScale = streetLayout.scale;
 const streetHeightScale = streetScale * streetLayout.heightScale;
+const streetGround = streetLayout.groundY - streetLayout.groundOverlap;
 const nearWidth = near.worldHeight * near.pixelSize[0] / near.pixelSize[1];
 let streetIndex = 0;
 for (const [left, right] of streetLayout.baseSpans) for (let x = left; x < right - 1e-9; x += nearWidth) {
   const width = Math.min(nearWidth, right - x);
+  if (right === streetLayout.transitionPlant.atX && width < nearWidth / 2) {
+    const plant = streetLayout.transitionPlant;
+    level.environment.decorations.push({ id: 'street-mix-transition-planter', image: plant.image, pixelSize: plant.pixelSize, sourceRect: plant.sourceRect,
+      worldPosition: { x: (x + width / 2) * streetScale, y: streetGround },
+      worldSize: { width: width * streetScale, height: width * streetScale * plant.sourceRect.height / plant.sourceRect.width },
+      anchor: { x: 0.5, y: 1 }, collision: false, layer: 'background', z: near.z, parallaxX: near.parallaxX });
+    streetIndex += 1;
+    continue;
+  }
   level.environment.decorations.push({ id: `street-mix-near-${streetIndex++}`, image: near.image, pixelSize: near.pixelSize,
     worldPosition: { x: (x + width / 2) * streetScale,
-      y: streetLayout.groundY - streetLayout.nearBottomPaddingPixels / near.pixelSize[1] * near.worldHeight * streetHeightScale },
+      y: streetGround - streetLayout.nearBottomPaddingPixels / near.pixelSize[1] * near.worldHeight * streetHeightScale },
     worldSize: { width: width * streetScale, height: near.worldHeight * streetHeightScale }, anchor: { x: 0.5, y: 1 },
     collision: false, layer: 'background', z: near.z, parallaxX: near.parallaxX,
     sourceRect: { x: 0, y: 0, width: Math.min(near.pixelSize[0], width / nearWidth * near.pixelSize[0]), height: near.pixelSize[1] } });
@@ -127,9 +139,10 @@ for (const entry of merged) {
   const heightScale = entry.id.startsWith('rc2-zone5-yard-backdrop-') ? streetScale * streetLayout.zone5HeightScale : streetHeightScale;
   level.environment.decorations.push({ ...entry, id: `street-mix-${entry.id}`,
     layer: 'background', z: near.z, parallaxX: near.parallaxX,
-    worldPosition: { x: entry.worldPosition.x * streetScale, y: streetLayout.groundY + (entry.worldPosition.y - streetLayout.groundY) * heightScale },
+    worldPosition: { x: entry.worldPosition.x * streetScale, y: streetGround + (entry.worldPosition.y - streetLayout.groundY) * heightScale },
     worldSize: { width: entry.worldSize.width * streetScale, height: entry.worldSize.height * heightScale } });
 }
+applyStairPolish(level);
 let json = JSON.stringify(level, null, 2);
 for (const layer of map.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

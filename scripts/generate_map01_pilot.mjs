@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
+import { applyMap01Polish } from './map01-polish.mjs';
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 const level = read('../src/world/levels/map-01-graybox.json');
@@ -154,6 +155,7 @@ level.tilemap.layers = [
 for (const layer of level.tilemap.layers) for (const region of revision.tilemapEdits.suppressStreetSkinRegions) {
   paint(layer.cells, region.minX, region.minY, Math.min(region.maxX, level.cameraBounds.maxX), region.maxY, null);
 }
+applyMap01Polish(level);
 let output = JSON.stringify(level, null, 2);
 for (const layer of level.tilemap.layers) {
   const expanded = JSON.stringify(layer.cells, null, 2).split('\n').map((line, index) => index ? `        ${line}` : line).join('\n');

@@ -2,11 +2,18 @@
   "status": "ART_PREVIEW_RUNTIME_PENDING",
   "backgroundId": "buildings-near",
   "groundY": -2.5,
+  "groundOverlap": 0.035,
   "scale": 0.65,
   "heightScale": 1.4,
   "zone5HeightScale": 2.3,
   "nearBottomPaddingPixels": 34,
   "baseSpans": [[-32, 88], [144, 176]],
+  "transitionPlant": {
+    "atX": 88,
+    "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+    "pixelSize": [150, 168],
+    "sourceRect": { "x": 35, "y": 79, "width": 81, "height": 79 }
+  },
   "mergeDecorationIds": [
     "rc2-zone4-shops-backdrop-0",
     "rc2-zone4-shops-backdrop-1",

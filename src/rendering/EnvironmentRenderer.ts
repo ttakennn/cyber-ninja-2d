@@ -15,6 +15,8 @@ export class EnvironmentRenderer {
   private readonly materials: MeshBasicMaterial[] = [];
   private readonly backgrounds: BackgroundMesh[] = [];
   private readonly parallaxDecorations: { definition: EnvironmentDecoration; mesh: Mesh<PlaneGeometry, MeshBasicMaterial> }[] = [];
+  private readonly ledBorders: { materials: MeshBasicMaterial[]; period: number }[] = [];
+  private elapsed = 0;
   private loading: Promise<void> | null = null;
   private disposed = false;
 
@@ -74,6 +76,25 @@ export class EnvironmentRenderer {
         mesh.position.set(definition.worldPosition.x, definition.worldPosition.y + definition.worldSize.height / 2, definition.z);
         mesh.scale.set(definition.worldSize.width, definition.worldSize.height, 1);
         if (definition.parallaxX !== undefined) this.parallaxDecorations.push({ definition, mesh });
+        if (definition.ledBorder) {
+          const materials = definition.ledBorder.colors.map((color) => new MeshBasicMaterial({ color, transparent: true, depthWrite: false }));
+          this.materials.push(...materials);
+          this.ledBorders.push({ materials, period: definition.ledBorder.period });
+          const led = (x: number, y: number, index: number): void => {
+            const bulb = new Mesh(this.geometry, materials[index % 2]!);
+            bulb.position.set(x, y, 0.01);
+            bulb.scale.set(0.008, 0.028, 1);
+            mesh.add(bulb);
+          };
+          for (let index = 0; index < 12; index += 1) {
+            led(-0.46 + index * 0.92 / 11, 0.43, index);
+            led(-0.46 + index * 0.92 / 11, -0.43, index + 1);
+          }
+          for (let index = 0; index < 4; index += 1) {
+            led(-0.48, -0.28 + index * 0.56 / 3, index);
+            led(0.48, -0.28 + index * 0.56 / 3, index + 1);
+          }
+        }
       }
     } catch (error) {
       this.dispose();
@@ -91,8 +112,13 @@ export class EnvironmentRenderer {
     return mesh;
   }
 
-  update(camera: OrthographicCamera): void {
+  update(camera: OrthographicCamera, delta = 0): void {
     if (this.disposed) return;
+    this.elapsed += Math.max(0, delta);
+    for (const { materials, period } of this.ledBorders) {
+      const active = Math.floor(this.elapsed / period * 2) % 2;
+      for (const [index, material] of materials.entries()) material.opacity = index === active ? 1 : 0.15;
+    }
     for (const { definition, mesh } of this.parallaxDecorations) {
       mesh.position.x = definition.worldPosition.x + camera.position.x * (1 - definition.parallaxX!);
     }
@@ -128,6 +154,7 @@ export class EnvironmentRenderer {
     this.textures.clear();
     this.backgrounds.length = 0;
     this.parallaxDecorations.length = 0;
+    this.ledBorders.length = 0;
     this.visual.clear();
   }
 }

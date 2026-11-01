@@ -29,14 +29,14 @@ describe('phố hỗn hợp cùng mặt phẳng', () => {
       const heightScale = id.startsWith('rc2-zone5-yard-backdrop-') ? layout.zone5HeightScale : layout.heightScale;
       expect(actual[0]!.worldSize.height).toBeCloseTo(original.worldSize.height * layout.scale * heightScale);
     }
-    const panels = data.decorations.filter(({ id }) => id.startsWith('street-mix-near-') || id.startsWith('street-mix-rc2-zone'))
+    const panels = data.decorations.filter(({ id }) => id.startsWith('street-mix-near-') || id.startsWith('street-mix-rc2-zone') || id === 'street-mix-transition-planter')
       .sort((a, b) => a.worldPosition.x - b.worldPosition.x);
     let edge = -32 * layout.scale;
     for (const panel of panels) {
       expect(panel.worldPosition.x - panel.worldSize.width / 2).toBeCloseTo(edge, 10);
       edge = panel.worldPosition.x + panel.worldSize.width / 2;
-      const padding = panel.id.startsWith('street-mix-near-') ? 34 : panel.id.includes('zone4-') ? 42 : 95;
-      expect(panel.worldPosition.y + padding / panel.pixelSize[1] * panel.worldSize.height).toBeCloseTo(layout.groundY);
+      const padding = panel.id === 'street-mix-transition-planter' ? 0 : panel.id.startsWith('street-mix-near-') ? 34 : panel.id.includes('zone4-') ? 42 : 95;
+      expect(panel.worldPosition.y + padding / panel.pixelSize[1] * panel.worldSize.height).toBeCloseTo(layout.groundY - layout.groundOverlap);
     }
     expect(edge).toBeCloseTo(176 * layout.scale, 10);
     expect(data.decorations.find(({ id }) => id === 'street-mix-near-0')!.worldSize.height).toBeCloseTo(7.28);

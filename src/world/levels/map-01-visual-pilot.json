@@ -85,6 +85,60 @@
       },
       "width": 11,
       "height": 5.5
+    },
+    {
+      "id": "polish-crate-2",
+      "position": {
+        "x": 9.1,
+        "y": -2
+      },
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "polish-crate-3",
+      "position": {
+        "x": 10.7,
+        "y": -2
+      },
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "rc2-bench",
+      "position": {
+        "x": 22.5,
+        "y": -2
+      },
+      "width": 2.5,
+      "height": 1
+    },
+    {
+      "id": "rc2-balcony-planter",
+      "position": {
+        "x": 34,
+        "y": 1.325
+      },
+      "width": 1.5,
+      "height": 0.65
+    },
+    {
+      "id": "polish-roof-railing-1",
+      "position": {
+        "x": 44.1,
+        "y": 2.6
+      },
+      "width": 2.2,
+      "height": 1.2
+    },
+    {
+      "id": "polish-roof-railing-2",
+      "position": {
+        "x": 46.6,
+        "y": 2.6
+      },
+      "width": 2.2,
+      "height": 1.2
     }
   ],
   "climbables": [
@@ -438,147 +492,15 @@
     ],
     "decorations": [
       {
-        "id": "props-scooter-red-0",
-        "image": "assets/environments/map01/props-v2/props/street/scooter-red.png",
-        "worldPosition": {
-          "x": 8.9,
-          "y": -2.5
-        },
-        "worldSize": {
-          "width": 1.225,
-          "height": 0.7657
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.2,
-        "collision": false,
-        "pixelSize": [
-          224,
-          140
-        ]
-      },
-      {
-        "id": "props-sign-pho-247-1",
-        "image": "assets/environments/map01/props-v2/props/signs/sign-pho-247.png",
-        "worldPosition": {
-          "x": 4.7,
-          "y": -0.8677236363636364
-        },
-        "worldSize": {
-          "width": 1.65,
-          "height": 0.6625
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.2,
-        "collision": false,
-        "pixelSize": [
-          264,
-          106
-        ]
-      },
-      {
-        "id": "props-rooftop-water-tank-5",
-        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
-        "worldPosition": {
-          "x": 44.7,
-          "y": 2
-        },
-        "worldSize": {
-          "width": 1.1629,
-          "height": 1.4219
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.25,
-        "collision": false,
-        "pixelSize": [
-          229,
-          280
-        ]
-      },
-      {
-        "id": "props-satellite-dish-6",
-        "image": "assets/environments/map01/props-v2/props/rooftop/satellite-dish.png",
-        "worldPosition": {
-          "x": 55,
-          "y": 3
-        },
-        "worldSize": {
-          "width": 0.7406,
-          "height": 0.8344
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.25,
-        "collision": false,
-        "pixelSize": [
-          158,
-          178
-        ]
-      },
-      {
-        "id": "props-antenna-7",
-        "image": "assets/environments/map01/props-v2/props/rooftop/antenna.png",
-        "worldPosition": {
-          "x": 63.2,
-          "y": 3.5
-        },
-        "worldSize": {
-          "width": 1.0609,
-          "height": 1.4164
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.25,
-        "collision": false,
-        "pixelSize": [
-          194,
-          259
-        ]
-      },
-      {
-        "id": "props-rooftop-water-tank-8",
-        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
-        "worldPosition": {
-          "x": 75.6,
-          "y": 3
-        },
-        "worldSize": {
-          "width": 1.0735,
-          "height": 1.3125
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.25,
-        "collision": false,
-        "pixelSize": [
-          229,
-          280
-        ]
-      },
-      {
         "id": "foreground-street_shop_awning-9",
         "image": "assets/environments/map01/foreground/individual/street_shop_awning.png",
         "worldPosition": {
           "x": 4.7,
-          "y": -2.5677236363636364
+          "y": -2.6036363636363635
         },
         "worldSize": {
           "width": 2.28,
-          "height": 2.4832
+          "height": 3.8
         },
         "anchor": {
           "x": 0.5,
@@ -611,28 +533,6 @@
         "pixelSize": [
           450,
           138
-        ]
-      },
-      {
-        "id": "foreground-railing_cross-11",
-        "image": "assets/environments/map01/foreground/individual/railing_cross.png",
-        "worldPosition": {
-          "x": 46,
-          "y": 2
-        },
-        "worldSize": {
-          "width": 2.1125,
-          "height": 1.0852
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "z": -0.25,
-        "collision": false,
-        "pixelSize": [
-          364,
-          187
         ]
       },
       {
@@ -1419,52 +1319,6 @@
         "z": -0.3
       },
       {
-        "id": "rc2-street-crate",
-        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
-        "pixelSize": [
-          124,
-          124
-        ],
-        "worldPosition": {
-          "x": 7.495495495495495,
-          "y": -2.5576923076923075
-        },
-        "worldSize": {
-          "width": 1.117117117117117,
-          "height": 1.1923076923076923
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.2
-      },
-      {
-        "id": "rc2-bench",
-        "image": "assets/environments/map01/props-v2/props/street/street-bench.png",
-        "pixelSize": [
-          228,
-          160
-        ],
-        "worldPosition": {
-          "x": 22.520491803278688,
-          "y": -2.60989010989011
-        },
-        "worldSize": {
-          "width": 3.1147540983606556,
-          "height": 1.7582417582417582
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.2
-      },
-      {
         "id": "rc2-ladder",
         "image": "assets/environments/map01/props-v2/props/alley/metal-ladder.png",
         "pixelSize": [
@@ -1478,29 +1332,6 @@
         "worldSize": {
           "width": 1.2065573770491804,
           "height": 6.83596214511041
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 1
-        },
-        "collision": false,
-        "layer": "behind-player",
-        "z": -0.2
-      },
-      {
-        "id": "rc2-balcony-planter",
-        "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
-        "pixelSize": [
-          200,
-          110
-        ],
-        "worldPosition": {
-          "x": 34,
-          "y": 0.9805
-        },
-        "worldSize": {
-          "width": 1.5625,
-          "height": 0.715
         },
         "anchor": {
           "x": 0.5,
@@ -2060,6 +1891,537 @@
           "width": 512,
           "height": 128
         }
+      },
+      {
+        "id": "polish-sign-pho-sai-gon",
+        "image": "assets/environments/map01/ui-polish-rc3/sign-pho-sai-gon.png",
+        "pixelSize": [
+          2172,
+          724
+        ],
+        "sourceRect": {
+          "x": 58,
+          "y": 137,
+          "width": 2058,
+          "height": 454
+        },
+        "worldPosition": {
+          "x": 4.7,
+          "y": 0.45
+        },
+        "worldSize": {
+          "width": 3.4,
+          "height": 0.75
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.08,
+        "ledBorder": {
+          "colors": [
+            "#78fff3",
+            "#fa7cfd"
+          ],
+          "period": 0.8
+        }
+      },
+      {
+        "id": "polish-crate-2",
+        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+        "pixelSize": [
+          124,
+          124
+        ],
+        "worldPosition": {
+          "x": 9.095495495495495,
+          "y": -2.5776923076923075
+        },
+        "worldSize": {
+          "width": 1.117117117117117,
+          "height": 1.1923076923076923
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-crate-3",
+        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+        "pixelSize": [
+          124,
+          124
+        ],
+        "worldPosition": {
+          "x": 10.695495495495495,
+          "y": -2.5776923076923075
+        },
+        "worldSize": {
+          "width": 1.117117117117117,
+          "height": 1.1923076923076923
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "rc2-street-crate",
+        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+        "pixelSize": [
+          124,
+          124
+        ],
+        "worldPosition": {
+          "x": 7.495495495495495,
+          "y": -2.5776923076923075
+        },
+        "worldSize": {
+          "width": 1.117117117117117,
+          "height": 1.1923076923076923
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "rc2-bench",
+        "image": "assets/environments/map01/props-v2/props/street/street-bench.png",
+        "pixelSize": [
+          228,
+          160
+        ],
+        "worldPosition": {
+          "x": 22.520491803278688,
+          "y": -2.62989010989011
+        },
+        "worldSize": {
+          "width": 3.1147540983606556,
+          "height": 1.7582417582417582
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "rc2-balcony-planter",
+        "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+        "pixelSize": [
+          200,
+          110
+        ],
+        "worldPosition": {
+          "x": 34,
+          "y": 0.9605
+        },
+        "worldSize": {
+          "width": 1.5625,
+          "height": 0.715
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-street-lamp",
+        "image": "assets/environments/map01/props-v2/props/street/street-lamp.png",
+        "pixelSize": [
+          146,
+          294
+        ],
+        "worldPosition": {
+          "x": 25.416386554621848,
+          "y": -2.52
+        },
+        "worldSize": {
+          "width": 1.5949579831932774,
+          "height": 3.2532786885245906
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "props-rooftop-water-tank-5",
+        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
+        "pixelSize": [
+          229,
+          280
+        ],
+        "worldPosition": {
+          "x": 39.40444805194805,
+          "y": 1.8469354838709677
+        },
+        "worldSize": {
+          "width": 2.0372077922077922,
+          "height": 2.4838709677419355
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-railing-1",
+        "image": "assets/environments/map01/foreground/individual/railing_cross.png",
+        "pixelSize": [
+          364,
+          187
+        ],
+        "sourceRect": {
+          "x": 10,
+          "y": 8,
+          "width": 346,
+          "height": 171
+        },
+        "worldPosition": {
+          "x": 44.1,
+          "y": 1.98
+        },
+        "worldSize": {
+          "width": 2.2,
+          "height": 1.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-railing-2",
+        "image": "assets/environments/map01/foreground/individual/railing_cross.png",
+        "pixelSize": [
+          364,
+          187
+        ],
+        "sourceRect": {
+          "x": 10,
+          "y": 8,
+          "width": 346,
+          "height": 171
+        },
+        "worldPosition": {
+          "x": 46.6,
+          "y": 1.98
+        },
+        "worldSize": {
+          "width": 2.2,
+          "height": 1.2
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "props-satellite-dish-6",
+        "image": "assets/environments/map01/props-v2/props/rooftop/satellite-dish.png",
+        "pixelSize": [
+          158,
+          178
+        ],
+        "worldPosition": {
+          "x": 54.93719298245614,
+          "y": 2.838955223880597
+        },
+        "worldSize": {
+          "width": 2.4808771929824562,
+          "height": 2.78955223880597
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "props-antenna-7",
+        "image": "assets/environments/map01/props-v2/props/rooftop/antenna.png",
+        "pixelSize": [
+          194,
+          259
+        ],
+        "worldPosition": {
+          "x": 63.1834892086331,
+          "y": 3.392
+        },
+        "worldSize": {
+          "width": 2.1353956834532375,
+          "height": 2.849
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "props-rooftop-water-tank-8",
+        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
+        "pixelSize": [
+          229,
+          280
+        ],
+        "worldPosition": {
+          "x": 75.60444805194804,
+          "y": 2.8469354838709675
+        },
+        "worldSize": {
+          "width": 2.0372077922077922,
+          "height": 2.4838709677419355
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-0",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 51.095987654320986,
+          "y": 2.8977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-1",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 52.495987654320984,
+          "y": 2.8977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-2",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 57.29598765432098,
+          "y": 2.8977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-3",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 60.89598765432098,
+          "y": 3.3977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-4",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 65.49598765432098,
+          "y": 3.3977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-5",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 66.89598765432099,
+          "y": 3.3977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-6",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 70.99598765432098,
+          "y": 2.8977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-7",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 72.29598765432098,
+          "y": 2.8977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
+      },
+      {
+        "id": "polish-roof-pot-8",
+        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "pixelSize": [
+          150,
+          168
+        ],
+        "worldPosition": {
+          "x": 78.79598765432098,
+          "y": 2.8977215189873418
+        },
+        "worldSize": {
+          "width": 1.2037037037037037,
+          "height": 1.3822784810126583
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.15
       }
     ]
   }

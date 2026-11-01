@@ -24,6 +24,7 @@ export interface EnvironmentDecoration extends EnvironmentImage {
   readonly collision: false;
   readonly layer?: 'background' | 'behind-player' | 'foreground';
   readonly parallaxX?: number;
+  readonly ledBorder?: Readonly<{ colors: readonly [number, number]; period: number }>;
   readonly sourceRect?: Readonly<{ x: number; y: number; width: number; height: number }>;
 }
 
@@ -115,9 +116,20 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
         width: number(rect.width, `${path}.sourceRect.width`, Number.MIN_VALUE), height: number(rect.height, `${path}.sourceRect.height`, Number.MIN_VALUE) };
       if (sourceRect.x + sourceRect.width > base.pixelSize[0] || sourceRect.y + sourceRect.height > base.pixelSize[1]) fail(`${path}.sourceRect`, 'vượt kích thước ảnh');
     }
+    let ledBorder: EnvironmentDecoration['ledBorder'];
+    if (prop.ledBorder !== undefined) {
+      const led = object(prop.ledBorder, `${path}.ledBorder`);
+      if (!Array.isArray(led.colors) || led.colors.length !== 2) fail(`${path}.ledBorder.colors`, 'cần hai màu #RRGGBB');
+      const colors = led.colors.map((color, index) => {
+        if (typeof color !== 'string' || !/^#[0-9a-f]{6}$/i.test(color)) fail(`${path}.ledBorder.colors[${index}]`, 'cần màu #RRGGBB');
+        return Number.parseInt(color.slice(1), 16);
+      }) as [number, number];
+      ledBorder = { colors, period: number(led.period, `${path}.ledBorder.period`, 0.1, 10) };
+    }
     return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false,
       ...(sourceRect === undefined ? {} : { sourceRect }),
       ...(parallaxX === undefined ? {} : { parallaxX }),
+      ...(ledBorder === undefined ? {} : { ledBorder }),
       ...(prop.layer === undefined ? {} : { layer: prop.layer }) };
   });
   return { backgrounds, decorations };

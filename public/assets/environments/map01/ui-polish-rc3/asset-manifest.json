@@ -1,0 +1,21 @@
+{
+  "status": "ART_CANDIDATE_RUNTIME_PENDING",
+  "text": "Phố Sài Gòn",
+  "image": "assets/environments/map01/ui-polish-rc3/sign-pho-sai-gon.png",
+  "pixelSize": [
+    2172,
+    724
+  ],
+  "sourceRect": {
+    "x": 58,
+    "y": 137,
+    "width": 2058,
+    "height": 454
+  },
+  "sha256": "090b1e6273c120c4a6e84db0e4191e0046d645b898007b8ed544adbd385add27",
+  "tool": "image_gen.imagegen",
+  "prompt": "integration/map01-polish-rc3/image-prompts.md",
+  "reference": "assets/environments/map01/props-v2/props/signs/sign-pho-247.png",
+  "original": "exec-064f9494-5f2b-42b4-8a63-34704ae9eafe.png",
+  "boundsAlphaThreshold": 32
+}

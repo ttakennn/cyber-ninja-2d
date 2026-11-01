@@ -92,7 +92,7 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
     const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
     expect(level.colliders.slice(0, retained.length)).toEqual(retained);
     expect(level.climbables).toEqual(revision.replaceClimbables);
-    expect(level.colliders).toHaveLength(8);
+    expect(level.colliders).toHaveLength(14);
     expect(level.climbables[0]?.position.x).toBe(29.55);
     level.dispose();
   });
@@ -112,6 +112,8 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
     for (const decoration of environment.decorations) {
       const original = placements.decorations.find(({ id }) => id === decoration.id);
       if (!original) continue;
+      // Kích thước/alpha các prop được đổi theo yêu cầu RC3, kiểm riêng trong Map01Polish.
+      if (['foreground-street_shop_awning-9', 'props-rooftop-water-tank-5', 'props-satellite-dish-6', 'props-antenna-7', 'props-rooftop-water-tank-8'].includes(decoration.id)) continue;
       expect(decoration.worldSize).toEqual(original.worldSize);
       const adjusted: Record<string, { x: number; y: number }> = {
         'foreground-street_shop_awning-9': { x: 4.7, y: -2.5 - 9 / 330 * 2.4832 },

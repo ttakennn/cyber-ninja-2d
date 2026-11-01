@@ -41,13 +41,20 @@ describe('Map01 visual revision RC2', () => {
     expect(new Set(decorations.map(({ id }) => id)).size).toBe(decorations.length);
     for (const entry of revision.appendDecorations) {
       const actual = five.environment.decorations.filter(({ id }) => id === entry.id);
+      if (entry.id === 'rc2-z4-stairs') {
+        expect(actual).toHaveLength(0);
+        expect(five.environment.decorations.filter(({ id }) => id.startsWith('polish-stair-face-'))).toHaveLength(3);
+        continue;
+      }
       if (streetLayout.mergeDecorationIds.includes(entry.id)) {
         expect(actual).toHaveLength(0);
         expect(five.environment.decorations.filter(({ id }) => id === `street-mix-${entry.id}`)).toHaveLength(1);
         continue;
       }
       const expected = /^rc2-street-\d+$/.test(entry.id) ? { ...entry, worldPosition: { ...entry.worldPosition, y: -3.5 },
-        worldSize: { ...entry.worldSize, height: 1 }, sourceRect: { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 } } : entry;
+        worldSize: { ...entry.worldSize, height: 1 }, sourceRect: { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 } }
+        : ['rc2-street-crate', 'rc2-bench', 'rc2-balcony-planter'].includes(entry.id)
+          ? { ...entry, z: -0.15, worldPosition: { ...entry.worldPosition, y: entry.worldPosition.y - 0.02 } } : entry;
       expect(actual).toHaveLength(1);
       expect({ ...actual[0], worldPosition: expected.worldPosition }).toEqual(expected);
       expect(actual[0]!.worldPosition.x).toBe(entry.worldPosition.x);
@@ -87,12 +94,12 @@ describe('Map01 visual revision RC2', () => {
       ['rc2-zone5-yard-backdrop-0', 95], ['rc2-zone5-yard-backdrop-1', 95],
     ] as const) {
       const entry = five.environment.decorations.find((entry) => entry.id === `street-mix-${id}`)!;
-      expect(entry.worldPosition.y + padding / entry.pixelSize[1]! * entry.worldSize.height).toBeCloseTo(-2.5);
+      expect(entry.worldPosition.y + padding / entry.pixelSize[1]! * entry.worldSize.height).toBeCloseTo(-2.5 - streetLayout.groundOverlap);
     }
     for (const id of ['rc2-noodle-sign', 'rc2-market-sign']) {
       const before = revision.appendDecorations.find((entry) => entry.id === id)!;
       const after = five.environment.decorations.find((entry) => entry.id === `street-mix-${id}`)!;
-      expect(after.worldPosition.y).toBeCloseTo(streetLayout.groundY + (before.worldPosition.y - 42 / 128 - streetLayout.groundY) * streetLayout.scale * streetLayout.heightScale);
+      expect(after.worldPosition.y).toBeCloseTo(streetLayout.groundY - streetLayout.groundOverlap + (before.worldPosition.y - 42 / 128 - streetLayout.groundY) * streetLayout.scale * streetLayout.heightScale);
     }
   });
 
@@ -143,7 +150,7 @@ describe('Map01 visual revision RC2', () => {
       expect(entry.worldSize.width * (maxX! - minX! + 1) / asset.sizePx.width).toBeCloseTo(width);
       expect(entry.worldSize.height * (maxY! - minY! + 1) / asset.sizePx.height).toBeCloseTo(height);
       expect(entry.worldPosition.x + ((minX! + maxX! + 1) / 2 / asset.sizePx.width - 0.5) * entry.worldSize.width).toBeCloseTo(x);
-      expect(entry.worldPosition.y + (asset.sizePx.height - 1 - maxY!) / asset.sizePx.height * entry.worldSize.height).toBeCloseTo(foot);
+      expect(entry.worldPosition.y + (asset.sizePx.height - 1 - maxY!) / asset.sizePx.height * entry.worldSize.height).toBeCloseTo(foot - (id === 'rc2-ladder' ? 0 : 0.02));
       expect(entry.collision).toBe(false);
     }
     const data = parseLevelData(five);
@@ -152,13 +159,16 @@ describe('Map01 visual revision RC2', () => {
     for (const x of [122, 128, 134]) expect(world.canOccupy({ position: { x, y: -1.7 }, width: 0.8, height: 1.6 })).toBe(true);
   });
 
-  it('bậc PNG có đúng ba cột 192px và top khớp AABB 1.5/0/-1.5', () => {
-    const stairs = five.environment.decorations.find(({ id }) => id === 'rc2-z4-stairs')!;
+  it('mặt vữa và nắp đá của ba bậc khớp AABB 1.5/0/-1.5', () => {
     for (const [index, solid] of revision.appendSolids.filter(({ id }) => id.startsWith('z4-step-')).entries()) {
       expect(solid.width).toBe(1.5);
       expect(solid.position.x - solid.width / 2).toBe(80 + index * 1.5);
       expect(solid.position.y + solid.height / 2).toBe([1.5, 0, -1.5][index]);
-      expect(stairs.worldPosition.y + [512, 320, 128][index]! / stairs.pixelSize[1]! * stairs.worldSize.height).toBeCloseTo(solid.position.y + solid.height / 2);
+      const face = five.environment.decorations.find(({ id }) => id === `polish-stair-face-${index}`)!;
+      const cap = five.environment.decorations.find(({ id }) => id === `polish-stair-cap-${index}`)!;
+      expect(face.worldSize).toEqual({ width: solid.width, height: solid.height });
+      expect(face.worldPosition.y + face.worldSize.height).toBeCloseTo(solid.position.y + solid.height / 2);
+      expect(cap.worldPosition.y + cap.worldSize.height).toBeCloseTo(solid.position.y + solid.height / 2);
     }
   });
 

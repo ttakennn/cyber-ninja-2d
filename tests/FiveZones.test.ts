@@ -21,7 +21,7 @@ describe('Map01 five zones graybox', () => {
     expect(parsed.solids.slice(base.solids.length)).toEqual([...plan.appendSolids, ...revision.appendSolids]);
     for (const key of ['spawn', 'climbables', 'cameraFollowY', 'deathY'] as const) expect(parsed[key]).toEqual(base[key]);
     expect(parsed.cameraBounds).toEqual({ ...base.cameraBounds, maxX: 144 });
-    expect(parsed.solids).toHaveLength(13);
+    expect(parsed.solids).toHaveLength(19);
     expect(five.environment.backgrounds).toEqual(base.environment.backgrounds.filter(({ id }) => id !== 'buildings-near'));
     for (const entry of base.environment.decorations.filter(({ id }) => id !== 'rc2-street-78')) expect(five.environment.decorations.find(({ id }) => id === entry.id)).toEqual(entry);
   });
@@ -52,7 +52,7 @@ describe('Map01 five zones graybox', () => {
     for (const entry of five.environment.decorations) expect(() => readFileSync(new URL(`../public/${entry.image}`, import.meta.url))).not.toThrow();
     expect(five.environment.decorations.filter((entry) => entry.worldPosition.x >= 80).every((entry) => entry.collision === false && (entry.layer === 'behind-player' || entry.layer === 'background'))).toBe(true);
     expect(five.environment.decorations.filter((entry) => entry.worldPosition.x > 80 && entry.worldPosition.x - entry.worldSize.width / 2 < 88)
-      .every(({ id, layer }) => layer === 'background' || id === 'rc2-z4-stairs' || id.startsWith('rc2-street-'))).toBe(true);
+      .every(({ id, layer }) => layer === 'background' || id.startsWith('polish-stair-') || id.startsWith('rc2-street-'))).toBe(true);
     expect(five).not.toHaveProperty('encounter');
   });
 

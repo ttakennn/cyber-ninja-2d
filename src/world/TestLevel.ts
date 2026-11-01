@@ -49,8 +49,8 @@ export class TestLevel {
     await this.environment?.load();
   }
 
-  updateVisuals(camera: OrthographicCamera): void {
-    this.environment?.update(camera);
+  updateVisuals(camera: OrthographicCamera, delta = 0): void {
+    this.environment?.update(camera, delta);
   }
 
   private addLadder(ladder: AABB, color: number, rungSpacing: number, opacity: number, railHighlight?: number): void {
