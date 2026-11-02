@@ -87,10 +87,10 @@ if (replaced.size !== replacements.size || replacementMap.entries.some(({ placem
 if (catalog.length) output(`${folder}catalog.json`, `${JSON.stringify({ status: 'GRAYBOX_ONLY', assets: catalog }, null, 2)}\n`);
 level.solids.push(...revision.appendSolids);
 level.visuals = level.visuals.filter(({ shapeId }) => shapeId !== ground.id);
-const polishedProps = new Map(level.environment.decorations.filter(({ id }) => ['rc2-street-crate', 'rc2-bench', 'rc2-balcony-planter'].includes(id)).map((entry) => [entry.id, entry]));
+const polishedProps = new Map(level.environment.decorations.filter(({ id }) => ['rc2-street-crate', 'rc2-bench'].includes(id)).map((entry) => [entry.id, entry]));
 level.environment.decorations = level.environment.decorations.filter(({ id }) => !revision.removeDecorationIds.includes(id)
   && !revision.appendDecorations.some((entry) => entry.id === id));
-level.environment.decorations.push(...revision.appendDecorations.map((entry) => polishedProps.get(entry.id) ?? entry));
+level.environment.decorations.push(...revision.appendDecorations.filter(({ id }) => id !== 'rc2-balcony-planter').map((entry) => polishedProps.get(entry.id) ?? entry));
 // PNG có 42/95 hàng alpha rỗng dưới chân; hạ cả biển Zone4 cùng nền (128 px/unit).
 for (const entry of level.environment.decorations) {
   if (/^rc2-street-\d+$/.test(entry.id)) {
@@ -122,8 +122,8 @@ for (const [left, right] of streetLayout.baseSpans) for (let x = left; x < right
   if (right === streetLayout.transitionPlant.atX && width < nearWidth / 2) {
     const plant = streetLayout.transitionPlant;
     level.environment.decorations.push({ id: 'street-mix-transition-planter', image: plant.image, pixelSize: plant.pixelSize, sourceRect: plant.sourceRect,
-      worldPosition: { x: (x + width / 2) * streetScale, y: streetGround },
-      worldSize: { width: width * streetScale, height: width * streetScale * plant.sourceRect.height / plant.sourceRect.width },
+      worldPosition: { x: (x + width / 2) * streetScale, y: streetLayout.groundY - plant.groundOverlap },
+      worldSize: { width: width * streetScale * plant.scale, height: width * streetScale * plant.scale * plant.sourceRect.height / plant.sourceRect.width },
       anchor: { x: 0.5, y: 1 }, collision: false, layer: 'background', z: near.z, parallaxX: near.parallaxX });
     streetIndex += 1;
     continue;

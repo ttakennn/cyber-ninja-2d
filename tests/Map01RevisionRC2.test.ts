@@ -41,6 +41,11 @@ describe('Map01 visual revision RC2', () => {
     expect(new Set(decorations.map(({ id }) => id)).size).toBe(decorations.length);
     for (const entry of revision.appendDecorations) {
       const actual = five.environment.decorations.filter(({ id }) => id === entry.id);
+      if (entry.id === 'rc2-balcony-planter') {
+        expect(actual).toHaveLength(0);
+        expect(five.solids.find(({ id }) => id === entry.id)).toBeUndefined();
+        continue;
+      }
       if (entry.id === 'rc2-z4-stairs') {
         expect(actual).toHaveLength(0);
         expect(five.environment.decorations.filter(({ id }) => id.startsWith('polish-stair-face-'))).toHaveLength(3);
@@ -53,11 +58,11 @@ describe('Map01 visual revision RC2', () => {
       }
       const expected = /^rc2-street-\d+$/.test(entry.id) ? { ...entry, worldPosition: { ...entry.worldPosition, y: -3.5 },
         worldSize: { ...entry.worldSize, height: 1 }, sourceRect: { x: 0, y: 0, width: entry.worldSize.width * 128, height: 128 } }
-        : ['rc2-street-crate', 'rc2-bench', 'rc2-balcony-planter'].includes(entry.id)
+        : ['rc2-street-crate', 'rc2-bench'].includes(entry.id)
           ? { ...entry, z: -0.15, worldPosition: { ...entry.worldPosition, y: entry.worldPosition.y - 0.02 } } : entry;
       expect(actual).toHaveLength(1);
       expect({ ...actual[0], worldPosition: expected.worldPosition }).toEqual(expected);
-      expect(actual[0]!.worldPosition.x).toBe(entry.worldPosition.x);
+      expect(actual[0]!.worldPosition.x).toBeCloseTo(entry.worldPosition.x + (entry.id === 'rc2-street-crate' ? 14 : entry.id === 'rc2-bench' ? -14 : 0), 12);
       expect(actual[0]!.worldPosition.y).toBeCloseTo(expected.worldPosition.y, 12);
     }
     for (const id of revision.removeDecorationIds) expect(decorations.find((entry) => entry.id === id)).toBeUndefined();
@@ -139,10 +144,9 @@ describe('Map01 visual revision RC2', () => {
 
   it('alpha crate/bench/ladder/planter đúng mục tiêu, thang không xuyên mép ban công', () => {
     for (const [id, assetId, x, foot, width, height] of [
-      ['rc2-street-crate', 'crate-wood', 7.5, -2.5, 1, 1],
-      ['rc2-bench', 'street-bench', 22.5, -2.5, 2.5, 1],
+      ['rc2-street-crate', 'crate-wood', 21.5, -2.5, 1, 1],
+      ['rc2-bench', 'street-bench', 8.5, -2.5, 2.5, 1],
       ['rc2-ladder', 'metal-ladder', 29.55, -2.5, 0.8, 5.5],
-      ['rc2-balcony-planter', 'planter-box', 34, 1, 1.5, 0.65],
     ] as const) {
       const entry = five.environment.decorations.find((entry) => entry.id === id)!;
       const asset = props.props.find(({ id }) => id === assetId)!;

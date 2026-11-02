@@ -21,7 +21,7 @@ describe('Map01 five zones graybox', () => {
     expect(parsed.solids.slice(base.solids.length)).toEqual([...plan.appendSolids, ...revision.appendSolids]);
     for (const key of ['spawn', 'climbables', 'cameraFollowY', 'deathY'] as const) expect(parsed[key]).toEqual(base[key]);
     expect(parsed.cameraBounds).toEqual({ ...base.cameraBounds, maxX: 144 });
-    expect(parsed.solids).toHaveLength(19);
+    expect(parsed.solids).toHaveLength(16);
     expect(five.environment.backgrounds).toEqual(base.environment.backgrounds.filter(({ id }) => id !== 'buildings-near'));
     for (const entry of base.environment.decorations.filter(({ id }) => id !== 'rc2-street-78')) expect(five.environment.decorations.find(({ id }) => id === entry.id)).toEqual(entry);
   });

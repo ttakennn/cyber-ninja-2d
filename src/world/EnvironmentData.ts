@@ -24,6 +24,7 @@ export interface EnvironmentDecoration extends EnvironmentImage {
   readonly collision: false;
   readonly layer?: 'background' | 'behind-player' | 'foreground';
   readonly parallaxX?: number;
+  readonly flipX?: boolean;
   readonly ledBorder?: Readonly<{ colors: readonly [number, number]; period: number }>;
   readonly sourceRect?: Readonly<{ x: number; y: number; width: number; height: number }>;
 }
@@ -101,6 +102,7 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     if (prop.layer === 'background' ? base.z >= -1 : prop.layer === 'foreground' ? base.z <= 1 || base.z >= 9 : base.z <= -0.45 || base.z >= 0) fail(`${path}.z`, 'background cần Z < -1; behind-player cần -0.45 < Z < 0; foreground cần 1 < Z < 9');
     if (prop.parallaxX !== undefined && prop.layer !== 'background') fail(`${path}.parallaxX`, 'chỉ dùng với lớp background');
     const parallaxX = prop.parallaxX === undefined ? undefined : number(prop.parallaxX, `${path}.parallaxX`, 0, 1);
+    if (prop.flipX !== undefined && typeof prop.flipX !== 'boolean') fail(`${path}.flipX`, 'phải là boolean');
     if (prop.collision !== false) fail(`${path}.collision`, 'phải bằng false, collider khai báo riêng');
     const point = object(prop.worldPosition, `${path}.worldPosition`);
     const worldPosition = { x: number(point.x, `${path}.worldPosition.x`), y: number(point.y, `${path}.worldPosition.y`) };
@@ -129,6 +131,7 @@ export function parseEnvironmentData(value: unknown): EnvironmentData {
     return { ...base, worldPosition, worldSize, anchor: { x: 0.5, y: 1 }, collision: false,
       ...(sourceRect === undefined ? {} : { sourceRect }),
       ...(parallaxX === undefined ? {} : { parallaxX }),
+      ...(prop.flipX === undefined ? {} : { flipX: prop.flipX }),
       ...(ledBorder === undefined ? {} : { ledBorder }),
       ...(prop.layer === undefined ? {} : { layer: prop.layer }) };
   });

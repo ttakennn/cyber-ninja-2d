@@ -89,10 +89,11 @@ describe('pilot dùng asset thật và giữ gameplay', () => {
     }
     expect(pilot.cameraBounds).toEqual({ ...graybox.cameraBounds, minY: -3.5 });
     const level = new TestLevel(pilot);
-    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
+    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id))
+      .map((entry) => entry.id === 'street-crate' ? { ...entry, position: { ...entry.position, x: 21.5 } } : entry);
     expect(level.colliders.slice(0, retained.length)).toEqual(retained);
     expect(level.climbables).toEqual(revision.replaceClimbables);
-    expect(level.colliders).toHaveLength(14);
+    expect(level.colliders).toHaveLength(11);
     expect(level.climbables[0]?.position.x).toBe(29.55);
     level.dispose();
   });

@@ -10,9 +10,11 @@
   "baseSpans": [[-32, 88], [144, 176]],
   "transitionPlant": {
     "atX": 88,
-    "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
-    "pixelSize": [150, 168],
-    "sourceRect": { "x": 35, "y": 79, "width": 81, "height": 79 }
+    "image": "assets/environments/map01/foreground/individual/planters_mixed.png",
+    "pixelSize": [369, 274],
+    "sourceRect": { "x": 17, "y": 23, "width": 344, "height": 243 },
+    "scale": 1.5,
+    "groundOverlap": 0.08
   },
   "mergeDecorationIds": [
     "rc2-zone4-shops-backdrop-0",

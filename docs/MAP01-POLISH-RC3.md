@@ -62,3 +62,48 @@ Các bước nghiệm thu tiếp theo khi được phép:
 3. Xem LED khi đứng/chạy, pause/đổi tab; kiểm chữ và bố cục cổng, chân prop, các mép ghép/nền Zone4/5 và texture bậc.
 4. Chụp 1920×1080, 1280×720, 1024×768, 540×960 từ cùng commit; ghi browser/DPR/console và kích thước ảnh thực.
 5. Chỉ chốt art/layout cho bước tiếp theo sau khi những mục trên đạt hoặc vấn đề còn mở được người dùng chấp nhận. Bản này chưa được gọi là production hoàn chỉnh.
+
+## Điều chỉnh tiếp theo theo sáu ảnh người dùng
+
+Thực hiện sau commit `4735dba`. Các thông số dưới đây thay thế bố trí RC3 tương ứng ở phần trên; chưa nghiệm thu runtime.
+
+- Hình1: tâm ba thùng X7.5/8.5/9.5, mỗi thùng rộng 1 unit nên chạm cạnh. Collider hai thùng mới đi cùng hình; thùng đầu giữ nguyên.
+- Hình2: đèn từ X25.4 về X24.7, lật ngang để đầu đèn ở bên trái, gần ghế hơn; vẫn không collider. Thêm `flipX` boolean tùy chọn trong schema/renderer, không đổi PNG hoặc các instance không bật trường này. Bù offset alpha khi lật để giữ tâm phần nhìn thấy.
+- Hình3: hạ riêng hình chậu ban công thêm 0.06 unit (footInset=0.08), giữ collider cũ. Ghép planters_mixed rộng 1.35 tại X32.575 và planters_tropical rộng 1.35 tại X35.425; hai cụm mới chỉ trang trí, nằm trong ban công X30..36.5 và không che lối thang.
+- Hình4: hai cụm lan can tại X44.1/46.3, rộng 2.2 nên chạm cạnh. Bỏ cả hai collider lan can theo yêu cầu mới. Tổng hiện tại là 12 solids pilot và 17 solids năm zone.
+- Hình5/6: các cặp chậu được kéo sát tại X51.1/51.75, X65.5/66.15 và X71/71.65. Các chậu còn lại giữ vị trí. Thêm planters_large tại X52.8, hoa amber tại X56.4/77.65, planters_tropical tại X73.05, crate-metal tại X61.85 cạnh anten và planter-box tại X67.1. Các món này đều không collider, giữ chân tại cao độ mái tương ứng và chừa các khe mái.
+
+Nguồn ảnh: `foreground/individual/planters_large.png`, `planters_mixed.png`, `planters_tropical.png`; `expansion-z45-rc1/individual/z4-flowerpot-amber.png`; `props-v2/props/street/crate-metal.png`, `planter-box.png`. Đã xem từng ảnh nguồn, không tạo lại hoặc chỉnh PNG/atlas. Bốn ảnh individual dùng sourceRect lấy từ bounds alpha≥16 để bỏ phần trong suốt, giữ tỷ lệ hình gốc.
+
+Đã sửa generator rồi chạy chế độ ghi theo thứ tự pilot → five-zones (exit 0), sinh lại hai JSON. Cập nhật các kỳ vọng test bị thay thế và thêm trường hợp flipX/cụm trang trí. **NOT_RUN:** test, build, generator --check, lint, formatter, typecheck, kiểm tra trình duyệt/console và thao tác game. Chưa có ảnh runtime mới; các ảnh người dùng là căn cứ sửa, không phải bằng chứng nghiệm thu bản sửa này.
+
+### Đổi chỗ cụm thùng và ghế–đèn
+
+Theo ảnh tiếp theo, chuyển ba thùng sang tâm X21.5/22.5/23.5 (khu vực ghế cũ), ghế sang X8.5 (tâm cụm thùng cũ). Chuyển cả collider `street-crate` và hai collider thùng mới theo hình, giữ kích thước và cao độ. Đèn tại X9.8, đầu đèn vẫn hướng trái, sát ghế hơn: khoảng tâm đèn–ghế còn 1.3 unit thay vì 2.2. Đèn không collider; không đổi các phần khác của map. Cập nhật kỳ vọng tọa độ và sinh lại hai JSON bằng generator chế độ ghi, exit 0; test/build/runtime vẫn **NOT_RUN**.
+
+### Phóng cụm chậu và đưa cây bậc thang ra trước tường
+
+Theo bốn ảnh tiếp theo:
+
+- Bỏ `rc2-balcony-planter` và collider tương ứng; bỏ thùng kim loại `polish-roof-metal-crate`. Generator năm zone lọc chậu cũ khi ghép additions RC2 để không thêm lại. Hiện pilot có 11 solids, năm zone có 16 solids.
+- Hai cụm mixed/tropical hai bên chậu ban công cũ tăng đúng 2.5 lần, rộng 3.375, dời tâm đến X31.6875/34.8125. Chồng tán 0.25 unit để nằm trong ban công X30..36.5, vẫn chỉ trang trí. Lật riêng lan can trái để phần hoa nằm bên phải, hướng vào điểm nối hai lan can.
+- Toàn bộ chín chậu potted-plant và các cụm large/amber/tropical/planter-box trên mái tăng cả chiều rộng và chiều cao 2.5 lần. Căn chân hình ăn xuống mái 0.08 unit, sắp lại các cụm trong từng mái; cặp amber và chậu xanh ở hai đầu mái được kéo chồng tán để không có khe trống. Các cụm lá lớn nằm sau chậu nhỏ (Z−0.17/−0.18 so với −0.15). Không tăng collider hoặc đổi kích thước bồn nước/anten/chảo thu.
+- Giữ mặt vữa và nắp đá bậc thang, thêm `vine_canopy_01.png` nền trong suốt lên ba mặt bậc. Lớp cây Z−0.12 ở trước mặt vữa Z−0.25 và nắp đá Z−0.24, bắt đầu dưới mép bậc và co vừa chiều cao mặt đứng. Không đổi collider/cao độ bậc hoặc ảnh nền phố.
+
+Sửa generator trước rồi sinh lại pilot → five-zones, exit 0; không sửa PNG/atlas hoặc chỉnh riêng output. Cập nhật test cho dữ liệu bị bỏ, kích thước mới, chân chậu, lật lan can và thứ tự lớp dây leo. **NOT_RUN:** test/build, lint/formatter/typecheck, generator --check, runtime/console và ảnh nghiệm thu. Bố cục cây lớn và các mép tiếp xúc vẫn cần xem bản game thực tế.
+
+Ngày 2026-11-02: theo đính chính của người dùng, đổi hệ số phóng các cụm chậu ở trên từ **2.5 xuống 1.5 lần so với kích thước ban đầu** (bằng 60% bản 2.5 lần). Thu khoảng cách tâm trong từng cụm theo cùng tỷ lệ để vẫn gần nhau, giữ chân hình và lớp hiển thị; không thay collider. Sinh lại hai JSON từ generator, cập nhật kỳ vọng kích thước trong test; test/build/runtime vẫn **NOT_RUN**.
+
+### Bồn nước, chảo, anten và chậu cạnh chân bậc
+
+Theo ba ảnh mới ngày 2026-11-02: tăng thêm 1.5 lần so với bản hiện tại cho hai bồn nước, chảo thu và anten, giữ tâm/điểm chạm mái. Phần nhìn thấy của bồn là 2.055×3.3 unit, chảo 2.685×3.15 và anten 2.295×3.3. Giữ hệ số chậu hoa 1.5 lần như đính chính trước.
+
+- Lan can thứ hai chuyển X46.3 →45.9, chồng vùng trụ nối 0.4 unit với ảnh thứ nhất để khép khoảng rỗng bên ngoài phần trụ trong PNG. Giữ hướng hoa và trạng thái không collider.
+- Cụm cây trái chảo dịch phải 0.8 unit, cụm phải chảo dịch trái 0.1; chậu bên trái anten dịch phải 0.65, cụm bên phải anten dịch trái 0.5. Giữ các cụm trong từng mái và giữ chân hình.
+- Thêm `polish-stair-landing-planters` dùng planters_mixed, tâm X85.6, rộng 1.8, chân đường Y−2.58 có độ ăn nền 0.08, cạnh chân bậc Zone3/4. Chỉ áp dụng level năm zone, không collider.
+
+Đã xem lại ảnh railing_cross để xác định vùng trụ, sửa generator rồi sinh pilot → five-zones (exit 0), cập nhật kỳ vọng test cho kích thước/khớp trụ/cụm chân bậc. Không đổi physics, camera, bậc hoặc collider. Test/build/runtime và ảnh nghiệm thu vẫn **NOT_RUN**.
+
+Theo ảnh Zone4 tiếp theo: thay riêng chậu trong khung đỏ (`street-mix-transition-planter`) bằng `foreground/individual/planters_mixed.png`, cùng asset với cụm khung vàng cạnh bậc. Crop alpha (17,23,344,243), giữ tâm/chiều rộng vùng trang trí và parallax hiện có; căn chân Y−2.58 bằng groundOverlap=0.08. Không thêm collider. Sửa metadata/generator rồi sinh lại JSON năm zone (exit 0); cập nhật kỳ vọng asset/crop/chân nền trong test, chưa chạy test/build/runtime.
+
+Theo yêu cầu kế tiếp: bỏ cụm khung vàng cũ `polish-stair-landing-planters`; tăng riêng cụm thay khung đỏ `street-mix-transition-planter` thêm 1.5 lần cả rộng/cao qua metadata `transitionPlant.scale`, giữ tâm, tỷ lệ ảnh, chân Y−2.58 và parallax. Cụm cây được phép phủ rộng hơn vùng đặt ban đầu; các đoạn phố khác và collider không đổi. Sinh lại JSON năm zone (exit 0), cập nhật kỳ vọng dữ liệu; test/build/runtime vẫn **NOT_RUN**.

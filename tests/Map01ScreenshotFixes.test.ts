@@ -9,9 +9,10 @@ import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 
 describe('Map01: sửa theo năm ảnh người dùng', () => {
   it('RC2 giữ tường chặn X=37 và collider ngoài danh sách xoá, thay vùng leo theo plan', () => {
-    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id));
+    const retained = graybox.solids.filter(({ id }) => !revision.removeSolidIds.includes(id))
+      .map((entry) => entry.id === 'street-crate' ? { ...entry, position: { ...entry.position, x: 21.5 } } : entry);
     expect(pilot.solids.slice(0, retained.length)).toEqual(retained);
-    expect(pilot.solids).toHaveLength(14);
+    expect(pilot.solids).toHaveLength(11);
     expect(pilot.solids.find(({ id }) => id === 'upper-roof-support')).toEqual({ id: 'upper-roof-support', position: { x: 42.5, y: -1.75 }, width: 11, height: 5.5 });
     expect(pilot.climbables).toEqual(revision.replaceClimbables);
     const body: PhysicsBody = { position: { x: 36, y: -1.7 }, velocity: { x: 6, y: 0 }, width: 0.8, height: 1.6, isGrounded: true };
@@ -23,7 +24,7 @@ describe('Map01: sửa theo năm ảnh người dùng', () => {
     const level = new TestLevel(pilot);
     const panels = level.visual.children.filter((entry) => entry.position.z === -0.6);
     expect(panels).toHaveLength(3);
-    expect(level.colliders).toHaveLength(14);
+    expect(level.colliders).toHaveLength(11);
     expect(parseLevelData(pilot).visuals.filter((entry) => entry.kind === 'rectangle')
       .every((entry) => entry.opacity === 1 && entry.kind === 'rectangle' && entry.bottom === -3.5)).toBe(true);
     level.dispose();

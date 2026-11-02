@@ -74,7 +74,7 @@ export class EnvironmentRenderer {
         const mesh = this.addMesh(definition.id, texture, definition.z);
         mesh.renderOrder = definition.layer === 'foreground' ? 1 : 0;
         mesh.position.set(definition.worldPosition.x, definition.worldPosition.y + definition.worldSize.height / 2, definition.z);
-        mesh.scale.set(definition.worldSize.width, definition.worldSize.height, 1);
+        mesh.scale.set(definition.worldSize.width * (definition.flipX ? -1 : 1), definition.worldSize.height, 1);
         if (definition.parallaxX !== undefined) this.parallaxDecorations.push({ definition, mesh });
         if (definition.ledBorder) {
           const materials = definition.ledBorder.colors.map((color) => new MeshBasicMaterial({ color, transparent: true, depthWrite: false }));

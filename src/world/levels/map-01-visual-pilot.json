@@ -26,7 +26,7 @@
     {
       "id": "street-crate",
       "position": {
-        "x": 7.5,
+        "x": 21.5,
         "y": -2
       },
       "width": 1,
@@ -89,7 +89,7 @@
     {
       "id": "polish-crate-2",
       "position": {
-        "x": 9.1,
+        "x": 22.5,
         "y": -2
       },
       "width": 1,
@@ -98,7 +98,7 @@
     {
       "id": "polish-crate-3",
       "position": {
-        "x": 10.7,
+        "x": 23.5,
         "y": -2
       },
       "width": 1,
@@ -107,38 +107,11 @@
     {
       "id": "rc2-bench",
       "position": {
-        "x": 22.5,
+        "x": 8.5,
         "y": -2
       },
       "width": 2.5,
       "height": 1
-    },
-    {
-      "id": "rc2-balcony-planter",
-      "position": {
-        "x": 34,
-        "y": 1.325
-      },
-      "width": 1.5,
-      "height": 0.65
-    },
-    {
-      "id": "polish-roof-railing-1",
-      "position": {
-        "x": 44.1,
-        "y": 2.6
-      },
-      "width": 2.2,
-      "height": 1.2
-    },
-    {
-      "id": "polish-roof-railing-2",
-      "position": {
-        "x": 46.6,
-        "y": 2.6
-      },
-      "width": 2.2,
-      "height": 1.2
     }
   ],
   "climbables": [
@@ -1936,7 +1909,7 @@
           124
         ],
         "worldPosition": {
-          "x": 9.095495495495495,
+          "x": 22.495495495495497,
           "y": -2.5776923076923075
         },
         "worldSize": {
@@ -1959,7 +1932,7 @@
           124
         ],
         "worldPosition": {
-          "x": 10.695495495495495,
+          "x": 23.495495495495497,
           "y": -2.5776923076923075
         },
         "worldSize": {
@@ -1982,7 +1955,7 @@
           124
         ],
         "worldPosition": {
-          "x": 7.495495495495495,
+          "x": 21.495495495495497,
           "y": -2.5776923076923075
         },
         "worldSize": {
@@ -2005,7 +1978,7 @@
           160
         ],
         "worldPosition": {
-          "x": 22.520491803278688,
+          "x": 8.520491803278688,
           "y": -2.62989010989011
         },
         "worldSize": {
@@ -2021,19 +1994,25 @@
         "z": -0.15
       },
       {
-        "id": "rc2-balcony-planter",
-        "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+        "id": "polish-balcony-mixed",
+        "image": "assets/environments/map01/foreground/individual/planters_mixed.png",
         "pixelSize": [
-          200,
-          110
+          369,
+          274
         ],
+        "sourceRect": {
+          "x": 17,
+          "y": 23,
+          "width": 344,
+          "height": 243
+        },
         "worldPosition": {
-          "x": 34,
-          "y": 0.9605
+          "x": 32.3125,
+          "y": 0.92
         },
         "worldSize": {
-          "width": 1.5625,
-          "height": 0.715
+          "width": 2.0250000000000004,
+          "height": 1.4304505813953492
         },
         "anchor": {
           "x": 0.5,
@@ -2041,7 +2020,36 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.15
+        "z": -0.17
+      },
+      {
+        "id": "polish-balcony-tropical",
+        "image": "assets/environments/map01/foreground/individual/planters_tropical.png",
+        "pixelSize": [
+          324,
+          266
+        ],
+        "sourceRect": {
+          "x": 33,
+          "y": 27,
+          "width": 283,
+          "height": 231
+        },
+        "worldPosition": {
+          "x": 34.1875,
+          "y": 0.92
+        },
+        "worldSize": {
+          "width": 2.0250000000000004,
+          "height": 1.65291519434629
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.17
       },
       {
         "id": "polish-street-lamp",
@@ -2051,7 +2059,7 @@
           294
         ],
         "worldPosition": {
-          "x": 25.416386554621848,
+          "x": 9.783613445378151,
           "y": -2.52
         },
         "worldSize": {
@@ -2064,7 +2072,8 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.15
+        "z": -0.15,
+        "flipX": true
       },
       {
         "id": "props-rooftop-water-tank-5",
@@ -2074,12 +2083,12 @@
           280
         ],
         "worldPosition": {
-          "x": 39.40444805194805,
-          "y": 1.8469354838709677
+          "x": 39.406672077922074,
+          "y": 1.7804032258064515
         },
         "worldSize": {
-          "width": 2.0372077922077922,
-          "height": 2.4838709677419355
+          "width": 3.0558116883116884,
+          "height": 3.7258064516129035
         },
         "anchor": {
           "x": 0.5,
@@ -2116,7 +2125,8 @@
         },
         "collision": false,
         "layer": "behind-player",
-        "z": -0.15
+        "z": -0.15,
+        "flipX": true
       },
       {
         "id": "polish-roof-railing-2",
@@ -2132,7 +2142,7 @@
           "height": 171
         },
         "worldPosition": {
-          "x": 46.6,
+          "x": 45.9,
           "y": 1.98
         },
         "worldSize": {
@@ -2155,12 +2165,12 @@
           178
         ],
         "worldPosition": {
-          "x": 54.93719298245614,
-          "y": 2.838955223880597
+          "x": 54.90578947368421,
+          "y": 2.7684328358208954
         },
         "worldSize": {
-          "width": 2.4808771929824562,
-          "height": 2.78955223880597
+          "width": 3.7213157894736844,
+          "height": 4.184328358208956
         },
         "anchor": {
           "x": 0.5,
@@ -2178,12 +2188,12 @@
           259
         ],
         "worldPosition": {
-          "x": 63.1834892086331,
-          "y": 3.392
+          "x": 63.17523381294964,
+          "y": 3.348
         },
         "worldSize": {
-          "width": 2.1353956834532375,
-          "height": 2.849
+          "width": 3.203093525179856,
+          "height": 4.2735
         },
         "anchor": {
           "x": 0.5,
@@ -2201,12 +2211,12 @@
           280
         ],
         "worldPosition": {
-          "x": 75.60444805194804,
-          "y": 2.8469354838709675
+          "x": 75.60667207792207,
+          "y": 2.7804032258064515
         },
         "worldSize": {
-          "width": 2.0372077922077922,
-          "height": 2.4838709677419355
+          "width": 3.0558116883116884,
+          "height": 3.7258064516129035
         },
         "anchor": {
           "x": 0.5,
@@ -2224,12 +2234,12 @@
           168
         ],
         "worldPosition": {
-          "x": 51.095987654320986,
-          "y": 2.8977215189873418
+          "x": 51.98148148148148,
+          "y": 2.7965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2247,12 +2257,12 @@
           168
         ],
         "worldPosition": {
-          "x": 52.495987654320984,
-          "y": 2.8977215189873418
+          "x": 52.663981481481486,
+          "y": 2.7965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2270,12 +2280,12 @@
           168
         ],
         "worldPosition": {
-          "x": 57.29598765432098,
-          "y": 2.8977215189873418
+          "x": 57.00648148148149,
+          "y": 2.7965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2293,12 +2303,12 @@
           168
         ],
         "worldPosition": {
-          "x": 60.89598765432098,
-          "y": 3.3977215189873418
+          "x": 61.45648148148148,
+          "y": 3.2965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2316,12 +2326,12 @@
           168
         ],
         "worldPosition": {
-          "x": 65.49598765432098,
-          "y": 3.3977215189873418
+          "x": 64.89398148148149,
+          "y": 3.2965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2339,12 +2349,12 @@
           168
         ],
         "worldPosition": {
-          "x": 66.89598765432099,
-          "y": 3.3977215189873418
+          "x": 65.60648148148148,
+          "y": 3.2965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2362,12 +2372,12 @@
           168
         ],
         "worldPosition": {
-          "x": 70.99598765432098,
-          "y": 2.8977215189873418
+          "x": 71.28148148148148,
+          "y": 2.7965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2385,12 +2395,12 @@
           168
         ],
         "worldPosition": {
-          "x": 72.29598765432098,
-          "y": 2.8977215189873418
+          "x": 71.99398148148148,
+          "y": 2.7965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2408,12 +2418,12 @@
           168
         ],
         "worldPosition": {
-          "x": 78.79598765432098,
-          "y": 2.8977215189873418
+          "x": 78.16898148148148,
+          "y": 2.7965822784810124
         },
         "worldSize": {
-          "width": 1.2037037037037037,
-          "height": 1.3822784810126583
+          "width": 1.8055555555555556,
+          "height": 2.0734177215189873
         },
         "anchor": {
           "x": 0.5,
@@ -2422,6 +2432,145 @@
         "collision": false,
         "layer": "behind-player",
         "z": -0.15
+      },
+      {
+        "id": "polish-roof-large",
+        "image": "assets/environments/map01/foreground/individual/planters_large.png",
+        "pixelSize": [
+          354,
+          268
+        ],
+        "sourceRect": {
+          "x": 8,
+          "y": 8,
+          "width": 338,
+          "height": 252
+        },
+        "worldPosition": {
+          "x": 52.55,
+          "y": 2.92
+        },
+        "worldSize": {
+          "width": 2.0999999999999996,
+          "height": 1.565680473372781
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.17
+      },
+      {
+        "id": "polish-roof-amber-1",
+        "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-flowerpot-amber.png",
+        "pixelSize": [
+          160,
+          192
+        ],
+        "sourceRect": {
+          "x": 0,
+          "y": 26,
+          "width": 160,
+          "height": 166
+        },
+        "worldPosition": {
+          "x": 56.75,
+          "y": 2.92
+        },
+        "worldSize": {
+          "width": 1.0499999999999998,
+          "height": 1.089375
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.17
+      },
+      {
+        "id": "polish-roof-planter-box",
+        "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+        "pixelSize": [
+          200,
+          110
+        ],
+        "worldPosition": {
+          "x": 65.8,
+          "y": 3.3918749999999998
+        },
+        "worldSize": {
+          "width": 1.8749999999999998,
+          "height": 1.03125
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.18
+      },
+      {
+        "id": "polish-roof-tropical",
+        "image": "assets/environments/map01/foreground/individual/planters_tropical.png",
+        "pixelSize": [
+          324,
+          266
+        ],
+        "sourceRect": {
+          "x": 33,
+          "y": 27,
+          "width": 283,
+          "height": 231
+        },
+        "worldPosition": {
+          "x": 72,
+          "y": 2.92
+        },
+        "worldSize": {
+          "width": 2.25,
+          "height": 1.8365724381625441
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.17
+      },
+      {
+        "id": "polish-roof-amber-2",
+        "image": "assets/environments/map01/expansion-z45-rc1/individual/z4-flowerpot-amber.png",
+        "pixelSize": [
+          160,
+          192
+        ],
+        "sourceRect": {
+          "x": 0,
+          "y": 26,
+          "width": 160,
+          "height": 166
+        },
+        "worldPosition": {
+          "x": 77.5,
+          "y": 2.92
+        },
+        "worldSize": {
+          "width": 1.125,
+          "height": 1.1671875
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "collision": false,
+        "layer": "behind-player",
+        "z": -0.17
       }
     ]
   }

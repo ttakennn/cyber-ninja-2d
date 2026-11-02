@@ -33,7 +33,7 @@ describe('environment Three.js theo camera', () => {
       const mesh = meshes.find(({ name }) => name === decoration.id)!;
       expect(mesh.position.x).toBe(decoration.worldPosition.x);
       expect(mesh.position.y - mesh.scale.y / 2).toBeCloseTo(decoration.worldPosition.y);
-      expect(mesh.scale.toArray()).toEqual([decoration.worldSize.width, decoration.worldSize.height, 1]);
+      expect(mesh.scale.toArray()).toEqual([decoration.worldSize.width * (decoration.flipX ? -1 : 1), decoration.worldSize.height, 1]);
       expect(mesh.position.z).toBe(decoration.z);
     }
     const tanks = meshes.filter(({ name }) => name.includes('water-tank'));
