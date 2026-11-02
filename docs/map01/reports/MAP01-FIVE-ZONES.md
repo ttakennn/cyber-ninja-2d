@@ -32,9 +32,9 @@ Tạo lại: `node scripts/generate_map01_five_zones.mjs`. Chế độ đối ch
 
 ## Test và build cuối
 
-Node 24.22.1. [test.log](map01-five-zones/test.log): **388/388 test, 30/30 file, exit 0, 3.14 giây**. Thêm sáu trường hợp: alias/tương thích source mới nhất, grid/ô cũ/marker, URL thực/placeholder, hai mô phỏng chạy hoặc nhảy khỏi mép mái tới nền mới, tái tạo generator. Mô phỏng xác nhận tiếp đất trong 80..88, đi tới X143.5 mà không đổi physics. Bộ test cũ vẫn qua.
+Node 24.22.1. [test.log](../commits/map01-five-zones/test.log): **388/388 test, 30/30 file, exit 0, 3.14 giây**. Thêm sáu trường hợp: alias/tương thích source mới nhất, grid/ô cũ/marker, URL thực/placeholder, hai mô phỏng chạy hoặc nhảy khỏi mép mái tới nền mới, tái tạo generator. Mô phỏng xác nhận tiếp đất trong 80..88, đi tới X143.5 mà không đổi physics. Bộ test cũ vẫn qua.
 
-[build.log](map01-five-zones/build.log): **exit 0**, TypeScript trong script build qua, Vite 8.3.5/37 module/**3.00 giây**. JS `index-D8rgOncG.js` **1.120,50 kB**, gzip **158,68 kB**; CSS 1,85/gzip 0,78; HTML 1,26/gzip 0,69. Cảnh báo chunk >500kB và gợi ý worker/isolation của Vitest còn; không đổi cấu hình để giấu cảnh báo.
+[build.log](../commits/map01-five-zones/build.log): **exit 0**, TypeScript trong script build qua, Vite 8.3.5/37 module/**3.00 giây**. JS `index-D8rgOncG.js` **1.120,50 kB**, gzip **158,68 kB**; CSS 1,85/gzip 0,78; HTML 1,26/gzip 0,69. Cảnh báo chunk >500kB và gợi ý worker/isolation của Vitest còn; không đổi cấu hình để giấu cảnh báo.
 
 Lần kiểm đầu có lỗi kiểu vùng leo trong test mới và mô phỏng đi quá mép X144 rồi kỳ vọng vẫn đứng trên sàn. Đã dùng dữ liệu qua parser và dừng mô phỏng trong sàn; không sửa physics hoặc hạ tiêu chí tiếp đất để làm pass. Sau quan sát ảnh đã tách dòng chữ placeholder cho dễ đọc; log và mọi ảnh bàn giao là từ build sau chỉnh này.
 
@@ -62,14 +62,14 @@ Console cuối alias năm zone là `[]` ở mức warn/error. HUD F3 tại các 
 
 **32 screenshot thật** từ cùng build/commit mã: tám cảnh × bốn viewport 1920×1080, 1280×720, 1024×768, 540×960. Cảnh gồm spawn, landing, noodle-shop, market, arena, arena-debug (F3/F4), exit và respawn. Biển không thể cùng nằm trọn trong portrait, lõi16 unit cũng không thấy toàn bộ ở màn dọc; giữ camera hiện có theo yêu cầu.
 
-Ảnh JPEG nguyên byte từ IAB. API trả ảnh 1920×1061 khi đặt viewport CSS1920×1080; ba cỡ còn lại trả đúng kích thước. Không kéo giãn ảnh để giả đủ 1080. Kích thước file thực trong [image-dimensions.json](map01-five-zones/image-dimensions.json); [runtime.json](map01-five-zones/runtime.json) ghi code commit/build SHA-256, hash ảnh, viewport đặt và các điểm HUD đã đọc. Các điểm HUD được chép từ kết quả accessibility, không phải telemetry từng frame. [legacy-smoke.json](map01-five-zones/legacy-smoke.json) ghi alias cũ.
+Ảnh JPEG nguyên byte từ IAB. API trả ảnh 1920×1061 khi đặt viewport CSS1920×1080; ba cỡ còn lại trả đúng kích thước. Không kéo giãn ảnh để giả đủ 1080. Kích thước file thực trong [image-dimensions.json](../commits/map01-five-zones/image-dimensions.json); [runtime.json](../commits/map01-five-zones/runtime.json) ghi code commit/build SHA-256, hash ảnh, viewport đặt và các điểm HUD đã đọc. Các điểm HUD được chép từ kết quả accessibility, không phải telemetry từng frame. [legacy-smoke.json](../commits/map01-five-zones/legacy-smoke.json) ghi alias cũ.
 
 | Cảnh | 1920×1080 (file cao1061) | 1280×720 | 1024×768 | 540×960 |
 | --- | --- | --- | --- | --- |
-| Tiếp đất | [Ảnh](map01-five-zones/landing-1920x1080.jpg) | [Ảnh](map01-five-zones/landing-1280x720.jpg) | [Ảnh](map01-five-zones/landing-1024x768.jpg) | [Ảnh](map01-five-zones/landing-540x960.jpg) |
-| Hủ tiếu | [Ảnh](map01-five-zones/noodle-shop-1920x1080.jpg) | [Ảnh](map01-five-zones/noodle-shop-1280x720.jpg) | [Ảnh](map01-five-zones/noodle-shop-1024x768.jpg) | [Ảnh](map01-five-zones/noodle-shop-540x960.jpg) |
-| Siêu thị | [Ảnh](map01-five-zones/market-1920x1080.jpg) | [Ảnh](map01-five-zones/market-1280x720.jpg) | [Ảnh](map01-five-zones/market-1024x768.jpg) | [Ảnh](map01-five-zones/market-540x960.jpg) |
-| Arena | [Ảnh](map01-five-zones/arena-1920x1080.jpg) | [Ảnh](map01-five-zones/arena-1280x720.jpg) | [Ảnh](map01-five-zones/arena-1024x768.jpg) | [Ảnh](map01-five-zones/arena-540x960.jpg) |
+| Tiếp đất | [Ảnh](../commits/map01-five-zones/landing-1920x1080.jpg) | [Ảnh](../commits/map01-five-zones/landing-1280x720.jpg) | [Ảnh](../commits/map01-five-zones/landing-1024x768.jpg) | [Ảnh](../commits/map01-five-zones/landing-540x960.jpg) |
+| Hủ tiếu | [Ảnh](../commits/map01-five-zones/noodle-shop-1920x1080.jpg) | [Ảnh](../commits/map01-five-zones/noodle-shop-1280x720.jpg) | [Ảnh](../commits/map01-five-zones/noodle-shop-1024x768.jpg) | [Ảnh](../commits/map01-five-zones/noodle-shop-540x960.jpg) |
+| Siêu thị | [Ảnh](../commits/map01-five-zones/market-1920x1080.jpg) | [Ảnh](../commits/map01-five-zones/market-1280x720.jpg) | [Ảnh](../commits/map01-five-zones/market-1024x768.jpg) | [Ảnh](../commits/map01-five-zones/market-540x960.jpg) |
+| Arena | [Ảnh](../commits/map01-five-zones/arena-1920x1080.jpg) | [Ảnh](../commits/map01-five-zones/arena-1280x720.jpg) | [Ảnh](../commits/map01-five-zones/arena-1024x768.jpg) | [Ảnh](../commits/map01-five-zones/arena-540x960.jpg) |
 
 ## Còn mở
 

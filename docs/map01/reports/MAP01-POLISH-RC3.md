@@ -31,7 +31,7 @@ Biển mới dùng **image_gen.imagegen built-in**, chỉnh từ sign-pho-247 v2
 
 - PNG: `public/assets/environments/map01/ui-polish-rc3/sign-pho-sai-gon.png`.
 - Manifest: `public/assets/environments/map01/ui-polish-rc3/asset-manifest.json`, ghi kích thước thật 2172×724, SHA-256, ảnh tham chiếu và file prompt. Crop runtime (58,137,2058,454) lấy bounds alpha≥32, không sửa PNG đã sinh.
-- Prompt đầy đủ: [image-prompts.md](../integration/map01-polish-rc3/image-prompts.md).
+- Prompt đầy đủ: [image-prompts.md](../../../integration/map01-polish-rc3/image-prompts.md).
 - Bản gốc công cụ: `C:/Users/anhthaitrong/.codex/generated_images/01a186ed-7c3b-7910-a19b-66e98696e98e/exec-064f9494-5f2b-42b4-8a63-34704ae9eafe.png`. Asset runtime đã copy vào repo, không phụ thuộc đường dẫn này.
 - Các prop khác tái sử dụng props-v2/foreground/production. Không ghi đè PNG/catalog nguồn; không tạo atlas mới cho một biển duy nhất. Bậc dùng UV của texture đã có, không vẽ vật liệu khác phong cách.
 - Bounds crop railing_cross (10,8,346,171) được đọc từ alpha≥16. Texture mặt bậc dùng patch giữa các cửa sổ, tránh lấy nguyên cửa/quạt lên cầu thang; vẫn cần xem runtime để duyệt mỹ thuật.

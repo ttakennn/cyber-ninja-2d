@@ -48,7 +48,7 @@ Theo diff JSON đã đọc, các trường thay đổi chỉ là thông tin ản
 
 Backwall dùng rect `(0, 0, 2048, 768)`. Giữ sampler hiện có: LinearFilter, sRGB, không mipmap, ClampToEdge; không repeat. Không sửa engine để làm ảnh vừa placement.
 
-Nguồn và chỉ dẫn bàn giao: [README](../integration/z45-atlas-rc1/README.md), [manifest](../public/assets/environments/map01/expansion-z45-rc1/asset-manifest.json), [replacement-map](../integration/z45-atlas-rc1/replacement-map.json), [review](../integration/z45-atlas-rc1/REVIEW.md), [acceptance](../integration/z45-atlas-rc1/ACCEPTANCE.md). Trạng thái runtime trong manifest là trạng thái nguồn, không phải chứng nhận bản tích hợp.
+Nguồn và chỉ dẫn bàn giao: [README](../../../integration/z45-atlas-rc1/README.md), [manifest](../../../public/assets/environments/map01/expansion-z45-rc1/asset-manifest.json), [replacement-map](../../../integration/z45-atlas-rc1/replacement-map.json), [review](../../../integration/z45-atlas-rc1/REVIEW.md), [acceptance](../../../integration/z45-atlas-rc1/ACCEPTANCE.md). Trạng thái runtime trong manifest là trạng thái nguồn, không phải chứng nhận bản tích hợp.
 
 ## Việc đã thực hiện và chưa thực hiện
 
