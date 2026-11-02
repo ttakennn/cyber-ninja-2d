@@ -1,0 +1,49 @@
+{
+  "status": "USER_APPROVED_ART_ANIMATION_ONLY",
+  "source": "integration/task-009-player-attacks/candidate/",
+  "plan": "integration/task-009-player-attacks/combo-plan.json",
+  "damage": "NOT_IMPLEMENTED",
+  "assets": [
+    {
+      "name": "attack_1",
+      "image": "attack_1.png",
+      "metadata": "attack_1.json",
+      "approvedFrameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sha256": "9079109d888d8f8cf758d6d87f47534cf1a5874ab9a26b953cebb9ebfdf8b9b4"
+    },
+    {
+      "name": "attack_2",
+      "image": "attack_2.png",
+      "metadata": "attack_2.json",
+      "approvedFrameIndices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sha256": "8770b081d7b9dc62e1712ca3cc58acafbc82874b918ecb7349a2cf0a8c3e1077"
+    },
+    {
+      "name": "attack_3",
+      "image": "attack_3.png",
+      "metadata": "attack_3.json",
+      "approvedFrameIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "sha256": "a7f09a6ffdd0e6585ea662faf26ec9571ec494e2bffd60c3d33315a7e019fad9"
+    }
+  ]
+}

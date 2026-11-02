@@ -6,6 +6,7 @@ import type { PhysicsBody, Vector2 } from '../physics/Collision';
 import type { PhysicsWorld } from '../physics/PhysicsWorld';
 import { SpriteRenderer } from '../rendering/SpriteRenderer';
 import { PlayerAnimator } from './PlayerAnimator';
+import { PlayerAttack } from './PlayerAttack';
 import { PlayerMovementController } from './PlayerMovementController';
 import type { MovementInput } from './PlayerMovementController';
 
@@ -21,6 +22,7 @@ export class Player {
   };
   readonly visual = new Group();
   readonly animator = new PlayerAnimator();
+  readonly attack = new PlayerAttack();
   readonly movement = new PlayerMovementController(this.body);
   private readonly placeholder: Mesh<PlaneGeometry, MeshBasicMaterial>;
   private readonly previousPosition = { ...gameConfig.player.spawn } as { x: number; y: number };
@@ -40,6 +42,7 @@ export class Player {
     );
     this.placeholder.name = 'player-placeholder';
     this.visual.add(this.placeholder);
+    this.visual.add(this.attack.visual);
     this.setPosition(spawn.x, spawn.y);
   }
 
@@ -65,6 +68,7 @@ export class Player {
       replacement = null;
       this.sprite.visual.position.y = -this.body.height / 2;
       this.visual.add(this.sprite.visual);
+      this.visual.add(this.attack.visual);
       this.placeholder.visible = false;
       this.spriteStatus = sheet.kind;
       sheet = null;
@@ -123,6 +127,7 @@ export class Player {
   }
 
   respawn(spawn: Readonly<Vector2>): void {
+    this.attack.cancel();
     this.movement.reset();
     this.animator.reset();
     this.state = 'fall';
@@ -131,6 +136,16 @@ export class Player {
 
   updateAnimation(delta: number, landed: boolean): void {
     this.animator.update(delta, this.body, landed, this.movement);
+    this.attack.update(delta, this.canAttack);
+  }
+
+  get canAttack(): boolean {
+    return this.body.isGrounded && this.movement.mode !== 'climbing' && this.movement.stance === 'standing';
+  }
+
+  requestAttack(time?: number): void {
+    if (!this.canAttack) return;
+    this.attack.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing, time);
   }
 
   get renderHeight(): number { return this.interpolatedHeight; }
@@ -152,6 +167,9 @@ export class Player {
         ? this.body.height / gameConfig.player.height : 1;
     }
     this.sprite?.setFrame(this.animator.controller.frame, this.animator.renderFacing);
+    this.attack.visual.position.y = -this.interpolatedHeight / 2;
+    if (this.sprite) this.sprite.visual.visible = !this.attack.isActive;
+    this.placeholder.visible = !this.sprite && !this.attack.isActive;
   }
 
   dispose(): void {
@@ -161,6 +179,7 @@ export class Player {
     this.assetAbort = null;
     this.visual.removeFromParent();
     this.sprite?.dispose();
+    this.attack.dispose();
     this.placeholder.geometry.dispose();
     this.placeholder.material.dispose();
     this.visual.clear();

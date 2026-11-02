@@ -55,6 +55,8 @@ export class DebugOverlay {
       `Hướng vẽ     ${animator.renderFacing}`,
       `Chiều leo    ${animator.climbDirection}`,
       `Sprite       ${spriteStatus}`,
+      `Attack       ${player.attack.status} / ${player.attack.isActive ? player.attack.step + 1 : '—'}`,
+      ...(player.attack.error ? [`Lỗi attack   ${player.attack.error}`] : []),
       ...(player.spriteError ? [`Lỗi asset    ${player.spriteError}`] : []),
       `Alpha        ${alpha.toFixed(3)}`,
     ].join('\n');

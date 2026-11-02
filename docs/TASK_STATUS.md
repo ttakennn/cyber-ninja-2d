@@ -1,6 +1,6 @@
 # Trạng thái toàn dự án
 
-Task09 trên nhánh codex/task-009-player-attack-art từ a26fcd3: [kế hoạch chia phần](TASK-009.md). Người dùng đã duyệt combo/canvas attack và yêu cầu commit, tích hợp animation;09.1 art được chọn.09.2 đang bắt đầu, chưa promote/runtime hoặc merge master ở mốc commit artwork. Skills, damage/hitbox, quái và boss chưa thực hiện; chưa test/build.
+Task09 trên nhánh codex/task-009-player-attack-art từ a26fcd3: [kế hoạch chia phần](TASK-009.md). Art được người dùng duyệt, commit1442907. Đã promote ảnh và tích hợp animation: click trái nối1→2→3, nghỉ≥0.5s về1; [báo cáo09.2](map01/commits/task-009-02-player-combo/IMPLEMENTATION.md). Chưa merge master, chưa chạy test/build/runtime. Skills riêng, damage/hitbox, quái và boss chưa thực hiện.
 
 Cập nhật 2026-11-02. Baseline code/asset gần nhất4ce0146; task tổ chức tài liệu không đổi runtime và không chạy test/build.
 

@@ -12,3 +12,5 @@ Chỉ ghi quyết định có căn cứ từ người dùng; đề xuất chưa 
 | 2026-11-02/phân phạm vi rules | Làm rõ/thay giới hạn palette toàn game của bộ rules trước: style chung là Illustrated textured pixel art; từng map có màu, độ sáng/chủ đề riêng, Map02/03 có thể tươi sáng hơn. Danh tính/contract theo nhân vật, không áp khuôn ninja cho mọi nhân vật | Người dùng yêu cầu tách docs/rules/, docs/map01/rules/ và hướng mở rộng nhiều map/nhân vật; Map01 vẫn giữ palette riêng đã chốt. Không phải phép tự recolor/resize asset hiện có |
 
 Nếu người dùng chốt thay đổi mới, thêm mục ghi yêu cầu, phạm vi, nguồn metadata và trạng thái kiểm tra; cập nhật spec liên quan. Không sửa/xoá lịch sử để giả rằng baseline cũ chưa từng tồn tại. Yêu cầu rõ ràng mới có thể thay quyết định cũ trong phạm vi được giao.
+
+Task09: người dùng duyệt combo artwork/canvas đệm, yêu cầu commit rồi áp dụng. Đã lưu art ở1442907. Điều khiển được chốt: click trái một lần ra đòn1; click liên tiếp nối1→2→3; dừng0.5s thì bắt đầu lại. Chưa chốt damage/skills/quái/boss hoặc nghiệm thu runtime. Không merge master ở lượt này.

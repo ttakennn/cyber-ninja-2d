@@ -29,5 +29,6 @@ export const gameConfig = {
     spawn: playground.spawn,
     color: 0x58e7db,
     spriteMetadata: 'assets/characters/ninja/animations.json',
+    comboResetSeconds: 0.5,
   },
 } as const;

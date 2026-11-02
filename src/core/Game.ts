@@ -24,6 +24,7 @@ export class Game {
   private readonly resizeObserver: ResizeObserver;
   private started = false;
   private disposed = false;
+  private readonly pendingAttackClicks: number[] = [];
 
   constructor(private readonly container: HTMLElement, levelData?: unknown) {
     this.level = new TestLevel(levelData);
@@ -53,6 +54,9 @@ export class Game {
     this.resize();
     this.camera.reset(this.player.visual.position);
     void this.player.loadSprite();
+    void this.player.attack.load();
+    container.addEventListener('pointerdown', this.onPointerDown);
+    window.addEventListener('blur', this.onAttackBlur);
   }
 
   async loadLevelVisuals(): Promise<void> {
@@ -71,6 +75,8 @@ export class Game {
     this.loop.stop();
     this.input.reset();
     this.player.movement.resetInput();
+    this.pendingAttackClicks.length = 0;
+    this.player.attack.cancel();
     this.player.resetInterpolation();
   }
 
@@ -80,6 +86,8 @@ export class Game {
     this.disposed = true;
     this.resizeObserver.disconnect();
     window.removeEventListener('resize', this.resize);
+    this.container.removeEventListener('pointerdown', this.onPointerDown);
+    window.removeEventListener('blur', this.onAttackBlur);
     document.removeEventListener('visibilitychange', this.onVisibilityChange);
     this.input.dispose();
     this.player.dispose();
@@ -101,7 +109,9 @@ export class Game {
       jump: this.input.wasPressed('jump'),
       detachJump: this.input.wasPressed('detachJump'),
     });
-    if (this.recovery.update(this.player, this.input, this.camera)) return;
+    if (this.recovery.update(this.player, this.input, this.camera)) { this.pendingAttackClicks.length = 0; return; }
+    for (const time of this.pendingAttackClicks) this.player.requestAttack(time);
+    this.pendingAttackClicks.length = 0;
     this.player.updateState(landed);
     this.player.updateAnimation(delta, landed);
     this.input.endStep();
@@ -124,10 +134,22 @@ export class Game {
   };
 
   private readonly onVisibilityChange = (): void => {
+    this.pendingAttackClicks.length = 0;
+    this.player.attack.cancel();
     this.input.reset();
     this.player.movement.resetInput();
     this.player.resetInterpolation();
     if (document.hidden) this.loop.stop();
     else if (this.started) this.loop.start();
+  };
+
+  private readonly onPointerDown = (event: PointerEvent): void => {
+    if (!this.started || document.hidden || event.button !== 0 || !event.isPrimary || !(event.target instanceof HTMLCanvasElement)) return;
+    if (this.pendingAttackClicks.length < 3) this.pendingAttackClicks.push(event.timeStamp / 1000);
+  };
+
+  private readonly onAttackBlur = (): void => {
+    this.pendingAttackClicks.length = 0;
+    this.player.attack.cancel();
   };
 }

@@ -1,0 +1,103 @@
+{
+  "image": "attack_1.png",
+  "kind": "production",
+  "filter": "linear",
+  "version": 1,
+  "clips": {
+    "attack_1": {
+      "loop": false,
+      "frames": [
+        {
+          "y": 0,
+          "height": 512,
+          "x": 0,
+          "offsetX": 0,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "pivot": {
+            "y": 353,
+            "x": 192
+          },
+          "width": 512,
+          "offsetY": 0
+        },
+        {
+          "y": 0,
+          "height": 512,
+          "x": 512,
+          "offsetX": 0,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "pivot": {
+            "y": 353,
+            "x": 192
+          },
+          "width": 512,
+          "offsetY": 0
+        },
+        {
+          "y": 0,
+          "height": 512,
+          "x": 1024,
+          "offsetX": 0,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "pivot": {
+            "y": 353,
+            "x": 192
+          },
+          "width": 512,
+          "offsetY": 0
+        },
+        {
+          "y": 512,
+          "height": 512,
+          "x": 0,
+          "offsetX": 0,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "pivot": {
+            "y": 353,
+            "x": 192
+          },
+          "width": 512,
+          "offsetY": 0
+        },
+        {
+          "y": 512,
+          "height": 512,
+          "x": 512,
+          "offsetX": 0,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "pivot": {
+            "y": 353,
+            "x": 192
+          },
+          "width": 512,
+          "offsetY": 0
+        }
+      ],
+      "fps": 20
+    }
+  },
+  "frameHeight": 512,
+  "frameWidth": 512,
+  "columns": 3,
+  "visual": {
+    "offset": {
+      "y": 0,
+      "x": 0
+    },
+    "scale": {
+      "y": 1,
+      "x": 1
+    },
+    "anchor": {
+      "y": 0,
+      "x": 0.5
+    },
+    "width": 3.2,
+    "height": 3.2
+  }
+}
