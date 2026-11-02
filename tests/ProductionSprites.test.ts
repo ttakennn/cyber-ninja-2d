@@ -44,7 +44,7 @@ afterEach(() => {
 describe('atlas production tại đúng đường dẫn runtime', () => {
   it('đọc PNG RGBA đúng kích thước và đủ tám clip cần tích hợp', () => {
     expect(sheet.kind).toBe('production');
-    expect(sheet.image).toBe('flame-ninja-atlas.png');
+    expect(sheet.image).toBe('flame-ninja-atlas-v2.png');
     expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
     expect([imageWidth, imageHeight, png[24], png[25]]).toEqual([3136, 1968, 8, 6]);
     for (const name of required) expect(sheet.clips[name]?.frames.length).toBeGreaterThan(0);
@@ -84,7 +84,7 @@ describe('atlas production tại đúng đường dẫn runtime', () => {
     const result = new Player();
     players.push(result);
     await result.loadSprite(loader);
-    expect(imageUrl).toBe('https://game.example/play/assets/characters/ninja/flame-ninja-atlas.png');
+    expect(imageUrl).toBe('https://game.example/play/assets/characters/ninja/flame-ninja-atlas-v2.png');
     expect(result.spriteStatus).toBe('production');
     expect(result.spriteError).toBe('');
     expect(result.body.width).toBe(0.8);
