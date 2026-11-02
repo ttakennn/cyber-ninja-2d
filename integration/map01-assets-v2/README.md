@@ -1,5 +1,7 @@
 # Map01 props/background v2
 
+Cập nhật 2026-11-02: người dùng yêu cầu bộ v2 thay tên canonical `public/assets/environments/map01/backgrounds/` và `props/`; catalog background hiện là `backgrounds.json`. Nội dung bên dưới và `path-replacements.json` giữ lịch sử bàn giao ban đầu, không phải hướng dẫn di chuyển hiện tại. Runtime/generator/test đã dùng đường dẫn canonical.
+
 Art candidate để thay asset cũ. Baseline review: 5d8674d. Đã chuyển runtime `map01` và `map01-five-zones` sang backgrounds-v2/props-v2; chưa nghiệm thu production.
 
 Tích hợp ngày 2026-10-31: đã sửa nguồn generator/input và sinh lại hai level, chỉ đổi URL của bốn background và bảy placement prop đang dùng. Giữ placement/gameplay, foreground/production và atlas Zone 4/5 RC1. Bốn biển mới chưa có placement nên chưa được thêm. Test/build/runtime: NOT_RUN; chưa cập nhật dist. Các bước và trạng thái trong path-replacements.json bên dưới là thông tin bàn giao trước tích hợp.

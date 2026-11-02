@@ -848,7 +848,7 @@
     },
     {
       "id": "buildings-near",
-      "image": "../backgrounds-v2/buildings-near.png",
+      "image": "../backgrounds/buildings-near.png",
       "sizePx": {
         "width": 2048,
         "height": 832
@@ -874,7 +874,7 @@
     }
   ],
   "atlas": {
-    "path": "props-v2/atlases/map01-props-atlas.png",
+    "path": "props/atlases/map01-props-atlas.png",
     "size": [
       2048,
       2048

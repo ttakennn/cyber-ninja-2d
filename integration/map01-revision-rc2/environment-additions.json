@@ -2,7 +2,7 @@
   "decorations": [
     {
       "id": "rc2-street-crate",
-      "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+      "image": "assets/environments/map01/props/props/street/crate-wood.png",
       "pixelSize": [
         124,
         124
@@ -25,7 +25,7 @@
     },
     {
       "id": "rc2-bench",
-      "image": "assets/environments/map01/props-v2/props/street/street-bench.png",
+      "image": "assets/environments/map01/props/props/street/street-bench.png",
       "pixelSize": [
         228,
         160
@@ -48,7 +48,7 @@
     },
     {
       "id": "rc2-ladder",
-      "image": "assets/environments/map01/props-v2/props/alley/metal-ladder.png",
+      "image": "assets/environments/map01/props/props/alley/metal-ladder.png",
       "pixelSize": [
         92,
         394
@@ -71,7 +71,7 @@
     },
     {
       "id": "rc2-balcony-planter",
-      "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+      "image": "assets/environments/map01/props/props/street/planter-box.png",
       "pixelSize": [
         200,
         110
@@ -882,7 +882,7 @@
     },
     {
       "id": "rc2-noodle-sign",
-      "image": "assets/environments/map01/props-v2/props/signs/sign-hu-tieu.png",
+      "image": "assets/environments/map01/props/props/signs/sign-hu-tieu.png",
       "pixelSize": [
         264,
         106
@@ -905,7 +905,7 @@
     },
     {
       "id": "rc2-market-sign",
-      "image": "assets/environments/map01/props-v2/props/signs/sign-supermarket.png",
+      "image": "assets/environments/map01/props/props/signs/sign-supermarket.png",
       "pixelSize": [
         264,
         106

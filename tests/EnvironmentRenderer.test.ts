@@ -145,7 +145,7 @@ describe('environment Three.js theo camera', () => {
       const result = texture(url);
       textures.push(result); spies.push(vi.spyOn(result, 'dispose'));
       return result;
-    })).rejects.toThrow('environment image: assets/environments/map01/backgrounds-v2/sky.png');
+    })).rejects.toThrow('environment image: assets/environments/map01/backgrounds/sky.png');
     expect(textures).toHaveLength(definitions.size - 1);
     for (const spy of spies) expect(spy).toHaveBeenCalledTimes(1);
     expect(renderer.visual.children).toHaveLength(0);

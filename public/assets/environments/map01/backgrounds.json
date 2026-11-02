@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "status": "art-source-approved/static-QA-done/ThreeJS-pending",
+  "status": "V2_ART_CANDIDATE_RUNTIME_AND_SCROLL_SEAM_PENDING",
   "coordinateSystem": "world X right/Y up; camera-relative 2D rendering",
   "referenceViewport": {
     "worldWidth": 16,
@@ -20,12 +20,12 @@
         2048,
         1024
       ],
-      "parallaxX": 0.0,
+      "parallaxX": 0,
       "parallaxY": 0,
       "repeatX": false,
       "transparent": false,
-      "worldHeight": 9.0,
-      "z": -8.0,
+      "worldHeight": 9,
+      "z": -8,
       "placement": "cover-viewport-no-repeat",
       "sourceImage": "references/moonlit_violet_cloudscape.png"
     },
@@ -40,8 +40,8 @@
       "parallaxY": 0,
       "repeatX": true,
       "transparent": true,
-      "worldHeight": 4.0,
-      "z": -6.0,
+      "worldHeight": 4,
+      "z": -6,
       "placement": "repeat-x-bottom-aligned",
       "sourceImage": "references/neon_noir_city_skyline_strip.png"
     },
@@ -57,7 +57,7 @@
       "repeatX": true,
       "transparent": true,
       "worldHeight": 4.7,
-      "z": -4.0,
+      "z": -4,
       "placement": "repeat-x-bottom-aligned",
       "sourceImage": "references/neon_pixel_city_rooftops.png"
     },
@@ -73,7 +73,7 @@
       "repeatX": true,
       "transparent": true,
       "worldHeight": 5.4,
-      "z": -2.0,
+      "z": -2,
       "placement": "repeat-x-bottom-aligned",
       "sourceImage": "references/neon_vietnamese_shophouse_skyline.png"
     }

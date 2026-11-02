@@ -9,7 +9,7 @@ import pilot from '../src/world/levels/map-01-visual-pilot.json';
 import five from '../src/world/levels/map-01-five-zones.json';
 import revision from '../integration/map01-revision-rc2/map-revision-plan.json';
 import rc1 from '../integration/z45-atlas-rc1/environment-replacements-atlas.json';
-import props from '../public/assets/environments/map01/props-v2/props.json';
+import props from '../public/assets/environments/map01/props/props.json';
 import metadata from '../public/assets/environments/map01/revision-rc2/asset-manifest.json';
 import streetLayout from '../integration/map01-street-layout.json';
 

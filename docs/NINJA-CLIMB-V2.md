@@ -8,7 +8,7 @@ Atlas flame-ninja-atlas.png có 8 frame climbUp và 8 frame climbDown. Qua xem �
 
 ## Bản v2
 
-- Ảnh runtime mới: `public/assets/characters/ninja/flame-ninja-atlas-v2.png`, 3136×1968 RGBA. Atlas cũ giữ nguyên để có thể quay lại.
+- Ảnh runtime: `public/assets/characters/ninja/flame-ninja-atlas.png`, 3136×1968 RGBA. Sau khi người dùng duyệt, bản v2 đã thay tên canonical; atlas cũ còn trong lịch sử Git trước commit `12959ca`.
 - Chỉ thay các hình chữ nhật khai báo trong climbUp/climbDown: tổng 16 ô 384×320. Công đoạn ghép so pixel RGBA ngoài các ô này và dừng nếu có thay đổi; đã thực hiện thành công.
 - `animations.json` chỉ đổi trường image. Không đổi kích thước ô, tọa độ, sourceWidth/Height, offset, pivot (192,289), FPS, visual.width/height, visual.scale hoặc anchor. Không đổi animation controller, physics hay input.
 - Artwork mới có tay trái/tay phải thay phiên ở trên và chân trái/phải nâng đối bên. Giữ trang phục đen/đỏ, khăn và bao kiếm. Không lật cả nhân vật để giả đổi tay.
@@ -26,4 +26,4 @@ Atlas flame-ninja-atlas.png có 8 frame climbUp và 8 frame climbDown. Qua xem �
 
 Đã xem atlas gốc, các ảnh tạo và preview sau ghép; đã tạo atlas bằng script authoring. Cập nhật hai kỳ vọng đường dẫn trong ProductionSprites.test.ts, **chưa chạy test, build, lint, formatter, typecheck hoặc game**.
 
-Người dùng sẽ chạy và review: hai chiều leo, dừng giữa thang, đổi chiều, chân/tay so với bậc, độ ổn định đầu/hông và cảm nhận kích thước so với idle/run. Nếu không thích bản v2, chỉ cần đổi image về flame-ninja-atlas.png; atlas và metadata gốc khác vẫn còn nguyên.
+Người dùng đã duyệt bản v2 và yêu cầu dùng tên canonical. Script authoring dùng atlas canonical làm nền, ghi file trung gian rồi thay file sau khi đóng handle ảnh; không còn tạo file runtime có hậu tố -v2. Chưa chạy lại script hoặc test/build trong bước đổi tên.

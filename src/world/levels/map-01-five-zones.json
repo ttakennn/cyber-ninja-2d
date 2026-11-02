@@ -460,7 +460,7 @@
         "repeatX": false,
         "worldHeight": 9,
         "z": -8,
-        "image": "assets/environments/map01/backgrounds-v2/sky.png",
+        "image": "assets/environments/map01/backgrounds/sky.png",
         "bottomOffset": 0
       },
       {
@@ -474,7 +474,7 @@
         "repeatX": true,
         "worldHeight": 4,
         "z": -6,
-        "image": "assets/environments/map01/backgrounds-v2/city-far.png",
+        "image": "assets/environments/map01/backgrounds/city-far.png",
         "bottomOffset": 0
       },
       {
@@ -488,7 +488,7 @@
         "repeatX": true,
         "worldHeight": 4.7,
         "z": -4,
-        "image": "assets/environments/map01/backgrounds-v2/city-mid.png",
+        "image": "assets/environments/map01/backgrounds/city-mid.png",
         "bottomOffset": 0
       }
     ],
@@ -1532,7 +1532,7 @@
       },
       {
         "id": "polish-crate-2",
-        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+        "image": "assets/environments/map01/props/props/street/crate-wood.png",
         "pixelSize": [
           124,
           124
@@ -1555,7 +1555,7 @@
       },
       {
         "id": "polish-crate-3",
-        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+        "image": "assets/environments/map01/props/props/street/crate-wood.png",
         "pixelSize": [
           124,
           124
@@ -1636,7 +1636,7 @@
       },
       {
         "id": "polish-street-lamp",
-        "image": "assets/environments/map01/props-v2/props/street/street-lamp.png",
+        "image": "assets/environments/map01/props/props/street/street-lamp.png",
         "pixelSize": [
           146,
           294
@@ -1660,7 +1660,7 @@
       },
       {
         "id": "props-rooftop-water-tank-5",
-        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
+        "image": "assets/environments/map01/props/props/rooftop/rooftop-water-tank.png",
         "pixelSize": [
           229,
           280
@@ -1742,7 +1742,7 @@
       },
       {
         "id": "props-satellite-dish-6",
-        "image": "assets/environments/map01/props-v2/props/rooftop/satellite-dish.png",
+        "image": "assets/environments/map01/props/props/rooftop/satellite-dish.png",
         "pixelSize": [
           158,
           178
@@ -1765,7 +1765,7 @@
       },
       {
         "id": "props-antenna-7",
-        "image": "assets/environments/map01/props-v2/props/rooftop/antenna.png",
+        "image": "assets/environments/map01/props/props/rooftop/antenna.png",
         "pixelSize": [
           194,
           259
@@ -1788,7 +1788,7 @@
       },
       {
         "id": "props-rooftop-water-tank-8",
-        "image": "assets/environments/map01/props-v2/props/rooftop/rooftop-water-tank.png",
+        "image": "assets/environments/map01/props/props/rooftop/rooftop-water-tank.png",
         "pixelSize": [
           229,
           280
@@ -1811,7 +1811,7 @@
       },
       {
         "id": "polish-roof-pot-0",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1834,7 +1834,7 @@
       },
       {
         "id": "polish-roof-pot-1",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1857,7 +1857,7 @@
       },
       {
         "id": "polish-roof-pot-2",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1880,7 +1880,7 @@
       },
       {
         "id": "polish-roof-pot-3",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1903,7 +1903,7 @@
       },
       {
         "id": "polish-roof-pot-4",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1926,7 +1926,7 @@
       },
       {
         "id": "polish-roof-pot-5",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1949,7 +1949,7 @@
       },
       {
         "id": "polish-roof-pot-6",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1972,7 +1972,7 @@
       },
       {
         "id": "polish-roof-pot-7",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -1995,7 +1995,7 @@
       },
       {
         "id": "polish-roof-pot-8",
-        "image": "assets/environments/map01/props-v2/props/street/potted-plant.png",
+        "image": "assets/environments/map01/props/props/street/potted-plant.png",
         "pixelSize": [
           150,
           168
@@ -2076,7 +2076,7 @@
       },
       {
         "id": "polish-roof-planter-box",
-        "image": "assets/environments/map01/props-v2/props/street/planter-box.png",
+        "image": "assets/environments/map01/props/props/street/planter-box.png",
         "pixelSize": [
           200,
           110
@@ -2186,7 +2186,7 @@
       },
       {
         "id": "rc2-street-crate",
-        "image": "assets/environments/map01/props-v2/props/street/crate-wood.png",
+        "image": "assets/environments/map01/props/props/street/crate-wood.png",
         "pixelSize": [
           124,
           124
@@ -2209,7 +2209,7 @@
       },
       {
         "id": "rc2-bench",
-        "image": "assets/environments/map01/props-v2/props/street/street-bench.png",
+        "image": "assets/environments/map01/props/props/street/street-bench.png",
         "pixelSize": [
           228,
           160
@@ -2232,7 +2232,7 @@
       },
       {
         "id": "rc2-ladder",
-        "image": "assets/environments/map01/props-v2/props/alley/metal-ladder.png",
+        "image": "assets/environments/map01/props/props/alley/metal-ladder.png",
         "pixelSize": [
           92,
           394
@@ -3125,7 +3125,7 @@
       },
       {
         "id": "street-mix-near-0",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3155,7 +3155,7 @@
       },
       {
         "id": "street-mix-near-1",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3185,7 +3185,7 @@
       },
       {
         "id": "street-mix-near-2",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3215,7 +3215,7 @@
       },
       {
         "id": "street-mix-near-3",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3245,7 +3245,7 @@
       },
       {
         "id": "street-mix-near-4",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3275,7 +3275,7 @@
       },
       {
         "id": "street-mix-near-5",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3335,7 +3335,7 @@
       },
       {
         "id": "street-mix-near-7",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3365,7 +3365,7 @@
       },
       {
         "id": "street-mix-near-8",
-        "image": "assets/environments/map01/backgrounds-v2/buildings-near.png",
+        "image": "assets/environments/map01/backgrounds/buildings-near.png",
         "pixelSize": [
           2048,
           832
@@ -3491,7 +3491,7 @@
       },
       {
         "id": "street-mix-rc2-noodle-sign",
-        "image": "assets/environments/map01/props-v2/props/signs/sign-hu-tieu.png",
+        "image": "assets/environments/map01/props/props/signs/sign-hu-tieu.png",
         "pixelSize": [
           264,
           106
@@ -3515,7 +3515,7 @@
       },
       {
         "id": "street-mix-rc2-market-sign",
-        "image": "assets/environments/map01/props-v2/props/signs/sign-supermarket.png",
+        "image": "assets/environments/map01/props/props/signs/sign-supermarket.png",
         "pixelSize": [
           264,
           106

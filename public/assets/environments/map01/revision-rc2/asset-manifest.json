@@ -101,7 +101,7 @@
       "status": "FULL_PAGE_FINITE_BACKDROP_NO_REPEAT"
     }
   ],
-  "existingPropsCatalog": "assets/environments/map01/props-v2/props.json",
+  "existingPropsCatalog": "assets/environments/map01/props/props.json",
   "sourceRectConvention": "top-left; pixelSize is entire page",
   "filter": "LinearFilter",
   "mipmaps": false,

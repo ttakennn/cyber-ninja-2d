@@ -1,7 +1,7 @@
 {
   "version": 1,
   "kind": "production",
-  "image": "flame-ninja-atlas-v2.png",
+  "image": "flame-ninja-atlas.png",
   "filter": "linear",
   "frameWidth": 384,
   "frameHeight": 320,

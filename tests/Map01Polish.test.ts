@@ -8,7 +8,7 @@ import { parseEnvironmentData } from '../src/world/EnvironmentData';
 import { parseLevelData } from '../src/world/LevelData';
 import pilot from '../src/world/levels/map-01-visual-pilot.json';
 import five from '../src/world/levels/map-01-five-zones.json';
-import props from '../public/assets/environments/map01/props-v2/props.json';
+import props from '../public/assets/environments/map01/props/props.json';
 import signAsset from '../public/assets/environments/map01/ui-polish-rc3/asset-manifest.json';
 import streetLayout from '../integration/map01-street-layout.json';
 
@@ -81,7 +81,7 @@ describe('Map01 polish RC3 theo bảy ảnh', () => {
     expect(level.environment!.decorations.find(({ id }) => id === 'props-rooftop-water-tank-5')!.worldPosition.x).toBeLessThan(40);
   });
 
-  it('dùng chậu individual/props-v2 có crop sát chân, nằm trong mái và không thêm collider', () => {
+  it('dùng chậu individual/props có crop sát chân, nằm trong mái và không thêm collider', () => {
     const level = parseLevelData(five);
     for (const [id, foot, left, right, originalWidth] of [
       ['polish-balcony-mixed', 1, 30, 36.5, 1.35], ['polish-balcony-tropical', 1, 30, 36.5, 1.35],
@@ -96,7 +96,7 @@ describe('Map01 polish RC3 theo bảy ảnh', () => {
       expect(entry.worldPosition.x + entry.worldSize.width / 2).toBeLessThanOrEqual(right);
       expect(entry.worldSize.width / entry.worldSize.height).toBeCloseTo(entry.sourceRect!.width / entry.sourceRect!.height);
     }
-    expect(level.environment!.decorations.find(({ id }) => id === 'polish-roof-planter-box')!.image).toContain('props-v2/props/street/planter-box.png');
+    expect(level.environment!.decorations.find(({ id }) => id === 'polish-roof-planter-box')!.image).toContain('props/props/street/planter-box.png');
     for (const [leftId, rightId] of [['polish-roof-amber-1', 'polish-roof-pot-2'], ['polish-roof-amber-2', 'polish-roof-pot-8']]) {
       const first = level.environment!.decorations.find(({ id }) => id === leftId)!;
       const second = level.environment!.decorations.find(({ id }) => id === rightId)!;

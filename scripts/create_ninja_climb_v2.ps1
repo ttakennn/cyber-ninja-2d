@@ -75,7 +75,9 @@ foreach ($clip in @($metadata.clips.climbUp,$metadata.clips.climbDown)) {
 }
 $atlasGraphics.Dispose()
 [ClimbPixels]::PreserveOtherPixels($original,$atlas,[System.Drawing.Rectangle[]]$allowed)
-$atlas.Save((Join-Path $folder 'flame-ninja-atlas-v2.png'),[System.Drawing.Imaging.ImageFormat]::Png)
+$generatedPath = Join-Path $folder 'flame-ninja-atlas.generated.png'
+$atlas.Save($generatedPath,[System.Drawing.Imaging.ImageFormat]::Png)
 foreach ($pose in $poses) { $pose.Dispose() }
 $atlas.Dispose(); $source.Dispose(); $original.Dispose()
+Move-Item -LiteralPath $generatedPath -Destination (Join-Path $folder 'flame-ninja-atlas.png') -Force
 Write-Output ('Atlas v2 authored; non-climbing pixels preserved; reference ink height={0}px, bottom={1}px.' -f $bounds.Height,$bounds.Bottom)

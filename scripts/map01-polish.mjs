@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
-const props = read('../public/assets/environments/map01/props-v2/props.json').props;
+const props = read('../public/assets/environments/map01/props/props.json').props;
 const sign = read('../public/assets/environments/map01/ui-polish-rc3/asset-manifest.json');
 const planters = {
   large: { image: 'assets/environments/map01/foreground/individual/planters_large.png', pixelSize: [354, 268], sourceRect: { x: 8, y: 8, width: 338, height: 252 } },
@@ -25,7 +25,7 @@ export function placeProp(level, id, assetId, x, footY, width, height, obstacle 
   const fullWidth = width * asset.sizePx.width / (right - left + 1);
   const fullHeight = height * asset.sizePx.height / (bottom - top + 1);
   level.environment.decorations = level.environment.decorations.filter((entry) => entry.id !== id);
-  level.environment.decorations.push({ id, image: `assets/environments/map01/props-v2/${asset.image}`,
+  level.environment.decorations.push({ id, image: `assets/environments/map01/props/${asset.image}`,
     pixelSize: [asset.sizePx.width, asset.sizePx.height],
     worldPosition: { x: x - (flipX ? -1 : 1) * ((left + right + 1) / 2 - asset.sizePx.width / 2) / asset.sizePx.width * fullWidth,
       y: footY - footInset - (asset.sizePx.height - 1 - bottom) / asset.sizePx.height * fullHeight },

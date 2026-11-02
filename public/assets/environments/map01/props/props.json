@@ -1,8 +1,8 @@
 {
-  "version": 1,
-  "name": "Cyber Ninja 2D — Map 01 Step 06 Props",
-  "status": "asset-ready / integration-not-tested",
-  "visualStyle": "2D stylized cel-shaded, simplified Vietnamese urban night",
+  "version": 2,
+  "name": "Cyber Ninja 2D — Map01 Props v2",
+  "status": "ART_CANDIDATE / runtime-pending",
+  "visualStyle": "Illustrated textured pixel art; foreground-matched navy/indigo, restrained amber light",
   "pixelDensity": {
     "pixelsPerWorldUnit": 128,
     "worldUnitsPer64pxTile": 0.5
@@ -12,7 +12,9 @@
     "width": 2048,
     "height": 2048,
     "coordinateSystem": "top-left pixels",
-    "paddingPx": 8
+    "paddingPx": 8,
+    "sha256": "d265683b4f5083dc2a509ad1b5eafadcea0003ec4b3794c0a57f0f9c1cdc5ce3",
+    "edgeExtrusionPx": 4
   },
   "props": [
     {
@@ -29,7 +31,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -37,7 +39,7 @@
       "description": "Xe máy tay ga màu đỏ nhìn ngang",
       "alphaBounds": [
         28,
-        23,
+        24,
         194,
         131
       ],
@@ -46,7 +48,9 @@
         "y": 8,
         "width": 224,
         "height": 140
-      }
+      },
+      "sha256": "5b82f574da83b17403e0c79e81dcfa6868a0c79017cb0dbfe9b30dcb8c65d139",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "crate-wood",
@@ -62,7 +66,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -70,7 +74,7 @@
       "description": "Thùng gỗ trang trí hoặc đặt collider thủ công",
       "alphaBounds": [
         7,
-        7,
+        14,
         117,
         117
       ],
@@ -79,7 +83,9 @@
         "y": 8,
         "width": 124,
         "height": 124
-      }
+      },
+      "sha256": "446b2edaf9ce723709c8992f4cb8b887713b7594d7861e7bffd86e5349d016ea",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "crate-metal",
@@ -95,7 +101,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -103,7 +109,7 @@
       "description": "Thùng kim loại trang trí hoặc đặt collider thủ công",
       "alphaBounds": [
         7,
-        7,
+        19,
         117,
         117
       ],
@@ -112,7 +118,9 @@
         "y": 8,
         "width": 124,
         "height": 124
-      }
+      },
+      "sha256": "031bfa95c816a7b167ba82ffd0872237341aeff0d1463bc6e7389295560c9277",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "trash-bin-green",
@@ -128,7 +136,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -136,7 +144,7 @@
       "description": "Thùng rác có bánh xe",
       "alphaBounds": [
         15,
-        17,
+        28,
         104,
         141
       ],
@@ -145,7 +153,9 @@
         "y": 8,
         "width": 120,
         "height": 148
-      }
+      },
+      "sha256": "01588ba6feba7a4458a740c7cd0f377db58350199383c5e38afe8b5c7ba9f618",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "trash-bin-blue",
@@ -161,7 +171,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -169,7 +179,7 @@
       "description": "Thùng rác có bánh xe",
       "alphaBounds": [
         15,
-        17,
+        28,
         104,
         141
       ],
@@ -178,7 +188,9 @@
         "y": 8,
         "width": 120,
         "height": 148
-      }
+      },
+      "sha256": "8b9a702b93e212af1085056e56ef664ededa81ef476de10c4f27506df9c3468e",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "traffic-cone",
@@ -194,16 +206,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
       "zone": "A",
       "description": "Cọc tiêu công trình",
       "alphaBounds": [
+        17,
         14,
-        14,
-        112,
+        109,
         128
       ],
       "atlasRect": {
@@ -211,7 +223,9 @@
         "y": 8,
         "width": 126,
         "height": 130
-      }
+      },
+      "sha256": "2d0f33207dba6e6ba3df7ceeee9b13497fc7770d5ac43a8b6196d6172e810868",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "street-bench",
@@ -227,7 +241,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -235,7 +249,7 @@
       "description": "Ghế dài đặt dọc vỉa hè",
       "alphaBounds": [
         21,
-        45,
+        59,
         203,
         149
       ],
@@ -244,7 +258,9 @@
         "y": 8,
         "width": 228,
         "height": 160
-      }
+      },
+      "sha256": "c26f180d4475683e8d7bd84b743dd9104a6ddc3d2e4d2ce9512c42cd7a74b5b5",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "street-lamp",
@@ -260,7 +276,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -268,7 +284,7 @@
       "description": "Cột đèn đường ánh vàng, dạng 2D",
       "alphaBounds": [
         12,
-        12,
+        50,
         130,
         293
       ],
@@ -277,7 +293,9 @@
         "y": 8,
         "width": 146,
         "height": 294
-      }
+      },
+      "sha256": "99f9993a83890de70ce468ce1a5fbadc70db8d77eabc78d1a7b311ec2a5ed2ed",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "potted-plant",
@@ -293,7 +311,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -301,7 +319,7 @@
       "description": "Chậu cây lá bản xanh",
       "alphaBounds": [
         35,
-        35,
+        79,
         115,
         157
       ],
@@ -310,7 +328,9 @@
         "y": 8,
         "width": 150,
         "height": 168
-      }
+      },
+      "sha256": "2f46ecf4064882bf17563f54191d1bd02e16a610bab48d4cf2070a6ef0582299",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "street-tree",
@@ -326,7 +346,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -334,7 +354,7 @@
       "description": "Cây vỉa hè; tán giản lược không che gameplay quá nhiều",
       "alphaBounds": [
         15,
-        22,
+        101,
         192,
         320
       ],
@@ -343,7 +363,9 @@
         "y": 8,
         "width": 220,
         "height": 328
-      }
+      },
+      "sha256": "1e321e3eb5c9f745e1c6f1ac3ec3b74894b7cc0c5efe08f40b8699ad4e2db6f6",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "planter-box",
@@ -359,7 +381,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -367,7 +389,7 @@
       "description": "Bồn cây dài đặt nền nhà phố",
       "alphaBounds": [
         4,
-        5,
+        7,
         195,
         106
       ],
@@ -376,7 +398,9 @@
         "y": 8,
         "width": 200,
         "height": 110
-      }
+      },
+      "sha256": "ea11cc570b4db429663930616029acf4e4d045bfac5b2de5e20f0850f90b5d90",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "sign-pho-247",
@@ -392,7 +416,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -400,7 +424,7 @@
       "description": "Biển hiệu PHỞ 24/7 màu đỏ ấm",
       "alphaBounds": [
         1,
-        6,
+        41,
         263,
         100
       ],
@@ -409,7 +433,9 @@
         "y": 344,
         "width": 264,
         "height": 106
-      }
+      },
+      "sha256": "6a185b4a27d4113d82e0ccba30573059406c6e362e88f5a140a01f6e340c41d1",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "sign-pharmacy",
@@ -425,16 +451,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
       "zone": "A",
       "description": "Biển hiệu NHÀ THUỐC màu xanh ngọc",
       "alphaBounds": [
-        5,
+        6,
         4,
-        113,
+        112,
         222
       ],
       "atlasRect": {
@@ -442,7 +468,9 @@
         "y": 344,
         "width": 120,
         "height": 224
-      }
+      },
+      "sha256": "2482dbdf9972e937e8fcac6a5125ed971400de96bd2d76fd7a0085a8793f3686",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "sign-coffee",
@@ -458,7 +486,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -466,7 +494,7 @@
       "description": "Biển hiệu quán cà phê màu cam",
       "alphaBounds": [
         6,
-        7,
+        46,
         257,
         104
       ],
@@ -475,7 +503,9 @@
         "y": 344,
         "width": 264,
         "height": 111
-      }
+      },
+      "sha256": "05d156f1328f1c86b0073cf508da8c24a0877d0336cf1e4fc56338c079397f65",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "sign-tea",
@@ -491,7 +521,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -499,7 +529,7 @@
       "description": "Biển TRÀ ĐÁ VỈA HÈ màu tím",
       "alphaBounds": [
         3,
-        2,
+        32,
         176,
         110
       ],
@@ -508,7 +538,9 @@
         "y": 344,
         "width": 180,
         "height": 115
-      }
+      },
+      "sha256": "6b4321342d3205f295ec2c867af5ae2f26f10f830a7ca5bc60f5774496b2d90d",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "metal-ladder",
@@ -524,7 +556,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -532,8 +564,8 @@
       "description": "Thang kim loại, dùng như visual riêng; ClimbableZone khai báo riêng",
       "alphaBounds": [
         15,
-        2,
-        76,
+        72,
+        75,
         388
       ],
       "atlasRect": {
@@ -541,7 +573,9 @@
         "y": 344,
         "width": 92,
         "height": 394
-      }
+      },
+      "sha256": "efa003c13178490285754b78696027a598545d333cc94feed8c00ae02b6a9da3",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "aircon-unit",
@@ -557,16 +591,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
       "zone": "B/C",
       "description": "Máy lạnh gắn tường",
       "alphaBounds": [
-        7,
+        12,
         13,
-        139,
+        133,
         102
       ],
       "atlasRect": {
@@ -574,7 +608,9 @@
         "y": 344,
         "width": 146,
         "height": 113
-      }
+      },
+      "sha256": "fa7471dcc18775840191a0a1277b7e37203d4feb5cd3f75c2168807871f4438f",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "wall-pipe",
@@ -590,16 +626,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
       "zone": "B/C",
       "description": "Ống nước cong gắn tường",
       "alphaBounds": [
-        22,
+        37,
         0,
-        121,
+        105,
         245
       ],
       "atlasRect": {
@@ -607,7 +643,9 @@
         "y": 344,
         "width": 140,
         "height": 246
-      }
+      },
+      "sha256": "2e744d48a551c7219042cc95aae51a2f141c792fbe1c2a0e8b7ea427cdd9b8d0",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "electric-meter",
@@ -623,16 +661,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
       "zone": "B",
       "description": "Tủ điện treo tường",
       "alphaBounds": [
-        15,
+        28,
         13,
-        122,
+        108,
         162
       ],
       "atlasRect": {
@@ -640,7 +678,9 @@
         "y": 344,
         "width": 136,
         "height": 175
-      }
+      },
+      "sha256": "f716597fa9a632371844c282b1f4268fa030616e3e29884c2d92f98d9c2e652e",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "utility-pole",
@@ -656,16 +696,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "foreground",
       "collision": "none",
       "zone": "A/B/C",
       "description": "Cột điện nhỏ và dây ngắn, dùng tiết chế ở background/foreground",
       "alphaBounds": [
-        5,
+        31,
         15,
-        211,
+        184,
         388
       ],
       "atlasRect": {
@@ -673,7 +713,9 @@
         "y": 344,
         "width": 216,
         "height": 391
-      }
+      },
+      "sha256": "87df6a9217e21cc5885b473ca0c1c59dfa94858497f89dc94e2f4f5bbd05daa0",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "rooftop-water-tank",
@@ -689,7 +731,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -697,7 +739,7 @@
       "description": "Bồn nước kim loại trên khung chân",
       "alphaBounds": [
         37,
-        16,
+        17,
         190,
         264
       ],
@@ -706,7 +748,9 @@
         "y": 344,
         "width": 229,
         "height": 280
-      }
+      },
+      "sha256": "9a9936b1135d120aabc1fd6794b1a367a4504a86ffa6f7dcc811a277f4b3baca",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "antenna",
@@ -722,7 +766,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -730,7 +774,7 @@
       "description": "Ăng-ten mái nhà",
       "alphaBounds": [
         29,
-        23,
+        51,
         167,
         250
       ],
@@ -739,7 +783,9 @@
         "y": 746,
         "width": 194,
         "height": 259
-      }
+      },
+      "sha256": "ee9ee0630867550c647803bce3db2736ace69f30949b4352302a2c51b11f04a4",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "balcony-railing",
@@ -755,7 +801,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
@@ -763,7 +809,7 @@
       "description": "Lan can kim loại ban công có thể lặp theo cạnh",
       "alphaBounds": [
         8,
-        10,
+        20,
         253,
         114
       ],
@@ -772,7 +818,9 @@
         "y": 746,
         "width": 266,
         "height": 125
-      }
+      },
+      "sha256": "0956b5baac50487c31c98eeff1b3709543c8effa82f4c280b3967d43b5896ad4",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "roof-vent",
@@ -788,7 +836,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -796,7 +844,7 @@
       "description": "Ống thông gió mái nhà",
       "alphaBounds": [
         19,
-        44,
+        78,
         142,
         184
       ],
@@ -805,7 +853,9 @@
         "y": 746,
         "width": 164,
         "height": 193
-      }
+      },
+      "sha256": "16ea16fe8608751440b81f95ceaed16f17aa1d8b898b8b423224db9bc8eee058",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "satellite-dish",
@@ -821,7 +871,7 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "nearBackground",
       "collision": "none",
@@ -829,7 +879,7 @@
       "description": "Chảo vệ tinh trên mái",
       "alphaBounds": [
         26,
-        5,
+        35,
         139,
         168
       ],
@@ -838,7 +888,9 @@
         "y": 746,
         "width": 158,
         "height": 178
-      }
+      },
+      "sha256": "c9383c7317d4b8e0ff27c6c206de6973f194c1fd189d1aabadd14fc304ab653b",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     },
     {
       "id": "wooden-pallet",
@@ -854,16 +906,16 @@
       },
       "anchor": {
         "x": 0.5,
-        "y": 1.0
+        "y": 1
       },
       "renderLayer": "worldDecor",
       "collision": "none",
       "zone": "A/B/C",
       "description": "Pallet gỗ đơn giản",
       "alphaBounds": [
-        12,
+        40,
         43,
-        198,
+        169,
         143
       ],
       "atlasRect": {
@@ -871,15 +923,153 @@
         "y": 746,
         "width": 212,
         "height": 150
-      }
+      },
+      "sha256": "419d0283e927f4041ee55c32e0f47faccd9385b7239f3a403d101429b04ccd67",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
+    },
+    {
+      "id": "sign-supermarket",
+      "category": "signs",
+      "image": "props/signs/sign-supermarket.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "worldSize": {
+        "width": 2.0625,
+        "height": 0.828125
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "additional",
+      "description": "Siêu thị",
+      "alphaBounds": [
+        4,
+        35,
+        259,
+        101
+      ],
+      "atlasRect": {
+        "x": 8,
+        "y": 1100,
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "dbed3269b760f38b5227541d1224ef3acc5dfd53257505f39d2f903b27ee53c1",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
+    },
+    {
+      "id": "sign-com-tam",
+      "category": "signs",
+      "image": "props/signs/sign-com-tam.png",
+      "sizePx": {
+        "width": 180,
+        "height": 115
+      },
+      "worldSize": {
+        "width": 1.40625,
+        "height": 0.8984375
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "additional",
+      "description": "Cơm tấm sài gòn",
+      "alphaBounds": [
+        4,
+        35,
+        175,
+        110
+      ],
+      "atlasRect": {
+        "x": 288,
+        "y": 1100,
+        "width": 180,
+        "height": 115
+      },
+      "sha256": "5c168a93da7834a955712b59c7c1dcc6b3c9a34af0186aa5d9169e4b71baf91b",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
+    },
+    {
+      "id": "sign-hu-tieu",
+      "category": "signs",
+      "image": "props/signs/sign-hu-tieu.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "worldSize": {
+        "width": 2.0625,
+        "height": 0.828125
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "additional",
+      "description": "Hủ tiếu nam vang",
+      "alphaBounds": [
+        4,
+        27,
+        259,
+        101
+      ],
+      "atlasRect": {
+        "x": 568,
+        "y": 1100,
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "d65e26b219bd7c879adbee03ae57cfcf0fca64113558e1a84b1b57fdef3f2a95",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
+    },
+    {
+      "id": "sign-banh-mi",
+      "category": "signs",
+      "image": "props/signs/sign-banh-mi.png",
+      "sizePx": {
+        "width": 264,
+        "height": 106
+      },
+      "worldSize": {
+        "width": 2.0625,
+        "height": 0.828125
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "renderLayer": "worldDecor",
+      "collision": "none",
+      "zone": "additional",
+      "description": "Bánh mì ngon",
+      "alphaBounds": [
+        4,
+        50,
+        259,
+        101
+      ],
+      "atlasRect": {
+        "x": 848,
+        "y": 1100,
+        "width": 264,
+        "height": 106
+      },
+      "sha256": "0b99a20035028e38524dc133ceb75006612facf30c057fc917376b6fae181c77",
+      "artStatus": "V2_CANDIDATE_VISUALLY_REVIEW_PENDING_RUNTIME_PENDING"
     }
   ],
   "notes": [
-    "All props are RGBA with transparent background.",
-    "props[].worldSize is a reference derived from 128 px per world unit; gameplay can override sizes.",
-    "No props generate collision automatically.",
-    "Metal ladder is a visual prop; keep climbable zone defined separately.",
-    "Do not put props into ninja sprite atlases.",
-    "Sign text is environmental art and is not machine-readable localization."
+    "Original 26 IDs, filenames, canvas dimensions and atlas rects preserved. Alpha silhouette aligned within original occupied region; actual alphaBounds recomputed.",
+    "Four extra sign IDs are additions; no previous dimensions exist. All art pending in-game acceptance."
   ]
 }
