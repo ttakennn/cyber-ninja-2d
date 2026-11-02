@@ -1,0 +1,10 @@
+{
+  "status": "USER_APPROVED_ART_APPLY_REQUESTED",
+  "approval": "Người dùng: Ok good, apply vào nhân vật giúp tôi.",
+  "animationTickMs": 5,
+  "projectileFrameWidthPx": 96,
+  "projectileSpeedPxPerSecond": 900,
+  "projectileLifetimeMs": 650,
+  "flightBasis": "Giữ tốc độ và thời gian hiển thị của preview đã duyệt để review runtime; chưa damage/collision/cooldown."
+}
+

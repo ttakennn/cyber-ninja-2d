@@ -24,7 +24,7 @@ export class Game {
   private readonly resizeObserver: ResizeObserver;
   private started = false;
   private disposed = false;
-  private readonly pendingAttackClicks: number[] = [];
+  private readonly pendingAttackClicks: { time: number; button: 0 | 2 }[] = [];
 
   constructor(private readonly container: HTMLElement, levelData?: unknown) {
     this.level = new TestLevel(levelData);
@@ -45,7 +45,7 @@ export class Game {
     this.input = new InputManager();
     this.debug = new DebugOverlay(container, this.level.id);
     this.collisionDebug = new CollisionDebug(this.level.colliders, this.level.climbables);
-    this.renderer.scene.add(this.level.visual, this.player.visual, this.collisionDebug.visual);
+    this.renderer.scene.add(this.level.visual, this.player.visual, this.player.shuriken.projectiles, this.collisionDebug.visual);
     this.loop = new GameLoop(this.update, this.render);
     this.resizeObserver = new ResizeObserver(this.resize);
     this.resizeObserver.observe(container);
@@ -55,7 +55,9 @@ export class Game {
     this.camera.reset(this.player.visual.position);
     void this.player.loadSprite();
     void this.player.attack.load();
+    void this.player.shuriken.load();
     container.addEventListener('pointerdown', this.onPointerDown);
+    container.addEventListener('contextmenu', this.onContextMenu);
     window.addEventListener('blur', this.onAttackBlur);
   }
 
@@ -77,6 +79,7 @@ export class Game {
     this.player.movement.resetInput();
     this.pendingAttackClicks.length = 0;
     this.player.attack.cancel();
+    this.player.shuriken.reset();
     this.player.resetInterpolation();
   }
 
@@ -87,6 +90,7 @@ export class Game {
     this.resizeObserver.disconnect();
     window.removeEventListener('resize', this.resize);
     this.container.removeEventListener('pointerdown', this.onPointerDown);
+    this.container.removeEventListener('contextmenu', this.onContextMenu);
     window.removeEventListener('blur', this.onAttackBlur);
     document.removeEventListener('visibilitychange', this.onVisibilityChange);
     this.input.dispose();
@@ -110,7 +114,10 @@ export class Game {
       detachJump: this.input.wasPressed('detachJump'),
     });
     if (this.recovery.update(this.player, this.input, this.camera)) { this.pendingAttackClicks.length = 0; return; }
-    for (const time of this.pendingAttackClicks) this.player.requestAttack(time);
+    for (const click of this.pendingAttackClicks) {
+      if (click.button === 2) this.player.requestShuriken();
+      else this.player.requestAttack(click.time);
+    }
     this.pendingAttackClicks.length = 0;
     this.player.updateState(landed);
     this.player.updateAnimation(delta, landed);
@@ -119,6 +126,7 @@ export class Game {
 
   private readonly render = (frameDelta: number, alpha: number): void => {
     this.player.syncVisual(alpha);
+    this.player.shuriken.syncProjectiles(alpha);
     this.camera.follow(this.player.visual.position, this.player.renderHeight);
     this.level.updateVisuals(this.camera.camera, frameDelta);
     this.collisionDebug.update(this.player.visual.position.x, this.player.visual.position.y, this.player.body.width, this.player.renderHeight);
@@ -136,6 +144,7 @@ export class Game {
   private readonly onVisibilityChange = (): void => {
     this.pendingAttackClicks.length = 0;
     this.player.attack.cancel();
+    this.player.shuriken.reset();
     this.input.reset();
     this.player.movement.resetInput();
     this.player.resetInterpolation();
@@ -144,12 +153,18 @@ export class Game {
   };
 
   private readonly onPointerDown = (event: PointerEvent): void => {
-    if (!this.started || document.hidden || event.button !== 0 || !event.isPrimary || !(event.target instanceof HTMLCanvasElement)) return;
-    if (this.pendingAttackClicks.length < 3) this.pendingAttackClicks.push(event.timeStamp / 1000);
+    if (!this.started || document.hidden || (event.button !== 0 && event.button !== 2) || !event.isPrimary || !(event.target instanceof HTMLCanvasElement)) return;
+    if (event.button === 2) event.preventDefault();
+    if (this.pendingAttackClicks.length < 3) this.pendingAttackClicks.push({ time: event.timeStamp / 1000, button: event.button === 2 ? 2 : 0 });
+  };
+
+  private readonly onContextMenu = (event: MouseEvent): void => {
+    if (event.target instanceof HTMLCanvasElement) event.preventDefault();
   };
 
   private readonly onAttackBlur = (): void => {
     this.pendingAttackClicks.length = 0;
     this.player.attack.cancel();
+    this.player.shuriken.reset();
   };
 }

@@ -14,3 +14,5 @@ Chỉ ghi quyết định có căn cứ từ người dùng; đề xuất chưa 
 Nếu người dùng chốt thay đổi mới, thêm mục ghi yêu cầu, phạm vi, nguồn metadata và trạng thái kiểm tra; cập nhật spec liên quan. Không sửa/xoá lịch sử để giả rằng baseline cũ chưa từng tồn tại. Yêu cầu rõ ràng mới có thể thay quyết định cũ trong phạm vi được giao.
 
 Task09: người dùng duyệt combo artwork/canvas đệm, yêu cầu commit rồi áp dụng. Đã lưu art ở1442907. Điều khiển được chốt: click trái một lần ra đòn1; click liên tiếp nối1→2→3; dừng0.5s thì bắt đầu lại. Chưa chốt damage/skills/quái/boss hoặc nghiệm thu runtime. Không merge master ở lượt này.
+
+Task09.3: sau preview phi tiêu và sáu pose phóng, người dùng chốt “Ok good, apply vào nhân vật giúp tôi.” Tích hợp bộ ảnh đã duyệt bằng chuột phải theo Task2 được giao trước đó; giữ cỡ nhân vật. Nguồn/approval ở integration/task-009-fire-shuriken/runtime-plan.json, [báo cáo](map01/commits/task-009-04-fire-shuriken-runtime/IMPLEMENTATION.md). Chỉ animation/projectile visual; không suy thành duyệt damage/collision, cân bằng skill hoặc nghiệm thu runtime. Special Q tiếp tục tách riêng.

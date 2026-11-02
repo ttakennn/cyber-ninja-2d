@@ -1,0 +1,26 @@
+{
+  "status": "CANDIDATE_NOT_APPROVED_PREVIEW_ONLY",
+  "id": "fire-shuriken",
+  "image": "fire-shuriken-atlas.png",
+  "pixelSize": [1254, 1254],
+  "columns": 2,
+  "rows": 2,
+  "frameSize": [627, 627],
+  "fpsPreview": 12,
+  "loop": true,
+  "frames": [
+    { "rect": [0, 0, 627, 627], "pivot": [389, 330] },
+    { "rect": [627, 0, 627, 627], "pivot": [347, 330] },
+    { "rect": [0, 627, 627, 627], "pivot": [383, 284] },
+    { "rect": [627, 627, 627, 627], "pivot": [348, 285] }
+  ],
+  "pivotMethod": "Manual registration of visible central ring; candidate for review, not alpha-bounds auto-centering",
+  "previewFrameWidthsPx": [64, 96, 128],
+  "defaultPreviewFrameWidthPx": 96,
+  "sha256": "579d7858e25dc3a441547cb91db6facfb10910dfb4dba3c1fa6461c4e6436496",
+  "tool": "image_gen.imagegen built-in",
+  "original": "exec-56d2e1d3-90bf-4911-bb5d-9ed3dba0400c.png",
+  "prompt": "image-prompt.md",
+  "runtimeIntegration": "NOT_IMPLEMENTED",
+  "characterAtlasChanged": false
+}

@@ -57,6 +57,8 @@ export class DebugOverlay {
       `Sprite       ${spriteStatus}`,
       `Attack       ${player.attack.status} / ${player.attack.isActive ? player.attack.step + 1 : '—'}`,
       ...(player.attack.error ? [`Lỗi attack   ${player.attack.error}`] : []),
+      `Phi tiêu     ${player.shuriken.status} / ${player.shuriken.isActive ? 'phóng' : '—'}`,
+      ...(player.shuriken.error ? [`Lỗi phi tiêu ${player.shuriken.error}`] : []),
       ...(player.spriteError ? [`Lỗi asset    ${player.spriteError}`] : []),
       `Alpha        ${alpha.toFixed(3)}`,
     ].join('\n');

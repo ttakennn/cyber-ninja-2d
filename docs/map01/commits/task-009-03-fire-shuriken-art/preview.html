@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><title>Phi tiêu hệ hoả — art preview</title>
+<style>body{background:#111c30;color:#ecf2fa;font:16px system-ui;margin:24px}button,select,input{margin:6px;padding:7px}canvas{max-width:100%;height:auto;border:1px solid #56647a}a{color:#65e4ff}p{max-width:960px}</style>
+<h1>Phi tiêu hệ hoả — bản chờ duyệt</h1>
+<p><a href="throw-preview.html">Mới: xem động tác ninja phóng phi tiêu</a></p>
+<p>Chỉ preview artwork. Ninja giữ nguyên pixel size; phi tiêu mới có cỡ đề xuất để chọn. Chưa gắn chuột phải, chưa có damage/cooldown hoặc special Q.</p>
+<button id="play">Dừng</button><button id="step">Frame tiếp</button>
+<label>Cỡ khung phi tiêu <select id="size"><option>64</option><option selected>96</option><option>128</option></select>px</label>
+<label>Tốc độ <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+<label>Nền <select id="bg"><option value="#18263d">Tối</option><option value="#e1e7ed">Sáng</option></select></label>
+<label><input type="checkbox" id="travel">Mô phỏng bay sang phải</label><p id="status">Đang tải ảnh…</p>
+<canvas id="detail" width="420" height="420"></canvas><br>
+<canvas id="scene" width="960" height="420"></canvas>
+<p>Khung trên: xem chi tiết/lửa, tâm được căn theo vòng kim loại. Khung dưới: ninja ở scale gốc + cỡ phi tiêu đề xuất. Chế độ bay chỉ minh hoạ, không phải tốc độ hoặc logic game đã chốt.</p>
+<p><a href="../../../../integration/task-009-fire-shuriken/fire-shuriken-atlas.png">Atlas gốc</a> · <a href="README.md">Phạm vi task</a></p>
+<script>
+const source='../../../../integration/task-009-fire-shuriken/';
+const atlas=new Image(),ninja=new Image();atlas.src=source+'fire-shuriken-atlas.png';ninja.src='../../../../public/assets/characters/ninja/flame-ninja-atlas.png';
+const frames=[{r:[0,0,627,627],p:[389,330]},{r:[627,0,627,627],p:[347,330]},{r:[0,627,627,627],p:[383,284]},{r:[627,627,627,627],p:[348,285]}];
+const detail=document.querySelector('#detail').getContext('2d'),scene=document.querySelector('#scene').getContext('2d');
+let playing=true,index=0,last=0,acc=0,flight=0;
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'Dừng':'Chạy'};
+document.querySelector('#step').onclick=()=>{playing=false;document.querySelector('#play').textContent='Chạy';index=(index+1)%4};
+atlas.onerror=()=>{document.querySelector('#status').textContent='Không tải được atlas; giữ nguyên cấu trúc thư mục repo.'};
+function sprite(ctx,x,y,width){if(!atlas.complete||!atlas.naturalWidth)return;const f=frames[index],s=width/627;ctx.drawImage(atlas,...f.r,x-f.p[0]*s,y-f.p[1]*s,width,width)}
+function draw(time){const dt=last?Math.min(100,time-last):0;last=time;if(playing){acc+=dt*+document.querySelector('#speed').value;flight+=dt/1000;if(acc>=1000/12){index=(index+Math.floor(acc/(1000/12)))%4;acc%=1000/12}}
+for(const ctx of [detail,scene]){ctx.fillStyle=document.querySelector('#bg').value;ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height)}
+sprite(detail,250,220,360);
+scene.strokeStyle='#75839b';scene.beginPath();scene.moveTo(0,353);scene.lineTo(960,353);scene.stroke();if(ninja.complete&&ninja.naturalWidth)scene.drawImage(ninja,4,4,384,320,32,64,384,320);
+const x=document.querySelector('#travel').checked?410+(flight*180)%470:570;sprite(scene,x,220,+document.querySelector('#size').value);
+if(atlas.complete&&atlas.naturalWidth)document.querySelector('#status').textContent=`Pha ${index+1}/4 · atlas1254×1254 · preview12fps · chưa tích hợp game`;
+requestAnimationFrame(draw)}requestAnimationFrame(draw);
+</script></html>

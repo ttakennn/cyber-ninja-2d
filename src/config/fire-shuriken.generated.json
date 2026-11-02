@@ -1,0 +1,9 @@
+{
+  "releaseSeconds": 0.25,
+  "releaseOffset": {
+    "x": 1.01875,
+    "y": 1.41875
+  },
+  "speed": 5.625,
+  "lifetime": 0.65
+}

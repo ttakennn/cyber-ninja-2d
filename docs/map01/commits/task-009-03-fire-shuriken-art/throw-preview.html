@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><title>Ninja phóng phi tiêu — art preview</title>
+<style>body{background:#111c30;color:#ecf2fa;font:16px system-ui;margin:24px}button,select,input{margin:6px;padding:7px}canvas,img{max-width:100%;height:auto;border:1px solid #56647a}a{color:#65e4ff}p{max-width:1050px}</style>
+<h1>Ninja phóng phi tiêu — bộ pose chờ duyệt</h1>
+<p>Lấy đà → xoay vai → vung tay → thả phi tiêu → hạ tay → thu thế. Chỉ minh hoạ artwork; chưa áp dụng chuột phải hoặc logic skill. Ninja tham chiếu bên trái giữ nguyên pixel từ atlas đang dùng.</p>
+<button id="play">Dừng</button><button id="step">Pose tiếp</button><button id="restart">Phát lại</button>
+<label>Tốc độ <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+<label>Nền <select id="bg"><option value="#18263d">Tối</option><option value="#e1e7ed">Sáng</option></select></label>
+<label><input id="projectile" type="checkbox" checked>Ghép phi tiêu lúc thả</label>
+<label><input id="ghost" type="checkbox">Chồng idle mờ để so tỉ lệ</label>
+<p id="status">Đang tải ảnh…</p>
+<canvas id="stage" width="1100" height="480"></canvas>
+<p>Thời lượng và tốc độ bay chỉ để review, chưa chốt gameplay. Vạch ngang là điểm tiếp đất. Có thể dừng và chuyển từng pose để xem tay/chân. Phi tiêu dùng lại artwork đã có.</p>
+<h2>Đối chiếu sáu pose ở cùng tỉ lệ</h2>
+<img src="throw-contact-sheet.png" alt="Idle gốc và sáu pose ném, cùng tỉ lệ">
+<p><a href="preview.html">Preview riêng phi tiêu</a> · <a href="../../../../integration/task-009-fire-shuriken/throw/throw-atlas.png">Atlas pose</a> · <a href="README.md">Báo cáo/phạm vi</a> · <a href="../../../../integration/task-009-fire-shuriken/throw/image-prompt.md">Prompt và nguồn</a></p>
+<script src="../../../../integration/task-009-fire-shuriken/throw/review-data.js"></script>
+<script>
+const source='../../../../integration/task-009-fire-shuriken/',data=window.throwReview;
+const actor=new Image(),idle=new Image(),star=new Image();
+actor.src=source+'throw/throw-atlas.png';idle.src=source+'throw/idle-reference.png';star.src=source+'fire-shuriken-atlas.png';
+const ctx=document.querySelector('#stage').getContext('2d'),status=document.querySelector('#status');
+const names=['Lấy đà','Xoay vai','Vung tay','Thả phi tiêu','Hạ tay','Thu thế','Idle gốc'];
+const timing=data.frameMs.concat(600),starts=[0];for(const ms of timing)starts.push(starts[starts.length-1]+ms);
+const stars=[{r:[0,0,627,627],p:[389,330]},{r:[627,0,627,627],p:[347,330]},{r:[0,627,627,627],p:[383,284]},{r:[627,627,627,627],p:[348,285]}];
+let playing=true,time=0,last=0;
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'Dừng':'Chạy'};
+document.querySelector('#step').onclick=()=>{playing=false;document.querySelector('#play').textContent='Chạy';time=starts[(pose()+1)%7]};
+document.querySelector('#restart').onclick=()=>{time=0;playing=true;document.querySelector('#play').textContent='Dừng'};
+for(const img of [actor,idle,star])img.onerror=()=>{status.textContent='Không tải được ảnh. Mở preview từ đúng vị trí trong repo.'};
+function pose(){for(let i=0;i<7;i++)if(time<starts[i+1])return i;return 6}
+function idleAt(x,y,alpha=1){ctx.globalAlpha=alpha;ctx.drawImage(idle,x-192,y-289,384,320);ctx.globalAlpha=1}
+function draw(now){
+ const dt=last?Math.min(100,now-last):0;last=now;
+ if(playing)time=(time+dt*+document.querySelector('#speed').value)%starts[7];
+ ctx.fillStyle=document.querySelector('#bg').value;ctx.fillRect(0,0,1100,480);
+ ctx.strokeStyle='#71849e';ctx.beginPath();ctx.moveTo(0,400);ctx.lineTo(1100,400);ctx.stroke();
+ const ready=[actor,idle,star].every(i=>i.complete&&i.naturalWidth),i=pose();
+ if(ready){
+ idleAt(140,400);
+ if(document.querySelector('#ghost').checked)idleAt(480,400,0.2);
+ if(i===6)idleAt(480,400);else ctx.drawImage(actor,(i%3)*512,Math.floor(i/3)*512,512,512,480-192,400-353,512,512);
+ const elapsed=time-starts[data.releaseFrame];
+ if(document.querySelector('#projectile').checked&&elapsed>=0&&elapsed<650){
+ const f=stars[Math.floor(elapsed/1000*12)%4],s=96/627;
+ const x=480+data.releasePoint[0]-192+elapsed*0.9,y=400+data.releasePoint[1]-353;
+ ctx.drawImage(star,...f.r,x-f.p[0]*s,y-f.p[1]*s,96,96);
+ }
+ ctx.fillStyle=document.querySelector('#bg').value==='#e1e7ed'?'#17243a':'#e8f2ff';ctx.font='15px system-ui';
+ ctx.fillText('Idle gốc · 160 px/world unit',35,450);ctx.fillText(names[i]+' · cùng mật độ nhân vật',375,450);
+ status.textContent=(i===6?'Idle gốc':('Pose '+(i+1)+'/6 · '+names[i]))+' · art candidate · chưa tích hợp game';
+ }
+ requestAnimationFrame(draw)
+}requestAnimationFrame(draw);
+</script></html>
+

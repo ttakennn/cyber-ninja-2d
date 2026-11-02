@@ -34,6 +34,8 @@ Leo hiện có 8 slot climbUp +8 slot climbDown, FPS11.1111, cùng pivot. Artwor
 
 Attack đã được người dùng duyệt riêng: public/assets/characters/ninja/attacks/, ô512×512, pivot(192,353), visual3.2×3.2 vẫn160px/world unit. Đây là sheet đệm cho hiệu ứng, không thay các giá trị ô384×320 của locomotion. Thứ tự frame nguồn đã chọn ở integration/task-009-player-attacks/combo-plan.json; nguồn JSON runtime được sinh bằng scripts/promote_ninja_attacks.mjs. Click trái nối1→2→3, khoảng nghỉ≥0.5s reset1; phần hiện tại chỉ animation, chưa damage/hit detection.
 
+Phi tiêu hoả/sáu pose phóng được người dùng duyệt và yêu cầu apply: public/assets/characters/ninja/skills/fire-shuriken/. Pose giữ ô512×512/pivot(192,353)/160px/unit; không đổi atlas locomotion/combo. Nguồn integration/task-009-fire-shuriken/runtime-plan.json và metadata art; promote bằng scripts/promote_ninja_shuriken.mjs. Click phải dùng grounded/standing như combo, không chồng hai hành động. Hiện chỉ animation + projectile visual, chưa damage/collision/cooldown; runtime/test/build chưa kiểm tra. Không tự áp cooldown5s của special Q.
+
 Khi sửa/tạo thêm pose ninja, giữ contract và tỉ lệ nhân vật ở trên. Đưa ninja sang map khác không tự đổi màu, canvas, kích thước cơ thể hoặc điểm tiếp đất. Nhân vật mới lập hồ sơ riêng theo chuẩn chung; các giá trị của ninja không tự áp dụng cho nhân vật đó.
 
 Với sửa pose: dùng source gốc làm nền, ghép riêng vùng được giao; lưu source tạo/prompt và bản review. Quy trình artwork cần đối chiếu kích thước thật, đầu/hông/chân, RGBA và phần ảnh không được phép đổi. Kiểm tra artwork phục vụ yêu cầu không tự cho phép chạy test/build hoặc thay physics.
