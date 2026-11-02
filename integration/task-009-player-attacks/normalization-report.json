@@ -1,0 +1,405 @@
+{
+    "status":  "CANDIDATE_NOT_APPROVED",
+    "pixelWorldUnit":  0.00625,
+    "measurements":  [
+                         {
+                             "candidateSha256":  "9079109d888d8f8cf758d6d87f47534cf1a5874ab9a26b953cebb9ebfdf8b9b4",
+                             "id":  "attack_1",
+                             "sourceSha256":  "50476f3b34a72431e07efad5cd2581099d70a0ab644d9eaabeca4c558664419d",
+                             "measurements":  [
+                                                  {
+                                                      "sourceInk":  [
+                                                                        187,
+                                                                        211,
+                                                                        564,
+                                                                        503
+                                                                    ],
+                                                      "translation":  [
+                                                                          -43,
+                                                                          39
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         376,
+                                                                         503
+                                                                     ],
+                                                      "index":  0
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        194,
+                                                                        187,
+                                                                        639,
+                                                                        502
+                                                                    ],
+                                                      "translation":  [
+                                                                          -50,
+                                                                          40
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         388,
+                                                                         501
+                                                                     ],
+                                                      "index":  1
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        127,
+                                                                        153,
+                                                                        737,
+                                                                        501
+                                                                    ],
+                                                      "translation":  [
+                                                                          -15,
+                                                                          40
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         331,
+                                                                         500
+                                                                     ],
+                                                      "index":  2
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        160,
+                                                                        177,
+                                                                        746,
+                                                                        503
+                                                                    ],
+                                                      "translation":  [
+                                                                          -37,
+                                                                          39
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         366,
+                                                                         502
+                                                                     ],
+                                                      "index":  3
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        126,
+                                                                        188,
+                                                                        753,
+                                                                        503
+                                                                    ],
+                                                      "translation":  [
+                                                                          -20,
+                                                                          39
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         340,
+                                                                         502
+                                                                     ],
+                                                      "index":  4
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        189,
+                                                                        196,
+                                                                        599,
+                                                                        507
+                                                                    ],
+                                                      "translation":  [
+                                                                          -54,
+                                                                          37
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         394,
+                                                                         506
+                                                                     ],
+                                                      "index":  5
+                                                  }
+                                              ]
+                         },
+                         {
+                             "candidateSha256":  "8770b081d7b9dc62e1712ca3cc58acafbc82874b918ecb7349a2cf0a8c3e1077",
+                             "id":  "attack_2",
+                             "sourceSha256":  "49aa166438ab909ac307ade8b20e811622e88760efc5ad9a18a3010efe57aadb",
+                             "measurements":  [
+                                                  {
+                                                      "sourceInk":  [
+                                                                        69,
+                                                                        285,
+                                                                        424,
+                                                                        501
+                                                                    ],
+                                                      "translation":  [
+                                                                          66,
+                                                                          41
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         201,
+                                                                         499
+                                                                     ],
+                                                      "index":  0
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        145,
+                                                                        234,
+                                                                        576,
+                                                                        494
+                                                                    ],
+                                                      "translation":  [
+                                                                          -4,
+                                                                          45
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         313,
+                                                                         493
+                                                                     ],
+                                                      "index":  1
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        149,
+                                                                        132,
+                                                                        561,
+                                                                        497
+                                                                    ],
+                                                      "translation":  [
+                                                                          -16,
+                                                                          43
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         332,
+                                                                         496
+                                                                     ],
+                                                      "index":  2
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        215,
+                                                                        36,
+                                                                        717,
+                                                                        502
+                                                                    ],
+                                                      "translation":  [
+                                                                          -19,
+                                                                          40
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         338,
+                                                                         501
+                                                                     ],
+                                                      "index":  3
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        27,
+                                                                        89,
+                                                                        641,
+                                                                        498
+                                                                    ],
+                                                      "translation":  [
+                                                                          2,
+                                                                          43
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         304,
+                                                                         496
+                                                                     ],
+                                                      "index":  4
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        172,
+                                                                        186,
+                                                                        710,
+                                                                        497
+                                                                    ],
+                                                      "translation":  [
+                                                                          -30,
+                                                                          43
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         355,
+                                                                         496
+                                                                     ],
+                                                      "index":  5
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        147,
+                                                                        210,
+                                                                        662,
+                                                                        488
+                                                                    ],
+                                                      "translation":  [
+                                                                          -13,
+                                                                          49
+                                                                      ],
+                                                      "uniformScale":  0.625,
+                                                      "sourceFoot":  [
+                                                                         328,
+                                                                         487
+                                                                     ],
+                                                      "index":  6
+                                                  }
+                                              ]
+                         },
+                         {
+                             "candidateSha256":  "a7f09a6ffdd0e6585ea662faf26ec9571ec494e2bffd60c3d33315a7e019fad9",
+                             "id":  "attack_3",
+                             "sourceSha256":  "918e447d4ecdbb062758da90eee3c096f2faa606073346bb12224bc70f6998c0",
+                             "measurements":  [
+                                                  {
+                                                      "sourceInk":  [
+                                                                        34,
+                                                                        99,
+                                                                        500,
+                                                                        474
+                                                                    ],
+                                                      "translation":  [
+                                                                          57,
+                                                                          116
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         270,
+                                                                         473
+                                                                     ],
+                                                      "index":  0
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        7,
+                                                                        139,
+                                                                        708,
+                                                                        459
+                                                                    ],
+                                                      "translation":  [
+                                                                          72,
+                                                                          128
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         240,
+                                                                         449
+                                                                     ],
+                                                      "index":  1
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        61,
+                                                                        124,
+                                                                        667,
+                                                                        470
+                                                                    ],
+                                                      "translation":  [
+                                                                          42,
+                                                                          120
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         300,
+                                                                         467
+                                                                     ],
+                                                      "index":  2
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        51,
+                                                                        20,
+                                                                        725,
+                                                                        496
+                                                                    ],
+                                                      "translation":  [
+                                                                          44,
+                                                                          106
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         295,
+                                                                         494
+                                                                     ],
+                                                      "index":  3
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        71,
+                                                                        21,
+                                                                        741,
+                                                                        432
+                                                                    ],
+                                                      "translation":  [
+                                                                          42,
+                                                                          138
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         300,
+                                                                         431
+                                                                     ],
+                                                      "index":  4
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        12,
+                                                                        22,
+                                                                        750,
+                                                                        450
+                                                                    ],
+                                                      "translation":  [
+                                                                          57,
+                                                                          137
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         270,
+                                                                         432
+                                                                     ],
+                                                      "index":  5
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        60,
+                                                                        101,
+                                                                        763,
+                                                                        496
+                                                                    ],
+                                                      "translation":  [
+                                                                          42,
+                                                                          106
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         300,
+                                                                         494
+                                                                     ],
+                                                      "index":  6
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        226,
+                                                                        87,
+                                                                        664,
+                                                                        495
+                                                                    ],
+                                                      "translation":  [
+                                                                          12,
+                                                                          106
+                                                                      ],
+                                                      "uniformScale":  0.5,
+                                                      "sourceFoot":  [
+                                                                         360,
+                                                                         494
+                                                                     ],
+                                                      "index":  7
+                                                  }
+                                              ]
+                         }
+                     ]
+}

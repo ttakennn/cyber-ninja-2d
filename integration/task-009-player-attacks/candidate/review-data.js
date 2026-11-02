@@ -1,0 +1,1 @@
+window.attackReview=[{"frameMs":50,"columns":3,"id":"attack_1","count":6,"image":"attack_1.png"},{"frameMs":42.857142857142854,"columns":4,"id":"attack_2","count":7,"image":"attack_2.png"},{"frameMs":37.5,"columns":4,"id":"attack_3","count":8,"image":"attack_3.png"}];

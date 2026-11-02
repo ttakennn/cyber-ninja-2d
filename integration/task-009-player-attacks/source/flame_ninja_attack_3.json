@@ -1,0 +1,159 @@
+{
+  "name": "Flame Ninja attack_3",
+  "version": 2,
+  "animation": "attack_3",
+  "frameCount": 8,
+  "frameDurationMs": 37.5,
+  "loop": false,
+  "direction": "right",
+  "image": "flame_ninja_attack_3_atlas.png",
+  "width": 3072,
+  "height": 1024,
+  "columns": 4,
+  "rows": 2,
+  "frameWidth": 768,
+  "frameHeight": 512,
+  "framePivot": {
+    "x": 0.4557291666666667,
+    "y": 0.859375,
+    "coordinateOrigin": "top-left"
+  },
+  "attackDurationMs": 300,
+  "damagePulseTimesMs": [
+    40,
+    120,
+    200
+  ],
+  "damageLogic": "Game.updateHero()/slashPulse() authoritative; sprite frames cause NO damage",
+  "type": "Spinning fire finisher",
+  "frames": [
+    {
+      "index": 0,
+      "name": "attack_3_00",
+      "x": 0,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        124,
+        186,
+        456,
+        442
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 1,
+      "name": "attack_3_01",
+      "x": 768,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        25,
+        208,
+        562,
+        442
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 2,
+      "name": "attack_3_02",
+      "x": 1536,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        133,
+        180,
+        573,
+        442
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 3,
+      "name": "attack_3_03",
+      "x": 2304,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        112,
+        116,
+        560,
+        442
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 4,
+      "name": "attack_3_04",
+      "x": 0,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        116,
+        137,
+        582,
+        450
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 5,
+      "name": "attack_3_05",
+      "x": 768,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        105,
+        138,
+        660,
+        452
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 6,
+      "name": "attack_3_06",
+      "x": 1536,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        222,
+        187,
+        665,
+        450
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 7,
+      "name": "attack_3_07",
+      "x": 2304,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 37.5,
+      "contentBounds": [
+        202,
+        168,
+        484,
+        452
+      ],
+      "sourceOverflow": false
+    }
+  ]
+}

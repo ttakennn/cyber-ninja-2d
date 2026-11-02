@@ -1,0 +1,127 @@
+{
+  "name": "Flame Ninja attack_1",
+  "version": 2,
+  "animation": "attack_1",
+  "frameCount": 6,
+  "frameDurationMs": 50.0,
+  "loop": false,
+  "direction": "right",
+  "image": "flame_ninja_attack_1_atlas.png",
+  "width": 2304,
+  "height": 1024,
+  "columns": 3,
+  "rows": 2,
+  "frameWidth": 768,
+  "frameHeight": 512,
+  "framePivot": {
+    "x": 0.4557291666666667,
+    "y": 0.859375,
+    "coordinateOrigin": "top-left"
+  },
+  "attackDurationMs": 300,
+  "damagePulseTimesMs": [
+    40,
+    120,
+    200
+  ],
+  "damageLogic": "Game.updateHero()/slashPulse() authoritative; sprite frames cause NO damage",
+  "type": "Horizontal sweeping slash",
+  "frames": [
+    {
+      "index": 0,
+      "name": "attack_1_00",
+      "x": 0,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 50,
+      "contentBounds": [
+        200,
+        196,
+        514,
+        444
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 1,
+      "name": "attack_1_01",
+      "x": 768,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 50,
+      "contentBounds": [
+        199,
+        146,
+        549,
+        444
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 2,
+      "name": "attack_1_02",
+      "x": 1536,
+      "y": 0,
+      "w": 768,
+      "h": 512,
+      "durationMs": 50,
+      "contentBounds": [
+        158,
+        166,
+        618,
+        444
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 3,
+      "name": "attack_1_03",
+      "x": 0,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 50,
+      "contentBounds": [
+        181,
+        174,
+        647,
+        449
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 4,
+      "name": "attack_1_04",
+      "x": 768,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 50,
+      "contentBounds": [
+        192,
+        205,
+        669,
+        448
+      ],
+      "sourceOverflow": false
+    },
+    {
+      "index": 5,
+      "name": "attack_1_05",
+      "x": 1536,
+      "y": 512,
+      "w": 768,
+      "h": 512,
+      "durationMs": 50,
+      "contentBounds": [
+        201,
+        198,
+        517,
+        448
+      ],
+      "sourceOverflow": false
+    }
+  ]
+}

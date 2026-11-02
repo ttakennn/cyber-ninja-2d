@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><title>Task09.1 — duyệt artwork attack</title>
+<style>body{background:#101a2b;color:#e4edf5;font:16px system-ui;margin:24px}button,select,input{margin:8px;padding:8px}canvas{background:#18263a;max-width:100%;border:1px solid #41516c}p{max-width:1000px}a{color:#71e9f5}</style>
+<h1>Task09.1 — bản artwork chờ duyệt</h1>
+<p>Giữ pixel/world unit của nhân vật; khung 512×512 chỉ thêm khoảng trống cho lửa. Đây là preview ảnh, không phải gameplay/hitbox. Chuỗi combo đề xuất bỏ bớt thu kiếm và chuẩn bị thấp giữa các đòn; chưa chốt timing.</p>
+<select id="mode"><option value="combo">Combo đề xuất 1 → 2 → 3</option><option value="0">Đòn 1 — đủ frame nguồn</option><option value="1">Đòn 2 — đủ frame nguồn</option><option value="2">Đòn 3 — đủ frame nguồn</option></select>
+<button id="play">Dừng</button><button id="back">← frame</button><button id="next">frame →</button>
+<label>Tốc độ <select id="speed"><option value="0.5">0.5×</option><option value="1">1×</option><option value="0.25">0.25×</option></select></label>
+<label><input type="checkbox" id="ghost" checked>Chồng idle để so tỉ lệ</label><br>
+<canvas id="canvas" width="512" height="512"></canvas><p id="info"></p><input id="scrub" type="range" min="0" value="0" style="width:480px;max-width:90%">
+<p>Đường cyan là pivot chân Y353; dấu đỏ là root X192. Xem đầu/thân thay vì tổng bbox lửa. Cần duyệt các chỗ nối combo và động tác thu kiếm về idle. Không có damage hoặc điều khiển nhân vật ở đây.</p>
+<script src="../../../../integration/task-009-player-attacks/candidate/review-data.js"></script>
+<script>
+const base='../../../../integration/task-009-player-attacks/candidate/';
+const images=attackReview.map(a=>{const i=new Image();i.src=base+a.image;return i});
+const idle=new Image();idle.src='../../../../public/assets/characters/ninja/flame-ninja-atlas.png';
+const ctx=document.querySelector('canvas').getContext('2d'),mode=document.querySelector('#mode'),scrub=document.querySelector('#scrub');
+let sequence=[],index=0,playing=true,accumulator=0,last=0;
+function setSequence(){sequence=mode.value==='combo'?[[0,[0,1,2,3,4]],[1,[1,2,3,4,5]],[2,[1,2,3,4,5,6,7]]].flatMap(([clip,frames])=>frames.map(frame=>({clip,frame}))):Array.from({length:attackReview[+mode.value].count},(_,frame)=>({clip:+mode.value,frame}));index=0;accumulator=0;scrub.max=sequence.length-1}
+mode.onchange=setSequence;setSequence();scrub.oninput=()=>{index=+scrub.value;playing=false};
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'Dừng':'Chạy'};
+document.querySelector('#back').onclick=()=>{playing=false;index=(index+sequence.length-1)%sequence.length};
+document.querySelector('#next').onclick=()=>{playing=false;index=(index+1)%sequence.length};
+function draw(time){const delta=last?Math.min(100,time-last):0;last=time;const current=sequence[index];if(playing){accumulator+=delta*+document.querySelector('#speed').value;const ms=attackReview[current.clip].frameMs;if(accumulator>=ms){accumulator-=ms;index=(index+1)%sequence.length}}
+ctx.clearRect(0,0,512,512);ctx.strokeStyle='#55dce2';ctx.beginPath();ctx.moveTo(0,353.5);ctx.lineTo(512,353.5);ctx.stroke();ctx.fillStyle='#ff6677';ctx.fillRect(189,350,6,6);
+if(document.querySelector('#ghost').checked&&idle.complete){ctx.globalAlpha=0.25;ctx.drawImage(idle,4,4,384,320,0,64,384,320);ctx.globalAlpha=1}
+const s=sequence[index],a=attackReview[s.clip],image=images[s.clip];if(image.complete&&image.naturalWidth)ctx.drawImage(image,s.frame%a.columns*512,Math.floor(s.frame/a.columns)*512,512,512,0,0,512,512);
+scrub.value=index;document.querySelector('#info').textContent=`${a.id} — frame ${s.frame+1}/${a.count}; ${a.frameMs.toFixed(2)}ms/frame theo nguồn, chưa chốt combat`;requestAnimationFrame(draw)}requestAnimationFrame(draw);
+</script></html>
