@@ -1,0 +1,263 @@
+{
+    "status":  "CANDIDATE_CROUCH_THROW_REVIEW_ONLY",
+    "tool":  "image_gen.imagegen built-in",
+    "source":  "source-v1.png",
+    "sourceOriginal":  "exec-f2b28835-1ee5-4d8b-8f3a-59d1c70cf51d.png",
+    "sourcePixelSize":  [
+                            1536,
+                            1024
+                        ],
+    "image":  "crouch-throw-atlas.png",
+    "pixelSize":  [
+                      1536,
+                      1024
+                  ],
+    "frameSize":  [
+                      512,
+                      512
+                  ],
+    "columns":  3,
+    "rows":  2,
+    "uniformScale":  0.48,
+    "pixelWorldUnit":  0.00625,
+    "pivot":  [
+                  192,
+                  353
+              ],
+    "frameMs":  [
+                    85,
+                    100,
+                    65,
+                    70,
+                    90,
+                    140
+                ],
+    "releaseFrame":  3,
+    "releasePoint":  [
+                         350,
+                         240
+                     ],
+    "frames":  [
+                   {
+                       "sourceHipX":  235,
+                       "rect":  [
+                                    0,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          0,
+                                          512,
+                                          512
+                                      ],
+                       "index":  0,
+                       "translation":  [
+                                           79,
+                                           119
+                                       ],
+                       "pivot":  [
+                                     192,
+                                     353
+                                 ],
+                       "sourceInk":  [
+                                         31,
+                                         194,
+                                         480,
+                                         488
+                                     ],
+                       "candidateInk":  [
+                                            94,
+                                            213,
+                                            309,
+                                            353
+                                        ]
+                   },
+                   {
+                       "sourceHipX":  241,
+                       "rect":  [
+                                    512,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          512,
+                                          0,
+                                          512,
+                                          512
+                                      ],
+                       "index":  1,
+                       "translation":  [
+                                           76,
+                                           119
+                                       ],
+                       "pivot":  [
+                                     192,
+                                     353
+                                 ],
+                       "sourceInk":  [
+                                         58,
+                                         182,
+                                         477,
+                                         488
+                                     ],
+                       "candidateInk":  [
+                                            104,
+                                            207,
+                                            305,
+                                            353
+                                        ]
+                   },
+                   {
+                       "sourceHipX":  236,
+                       "rect":  [
+                                    1024,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          1024,
+                                          0,
+                                          512,
+                                          512
+                                      ],
+                       "index":  2,
+                       "translation":  [
+                                           79,
+                                           119
+                                       ],
+                       "pivot":  [
+                                     192,
+                                     353
+                                 ],
+                       "sourceInk":  [
+                                         29,
+                                         189,
+                                         471,
+                                         488
+                                     ],
+                       "candidateInk":  [
+                                            94,
+                                            210,
+                                            305,
+                                            353
+                                        ]
+                   },
+                   {
+                       "sourceHipX":  235,
+                       "rect":  [
+                                    0,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          512,
+                                          584,
+                                          512
+                                      ],
+                       "index":  3,
+                       "translation":  [
+                                           79,
+                                           164
+                                       ],
+                       "pivot":  [
+                                     192,
+                                     353
+                                 ],
+                       "sourceInk":  [
+                                         45,
+                                         97,
+                                         573,
+                                         394
+                                     ],
+                       "candidateInk":  [
+                                            101,
+                                            211,
+                                            354,
+                                            353
+                                        ]
+                   },
+                   {
+                       "sourceHipX":  221,
+                       "rect":  [
+                                    512,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          584,
+                                          512,
+                                          456,
+                                          512
+                                      ],
+                       "index":  4,
+                       "translation":  [
+                                           86,
+                                           164
+                                       ],
+                       "pivot":  [
+                                     192,
+                                     353
+                                 ],
+                       "sourceInk":  [
+                                         19,
+                                         101,
+                                         447,
+                                         394
+                                     ],
+                       "candidateInk":  [
+                                            95,
+                                            213,
+                                            300,
+                                            353
+                                        ]
+                   },
+                   {
+                       "sourceHipX":  240,
+                       "rect":  [
+                                    1024,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          1040,
+                                          512,
+                                          496,
+                                          512
+                                      ],
+                       "index":  5,
+                       "translation":  [
+                                           77,
+                                           164
+                                       ],
+                       "pivot":  [
+                                     192,
+                                     353
+                                 ],
+                       "sourceInk":  [
+                                         29,
+                                         102,
+                                         475,
+                                         394
+                                     ],
+                       "candidateInk":  [
+                                            91,
+                                            213,
+                                            305,
+                                            353
+                                        ]
+                   }
+               ],
+    "sourceSha256":  "50469f2fb154cffc4e1121174c4cbf24045c1bec7f71b03929cc8f4f14ab473e",
+    "candidateSha256":  "942fa286d6a5e6ae40d63782c9889ce0b978f1cf88d3d5adb56596631404b4a2",
+    "canonicalChanged":  false,
+    "runtimeIntegration":  "NOT_IMPLEMENTED",
+    "timing":  "PREVIEW_ONLY"
+}

@@ -1,0 +1,1 @@
+window.throwReview={"frameMs":[85,100,65,70,90,140],"releasePoint":[350,240],"releaseFrame":3};

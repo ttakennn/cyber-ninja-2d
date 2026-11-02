@@ -12,3 +12,5 @@ Baseline a26fcd3, nhánh codex/task-009-player-attack-art. Chưa merge master. C
 | 09.6 — nghiệm thu/merge | Kiểm thử được cho phép, chơi thử và duyệt; commit/merge khi được yêu cầu | Chưa bắt đầu; không tự merge master |
 
 Lượt đầu chỉ thực hiện09.1. Sau khi người dùng duyệt combo và chốt click trái, đã thực hiện phần animation/input09.2; physics và sprite đi/chạy/nhảy/leo giữ nguyên. Không nhập logic damage của project khác từ JSON asset vào engine này. Không chạy test/build/validation nếu task hiện tại chưa cho phép.
+
+Phần phi tiêu đứng đã commit20d4cd3 theo yêu cầu. Đã bổ sung [art cúi phóng phi tiêu](map01/commits/task-009-05-crouch-shuriken-art/README.md) với sáu pose/preview riêng; chờ review artwork, chưa đổi gate hoặc runtime cúi. Chưa bắt đầu special Q.
