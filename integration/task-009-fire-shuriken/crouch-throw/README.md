@@ -1,5 +1,7 @@
 # Crouch phóng phi tiêu — bộ pose để review
 
+Cập nhật sau review: người dùng đã duyệt và yêu cầu apply, tốc độx2, va chạm solid/dọn ngoài level. Đã promote qua scripts/promote_ninja_shuriken.mjs; [báo cáo runtime](../../../docs/map01/commits/task-009-06-crouch-shuriken-runtime/IMPLEMENTATION.md). Phần bên dưới giữ hồ sơ giai đoạn art candidate, không phải kết quả nghiệm thu game.
+
 [Preview](../../../docs/map01/commits/task-009-05-crouch-shuriken-art/preview.html) · [So tỉ lệ](../../../docs/map01/commits/task-009-05-crouch-shuriken-art/crouch-contact-sheet.png) · [Prompt ImageGen](image-prompt.md) · [Metadata](atlas.json).
 
 Yêu cầu: commit phần hiện tại, bổ sung artwork khi nhân vật ngồi/cúi phóng phi tiêu. Phần đứng/runtime đã commit20d4cd3; lượt này tạo bộ art cúi riêng để review, không promote hoặc đổi gate/runtime đã duyệt.

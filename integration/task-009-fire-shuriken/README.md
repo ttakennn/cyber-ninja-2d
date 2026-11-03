@@ -1,5 +1,7 @@
 # Fire shuriken — Task09.3.1
 
+Runtime mới nhất: đã apply art cúi được duyệt, tốc độx2, không TTL, va chạm solid và dọn ngoài biên level; [báo cáo](../../docs/map01/commits/task-009-06-crouch-shuriken-runtime/IMPLEMENTATION.md). Runtime-plan.json/generator là nguồn hiện hành; các phần candidate/visual-only dưới đây ghi bối cảnh các lượt trước. Quái/damage chưa làm, test/build/gameplay chưa chạy.
+
 Cập nhật sau review: người dùng đã duyệt và yêu cầu apply. Nguồn phê duyệt/thông số runtime tại [runtime-plan.json](runtime-plan.json), promote bằng scripts/promote_ninja_shuriken.mjs; [báo cáo tích hợp](../../docs/map01/commits/task-009-04-fire-shuriken-runtime/IMPLEMENTATION.md). Các mô tả candidate và metadata bên dưới giữ bối cảnh lượt artwork; không phải trạng thái nghiệm thu runtime. Đã copy ảnh vào public, chưa test/build/gameplay.
 
 Art candidate bằng ImageGen built-in, lưu PNG nguyên bản, chưa promote vào public hoặc load trong game. Xem [preview](../../docs/map01/commits/task-009-03-fire-shuriken-art/preview.html).

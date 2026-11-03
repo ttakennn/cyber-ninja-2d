@@ -1,5 +1,7 @@
 # Task09 — bổ sung art cúi phóng phi tiêu
 
+Cập nhật: art đã được người dùng duyệt và yêu cầu apply; [runtime mới](../task-009-06-crouch-shuriken-runtime/IMPLEMENTATION.md) thêm bộ cúi, tốc độx2 và solid collision. Hồ sơ dưới đây ghi lại lượt artwork tại dd98497.
+
 Đã commit phần art + click phải đứng/projectile hiện tại tại **20d4cd3 — feat(ninja): add right-click fire shuriken animation and projectile**, nhánh codex/task-009-player-attack-art. Không merge/push; chưa chạy test/build của commit này.
 
 [Preview động bộ cúi](preview.html) · [Ảnh đối chiếu](crouch-contact-sheet.png) · [Atlas mới](../../../../integration/task-009-fire-shuriken/crouch-throw/crouch-throw-atlas.png) · [Prompt/nguồn/metadata](../../../../integration/task-009-fire-shuriken/crouch-throw/README.md).

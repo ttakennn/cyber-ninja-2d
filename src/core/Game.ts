@@ -41,6 +41,7 @@ export class Game {
     }
     this.camera = new GameCamera(this.level.cameraBounds, this.level.cameraFollowY);
     this.player = new Player(this.level.spawn);
+    this.player.shuriken.setWorld(this.level.colliders, this.level.cameraBounds);
     this.recovery = new FallRecovery(this.level.spawn, this.level.deathY);
     this.input = new InputManager();
     this.debug = new DebugOverlay(container, this.level.id);

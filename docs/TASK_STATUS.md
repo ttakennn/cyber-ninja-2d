@@ -1,6 +1,6 @@
 # Trạng thái toàn dự án
 
-Skills nhân vật: người dùng đã duyệt [art phi tiêu và sáu pose phóng đứng](map01/commits/task-009-03-fire-shuriken-art/README.md), đã apply click phải và commit20d4cd3; [báo cáo runtime](map01/commits/task-009-04-fire-shuriken-runtime/IMPLEMENTATION.md). Theo yêu cầu tiếp theo, đã thêm [sáu pose cúi phóng + preview](map01/commits/task-009-05-crouch-shuriken-art/README.md), chờ review, chưa promote vào game. Chưa damage/collision phi tiêu, chưa chạy test/build/gameplay hoặc merge. Task3 art “Minh Vương Bạo Viêm” và Task4 apply Q chưa bắt đầu. Cooldown5s thuộc special-skill-01, không tự gán cho phi tiêu.
+Skills nhân vật: đã tích hợp bộ cúi phóng được duyệt, click phải khi đứng/cúi, tốc độx2 (11.25unit/s), bỏ TTL và tắt khi chạm solid hoặc ra ngoài level theo lựa chọn người dùng; [báo cáo mới](map01/commits/task-009-06-crouch-shuriken-runtime/IMPLEMENTATION.md). Baseline đứng20d4cd3, art cúi dd98497; lượt runtime mới chưa commit/merge, test/build/gameplay chưa chạy. Quái/damage xử lý sau. Task3 art “Minh Vương Bạo Viêm” và Task4 apply Q chưa bắt đầu; không tự gán cooldown5s cho phi tiêu.
 
 Task09 trên nhánh codex/task-009-player-attack-art từ a26fcd3: [kế hoạch chia phần](TASK-009.md). Art được người dùng duyệt, commit1442907. Đã promote ảnh và tích hợp animation: click trái nối1→2→3, nghỉ≥0.5s về1; [báo cáo09.2](map01/commits/task-009-02-player-combo/IMPLEMENTATION.md). Chưa merge master, chưa chạy test/build/runtime. Skills riêng, damage/hitbox, quái và boss chưa thực hiện.
 

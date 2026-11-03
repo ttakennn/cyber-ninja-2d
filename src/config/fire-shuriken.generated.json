@@ -4,6 +4,12 @@
     "x": 1.01875,
     "y": 1.41875
   },
-  "speed": 5.625,
-  "lifetime": 0.65
+  "crouch": {
+    "releaseSeconds": 0.25,
+    "releaseOffset": {
+      "x": 0.9875,
+      "y": 0.70625
+    }
+  },
+  "speed": 11.25
 }

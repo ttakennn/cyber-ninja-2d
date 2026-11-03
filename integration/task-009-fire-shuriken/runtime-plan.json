@@ -3,8 +3,8 @@
   "approval": "Người dùng: Ok good, apply vào nhân vật giúp tôi.",
   "animationTickMs": 5,
   "projectileFrameWidthPx": 96,
-  "projectileSpeedPxPerSecond": 900,
-  "projectileLifetimeMs": 650,
-  "flightBasis": "Giữ tốc độ và thời gian hiển thị của preview đã duyệt để review runtime; chưa damage/collision/cooldown."
+  "projectileSpeedPxPerSecond": 1800,
+  "crouchApproval": "Người dùng duyệt art cúi, yêu cầu apply, tốc độ x2 và tắt khi gặp vật cản; cho phép dọn ngoài màn chơi.",
+  "flightBasis": "Không có TTL; quét tâm phi tiêu qua solids của level, dọn ngoài biên ngang màn chơi; quái/damage xử lý sau."
 }
 

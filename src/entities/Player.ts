@@ -142,11 +142,16 @@ export class Player {
   updateAnimation(delta: number, landed: boolean): void {
     this.animator.update(delta, this.body, landed, this.movement);
     this.attack.update(delta, this.canAttack);
-    this.shuriken.update(delta, this.canAttack, { x: this.body.position.x, y: this.body.position.y - this.body.height / 2 });
+    this.shuriken.update(delta, this.canThrowShuriken, { x: this.body.position.x, y: this.body.position.y - this.body.height / 2 },
+      this.movement.stance === 'crouching');
   }
 
   get canAttack(): boolean {
     return this.body.isGrounded && this.movement.mode !== 'climbing' && this.movement.stance === 'standing';
+  }
+
+  get canThrowShuriken(): boolean {
+    return this.body.isGrounded && this.movement.mode !== 'climbing';
   }
 
   requestAttack(time?: number): void {
@@ -155,8 +160,9 @@ export class Player {
   }
 
   requestShuriken(): void {
-    if (!this.canAttack || this.attack.isActive) return;
-    this.shuriken.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing);
+    if (!this.canThrowShuriken || this.attack.isActive) return;
+    this.shuriken.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing,
+      this.movement.stance === 'crouching');
   }
 
   get renderHeight(): number { return this.interpolatedHeight; }
