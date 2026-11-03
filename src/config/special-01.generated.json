@@ -1,0 +1,35 @@
+{
+  "cooldownSeconds": 5,
+  "speed": 9,
+  "releaseSeconds": 0.36,
+  "releaseOffset": {
+    "x": 0.875,
+    "y": 1.175
+  },
+  "charge": [
+    {
+      "untilSeconds": 0.12,
+      "offset": {
+        "x": -0.1,
+        "y": 0.85625
+      },
+      "scale": 0.26666666666666666
+    },
+    {
+      "untilSeconds": 0.26,
+      "offset": {
+        "x": 0.175,
+        "y": 0.99375
+      },
+      "scale": 0.4166666666666667
+    },
+    {
+      "untilSeconds": 0.36,
+      "offset": {
+        "x": 0.26875,
+        "y": 1.05625
+      },
+      "scale": 0.18333333333333332
+    }
+  ]
+}

@@ -20,6 +20,25 @@ afterEach(() => {
 });
 
 describe('keyboard input', () => {
+  it('E thi triển special, F bám thang; giữ phím không lặp và không dùng chung action', () => {
+    const { target, input } = setup();
+    expect(key(target, 'keydown', 'KeyE').defaultPrevented).toBe(true);
+    expect(input.wasPressed('specialSkill1')).toBe(true);
+    expect(input.wasPressed('climb')).toBe(false);
+    input.endStep();
+    key(target, 'keydown', 'KeyE', true);
+    expect(input.wasPressed('specialSkill1')).toBe(false);
+    key(target, 'keydown', 'KeyF');
+    expect(input.wasPressed('climb')).toBe(true);
+    expect(input.wasPressed('specialSkill1')).toBe(false);
+    key(target, 'keyup', 'KeyE');
+    key(target, 'keydown', 'KeyE');
+    expect(input.wasPressed('specialSkill1')).toBe(true);
+    target.dispatchEvent(new Event('blur'));
+    expect(input.wasPressed('specialSkill1')).toBe(false);
+    expect(input.wasPressed('climb')).toBe(false);
+  });
+
   it('tracks continuous movement and cancels opposing directions', () => {
     const { target, input } = setup();
     expect(key(target, 'keydown', 'KeyA').defaultPrevented).toBe(true);

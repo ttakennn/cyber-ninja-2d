@@ -9,7 +9,7 @@ export class Renderer {
   constructor(container: HTMLElement) {
     this.renderer = new WebGLRenderer({ antialias: true, alpha: false });
     this.scene.background = new Color(gameConfig.viewport.background);
-    this.renderer.domElement.setAttribute('aria-label', 'Dùng A/D để đi, Space để nhảy, S để cúi, E để bám thang, W/S để leo, click trái để đánh combo và click phải để phóng phi tiêu hoả khi đứng hoặc cúi');
+    this.renderer.domElement.setAttribute('aria-label', 'Dùng A/D để đi, Space để nhảy, S để cúi, F để bám thang, W/S để leo, click trái để đánh combo, click phải để phóng phi tiêu hoả khi đứng hoặc cúi và E để thi triển Minh Vương Bạo Viêm (hồi chiêu 5 giây)');
     this.renderer.domElement.setAttribute('role', 'img');
     container.prepend(this.renderer.domElement);
   }

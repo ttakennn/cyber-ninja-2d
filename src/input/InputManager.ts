@@ -1,4 +1,4 @@
-export type InputAction = 'moveLeft' | 'moveRight' | 'jump' | 'toggleDebug' | 'crouch' | 'climbUp' | 'climb' | 'detachJump' | 'toggleCollision';
+export type InputAction = 'moveLeft' | 'moveRight' | 'jump' | 'toggleDebug' | 'crouch' | 'climbUp' | 'climb' | 'detachJump' | 'toggleCollision' | 'specialSkill1' | 'toggleHelp';
 export type KeyBindings = Readonly<Record<InputAction, readonly string[]>>;
 
 export const defaultBindings: KeyBindings = {
@@ -8,9 +8,11 @@ export const defaultBindings: KeyBindings = {
   toggleDebug: ['F3'],
   crouch: ['KeyS', 'ArrowDown'],
   climbUp: ['KeyW', 'ArrowUp'],
-  climb: ['KeyE'],
+  climb: ['KeyF'],
   detachJump: ['Space'],
   toggleCollision: ['F4'],
+  specialSkill1: ['KeyE'],
+  toggleHelp: ['KeyH'],
 };
 
 export class InputManager {

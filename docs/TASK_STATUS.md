@@ -1,8 +1,10 @@
 # Trạng thái toàn dự án
 
-Skills nhân vật: đã tích hợp bộ cúi phóng được duyệt, click phải khi đứng/cúi, tốc độx2 (11.25unit/s), bỏ TTL và tắt khi chạm solid hoặc ra ngoài level theo lựa chọn người dùng; [báo cáo mới](map01/commits/task-009-06-crouch-shuriken-runtime/IMPLEMENTATION.md). Baseline đứng20d4cd3, art cúi dd98497; lượt runtime mới chưa commit/merge, test/build/gameplay chưa chạy. Quái/damage xử lý sau. Task3 art “Minh Vương Bạo Viêm” và Task4 apply Q chưa bắt đầu; không tự gán cooldown5s cho phi tiêu.
+UI mới nhất: **H** ẩn/hiện khung hướng dẫn; tên chiêu trên đầu chỉ còn chữ sáng, nhỏ hơn2px, giữ fade1.5s. [Báo cáo](map01/commits/task-009-10-help-callout/IMPLEMENTATION.md); chưa chạy test/build/runtime hoặc commit lượt này.
 
-Task09 trên nhánh codex/task-009-player-attack-art từ a26fcd3: [kế hoạch chia phần](TASK-009.md). Art được người dùng duyệt, commit1442907. Đã promote ảnh và tích hợp animation: click trái nối1→2→3, nghỉ≥0.5s về1; [báo cáo09.2](map01/commits/task-009-02-player-combo/IMPLEMENTATION.md). Chưa merge master, chưa chạy test/build/runtime. Skills riêng, damage/hitbox, quái và boss chưa thực hiện.
+Skills nhân vật: art “Minh Vương Bạo Viêm” đã được người dùng duyệt và tích hợp bằng **E**, **F** bám thang; [tích hợp](map01/commits/task-009-08-special-01-runtime/IMPLEMENTATION.md), [UI mới](map01/commits/task-009-09-special-01-ui/IMPLEMENTATION.md). Orb tăng từ4.5 lên9unit/s, tên chiêu trên đầu mờ dần1.5s, HUD tên/countdown ở góc trái trên. Cooldown5s từ lúc bắt đầu, bị ngắt vẫn hồi; có orb/nổ khi chạm solid. Chưa damage/AOE combat/quái, chưa chạy test/build/gameplay hoặc commit/merge lượt mới. Phi tiêu đứng/cúi/tốc độx2/collision vẫn ở baseline25d85cd.
+
+Task09 trên nhánh codex/task-009-player-attack-art từ a26fcd3: [kế hoạch chia phần](TASK-009.md). Art combo được duyệt, commit1442907; click trái nối1→2→3, nghỉ≥0.5s về1; [báo cáo09.2](map01/commits/task-009-02-player-combo/IMPLEMENTATION.md). Chưa merge master, chưa chạy test/build/runtime mới. Phi tiêu/special xem trạng thái ở trên; damage/hitbox combat, quái và boss chưa thực hiện.
 
 Cập nhật 2026-11-02. Baseline code/asset gần nhất4ce0146; task tổ chức tài liệu không đổi runtime và không chạy test/build.
 

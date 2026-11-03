@@ -8,6 +8,7 @@ import { SpriteRenderer } from '../rendering/SpriteRenderer';
 import { PlayerAnimator } from './PlayerAnimator';
 import { PlayerAttack } from './PlayerAttack';
 import { PlayerShuriken } from './PlayerShuriken';
+import { PlayerSpecialSkill01 } from './PlayerSpecialSkill01';
 import { PlayerMovementController } from './PlayerMovementController';
 import type { MovementInput } from './PlayerMovementController';
 
@@ -25,6 +26,7 @@ export class Player {
   readonly animator = new PlayerAnimator();
   readonly attack = new PlayerAttack();
   readonly shuriken = new PlayerShuriken();
+  readonly specialSkill1 = new PlayerSpecialSkill01();
   readonly movement = new PlayerMovementController(this.body);
   private readonly placeholder: Mesh<PlaneGeometry, MeshBasicMaterial>;
   private readonly previousPosition = { ...gameConfig.player.spawn } as { x: number; y: number };
@@ -46,6 +48,7 @@ export class Player {
     this.visual.add(this.placeholder);
     this.visual.add(this.attack.visual);
     this.visual.add(this.shuriken.visual);
+    this.visual.add(this.specialSkill1.visual);
     this.setPosition(spawn.x, spawn.y);
   }
 
@@ -73,6 +76,7 @@ export class Player {
       this.visual.add(this.sprite.visual);
       this.visual.add(this.attack.visual);
       this.visual.add(this.shuriken.visual);
+      this.visual.add(this.specialSkill1.visual);
       this.placeholder.visible = false;
       this.spriteStatus = sheet.kind;
       sheet = null;
@@ -133,6 +137,7 @@ export class Player {
   respawn(spawn: Readonly<Vector2>): void {
     this.attack.cancel();
     this.shuriken.reset();
+    this.specialSkill1.reset();
     this.movement.reset();
     this.animator.reset();
     this.state = 'fall';
@@ -144,6 +149,7 @@ export class Player {
     this.attack.update(delta, this.canAttack);
     this.shuriken.update(delta, this.canThrowShuriken, { x: this.body.position.x, y: this.body.position.y - this.body.height / 2 },
       this.movement.stance === 'crouching');
+    this.specialSkill1.update(delta, this.canAttack, { x: this.body.position.x, y: this.body.position.y - this.body.height / 2 });
   }
 
   get canAttack(): boolean {
@@ -155,14 +161,19 @@ export class Player {
   }
 
   requestAttack(time?: number): void {
-    if (!this.canAttack || this.shuriken.isActive) return;
+    if (!this.canAttack || this.shuriken.isActive || this.specialSkill1.isActive) return;
     this.attack.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing, time);
   }
 
   requestShuriken(): void {
-    if (!this.canThrowShuriken || this.attack.isActive) return;
+    if (!this.canThrowShuriken || this.attack.isActive || this.specialSkill1.isActive) return;
     this.shuriken.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing,
       this.movement.stance === 'crouching');
+  }
+
+  requestSpecialSkill1(): boolean {
+    if (!this.canAttack || this.attack.isActive || this.shuriken.isActive) return false;
+    return this.specialSkill1.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing);
   }
 
   get renderHeight(): number { return this.interpolatedHeight; }
@@ -186,7 +197,8 @@ export class Player {
     this.sprite?.setFrame(this.animator.controller.frame, this.animator.renderFacing);
     this.attack.visual.position.y = -this.interpolatedHeight / 2;
     this.shuriken.visual.position.y = -this.interpolatedHeight / 2;
-    const actionActive = this.attack.isActive || this.shuriken.isActive;
+    this.specialSkill1.visual.position.y = -this.interpolatedHeight / 2;
+    const actionActive = this.attack.isActive || this.shuriken.isActive || this.specialSkill1.isActive;
     if (this.sprite) this.sprite.visual.visible = !actionActive;
     this.placeholder.visible = !this.sprite && !actionActive;
   }
@@ -200,6 +212,7 @@ export class Player {
     this.sprite?.dispose();
     this.attack.dispose();
     this.shuriken.dispose();
+    this.specialSkill1.dispose();
     this.placeholder.geometry.dispose();
     this.placeholder.material.dispose();
     this.visual.clear();

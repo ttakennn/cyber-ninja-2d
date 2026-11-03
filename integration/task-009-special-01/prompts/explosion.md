@@ -1,0 +1,13 @@
+Use case: stylized-concept. Asset: EIGHT-frame EXPLOSION VFX sprite sheet for the dark-fire orb special skill "Minh Vuong Bao Viem". Image1 is the approved-for-preview NEW orb design, reference for its charcoal/crimson/orange dark-fire palette and illustrated textured pixel-art style. This sheet is the IMPACT BURST of that orb, NOT another flying orb or metal weapon.
+Transparent RGBA canvas1536x1024, exactly4 columns x2 rows (eight frames), cells384x512, reading left-to-right then top-to-bottom. All frames share impact center at local(192,256). Circular RADIAL AOE explosion in side-view2D, not a ground-only mushroom cloud. Main explosion must fit localx20..364,y80..432, isolated transparent margins; don't crop sparks into adjacent cells.
+Texture/style: same crisp intricate illustrated textured pixel-art as orb. Thick charcoal/burgundy BLACK flame folds torn apart by molten crimson/scarlet tongues, hot orange/amber seams and a brief small white-hot impact core. Black-fire should stay distinct/readable against dark navy and pale backgrounds; no opaque black backdrop. Dark ash/smoke can dissolve into alpha. Dramatic powerful circular blast, no metal blades, skulls, runes, character, enemy, floor or environment. No text or grid lines.
+Eight DISTINCT sequential phases with evolving shape and size. Do not repeat eight full-size explosion balls:
+1: tight compressed impact spark, ~60px diameter, black-red center and tiny hot white slash.
+2: initial detonation expands to~160px diameter, splitting black-fire petals and orange fissures.
+3: violent peak burst~300px diameter, intense small bright core, irregular jagged circular flame crown, black-red chunks stretching outwards.
+4: largest radial expansion~330px diameter, hot orange rim breaks into curled black/crimson flame lobes and scattered sparks.
+5: flame lobes stretch and separate, central bright light fades, black/burgundy hollow smoke swirls remain; ~300px envelope.
+6: broken dark-red smoke curls and detached ember fragments, much more transparent negative space, no solid full ball.
+7: a few separated fading crimson smoke wisps/embers around the same center, no solid core; dissipating not a new burst.
+8: last tiny sparse embers, nearly empty cell, absolutely NO filled fireball; good end for a non-looping effect.
+Natural in-between evolution1→8. All frames same pixel scale/camera; growth is drawn into the frames rather than all bursts separately fit to canvas. Actual transparency outside every spark/smoke sprite; do not paint a backdrop, ambient rectangle, fake checkerboard or drop shadow. No looping flight trail.

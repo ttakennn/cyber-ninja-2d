@@ -1,6 +1,10 @@
 # Trạng thái Map01
 
+UI Task09: H ẩn/hiện khung hướng dẫn phía dưới, tên chiêu bỏ khung/nền và nhỏ hơn2px; [báo cáo](commits/task-009-10-help-callout/IMPLEMENTATION.md). Chưa kiểm tra runtime/test/build hoặc commit lượt này.
+
 Phạm vi Map01; xem [trạng thái toàn dự án](../TASK_STATUS.md), [style riêng](rules/ART_STYLE_GUIDE.md) và [atlas riêng](rules/ATLAS_SPEC.md). Palette Map01 được giữ cho Map01, không giới hạn palette của map mới.
+
+2026-11-03: Task09 special1 thêm HUD tên/countdown góc trái trên, tên chiêu mờ dần1.5s trên đầu nhân vật và tăng tốc orb lên9unit/s; [báo cáo UI](commits/task-009-09-special-01-ui/IMPLEMENTATION.md). Không đổi bố trí/collision Map01 hoặc artwork; chưa chạy test/build/runtime và chưa commit/merge lượt special. Trạng thái baseline môi trường bên dưới là lịch sử của lượt tài liệu2026-11-02.
 
 Cập nhật 2026-11-02. Baseline code/asset trước bộ quy chuẩn này: **4ce0146**; animation v2: **12959ca**. Repo ở master do người dùng đang làm việc tại nhánh đó; không suy rằng cần tự merge/push trong task sau.
 

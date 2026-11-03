@@ -62,7 +62,7 @@ describe('hồi về spawn khi rơi khỏi level', () => {
     camera.follow({ x: 70, y: 7 });
     const target = new EventTarget();
     const input = new InputManager(target);
-    key(target, 'KeyD'); key(target, 'KeyS'); key(target, 'KeyE'); key(target, 'Space');
+    key(target, 'KeyD'); key(target, 'KeyS'); key(target, 'KeyF'); key(target, 'KeyE'); key(target, 'Space');
     const recovery = new FallRecovery(map01.spawn, map01.deathY);
     expect(recovery.update(player, input, camera)).toBe(true);
     expect(player.body.position).toEqual(map01.spawn);
@@ -87,6 +87,7 @@ describe('hồi về spawn khi rơi khỏi level', () => {
     expect(input.horizontal).toBe(0);
     expect(input.vertical).toBe(0);
     expect(input.wasPressed('jump')).toBe(false);
+    expect(input.wasPressed('specialSkill1')).toBe(false);
     expect(input.wasPressed('climb')).toBe(false);
     key(target, 'KeyD', true);
     expect(input.horizontal).toBe(0);

@@ -33,7 +33,20 @@ function drive(movement: PlayerMovementController, world: PhysicsWorld, input: I
 }
 
 describe('ngữ cảnh bàn phím cúi và leo', () => {
-  it('S/Down dùng chung action, Up và Down đối nhau, E và F4 có cạnh bấm', () => {
+  it('E không còn bám thang, F mới bám và W vẫn leo lên', () => {
+    const { input, key } = keyboard();
+    const { body, world, movement } = setup();
+    key('keydown', 'KeyE');
+    expect(input.wasPressed('specialSkill1')).toBe(true);
+    drive(movement, world, input);
+    expect(movement.activeClimbable).toBeNull();
+    key('keydown', 'KeyF'); key('keydown', 'KeyW');
+    drive(movement, world, input);
+    expect(movement.mode).toBe('climbing');
+    expect(body.velocity.y).toBeCloseTo(2.8);
+  });
+
+  it('S/Down dùng chung action, Up và Down đối nhau, F và F4 có cạnh bấm', () => {
     const { input, key } = keyboard();
     expect(key('keydown', 'KeyS').defaultPrevented).toBe(true);
     expect(input.vertical).toBe(-1);
@@ -43,20 +56,20 @@ describe('ngữ cảnh bàn phím cúi và leo', () => {
     expect(input.vertical).toBe(1);
     key('keydown', 'ArrowDown');
     expect(input.isDown('crouch')).toBe(true);
-    key('keydown', 'KeyE');
+    key('keydown', 'KeyF');
     key('keydown', 'F4');
     expect(input.wasPressed('climb')).toBe(true);
     expect(input.wasPressed('toggleCollision')).toBe(true);
     input.endStep();
-    key('keydown', 'KeyE', true);
+    key('keydown', 'KeyF', true);
     expect(input.wasPressed('climb')).toBe(false);
   });
 
-  it('giữ W khi bấm E sẽ leo, không nhận nhầm thành nhảy', () => {
+  it('giữ W khi bấm F sẽ leo, không nhận nhầm thành nhảy', () => {
     const { input, key } = keyboard();
     const { body, world, movement } = setup();
     key('keydown', 'KeyW');
-    key('keydown', 'KeyE');
+    key('keydown', 'KeyF');
     drive(movement, world, input);
     expect(movement.mode).toBe('climbing');
     expect(body.velocity.y).toBeCloseTo(2.8);
@@ -67,7 +80,7 @@ describe('ngữ cảnh bàn phím cúi và leo', () => {
     const { input, key } = keyboard();
     const { body, world, movement } = setup();
     key('keydown', 'KeyW');
-    key('keydown', 'KeyE');
+    key('keydown', 'KeyF');
     drive(movement, world, input);
     key('keydown', 'Space');
     expect(input.wasPressed('jump')).toBe(false);
@@ -96,7 +109,7 @@ describe('ngữ cảnh bàn phím cúi và leo', () => {
   it('blur xóa input leo; vẫn đứng yên trên thang và có thể rời bằng A', () => {
     const { target, input, key } = keyboard();
     const { body, world, movement } = setup();
-    key('keydown', 'KeyE');
+    key('keydown', 'KeyF');
     key('keydown', 'KeyW');
     drive(movement, world, input);
     const y = body.position.y;

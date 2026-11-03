@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Minh Vương Bạo Viêm — art preview</title>
+<style>body{background:#101a2d;color:#ecf2fa;font:16px system-ui;margin:24px}h1{color:#ffb16f}button,select,input{margin:6px;padding:7px}canvas,img{max-width:100%;height:auto;border:1px solid #56647a}a{color:#65e4ff}p{max-width:1200px}.detail{display:flex;gap:16px;flex-wrap:wrap;align-items:start}.detail canvas{max-width:100%}#scrub{width:min(700px,85vw)}</style>
+<h1>Minh Vương Bạo Viêm — thiết kế chờ duyệt</h1>
+<p>Tụ lực hai tay → cầu hắc hoả bay về trước → nổ lan rộng khi chạm vật cản. Cooldown yêu cầu: <b>5 giây</b>. Đây là mô phỏng art, chưa gắn phím Q, sát thương, quái hoặc collision trong game.</p>
+<button id="play">Dừng</button><button id="step">Tiến 50ms</button><button id="restart">Phát lại từ đầu</button>
+<label>Tốc độ <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+<label>Nền <select id="bg"><option value="#142139">Tối</option><option value="#e1e7ed">Sáng</option></select></label>
+<label>Cỡ khung cầu <select id="orbSize"><option>200</option><option selected>240</option><option>288</option></select>px</label>
+<label>Cỡ khung nổ <select id="burstSize"><option>512</option><option selected>640</option><option>768</option></select>px</label>
+<label><input id="ghost" type="checkbox">Chồng idle gốc mờ để so tỉ lệ</label>
+<p><input id="scrub" type="range" min="0" max="4999" value="0" step="1"></p>
+<p id="status">Đang tải artwork…</p>
+<canvas id="stage" width="1440" height="640"></canvas>
+<p>Chu kỳ 5s dưới đây chỉ minh hoạ cooldown; mốc bắt đầu trong game sẽ chốt khi tích hợp. Vật cản màu xám chỉ là hình mô phỏng. Các cỡ khung/tốc độ/nhịp chưa phải bán kính AOE, damage hoặc tốc độ gameplay đã chốt.</p>
+<h2>Chi tiết hiệu ứng</h2>
+<div class="detail"><div><p>Cầu hắc hoả · 4 pha lặp</p><canvas id="orbDetail" width="400" height="360"></canvas></div><div><p>Va chạm → nổ → tan · 8 pha không lặp</p><canvas id="burstDetail" width="480" height="480"></canvas></div></div>
+<h2>Đối chiếu kích thước nhân vật</h2>
+<p>Idle gốc và sáu pose mới giữ cùng mật độ160px/world unit, cùng đường chân. Không fit từng pose theo silhouette.</p>
+<img src="cast-contact-sheet.png" alt="Idle gốc và sáu pose thi triển">
+<h2>Bảng thiết kế</h2><img src="overview.png" alt="Thi triển hai tay, cầu hắc hoả và nổ AOE">
+<p><a href="README.md">Báo cáo/phạm vi</a> · <a href="../../../../integration/task-009-special-01/README.md">Nguồn/prompt/metadata</a> · <a href="../../../../integration/task-009-special-01/candidate/cast.png">Atlas thi triển</a> · <a href="../../../../integration/task-009-special-01/candidate/orb.png">Atlas cầu</a> · <a href="../../../../integration/task-009-special-01/candidate/explosion.png">Atlas nổ</a></p>
+<script src="../../../../integration/task-009-special-01/review-data.js"></script>
+<script>
+const data=window.specialReview,source='../../../../integration/task-009-special-01/';
+const images={cast:new Image(),orb:new Image(),explosion:new Image(),idle:new Image()};
+for(const name of ['cast','orb','explosion'])images[name].src=source+'candidate/'+name+'.png';
+images.idle.src=source+'source/idle-reference.png';
+const ctx=document.querySelector('#stage').getContext('2d'),orbCtx=document.querySelector('#orbDetail').getContext('2d'),burstCtx=document.querySelector('#burstDetail').getContext('2d');
+const status=document.querySelector('#status'),scrub=document.querySelector('#scrub'),starts=[0];
+for(const ms of data.cast.frameMs)starts.push(starts[starts.length-1]+ms);
+const releaseMs=starts[data.cast.releaseFrame],foot=data.preview.ninjaFoot;
+const socket=[foot[0]+data.cast.releasePoint[0]-192,foot[1]+data.cast.releasePoint[1]-353];
+const impactMs=releaseMs+(data.preview.simulatedTargetX-socket[0])/data.preview.flightSpeedPxPerSecond*1000;
+const burstMs=data.explosion.frames.length/data.explosion.fps*1000,cycleMs=data.cooldownSeconds*1000;
+const names=['Tụ lực','Nén cầu','Dồn lực','Phóng cầu','Theo đà','Hoàn thế'];
+let playing=true,time=0,last=0,failed=false;
+for(const [name,img] of Object.entries(images))img.onerror=()=>{failed=true;status.textContent='Không tải được '+name+'. Giữ nguyên thư mục preview trong repo.'};
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'Dừng':'Chạy'};
+function pause(){playing=false;document.querySelector('#play').textContent='Chạy'}
+document.querySelector('#step').onclick=()=>{pause();time=(time+50)%cycleMs};
+scrub.oninput=()=>{pause();time=+scrub.value};
+document.querySelector('#restart').onclick=()=>{time=0;playing=true;document.querySelector('#play').textContent='Dừng'};
+function frame(name,index,x,y,width,context=ctx){const f=data[name].frames[index],scale=width/f.rect[2];context.drawImage(images[name],...f.rect,x-f.pivot[0]*scale,y-f.pivot[1]*scale,f.rect[2]*scale,f.rect[3]*scale)}
+function idle(x,y,alpha=1){ctx.globalAlpha=alpha;ctx.drawImage(images.idle,x-192,y-289,384,320);ctx.globalAlpha=1}
+function pose(){for(let i=0;i<data.cast.frameMs.length;i++)if(time<starts[i+1])return i;return -1}
+function draw(now){
+ const dt=last?Math.min(100,now-last):0;last=now;
+ if(playing)time=(time+dt*+document.querySelector('#speed').value)%cycleMs;
+ const bg=document.querySelector('#bg').value;
+ for(const context of [ctx,orbCtx,burstCtx]){context.fillStyle=bg;context.fillRect(0,0,context.canvas.width,context.canvas.height)}
+ const ready=Object.values(images).every(i=>i.complete&&i.naturalWidth);
+ if(ready&&!failed){
+ ctx.strokeStyle='#71849e';ctx.beginPath();ctx.moveTo(0,foot[1]);ctx.lineTo(1440,foot[1]);ctx.stroke();
+ ctx.fillStyle='#465469';ctx.fillRect(data.preview.simulatedTargetX,190,30,foot[1]-190);
+ ctx.fillStyle=bg==='#e1e7ed'?'#17243a':'#e8f2ff';ctx.font='16px system-ui';ctx.fillText('Vật cản mô phỏng',data.preview.simulatedTargetX-40,172);
+ const index=pose();if(document.querySelector('#ghost').checked)idle(...foot,0.2);
+ if(index<0)idle(...foot);else frame('cast',index,...foot,512);
+ const orbIndex=Math.floor(time/1000*data.orb.fps)%data.orb.frames.length;
+ if(index>=0&&index<data.cast.releaseFrame){
+ const p=data.cast.chargePoints[index];frame('orb',orbIndex,foot[0]+p[0]-192,foot[1]+p[1]-353,data.cast.chargeWidths[index]);
+ }
+ if(time>=releaseMs&&time<impactMs)frame('orb',orbIndex,socket[0]+(time-releaseMs)/1000*data.preview.flightSpeedPxPerSecond,socket[1],+document.querySelector('#orbSize').value);
+ if(time>=impactMs&&time<impactMs+burstMs)frame('explosion',Math.floor((time-impactMs)/1000*data.explosion.fps),data.preview.simulatedTargetX,socket[1],+document.querySelector('#burstSize').value);
+ frame('orb',orbIndex,260,180,360,orbCtx);
+ const detailPhase=(time%1800)/1000*data.explosion.fps;
+ if(detailPhase<data.explosion.frames.length)frame('explosion',Math.floor(detailPhase),240,240,512,burstCtx);
+ const phase=time<releaseMs?names[Math.max(0,index)]:time<impactMs?'Cầu đang bay':time<impactMs+burstMs?'Nổ hắc hoả / AOE minh hoạ':'Chờ hồi chiêu';
+ status.textContent=phase+' · '+(time/1000).toFixed(2)+'s · cooldown minh hoạ còn '+Math.max(0,data.cooldownSeconds-time/1000).toFixed(1)+'s · chưa tích hợp game';
+ ctx.fillText('Minh Vương Bạo Viêm · bản thiết kế art',34,586);
+ ctx.fillText('Không suy phạm vi damage từ đường kính ảnh nổ.',34,612);
+ }
+ scrub.value=String(Math.floor(time));requestAnimationFrame(draw)
+}requestAnimationFrame(draw);
+</script></html>
+

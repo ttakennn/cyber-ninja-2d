@@ -9,6 +9,7 @@ import { Renderer } from '../rendering/Renderer';
 import { TestLevel } from '../world/TestLevel';
 import { GameLoop } from './GameLoop';
 import { FallRecovery } from './FallRecovery';
+import { SpecialSkillHud } from '../ui/SpecialSkillHud';
 
 export class Game {
   private readonly renderer: Renderer;
@@ -22,6 +23,8 @@ export class Game {
   private readonly loop: GameLoop;
   private readonly recovery: FallRecovery;
   private readonly resizeObserver: ResizeObserver;
+  private readonly skillHud: SpecialSkillHud;
+  private readonly controls: HTMLElement | null;
   private started = false;
   private disposed = false;
   private readonly pendingAttackClicks: { time: number; button: 0 | 2 }[] = [];
@@ -42,11 +45,14 @@ export class Game {
     this.camera = new GameCamera(this.level.cameraBounds, this.level.cameraFollowY);
     this.player = new Player(this.level.spawn);
     this.player.shuriken.setWorld(this.level.colliders, this.level.cameraBounds);
+    this.player.specialSkill1.setWorld(this.level.colliders, this.level.cameraBounds);
     this.recovery = new FallRecovery(this.level.spawn, this.level.deathY);
     this.input = new InputManager();
     this.debug = new DebugOverlay(container, this.level.id);
     this.collisionDebug = new CollisionDebug(this.level.colliders, this.level.climbables);
-    this.renderer.scene.add(this.level.visual, this.player.visual, this.player.shuriken.projectiles, this.collisionDebug.visual);
+    this.renderer.scene.add(this.level.visual, this.player.visual, this.player.shuriken.projectiles, this.player.specialSkill1.effects, this.collisionDebug.visual);
+    this.skillHud = new SpecialSkillHud(container);
+    this.controls = container.querySelector<HTMLElement>('.controls');
     this.loop = new GameLoop(this.update, this.render);
     this.resizeObserver = new ResizeObserver(this.resize);
     this.resizeObserver.observe(container);
@@ -57,6 +63,7 @@ export class Game {
     void this.player.loadSprite();
     void this.player.attack.load();
     void this.player.shuriken.load();
+    void this.player.specialSkill1.load();
     container.addEventListener('pointerdown', this.onPointerDown);
     container.addEventListener('contextmenu', this.onContextMenu);
     window.addEventListener('blur', this.onAttackBlur);
@@ -81,6 +88,8 @@ export class Game {
     this.pendingAttackClicks.length = 0;
     this.player.attack.cancel();
     this.player.shuriken.reset();
+    this.player.specialSkill1.reset();
+    this.skillHud.hideCastName();
     this.player.resetInterpolation();
   }
 
@@ -98,6 +107,7 @@ export class Game {
     this.player.dispose();
     this.level.dispose();
     this.debug.dispose();
+    this.skillHud.dispose();
     this.collisionDebug.dispose();
     this.renderer.dispose();
   }
@@ -106,6 +116,7 @@ export class Game {
     this.player.capturePreviousPosition();
     if (this.input.wasPressed('toggleDebug')) this.debug.toggle();
     if (this.input.wasPressed('toggleCollision')) this.collisionDebug.toggle();
+    if (this.input.wasPressed('toggleHelp') && this.controls) this.controls.hidden = !this.controls.hidden;
     const landed = this.player.updateMovement(this.physics, delta, {
       horizontal: this.input.horizontal,
       vertical: this.input.vertical,
@@ -114,12 +125,13 @@ export class Game {
       jump: this.input.wasPressed('jump'),
       detachJump: this.input.wasPressed('detachJump'),
     });
-    if (this.recovery.update(this.player, this.input, this.camera)) { this.pendingAttackClicks.length = 0; return; }
+    if (this.recovery.update(this.player, this.input, this.camera)) { this.pendingAttackClicks.length = 0; this.skillHud.hideCastName(); return; }
     for (const click of this.pendingAttackClicks) {
       if (click.button === 2) this.player.requestShuriken();
       else this.player.requestAttack(click.time);
     }
     this.pendingAttackClicks.length = 0;
+    if (this.input.wasPressed('specialSkill1') && this.player.requestSpecialSkill1()) this.skillHud.showCastName();
     this.player.updateState(landed);
     this.player.updateAnimation(delta, landed);
     this.input.endStep();
@@ -128,10 +140,12 @@ export class Game {
   private readonly render = (frameDelta: number, alpha: number): void => {
     this.player.syncVisual(alpha);
     this.player.shuriken.syncProjectiles(alpha);
+    this.player.specialSkill1.syncEffects(alpha);
     this.camera.follow(this.player.visual.position, this.player.renderHeight);
     this.level.updateVisuals(this.camera.camera, frameDelta);
     this.collisionDebug.update(this.player.visual.position.x, this.player.visual.position.y, this.player.body.width, this.player.renderHeight);
     this.renderer.render(this.camera.camera);
+    this.skillHud.update(this.player, this.camera.camera);
     this.debug.update(frameDelta, this.player, alpha, this.camera, this.recovery.count, this.level.deathY);
   };
 
@@ -146,6 +160,8 @@ export class Game {
     this.pendingAttackClicks.length = 0;
     this.player.attack.cancel();
     this.player.shuriken.reset();
+    this.player.specialSkill1.reset();
+    this.skillHud.hideCastName();
     this.input.reset();
     this.player.movement.resetInput();
     this.player.resetInterpolation();
@@ -167,5 +183,7 @@ export class Game {
     this.pendingAttackClicks.length = 0;
     this.player.attack.cancel();
     this.player.shuriken.reset();
+    this.player.specialSkill1.reset();
+    this.skillHud.hideCastName();
   };
 }

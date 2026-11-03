@@ -59,6 +59,8 @@ export class DebugOverlay {
       ...(player.attack.error ? [`Lỗi attack   ${player.attack.error}`] : []),
       `Phi tiêu     ${player.shuriken.status} / ${player.shuriken.isActive ? 'phóng' : '—'}`,
       ...(player.shuriken.error ? [`Lỗi phi tiêu ${player.shuriken.error}`] : []),
+      `Special1     ${player.specialSkill1.status} / ${player.specialSkill1.cooldownRemaining.toFixed(2)}s / ${player.specialSkill1.isActive ? 'thi triển' : '—'}`,
+      ...(player.specialSkill1.error ? [`Lỗi special1 ${player.specialSkill1.error}`] : []),
       ...(player.spriteError ? [`Lỗi asset    ${player.spriteError}`] : []),
       `Alpha        ${alpha.toFixed(3)}`,
     ].join('\n');

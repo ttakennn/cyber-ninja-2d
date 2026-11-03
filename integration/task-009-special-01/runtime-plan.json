@@ -1,0 +1,14 @@
+{
+  "status": "USER_APPROVED_ART_APPLY_REQUESTED",
+  "approval": "Người dùng duyệt art, yêu cầu E thi triển và F bám thang.",
+  "cooldownSeconds": 5,
+  "cooldownStart": "CAST_START_KEEP_ON_INTERRUPT",
+  "castCondition": "GROUNDED_STANDING",
+  "animationTickMs": 10,
+  "input": "KeyE",
+  "climbInput": "KeyF",
+  "flightSpeedPxPerSecond": 1440,
+  "orbFrameWidthPx": 240,
+  "explosionFrameWidthPx": 640,
+  "damage": "DEFERRED_NO_ENEMIES"
+}

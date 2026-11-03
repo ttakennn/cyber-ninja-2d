@@ -1,0 +1,135 @@
+{
+  "status": "CANDIDATE_ART_PREVIEW_ONLY",
+  "cooldownSeconds": 5,
+  "cast": {
+    "source": "source/cast.png",
+    "image": "candidate/cast.png",
+    "cell": [
+      512,
+      512
+    ],
+    "columns": 3,
+    "rows": 2,
+    "scale": 0.55,
+    "hips": [
+      250,
+      256,
+      276,
+      250,
+      283,
+      271
+    ],
+    "pivot": [
+      192,
+      353
+    ],
+    "frameMs": [
+      120,
+      140,
+      100,
+      90,
+      100,
+      150
+    ],
+    "releaseFrame": 3,
+    "releasePoint": [
+      332,
+      165
+    ],
+    "chargePoints": [
+      [
+        176,
+        216
+      ],
+      [
+        220,
+        194
+      ],
+      [
+        235,
+        184
+      ]
+    ],
+    "chargeWidths": [
+      64,
+      100,
+      44
+    ],
+    "original": "exec-8db501c0-694f-4435-bb9e-f2f5c454dd56.png"
+  },
+  "orb": {
+    "source": "source/orb.png",
+    "image": "candidate/orb.png",
+    "cell": [
+      627,
+      627
+    ],
+    "columns": 2,
+    "rows": 2,
+    "pivots": [
+      [
+        420,
+        346
+      ],
+      [
+        415,
+        346
+      ],
+      [
+        423,
+        355
+      ],
+      [
+        400,
+        355
+      ]
+    ],
+    "fps": 12,
+    "previewWidth": 240,
+    "original": "exec-fb7279d9-2314-47bf-9f52-b9f78e2d8620.png"
+  },
+  "explosion": {
+    "source": "source/explosion.png",
+    "image": "candidate/explosion.png",
+    "cell": [
+      384,
+      512
+    ],
+    "columns": 4,
+    "rows": 2,
+    "pivot": [
+      256,
+      256
+    ],
+    "paddingX": 64,
+    "fps": 16,
+    "previewWidth": 640,
+    "original": "exec-7a0077bd-8844-40a7-8755-3cb2e7fdf8f8.png"
+  },
+  "labels": {
+    "title": "MINH VƯƠNG BẠO VIÊM",
+    "subtitle": "Bản thiết kế art · thi triển / cầu hắc hoả / vụ nổ · hồi chiêu 5s",
+    "cast": ["Idle gốc", "1. Tụ lực", "2. Nén cầu", "3. Dồn lực", "4. Phóng cầu", "5. Theo đà", "6. Hoàn thế"],
+    "captions": ["Thi triển bằng hai tay", "Cầu năng lượng hắc hoả", "Vụ nổ AOE lan rộng"],
+    "footer": "Chỉ minh hoạ hình ảnh; chưa gắn Q, sát thương hoặc bán kính AOE."
+  },
+  "preview": {
+    "flightSpeedPxPerSecond": 720,
+    "orbWidths": [
+      200,
+      240,
+      288
+    ],
+    "explosionWidths": [
+      512,
+      640,
+      768
+    ],
+    "simulatedTargetX": 1000,
+    "ninjaFoot": [
+      250,
+      490
+    ],
+    "simulationOnly": true
+  }
+}

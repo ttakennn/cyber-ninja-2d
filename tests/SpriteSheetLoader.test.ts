@@ -145,7 +145,7 @@ describe('fallback và lifecycle của sprite nhân vật', () => {
     const dispose = vi.spyOn(sheet.texture, 'dispose');
     await player.loadSprite({ load: async () => ({ ...sheet, clips: { idle: sheet.clips.idle! } }) });
     expect(player.spriteStatus).toBe('fallback');
-    expect(player.visual.children.filter((child) => child !== player.attack.visual && child !== player.shuriken.visual)).toHaveLength(1);
+    expect(player.visual.children.filter((child) => child !== player.attack.visual && child !== player.shuriken.visual && child !== player.specialSkill1.visual)).toHaveLength(1);
     expect(dispose).toHaveBeenCalledTimes(1);
     player.dispose();
   });
