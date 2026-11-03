@@ -1,5 +1,6 @@
 {
   "status": "USER_APPROVED_ART_AND_FRAME_SEQUENCE",
+  "playbackSpeedMultiplier": 0.8,
   "clips": [
     { "name": "attack_1", "frames": [0, 1, 2, 3, 4] },
     { "name": "attack_2", "frames": [1, 2, 3, 4, 5] },

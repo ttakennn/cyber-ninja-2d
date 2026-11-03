@@ -9,7 +9,7 @@ const assets = [];
 for (const { name, frames } of plan.clips) {
   const sheet = JSON.parse(readFileSync(new URL(`candidate/${name}.json`, root), 'utf8'));
   const original = sheet.clips[name];
-  sheet.clips[name] = { ...original, frames: frames.map((index) => {
+  sheet.clips[name] = { ...original, speed: (original.speed ?? 1) * plan.playbackSpeedMultiplier, frames: frames.map((index) => {
     if (!original.frames[index]) throw new Error(`Thiếu frame ${name}/${index}`);
     return original.frames[index];
   }) };
@@ -20,4 +20,5 @@ for (const { name, frames } of plan.clips) {
 }
 writeFileSync(new URL('manifest.json', destination), `${JSON.stringify({ status: 'USER_APPROVED_ART_ANIMATION_ONLY',
   source: 'integration/task-009-player-attacks/candidate/', plan: 'integration/task-009-player-attacks/combo-plan.json',
+  playbackSpeedMultiplier: plan.playbackSpeedMultiplier,
   damage: 'NOT_IMPLEMENTED', assets }, null, 2)}\n`);

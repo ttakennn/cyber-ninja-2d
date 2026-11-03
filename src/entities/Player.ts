@@ -9,6 +9,8 @@ import { PlayerAnimator } from './PlayerAnimator';
 import { PlayerAttack } from './PlayerAttack';
 import { PlayerShuriken } from './PlayerShuriken';
 import { PlayerSpecialSkill01 } from './PlayerSpecialSkill01';
+import { PlayerNineDragons } from './PlayerNineDragons';
+import { PlayerSkillGlow } from '../rendering/PlayerSkillGlow';
 import { PlayerMovementController } from './PlayerMovementController';
 import type { MovementInput } from './PlayerMovementController';
 
@@ -27,6 +29,8 @@ export class Player {
   readonly attack = new PlayerAttack();
   readonly shuriken = new PlayerShuriken();
   readonly specialSkill1 = new PlayerSpecialSkill01();
+  readonly nineDragons = new PlayerNineDragons();
+  private readonly skillGlow = new PlayerSkillGlow(this.visual);
   readonly movement = new PlayerMovementController(this.body);
   private readonly placeholder: Mesh<PlaneGeometry, MeshBasicMaterial>;
   private readonly previousPosition = { ...gameConfig.player.spawn } as { x: number; y: number };
@@ -49,6 +53,7 @@ export class Player {
     this.visual.add(this.attack.visual);
     this.visual.add(this.shuriken.visual);
     this.visual.add(this.specialSkill1.visual);
+    this.visual.add(this.nineDragons.visual, this.nineDragons.effects);
     this.setPosition(spawn.x, spawn.y);
   }
 
@@ -77,6 +82,7 @@ export class Player {
       this.visual.add(this.attack.visual);
       this.visual.add(this.shuriken.visual);
       this.visual.add(this.specialSkill1.visual);
+      this.visual.add(this.nineDragons.visual, this.nineDragons.effects);
       this.placeholder.visible = false;
       this.spriteStatus = sheet.kind;
       sheet = null;
@@ -104,6 +110,9 @@ export class Player {
   }
 
   updateMovement(world: PhysicsWorld, delta: number, input: MovementInput): boolean {
+    if (this.nineDragons.isCasting) return this.movement.step(world, delta, {
+      horizontal: 0, vertical: 0, crouch: false, enterClimb: false, jump: false, detachJump: false,
+    }).landed;
     return this.movement.step(world, delta, input).landed;
   }
 
@@ -138,6 +147,7 @@ export class Player {
     this.attack.cancel();
     this.shuriken.reset();
     this.specialSkill1.reset();
+    this.nineDragons.reset();
     this.movement.reset();
     this.animator.reset();
     this.state = 'fall';
@@ -150,6 +160,7 @@ export class Player {
     this.shuriken.update(delta, this.canThrowShuriken, { x: this.body.position.x, y: this.body.position.y - this.body.height / 2 },
       this.movement.stance === 'crouching');
     this.specialSkill1.update(delta, this.canAttack, { x: this.body.position.x, y: this.body.position.y - this.body.height / 2 });
+    this.nineDragons.update(delta, this.canAttack);
   }
 
   get canAttack(): boolean {
@@ -161,22 +172,31 @@ export class Player {
   }
 
   requestAttack(time?: number): void {
-    if (!this.canAttack || this.shuriken.isActive || this.specialSkill1.isActive) return;
+    if (!this.canAttack || this.shuriken.isActive || this.specialSkill1.isActive || this.nineDragons.isCasting) return;
     this.attack.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing, time);
   }
 
   requestShuriken(): void {
-    if (!this.canThrowShuriken || this.attack.isActive || this.specialSkill1.isActive) return;
+    if (!this.canThrowShuriken || this.attack.isActive || this.specialSkill1.isActive || this.nineDragons.isCasting) return;
     this.shuriken.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing,
       this.movement.stance === 'crouching');
   }
 
   requestSpecialSkill1(): boolean {
-    if (!this.canAttack || this.attack.isActive || this.shuriken.isActive) return false;
+    if (!this.canAttack || this.attack.isActive || this.shuriken.isActive || this.nineDragons.isCasting) return false;
     return this.specialSkill1.request(this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing);
   }
 
   get renderHeight(): number { return this.interpolatedHeight; }
+
+  requestNineDragons(): boolean {
+    if (!this.canAttack || this.attack.isActive || this.shuriken.isActive || this.specialSkill1.isActive) return false;
+    const facing = this.body.velocity.x < 0 ? 'left' : this.body.velocity.x > 0 ? 'right' : this.animator.facing;
+    if (!this.nineDragons.request(facing)) return false;
+    this.animator.facing = facing;
+    this.body.velocity.x = 0;
+    return true;
+  }
 
   // Chỉ nội suy visual; collider luôn giữ nguyên vị trí mô phỏng hiện tại.
   syncVisual(alpha = 1): void {
@@ -198,9 +218,16 @@ export class Player {
     this.attack.visual.position.y = -this.interpolatedHeight / 2;
     this.shuriken.visual.position.y = -this.interpolatedHeight / 2;
     this.specialSkill1.visual.position.y = -this.interpolatedHeight / 2;
-    const actionActive = this.attack.isActive || this.shuriken.isActive || this.specialSkill1.isActive;
+    this.nineDragons.visual.position.y = this.nineDragons.effects.position.y = -this.interpolatedHeight / 2;
+    this.nineDragons.syncVisual(blend, this.interpolatedHeight);
+    const actionActive = this.attack.isActive || this.shuriken.isActive || this.specialSkill1.isActive || this.nineDragons.isCasting;
     if (this.sprite) this.sprite.visual.visible = !actionActive;
     this.placeholder.visible = !this.sprite && !actionActive;
+    const character = this.nineDragons.isCasting ? this.nineDragons.visual
+      : this.attack.isActive ? this.attack.visual : this.shuriken.isActive ? this.shuriken.visual
+      : this.specialSkill1.isActive ? this.specialSkill1.visual.children[0] ?? null : this.sprite?.visual ?? null;
+    this.skillGlow.sync(character, this.nineDragons.glowStrength,
+      [this.shuriken.projectiles, this.specialSkill1.visual, this.specialSkill1.effects]);
   }
 
   dispose(): void {
@@ -209,10 +236,12 @@ export class Player {
     this.assetAbort?.abort();
     this.assetAbort = null;
     this.visual.removeFromParent();
+    this.skillGlow.dispose();
     this.sprite?.dispose();
     this.attack.dispose();
     this.shuriken.dispose();
     this.specialSkill1.dispose();
+    this.nineDragons.dispose();
     this.placeholder.geometry.dispose();
     this.placeholder.material.dispose();
     this.visual.clear();

@@ -1,0 +1,16 @@
+{
+  "status": "USER_APPROVED_INTEGRATED_NOT_VALIDATED",
+  "approval": "Người dùng cập nhật vòng2.0×, cast1s, giữ độ dày1.0×; phi tiêu/Minh Vương phát sáng khi Cửu Long còn hiệu lực.",
+  "input": "KeyQ",
+  "cooldownSeconds": 12,
+  "cooldownStart": "CAST_START_KEEP_ON_RESET",
+  "animationTickMs": 5,
+  "ringScale": 2.0,
+  "castSeconds": 1,
+  "thickness": 1.0,
+  "castCondition": "GROUNDED_STANDING",
+  "movementLock": "CAST_ONLY_1_SECOND",
+  "additionalSkillGlow": "WHILE_NINE_DRAGONS_ACTIVE",
+  "auraAnchor": "PLAYER_BODY_CENTER",
+  "damage": "DEFERRED_NO_ENEMIES_NO_BOSS_DAMAGE"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "CỬU LONG HỎA TRẬN",
+  "key": "Q",
+  "cooldownSeconds": 12,
+  "castSeconds": 1,
+  "castTimeScale": 0.7142857142857143,
+  "chargeSeconds": 0.25,
+  "burstStartSeconds": 0.8214285714285714,
+  "auraSeconds": 7,
+  "fadeSeconds": 0.35,
+  "growSeconds": 0.25,
+  "ringScale": 2,
+  "thickness": 1,
+  "rotationsPerSecond": 0.35,
+  "dragon": {
+    "count": 9,
+    "radiusX": 1.225,
+    "radiusY": 0.875
+  },
+  "sealOffsetY": -0.05,
+  "glow": {
+    "brightness": 1.32,
+    "saturation": 1.18,
+    "rimColor": "#fff2b0",
+    "haloColor": "#ff942e",
+    "rimRadiusPx": 6,
+    "haloRadiusPx": 24,
+    "pulseHz": 1.2,
+    "pulseMinimum": 0.9
+  }
+}

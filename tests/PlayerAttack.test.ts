@@ -29,6 +29,8 @@ describe('combo animation bằng click, chưa damage', () => {
       expect(data.clips[approved.name]!.frames).toHaveLength(approved.frames.length);
       const candidate = parseSpriteSheet(JSON.parse(readFileSync(new URL(`../integration/task-009-player-attacks/candidate/${approved.name}.json`, import.meta.url), 'utf8')));
       expect(data.clips[approved.name]!.frames).toEqual(approved.frames.map((frame) => candidate.clips[approved.name]!.frames[frame]));
+      expect(data.clips[approved.name]!.speed).toBeCloseTo((candidate.clips[approved.name]!.speed ?? 1) * 0.8);
+      expect(data.clips[approved.name]!.fps).toBe(candidate.clips[approved.name]!.fps);
       expect(data.visual.width / 512).toBe(0.00625);
       expect(data.visual.height / 512).toBe(0.00625);
       expect(data.clips[approved.name]!.frames[0]!.pivot).toEqual({ x: 192, y: 353 });
@@ -41,6 +43,8 @@ describe('combo animation bằng click, chưa damage', () => {
     attack.request('right'); attack.update(0, true);
     expect(attack.step).toBe(0);
     attack.update(0.251, true);
+    expect(attack.isActive).toBe(true);
+    attack.update(0.062, true);
     expect(attack.isActive).toBe(false);
     attack.update(2, true);
     expect(attack.isActive).toBe(false);
@@ -56,15 +60,15 @@ describe('combo animation bằng click, chưa damage', () => {
     attack.update(0, true);
     const first = attack.visual.children[0]!.children[0]! as Mesh;
     expect(first.geometry.getAttribute('uv').getX(0)).toBeGreaterThan(first.geometry.getAttribute('uv').getX(1));
-    attack.update(0.251, true); expect(attack.step).toBe(1);
-    attack.update(0.215, true); expect(attack.step).toBe(2);
-    attack.update(0.263, true); expect(attack.isActive).toBe(false);
+    attack.update(0.313, true); expect(attack.step).toBe(1);
+    attack.update(0.269, true); expect(attack.step).toBe(2);
+    attack.update(0.329, true); expect(attack.isActive).toBe(false);
     attack.dispose();
   });
 
   it.each([[0.499, 1], [0.5, 0], [0.501, 0]])('khoảng nghỉ %ss bắt đầu đòn index%s theo thời điểm click', async (gap, step) => {
     const { attack } = await ready();
-    attack.request('right', 10); attack.update(0.3, true);
+    attack.request('right', 10); attack.update(0.4, true);
     // Thời gian click độc lập delta bị giới hạn của game loop.
     attack.request('right', 10 + gap!); attack.update(0, true);
     expect(attack.step).toBe(step);
@@ -73,7 +77,7 @@ describe('combo animation bằng click, chưa damage', () => {
 
   it('click tiếp sau đòn3 về1, huỷ tư thế/respawn không mang buffer sang lượt mới', async () => {
     const { attack } = await ready();
-    for (const time of [1, 1.2, 1.4]) { attack.request('right', time); attack.update(0.3, true); }
+    for (const time of [1, 1.2, 1.4]) { attack.request('right', time); attack.update(0.4, true); }
     attack.request('right', 1.6); expect(attack.step).toBe(0);
     attack.request('right', 1.61); attack.update(0, false);
     expect(attack.visual.visible).toBe(false);

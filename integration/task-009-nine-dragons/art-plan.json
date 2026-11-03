@@ -1,0 +1,226 @@
+{
+  "status": "CANDIDATE_ART_PREVIEW_ONLY",
+  "name": "CỬU LONG HỎA TRẬN",
+  "slug": "nine-dragons-fire-formation",
+  "runtimeIntegration": "NOT_IMPLEMENTED",
+  "baselineCommit": "08294d4",
+  "evidenceDirectory": "docs/map01/commits/task-009-14-aura-thickness-options",
+  "previewEffectsOnly": true,
+  "character": {
+    "pixelsPerWorldUnit": 160,
+    "frame": [
+      512,
+      512
+    ],
+    "pivot": [
+      192,
+      353
+    ],
+    "visualWorldSize": [
+      3.2,
+      3.2
+    ],
+    "existingAtlasUnchanged": true
+  },
+  "timing": {
+    "totalMs": 1400,
+    "chargeMs": 350,
+    "orbitMs": 800,
+    "burstMs": 250,
+    "calloutMs": 1500,
+    "waveHitMs": [
+      483,
+      750,
+      1150
+    ],
+    "waveHitStatus": "ART_PREVIEW_PROPOSAL",
+    "lastBurstBelongsToWave": 3,
+    "damageEventCount": 3
+  },
+  "brief": {
+    "cooldownSeconds": 12,
+    "keyRequested": "KeyE",
+    "bindingStatus": "CONFLICT_WITH_MINH_VUONG_BAO_VIEM_DEFER_TO_INTEGRATION",
+    "movementLockDuringCast": "REQUESTED_NOT_IMPLEMENTED",
+    "radiusReferencePx": 125,
+    "radiusWorldUnitsStatus": "REFERENCE_PREVIEW_ONLY_NOT_GAMEPLAY_APPROVED",
+    "directionDegrees": 360,
+    "waves": 3,
+    "damagePerWaveHp": 30,
+    "burn": {
+      "hpPerSecond": 12,
+      "seconds": 3,
+      "refreshDuration": true,
+      "stack": false,
+      "applicationTiming": "DEFER_TO_COMBAT_RULES"
+    },
+    "directMaxHp": 90,
+    "theoreticalMaxHp": 126,
+    "knockback": "Nhẹ ở đợt đầu, mạnh ở đợt cuối; boss có thể kháng; chưa đặt giá trị.",
+    "combatStatus": "BRIEF_ONLY_NO_ENEMIES_NO_DAMAGE",
+    "persistentAuraDamage": "Yêu cầu vòng lửa gây sát thương sau này; chưa chốt damage/tick/enemy-ID hoặc boss.126HP chỉ là số tham khảo của brief cũ, không phải tổng skill mở rộng."
+  },
+  "referenceCamera": {
+    "viewportPx": [
+      1280,
+      720
+    ],
+    "dpr": 1,
+    "verticalWorldUnits": 9,
+    "cssPxPerWorldUnit": 80,
+    "aoeRadiusWorldUnits": 1.5625,
+    "note": "Mốc riêng của preview để quy đổi125px; chưa chốt camera tham chiếu gameplay. Không dùng160px/unit atlas thay cho camera."
+  },
+  "cast": {
+    "source": "source/cast-alpha.png",
+    "generationSource": "source/cast.png",
+    "image": "candidate/cast.png",
+    "sourceCell": [
+      384,
+      512
+    ],
+    "columns": 4,
+    "rows": 2,
+    "scale": 0.75,
+    "hipX": 190,
+    "pivot": [
+      192,
+      353
+    ],
+    "frameMs": [
+      100,
+      130,
+      120,
+      200,
+      200,
+      200,
+      200,
+      250
+    ],
+    "labels": [
+      "Rút kiếm",
+      "Định kiếm",
+      "Cắm kiếm",
+      "Khai trận",
+      "Đợt 1",
+      "Đợt 2",
+      "Đợt 3",
+      "Bạo viêm"
+    ],
+    "original": "exec-c7d66fb3-5ecd-4585-b085-cbc503e6557d.png",
+    "generationOriginal": "exec-1652bb2a-a2f5-46b6-8e78-a264497883ce.png"
+  },
+  "dragon": {
+    "source": "source/dragon.png",
+    "image": "candidate/dragon.png",
+    "cell": [
+      627,
+      627
+    ],
+    "columns": 2,
+    "rows": 2,
+    "pivot": [
+      313,
+      310
+    ],
+    "fps": 18,
+    "instanceCount": 9,
+    "groups": 3,
+    "perGroup": 3,
+    "original": "exec-d4025910-2e94-454e-9d6b-552dda55c21a.png"
+  },
+  "seal": {
+    "source": "source/seal.png",
+    "image": "candidate/seal.png",
+    "cell": [
+      627,
+      627
+    ],
+    "columns": 2,
+    "rows": 2,
+    "pivot": [
+      313,
+      400
+    ],
+    "pivots": [[313,403],[313,403],[313,326],[313,338]],
+    "original": "exec-94c2893a-4745-48bc-9a3b-e9eee29abee1.png"
+  },
+  "burst": {
+    "source": "source/burst.png",
+    "generationSource": "source/burst-source-v1.png",
+    "image": "candidate/burst.png",
+    "cell": [
+      512,
+      512
+    ],
+    "columns": 3,
+    "rows": 2,
+    "pivot": [
+      256,
+      256
+    ],
+    "frameMs": [
+      30,
+      35,
+      55,
+      55,
+      40,
+      35
+    ],
+    "original": "exec-6312e55e-0301-478a-af35-a900bb3cf74e.png",
+    "generationOriginal": "exec-2dd4cdd8-30ec-4185-b2e6-c04c340c2771.png"
+  },
+  "preview": {
+    "foot": [
+      640,
+      425
+    ],
+    "radiusPx": 125,
+    "dragonFrameWidthPx": 115,
+    "sealFrameWidthPx": 286,
+    "burstFrameWidthPx": 290,
+    "quickCycleMs": 9400,
+    "note": "9instance của cùng atlas rồng, không phải9rồng vẽ độc lập. FX có thể vượt vòng tham chiếu; alpha FX không định nghĩa damage."
+  },
+  "aura": {
+    "source": "source/aura.png",
+    "references": ["candidate/burst.png","source/aura-reference.png"],
+    "image": "candidate/aura.png",
+    "sourcePixelSize": [1774,887],
+    "sourceRects": [[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],
+    "columns": 4,
+    "rows": 2,
+    "pivot": [256,256],
+    "frameSize": [512,512],
+    "fps": 16,
+    "startMs": 1400,
+    "durationMs": 7000,
+    "growMs": 250,
+    "fadeOutMs": 350,
+    "scaleOptions": [1.5,2,2.5],
+    "defaultScale": 2,
+    "thicknessOptions": [1.0,1.3,1.5,1.7],
+    "defaultThickness": 1.0,
+    "thicknessMode": "RADIAL_BAND_COMPRESSION_KEEP_OUTER_SILHOUETTE",
+    "scaleBase": "preview.burstFrameWidthPx=290, tỷ lệ cả hai chiều; không scale nhân vật hoặc đặt bán kính damage.",
+    "rotationsPerSecond": 0.35,
+    "handoffFrames": [0,1,2,3],
+    "handoffFrameMs": [35,40,75,100],
+    "original": "exec-e9ae7cc7-372b-49fe-82c3-860fe926c591.png",
+    "status": "CANDIDATE_VISUAL_ONLY_NO_DAMAGE"
+  },
+  "characterGlow": {
+    "startMs": 0,
+    "endAt": "AURA_END",
+    "fadeWithAura": true,
+    "brightness": 1.32,
+    "saturation": 1.18,
+    "rimColor": "#fff2b0",
+    "rimBlurPx": 3,
+    "haloColor": "#ff942e",
+    "haloBlurPx": 12,
+    "pulseHz": 1.2,
+    "pulseMinimum": 0.9,
+    "status": "PREVIEW_RENDER_EFFECT_ONLY_CANONICAL_PIXELS_UNCHANGED"
+  }
+}

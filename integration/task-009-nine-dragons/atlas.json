@@ -1,0 +1,1058 @@
+{
+    "status":  "CANDIDATE_ART_PREVIEW_ONLY",
+    "plan":  "art-plan.json",
+    "runtimeIntegration":  "NOT_IMPLEMENTED",
+    "characterPixelWorldUnit":  0.00625,
+    "assets":  {
+                   "cast":  {
+                                "image":  "candidate/cast.png",
+                                "pixelSize":  [
+                                                  2048,
+                                                  1024
+                                              ],
+                                "frameSize":  [
+                                                  512,
+                                                  512
+                                              ],
+                                "frames":  [
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                0,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                512,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                1024,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                1536,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                0,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                512,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                1024,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 192,
+                                                                 353
+                                                             ],
+                                                   "rect":  [
+                                                                1536,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               }
+                                           ],
+                                "source":  "source/cast-alpha.png",
+                                "sourcePixelSize":  [
+                                                        1536,
+                                                        1024
+                                                    ],
+                                "original":  "exec-c7d66fb3-5ecd-4585-b085-cbc503e6557d.png",
+                                "tool":  "image_gen.imagegen built-in",
+                                "sourceSha256":  "f5e4a29a28e3e2025661b332f63d292742d6d8640c824881620c2dd8d3927de4",
+                                "sha256":  "4cbf590efb051f852bc71ad5d4971251fb1e1c93e6578ef812227c30de635ab4",
+                                "authoring":  [
+                                                  {
+                                                      "sourceInk":  [
+                                                                        58,
+                                                                        114,
+                                                                        321,
+                                                                        449
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         0,
+                                                                         0,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  0
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        48,
+                                                                        110,
+                                                                        322,
+                                                                        449
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         384,
+                                                                         0,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  1
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        54,
+                                                                        140,
+                                                                        322,
+                                                                        449
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         768,
+                                                                         0,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  2
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        60,
+                                                                        134,
+                                                                        322,
+                                                                        450
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         1152,
+                                                                         0,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  3
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        66,
+                                                                        126,
+                                                                        321,
+                                                                        450
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         0,
+                                                                         512,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  4
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        54,
+                                                                        139,
+                                                                        321,
+                                                                        450
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         384,
+                                                                         512,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  5
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        32,
+                                                                        146,
+                                                                        321,
+                                                                        450
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         768,
+                                                                         512,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  6
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        18,
+                                                                        111,
+                                                                        322,
+                                                                        450
+                                                                    ],
+                                                      "translation":  [
+                                                                          50,
+                                                                          16
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         1152,
+                                                                         512,
+                                                                         384,
+                                                                         512
+                                                                     ],
+                                                      "index":  7
+                                                  }
+                                              ]
+                            },
+                   "dragon":  {
+                                  "image":  "candidate/dragon.png",
+                                  "pixelSize":  [
+                                                    1254,
+                                                    1254
+                                                ],
+                                  "frameSize":  [
+                                                    627,
+                                                    627
+                                                ],
+                                  "frames":  [
+                                                 {
+                                                     "pivot":  [
+                                                                   313,
+                                                                   310
+                                                               ],
+                                                     "rect":  [
+                                                                  0,
+                                                                  0,
+                                                                  627,
+                                                                  627
+                                                              ]
+                                                 },
+                                                 {
+                                                     "pivot":  [
+                                                                   313,
+                                                                   310
+                                                               ],
+                                                     "rect":  [
+                                                                  627,
+                                                                  0,
+                                                                  627,
+                                                                  627
+                                                              ]
+                                                 },
+                                                 {
+                                                     "pivot":  [
+                                                                   313,
+                                                                   310
+                                                               ],
+                                                     "rect":  [
+                                                                  0,
+                                                                  627,
+                                                                  627,
+                                                                  627
+                                                              ]
+                                                 },
+                                                 {
+                                                     "pivot":  [
+                                                                   313,
+                                                                   310
+                                                               ],
+                                                     "rect":  [
+                                                                  627,
+                                                                  627,
+                                                                  627,
+                                                                  627
+                                                              ]
+                                                 }
+                                             ],
+                                  "source":  "source/dragon.png",
+                                  "sourcePixelSize":  [
+                                                          1254,
+                                                          1254
+                                                      ],
+                                  "original":  "exec-d4025910-2e94-454e-9d6b-552dda55c21a.png",
+                                  "tool":  "image_gen.imagegen built-in",
+                                  "sourceSha256":  "36dca359bda8f4c5ea28fcf3f4e1b01236563d096a48008128c4554e6adb9843",
+                                  "sha256":  "36dca359bda8f4c5ea28fcf3f4e1b01236563d096a48008128c4554e6adb9843",
+                                  "authoring":  [
+                                                    {
+                                                        "sourceInk":  [
+                                                                          39,
+                                                                          155,
+                                                                          605,
+                                                                          448
+                                                                      ],
+                                                        "translation":  [
+                                                                            0,
+                                                                            0
+                                                                        ],
+                                                        "sourceRect":  [
+                                                                           0,
+                                                                           0,
+                                                                           627,
+                                                                           627
+                                                                       ],
+                                                        "index":  0
+                                                    },
+                                                    {
+                                                        "sourceInk":  [
+                                                                          27,
+                                                                          155,
+                                                                          605,
+                                                                          441
+                                                                      ],
+                                                        "translation":  [
+                                                                            0,
+                                                                            0
+                                                                        ],
+                                                        "sourceRect":  [
+                                                                           627,
+                                                                           0,
+                                                                           627,
+                                                                           627
+                                                                       ],
+                                                        "index":  1
+                                                    },
+                                                    {
+                                                        "sourceInk":  [
+                                                                          34,
+                                                                          155,
+                                                                          605,
+                                                                          436
+                                                                      ],
+                                                        "translation":  [
+                                                                            0,
+                                                                            0
+                                                                        ],
+                                                        "sourceRect":  [
+                                                                           0,
+                                                                           627,
+                                                                           627,
+                                                                           627
+                                                                       ],
+                                                        "index":  2
+                                                    },
+                                                    {
+                                                        "sourceInk":  [
+                                                                          19,
+                                                                          155,
+                                                                          605,
+                                                                          434
+                                                                      ],
+                                                        "translation":  [
+                                                                            0,
+                                                                            0
+                                                                        ],
+                                                        "sourceRect":  [
+                                                                           627,
+                                                                           627,
+                                                                           627,
+                                                                           627
+                                                                       ],
+                                                        "index":  3
+                                                    }
+                                                ]
+                              },
+                   "seal":  {
+                                "image":  "candidate/seal.png",
+                                "pixelSize":  [
+                                                  1254,
+                                                  1254
+                                              ],
+                                "frameSize":  [
+                                                  627,
+                                                  627
+                                              ],
+                                "frames":  [
+                                               {
+                                                   "pivot":  [
+                                                                 313,
+                                                                 403
+                                                             ],
+                                                   "rect":  [
+                                                                0,
+                                                                0,
+                                                                627,
+                                                                627
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 313,
+                                                                 403
+                                                             ],
+                                                   "rect":  [
+                                                                627,
+                                                                0,
+                                                                627,
+                                                                627
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 313,
+                                                                 326
+                                                             ],
+                                                   "rect":  [
+                                                                0,
+                                                                627,
+                                                                627,
+                                                                627
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 313,
+                                                                 338
+                                                             ],
+                                                   "rect":  [
+                                                                627,
+                                                                627,
+                                                                627,
+                                                                627
+                                                            ]
+                                               }
+                                           ],
+                                "source":  "source/seal.png",
+                                "sourcePixelSize":  [
+                                                        1254,
+                                                        1254
+                                                    ],
+                                "original":  "exec-94c2893a-4745-48bc-9a3b-e9eee29abee1.png",
+                                "tool":  "image_gen.imagegen built-in",
+                                "sourceSha256":  "94e883512b7ef0e08aab24d1334d79e607a0ae3b99d7d8d9f3303effd236de14",
+                                "sha256":  "94e883512b7ef0e08aab24d1334d79e607a0ae3b99d7d8d9f3303effd236de14",
+                                "authoring":  [
+                                                  {
+                                                      "sourceInk":  [
+                                                                        42,
+                                                                        301,
+                                                                        591,
+                                                                        505
+                                                                    ],
+                                                      "translation":  [
+                                                                          0,
+                                                                          0
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         0,
+                                                                         0,
+                                                                         627,
+                                                                         627
+                                                                     ],
+                                                      "index":  0
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        32,
+                                                                        293,
+                                                                        594,
+                                                                        512
+                                                                    ],
+                                                      "translation":  [
+                                                                          0,
+                                                                          0
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         627,
+                                                                         0,
+                                                                         627,
+                                                                         627
+                                                                     ],
+                                                      "index":  1
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        30,
+                                                                        211,
+                                                                        596,
+                                                                        440
+                                                                    ],
+                                                      "translation":  [
+                                                                          0,
+                                                                          0
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         0,
+                                                                         627,
+                                                                         627,
+                                                                         627
+                                                                     ],
+                                                      "index":  2
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        42,
+                                                                        239,
+                                                                        585,
+                                                                        436
+                                                                    ],
+                                                      "translation":  [
+                                                                          0,
+                                                                          0
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         627,
+                                                                         627,
+                                                                         627,
+                                                                         627
+                                                                     ],
+                                                      "index":  3
+                                                  }
+                                              ]
+                            },
+                   "burst":  {
+                                 "image":  "candidate/burst.png",
+                                 "pixelSize":  [
+                                                   1536,
+                                                   1024
+                                               ],
+                                 "frameSize":  [
+                                                   512,
+                                                   512
+                                               ],
+                                 "frames":  [
+                                                {
+                                                    "pivot":  [
+                                                                  256,
+                                                                  256
+                                                              ],
+                                                    "rect":  [
+                                                                 0,
+                                                                 0,
+                                                                 512,
+                                                                 512
+                                                             ]
+                                                },
+                                                {
+                                                    "pivot":  [
+                                                                  256,
+                                                                  256
+                                                              ],
+                                                    "rect":  [
+                                                                 512,
+                                                                 0,
+                                                                 512,
+                                                                 512
+                                                             ]
+                                                },
+                                                {
+                                                    "pivot":  [
+                                                                  256,
+                                                                  256
+                                                              ],
+                                                    "rect":  [
+                                                                 1024,
+                                                                 0,
+                                                                 512,
+                                                                 512
+                                                             ]
+                                                },
+                                                {
+                                                    "pivot":  [
+                                                                  256,
+                                                                  256
+                                                              ],
+                                                    "rect":  [
+                                                                 0,
+                                                                 512,
+                                                                 512,
+                                                                 512
+                                                             ]
+                                                },
+                                                {
+                                                    "pivot":  [
+                                                                  256,
+                                                                  256
+                                                              ],
+                                                    "rect":  [
+                                                                 512,
+                                                                 512,
+                                                                 512,
+                                                                 512
+                                                             ]
+                                                },
+                                                {
+                                                    "pivot":  [
+                                                                  256,
+                                                                  256
+                                                              ],
+                                                    "rect":  [
+                                                                 1024,
+                                                                 512,
+                                                                 512,
+                                                                 512
+                                                             ]
+                                                }
+                                            ],
+                                 "source":  "source/burst.png",
+                                 "sourcePixelSize":  [
+                                                         1536,
+                                                         1024
+                                                     ],
+                                 "original":  "exec-6312e55e-0301-478a-af35-a900bb3cf74e.png",
+                                 "tool":  "image_gen.imagegen built-in",
+                                 "sourceSha256":  "150b749d7d40c0f7b61ccde5322a12b1706683d6969a9d4da5152dafae30a7ea",
+                                 "sha256":  "150b749d7d40c0f7b61ccde5322a12b1706683d6969a9d4da5152dafae30a7ea",
+                                 "authoring":  [
+                                                   {
+                                                       "sourceInk":  [
+                                                                         134,
+                                                                         131,
+                                                                         392,
+                                                                         382
+                                                                     ],
+                                                       "translation":  [
+                                                                           0,
+                                                                           0
+                                                                       ],
+                                                       "sourceRect":  [
+                                                                          0,
+                                                                          0,
+                                                                          512,
+                                                                          512
+                                                                      ],
+                                                       "index":  0
+                                                   },
+                                                   {
+                                                       "sourceInk":  [
+                                                                         88,
+                                                                         91,
+                                                                         423,
+                                                                         393
+                                                                     ],
+                                                       "translation":  [
+                                                                           0,
+                                                                           0
+                                                                       ],
+                                                       "sourceRect":  [
+                                                                          512,
+                                                                          0,
+                                                                          512,
+                                                                          512
+                                                                      ],
+                                                       "index":  1
+                                                   },
+                                                   {
+                                                       "sourceInk":  [
+                                                                         40,
+                                                                         51,
+                                                                         456,
+                                                                         433
+                                                                     ],
+                                                       "translation":  [
+                                                                           0,
+                                                                           0
+                                                                       ],
+                                                       "sourceRect":  [
+                                                                          1024,
+                                                                          0,
+                                                                          512,
+                                                                          512
+                                                                      ],
+                                                       "index":  2
+                                                   },
+                                                   {
+                                                       "sourceInk":  [
+                                                                         34,
+                                                                         24,
+                                                                         487,
+                                                                         439
+                                                                     ],
+                                                       "translation":  [
+                                                                           0,
+                                                                           0
+                                                                       ],
+                                                       "sourceRect":  [
+                                                                          0,
+                                                                          512,
+                                                                          512,
+                                                                          512
+                                                                      ],
+                                                       "index":  3
+                                                   },
+                                                   {
+                                                       "sourceInk":  [
+                                                                         46,
+                                                                         34,
+                                                                         468,
+                                                                         432
+                                                                     ],
+                                                       "translation":  [
+                                                                           0,
+                                                                           0
+                                                                       ],
+                                                       "sourceRect":  [
+                                                                          512,
+                                                                          512,
+                                                                          512,
+                                                                          512
+                                                                      ],
+                                                       "index":  4
+                                                   },
+                                                   {
+                                                       "sourceInk":  [
+                                                                         65,
+                                                                         43,
+                                                                         452,
+                                                                         424
+                                                                     ],
+                                                       "translation":  [
+                                                                           0,
+                                                                           0
+                                                                       ],
+                                                       "sourceRect":  [
+                                                                          1024,
+                                                                          512,
+                                                                          512,
+                                                                          512
+                                                                      ],
+                                                       "index":  5
+                                                   }
+                                               ]
+                             },
+                   "aura":  {
+                                "image":  "candidate/aura.png",
+                                "pixelSize":  [
+                                                  2048,
+                                                  1024
+                                              ],
+                                "frameSize":  [
+                                                  512,
+                                                  512
+                                              ],
+                                "frames":  [
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                0,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                512,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                1024,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                1536,
+                                                                0,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                0,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                512,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                1024,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               },
+                                               {
+                                                   "pivot":  [
+                                                                 256,
+                                                                 256
+                                                             ],
+                                                   "rect":  [
+                                                                1536,
+                                                                512,
+                                                                512,
+                                                                512
+                                                            ]
+                                               }
+                                           ],
+                                "source":  "source/aura.png",
+                                "sourcePixelSize":  [
+                                                        1774,
+                                                        887
+                                                    ],
+                                "original":  "exec-e9ae7cc7-372b-49fe-82c3-860fe926c591.png",
+                                "tool":  "image_gen.imagegen built-in",
+                                "sourceSha256":  "e2f4d3716ca2187c4b80c28983a8cf0554bd272e5b3350c37dc52c1e2180b8e1",
+                                "sha256":  "a2d86f41caadfe767a685e60d9415c75d90681861acaa3efc84b0eba98819a82",
+                                "authoring":  [
+                                                  {
+                                                      "sourceInk":  [
+                                                                        22,
+                                                                        16,
+                                                                        420,
+                                                                        412
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         0,
+                                                                         0,
+                                                                         443,
+                                                                         443
+                                                                     ],
+                                                      "index":  0
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        24,
+                                                                        13,
+                                                                        417,
+                                                                        411
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         443,
+                                                                         0,
+                                                                         444,
+                                                                         443
+                                                                     ],
+                                                      "index":  1
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        23,
+                                                                        16,
+                                                                        421,
+                                                                        405
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         887,
+                                                                         0,
+                                                                         443,
+                                                                         443
+                                                                     ],
+                                                      "index":  2
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        28,
+                                                                        12,
+                                                                        421,
+                                                                        405
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         1330,
+                                                                         0,
+                                                                         444,
+                                                                         443
+                                                                     ],
+                                                      "index":  3
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        25,
+                                                                        11,
+                                                                        419,
+                                                                        411
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         0,
+                                                                         443,
+                                                                         443,
+                                                                         444
+                                                                     ],
+                                                      "index":  4
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        26,
+                                                                        15,
+                                                                        422,
+                                                                        412
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         443,
+                                                                         443,
+                                                                         444,
+                                                                         444
+                                                                     ],
+                                                      "index":  5
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        23,
+                                                                        11,
+                                                                        420,
+                                                                        410
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         887,
+                                                                         443,
+                                                                         443,
+                                                                         444
+                                                                     ],
+                                                      "index":  6
+                                                  },
+                                                  {
+                                                      "sourceInk":  [
+                                                                        21,
+                                                                        19,
+                                                                        421,
+                                                                        412
+                                                                    ],
+                                                      "translation":  [
+                                                                          34,
+                                                                          34
+                                                                      ],
+                                                      "sourceRect":  [
+                                                                         1330,
+                                                                         443,
+                                                                         444,
+                                                                         444
+                                                                     ],
+                                                      "index":  7
+                                                  }
+                                              ]
+                            }
+               }
+}

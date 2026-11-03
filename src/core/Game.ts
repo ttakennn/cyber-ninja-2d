@@ -24,6 +24,8 @@ export class Game {
   private readonly recovery: FallRecovery;
   private readonly resizeObserver: ResizeObserver;
   private readonly skillHud: SpecialSkillHud;
+  private readonly nineDragonsHud: SpecialSkillHud;
+  private readonly skillPanel = document.createElement('aside');
   private readonly controls: HTMLElement | null;
   private started = false;
   private disposed = false;
@@ -51,7 +53,12 @@ export class Game {
     this.debug = new DebugOverlay(container, this.level.id);
     this.collisionDebug = new CollisionDebug(this.level.colliders, this.level.climbables);
     this.renderer.scene.add(this.level.visual, this.player.visual, this.player.shuriken.projectiles, this.player.specialSkill1.effects, this.collisionDebug.visual);
-    this.skillHud = new SpecialSkillHud(container);
+    this.skillPanel.className = 'skill-hud';
+    this.skillPanel.setAttribute('aria-label', 'Kỹ năng hệ Hoả');
+    this.skillPanel.innerHTML = '<span class="skill-caption">TUYỆT KỸ · HỆ HOẢ</span>';
+    container.append(this.skillPanel);
+    this.skillHud = new SpecialSkillHud(this.skillPanel, 'specialSkill1', container);
+    this.nineDragonsHud = new SpecialSkillHud(this.skillPanel, 'nineDragons', container);
     this.controls = container.querySelector<HTMLElement>('.controls');
     this.loop = new GameLoop(this.update, this.render);
     this.resizeObserver = new ResizeObserver(this.resize);
@@ -64,6 +71,7 @@ export class Game {
     void this.player.attack.load();
     void this.player.shuriken.load();
     void this.player.specialSkill1.load();
+    void this.player.nineDragons.load();
     container.addEventListener('pointerdown', this.onPointerDown);
     container.addEventListener('contextmenu', this.onContextMenu);
     window.addEventListener('blur', this.onAttackBlur);
@@ -89,7 +97,9 @@ export class Game {
     this.player.attack.cancel();
     this.player.shuriken.reset();
     this.player.specialSkill1.reset();
+    this.player.nineDragons.reset();
     this.skillHud.hideCastName();
+    this.nineDragonsHud.hideCastName();
     this.player.resetInterpolation();
   }
 
@@ -108,6 +118,8 @@ export class Game {
     this.level.dispose();
     this.debug.dispose();
     this.skillHud.dispose();
+    this.nineDragonsHud.dispose();
+    this.skillPanel.remove();
     this.collisionDebug.dispose();
     this.renderer.dispose();
   }
@@ -125,13 +137,20 @@ export class Game {
       jump: this.input.wasPressed('jump'),
       detachJump: this.input.wasPressed('detachJump'),
     });
-    if (this.recovery.update(this.player, this.input, this.camera)) { this.pendingAttackClicks.length = 0; this.skillHud.hideCastName(); return; }
+    if (this.recovery.update(this.player, this.input, this.camera)) { this.pendingAttackClicks.length = 0; this.skillHud.hideCastName(); this.nineDragonsHud.hideCastName(); return; }
     for (const click of this.pendingAttackClicks) {
       if (click.button === 2) this.player.requestShuriken();
       else this.player.requestAttack(click.time);
     }
     this.pendingAttackClicks.length = 0;
-    if (this.input.wasPressed('specialSkill1') && this.player.requestSpecialSkill1()) this.skillHud.showCastName();
+    if (this.input.wasPressed('specialSkill1') && this.player.requestSpecialSkill1()) {
+      this.nineDragonsHud.hideCastName();
+      this.skillHud.showCastName();
+    }
+    if (this.input.wasPressed('nineDragons') && this.player.requestNineDragons()) {
+      this.skillHud.hideCastName();
+      this.nineDragonsHud.showCastName();
+    }
     this.player.updateState(landed);
     this.player.updateAnimation(delta, landed);
     this.input.endStep();
@@ -146,6 +165,7 @@ export class Game {
     this.collisionDebug.update(this.player.visual.position.x, this.player.visual.position.y, this.player.body.width, this.player.renderHeight);
     this.renderer.render(this.camera.camera);
     this.skillHud.update(this.player, this.camera.camera);
+    this.nineDragonsHud.update(this.player, this.camera.camera);
     this.debug.update(frameDelta, this.player, alpha, this.camera, this.recovery.count, this.level.deathY);
   };
 
@@ -161,7 +181,9 @@ export class Game {
     this.player.attack.cancel();
     this.player.shuriken.reset();
     this.player.specialSkill1.reset();
+    this.player.nineDragons.reset();
     this.skillHud.hideCastName();
+    this.nineDragonsHud.hideCastName();
     this.input.reset();
     this.player.movement.resetInput();
     this.player.resetInterpolation();
@@ -184,6 +206,8 @@ export class Game {
     this.player.attack.cancel();
     this.player.shuriken.reset();
     this.player.specialSkill1.reset();
+    this.player.nineDragons.reset();
     this.skillHud.hideCastName();
+    this.nineDragonsHud.hideCastName();
   };
 }

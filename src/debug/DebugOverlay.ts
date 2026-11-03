@@ -61,6 +61,8 @@ export class DebugOverlay {
       ...(player.shuriken.error ? [`Lỗi phi tiêu ${player.shuriken.error}`] : []),
       `Special1     ${player.specialSkill1.status} / ${player.specialSkill1.cooldownRemaining.toFixed(2)}s / ${player.specialSkill1.isActive ? 'thi triển' : '—'}`,
       ...(player.specialSkill1.error ? [`Lỗi special1 ${player.specialSkill1.error}`] : []),
+      `Cửu Long     ${player.nineDragons.status} / ${player.nineDragons.cooldownRemaining.toFixed(2)}s / vòng ${player.nineDragons.auraRemaining.toFixed(2)}s`,
+      ...(player.nineDragons.error ? [`Lỗi Cửu Long ${player.nineDragons.error}`] : []),
       ...(player.spriteError ? [`Lỗi asset    ${player.spriteError}`] : []),
       `Alpha        ${alpha.toFixed(3)}`,
     ].join('\n');

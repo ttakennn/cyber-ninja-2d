@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cửu Long Hỏa Trận — art preview</title>
+<style>
+body{margin:0;background:#0c1424;color:#e6ecf6;font:15px/1.6 system-ui,sans-serif}main{max-width:1440px;margin:auto;padding:24px}h1{margin:4px 0;color:#ffe099;font-size:clamp(24px,4vw,38px)}h2{color:#ffce8d;font-size:20px}.eyebrow{color:#ff9c73;font-size:12px;letter-spacing:.16em}p{max-width:1150px}.toolbar,.phases{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}button,select{border:1px solid #64546b;background:#17243b;color:#fff2d8;padding:8px 12px;border-radius:6px;font:inherit;cursor:pointer}button:hover{border-color:#ffbd70}.phases button{flex:1;min-width:210px;text-align:left}.phases strong{display:block;color:#ffdc9a}label{display:inline-flex;gap:7px;align-items:center}canvas{display:block;width:100%;height:auto;border:1px solid #3d506d;border-radius:8px}#scrub{width:100%;accent-color:#ffc067}#status{min-height:26px;color:#ffd38d;font-variant-numeric:tabular-nums}.note{border-left:3px solid #ef9762;padding:8px 14px;background:#162039}img{max-width:100%;height:auto;border-radius:8px}.facts{display:flex;gap:12px;flex-wrap:wrap}.facts span{padding:5px 12px;border:1px solid #3d506d;border-radius:5px;color:#f7dab6}a{color:#8be9ed}table{border-collapse:collapse;width:100%;max-width:1050px}td,th{border-bottom:1px solid #30435e;padding:8px;text-align:left}@media(max-width:600px){main{padding:14px}.toolbar{gap:8px}button,select{padding:7px}.phases button{min-width:100%}}
+</style>
+<main><div class="eyebrow">NINJA HỎA · ART CANDIDATE · CHƯA TÍCH HỢP GAME</div><h1>CỬU LONG HỎA TRẬN</h1>
+<p>Cắm kiếm khai trận, chín hỏa long xoáy quanh thân theo ba nhóm; đợt cuối hội tụ thành vòng bạo viêm. Giữ nhân vật theo tỉ lệ gốc, tách caster / vòng trận / rồng / nổ thành atlas riêng.</p>
+<div class="facts"><span>Thi triển 1,4s</span><span>9 rồng · 3 nhóm × 3</span><span>Vòng lửa thêm7s · 1,5× / 2× / 2,5×</span><span>Hồi chiêu theo brief: 12s</span></div>
+<div class="phases"><button data-time="220"><strong>01 · TỤ HỎA</strong>0–350ms · rút và cắm kiếm</button><button data-time="700"><strong>02 · LONG VIÊM TOÀN VŨ</strong>350–1150ms · ba đợt 360°</button><button data-time="1260"><strong>03 · BẠO VIÊM</strong>1150–1400ms · kết thúc đợt thứ ba</button><button data-time="3500"><strong>04 · VÒNG LỬA 7 GIÂY</strong>1400–8400ms · nở rộng và xoay quanh nhân vật</button><button data-time="8300"><strong>VÒNG LỬA SẮP TẮT</strong>8300ms · mờ dần trước mốc8400ms</button></div>
+<div class="toolbar"><button id="play">Dừng</button><button id="restart">Thi triển lại</button><button id="step">Tiến 25ms</button><label>Tốc độ <select id="speed"><option value="1">1×</option><option value="0.5">0,5×</option><option value="0.25">0,25×</option></select></label><label>Nền <select id="bg"><option value="night">Đêm Map01</option><option value="light">Sáng · kiểm alpha</option><option value="checker">Caro · kiểm alpha</option></select></label><label><input id="ghost" type="checkbox">Idle gốc</label><label><input id="radius" type="checkbox" checked>Vòng tham chiếu 125px</label><label><input id="fullCycle" type="checkbox">Chờ đủ cooldown 12s</label></div>
+<p><label>Kích thước vòng Bạo Viêm <select id="auraScale" aria-label="Kích thước vòng Bạo Viêm"></select></label> · Phóng hiệu ứng từ khung Bạo Viêm gốc; giữ nguyên kích thước Ninja.</p>
+<p><label>Độ dày vành lửa <select id="auraThickness" aria-label="Độ dày vành lửa"></select></label> · Giữ đường kính ngoài của vòng. <label><input id="characterGlow" type="checkbox" checked>Ninja phát sáng</label></p>
+<input id="scrub" type="range" min="0" max="9399" value="0" step="1" aria-label="Tua animation theo mili giây">
+<p id="status" role="status">Đang tải artwork…</p><canvas id="stage" width="1280" height="720" aria-label="Preview Cửu Long Hỏa Trận, không phải gameplay"></canvas>
+<p class="note">Sau1,4s thi triển, vòng Bạo Viêm nở lên mức chọn rồi lặp đến mốc8,4s: tồn tại7s, gồm cả lúc nở và mờ tắt. Chỉ mô phỏng hình ảnh; sát thương vòng lửa lên quái/boss để sau, chưa có tick damage, hitbox hay enemy ID. Ba mốc483/750/1150ms vẫn chỉ là đề xuất cho đòn thi triển ban đầu.</p>
+<h2>So độ dày và ánh sáng nhân vật</h2><canvas id="thicknessBoard" width="2560" height="760" aria-label="Bốn độ dày vành lửa với cùng nhân vật phát sáng"></canvas><p><a href="../task-009-14-aura-thickness-options/README.md">Báo cáo điều chỉnh mới</a></p>
+<h2>So ba kích thước vòng lửa</h2><img src="../task-009-12-nine-dragons-aura/aura-options.png" alt="Vòng Bạo Viêm ở1,5lần,2lần và2,5lần; nhân vật cùng kích thước"><p><a href="../task-009-12-nine-dragons-aura/README.md">Báo cáo vòng lửa7giây mới</a> · <a href="../../../../integration/task-009-nine-dragons/candidate/aura.png">Atlas vòng lửa lặp8pha</a></p>
+<h2>Tỉ lệ và phạm vi tham chiếu</h2>
+<p>Canvas 1280×720, camera cao 9 world units → 80 CSS px/world unit ở DPR1. Vòng 125px tương ứng <b>1,5625 world units</b> tại mốc này. Atlas nhân vật vẫn 160px/world unit; preview vẽ ở 0,5× để đúng camera. Đây là mốc đề xuất cho việc review art, chưa phải bán kính gameplay đã chốt. Khi trang co lại, toàn cảnh thu theo cùng tỉ lệ; không tính vùng đánh theo pixel màn hình.</p>
+<p>Phím E trong brief mới trùng với Minh Vương Bạo Viêm hiện hành. Chưa đổi binding, cooldown hoặc skill cũ; cần chốt khi tích hợp. Vòng125px là tham chiếu cũ, không phải hitbox vòng lửa phóng lớn. Ba đợt ×30HP và Burn12HP/s×3s là số tham khảo trước mở rộng; sát thương vòng lửa7s sẽ xử lý riêng, chưa tính tổng damage mới.</p>
+<h2>Đối chiếu nhân vật</h2><p>Idle gốc và8pose mới cùng đường chân / 160px/world unit; caster chỉ dùng một mức chuẩn hóa0,75 từ ảnh tạo, không fit riêng từng silhouette. Thấp người do gối/hông hạ tự nhiên.</p><img src="cast-contact-sheet.png" alt="Idle gốc và tám pose rút kiếm, cắm kiếm, duy trì trận và bạo viêm">
+<h2>Bố cục ba giai đoạn</h2><img src="overview.png" alt="Tụ hỏa, chín hỏa long xoay quanh ninja và bạo viêm kết thúc">
+<h2>Hồ sơ atlas</h2><table><thead><tr><th>Lớp</th><th>Khung / số pha</th><th>Vai trò</th></tr></thead><tbody><tr><td>Caster</td><td>512×512 / 8</td><td>Rút kiếm → cắm kiếm → trụ trận</td></tr><tr><td>Hỏa long</td><td>627×627 / 4</td><td>Một rồng được instance9lần; ba nhóm liên tiếp</td></tr><tr><td>Vòng trận</td><td>627×627 / 4</td><td>Lớp dưới chân; pivot theo tâm ellipse, không nhảy dọc</td></tr><tr><td>Bạo viêm</td><td>512×512 / 6</td><td>Hội tụ → lóe sáng → nối sang aura</td></tr><tr><td>Aura tồn tại</td><td>512×512 / 8</td><td>Lặp16fps trong7s · ba mức phóng chỉ cho FX</td></tr></tbody></table>
+<p><a href="README.md">Báo cáo và giới hạn</a> · <a href="../../../../integration/task-009-nine-dragons/README.md">Nguồn/prompt/metadata</a> · <a href="../../../../integration/task-009-nine-dragons/candidate/cast.png">Caster</a> · <a href="../../../../integration/task-009-nine-dragons/candidate/dragon.png">Hỏa long</a> · <a href="../../../../integration/task-009-nine-dragons/candidate/seal.png">Vòng trận</a> · <a href="../../../../integration/task-009-nine-dragons/candidate/burst.png">Bạo viêm</a></p></main>
+<script src="../../../../integration/task-009-nine-dragons/review-data.js"></script>
+<script src="../../../../integration/task-009-nine-dragons/review-effects.js"></script>
+<script src="../../../../integration/task-009-nine-dragons/review-aura.generated.js"></script>
+<script>
+const data=window.nineDragonsReview,plan=data.plan,assets=data.assets,base='../../../../integration/task-009-nine-dragons/';
+const canvas=document.querySelector('#stage'),ctx=canvas.getContext('2d'),status=document.querySelector('#status'),scrub=document.querySelector('#scrub');
+const images={},starts=[0],burstStarts=[0],foot=plan.preview.foot,center=[foot[0],foot[1]-64],tau=Math.PI*2,aura=plan.aura,auraEnd=aura.startMs+aura.durationMs;
+const effects=window.nineDragonsEffects,glowSettings={...plan.characterGlow,endMs:auraEnd,fadeOutMs:aura.fadeOutMs};
+for(const ms of plan.cast.frameMs)starts.push(starts.at(-1)+ms);
+for(const ms of aura.handoffFrameMs)burstStarts.push(burstStarts.at(-1)+ms);
+let time=0,last=0,playing=true,loaded=false,failed=false,auraFrames=null;
+const play=document.querySelector('#play'),fullCycle=document.querySelector('#fullCycle'),auraScale=document.querySelector('#auraScale');
+const auraThickness=document.querySelector('#auraThickness'),characterGlow=document.querySelector('#characterGlow'),thicknessBoard=document.querySelector('#thicknessBoard');
+for(const scale of aura.scaleOptions)auraScale.add(new Option(scale.toFixed(1).replace('.',',')+'×',String(scale)));
+auraScale.value=String(aura.defaultScale);
+for(const factor of aura.thicknessOptions)auraThickness.add(new Option(factor.toFixed(1).replace('.',',')+'×',String(factor)));
+auraThickness.value=String(aura.defaultThickness);
+function reviewAura(){if(time<aura.startMs||time>=auraEnd){time=aura.startMs+1000;pause()}if(loaded)drawThicknessBoard()}
+auraScale.onchange=reviewAura;auraThickness.onchange=reviewAura;characterGlow.onchange=()=>{if(loaded)drawThicknessBoard()};
+function pause(){playing=false;play.textContent='Chạy'}
+play.onclick=()=>{playing=!playing;play.textContent=playing?'Dừng':'Chạy'};
+document.querySelector('#restart').onclick=()=>{time=0;playing=true;play.textContent='Dừng'};
+document.querySelector('#step').onclick=()=>{pause();time=(time+25)%cycle()};
+scrub.oninput=()=>{pause();time=+scrub.value};
+for(const button of document.querySelectorAll('[data-time]'))button.onclick=()=>{pause();time=+button.dataset.time};
+function cycle(){return fullCycle.checked?plan.brief.cooldownSeconds*1000:plan.preview.quickCycleMs}
+fullCycle.onchange=()=>{time%=cycle();scrub.max=cycle()-1};
+function drawFrame(name,index,x,y,width,alpha=1,rotation=0){
+ const f=assets[name].frames[index],s=width/f.rect[2];ctx.save();ctx.globalAlpha=alpha;ctx.translate(x,y);ctx.rotate(rotation);
+ const destination=[-f.pivot[0]*s,-f.pivot[1]*s,f.rect[2]*s,f.rect[3]*s];
+ if(name==='cast')effects.drawCharacter(ctx,images[name],f.rect,destination,characterPower(),glowSettings);
+ else if(name==='aura')ctx.drawImage(auraFrames.get(+auraThickness.value)[index],0,0,...assets.aura.frameSize,...destination);
+ else ctx.drawImage(images[name],...f.rect,...destination);ctx.restore();
+}
+function characterPower(){return characterGlow.checked?effects.glowStrength(time,glowSettings):0}
+function idle(alpha=1,lit=true){ctx.save();ctx.globalAlpha=alpha;effects.drawCharacter(ctx,images.idle,[0,0,384,320],[foot[0]-192*.5,foot[1]-289*.5,384*.5,320*.5],lit?characterPower():0,glowSettings);ctx.restore()}
+function drawThicknessBoard(){
+ const c=thicknessBoard.getContext('2d'),width=plan.preview.burstFrameWidthPx*+auraScale.value,phase=3500,index=Math.floor((phase-aura.startMs)/1000*aura.fps)%assets.aura.frames.length;
+ c.fillStyle='#0c1629';c.fillRect(0,0,thicknessBoard.width,760);c.fillStyle='#ffe097';c.font='700 30px system-ui';c.fillText('CỬU LONG HỎA TRẬN · ĐỘ DÀY VÀNH LỬA',32,45);
+ c.fillStyle='#cbd9eb';c.font='18px system-ui';c.fillText('Cùng đường kính vòng '+auraScale.selectedOptions[0].text+' · cùng cỡ Ninja · ánh sáng nhân vật '+(characterGlow.checked?'bật':'tắt'),32,82);
+ for(let i=0;i<aura.thicknessOptions.length;i++){
+   const factor=aura.thicknessOptions[i],x=320+i*640,y=360,power=characterGlow.checked?effects.glowStrength(phase,glowSettings):0;
+   effects.drawCharacter(c,images.idle,[0,0,384,320],[x-96,y+64-144.5,192,160],power,glowSettings);
+   c.save();c.translate(x,y);c.rotate((phase-aura.startMs)/1000*tau*aura.rotationsPerSecond);c.drawImage(auraFrames.get(factor)[index],-width/2,-width/2,width,width);c.restore();
+   c.fillStyle='#fff3cf';c.font='700 28px system-ui';c.fillText('Độ dày '+factor.toFixed(1).replace('.',',')+'×',x-110,670);
+ }
+ c.fillStyle='#cbd9eb';c.font='18px system-ui';c.fillText('Viền vàng kem + quầng cam · sáng từ lúc thi triển · mờ cùng vòng lửa và trở về sprite gốc tại8,4s',32,724);
+}
+function frameAt(ms,cuts){for(let i=0;i<cuts.length-1;i++)if(ms<cuts[i+1])return i;return cuts.length-2}
+function background(){
+ const bg=document.querySelector('#bg').value;
+ if(bg==='checker'){for(let y=0;y<720;y+=24)for(let x=0;x<1280;x+=24){ctx.fillStyle=((x+y)/24)%2?'#acb5c1':'#e1e5eb';ctx.fillRect(x,y,24,24)}}
+ else {ctx.fillStyle=bg==='light'?'#e1e7ed':'#101e38';ctx.fillRect(0,0,1280,720)}
+ ctx.fillStyle=bg==='night'?'#152b49':'#a9b3c1';ctx.fillRect(0,foot[1]+2,1280,720-foot[1]-2);
+ ctx.strokeStyle=bg==='night'?'#6d83a0':'#465367';ctx.beginPath();ctx.moveTo(0,foot[1]);ctx.lineTo(1280,foot[1]);ctx.stroke();
+ if(document.querySelector('#radius').checked){ctx.save();ctx.strokeStyle=bg==='night'?'#ffcf8f88':'#67492d88';ctx.setLineDash([5,6]);ctx.beginPath();ctx.arc(...center,plan.preview.radiusPx,0,tau);ctx.stroke();ctx.restore()}
+}
+function dragons(){
+ if(time<130||time>=1150)return [];
+ const reveal=Math.min(1,(time-130)/220),orbit=Math.max(0,(time-350)/800),converge=time>1050?1-(time-1050)/100*.75:1;
+ const active=Math.max(0,Math.min(2,Math.floor((time-350)/(800/3)))),list=[];
+ for(let d=0;d<9;d++){
+   const angle=d*tau/9+orbit*tau*2,group=d%3,rx=98*reveal*converge,ry=70*reveal*converge;
+   const alpha=reveal*(group===active?1:.42),x=center[0]+Math.cos(angle)*rx,y=center[1]+Math.sin(angle)*ry;
+   const rotation=Math.atan2(Math.cos(angle)*ry,-Math.sin(angle)*rx);
+   list.push({x,y,alpha,rotation,index:(Math.floor(time/1000*plan.dragon.fps)+d)%4});
+ }return list.sort((a,b)=>a.y-b.y);
+}
+function drawDragon(d){drawFrame('dragon',d.index,d.x,d.y,plan.preview.dragonFrameWidthPx,d.alpha,d.rotation)}
+function render(now){
+ const dt=last?Math.min(100,now-last):0;last=now;
+ if(playing&&loaded)time=(time+dt*+document.querySelector('#speed').value)%cycle();
+ background();
+ if(loaded&&!failed){
+   if(time<1400){
+     const sealIndex=time<350?Math.min(1,Math.floor(time/175)):time<1150?2:3;
+     drawFrame('seal',sealIndex,foot[0],foot[1]+4,plan.preview.sealFrameWidthPx,Math.min(1,time/180));
+   }
+   const list=dragons();for(const d of list)if(d.y<center[1])drawDragon(d);
+   if(document.querySelector('#ghost').checked)idle(.2,false);
+   if(time<1400)drawFrame('cast',frameAt(time,starts),...foot,256);else idle();
+   for(const d of list)if(d.y>=center[1])drawDragon(d);
+   if(time>=1150&&time<aura.startMs+150){
+     const index=aura.handoffFrames[frameAt(time-1150,burstStarts)],alpha=Math.min(1,(aura.startMs+150-time)/150);
+     drawFrame('burst',index,...center,plan.preview.burstFrameWidthPx,alpha);
+   }
+   if(time>=aura.startMs&&time<auraEnd){
+     const age=time-aura.startMs,grow=1-Math.pow(1-Math.min(1,age/aura.growMs),3),scale=1+(+auraScale.value-1)*grow;
+     const alpha=Math.min(1,age/80)*Math.min(1,(auraEnd-time)/aura.fadeOutMs),index=Math.floor(age/1000*aura.fps)%assets.aura.frames.length;
+     drawFrame('aura',index,...center,plan.preview.burstFrameWidthPx*scale,alpha,age/1000*tau*aura.rotationsPerSecond);
+   }
+   if(time<1500){
+     ctx.save();ctx.globalAlpha=1-time/1500;ctx.textAlign='center';ctx.font='900 20px system-ui';
+     const y=foot[1]-175-time/1500*20,gradient=ctx.createLinearGradient(510,y,780,y);gradient.addColorStop(0,'#fffde5');gradient.addColorStop(.5,'#ffe16a');gradient.addColorStop(1,'#ffb4e7');
+     ctx.shadowColor='#071022';ctx.shadowBlur=4;ctx.shadowOffsetY=2;ctx.fillStyle=gradient;ctx.fillText(plan.name,foot[0],y);ctx.restore();
+   }
+   const wave=plan.timing.waveHitMs.filter(ms=>time>=ms).length;
+   const phase=time<350?'Tụ Hỏa':time<1150?'Long Viêm Toàn Vũ':time<aura.startMs?'Bạo Viêm · kết thúc đợt 3':time<auraEnd?'Vòng lửa '+auraScale.selectedOptions[0].text+' · còn '+((auraEnd-time)/1000).toFixed(2)+'s':'Vòng lửa đã tắt';
+   status.textContent=phase+' · '+(time/1000).toFixed(3)+'s · mốc đánh ban đầu '+wave+'/3 · độ dày '+auraThickness.selectedOptions[0].text+' · sáng Ninja '+Math.round(characterPower()*100)+'% · hồi chiêu mô phỏng còn '+Math.max(0,12-time/1000).toFixed(1)+'s';
+   ctx.fillStyle=document.querySelector('#bg').value==='night'?'#d8e4f4':'#24364a';ctx.font='16px system-ui';ctx.fillText('Vòng lửa: 1,4–8,4s · nhân vật giữ nguyên cỡ · mức phóng '+auraScale.selectedOptions[0].text,32,680);ctx.fillText('Chỉ art preview · chưa có sát thương vòng lửa/quái/boss hoặc binding E',32,706);
+ }
+ scrub.value=String(Math.floor(time));requestAnimationFrame(render);
+}
+const paths={cast:assets.cast.image,dragon:assets.dragon.image,seal:assets.seal.image,burst:assets.burst.image,aura:assets.aura.image,idle:'source/idle-reference.png'};
+Promise.all(Object.entries(paths).map(([name,path])=>new Promise((resolve,reject)=>{const image=images[name]=new Image();image.onload=resolve;image.onerror=()=>reject(new Error('Không tải được '+path));
+ if(name==='aura'&&location.protocol==='file:'){
+   const embedded=window.nineDragonsReviewAura;
+   if(!embedded||embedded.source!==path){reject(new Error('Thiếu dữ liệu aura local. Chạy node scripts/prepare_nine_dragons_preview.mjs từ thư mục dự án'));return}
+   image.src=embedded.image;
+ }else image.src=base+path;
+}))).then(()=>{
+ auraFrames=effects.prepareThickness(images.aura,assets.aura.frames,aura.thicknessOptions);loaded=true;drawThicknessBoard();
+}).catch(error=>{failed=true;status.textContent=error.message+'. Giữ nguyên vị trí preview và thư mục integration trong repo, rồi tải lại trang.'});
+requestAnimationFrame(render);
+</script></html>

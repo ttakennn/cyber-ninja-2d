@@ -2,6 +2,7 @@
   "status": "USER_APPROVED_ART_ANIMATION_ONLY",
   "source": "integration/task-009-player-attacks/candidate/",
   "plan": "integration/task-009-player-attacks/combo-plan.json",
+  "playbackSpeedMultiplier": 0.8,
   "damage": "NOT_IMPLEMENTED",
   "assets": [
     {

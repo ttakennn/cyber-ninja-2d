@@ -1,10 +1,16 @@
 # Trạng thái Map01
 
-UI Task09: H ẩn/hiện khung hướng dẫn phía dưới, tên chiêu bỏ khung/nền và nhỏ hơn2px; [báo cáo](commits/task-009-10-help-callout/IMPLEMENTATION.md). Chưa kiểm tra runtime/test/build hoặc commit lượt này.
+09.18: người dùng review UI/Cửu Long ổn và yêu cầu commit hiện trạng; thêm giảm tốc combo20% (speed0.8), giữ reset0.5s. [Bàn giao09.11–18](commits/task-009-18-combo-speed/IMPLEMENTATION.md); chưa merge/push hoặc chạy test/build/chơi thử phần giảm tốc. Các trạng thái chưa commit dưới đây là lịch sử từng lượt.
+
+Sửa preview Cửu Long09.11 mở trực tiếp file://: aura dùng dữ liệu ảnh đóng gói để tránh lỗi getImageData; [báo cáo](commits/task-009-16-preview-local-file/IMPLEMENTATION.md). Giữ lựa chọn độ dày, artwork và runtime; chưa kiểm tra trình duyệt/test/build lượt sửa này.
+
+UI Task09: H ẩn/hiện khung hướng dẫn phía dưới, tên chiêu bỏ khung/nền và nhỏ hơn2px; người dùng review ổn, đã commit **08294d4** cùng special1. [Báo cáo](commits/task-009-10-help-callout/IMPLEMENTATION.md). Chưa chạy test/build hoặc nghiệm thu game mới.
+
+Task09 mới nhất: **Q / vòng2.0× / độ dày1.0× / cast1s**, aura7s/CD12s giữ nguyên. Phi tiêu và Minh Vương sáng cùng Ninja trong Cửu Long, fade chung350ms cuối; Q/E gộp một card/chữ nhỏ. Không đổi layout/collision/asset môi trường. [Báo cáo](commits/task-009-17-skill-ui-timing-glow/IMPLEMENTATION.md). Chưa damage/quái/boss, commit/merge hoặc nghiệm thu runtime; test/build/chơi thử/shader GPU **NOT_RUN**. Báo cáo/preview trước là lịch sử.
 
 Phạm vi Map01; xem [trạng thái toàn dự án](../TASK_STATUS.md), [style riêng](rules/ART_STYLE_GUIDE.md) và [atlas riêng](rules/ATLAS_SPEC.md). Palette Map01 được giữ cho Map01, không giới hạn palette của map mới.
 
-2026-11-03: Task09 special1 thêm HUD tên/countdown góc trái trên, tên chiêu mờ dần1.5s trên đầu nhân vật và tăng tốc orb lên9unit/s; [báo cáo UI](commits/task-009-09-special-01-ui/IMPLEMENTATION.md). Không đổi bố trí/collision Map01 hoặc artwork; chưa chạy test/build/runtime và chưa commit/merge lượt special. Trạng thái baseline môi trường bên dưới là lịch sử của lượt tài liệu2026-11-02.
+2026-11-03: Task09 special1 thêm HUD tên/countdown góc trái trên, tên chiêu mờ dần1.5s trên đầu nhân vật và tăng tốc orb lên9unit/s; [báo cáo UI](commits/task-009-09-special-01-ui/IMPLEMENTATION.md). Không đổi bố trí/collision Map01 hoặc artwork; đã commit08294d4, chưa merge, chưa chạy test/build hoặc nghiệm thu game mới. Trạng thái baseline môi trường bên dưới là lịch sử của lượt tài liệu2026-11-02.
 
 Cập nhật 2026-11-02. Baseline code/asset trước bộ quy chuẩn này: **4ce0146**; animation v2: **12959ca**. Repo ở master do người dùng đang làm việc tại nhánh đó; không suy rằng cần tự merge/push trong task sau.
 

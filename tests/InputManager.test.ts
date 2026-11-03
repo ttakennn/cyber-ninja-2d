@@ -20,6 +20,23 @@ afterEach(() => {
 });
 
 describe('keyboard input', () => {
+  it('Q dùng Cửu Long độc lập với E/F, không tự lặp hoặc giữ yêu cầu qua blur', () => {
+    const { target, input } = setup();
+    expect(key(target, 'keydown', 'KeyQ').defaultPrevented).toBe(true);
+    expect(input.wasPressed('nineDragons')).toBe(true);
+    expect(input.wasPressed('specialSkill1')).toBe(false);
+    expect(input.wasPressed('climb')).toBe(false);
+    input.endStep();
+    key(target, 'keydown', 'KeyQ', true);
+    expect(input.wasPressed('nineDragons')).toBe(false);
+    key(target, 'keyup', 'KeyQ');
+    key(target, 'keydown', 'KeyQ');
+    expect(input.wasPressed('nineDragons')).toBe(true);
+    target.dispatchEvent(new Event('blur'));
+    expect(input.wasPressed('nineDragons')).toBe(false);
+    expect(input.isDown('nineDragons')).toBe(false);
+  });
+
   it('E thi triển special, F bám thang; giữ phím không lặp và không dùng chung action', () => {
     const { target, input } = setup();
     expect(key(target, 'keydown', 'KeyE').defaultPrevented).toBe(true);
