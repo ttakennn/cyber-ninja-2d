@@ -1,0 +1,81 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "name": "Thiên Hỏa Giáng Lâm",
+  "runtimeIntegration": "NOT_APPLIED",
+  "pixelsPerWorldUnit": 160,
+  "frameSize": [
+    512,
+    512
+  ],
+  "characterPivot": [
+    192,
+    353
+  ],
+  "effectPivot": [
+    256,
+    484
+  ],
+  "phasesMs": [
+    0,
+    350,
+    650,
+    1250,
+    1650
+  ],
+  "idlePreviewHoldMs": 600,
+  "body": {
+    "frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "frameMs": [
+      100,
+      120,
+      160,
+      180,
+      140,
+      140,
+      160
+    ],
+    "startMs": 650,
+    "fullRevealMs": 1250,
+    "idleBlendStartMs": 1550
+  },
+  "ring": {
+    "startMs": 350,
+    "frameMs": [
+      50,
+      70,
+      130,
+      200,
+      200,
+      220,
+      250,
+      180
+    ]
+  },
+  "sheets": {
+    "body": {
+      "original": "exec-17ffb339-ec69-44e3-9065-e69c18b269f9.png",
+      "prompt": "prompts/body.md"
+    },
+    "beam": {
+      "original": "exec-4c3572ba-2563-42cc-b2b3-89505a17e0cd.png",
+      "prompt": "prompts/beam.md",
+      "targetCellWidthPx": 384,
+      "sourceAnchorY": 484
+    },
+    "ring": {
+      "original": "exec-8bfcbc96-1ee6-4059-8699-de022ba7b2fd.png",
+      "prompt": "prompts/ring.md",
+      "targetCellWidthPx": 300
+    }
+  },
+  "reference": "../task-009-special-01/source/idle-reference.png",
+  "reviewDirectory": "docs/map01/commits/task-010-ninja-production/animation/heavenly-fire-entrance"
+}

@@ -1,0 +1,95 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "name": "Thiên Hỏa Tái Lâm",
+  "runtimeIntegration": "NOT_APPLIED",
+  "pixelsPerWorldUnit": 160,
+  "frameSize": [
+    512,
+    512
+  ],
+  "characterPivot": [
+    192,
+    353
+  ],
+  "effectPivot": [
+    256,
+    484
+  ],
+  "phasesMs": [
+    0,
+    180,
+    350,
+    600,
+    750
+  ],
+  "idlePreviewHoldMs": 450,
+  "body": {
+    "frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "frameMs": [
+      35,
+      35,
+      65,
+      65,
+      60,
+      60,
+      80
+    ],
+    "startMs": 350,
+    "silhouetteEndMs": 385,
+    "fullRevealMs": 420,
+    "idleBlendStartMs": 700
+  },
+  "ring": {
+    "startMs": 180,
+    "frameMs": [
+      20,
+      30,
+      50,
+      100,
+      100,
+      120,
+      90,
+      60
+    ]
+  },
+  "beam": {
+    "arrivalMs": 180,
+    "fadeMs": 50,
+    "dropPx": 110
+  },
+  "glow": {
+    "startMs": 385,
+    "fadeStartMs": 600,
+    "opacity": 0.55
+  },
+  "sheets": {
+    "body": {
+      "original": "exec-fdea8cbe-448b-4578-a54f-ee85e97e700a.png",
+      "prompt": "prompts/body.md"
+    },
+    "beam": {
+      "original": "exec-502622b9-250b-4629-ad39-1ddaaf729192.png",
+      "prompt": "prompts/beam.md",
+      "targetCellWidthPx": 300,
+      "sourceAnchorY": 470
+    },
+    "ring": {
+      "original": "exec-aa84812f-6af6-470c-bfd2-334a332c093b.png",
+      "prompt": "prompts/ring-cleanup.md",
+      "targetCellWidthPx": 260,
+      "iterations": [
+        "source/ring-first.png"
+      ]
+    }
+  },
+  "reference": "../task-009-special-01/source/idle-reference.png",
+  "reviewDirectory": "docs/map01/commits/task-010-ninja-production/animation/heavenly-fire-respawn"
+}

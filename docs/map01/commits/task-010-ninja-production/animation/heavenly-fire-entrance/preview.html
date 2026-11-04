@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thiên Hỏa Giáng Lâm — preview art</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0a1427;color:#e6eaf2;font:15px/1.6 system-ui}main{max-width:1280px;margin:auto;padding:24px}h1{color:#ffe2a3;margin:8px 0;font-size:clamp(24px,4vw,38px)}p{color:#bdc9dc}.tag{color:#ffad73;font-size:11px;letter-spacing:.16em}.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}button,select{font:inherit;color:#ecf0fa;background:#1d2b44;border:1px solid #5e687e;border-radius:6px;padding:7px 12px;cursor:pointer}label{display:inline-flex;align-items:center;gap:6px}canvas{display:block;width:100%;height:auto;border:1px solid #46566e;border-radius:8px}input[type=range]{width:100%;accent-color:#ff9b52}#status{font-variant-numeric:tabular-nums;color:#ffe1aa;min-height:28px}.boards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.boards img{width:100%;border:1px solid #3c4c65}a{color:#ffcf9c}figure{margin:0}figcaption{font-size:13px;color:#b7c5db}.note{border-left:3px solid #ed8b4d;padding:10px 14px;background:#17233a}@media(max-width:700px){main{padding:12px}.boards{grid-template-columns:1fr}}
+</style>
+<main><div class="tag">NINJA HỎA · ART ĐÃ CHỐT PRODUCTION · CHƯA ÁP DỤNG VÀO GAME</div>
+<h1>THIÊN HỎA GIÁNG LÂM</h1>
+<p>Thiên quang 0–0,35s → va chạm 0,35–0,65s → hiện hình 0,65–1,25s → lửa tan / sẵn sàng 1,25–1,65s. Giữ kích thước Ninja hiện tại, không có động tác nhảy xuống. Cuối preview nối sang Idle gốc.</p>
+<div class="tools"><button id="play">Dừng</button><button id="restart">Xem lại</button><label>Tốc độ <select id="speed"><option>1</option><option>0.5</option><option>0.25</option></select></label><label>Phóng <select id="zoom"><option>1.25</option><option>1</option><option>1.5</option></select></label><label>Nền <select id="bg"><option value="night">Đêm</option><option value="light">Sáng</option><option value="checker">Caro</option></select></label><label><input type="checkbox" id="loop" checked>Lặp</label></div>
+<div class="tools"><label>Xem <select id="mode"><option value="full">Toàn hoạt ảnh</option><option value="body">Riêng pose Ninja</option><option value="beam">Riêng tia giáng</option><option value="ring">Riêng vòng lửa</option></select></label><label><input type="checkbox" id="compare" checked>Idle gốc so cỡ</label><label><input type="checkbox" id="ghost">Bóng Idle tại cùng vị trí</label></div>
+<div class="tools"><button data-time="0">0 · Thiên quang</button><button data-time="350">0,35 · Chạm đất</button><button data-time="650">0,65 · Hiện hình</button><button data-time="1250">1,25 · Lửa tan</button><button data-time="1650">1,65 · Idle</button></div>
+<input id="scrub" type="range" min="0" max="2250" step="1" value="0" aria-label="Tua hoạt ảnh">
+<div id="status" role="status">Đang tải ảnh…</div><canvas id="stage" width="1100" height="680"></canvas>
+<p class="note">1,65giây là phần xuất hiện. Preview giữ thêm0,6giây Idle để xem chuyển tiếp rồi lặp. Chọn từng lớp và tua để xem cả8frame nguồn; pose0 của body chỉ là mẫu so cỡ. Tay giữ chuôi kiếm thấp theo tạo hình Idle, không thêm đòn chém hoặc rút kiếm. Đây là art review, chưa có trigger spawn hoặc điều khiển người chơi.</p>
+<div class="boards"><figure><a href="body-contact.png"><img src="body-contact.png" alt="Tám pose Ninja hiện hình và sẵn sàng"></a><figcaption>Nhân vật · cùng cỡ tham chiếu Idle.</figcaption></figure><figure><a href="ring-contact.png"><img src="ring-contact.png" alt="Vòng lửa khai mở và ember tan"></a><figcaption>Vòng lửa thấp · flash → nở → dịu → tàn.</figcaption></figure><figure><a href="beam-contact.png"><img src="beam-contact.png" alt="Tia thiên hỏa từ trời xuống"></a><figcaption>Tia giáng · lõi sáng / đuôi cam đỏ.</figcaption></figure></div>
+<p><a href="README.md">Nguồn / prompt / giới hạn</a> · <a href="atlas.json">Metadata</a></p></main>
+<script src="review-data.js"></script><script>
+const d=window.fireEntrance,canvas=document.querySelector('#stage'),ctx=canvas.getContext('2d'),status=document.querySelector('#status');
+const ui=Object.fromEntries(['play','restart','speed','zoom','bg','loop','mode','compare','ghost','scrub'].map(id=>[id,document.getElementById(id)]));
+const images={};let time=0,last=0,playing=true,loaded=false;
+function pause(){playing=false;ui.play.textContent='Chạy'}
+ui.play.onclick=()=>{playing=!playing;ui.play.textContent=playing?'Dừng':'Chạy'};
+ui.restart.onclick=()=>{time=0;playing=true;ui.play.textContent='Dừng'};
+ui.scrub.oninput=()=>{time=+ui.scrub.value;pause()};
+document.querySelectorAll('[data-time]').forEach(b=>b.onclick=()=>{time=+b.dataset.time;pause()});
+function clamp(n){return Math.max(0,Math.min(1,n))}
+function phase(ms){return ms<350?'Thiên quang giáng xuống':ms<650?'Va chạm / khai mở vòng lửa':ms<1250?'Ninja dần hiện hình':ms<1650?'Lửa tắt / sẵn sàng':'Idle gốc · chỉ trong preview'}
+function at(ms,durations){let i=0;while(i<durations.length-1&&ms>=durations[i]){ms-=durations[i];i++}return i}
+function frame(name,i,x,y,z,alpha=1,light=1){if(alpha<=0)return;const f=d.assets[name].frames[i],p=f.pivot;ctx.save();ctx.globalAlpha=alpha;ctx.filter='brightness('+light+')';ctx.drawImage(images[name],...f.rect,x-p[0]*z,y-p[1]*z,512*z,512*z);ctx.restore()}
+function idle(x,y,z,alpha=1,ms=0){const i=Math.floor(ms*d.idle.fps/1000)%d.idle.frames.length,f=d.idle.frames[i],p=f.pivot;ctx.save();ctx.globalAlpha=alpha;ctx.drawImage(images.idle,f.x,f.y,f.width,f.height,x-p.x*z,y-p.y*z,f.width*z,f.height*z);ctx.restore()}
+function background(){if(ui.bg.value==='checker'){for(let y=0;y<680;y+=24)for(let x=0;x<1100;x+=24){ctx.fillStyle=((x+y)/24)%2?'#a4afbf':'#d5dfec';ctx.fillRect(x,y,24,24)}}else{const g=ctx.createLinearGradient(0,0,0,680);g.addColorStop(0,ui.bg.value==='night'?'#071638':'#f0f3f8');g.addColorStop(1,ui.bg.value==='night'?'#263148':'#b4c1d2');ctx.fillStyle=g;ctx.fillRect(0,0,1100,680)}ctx.strokeStyle='#7a889c';ctx.beginPath();ctx.moveTo(40,560);ctx.lineTo(1060,560);ctx.stroke()}
+function ring(front,x,y,z){if(time<350||time>=1650)return;const local=time-d.ring.startMs,i=at(local,d.ring.frameMs),fade=time>1250?clamp((1650-time)/400):1;ctx.save();const cut=y-22*z;ctx.beginPath();ctx.rect(0,front?cut:0,1100,front?680-cut:cut);ctx.clip();frame('ring',i,x,y,z,fade);ctx.restore()}
+function draw(){background();if(!loaded)return;const z=+ui.zoom.value,x=670,y=560,mode=ui.mode.value;
+ if(ui.compare.checked)idle(220,y,z,.65);
+ if(ui.ghost.checked)idle(x,y,z,.16);
+ if(mode!=='full'){const i=Math.min(7,Math.floor(time/2250*8));frame(mode,i,x,y,z);status.textContent=mode+' · frame '+i+' / 7 · ảnh riêng, không phải timeline';}
+ else{
+  ring(false,x,y,z);
+  if(time>=650){const blend=clamp((time-d.body.idleBlendStartMs)/(1650-d.body.idleBlendStartMs)),reveal=clamp((time-650)/600),light=.15+.85*reveal;const i=d.body.frames[at(Math.max(0,time-650),d.body.frameMs)];frame('body',i,x,y,z,reveal*(1-blend),light);if(blend>0)idle(x,y,z,blend,Math.max(0,time-1650));}
+  ring(true,x,y,z);
+  if(time<350){const p=time/350;frame('beam',Math.min(3,Math.floor(p*4)),x,y-220*(1-p)*(1-p),z);}
+  else if(time<430)frame('beam',Math.min(7,4+Math.floor((time-350)/20)),x,y,z,1-(time-350)/80);
+  status.textContent=(time/1000).toFixed(2)+'s · '+phase(time)+' · chưa áp dụng vào game';
+ }
+ ctx.fillStyle=ui.bg.value==='night'?'#e9d9be':'#233047';ctx.font='16px system-ui';ctx.textAlign='center';if(ui.compare.checked)ctx.fillText('Idle gốc · không thay đổi',220,625);ctx.fillText(mode==='full'?phase(time):mode,670,625);ui.scrub.value=String(Math.floor(time));
+}
+function tick(now){const delta=last?Math.min(now-last,100):0;last=now;if(loaded&&playing){time+=delta*+ui.speed.value;if(time>=2250){if(ui.loop.checked)time%=2250;else{time=2250;pause()}}}draw();requestAnimationFrame(tick)}
+const paths={body:d.assets.body.image,beam:d.assets.beam.image,ring:d.assets.ring.image,idle:'reference/locomotion.png'};
+Promise.all(Object.entries(paths).map(([name,path])=>new Promise((resolve,reject)=>{const im=images[name]=new Image();im.onload=resolve;im.onerror=()=>reject(new Error('Không tải được '+path));im.src=path}))).then(()=>{loaded=true}).catch(e=>{status.textContent=e.message+'. Giữ đầy đủ thư mục preview.'});
+requestAnimationFrame(tick);
+</script></html>

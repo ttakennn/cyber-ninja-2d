@@ -35,7 +35,7 @@ $folder = Join-Path $repo 'public/assets/characters/ninja'
 $metadata = Get-Content -LiteralPath (Join-Path $folder 'animations.json') -Raw | ConvertFrom-Json
 $original = [System.Drawing.Bitmap]::new((Join-Path $folder 'flame-ninja-atlas.png'))
 $atlas = $original.Clone([System.Drawing.Rectangle]::new(0,0,$original.Width,$original.Height), [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
-$source = [System.Drawing.Bitmap]::new((Join-Path $repo 'integration/ninja-climb-v2/climb-poses-source.png'))
+$source = [System.Drawing.Bitmap]::new((Join-Path $repo 'integration/ninja-climb/climb-poses-source.png'))
 $reference = $original.Clone([System.Drawing.Rectangle]::new(1572,988,384,320), [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
 $bounds = [ClimbPixels]::Bounds($reference)
 $reference.Dispose()
@@ -61,7 +61,7 @@ for ($index=0; $index -lt 4; $index++) {
   $poses += $pose
 }
 $previewGraphics.Dispose()
-$preview.Save((Join-Path $repo 'integration/ninja-climb-v2/climb-poses-v2.png'),[System.Drawing.Imaging.ImageFormat]::Png)
+$preview.Save((Join-Path $repo 'integration/ninja-climb/climb-poses.png'),[System.Drawing.Imaging.ImageFormat]::Png)
 $preview.Dispose()
 $atlasGraphics = [System.Drawing.Graphics]::FromImage($atlas)
 $atlasGraphics.CompositingMode = [System.Drawing.Drawing2D.CompositingMode]::SourceCopy
@@ -80,4 +80,4 @@ $atlas.Save($generatedPath,[System.Drawing.Imaging.ImageFormat]::Png)
 foreach ($pose in $poses) { $pose.Dispose() }
 $atlas.Dispose(); $source.Dispose(); $original.Dispose()
 Move-Item -LiteralPath $generatedPath -Destination (Join-Path $folder 'flame-ninja-atlas.png') -Force
-Write-Output ('Atlas v2 authored; non-climbing pixels preserved; reference ink height={0}px, bottom={1}px.' -f $bounds.Height,$bounds.Bottom)
+Write-Output ('Approved climbing atlas authored; non-climbing pixels preserved; reference ink height={0}px, bottom={1}px.' -f $bounds.Height,$bounds.Bottom)

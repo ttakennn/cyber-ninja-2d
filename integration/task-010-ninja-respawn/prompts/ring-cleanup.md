@@ -1,0 +1,5 @@
+# Thiên Hỏa Tái Lâm — ring-cleanup
+
+Tool: image_gen.imagegen built-in, transparent_background=true. Đã xem tham chiếu Giáng Lâm/body.png và Idle gốc trước khi tạo; vòng lửa lượt đầu bị lẫn nhân vật, giữ lịch sử và dùng lượt cleanup chỉ giữ VFX. Không thay asset runtime hoặc bộ Giáng Lâm.
+
+Use case: precise-object-edit / background-extraction. Sửa CHÍNH ảnh đính kèm: XÓA SẠCH toàn bộ8nhân vật Ninja ở8ô. Loại bỏ cả đầu/khăn/tay/thân/quần/chân/giày/kiếm/bóng người và ánh sáng quanh nhân vật. CHỈ GIỮ các VÒNG LỬA vàflash/ember sát nền của mỗiô. Nơi từng có người phải trong suốt alpha0 thật, không silhouette hoặc vết người. Đây là sheet VFX RIÊNG, không được vẽ bất kỳ nhân vật nào. Giữ8vòng lửa/flash/ember đúng vị trí/kíchthước/góc ellipse/màu vàngtrắng-camđỏ và diễn tiến như ảnh: nhỏ→nở→thu→tan. Giữ1536×1024/4cột×2hàng/8ô384×512, không recenter/resize rings. Loại haze nền nâu/đen, mọi vùng ngoài FX alpha0 sạch, tâm mỗi vòng rỗng alpha0. Không chữ/grid/nền caro/watermark, không thêm đồvật/nhânvật hoặc lửa khác. Chỉ assetvònglửa độc lập để code ghép Ninja riêng.

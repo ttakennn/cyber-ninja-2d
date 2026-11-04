@@ -24,6 +24,12 @@ Giữ frameWidth/Height, sourceWidth/Height, offset, pivot và khoảng trống 
 
 ## Animation
 
+**Bản chốt production hiện hành:** [thư viện tổng hợp](../animation/preview.html), [production.json](../animation/production.json). Người dùng chốt toàn bộ art đã làm, gồm leo v2, combo, phi tiêu, hai tuyệt kỹ, Giáng Lâm và Tái Lâm. Nguồn leo active đã bỏ hậu tố: integration/ninja-climb/climb-poses.png, scripts/create_ninja_climb.ps1; PNG runtime canonical giữ nguyên hash. Không có walk riêng: đi/chạy dùng run. Các mục chờ duyệt bên dưới giữ lịch sử art trước khi gom; không ghi đè final bằng candidate. Theo [ANIMATION_PRODUCTION](../../../rules/ANIMATION_PRODUCTION.md), task vẫn phải ghi commits. Spawn/respawn chưa tích hợp game.
+
+Art hồi sinh mới: [Thiên Hỏa Tái Lâm](../animation/heavenly-fire-respawn/preview.html), [nguồn/thông số](../animation/heavenly-fire-respawn/README.md),750ms theo brief0/180/350/600/750; giữ body512×512/pivot(192,353)/160px-unit và chuẩn chiều cao Idle251px. Silhouette35ms/hiện rõ420ms, glow tan cuối; chưa duyệt bản mới hoặc áp dụng respawn/input. Bộ Giáng Lâm người dùng đã phản hồi ổn, không đổi ảnh/nhịp trong lượt này.
+
+Art mới chưa áp dụng: [Thiên Hỏa Giáng Lâm](../animation/heavenly-fire-entrance/preview.html), [nguồn/thông số](../animation/heavenly-fire-entrance/README.md). Candidate xuất hiện1650ms theo brief, body512×512/pivot(192,353)/160px-unit, chiều cao guard theo Idle251px; FX riêng và cuối preview blend sang Idle gốc. Chưa duyệt ảnh, chưa trigger/input/runtime; không thay contract bên trên.
+
 Giữ các clip/FPS/loop/frame order trong JSON nếu task không yêu cầu đổi. Chỉ sửa clip đã giao; các pixel ngoài frame được giao phải không đổi. Khi chỉnh atlas phải bảo toàn gutter và các clip không liên quan.
 
 Leo hiện có 8 slot climbUp +8 slot climbDown, FPS11.1111, cùng pivot. Artwork được chọn ở12959ca có4 tư thế chính giữ2 frame/tư thế, cùng pha cho hai chiều; đây là baseline được người dùng chọn, không phải8 tư thế độc lập. Không lặp lại pose chỉ tay phải cao. Tay trái/phải và chân đối bên phải thay phiên, không lật toàn người làm đổi bên bao kiếm/khăn. Giữ dừng frame khi đứng giữa thang và không tự flip theo hướng ngang khi leo.

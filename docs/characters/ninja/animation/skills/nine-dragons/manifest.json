@@ -1,0 +1,74 @@
+{
+  "status": "USER_APPROVED_INTEGRATED_NOT_VALIDATED",
+  "plan": "integration/task-009-nine-dragons/runtime-plan.json",
+  "art": "integration/task-009-nine-dragons/atlas.json",
+  "cooldownStart": "CAST_START_KEEP_ON_RESET",
+  "movementLock": "CAST_ONLY_1_SECOND",
+  "auraAnchor": "PLAYER_BODY_CENTER",
+  "additionalSkillGlow": "WHILE_NINE_DRAGONS_ACTIVE",
+  "damage": "DEFERRED_NO_ENEMIES_NO_BOSS_DAMAGE",
+  "collision": "NONE_VISUAL_ONLY",
+  "assets": [
+    {
+      "source": "candidate/cast.png",
+      "image": "cast.png",
+      "metadata": "cast.json",
+      "sha256": "4cbf590efb051f852bc71ad5d4971251fb1e1c93e6578ef812227c30de635ab4"
+    },
+    {
+      "source": "candidate/dragon.png",
+      "image": "dragon.png",
+      "metadata": "dragon.json",
+      "sha256": "36dca359bda8f4c5ea28fcf3f4e1b01236563d096a48008128c4554e6adb9843"
+    },
+    {
+      "source": "candidate/seal.png",
+      "image": "seal.png",
+      "metadata": "seal.json",
+      "sha256": "94e883512b7ef0e08aab24d1334d79e607a0ae3b99d7d8d9f3303effd236de14"
+    },
+    {
+      "source": "candidate/burst.png",
+      "image": "burst.png",
+      "metadata": "burst.json",
+      "sha256": "150b749d7d40c0f7b61ccde5322a12b1706683d6969a9d4da5152dafae30a7ea"
+    },
+    {
+      "source": "candidate/aura.png",
+      "image": "aura.png",
+      "metadata": "aura.json",
+      "sha256": "a2d86f41caadfe767a685e60d9415c75d90681861acaa3efc84b0eba98819a82"
+    }
+  ],
+  "settings": {
+    "name": "CỬU LONG HỎA TRẬN",
+    "key": "Q",
+    "cooldownSeconds": 12,
+    "castSeconds": 1,
+    "castTimeScale": 0.7142857142857143,
+    "chargeSeconds": 0.25,
+    "burstStartSeconds": 0.8214285714285714,
+    "auraSeconds": 7,
+    "fadeSeconds": 0.35,
+    "growSeconds": 0.25,
+    "ringScale": 2,
+    "thickness": 1,
+    "rotationsPerSecond": 0.35,
+    "dragon": {
+      "count": 9,
+      "radiusX": 1.225,
+      "radiusY": 0.875
+    },
+    "sealOffsetY": -0.05,
+    "glow": {
+      "brightness": 1.32,
+      "saturation": 1.18,
+      "rimColor": "#fff2b0",
+      "haloColor": "#ff942e",
+      "rimRadiusPx": 6,
+      "haloRadiusPx": 24,
+      "pulseHz": 1.2,
+      "pulseMinimum": 0.9
+    }
+  }
+}

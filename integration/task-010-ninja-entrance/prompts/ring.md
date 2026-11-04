@@ -1,0 +1,7 @@
+# Thiên Hỏa Giáng Lâm — ring
+
+Tool: image_gen.imagegen built-in, transparent_background=true. Tham chiếu đã xem: integration/task-009-special-01/source/idle-reference.png (danh tính/kích thước) và integration/task-009-nine-dragons/candidate/cast.png (style/chất liệu). Không thay các ảnh tham chiếu hoặc atlas runtime.
+
+Use case: stylized-concept. Sprite2D Illustrated textured pixel art, chất liệu/shading/viền đúng ảnh Ninja Hỏa tham chiếu, nền alpha THẬT. PNG1536×1024,4cột×2hàng,8ô384×512; mỗi ô tách rõ đủ margin, không chữ/grid/nhãn/nền đen/nâu/caro/watermark, pixel ngoài asset alpha0. Chỉ VFX vòng thiênhỏa khai mở quanh chân trên mặtphẳng ngang nhìn nghiêng, ellipse phối cảnh (KHÔNG vòngtròn dựngđứng). Không nhânvật/kiếm/địahình/rồng/sét. Cam rực/vàngtrắnglõi/đỏcamviền, vài cung tia cong outward. Vòng nhỏgọn uy lực, không nổcombatkhổnglồ; lửa thấp quanh thân dưới, tốiđachiều cao140px, rộng300px; vùngvẽ x32..352,y325..475, tâm ellipse x192/y440, mốc mặt đất y470. Giữ tâm/đườngkính theo diễn tiến nở/tan, không tự dịch ô.
+8frame:0flash điểm chạm vàngtrắng nhỏ ngắn, khoảng90px;1nở vòng lửa180px;2vòng mở260px tia congít;3vòng hoànchỉnh300px/ngọnlửa110px;4vòng dịu280px/90px;5thu nhỏ230px/60px;6cònembervàvànhmỏng160px;7vàitànlửa nhỏ baylên/tan (ôcònítpixel khôngrỗng).
+Phân biệt rõ cung sau ở cao hơn và cung trước ở thấp hơn để ghép người đứng ở giữa. Trung tâm vòng alpha0 sauframeflash, nền ngoài/từng khe lửa alpha0; không vẽ đĩa sáng kín hoặc nềnmàucam.

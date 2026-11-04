@@ -1,0 +1,6 @@
+# Thiên Hỏa Tái Lâm — ring
+
+Tool: image_gen.imagegen built-in, transparent_background=true. Đã xem tham chiếu Giáng Lâm/body.png và Idle gốc trước khi tạo; vòng lửa lượt đầu bị lẫn nhân vật, giữ lịch sử và dùng lượt cleanup chỉ giữ VFX. Không thay asset runtime hoặc bộ Giáng Lâm.
+
+Use case: stylized-concept. Art hồi sinh Ninja Hỏa “Thiên Hỏa Tái Lâm”, tổng0,75s, nhanh/gọn/sắc/ít cinematic hơn bản Giáng Lâm. Illustrated textured pixel art sprite2D đúng ảnh tham chiếu. PNG1536×1024 alphaTHẬT,4cột×2hàng,8ô384×512, đủmargin khôngtrànô/cắtasset. Không chữ/nhãn/grid/nềnđen/nâu/caro/watermark. Ngoài asset alpha0. ChỉVFX vòng lửa HỒI SINH NHỎ gọn quanhchân, ellipse nằmtrên mặtphẳngngang nhìnnghiêng (khôngvòng dựngđứng), khôngnhânvật/kiếm/đất/rồng. Lõi vàngsáng, thân camtươi, mépđỏcam, bóngđỏthẫm/tímđỏcựcnhẹ. Flash ngắnởtâm rồi lửa thấp thu nhanhthànhember, không vụnổattackkhổnglồ hoặcballfire. X32..352/y365..480, rộngtốiđa260px/cao90px, tâmx192/y450, mốcđáy480.
+8frame:0flash vàngtrắng nhỏgọn ởđiểmchạm, rộng70px/cao35;1vòng nở170px/cao55;2vòng khai mở260px/cao85, vàitia congvăngnhẹ;3vòng giữ220px/cao70;4co190px/cao50;5co140px/cao30;6vànhmỏng/ember nổi;7vàiember nhỏtàncònnhìnđược. Alpha0 ởgiữavòng từframe1, khôngđĩa sáng kín. Cungsauthấp/caohơn,cungtrướcởdưới đểghép ômchân, không chethân/ngực/mặt. Không nhiều particle/vệt kéo dài, khôngkhói/nềnvuông.

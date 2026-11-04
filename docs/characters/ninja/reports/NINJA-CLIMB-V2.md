@@ -1,5 +1,7 @@
 # Ninja climbing artwork v2 — bản thử để review
 
+Cập nhật2026-11-04: người dùng chốt v2 làm bản production. Nguồn/script active đã đổi tên sang [integration/ninja-climb](../../../../integration/ninja-climb/climb-poses.png) và scripts/create_ninja_climb.ps1, không tạo lại ảnh/runtime. Các tên v2 và trạng thái thử bên dưới là lịch sử. Bản chốt xem ở [thư viện nhân vật](../animation/preview.html).
+
 Ngày 2026-11-02. Yêu cầu: sửa hình leo lên/xuống, giữ các hình khác và kích thước nhân vật.
 
 ## Review bản cũ
@@ -19,7 +21,7 @@ Atlas flame-ninja-atlas.png có 8 frame climbUp và 8 frame climbDown. Qua xem �
 
 - Công cụ tạo/chỉnh tư thế: `image_gen.imagegen` built-in. Bản tám tư thế đầu bị loại vì vẫn giữ tay phải cao. Bản 2×2 được sửa tiếp tư thế trung gian và vị trí bao kiếm.
 - Source được chọn: `integration/ninja-climb-v2/climb-poses-source.png`, bản gốc công cụ `exec-c73fde79-3f88-450d-b0a6-a2e130c1f046.png`.
-- Prompt chỉnh cuối: [image-prompt.md](../../../../integration/ninja-climb-v2/image-prompt.md).
+- Prompt chỉnh cuối: [image-prompt.md](../../../../integration/ninja-climb/image-prompt.md) (đã chuyển tên canonical).
 - Preview sau căn ô/kích thước: `integration/ninja-climb-v2/climb-poses-v2.png` (bốn tư thế theo thứ tự vòng lặp).
 - `scripts/create_ninja_climb_v2.ps1`: chỉ crop/căn kích thước và ghép ảnh được tạo bằng ImageGen vào atlas gốc, không vẽ tay chân bằng code. Dùng PowerShell/System.Drawing; không cần dependency mới.
 - SHA256 atlas v2: `432f63db6c14141940c4bf07e622df55381143348f7dcbde46aaa0013eadf2c2`.

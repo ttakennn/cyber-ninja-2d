@@ -1,5 +1,7 @@
 # Trạng thái Map01
 
+2026-11-04/Ninja-production-library: animation Ninja chốt ở [production](../characters/ninja/animation/preview.html), lịch sử/snapshot lượt gom ở [commits](commits/task-010-ninja-production/README.md). Giữ bộ leo v2 hiện hành và hash atlas, canonical nguồn/script bỏ hậu tố; không đổi map/gameplay. Rules chung yêu cầu task có commits và chỉ đưa bộ đã chốt vào animation/. Chưa test/build/browser/commit/merge.
+
 2026-11-04/Task10-library: toàn bộ art Sói Điện, kể cả xuất hiện từ khói điện, đã được chốt. Xem lại tại [thư viện nhân vật](../characters/electric-wolf/animation/preview.html), không cần vào commits; nguồn và báo cáo cũ giữ làm lịch sử. Đã gom atlas/JSON/VFX/bảng pose/tham chiếu bằng copy nguyên file, không đổi map/src/public/ảnh/timing/gameplay. Chưa runtime/test/build/browser tại vị trí mới/commit/merge. Các mục chờ duyệt bên dưới là lịch sử.
 
 2026-11-04/Task10-entrance: Skill2 đã được người dùng chốt; [art xuất hiện từ khói điện](commits/task-010-07-electric-wolf-entrance/README.md) và [preview](commits/task-010-02-electric-wolf-animation/preview.html) mới chờ duyệt. Body/khói tách sheet, hiện dần rồi động tai/cười/xoay gậy vào guard; giữ art cũ/cỡ/pivot/map/src/public/gameplay. Chưa spawn/AI/runtime/test/build/browser/commit/merge. Các mục Skill2 chờ duyệt bên dưới giữ lịch sử.

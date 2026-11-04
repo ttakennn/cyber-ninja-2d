@@ -1,5 +1,6 @@
 {
   "status": "ALL_REQUESTED_ART_APPROVED_NO_RUNTIME",
+  "reviewDirectory": "docs/map01/commits/task-010-electric-wolf-production-review",
   "approvedClips": ["idle","run","jump","climbUp","climbDown","combo","hurt","dash","groundShock","spawn"],
   "approvedEffects": ["groundWave","spawnSmoke"],
   "characterDesign": "USER_APPROVED_V1",

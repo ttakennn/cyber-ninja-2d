@@ -2,6 +2,8 @@
 
 Mỗi nhân vật có hồ sơ tại docs/characters/<id>/rules/SPRITE_SPEC.md. Hồ sơ gắn với nhân vật, không gắn độc quyền với map. Ninja ở Map02 vẫn dùng contract ninja trừ khi người dùng yêu cầu biến thể.
 
+Bản art chốt production ở docs/characters/<id>/animation/; task/review/snapshot vẫn lưu trong commits theo [ANIMATION_PRODUCTION](ANIMATION_PRODUCTION.md). Không đặt candidate chưa duyệt vào bộ chốt hoặc suy duyệt art thành tích hợp game.
+
 ## Contract cần xác định
 
 Ghi nguồn PNG/metadata, canvas và frame/source rect, pixel/world density, visual size/scale, anchor/pivot/offset, clip/FPS/loop, hướng nhìn và điểm tiếp đất. Đọc schema/loader/renderer hiện có để thiết kế tương thích; không thêm cơ chế mới nếu chỉ cần khai báo dữ liệu.

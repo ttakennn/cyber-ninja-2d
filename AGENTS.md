@@ -7,6 +7,7 @@
 - Mọi task: [cấu trúc tài liệu](docs/README.md), [GAME_BIBLE](docs/rules/GAME_BIBLE.md), [TASK_STATUS](docs/TASK_STATUS.md), [DECISION_LOG](docs/DECISION_LOG.md).
 - Task ảnh, UI, môi trường hoặc map: [ART_STYLE_GUIDE chung](docs/rules/ART_STYLE_GUIDE.md), [ATLAS_SPEC chung](docs/rules/ATLAS_SPEC.md), rồi docs/<map-id>/README.md, rules/ và TASK_STATUS.md của đúng map đang làm.
 - Task nhân vật/animation: đọc [SPRITE_SPEC chung](docs/rules/SPRITE_SPEC.md) và hồ sơ docs/characters/<character-id>/ của đúng nhân vật, kể cả khi nhân vật dùng ở map khác. Map01 không sở hữu contract ninja dùng chung.
+- Vòng đời artwork/animation: đọc [ANIMATION_PRODUCTION](docs/rules/ANIMATION_PRODUCTION.md). docs/characters/<id>/animation/ là bản art đã chốt cho production; bản thử, ảnh review và lịch sử task phải lưu trong commits. Không ghi đè production bằng candidate chưa được duyệt.
 - Sau đó đọc source, metadata, generator và báo cáo gần nhất liên quan trước khi sửa. Phải xem PNG tham chiếu khi tạo/chỉnh artwork, không chỉ đọc tên file.
 - Các tài liệu trên mô tả baseline hiện hành. Báo cáo TASK-xxx/RC cũ là lịch sử; đường dẫn v2 trong báo cáo cũ không thay thế đường dẫn canonical. Khi tài liệu và source mâu thuẫn ở điểm ảnh hưởng thiết kế, nêu rõ mâu thuẫn và hỏi trước khi đổi phần đó.
 
@@ -38,6 +39,8 @@
 - Không tạo test dư thừa cho sửa nhỏ, dễ đảo ngược. Khi thay contract/kỳ vọng đã có, cập nhật test liên quan nhưng không chạy nếu chưa được phép.
 
 ## Kết thúc task
+
+- Task nhân vật vẫn phải lưu báo cáo/ảnh/metadata hoặc snapshot preview theo task trong docs/<map-id>/commits/ (Map01 dùng docs/map01/commits/). Sau khi người dùng chốt mới cập nhật docs/characters/<id>/animation/ bằng đúng file được chọn; giữ nguồn/hash/pivot/timing và bỏ hậu tố phiên bản ở bản canonical khi được yêu cầu. Không suy art production thành nghiệm thu runtime/gameplay.
 
 - Task Map01: lưu báo cáo Markdown, ảnh preview và log/bằng chứng theo task trong docs/map01/commits/ (nên dùng thư mục con theo task để tránh trùng tên). Quy chuẩn lâu dài vẫn ở docs/map01/rules/; không ghi đè bằng chứng task cũ.
 

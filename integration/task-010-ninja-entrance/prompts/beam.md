@@ -1,0 +1,6 @@
+# Thiên Hỏa Giáng Lâm — beam
+
+Tool: image_gen.imagegen built-in, transparent_background=true. Tham chiếu đã xem: integration/task-009-special-01/source/idle-reference.png (danh tính/kích thước) và integration/task-009-nine-dragons/candidate/cast.png (style/chất liệu). Không thay các ảnh tham chiếu hoặc atlas runtime.
+
+Use case: stylized-concept. Sprite2D Illustrated textured pixel art, chất liệu/shading/viền đúng ảnh Ninja Hỏa tham chiếu, nền alpha THẬT. PNG1536×1024,4cột×2hàng,8ô384×512; mỗi ô tách rõ đủ margin, không chữ/grid/nhãn/nền đen/nâu/caro/watermark, pixel ngoài asset alpha0. Chỉ VFX tia thiênhỏa lao THẲNG ĐỨNG từ trênxuống, không nhân vật/vũkhí/mặtđất/vòngphép/rồng. Màu lõi vàng trắng, lớp cam rực, viền đỏ cam/đỏsẫm, vàitànember nhỏ. Tia thon khoảng45–90px rộng, đuôi dài dọc chiều cao ô, vịtrí x192, mũi hướng XUỐNG đáy y470; đủ margin y20..475, không cắt cột bên. Có cảm giác tốc độ nhanh và sứcnóng, không tiađiệncyan/laserxanh, không vụnổ.
+8frame:0mầm sáng thon ngắn ở phầntrên;1tia kéo dài xuống;2đuôi lửa dài hơn/mũi sáng;3tia dài tốcđộ đỉnh;4tia chạm điểm đáy, lõi sáng mạnh tinhgọn;5tia thu mảnh;6vệt tàn vàemb er xuống;7vài ember dọc nhỏ cuối. Mọi frame cùnggốc x192/y470, không đổi hướng hoặc bẻxiên; code sẽ tịnh tiến tia từ trời.

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "kind": "production",
+  "image": "dragon.png",
+  "filter": "linear",
+  "frameWidth": 627,
+  "frameHeight": 627,
+  "columns": 2,
+  "visual": {
+    "width": 1.4375,
+    "height": 1.4375,
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    }
+  },
+  "clips": {
+    "nine_dragons_dragon": {
+      "fps": 18,
+      "loop": true,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 313,
+            "y": 310
+          }
+        },
+        {
+          "x": 627,
+          "y": 0,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 313,
+            "y": 310
+          }
+        },
+        {
+          "x": 0,
+          "y": 627,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 313,
+            "y": 310
+          }
+        },
+        {
+          "x": 627,
+          "y": 627,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 313,
+            "y": 310
+          }
+        }
+      ]
+    }
+  }
+}

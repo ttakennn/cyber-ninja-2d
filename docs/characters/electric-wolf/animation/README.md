@@ -36,6 +36,8 @@ Giữ atlas2048×1024,8ô512×512/pivot(256,416),160px/world unit và chiều ca
 
 ## Cập nhật về sau
 
+Quy định mới2026-11-04: thư mục animation/ là art final production theo [ANIMATION_PRODUCTION](../../../rules/ANIMATION_PRODUCTION.md). Authoring -OnlySheet giờ ghi reviewDirectory trong commits; chỉ -PublishOnly sau lời chốt mới đồng bộ vào production. Mỗi task vẫn lưu báo cáo/ảnh/snapshot trong commits và phải chọn reviewDirectory mới. Mô tả xuất trực tiếp về đây bên dưới giữ lịch sử workflow trước thay đổi này.
+
 scripts/prepare_electric_wolf_animation.ps1 xuất bảng pose về thư mục này, đồng bộ atlas/JSON/script dữ liệu và ảnh tham chiếu sau authoring. Dùng -OnlySheet <tên> khi được giao cập nhật riêng một sheet. Dùng -PublishOnly để đồng bộ metadata và sao chép nguyên file đã chọn, không tạo lại hoặc xử lý PNG. Preview HTML được duy trì tại đây; bản trong commits giữ làm lịch sử, không còn là nơi cập nhật thư viện.
 
 Lượt tổ chức2026-11-04 đã dùng -PublishOnly, bổ sung approval spawn/spawnSmoke theo lời chốt của người dùng và các liên kết tài liệu. Tất cả ảnh được sao chép nguyên file từ pack đã chọn, giữ bản nguồn/lịch sử; không gọi ImageGen hoặc chạy lại normalization. Không sửa src/public/assets/map/gameplay, không commit/merge/push.

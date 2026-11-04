@@ -25,10 +25,11 @@ public static class WolfMotionInk {
 }
 $repo = Split-Path $PSScriptRoot -Parent
 $root = Join-Path $repo 'integration/task-010-electric-wolf/animation'
-$evidence = Join-Path $repo 'docs/characters/electric-wolf/animation'
+$production = Join-Path $repo 'docs/characters/electric-wolf/animation'
+$plan = Get-Content -LiteralPath (Join-Path $root 'animation-plan.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$evidence = if($PublishOnly){$production}else{Join-Path $repo $plan.reviewDirectory}
 $legacyEvidence = Join-Path $repo 'docs/map01/commits/task-010-02-electric-wolf-animation'
 foreach($directory in @($evidence,(Join-Path $evidence 'candidate'),(Join-Path $evidence 'reference'))) { New-Item -ItemType Directory -Path $directory -Force | Out-Null }
-$plan = Get-Content -LiteralPath (Join-Path $root 'animation-plan.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $assets = [ordered]@{}
 if($OnlySheet -or $PublishOnly) {
   if($OnlySheet -and $plan.sheets.PSObject.Properties.Name -notcontains $OnlySheet) { throw "Unknown source sheet: $OnlySheet" }
@@ -107,5 +108,6 @@ foreach($name in $assets.Keys) {
 foreach($file in @('atlas.json','review-data.js')) { Copy-Item -LiteralPath (Join-Path $root $file) -Destination (Join-Path $evidence $file) -Force }
 foreach($file in @('electric-wolf-ninja-v1.png','ninja-idle-reference.png')) { Copy-Item -LiteralPath (Join-Path $root "../source/$file") -Destination (Join-Path $evidence "reference/$file") -Force }
 Copy-Item -LiteralPath (Join-Path $root '../review-data.js') -Destination (Join-Path $evidence 'reference/design-data.js') -Force
+if(!$PublishOnly) { Copy-Item -LiteralPath (Join-Path $production 'preview.html') -Destination (Join-Path $evidence 'preview.html') -Force }
 if($PublishOnly) { Write-Output 'Published approved wolf art and metadata to the character preview library without regenerating PNGs. Runtime unchanged.' }
-else { Write-Output 'Authored wolf animation candidates, metadata and character preview library. Runtime unchanged.' }
+else { Write-Output 'Authored wolf animation review in commits; production library and runtime unchanged.' }

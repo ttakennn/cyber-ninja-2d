@@ -1,0 +1,44 @@
+{
+  "status": "USER_APPROVED_ART_APPLY_REQUESTED",
+  "plan": "integration/task-009-fire-shuriken/runtime-plan.json",
+  "artSource": "integration/task-009-fire-shuriken/",
+  "damage": "NOT_IMPLEMENTED",
+  "collision": "LEVEL_SOLIDS_POINT_SWEEP",
+  "enemies": "DEFERRED",
+  "cleanup": "OUTSIDE_LEVEL_X_EXTENT",
+  "assets": [
+    {
+      "source": "throw/throw-atlas.png",
+      "image": "throw.png",
+      "metadata": "throw.json",
+      "sha256": "d5f17f962aaa8b65e58d5637677a7f983774f2f289211effb369b6738b62c478"
+    },
+    {
+      "source": "crouch-throw/crouch-throw-atlas.png",
+      "image": "crouch-throw.png",
+      "metadata": "crouch-throw.json",
+      "sha256": "942fa286d6a5e6ae40d63782c9889ce0b978f1cf88d3d5adb56596631404b4a2"
+    },
+    {
+      "source": "fire-shuriken-atlas.png",
+      "image": "projectile.png",
+      "metadata": "projectile.json",
+      "sha256": "579d7858e25dc3a441547cb91db6facfb10910dfb4dba3c1fa6461c4e6436496"
+    }
+  ],
+  "settings": {
+    "releaseSeconds": 0.25,
+    "releaseOffset": {
+      "x": 1.01875,
+      "y": 1.41875
+    },
+    "crouch": {
+      "releaseSeconds": 0.25,
+      "releaseOffset": {
+        "x": 0.9875,
+        "y": 0.70625
+      }
+    },
+    "speed": 11.25
+  }
+}

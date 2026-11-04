@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "kind": "production",
+  "image": "aura.png",
+  "filter": "linear",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "columns": 4,
+  "visual": {
+    "width": 3.625,
+    "height": 3.625,
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    }
+  },
+  "clips": {
+    "nine_dragons_aura": {
+      "fps": 16,
+      "loop": true,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 512,
+          "y": 0,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 1024,
+          "y": 0,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 1536,
+          "y": 0,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 0,
+          "y": 512,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 512,
+          "y": 512,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 1024,
+          "y": 512,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        },
+        {
+          "x": 1536,
+          "y": 512,
+          "width": 512,
+          "height": 512,
+          "sourceWidth": 512,
+          "sourceHeight": 512,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 256,
+            "y": 256
+          }
+        }
+      ]
+    }
+  }
+}

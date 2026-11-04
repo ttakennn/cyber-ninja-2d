@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "kind": "production",
+  "image": "orb.png",
+  "filter": "linear",
+  "frameWidth": 627,
+  "frameHeight": 627,
+  "columns": 2,
+  "visual": {
+    "width": 1.5,
+    "height": 1.5,
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    }
+  },
+  "clips": {
+    "special_01_orb": {
+      "fps": 12,
+      "loop": true,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 420,
+            "y": 346
+          }
+        },
+        {
+          "x": 627,
+          "y": 0,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 415,
+            "y": 346
+          }
+        },
+        {
+          "x": 0,
+          "y": 627,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 423,
+            "y": 355
+          }
+        },
+        {
+          "x": 627,
+          "y": 627,
+          "width": 627,
+          "height": 627,
+          "sourceWidth": 627,
+          "sourceHeight": 627,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 400,
+            "y": 355
+          }
+        }
+      ]
+    }
+  }
+}

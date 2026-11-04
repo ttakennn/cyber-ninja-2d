@@ -10,7 +10,7 @@ Giữ cùng độ chi tiết, độ sắc nét, tương phản và hướng nhì
 
 Tham chiếu bắt buộc phải xem theo nhóm công việc:
 
-- Nhân vật: flame-ninja-atlas.png và preview integration/ninja-climb-v2/climb-poses-v2.png.
+- Nhân vật: flame-ninja-atlas.png và preview integration/ninja-climb/climb-poses.png (bản leo v2 đã chốt, tên canonical không hậu tố).
 - Nhà phố/mặt đứng: foreground/individual/, production/individual/ và expansion-z45-rc1/individual/.
 - Props/biển: props/props/ (đặc biệt street/, signs/) và ui-polish-rc3/sign-pho-sai-gon.png.
 - Background: backgrounds/buildings-near.png và các lớp đang được generator dùng. File chưa đặt vào runtime không tự thành asset đã duyệt.

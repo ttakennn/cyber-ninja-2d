@@ -40,5 +40,7 @@ docs/
 
 ## Tài liệu hiện hành và lịch sử
 
+Quy tắc mới theo lời chốt người dùng: docs/characters/<nhan-vat>/animation/ là bản art final cho production. Mọi task vẫn lưu báo cáo/ảnh/snapshot trong docs/<map-id>/commits/<task-id>/; bản thử chưa duyệt chỉ ở review, không ghi đè production. Đọc [ANIMATION_PRODUCTION](rules/ANIMATION_PRODUCTION.md); preview Ninja Hỏa ở [đây](characters/ninja/animation/preview.html). Không suy art final thành nghiệm thu runtime.
+
 - [Quy chuẩn chung](rules/GAME_BIBLE.md), [Map01](map01/README.md), [nhân vật](characters/README.md), [trạng thái](TASK_STATUS.md), [quyết định](DECISION_LOG.md).
 - Báo cáo/ảnh/log các task trước đã được gom vào docs/map01/commits/. Task Map01 tiếp theo cũng lưu Markdown/preview/bằng chứng tại đó theo thư mục task. Không dùng bằng chứng cũ để tuyên bố baseline mới đã được nghiệm thu.

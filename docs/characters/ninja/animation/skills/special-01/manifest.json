@@ -1,0 +1,63 @@
+{
+  "status": "USER_APPROVED_ART_APPLY_REQUESTED",
+  "plan": "integration/task-009-special-01/runtime-plan.json",
+  "art": "integration/task-009-special-01/atlas.json",
+  "cooldownStart": "CAST_START_KEEP_ON_INTERRUPT",
+  "damage": "DEFERRED_NO_ENEMIES",
+  "collision": "LEVEL_SOLIDS_POINT_SWEEP",
+  "assets": [
+    {
+      "source": "candidate/cast.png",
+      "image": "cast.png",
+      "metadata": "cast.json",
+      "sha256": "087f9bf21becfd6113a9c3ea3ed88e956189780ef238787717c7b3500dff24a6"
+    },
+    {
+      "source": "candidate/orb.png",
+      "image": "orb.png",
+      "metadata": "orb.json",
+      "sha256": "596c9cabef90dd494b63a3bc0a89c3c4c061d65ee6f93358fab9c9773a006d27"
+    },
+    {
+      "source": "candidate/explosion.png",
+      "image": "explosion.png",
+      "metadata": "explosion.json",
+      "sha256": "6035ac67ed709eb1ab895cd981920f7c24bbe6116439d224470d4ae8c232198b"
+    }
+  ],
+  "settings": {
+    "cooldownSeconds": 5,
+    "speed": 9,
+    "releaseSeconds": 0.36,
+    "releaseOffset": {
+      "x": 0.875,
+      "y": 1.175
+    },
+    "charge": [
+      {
+        "untilSeconds": 0.12,
+        "offset": {
+          "x": -0.1,
+          "y": 0.85625
+        },
+        "scale": 0.26666666666666666
+      },
+      {
+        "untilSeconds": 0.26,
+        "offset": {
+          "x": 0.175,
+          "y": 0.99375
+        },
+        "scale": 0.4166666666666667
+      },
+      {
+        "untilSeconds": 0.36,
+        "offset": {
+          "x": 0.26875,
+          "y": 1.05625
+        },
+        "scale": 0.18333333333333332
+      }
+    ]
+  }
+}

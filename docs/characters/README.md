@@ -3,6 +3,9 @@
 Áp dụng [Sprite Spec chung](../rules/SPRITE_SPEC.md) và [Art Style chung](../rules/ART_STYLE_GUIDE.md). Mỗi nhân vật có rules/SPRITE_SPEC.md, nguồn metadata/asset và reports/ riêng; có thể thêm TASK_STATUS.md, DECISION_LOG.md khi cần theo dõi độc lập.
 
 - [Ninja hiện tại](ninja/rules/SPRITE_SPEC.md): contract và danh tính đã duyệt, dùng chung qua nhiều map.
+  [Animation chốt production / preview tổng hợp](ninja/animation/preview.html), [danh mục](ninja/animation/README.md). Các trạng thái candidate bên dưới là lịch sử trước lời chốt mới.
+  [Preview Thiên Hỏa Giáng Lâm](ninja/animation/heavenly-fire-entrance/preview.html) mới chờ duyệt, chưa áp dụng vào game.
+  [Preview hồi sinh Thiên Hỏa Tái Lâm](ninja/animation/heavenly-fire-respawn/preview.html):0,75s, candidate art, chưa tích hợp hồi sinh.
 - [Ninja Sói Điện — xem hoạt ảnh](electric-wolf/animation/preview.html): quái thường01, toàn bộ tạo hình/hoạt ảnh/hai skills/xuất hiện đã chốt art; [hồ sơ và rules](electric-wolf/README.md), chưa runtime.
 - [Báo cáo artwork leo v2](ninja/reports/NINJA-CLIMB-V2.md).
 
