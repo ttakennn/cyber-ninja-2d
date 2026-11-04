@@ -1,5 +1,7 @@
 # Task09 — attack/skills, quái và boss
 
+**Đã chốt theo xác nhận người dùng và merge vào master local067ce5e.** Phần quái/boss được người dùng chuyển sang [Task10](TASK-010.md); không suy đóng Task09 thành đã chạy test/build hoặc có gameplay damage. Các trạng thái chưa merge bên dưới là lịch sử từng lượt.
+
 09.18: người dùng review bản mới ổn, giảm tốc attack combo20% và yêu cầu commit hiện trạng09.11–18. [Báo cáo](map01/commits/task-009-18-combo-speed/IMPLEMENTATION.md). Metadata attack speed0.8, frame/pivot/FPS và reset0.5s giữ nguyên; test cập nhật nhưng không chạy. Không merge/push.
 
 Cập nhật09.17 theo yêu cầu mới: Cửu Long cast1s/vòng2.0×/độ dày1.0×, aura7s/CD12s; phi tiêu và Minh Vương phát sáng cùng lúc Cửu Long, Q/E chung card nhỏ. [Báo cáo](map01/commits/task-009-17-skill-ui-timing-glow/IMPLEMENTATION.md). Đã sinh dữ liệu runtime, cập nhật test nhưng chưa chạy; test/build/chơi thử **NOT_RUN**, chưa commit/merge. Các mốc1.4s/2.5× bên dưới là lịch sử.

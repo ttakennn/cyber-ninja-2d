@@ -1,0 +1,342 @@
+{
+    "image":  "candidate/groundShock.png",
+    "source":  "source/groundShock.png",
+    "pixelSize":  [
+                      2048,
+                      1024
+                  ],
+    "sourcePixelSize":  [
+                            1536,
+                            1024
+                        ],
+    "frameSize":  [
+                      512,
+                      512
+                  ],
+    "uniformScale":  0.5953638814016172506738544474,
+    "referenceInk128":  [
+                            90,
+                            100,
+                            306,
+                            470
+                        ],
+    "frames":  [
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    0,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          0,
+                                          384,
+                                          512
+                                      ],
+                       "index":  0,
+                       "sourceInk128":  [
+                                            90,
+                                            100,
+                                            306,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      196,
+                                      196,
+                                      324,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    512,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          384,
+                                          0,
+                                          384,
+                                          512
+                                      ],
+                       "index":  1,
+                       "sourceInk128":  [
+                                            59,
+                                            146,
+                                            311,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      177,
+                                      223,
+                                      327,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           137
+                                       ],
+                       "rect":  [
+                                    1024,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          768,
+                                          0,
+                                          384,
+                                          512
+                                      ],
+                       "index":  2,
+                       "sourceInk128":  [
+                                            53,
+                                            74,
+                                            309,
+                                            469
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            469
+                                        ],
+                       "ink128":  [
+                                      174,
+                                      181,
+                                      326,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    1536,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          1152,
+                                          0,
+                                          384,
+                                          512
+                                      ],
+                       "index":  3,
+                       "sourceInk128":  [
+                                            39,
+                                            174,
+                                            302,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      165,
+                                      240,
+                                      322,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    0,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          512,
+                                          384,
+                                          512
+                                      ],
+                       "index":  4,
+                       "sourceInk128":  [
+                                            68,
+                                            211,
+                                            330,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      183,
+                                      262,
+                                      338,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    512,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          384,
+                                          512,
+                                          384,
+                                          512
+                                      ],
+                       "index":  5,
+                       "sourceInk128":  [
+                                            55,
+                                            203,
+                                            319,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      175,
+                                      257,
+                                      332,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    1024,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          768,
+                                          512,
+                                          384,
+                                          512
+                                      ],
+                       "index":  6,
+                       "sourceInk128":  [
+                                            62,
+                                            157,
+                                            304,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      179,
+                                      230,
+                                      323,
+                                      416
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           142,
+                                           136
+                                       ],
+                       "rect":  [
+                                    1536,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          1152,
+                                          512,
+                                          384,
+                                          512
+                                      ],
+                       "index":  7,
+                       "sourceInk128":  [
+                                            67,
+                                            98,
+                                            288,
+                                            470
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     416
+                                 ],
+                       "sourceAnchor":  [
+                                            192.0,
+                                            470
+                                        ],
+                       "ink128":  [
+                                      182,
+                                      195,
+                                      313,
+                                      416
+                                  ]
+                   }
+               ],
+    "original":  "exec-7b0ce408-698a-4696-aac2-a6ffa7a26585.png",
+    "prompt":  "prompts/ground-shock.md",
+    "tool":  "image_gen.imagegen built-in",
+    "sourceSha256":  "e0b27a60e8a3622ad6e1226e3acf144a60c949c66efd5373a6ef8b20d144ae87",
+    "sha256":  "e6b659f23fcfaa38a047facd2332377144166fb0c8f66b10c46a22e1d471de26"
+}

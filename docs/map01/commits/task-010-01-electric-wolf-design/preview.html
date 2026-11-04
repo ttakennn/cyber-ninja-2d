@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ninja Sói Điện — duyệt tạo hình v1</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#091326;color:#dce6f3;font:15px/1.65 system-ui,sans-serif}main{max-width:1240px;margin:auto;padding:28px}h1{margin:4px 0;color:#affcff;font-size:clamp(26px,4vw,42px)}h2{color:#dad1ff;font-size:20px}.eyebrow{font-size:11px;letter-spacing:.16em;color:#bfa9f2}.intro{max-width:820px;color:#bac8e0}.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;margin:24px 0}.portrait{margin:0;border:1px solid #3d4162;border-radius:16px;background:radial-gradient(ellipse at 50% 45%,#303058,#111c34 65%);padding:20px}.portrait img{display:block;width:100%;height:560px;object-fit:contain;filter:drop-shadow(0 4px 8px #0008)}figcaption{color:#9eacc5;font-size:12px;text-align:center}.brief{padding:20px;border:1px solid #363957;border-radius:16px;background:#101b30}.brief p{margin:8px 0 18px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips span{border:1px solid #49536c;padding:3px 10px;border-radius:20px;font-size:12px}.chips span:last-child{border-color:#37c8de;color:#91f6ff}button{border:1px solid #5c5980;border-radius:6px;padding:8px 12px;background:#172740;color:#e6faff;font:inherit;cursor:pointer}button[aria-pressed=true]{border-color:#56e4f7;background:#24445b}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}canvas{display:block;width:100%;height:auto;border:1px solid #3d4162;border-radius:10px}.note{padding:12px 16px;border-left:3px solid #a88ae8;background:#161d34;color:#c2cce0}a{color:#85eef3}#status{font-size:13px;color:#92edf6}@media(max-width:700px){main{padding:16px}.hero{grid-template-columns:1fr}.portrait img{height:440px}.brief{padding:16px}}
+</style>
+<main>
+<div class="eyebrow">TASK10 · QUÁI THƯỜNG 01 · CANDIDATE V1</div>
+<h1>NINJA SÓI ĐIỆN</h1>
+<p class="note">Tạo hình v1 đã được chốt. <a href="../task-010-02-electric-wolf-animation/preview.html">Xem bộ animation di chuyển / nhảy / leo / combo mới</a>.</p>
+<p class="intro">Côn Đồ Gậy Điện · cận chiến. Chỉ duyệt ngoại hình ở bước này; chưa có animation đánh, skills hoặc quái trong game.</p>
+<div class="hero">
+<figure class="portrait"><img id="portrait" src="../../../../integration/task-010-electric-wolf/source/electric-wolf-ninja-v1.png" alt="Ninja Sói Điện, mặt người tinh nghịch, tai sói, tóc trắng xám, hoodie tím than và gậy cyan"><figcaption>Art gốc v1 · nền trong suốt · chưa chốt atlas</figcaption></figure>
+<section class="brief"><h2>Nhỏ gọn, láu cá, dễ nhận ra trong đêm</h2>
+<p>Mắt cyan, tai sói nhỏ và hai nanh lộ khi nhếch cười. Giữ mặt người, tay chân người và vóc dáng chiến đấu; không kinh dị.</p>
+<p>Hoodie tím than, đai vải, quấn tay/chân xám trắng. Gậy điện cyan có tia điện nhỏ, tách rõ khỏi trang phục tối.</p>
+<div class="chips"><span>Tím than / đen</span><span>Xám trắng</span><span>Cyan điện</span></div>
+<h2>Điểm cần bạn duyệt</h2><p>Khuôn mặt và tai sói, mức hơi chibi, trang phục, hình gậy và tỉ lệ so với Ninja chính.</p>
+<p class="note">Pose này kéo khăn thấp dưới môi để thấy hai nanh. Đây là lựa chọn trình bày để review, chưa chốt vị trí khăn cho mọi động tác sau này.</p>
+<p>Sau khi bạn chốt tạo hình mới làm combo 2 lần vung gậy, các pose và skills. Sát thương, lực đẩy, thời gian recovery và vị trí xuất hiện vẫn để sau.</p>
+</section></div>
+<h2>So tỉ lệ với Ninja chính</h2><p>Cùng đường chân. Quái được đề xuất thấp hơn khoảng 12%, tính cả tai. Đây là tỉ lệ review, chưa phải kích thước va chạm.</p>
+<div class="toolbar"><button data-bg="night" aria-pressed="true">Nền phố đêm</button><button data-bg="light" aria-pressed="false">Nền sáng</button><button data-bg="checker" aria-pressed="false">Nền caro</button></div>
+<canvas id="comparison" width="1100" height="430" aria-label="So tỉ lệ Ninja chính và Ninja Sói Điện, cùng đường chân"></canvas><p id="status">Đang tải artwork…</p>
+<p><a href="README.md">Báo cáo / giới hạn</a> · <a href="../../../../integration/task-010-electric-wolf/source/electric-wolf-ninja-v1.png">Mở PNG gốc</a></p>
+</main>
+<script src="../../../../integration/task-010-electric-wolf/review-data.js"></script>
+<script>
+const data=window.electricWolfReview,base='../../../../integration/task-010-electric-wolf/';
+const canvas=document.querySelector('#comparison'),ctx=canvas.getContext('2d'),status=document.querySelector('#status');
+let background='night',ready=false;const pictures={};
+function draw(){
+ if(background==='checker'){for(let y=0;y<430;y+=20)for(let x=0;x<1100;x+=20){ctx.fillStyle=((x+y)/20)%2?'#9ca9bb':'#d6dfeb';ctx.fillRect(x,y,20,20)}}
+ else {const gradient=ctx.createLinearGradient(0,0,0,430);gradient.addColorStop(0,background==='night'?'#071638':'#edf2fa');gradient.addColorStop(1,background==='night'?'#263450':'#cbd7e7');ctx.fillStyle=gradient;ctx.fillRect(0,0,1100,430)}
+ const light=background!=='night';ctx.strokeStyle=light?'#66758a':'#7385a6';ctx.beginPath();ctx.moveTo(50,350);ctx.lineTo(1050,350);ctx.stroke();
+ if(!ready)return;
+ ctx.drawImage(pictures.ninja,300-192,350-289,...data.referencePixelSize);
+ const s=data.review.uniformDrawScale,pivot=data.review.pivot;
+ ctx.drawImage(pictures.wolf,750-pivot[0]*s,350-pivot[1]*s,data.pixelSize[0]*s,data.pixelSize[1]*s);
+ ctx.textAlign='center';ctx.font='700 20px system-ui';ctx.fillStyle=light?'#243050':'#e6edff';ctx.fillText('Ninja chính · giữ nguyên',300,390);ctx.fillStyle=light?'#3e3571':'#9df7ff';ctx.fillText('Ninja Sói Điện · 88% chiều cao',750,390);
+}
+for(const button of document.querySelectorAll('[data-bg]'))button.onclick=()=>{background=button.dataset.bg;for(const other of document.querySelectorAll('[data-bg]'))other.setAttribute('aria-pressed',String(other===button));draw()};
+Promise.all(Object.entries({wolf:data.image,ninja:data.reference}).map(([name,path])=>new Promise((resolve,reject)=>{const image=pictures[name]=new Image();image.onload=resolve;image.onerror=()=>reject(new Error('Không tải được '+path));image.src=base+path}))).then(()=>{ready=true;draw();status.textContent='Tạo hình v1 đã được chốt · animation mới có preview riêng · chưa tích hợp game'}).catch(error=>{status.textContent=error.message+'. Giữ preview và integration trong cùng repo.'});
+draw();
+</script>
+</html>

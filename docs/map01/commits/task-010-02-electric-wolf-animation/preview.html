@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ninja Sói Điện — animation review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#091326;color:#e1eafa;font:15px/1.65 system-ui,sans-serif}main{max-width:1380px;margin:auto;padding:24px}h1{margin:5px 0;color:#b9faff;font-size:clamp(24px,4vw,38px)}h2{color:#d2c3ff;font-size:20px}.eyebrow{color:#b5a5e5;font-size:11px;letter-spacing:.14em}.intro{max-width:1100px;color:#bbc9e1}.toolbar,.clips{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0}button,select{border:1px solid #535b7e;border-radius:6px;background:#18263e;color:#e6faff;font:inherit;padding:7px 11px;cursor:pointer}button[aria-pressed=true]{border-color:#64eaff;background:#23404f}label{display:inline-flex;align-items:center;gap:7px}canvas{display:block;width:100%;height:auto;border:1px solid #3b4c68;border-radius:9px}#scrub{width:100%;accent-color:#52e4ed}#status{min-height:27px;color:#a6efff;font-variant-numeric:tabular-nums}.note{background:#172039;border-left:3px solid #9781d6;padding:10px 15px}.boards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.boards img{display:block;width:100%;height:auto;border:1px solid #344560;border-radius:8px}figure{margin:0}figcaption{margin:6px 0 18px;font-size:13px;color:#bdcce0}a{color:#8eeef1}@media(max-width:700px){main{padding:14px}.boards{grid-template-columns:1fr}button,select{font-size:13px}}
+</style>
+<main><div class="eyebrow">TASK10.2 · THIẾT KẾ ĐÃ CHỐT / ANIMATION CANDIDATE</div>
+<h1>NINJA SÓI ĐIỆN · XUẤT HIỆN TỪ KHÓI ĐIỆN</h1>
+<p class="intro">Giữ tạo hình v1 và mức thấp hơn Ninja khoảng12%. Chọn từng clip để xem chuyển động, dừng/tua từng frame hoặc đối chiếu bóng tạo hình. Đây là preview art; chưa có quái trong game.</p>
+<p class="note">Mới: khói lavender cuộn lên với tia cyan → bóng dáng hiện rõ → tai động/mắt sáng → nghiêng đầu cười → xoay nhẹ gậy và vào thế thủ. Skill2 đã được bạn chốt; các ảnh cũ giữ nguyên. <a href="../task-010-07-electric-wolf-entrance/README.md">Báo cáo màn xuất hiện</a>. Đây là art preview, chưa thêm quái hoặc luật xuất hiện vào game.</p>
+<div id="clips" class="clips" aria-label="Chọn động tác"></div>
+<div class="toolbar"><button id="play">Dừng</button><button id="restart">Xem lại</button><button id="next">Frame kế</button><label>Tốc độ <select id="speed"><option value="1">1×</option><option value="0.5">0,5×</option><option value="0.25">0,25×</option></select></label><label>Phóng <select id="zoom"><option value="1.5">1,5×</option><option value="1">1×</option><option value="0.75">0,75×</option></select></label><label>Nền <select id="bg"><option value="night">Đêm</option><option value="light">Sáng</option><option value="checker">Caro</option></select></label><label><input id="loop" type="checkbox" checked>Lặp preview</label></div>
+<div class="toolbar"><label><input id="ghost" type="checkbox">Bóng tạo hình đã chốt</label><label><input id="compare" type="checkbox" checked>Ninja chính</label><label><input id="ladder" type="checkbox" checked>Thang tham chiếu</label><label><input id="jumpMotion" type="checkbox" checked>Đường nhảy minh hoạ</label><label><input id="dashMotion" type="checkbox" checked>Minh hoạ lao tới</label></div>
+<div class="toolbar"><label><input id="groundWave" type="checkbox" checked>Luồng điện sát nền (Skill2)</label><label><input id="waveBlocker" type="checkbox" checked>Vật cản minh hoạ (Skill2)</label></div>
+<div class="toolbar"><label><input id="spawnBody" type="checkbox" checked>Nhân vật (xuất hiện)</label><label><input id="spawnSmoke" type="checkbox" checked>Khói điện (xuất hiện)</label><label><input id="spawnReveal" type="checkbox" checked>Hiện dần / bóng dáng</label></div>
+<input id="scrub" type="range" min="0" max="599" value="0" step="1" aria-label="Tua clip theo mili giây">
+<p id="status" role="status">Đang tải atlas…</p><canvas id="stage" width="1100" height="600" aria-label="Preview chuyển động Sói Điện và Ninja so tỉ lệ"></canvas>
+<p class="note">Thang được vẽ riêng và đứng yên, không nằm trong PNG. Khi leo, gậy cài ở đai để hai tay bám; leo lên và xuống dùng hai nhóm pose riêng, không lật cả hình. Nhịp, đường nhảy và thang ở đây chỉ để review, chưa phải physics/AI/tốc độ hay khoảng nghỉ combat đã chốt.</p>
+<p>Màn xuất hiện minh hoạ2,32giây; khói tan trước khi kết thúc tư thế sẵn sàng. Tắt “Nhân vật” để xem riêng khói; tắt “Khói điện” và “Hiện dần” để xem rõ tai, nụ cười và xoay gậy. Pose0 là guard chuẩn so cỡ. Các clip/skills đã duyệt vẫn ở các nút phía trên; nhịp này chưa là thời gian spawn hoặc bất tử trong game.</p>
+<h2>Bảng pose để xem kỹ</h2><div class="boards">
+<figure><a href="spawn-contact.png"><img src="spawn-contact.png" alt="Sói Điện hiện ra, động tai, nghiêng đầu cười và xoay gậy vào thế thủ"></a><figcaption>Nhân vật · guard0 · hiện1–2 · tai/mắt3 · cười4 · xoay/bắt gậy5–6 · sẵn sàng7.</figcaption></figure>
+<figure><a href="spawnSmoke-contact.png"><img src="spawnSmoke-contact.png" alt="Khói lavender cuộn nở, tia điện cyan nhỏ, khói tách ra rồi tan"></a><figcaption>VFX riêng · khói bật0 · nở1–2 · tách3–4 · wisps/tan5–7.</figcaption></figure>
+<figure><a href="groundShock-contact.png"><img src="groundShock-contact.png" alt="Tám pose Sói Điện giơ gậy, đập xuống đất và hồi thế"></a><figcaption>Skill2 · guard0 · giơ gậy1–2 · bổ/chạm đất3–4 · giữ lực/hồi thế5–7.</figcaption></figure>
+<figure><a href="groundWave-contact.png"><img src="groundWave-contact.png" alt="Tám frame điện bò sát đất, tan hết tầm và tóe khi chạm vật cản"></a><figcaption>FX riêng · sinh0 · lan1–4 · hết tầm5 · bị chặn6 · tan7.</figcaption></figure>
+<figure><a href="dash-contact.png"><img src="dash-contact.png" alt="Tám pose Điện Quang Đột Kích: guard, cảnh báo, gậy lóe, lao và thu thế"></a><figcaption>Điện Quang Đột Kích · guard0 · cảnh báo1–2 · lao3–5 · thu thế6–7.</figcaption></figure>
+<figure><a href="hurt-contact.png"><img src="hurt-contact.png" alt="Tám pose Sói Điện bị trúng đòn và trở về thế thủ"></a><figcaption>Trúng đòn:guard0 → giật1 → ngả2 → lùi3 → lấy thăng bằng4 → hồi thế5–7.</figcaption></figure>
+<figure><a href="locomotion-contact.png"><img src="locomotion-contact.png" alt="Hai pose đứng và sáu pose di chuyển"></a><figcaption>Đứng/thở:0–1 · di chuyển:2–7.</figcaption></figure>
+<figure><a href="jump-contact.png"><img src="jump-contact.png" alt="Tám pha lấy đà, nhảy, rơi, tiếp đất"></a><figcaption>Nhảy:0–7 · giữ vị trí chân gốc khi co chân trên không.</figcaption></figure>
+<figure><a href="climb-contact.png"><img src="climb-contact.png" alt="Leo lên bốn pose, leo xuống bốn pose với tay chân đối pha"></a><figcaption>Leo lên:0–3 · xuống:4–7 · gậy giữ cùng bên đai.</figcaption></figure>
+<figure><a href="combo-contact.png"><img src="combo-contact.png" alt="Electric Baton v2 với tay vươn xa và cung chém kéo dài"></a><figcaption>Electric Baton v2 · hai lần vung, cung chéo xa hơn ở đòn2, follow-through và thu thế.</figcaption></figure>
+</div><p><a href="README.md">Báo cáo / giới hạn</a> · <a href="../task-010-01-electric-wolf-design/preview.html">Tạo hình đã chốt</a> · <a href="../../../../integration/task-010-electric-wolf/animation/atlas.json">Metadata atlas</a></p></main>
+<script src="../../../../integration/task-010-electric-wolf/review-data.js"></script>
+<script src="../../../../integration/task-010-electric-wolf/animation/review-data.js"></script>
+<script>
+const data=window.wolfAnimationReview,design=window.electricWolfReview,base='../../../../integration/task-010-electric-wolf/animation/';
+const canvas=document.querySelector('#stage'),ctx=canvas.getContext('2d'),status=document.querySelector('#status'),scrub=document.querySelector('#scrub'),play=document.querySelector('#play');
+const controls={speed:document.querySelector('#speed'),zoom:document.querySelector('#zoom'),bg:document.querySelector('#bg'),loop:document.querySelector('#loop'),ghost:document.querySelector('#ghost'),compare:document.querySelector('#compare'),ladder:document.querySelector('#ladder'),jumpMotion:document.querySelector('#jumpMotion'),dashMotion:document.querySelector('#dashMotion'),groundWave:document.querySelector('#groundWave'),waveBlocker:document.querySelector('#waveBlocker'),spawnBody:document.querySelector('#spawnBody'),spawnSmoke:document.querySelector('#spawnSmoke'),spawnReveal:document.querySelector('#spawnReveal')};
+const images={},buttons={};let selected='spawn',time=0,last=0,playing=true,loaded=false,failed=false;
+function clip(){return data.clips[selected]}
+function duration(){return clip().frameMs.reduce((sum,ms)=>sum+ms,0)}
+function cuts(){const result=[0];for(const ms of clip().frameMs)result.push(result.at(-1)+ms);return result}
+function frameIndex(){const list=cuts();for(let i=0;i<list.length-1;i++)if(time<list[i+1])return i;return list.length-2}
+function choose(name){selected=name;time=0;playing=true;play.textContent='Dừng';scrub.max=duration()-1;for(const [id,button] of Object.entries(buttons))button.setAttribute('aria-pressed',String(id===name))}
+for(const [name,definition] of Object.entries(data.clips)){const button=document.createElement('button');button.textContent=definition.label;button.setAttribute('aria-pressed',String(name===selected));button.onclick=()=>choose(name);buttons[name]=button;document.querySelector('#clips').append(button)}
+choose(selected);
+function pause(){playing=false;play.textContent='Chạy'}
+play.onclick=()=>{playing=!playing;play.textContent=playing?'Dừng':'Chạy'};
+document.querySelector('#restart').onclick=()=>choose(selected);
+document.querySelector('#next').onclick=()=>{pause();const list=cuts();time=list[(frameIndex()+1)%clip().frames.length]};
+scrub.oninput=()=>{pause();time=+scrub.value};
+function drawBackground(){const bg=controls.bg.value;if(bg==='checker'){for(let y=0;y<600;y+=24)for(let x=0;x<1100;x+=24){ctx.fillStyle=((x+y)/24)%2?'#a1afc3':'#dce3ef';ctx.fillRect(x,y,24,24)}}else{const g=ctx.createLinearGradient(0,0,0,600);g.addColorStop(0,bg==='night'?'#071638':'#f0f4fa');g.addColorStop(1,bg==='night'?'#243653':'#c4d0df');ctx.fillStyle=g;ctx.fillRect(0,0,1100,600)}ctx.strokeStyle=bg==='night'?'#7386a8':'#63738a';ctx.beginPath();ctx.moveTo(40,480);ctx.lineTo(1060,480);ctx.stroke()}
+function drawLadder(x,z){ctx.save();ctx.strokeStyle=controls.bg.value==='night'?'#7893ab':'#59677d';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x-42*z,85);ctx.lineTo(x-42*z,535);ctx.moveTo(x+42*z,85);ctx.lineTo(x+42*z,535);ctx.stroke();ctx.lineWidth=4;for(let y=180;y<=535;y+=36*z){ctx.beginPath();ctx.moveTo(x-42*z,y);ctx.lineTo(x+42*z,y);ctx.stroke()}ctx.restore()}
+function drawSpawnSmoke(c,x,z){if(!controls.spawnSmoke.checked)return 'ẩn khói';const s=c.appearance.smoke;let local=time,index=0;
+ while(index<s.frames.length&&local>=s.frameMs[index]){local-=s.frameMs[index];index++}
+ if(index>=s.frames.length)return 'khói đã tan';
+ const next=Math.min(index+1,s.frames.length-1),mix=local/s.frameMs[index],birth=Math.min(1,time/70);
+ ctx.save();for(const [i,weight] of [[index,1-mix],[next,mix]]){const frame=data.assets[s.sheet].frames[s.frames[i]],p=frame.pivot;ctx.globalAlpha=birth*weight*s.opacity[i];ctx.drawImage(images[s.sheet],...frame.rect,x-p[0]*z,480-p[1]*z,frame.rect[2]*z,frame.rect[3]*z)}ctx.restore();return 'khói cuộn / tản dần';
+}
+function drawGroundWave(c,x,z){const f=c.effect,asset=data.assets[f.sheet],blocked=controls.waveBlocker.checked,origin=x+f.originX*z,wall=x+f.blockOffsetX*z;
+ if(blocked){ctx.save();ctx.fillStyle='#34445e';ctx.strokeStyle='#a7d0e7';ctx.lineWidth=2;ctx.fillRect(wall,480-80*z,40*z,80*z);ctx.strokeRect(wall,480-80*z,40*z,80*z);ctx.fillStyle=controls.bg.value==='night'?'#d6e7f5':'#283853';ctx.font='13px system-ui';ctx.textAlign='center';ctx.fillText('Vật cản minh hoạ',wall+20*z,480-80*z-12);ctx.restore()}
+ if(!controls.groundWave.checked)return 'ẩn luồng điện';
+ const elapsed=time-f.releaseMs;if(elapsed<0)return 'chưa phát điện';
+ const front=Math.max(...f.travelFrames.map(i=>asset.frames[i].ink128[2]-asset.frames[i].pivot[0]));
+ const distance=blocked?Math.min(f.rangePx,Math.max(0,(wall-origin)/z-front)):f.rangePx,travelMs=f.travelMs*distance/f.rangePx;
+ let frameId=f.birthFrame,center=origin,opacity=1,label='điểm đập phát điện';
+ if(elapsed>=f.birthMs){const moving=elapsed-f.birthMs;
+  if(moving<travelMs){frameId=f.travelFrames[Math.floor(moving/f.frameMs)%f.travelFrames.length];center+=moving/f.travelMs*f.rangePx*z;label='điện chạy sát nền'}
+  else{const fading=moving-travelMs;if(fading>=f.fadeMs)return 'điện đã tan';frameId=fading<f.fadeMs*.6?(blocked?f.blockedFrame:f.rangeEndFrame):f.dissolveFrame;center+=distance*z;opacity=1-fading/f.fadeMs;label=blocked?'vật cản chặn điện (minh hoạ)':'hết quãng / tan';if(blocked)center=wall-(asset.frames[frameId].ink128[2]-asset.frames[frameId].pivot[0])*z}
+ }
+ const frame=asset.frames[frameId],p=frame.pivot;ctx.save();ctx.globalAlpha=opacity;
+ if(blocked){ctx.beginPath();ctx.rect(0,0,wall,600);ctx.clip()}
+ ctx.drawImage(images[f.sheet],...frame.rect,center-p[0]*z,480-p[1]*z,frame.rect[2]*z,frame.rect[3]*z);ctx.restore();return label;
+}
+function draw(){drawBackground();if(!loaded||failed)return;const c=clip(),index=frameIndex(),z=+controls.zoom.value;let x=650;
+ if(selected==='groundShock')x=360;
+ if(selected==='dash'&&controls.dashMotion.checked){const list=cuts(),next=Math.min(index+1,c.frames.length-1),mix=Math.max(0,Math.min(1,(time-list[index])/c.frameMs[index]));x=450+((c.motionX[index]??0)*(1-mix)+(c.motionX[next]??0)*mix)*z}
+ let y=480;if(selected==='jump'&&controls.jumpMotion.checked){const list=cuts(),next=Math.min(index+1,c.frames.length-1),mix=Math.max(0,Math.min(1,(time-list[index])/c.frameMs[index]));y-=((c.motionY[index]??0)*(1-mix)+(c.motionY[next]??0)*mix)*z}
+ if(selected.startsWith('climb')&&controls.ladder.checked)drawLadder(x,z);
+ if(controls.compare.checked){ctx.save();ctx.globalAlpha=.7;ctx.drawImage(images.ninja,200-192*z,480-289*z,384*z,320*z);ctx.restore()}
+ if(controls.ghost.checked){const s=design.review.uniformDrawScale*z,p=design.review.pivot;ctx.save();ctx.globalAlpha=.18;ctx.drawImage(images.approved,x-p[0]*s,480-p[1]*s,design.pixelSize[0]*s,design.pixelSize[1]*s);ctx.restore()}
+ const frame=data.assets[c.sheet].frames[c.frames[index]],p=frame.pivot;
+ ctx.save();if(selected==='spawn'){const a=c.appearance;if(!controls.spawnBody.checked)ctx.globalAlpha=0;else if(controls.spawnReveal.checked){ctx.globalAlpha=Math.max(0,Math.min(1,(time-a.revealStartMs)/(a.revealEndMs-a.revealStartMs)));const light=Math.max(0,Math.min(1,(time-a.silhouetteEndMs)/(a.revealEndMs-a.silhouetteEndMs)));ctx.filter='brightness('+(0.35+0.65*light)+')'}}
+ ctx.drawImage(images[c.sheet],...frame.rect,x-p[0]*z,y-p[1]*z,frame.rect[2]*z,frame.rect[3]*z);
+ ctx.restore();const effectLabel=selected==='groundShock'?drawGroundWave(c,x,z):selected==='spawn'?drawSpawnSmoke(c,x,z):'';
+ ctx.fillStyle=controls.bg.value==='night'?'#cddcf4':'#283853';ctx.font='16px system-ui';ctx.textAlign='center';if(controls.compare.checked)ctx.fillText('Ninja chính · không thay đổi',200,555);ctx.fillText(c.label,650,555);
+ const strike=c.strikeFrames?.includes(c.frames[index]),recovery=c.recoveryFrames?.includes(c.frames[index]);
+ status.textContent=c.label+' · frame '+c.frames[index]+' ('+(index+1)+'/'+c.frames.length+') · '+Math.min(time,duration()).toFixed(0)+'/'+duration()+'ms'+(c.phaseLabels?' · '+c.phaseLabels[index]:'')+(effectLabel?' · '+effectLabel:'')+(strike?' · vung gậy (chỉ art)':recovery?' · hụt đòn / thu thế':'')+' · nhịp preview chưa phải gameplay';
+ scrub.value=String(Math.min(duration()-1,Math.floor(time)));
+}
+function render(now){const delta=last?Math.min(100,now-last):0;last=now;if(playing&&loaded){time+=delta*+controls.speed.value;const total=duration();if(time>=total){if(controls.loop.checked)time%=total+(clip().loop?0:450);else{time=total-.001;pause()}}}draw();requestAnimationFrame(render)}
+const paths=Object.fromEntries(Object.entries(data.assets).map(([name,asset])=>[name,asset.image]));paths.ninja='../source/ninja-idle-reference.png';paths.approved='../source/electric-wolf-ninja-v1.png';
+Promise.all(Object.entries(paths).map(([name,path])=>new Promise((resolve,reject)=>{const image=images[name]=new Image();image.onload=resolve;image.onerror=()=>reject(new Error('Không tải được '+path));image.src=base+path}))).then(()=>{loaded=true}).catch(error=>{failed=true;status.textContent=error.message+'. Giữ preview và integration trong repo.'});
+requestAnimationFrame(render);
+</script></html>

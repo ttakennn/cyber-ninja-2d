@@ -1,5 +1,19 @@
 # Trạng thái Map01
 
+2026-11-04/Task10-library: toàn bộ art Sói Điện, kể cả xuất hiện từ khói điện, đã được chốt. Xem lại tại [thư viện nhân vật](../characters/electric-wolf/animation/preview.html), không cần vào commits; nguồn và báo cáo cũ giữ làm lịch sử. Đã gom atlas/JSON/VFX/bảng pose/tham chiếu bằng copy nguyên file, không đổi map/src/public/ảnh/timing/gameplay. Chưa runtime/test/build/browser tại vị trí mới/commit/merge. Các mục chờ duyệt bên dưới là lịch sử.
+
+2026-11-04/Task10-entrance: Skill2 đã được người dùng chốt; [art xuất hiện từ khói điện](commits/task-010-07-electric-wolf-entrance/README.md) và [preview](commits/task-010-02-electric-wolf-animation/preview.html) mới chờ duyệt. Body/khói tách sheet, hiện dần rồi động tai/cười/xoay gậy vào guard; giữ art cũ/cỡ/pivot/map/src/public/gameplay. Chưa spawn/AI/runtime/test/build/browser/commit/merge. Các mục Skill2 chờ duyệt bên dưới giữ lịch sử.
+
+2026-11-04/Task10-skill2: người dùng chốt Điện Quang Đột Kích; [art Skill2 Điện Chấn Mặt Đất](commits/task-010-06-electric-wolf-ground-shock/README.md) và [preview](commits/task-010-02-electric-wolf-animation/preview.html) mới chờ duyệt. Body/FX tách lớp, điện sinh tại điểm đập và minh hoạ bị chặn; giữ art cũ/cỡ/pivot/map/src/public/gameplay. Chưa runtime/collision/damage/AI/test/build/browser/commit/merge. Các mục Skill1 chờ duyệt bên dưới là lịch sử.
+
+2026-11-04/Task10-skill1: hurt Sói Điện đã được người dùng chốt; [art Điện Quang Đột Kích](commits/task-010-05-electric-wolf-dash/README.md) và [preview](commits/task-010-02-electric-wolf-animation/preview.html) mới chờ duyệt. Cảnh báo hạ người/gậy lóe500ms, lao/thu thế minh hoạ; giữ art cũ/cỡ/pivot/map/src/public/gameplay. Chưa Skill2/runtime/AI/damage/knockback/test/build/browser/commit/merge. Các mục hurt chờ duyệt bên dưới giữ lịch sử.
+
+2026-11-04/Task10-hurt: người dùng đã duyệt Electric Baton v2 và giao art trúng đòn Sói Điện. Có [8pose candidate/báo cáo](commits/task-010-04-electric-wolf-hurt/README.md), [preview](commits/task-010-02-electric-wolf-animation/preview.html); giữ PNG đã duyệt, chưa đổi map/src/public/gameplay. Hurt chờ duyệt, test/build/browser NOT_RUN, chưa commit/merge. Các mục combo chờ duyệt bên dưới giữ lịch sử.
+
+2026-11-04/Task10.3: người dùng duyệt các động tác Sói Điện khác, yêu cầu sửa riêng Electric Baton. Đã có [combo-v2/preview](commits/task-010-02-electric-wolf-animation/preview.html) với tay và cung điện xa hơn; giữ byte art di chuyển/nhảy/leo. [Trước-sau/báo cáo](commits/task-010-03-electric-baton-v2/README.md). Combo mới chưa duyệt, chưa tích hợp/test/build/commit/merge.
+
+Task10.2: tạo hình Sói Điện v1 đã chốt; đã có [preview animation mới](commits/task-010-02-electric-wolf-animation/preview.html) với đứng/chạy/nhảy/leo hai chiều/combo2đòn. Giữ tỉ lệ88% Ninja;4atlas candidate, chờ review, chưa special skills/runtime/AI/damage hoặc đổi map/collision/src. Task10 ở codex/task-010-enemy-art, chưa commit/merge/test/build. Task09 đã được người dùng chốt/merge master067ce5e; các mục bên dưới giữ lịch sử.
+
 09.18: người dùng review UI/Cửu Long ổn và yêu cầu commit hiện trạng; thêm giảm tốc combo20% (speed0.8), giữ reset0.5s. [Bàn giao09.11–18](commits/task-009-18-combo-speed/IMPLEMENTATION.md); chưa merge/push hoặc chạy test/build/chơi thử phần giảm tốc. Các trạng thái chưa commit dưới đây là lịch sử từng lượt.
 
 Sửa preview Cửu Long09.11 mở trực tiếp file://: aura dùng dữ liệu ảnh đóng gói để tránh lỗi getImageData; [báo cáo](commits/task-009-16-preview-local-file/IMPLEMENTATION.md). Giữ lựa chọn độ dày, artwork và runtime; chưa kiểm tra trình duyệt/test/build lượt sửa này.
