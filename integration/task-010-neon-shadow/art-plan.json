@@ -1,0 +1,26 @@
+{
+  "status": "USER_APPROVED_CHARACTER_DESIGN",
+  "id": "neon-shadow",
+  "name": "Sát Thủ Bóng Neon",
+  "enemyRole": "Quái thường 02 — ranged, cơ động trên cao",
+  "baselineCommit": "4a693a4",
+  "branch": "codex/task-010-enemy-art",
+  "image": "source/neon-shadow-v1.png",
+  "original": "exec-af4276b2-a1fd-4593-a97d-0dac2513d9e7.png",
+  "tool": "image_gen.imagegen built-in",
+  "prompt": "prompts/design-v1.md",
+  "requestedSize": [
+    1024,
+    1024
+  ],
+  "requestedTransparency": true,
+  "reviewHeightRatio": 0.95,
+  "reviewDensityPxPerWorldUnit": 160,
+  "reviewDirectory": "docs/map01/commits/task-010-10-neon-shadow-animation",
+  "design": "Ninja người dễ thương, tinh nghịch; hoodie/khăn tím đen che nửa mặt, mắt đỏ nhẹ; hai đoản đao và phi tiêu neon tím hồng ở đai.",
+  "artworkApproved": true,
+  "runtimeIntegration": "NOT_IMPLEMENTED",
+  "atlasContract": "NOT_DEFINED_DESIGN_ONLY",
+  "combat": "NOT_DECIDED",
+  "notes": "Người dùng chốt ngoại hình v1 và chiều cao95% Ninja Hỏa; animation mới chờ review, chưa collider, kỹ năng, damage hoặc spawn."
+}

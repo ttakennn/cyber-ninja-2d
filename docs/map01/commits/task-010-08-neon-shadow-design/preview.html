@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sát Thủ Bóng Neon — duyệt ngoại hình</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#091326;color:#e5e9f6;font:15px/1.65 system-ui,sans-serif}main{max-width:1260px;margin:auto;padding:28px}h1{margin:5px 0;font-size:clamp(28px,4vw,44px);color:#f1b3ff}h2{font-size:20px;color:#e0caff}.eyebrow{font-size:12px;letter-spacing:.14em;color:#bca7d5}.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin:24px 0}figure,.brief{margin:0;border:1px solid #493751;border-radius:16px;background:#111b30;padding:22px}figure{background:radial-gradient(ellipse at center,#34264f,#10192d 70%)}figure img{display:block;width:100%;height:550px;object-fit:contain}figcaption{font-size:12px;text-align:center;color:#b7a6c8}.brief p{color:#c5cce0}.tags{display:flex;gap:8px;flex-wrap:wrap}.tags span{border:1px solid #694376;border-radius:18px;padding:3px 10px;font-size:12px}.note{background:#1c1c36;padding:12px 16px;border-left:3px solid #d174ec}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:12px 0}button,select{background:#19243b;border:1px solid #655176;color:#f0ddff;padding:8px 12px;border-radius:6px;font:inherit}button{cursor:pointer}button[aria-pressed=true]{border-color:#ed95ff;background:#392547}canvas{display:block;width:100%;height:auto;border:1px solid #4a3f60;border-radius:12px}a{color:#edabff}#status{color:#d7b2ea;font-size:13px}@media(max-width:720px){main{padding:16px}.hero{grid-template-columns:1fr}figure img{height:430px}}
+</style>
+<main>
+<div class="eyebrow">TASK10 · QUÁI THƯỜNG 02 · TẠO HÌNH CHỜ DUYỆT</div>
+<h1>SÁT THỦ BÓNG NEON</h1>
+<p>Đánh xa · cơ động trên cao · ninja đường phố dễ thương và tinh nghịch.</p>
+<div class="hero">
+<figure><img src="assets/neon-shadow-v1.png" alt="Sát Thủ Bóng Neon: hoodie tím đen, khăn che mặt, mắt đỏ, hai đoản đao và phi tiêu neon"><figcaption>PNG alpha thật · một pose thiết kế · candidate v1</figcaption></figure>
+<section class="brief"><h2>Láu cá, nhanh nhẹn, nhận diện rõ trong đêm</h2>
+<p>Mũ trùm và khăn che nửa mặt tím đen. Đôi mắt đỏ nhẹ, chân mày tinh nghịch; chất liệu vải có texture và nếp gấp, viền sáng tím giúp tách silhouette khỏi nền tối.</p>
+<p>Hai đoản đao kim loại ở hai tay, phi tiêu neon tím hồng gắn ở đai. Tư thế thấp, gọn, sẵn sàng di chuyển giữa các mái nhà.</p>
+<div class="tags"><span>Tím / đen</span><span>Mắt đỏ</span><span>Neon tím hồng</span><span>Sprite 2D</span></div>
+<h2>Cần duyệt</h2><p>Ngoại hình, mức dễ thương, trang phục, vũ khí và tỷ lệ so với hai nhân vật đã chốt. Tỷ lệ mặc định 88% chỉ là đề xuất trình bày; bạn có thể đổi mức trong bảng dưới để so sánh.</p>
+<p class="note">Bước này duyệt ngoại hình. Các pose chuyển động, đòn đánh, skills và thông số gameplay sẽ được làm ở bước tiếp theo theo yêu cầu của bạn.</p>
+</section></div>
+<h2>So kích thước trên cùng đường chân</h2>
+<div class="toolbar"><button data-bg="night" aria-pressed="true">Phố đêm</button><button data-bg="light" aria-pressed="false">Nền sáng</button><button data-bg="checker" aria-pressed="false">Alpha / caro</button><label>Tỷ lệ Bóng Neon <select id="ratio"><option value="0.88">88% — đề xuất</option><option value="0.92">92%</option><option value="1">100%</option></select></label></div>
+<canvas id="comparison" width="1200" height="430" aria-label="Ba nhân vật đứng trên cùng đường nền"></canvas><p id="status">Đang tải artwork…</p>
+<p><a href="comparison.png">Ảnh so tỷ lệ mặc định</a> · <a href="assets/neon-shadow-v1.png">PNG gốc</a> · <a href="README.md">Báo cáo</a></p>
+</main>
+<script src="review-data.js"></script>
+<script>
+const data=window.neonShadowReview,canvas=document.querySelector('#comparison'),ctx=canvas.getContext('2d'),status=document.querySelector('#status'),ratio=document.querySelector('#ratio');
+const pictures={};let background='night',ready=false;
+function draw(){
+ const light=background!=='night';
+ if(background==='checker'){for(let y=0;y<430;y+=20)for(let x=0;x<1200;x+=20){ctx.fillStyle=((x+y)/20)%2?'#9ca9bb':'#d6dfeb';ctx.fillRect(x,y,20,20)}}
+ else{const g=ctx.createLinearGradient(0,0,0,430);g.addColorStop(0,light?'#edf2fa':'#071638');g.addColorStop(1,light?'#cbd7e7':'#263450');ctx.fillStyle=g;ctx.fillRect(0,0,1200,430)}
+ ctx.strokeStyle=light?'#66758a':'#7385a6';ctx.beginPath();ctx.moveTo(50,350);ctx.lineTo(1150,350);ctx.stroke();if(!ready)return;
+ const ref=data.reference;ctx.drawImage(pictures.ninja,230-ref.pivot[0],350-ref.pivot[1],...ref.pixelSize);
+ function sprite(image,meta,x,scale){const p=meta.review.pivot;ctx.drawImage(image,x-p[0]*scale,350-p[1]*scale,meta.pixelSize[0]*scale,meta.pixelSize[1]*scale)}
+ sprite(pictures.wolf,data.wolf,600,data.wolf.review.uniformDrawScale);
+ sprite(pictures.neon,data,970,data.review.uniformDrawScale*Number(ratio.value)/data.review.heightRatio);
+ ctx.textAlign='center';ctx.font='700 18px system-ui';ctx.fillStyle=light?'#243050':'#e6edff';ctx.fillText('Ninja Hỏa · 100%',230,390);ctx.fillStyle=light?'#23576a':'#a3f6ff';ctx.fillText('Ninja Sói Điện · 88%',600,390);ctx.fillStyle=light?'#632775':'#f2b2ff';ctx.fillText('Bóng Neon · '+Math.round(Number(ratio.value)*100)+'% (đề xuất)',970,390);
+}
+for(const button of document.querySelectorAll('[data-bg]'))button.onclick=()=>{background=button.dataset.bg;for(const other of document.querySelectorAll('[data-bg]'))other.setAttribute('aria-pressed',String(other===button));draw()};ratio.onchange=draw;
+Promise.all(Object.entries({ninja:data.reference.image,wolf:data.wolf.image,neon:data.image}).map(([key,path])=>new Promise((resolve,reject)=>{const image=pictures[key]=new Image();image.onload=resolve;image.onerror=()=>reject(new Error('Không tải được '+path));image.src=path}))).then(()=>{ready=true;draw();status.textContent='Candidate chờ bạn duyệt · so tỷ lệ minh hoạ · chưa tích hợp game'}).catch(error=>{status.textContent=error.message});draw();
+</script>
+</html>

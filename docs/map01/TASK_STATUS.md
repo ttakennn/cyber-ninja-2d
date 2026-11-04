@@ -1,5 +1,23 @@
 # Trạng thái Map01
 
+2026-11-04/Task10-neon-production: người dùng chốt toàn bộ art Sát Thủ Bóng Neon, gồm Nguyệt Ảnh Hiện Thân. [Production11clip/14sheet](../characters/neon-shadow/animation/preview.html) lấy từ snapshot10.15; tài liệu/manifest ở docs/characters/neon-shadow/. Không đổi map/src/public/physics; chưa spawn/AI/damage/runtime/test/build/browser/merge/push. Mục chờ duyệt dưới đây giữ lịch sử.
+
+2026-11-04/Task10-neon-entrance: hurt Bóng Neon đã chốt/promote10clip; [Nguyệt Ảnh Hiện Thân](commits/task-010-15-neon-shadow-entrance/preview.html)8pose/8frame khói mới chờ duyệt,1200ms, giữ95%/vị trí spawn, nối Idle. Không đổi map/src/public/physics; chưa spawn/AI/input/runtime/test/build/browser/commit/merge.
+
+2026-11-04/Task10-neon-hurt: Skill2 Bóng Neon đã chốt/promote production9clip/11sheet; [hurt8pose](commits/task-010-14-neon-shadow-hurt/preview.html) mới chờ duyệt, giữ95%/2dao/ảnh cũ. Không đổi map/src/public/physics; chưa hitstun/knockback/runtime/AI/damage/test/build/browser/commit/merge.
+
+2026-11-04/Task10-aerial-multi-slash: Skill1 Bóng Neon đã chốt/promote production8clip; [Skill2 Thiên Ảnh Liên Trảm](commits/task-010-13-aerial-multi-slash/preview.html)16pose/2sheet FX mới chờ duyệt. Có đường nhảy minh hoạ/bóng mờ/chém35-55độ/va đất/luồng sát nền và nghỉ450ms. Không đổi map/src/public/physics; chưa runtime/AI/damage/test/build/browser/commit/merge.
+
+2026-11-04/Task10-moon-boomerang: Neon Shuriken đã chốt/promote production; [Skill1 Nguyệt Nhận Hồi Sát](commits/task-010-12-moon-boomerang/preview.html)12pose/8frame FX mới chờ duyệt, giữ95%/bộ cũ. Preview đi/dừng/về/bắt, chưa Double Hit/damage/collision/AI/runtime/test/build/browser/commit/merge; không đổi map/src/public.
+
+2026-11-04/Task10-neon-shuriken:6clip di chuyển Bóng Neon đã chốt và copy vào thư viện production; [đánh thường2phi tiêu](commits/task-010-11-neon-shuriken/preview.html) mới chờ duyệt,12pose/8frame FX riêng, hướng ngang/±8độ minh hoạ. Không đổi map/src/public/gameplay; chưa AI/damage/né/runtime/test/build/browser/commit/merge.
+
+2026-11-04/Task10-neon-animation: Bóng Neon ngoại hình/95% đã chốt, có [6clip di chuyển chờ duyệt](commits/task-010-10-neon-shadow-animation/preview.html). Không đổi map/src/public/gameplay; chưa skills/runtime/test/build/browser/commit/merge. Bản88%/95% cũ giữ lịch sử.
+
+2026-11-04/Task10-neon-height: [Bóng Neon95%](commits/task-010-09-neon-shadow-height/preview.html) theo yêu cầu mới, giữ PNG và snapshot88% trước. Chưa duyệt tạo hình/publish production/runtime/test/build/browser/commit/merge; không đổi map/gameplay.
+
+2026-11-04/Task10-neon-shadow: [tạo hình quái thường02](commits/task-010-08-neon-shadow-design/preview.html) chờ duyệt; tím đen, mắt đỏ, hai đoản đao/phi tiêu neon, tham chiếu chất liệu Ninja/Sói Điện. Preview so tỷ lệ88/92/100%; chưa chốt cỡ hoặc publish production. Không đổi map/gameplay/src/public; chưa animation/skills/spawn/AI/test/build/browser/commit/merge.
+
 2026-11-04/Ninja-production-library: animation Ninja chốt ở [production](../characters/ninja/animation/preview.html), lịch sử/snapshot lượt gom ở [commits](commits/task-010-ninja-production/README.md). Giữ bộ leo v2 hiện hành và hash atlas, canonical nguồn/script bỏ hậu tố; không đổi map/gameplay. Rules chung yêu cầu task có commits và chỉ đưa bộ đã chốt vào animation/. Chưa test/build/browser/commit/merge.
 
 2026-11-04/Task10-library: toàn bộ art Sói Điện, kể cả xuất hiện từ khói điện, đã được chốt. Xem lại tại [thư viện nhân vật](../characters/electric-wolf/animation/preview.html), không cần vào commits; nguồn và báo cáo cũ giữ làm lịch sử. Đã gom atlas/JSON/VFX/bảng pose/tham chiếu bằng copy nguyên file, không đổi map/src/public/ảnh/timing/gameplay. Chưa runtime/test/build/browser tại vị trí mới/commit/merge. Các mục chờ duyệt bên dưới là lịch sử.

@@ -10,7 +10,7 @@ Toàn bộ art quái01 đã được chốt, gồm màn xuất hiện. Điểm x
 | 10.2 | Artwork động tác/đánh thường/trúng đòn | Đứng/chạy/nhảy/leo hai chiều/Electric Baton v2/hurt đã được người dùng duyệt art. [Preview](characters/electric-wolf/animation/preview.html) |
 | 10.3 | Artwork skills quái01 | Skill1/Skill2 đã được người dùng duyệt art. [Skill2](map01/commits/task-010-06-electric-wolf-ground-shock/README.md); chưa gameplay |
 | Xuất hiện quái01 | Khói điện / hiện hình / cử chỉ vào trận | Đã chốt art8pose nhân vật/8frame khói, preview2320ms. [Preview](characters/electric-wolf/animation/preview.html); chưa trigger spawn |
-| 10.4 | Quái/boss khác và skills | Chưa có brief thiết kế tiếp; chưa vẽ/chốt vị trí xuất hiện |
+| 10.4 | Quái thường02 — Sát Thủ Bóng Neon | Ngoại hình95%/6clip di chuyển/Neon Shuriken/hai skills/hurt/[Nguyệt Ảnh Hiện Thân](characters/neon-shadow/animation/preview.html) đã chốt thành11clip/14sheet art production. Chưa runtime. Boss và vị trí xuất hiện còn mở |
 | Tích hợp game | AI, damage/hitbox, spawn, boss, cân bằng | Chưa thực hiện/không thuộc lượt tạo hình hiện tại |
 
 Brief bomber đen/jeans/mặt người ban đầu được người dùng thay bằng **Ninja Sói Điện** trước khi chốt ảnh. Không dùng bộ người cầm gậy cũ làm asset được duyệt. Ngoại hình mới cho phép hơi chibi riêng nhân vật này, vẫn giữ ngôn ngữ sprite2D/texture/shading của dự án. Không sửa Ninja chính hoặc rules toàn game thành chibi.

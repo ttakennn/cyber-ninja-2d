@@ -1,0 +1,36 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-15-neon-shadow-entrance",
+  "destination": "docs/characters/neon-shadow/animation",
+  "approvedClips": [
+    "idle",
+    "walk",
+    "run",
+    "jump",
+    "climbUp",
+    "climbDown",
+    "neonShuriken",
+    "moonBoomerang",
+    "aerialMultiSlash",
+    "hurt",
+    "spawn"
+  ],
+  "approvedSheets": [
+    "locomotion",
+    "run",
+    "jump",
+    "climb",
+    "shurikenThrow",
+    "neonShuriken",
+    "moonCast",
+    "moonBlade",
+    "aerialCombo",
+    "aerialArc",
+    "aerialGround",
+    "hurt",
+    "spawn",
+    "spawnSmoke"
+  ],
+  "approval": "Người dùng chốt toàn bộ Sát Thủ Bóng Neon, gồm Nguyệt Ảnh Hiện Thân từ snapshot10.15;11clip/14sheet đã duyệt.",
+  "runtimeIntegration": "NOT_IMPLEMENTED"
+}

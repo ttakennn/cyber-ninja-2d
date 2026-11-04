@@ -7,6 +7,7 @@
   [Preview Thiên Hỏa Giáng Lâm](ninja/animation/heavenly-fire-entrance/preview.html) mới chờ duyệt, chưa áp dụng vào game.
   [Preview hồi sinh Thiên Hỏa Tái Lâm](ninja/animation/heavenly-fire-respawn/preview.html):0,75s, candidate art, chưa tích hợp hồi sinh.
 - [Ninja Sói Điện — xem hoạt ảnh](electric-wolf/animation/preview.html): quái thường01, toàn bộ tạo hình/hoạt ảnh/hai skills/xuất hiện đã chốt art; [hồ sơ và rules](electric-wolf/README.md), chưa runtime.
+- [Sát Thủ Bóng Neon](neon-shadow/README.md): quái thường02, ranged/cơ động trên cao; [production11clip/ngoại hình95% và màn xuất hiện đã chốt](neon-shadow/animation/preview.html), chưa runtime.
 - [Báo cáo artwork leo v2](ninja/reports/NINJA-CLIMB-V2.md).
 
 Nhân vật mới không mặc nhiên sao canvas, tỉ lệ, màu trang phục hoặc danh tính ninja. Định nghĩa contract theo brief và engine, giữ cùng Illustrated textured pixel art. Map palette không tự recolor nhân vật đã có; biến thể phải có yêu cầu/phạm vi riêng.

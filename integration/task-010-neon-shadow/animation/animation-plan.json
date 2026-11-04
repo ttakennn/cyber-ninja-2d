@@ -1,0 +1,436 @@
+{
+  "status": "ELEVEN_CLIPS_APPROVED_PRODUCTION_ART",
+  "approvedClips": ["idle","walk","run","jump","climbUp","climbDown","neonShuriken","moonBoomerang","aerialMultiSlash","hurt","spawn"],
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_95_PERCENT",
+  "reviewDirectory": "docs/map01/commits/task-010-15-neon-shadow-entrance",
+  "targetInkHeightPx": 238.45,
+  "frameSize": [
+    512,
+    512
+  ],
+  "pivot": [
+    256,
+    416
+  ],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_FROM_STANDING_FRAME_0_NEVER_FIT_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "spawn": {
+      "source": "source/spawn.png",
+      "original": "exec-85497ed4-7d92-4f48-9695-872e12794e52.png",
+      "prompt": "prompts/spawn.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "groundedFrames": [0,1,2,3,4,5,6,7]
+    },
+    "spawnSmoke": {
+      "source": "source/spawnSmoke.png",
+      "contactPanelWidth": 400,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440,
+      "original": "exec-be6d7ed4-e70f-4d03-8475-a8d5ea69111e.png",
+      "prompt": "prompts/spawnSmoke.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "targetCellWidthPx": 340,
+      "sourceAnchorRatio": [0.5,0.89453125],
+      "groundedFrames": []
+    },
+    "hurt": {
+      "source": "source/hurt.png",
+      "original": "exec-4579bba8-6604-4dc5-bf7e-340b3f0337a5.png",
+      "prompt": "prompts/hurt.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "groundedFrames": [0,1,2,3,4,5,6,7]
+    },
+    "aerialCombo": {
+      "source": "source/aerialCombo.png",
+      "original": "exec-9d75e1af-3c99-4792-b6fc-c9f387115d30.png",
+      "sourceRects": [[0,0,313,313],[313,0,314,313],[627,0,313,313],[940,0,314,313],[0,313,313,314],[313,313,314,314],[627,313,313,314],[940,313,314,314],[0,627,313,313],[313,627,314,313],[627,627,313,313],[940,627,314,313],[0,940,313,314],[313,940,314,314],[627,940,313,314],[940,940,314,314]],
+      "prompt": "prompts/aerialCombo.md",
+      "columns": 4,
+      "rows": 4,
+      "count": 16,
+      "groundedFrames": [0,1,12,13,14,15]
+    },
+    "aerialArc": {
+      "source": "source/aerialArc.png",
+      "original": "exec-f4931882-4b8c-4234-91bf-0684699c08a9.png",
+      "prompt": "prompts/aerialArc.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "targetCellWidthPx": 240,
+      "sourceAnchorRatio": [0.5,0.5],
+      "pivot": [256,256],
+      "groundedFrames": []
+    },
+    "aerialGround": {
+      "source": "source/aerialGround.png",
+      "original": "exec-c98babb2-d2fb-409d-8333-6e5cc14b7432.png",
+      "sourceAnchors": [[192,458],[192,458],[192,458],[192,458],[192,426],[192,426],[192,426],[192,426]],
+      "prompt": "prompts/aerialGround.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "targetCellWidthPx": 240,
+      "sourceAnchorRatio": [0.5,0.85],
+      "pivot": [256,416],
+      "groundedFrames": []
+    },
+    "locomotion": {
+      "source": "source/locomotion.png",
+      "original": "exec-3362c4cd-d9c2-4afa-ba02-db7311a2f7ff.png",
+      "prompt": "prompts/locomotion.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "groundedFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "run": {
+      "source": "source/run.png",
+      "original": "exec-b7810c3d-cc85-49d7-84d7-a13b1b73637f.png",
+      "prompt": "prompts/run.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "groundedFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "jump": {
+      "source": "source/jump.png",
+      "original": "exec-20afd8a1-f9c5-4ba6-a7e3-56e5323e2f44.png",
+      "prompt": "prompts/jump.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "groundedFrames": [
+        0,
+        1,
+        6,
+        7
+      ]
+    },
+    "moonCast": {
+      "source": "source/moonCast.png",
+      "original": "exec-318d4075-ee0d-4f84-854f-b2b41a3fc21e.png",
+      "sourceRects": [[0,0,313,418],[313,0,314,418],[627,0,313,418],[940,0,314,418],[0,418,313,418],[313,418,314,418],[627,418,313,418],[940,418,314,418],[0,836,313,418],[313,836,314,418],[627,836,313,418],[940,836,314,418]],
+      "prompt": "prompts/moonCast.md",
+      "columns": 4,
+      "rows": 3,
+      "count": 12,
+      "groundedFrames": [0,1,2,3,4,5,6,7,8,9,10,11]
+    },
+    "moonBlade": {
+      "source": "source/moonBlade.png",
+      "original": "exec-fe54984a-2a01-439b-a2ce-22640167b4e2.png",
+      "prompt": "prompts/moonBlade.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "targetCellWidthPx": 220,
+      "sourceAnchorRatio": [0.5,0.5],
+      "pivot": [256,256],
+      "groundedFrames": []
+    },
+    "shurikenThrow": {
+      "source": "source/shurikenThrow.png",
+      "original": "exec-21a4f77b-fd2d-41f7-bb0c-81be371c4b0d.png",
+      "sourceRects": [[0,0,313,418],[313,0,314,418],[627,0,313,418],[940,0,314,418],[0,418,313,418],[313,418,314,418],[627,418,313,418],[940,418,314,418],[0,836,313,418],[313,836,314,418],[627,836,313,418],[940,836,314,418]],
+      "prompt": "prompts/shurikenThrow.md",
+      "columns": 4,
+      "rows": 3,
+      "count": 12,
+      "groundedFrames": [0,1,2,3,4,5,6,7,8,9,10,11]
+    },
+    "neonShuriken": {
+      "source": "source/neonShuriken.png",
+      "original": "exec-0d3354d1-9540-4a74-97c3-1f40201d6992.png",
+      "prompt": "prompts/neonShuriken.md",
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "targetCellWidthPx": 160,
+      "sourceAnchorRatio": [0.5,0.5],
+      "pivot": [256,256],
+      "groundedFrames": []
+    },
+    "climb": {
+      "source": "source/climb.png",
+      "original": "exec-4c3d371b-cec9-46e7-bc7a-ec7551a8e300.png",
+      "prompt": "prompts/climb-limbs.md",
+      "iterations": ["source/climb-first.png"],
+      "columns": 3,
+      "rows": 3,
+      "count": 9,
+      "groundedFrames": [
+        0
+      ]
+    }
+  },
+  "clips": {
+    "spawn": {
+      "label": "NGUYỆT ẢNH HIỆN THÂN",
+      "sheet": "spawn",
+      "frames": [1,1,2,3,4,5,6,7],
+      "frameMs": [100,120,160,180,140,140,160,200],
+      "loop": false,
+      "phaseLabels": ["Khói xuất hiện / chưa lộ","Bóng dáng bất động","Mắt đỏ lóe","Hiện rõ / đao sáng","Xoay nhẹ một đao","Bắt đao","Hạ trọng tâm / sẵn sàng","Nối Idle / Combat Ready"],
+      "previewTailMs": 400,
+      "appearance": {
+        "revealStartMs": 100,
+        "silhouetteEndMs": 300,
+        "revealEndMs": 580,
+        "idleBlendStartMs": 1100,
+        "entranceEndMs": 1200,
+        "smoke": {
+          "sheet": "spawnSmoke",
+          "frames": [0,1,2,3,4,5,6,7],
+          "frameMs": [80,100,140,160,180,180,170,190],
+          "opacity": [1,1,1,0.95,0.8,0.55,0.25,0]
+        },
+        "status": "ART_PREVIEW_ONLY_NO_SPAWN_OR_INPUT_GAMEPLAY"
+      }
+    },
+    "hurt": {
+      "label": "Trúng đòn / hồi thế",
+      "sheet": "hurt",
+      "frames": [0,1,2,3,4,5,6,7],
+      "frameMs": [100,60,90,110,110,100,110,180],
+      "loop": false,
+      "phaseLabels": ["Guard","Giật vai / nheo mắt","Ngả lùi / chịu lực","Lùi nửa bước","Lấy thăng bằng","Dựng thân","Về thế thủ","Guard"]
+    },
+    "aerialMultiSlash": {
+      "label": "THIÊN ẢNH LIÊN TRẢM",
+      "sheet": "aerialCombo",
+      "frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+      "frameMs": [100,220,100,140,90,120,100,90,140,110,110,100,100,450,160,250],
+      "motionY": [0,0,30,120,150,150,150,140,130,110,85,40,0,0,0,0],
+      "motionX": [0,0,0,8,14,18,22,30,40,55,70,90,100,100,100,100],
+      "loop": false,
+      "phaseLabels": ["Guard","Hạ người / đao sáng","Bật lên","Lấy đà trên không","Chém chéo 1","Theo đà 1","Đổi tay lấy đà","Chém chéo 2","Hai vệt giao nhau","Xoay người","Chuẩn bị bổ dọc","Bổ dọc / lao xuống","Chạm đất / vỡ sáng","Khoảng nghỉ phản công","Hồi thế","Guard"],
+      "effect": {
+        "arcSheet": "aerialArc",
+        "groundSheet": "aerialGround",
+        "releaseMs": [560,870],
+        "releaseFrameIndices": [4,7],
+        "anglesDeg": [35,55],
+        "origins": [[70,-145],[70,-145]],
+        "arcFrames": [0,1,2,3,4],
+        "arcFrameMs": 65,
+        "arcTravelMs": 1400,
+        "arcSpeedPxPerSecond": 460,
+        "arcScale": 0.8,
+        "crossFrame": 5,
+        "crossMs": 960,
+        "crossDurationMs": 140,
+        "impactMs": 1420,
+        "impactFrames": [0,1,2],
+        "impactFrameMs": 60,
+        "groundFrames": [3,4,5],
+        "groundFrameMs": 65,
+        "groundTravelMs": 500,
+        "groundRangePx": 150,
+        "groundFadeMs": 160,
+        "groundScale": 0.75,
+        "afterimageOffsetsMs": [55,110],
+        "afterimageOpacity": [0.18,0.08],
+        "status": "ART_PREVIEW_ONLY_NO_DAMAGE_OR_PHYSICS"
+      }
+    },
+    "moonBoomerang": {
+      "label": "NGUYỆT NHẬN HỒI SÁT",
+      "sheet": "moonCast",
+      "frames": [0,1,2,3,4,5,6,7,8,9,10,11],
+      "frameMs": [100,160,260,140,100,400,900,400,140,180,120,350],
+      "loop": false,
+      "phaseLabels": ["Guard","Rút nguyệt nhận","Tụ hồng quang","Lấy đà","Phóng","Theo đà / lượt đi","Quan sát đường quay lại","Đưa tay đón","Bắt nguyệt nhận","Cài vũ khí","Rút đoản đao","Guard"],
+      "effect": {
+        "sheet": "moonBlade",
+        "releaseMs": 660,
+        "outboundMs": 800,
+        "turnHoldMs": 180,
+        "returnMs": 820,
+        "rangePx": 400,
+        "origin": [82,-165],
+        "catchOrigin": [54,-165],
+        "spinFrames": [1],
+        "frameMs": 60,
+        "turnFrame": 5,
+        "returnFrame": 6,
+        "catchFrame": 7,
+        "catchMs": 140,
+        "scale": 0.55,
+        "status": "ART_PREVIEW_ONLY_NO_DAMAGE_OR_HITBOX"
+      }
+    },
+    "neonShuriken": {
+      "label": "Neon Shuriken · hai phi tiêu",
+      "sheet": "shurikenThrow",
+      "frames": [0,1,2,3,4,5,6,7,8,9,10,11],
+      "frameMs": [100,90,90,100,80,90,90,80,110,130,100,180],
+      "loop": false,
+      "phaseLabels": ["Guard","Cài dao","Rút phi tiêu 1","Lấy đà 1","Phóng 1","Rút phi tiêu 2","Lấy đà 2","Phóng 2","Theo đà","Thu thế","Rút dao","Guard"],
+      "effect": {
+        "sheet": "neonShuriken",
+        "releaseMs": [380,640],
+        "origins": [[82,-165],[82,-165]],
+        "spinFrames": [1,2,3,4],
+        "frameMs": 65,
+        "speedPxPerSecond": 330,
+        "previewTailMs": 1750,
+        "scale": 0.55,
+        "status": "ART_PREVIEW_ONLY_NOT_HITBOX_OR_GAMEPLAY"
+      }
+    },
+    "idle": {
+      "label": "Đứng / thở",
+      "sheet": "locomotion",
+      "frames": [
+        0,
+        1
+      ],
+      "frameMs": [
+        300,
+        300
+      ],
+      "loop": true
+    },
+    "walk": {
+      "label": "Đi bộ",
+      "sheet": "locomotion",
+      "frames": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameMs": [
+        130,
+        130,
+        130,
+        130,
+        130,
+        130
+      ],
+      "loop": true
+    },
+    "run": {
+      "label": "Chạy",
+      "sheet": "run",
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "frameMs": [
+        85,
+        80,
+        85,
+        85,
+        80,
+        85
+      ],
+      "loop": true
+    },
+    "jump": {
+      "label": "Nhảy / rơi / tiếp đất",
+      "sheet": "jump",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameMs": [
+        100,
+        140,
+        100,
+        130,
+        150,
+        150,
+        140,
+        160
+      ],
+      "motionY": [
+        0,
+        0,
+        25,
+        75,
+        90,
+        50,
+        0,
+        0
+      ],
+      "loop": false
+    },
+    "climbUp": {
+      "label": "Leo lên",
+      "sheet": "climb",
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "frameMs": [
+        150,
+        150,
+        150,
+        150
+      ],
+      "loop": true
+    },
+    "climbDown": {
+      "label": "Leo xuống",
+      "sheet": "climb",
+      "frames": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "frameMs": [
+        150,
+        150,
+        150,
+        150
+      ],
+      "loop": true
+    }
+  },
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_AI_NO_DAMAGE_NO_COLLIDER_NO_SPAWN"
+}

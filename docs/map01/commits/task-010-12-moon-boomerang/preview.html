@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sát Thủ Bóng Neon — review hoạt ảnh</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#091326;color:#e4eafa;font:15px/1.65 system-ui,sans-serif}main{max-width:1340px;margin:auto;padding:24px}h1{margin:5px 0;color:#ecb8ff;font-size:clamp(24px,4vw,38px)}h2{color:#d7c4ff;font-size:20px}.eyebrow{font-size:11px;letter-spacing:.15em;color:#baa3db}.toolbar,#clips{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:14px 0}button,select{padding:7px 11px;background:#1b253e;border:1px solid #625078;border-radius:6px;color:#eee0ff;font:inherit;cursor:pointer}button[aria-pressed=true]{border-color:#eb99ff;background:#3a2550}label{display:inline-flex;align-items:center;gap:7px}canvas{display:block;width:100%;height:auto;border:1px solid #4a3e60;border-radius:10px}#scrub{width:100%;accent-color:#da86f2}#status{color:#ddaff2;font-variant-numeric:tabular-nums;min-height:26px}.note{background:#1a2037;border-left:3px solid #b67ed7;padding:10px 15px}.boards{display:grid;grid-template-columns:1fr 1fr;gap:18px}figure{margin:0}.boards img{width:100%;height:auto;border:1px solid #413f5c;border-radius:8px}figcaption{font-size:13px;color:#bdc8df}a{color:#e3a5fa}@media(max-width:700px){main{padding:14px}.boards{grid-template-columns:1fr}button,select{font-size:13px}}
+</style>
+<main><div class="eyebrow">TASK10 · QUÁI THƯỜNG 02 · ANIMATION CANDIDATE</div>
+<h1>NGUYỆT NHẬN HỒI SÁT · BOOMERANG NEON</h1>
+<p>Rút nguyệt nhận, tụ hồng quang, phóng ra rồi đón bắt khi quay về. Lưỡi trăng xoay với lõi trắng và mảnh năng lượng tím hồng; dừng ngắn ở cuối tầm trước khi đảo chiều.</p>
+<p class="note">Chọn từng động tác, dừng hoặc tua từng frame để xem tay/chân và độ ổn định của cơ thể. Nhịp, đường nhảy ở đây phục vụ review art; chưa tích hợp quái vào game.</p>
+<div id="clips" aria-label="Chọn hoạt ảnh"></div>
+<div class="toolbar"><button id="play">Dừng</button><button id="restart">Xem lại</button><button id="next">Frame kế</button><label>Tốc độ <select id="speed"><option value="1">1×</option><option value="0.5">0,5×</option><option value="0.25">0,25×</option></select></label><label>Phóng <select id="zoom"><option value="1.5">1,5×</option><option value="1">1×</option><option value="0.75">0,75×</option></select></label><label>Nền <select id="bg"><option value="night">Đêm</option><option value="light">Sáng</option><option value="checker">Caro</option></select></label><label><input id="loop" type="checkbox" checked>Lặp</label></div>
+<div class="toolbar"><label><input id="compare" type="checkbox" checked>So với Ninja Hỏa</label><label><input id="ghost" type="checkbox">Bóng ngoại hình đã chốt</label><label><input id="ladder" type="checkbox" checked>Thang tham chiếu</label><label><input id="jumpMotion" type="checkbox" checked>Đường nhảy minh hoạ</label></div>
+<div class="toolbar"><label>Hướng bắn <select id="angle"><option value="0">Bay ngang</option><option value="-8">Hơi chếch lên (8°)</option><option value="8">Hơi chếch xuống (8°)</option></select></label><label><input id="projectiles" type="checkbox" checked>Hiện phi tiêu bay</label></div>
+<div class="toolbar"><label><input id="path" type="checkbox" checked>Đường đi / về tham chiếu</label><span>Lượt đi → dừng cuối tầm → lượt về → bắt lại</span></div>
+<input id="scrub" type="range" min="0" max="779" value="0" step="1" aria-label="Tua thời gian hoạt ảnh">
+<p id="status" role="status">Đang tải artwork…</p><canvas id="stage" width="1100" height="600" aria-label="Sát Thủ Bóng Neon chuyển động cạnh Ninja Hỏa"></canvas>
+<p class="note">Thang vẽ riêng, đứng yên. Leo nhìn lưng, dao cài ở đai; hai tay để trống và hai bên tay/chân đổi pha. Giữ frame khi dừng. Mỗi sheet dùng một scale từ pose đứng0, không fit từng frame nên chân co/duỗi thay đổi chiều cao tự nhiên.</p>
+<h2>Bảng pose</h2><div class="boards">
+<figure><a href="moonCast-contact.png"><img src="moonCast-contact.png" alt="Mười hai pose rút nguyệt nhận, tích tụ, phóng, chờ, bắt lại và thu thế"></a><figcaption>Skill1 ·0 guard ·1–3 rút/tụ/lấy đà ·4 phóng ·5–7 theo dõi/đón ·8 bắt ·9–11 thu thế.</figcaption></figure>
+<figure><a href="moonBlade-contact.png"><img src="moonBlade-contact.png" alt="Nguyệt nhận hình trăng khuyết, vòng xoáy hồng neon, tia trắng và mảnh tím"></a><figcaption>VFX riêng ·0 charge ·1–4 spin ·5 dừng/đảo chiều ·6 lượt về ·7 tia bắt.</figcaption></figure>
+<figure><a href="shurikenThrow-contact.png"><img src="shurikenThrow-contact.png" alt="Mười hai pose cài dao, lấy đà, phóng hai phi tiêu và thu thế"></a><figcaption>Pose0–11 · phóng lần1 ở4 / lần2 ở7 · cuối về guard.</figcaption></figure>
+<figure><a href="neonShuriken-contact.png"><img src="neonShuriken-contact.png" alt="Phi tiêu neon phát sáng, quay, va chạm và tản thành hạt"></a><figcaption>VFX riêng ·0 lóe ·1–4 quay/bay ·5–7 va chạm/tan dự trữ cho bước sau.</figcaption></figure>
+<figure><a href="locomotion-contact.png"><img src="locomotion-contact.png" alt="Hai pose thở và sáu pose đi bộ"></a><figcaption>Đứng0–1 · đi bộ2–7.</figcaption></figure>
+<figure><a href="run-contact.png"><img src="run-contact.png" alt="Pose chuẩn và sáu pha chạy"></a><figcaption>Guard0 để so cỡ · chạy1–6 · hãm/guard7.</figcaption></figure>
+<figure><a href="jump-contact.png"><img src="jump-contact.png" alt="Chuẩn bị nhảy, bật lên, co chân, rơi và tiếp đất"></a><figcaption>Nhảy0–7 · giữ anchor gốc khi trên không.</figcaption></figure>
+<figure><a href="climb-contact.png"><img src="climb-contact.png" alt="Pose lưng tham chiếu, bốn pose leo lên và bốn pose leo xuống"></a><figcaption>Đứng lưng0 để so cỡ · lên1–4 · xuống5–8.</figcaption></figure>
+</div><p><a href="README.md">Báo cáo / nguồn / giới hạn</a> · <a href="assets/neon-shadow-v1.png">Ngoại hình đã chốt</a> · <a href="atlas.json">Metadata</a></p></main>
+<script src="review-data.js"></script>
+<script>
+const data=window.neonAnimationReview,canvas=document.querySelector('#stage'),ctx=canvas.getContext('2d'),status=document.querySelector('#status'),scrub=document.querySelector('#scrub'),play=document.querySelector('#play');
+const controls={};for(const id of ['speed','zoom','bg','loop','compare','ghost','ladder','jumpMotion','angle','projectiles','path'])controls[id]=document.getElementById(id);
+const images={},buttons={};let selected='moonBoomerang',time=0,last=0,playing=true,ready=false;
+function clip(){return data.clips[selected]}
+function duration(){return clip().frameMs.reduce((a,b)=>a+b,0)+(clip().effect?.previewTailMs??0)}
+function cuts(){const a=[0];for(const ms of clip().frameMs)a.push(a[a.length-1]+ms);return a}
+function index(){const a=cuts();for(let i=0;i<a.length-1;i++)if(time<a[i+1])return i;return a.length-2}
+function choose(name){selected=name;time=0;playing=true;play.textContent='Dừng';scrub.max=duration()-1;for(const[key,button]of Object.entries(buttons))button.setAttribute('aria-pressed',String(key===name))}
+for(const[name,c]of Object.entries(data.clips)){const b=document.createElement('button');b.textContent=c.label;b.onclick=()=>choose(name);buttons[name]=b;document.querySelector('#clips').append(b)}choose(selected);
+function pause(){playing=false;play.textContent='Phát'}
+play.onclick=()=>{playing=!playing;play.textContent=playing?'Dừng':'Phát'};document.querySelector('#restart').onclick=()=>choose(selected);document.querySelector('#next').onclick=()=>{pause();time=cuts()[(index()+1)%clip().frames.length]};scrub.oninput=()=>{pause();time=Number(scrub.value)};
+function background(){const light=controls.bg.value!=='night';if(controls.bg.value==='checker'){for(let y=0;y<600;y+=24)for(let x=0;x<1100;x+=24){ctx.fillStyle=((x+y)/24)%2?'#9eaac0':'#d7e0ee';ctx.fillRect(x,y,24,24)}}else{const g=ctx.createLinearGradient(0,0,0,600);g.addColorStop(0,light?'#f0f4fa':'#071638');g.addColorStop(1,light?'#c5d1e0':'#263451');ctx.fillStyle=g;ctx.fillRect(0,0,1100,600)}ctx.strokeStyle=light?'#63738a':'#7386a8';ctx.beginPath();ctx.moveTo(40,480);ctx.lineTo(1060,480);ctx.stroke()}
+function ladder(x,z){ctx.save();ctx.strokeStyle=controls.bg.value==='night'?'#8296b3':'#55637a';ctx.lineWidth=5;ctx.beginPath();for(const dx of [-45,45]){ctx.moveTo(x+dx*z,45);ctx.lineTo(x+dx*z,535)}ctx.stroke();ctx.lineWidth=3;for(let y=85;y<535;y+=36*z){ctx.beginPath();ctx.moveTo(x-45*z,y);ctx.lineTo(x+45*z,y);ctx.stroke()}ctx.restore()}
+function drawProjectiles(c,x,z){if(!controls.projectiles.checked)return;const e=c.effect,theta=Number(controls.angle.value)*Math.PI/180,asset=data.assets[e.sheet];
+ for(let n=0;n<e.releaseMs.length;n++){const elapsed=time-e.releaseMs[n];if(elapsed<0)continue;const distance=elapsed/1000*e.speedPxPerSecond,origin=e.origins[n];
+  const px=x+(origin[0]+distance*Math.cos(theta))*z,py=480+(origin[1]+distance*Math.sin(theta))*z;
+  const f=asset.frames[e.spinFrames[Math.floor(elapsed/e.frameMs)%e.spinFrames.length]],s=e.scale*z;
+  ctx.save();ctx.translate(px,py);ctx.rotate(theta);ctx.drawImage(images[e.sheet],...f.rect,-f.pivot[0]*s,-f.pivot[1]*s,f.rect[2]*s,f.rect[3]*s);ctx.restore();
+ }
+}
+function moonState(e){const elapsed=time-e.releaseMs,turn=e.outboundMs+e.turnHoldMs,end=turn+e.returnMs,smooth=u=>u*u*(3-2*u);
+ if(elapsed<0)return {phase:'Tụ năng lượng / lấy đà',distance:0,frame:null};
+ if(elapsed<e.outboundMs)return {phase:'LƯỢT ĐI',distance:e.rangePx*smooth(elapsed/e.outboundMs),frame:e.spinFrames[Math.floor(elapsed/e.frameMs)%e.spinFrames.length]};
+ if(elapsed<turn)return {phase:'DỪNG / ĐẢO CHIỀU',distance:e.rangePx,frame:e.turnFrame};
+ if(elapsed<end)return {phase:'LƯỢT VỀ',distance:e.rangePx*(1-smooth((elapsed-turn)/e.returnMs)),frame:e.returnFrame};
+ return {phase:'BẮT LẠI / THU THẾ',distance:0,frame:elapsed<end+e.catchMs?e.catchFrame:null};
+}
+function drawMoon(c,x,z){const e=c.effect,state=moonState(e),angle=Number(controls.angle.value)*Math.PI/180,originX=x+e.origin[0]*z,originY=480+e.origin[1]*z;
+ if(controls.path.checked){ctx.save();ctx.strokeStyle='#e592f488';ctx.lineWidth=1.5;ctx.setLineDash([7,7]);ctx.beginPath();ctx.moveTo(originX,originY);ctx.lineTo(originX+e.rangePx*Math.cos(angle)*z,originY+e.rangePx*Math.sin(angle)*z);ctx.stroke();ctx.restore()}
+ if(!controls.projectiles.checked||state.frame===null)return state.phase;
+ const catchMix=state.phase==='LƯỢT VỀ'?1-state.distance/e.rangePx:state.phase==='BẮT LẠI / THU THẾ'?1:0;
+ const px=originX+(state.distance*Math.cos(angle)+(e.catchOrigin[0]-e.origin[0])*catchMix)*z,py=originY+(state.distance*Math.sin(angle)+(e.catchOrigin[1]-e.origin[1])*catchMix)*z,f=data.assets[e.sheet].frames[state.frame],s=e.scale*z;
+ ctx.save();ctx.translate(px,py);ctx.rotate(state.frame===e.catchFrame?0:(time-e.releaseMs)/1000*Math.PI*4);ctx.drawImage(images[e.sheet],...f.rect,-f.pivot[0]*s,-f.pivot[1]*s,f.rect[2]*s,f.rect[3]*s);ctx.restore();return state.phase;
+}
+function draw(){background();if(!ready)return;const c=clip(),i=index(),z=Number(controls.zoom.value),moon=selected==='moonBoomerang',attack=selected==='neonShuriken',x=moon?260:attack?320:700,ninjaX=moon?820:attack?900:220;let y=480;
+ if(selected==='jump'&&controls.jumpMotion.checked){const a=cuts(),next=Math.min(i+1,c.frames.length-1),mix=Math.max(0,Math.min(1,(time-a[i])/c.frameMs[i]));y-=((c.motionY[i]??0)*(1-mix)+(c.motionY[next]??0)*mix)*z}
+ if(selected.startsWith('climb')&&controls.ladder.checked)ladder(x,z);
+ if(controls.compare.checked)ctx.drawImage(images.ninja,ninjaX-192*z,480-289*z,384*z,320*z);
+ if(controls.ghost.checked){const d=data.design,s=d.review.uniformDrawScale*z,p=d.review.pivot;ctx.save();ctx.globalAlpha=.18;ctx.drawImage(images.approved,x-p[0]*s,480-p[1]*s,d.pixelSize[0]*s,d.pixelSize[1]*s);ctx.restore()}
+ const sheet=attack&&time>=cuts().at(-1)?'locomotion':c.sheet,f=data.assets[sheet].frames[sheet===c.sheet?c.frames[i]:0],p=f.pivot;ctx.drawImage(images[sheet],...f.rect,x-p[0]*z,y-p[1]*z,f.rect[2]*z,f.rect[3]*z);
+ if(attack)drawProjectiles(c,x,z);
+ const phase=moon?drawMoon(c,x,z):'';
+ ctx.fillStyle=controls.bg.value==='night'?'#e6d8f7':'#26324c';ctx.font='16px system-ui';ctx.textAlign='center';if(controls.compare.checked)ctx.fillText('Ninja Hỏa · tham chiếu100%',ninjaX,555);ctx.fillText(c.label+' · chuẩn đứng95%',x,555);
+ status.textContent=c.label+' · frame '+c.frames[i]+' ('+(i+1)+'/'+c.frames.length+') · '+Math.min(time,duration()).toFixed(0)+'/'+duration()+'ms'+(phase?' · '+phase:'')+(c.phaseLabels?' · '+(time>=cuts().at(-1)?'Guard / phi tiêu bay':c.phaseLabels[i]):'')+' · nhịp review art';scrub.value=Math.min(duration()-1,Math.floor(time));
+}
+function render(now){const delta=last?Math.min(100,now-last):0;last=now;if(ready&&playing){time+=delta*Number(controls.speed.value);if(time>=duration()){if(controls.loop.checked)time%=duration();else{time=duration()-.001;pause()}}}draw();requestAnimationFrame(render)}
+const paths={ninja:'assets/ninja-idle.png',approved:'assets/neon-shadow-v1.png'};for(const[name,a]of Object.entries(data.assets))paths[name]=a.image;
+Promise.all(Object.entries(paths).map(([name,path])=>new Promise((resolve,reject)=>{const image=images[name]=new Image();image.onload=resolve;image.onerror=()=>reject(new Error('Không tải được '+path));image.src=path}))).then(()=>{ready=true}).catch(error=>{status.textContent=error.message});requestAnimationFrame(render);
+</script></html>

@@ -1,5 +1,21 @@
 # Quyết định đã chốt
 
+2026-11-04/Task10-neon-final-art: người dùng chốt Sát Thủ Bóng Neon sau preview Nguyệt Ảnh Hiện Thân và yêu cầu cập nhật tài liệu production/commit. Publish đúng snapshot10.15 thành11clip/14sheet trong docs/characters/neon-shadow/animation/, giữ chiều cao95% và nguyên byte PNG. Màn xuất hiện1200ms + preview Idle400ms là art; chưa duyệt trigger spawn, AI, damage hay nghiệm thu runtime. [Production](characters/neon-shadow/animation/production.json), [lịch sử](map01/commits/task-010-15-neon-shadow-entrance/README.md).
+
+2026-11-04/Task10-hurt-approved-entrance: người dùng chốt hurt và giao Nguyệt Ảnh Hiện Thân1.0–1.3s, khói tím đậm-hồng neon, mắt đỏ, hiện dần/xoay một đao/hạ guard, tại chỗ và điềm tĩnh/chuyên nghiệp. Đã promote10clip/12sheet cũ; thêm2sheet candidate. Chọn1200ms/reveal/blendIdle là authoring art, chưa trigger/input/runtime. Giữ một đôi mắt/danh tính95% đã chốt. [Báo cáo](map01/commits/task-010-15-neon-shadow-entrance/README.md).
+
+2026-11-04/Task10-aerial-approved-hurt: người dùng chốt Thiên Ảnh Liên Trảm và giao art khi Bóng Neon bị trúng chiêu. Đã promote đúng9clip/11sheet cũ, thêm hurt8pose candidate giữ95%/2dao/danh tính/frame/pivot. Nhịp860ms là trình bày art chưa duyệt hitstun/knockback/damage/gameplay. [Báo cáo](map01/commits/task-010-14-neon-shadow-hurt/README.md).
+
+2026-11-04/Task10-moon-approved-aerial-skill: người dùng chốt hoạt ảnh Nguyệt Nhận Hồi Sát và giao Skill2 Thiên Ảnh Liên Trảm: bật cao/đao đỏ hồng, hai nhát chéo xuống hai góc, xoay bổ dọc/va đất/luồng nhỏ, nhịp nghỉ phản công. Đã promote8clip/8sheet cũ; thêm3sheet candidate mới. Tổng2380ms/nhảy150px/tiến100px/góc35-55/nghỉ450ms là đề xuất trình bày art chưa chốt gameplay hoặc AI/damage/physics. [Báo cáo](map01/commits/task-010-13-aerial-multi-slash/README.md).
+
+2026-11-04/Task10-shuriken-approved-moon-skill: người dùng chốt Neon Shuriken và giao Skill1 Nguyệt Nhận Hồi Sát: tụ hồng neon, nguyệt nhận xoay ra/dừng cuối tầm/quay lại tay, Double Hit cả hai lượt. Đã publish đúng7clip/6sheet đã duyệt, thêm2sheet candidate Skill1. Tầm400px/tổng3250ms và timing đi800/dừng180/về820 chỉ trình bày art, chưa damage/cooldown/hitbox/AI được duyệt. [Báo cáo](map01/commits/task-010-12-moon-boomerang/README.md).
+
+2026-11-04/Task10-neon-motion-approved: người dùng “oke chốt”6clip di chuyển, giao Neon Shuriken phóng2phi tiêu liên tiếp, bay ngang/hơi chéo theo vị trí người chơi, có thể né. Đã copy4sheet đã duyệt vào production đúng byte; thêm2sheet candidate cho body/FX. Nhịp380/640ms, tốc độ330px/s, góc±8độ chỉ để review, chưa là AI/damage/né gameplay được duyệt. [Báo cáo](map01/commits/task-010-11-neon-shuriken/README.md).
+
+2026-11-04/Task10-neon-design-approved: người dùng “oke chốt ngoại hình và chiều cao này”, chốt design v1/95% Ninja Hỏa và giao đi/chạy/nhảy/leo để review. Giữ thiết kế/cỡ; thêm4sheet/33pose/6clip candidate. Các thông số frame512/pivot256,416/160px-unit và timing là đề xuất authoring chưa được duyệt runtime; không suy thành duyệt skills/combat. [Báo cáo](map01/commits/task-010-10-neon-shadow-animation/README.md).
+
+2026-11-04/Task10-neon-height: người dùng yêu cầu chiều cao Sát Thủ Bóng Neon88%→95% so Ninja Hỏa. Cập nhật plan/tỷ lệ review, giữ PNG/aspect/căn chân; không suy thành duyệt toàn bộ tạo hình hoặc collider/gameplay. [Snapshot95%](map01/commits/task-010-09-neon-shadow-height/README.md).
+
 Chỉ ghi quyết định có căn cứ từ người dùng; đề xuất chưa duyệt nằm trong trạng thái/mục còn mở, không tự nâng thành quy tắc. Các mục dưới tóm tắt lịch sử chat và source đã tích hợp, không phải log nghiệm thu runtime.
 
 | Mốc | Quyết định | Căn cứ/ảnh hưởng |
