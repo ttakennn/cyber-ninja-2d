@@ -1,0 +1,186 @@
+{
+  "image": "sheets/moon-cross.png",
+  "source": "source/moon-cross.png",
+  "pixelSize": [
+    1024,
+    1024
+  ],
+  "sourcePixelSize": [
+    1261,
+    1247
+  ],
+  "frameSize": [
+    512,
+    512
+  ],
+  "uniformScale": 0.7857142857142857,
+  "referenceInk128": [
+    30,
+    30,
+    581,
+    575
+  ],
+  "frames": [
+    {
+      "translation": [
+        8,
+        11
+      ],
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        0,
+        630,
+        623
+      ],
+      "index": 0,
+      "sourceInk128": [
+        30,
+        30,
+        581,
+        575
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        315,
+        312
+      ],
+      "ink128": [
+        32,
+        35,
+        463,
+        462
+      ]
+    },
+    {
+      "translation": [
+        8,
+        11
+      ],
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        630,
+        0,
+        631,
+        623
+      ],
+      "index": 1,
+      "sourceInk128": [
+        35,
+        37,
+        594,
+        565
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        315,
+        312
+      ],
+      "ink128": [
+        36,
+        40,
+        475,
+        455
+      ]
+    },
+    {
+      "translation": [
+        8,
+        11
+      ],
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        623,
+        630,
+        624
+      ],
+      "index": 2,
+      "sourceInk128": [
+        52,
+        50,
+        573,
+        556
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        315,
+        312
+      ],
+      "ink128": [
+        50,
+        51,
+        458,
+        446
+      ]
+    },
+    {
+      "translation": [
+        8,
+        11
+      ],
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        630,
+        623,
+        631,
+        624
+      ],
+      "index": 3,
+      "sourceInk128": [
+        35,
+        35,
+        595,
+        566
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        315,
+        312
+      ],
+      "ink128": [
+        36,
+        39,
+        475,
+        454
+      ]
+    }
+  ],
+  "original": "exec-82035d77-5b5d-4ef6-bd98-a2c630e90ead.png",
+  "prompt": "prompts/moon-cross.md",
+  "tool": "image_gen.imagegen built-in",
+  "sourceSha256": "e773fbdfec5083da76a9eb749d35772d0902d2bbe216505ed6e73c9b08cab51a",
+  "sha256": "e52c7014c96c3ae9868673ed4793342413d127b82a7125c2db0f5b3bf93c43a5"
+}

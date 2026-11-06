@@ -47,3 +47,4 @@
 - Rà diff: mọi dòng phải phục vụ task; bỏ cleanup không cần thiết. Dừng khi hoàn tất phạm vi được giao.
 - Báo file/asset thay đổi, ảnh hưởng, điều đã kiểm tra và NOT_RUN; ghi vấn đề còn mở. Không hứa đã chơi thử hoặc đã đạt production nếu thiếu bằng chứng.
 - Cập nhật TASK_STATUS của phạm vi liên quan (toàn dự án/map/nhân vật) khi trạng thái/baseline hoặc giới hạn thay đổi. Chỉ thêm DECISION_LOG khi có quyết định được người dùng chốt; không tự biến đề xuất thành phê duyệt. Không sửa lịch sử để tạo cảm giác task đã được duyệt.
+- Chỉ commit khi người dùng yêu cầu. Với commit art/animation, viết subject tiếng Anh nêu rõ phạm vi và body gồm các thay đổi chính theo từng dòng, tình trạng asset/provenance và giới hạn runtime; dùng tên/email Git hiện hành, không tự đặt lại tác giả hoặc ngày. Gom một phần việc nhất quán vào một commit, không gộp thay đổi ngoài phạm vi.

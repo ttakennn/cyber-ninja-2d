@@ -1,0 +1,8 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-22-boss-khan-dash-combo",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedSheets": ["dash"],
+  "approval": "Người dùng chốt art lướt nhanh nối combo trước khi yêu cầu vẽ Ảnh Bộ Đoạn Sát.",
+  "runtimeIntegration": "NOT_IMPLEMENTED"
+}

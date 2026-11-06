@@ -1,0 +1,8 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-21-boss-khan-combo-x-forward",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedSheets": ["combo-a", "combo-b"],
+  "approval": "Người dùng chốt Song Đao Liên Trảm với cú X hai tay vươn xa ở Task10.21.",
+  "runtimeIntegration": "NOT_IMPLEMENTED"
+}

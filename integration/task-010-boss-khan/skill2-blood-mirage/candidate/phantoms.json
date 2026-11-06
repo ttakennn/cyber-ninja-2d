@@ -1,0 +1,186 @@
+{
+    "image":  "candidate/phantoms.png",
+    "source":  "source/phantoms.png",
+    "pixelSize":  [
+                      1024,
+                      1024
+                  ],
+    "sourcePixelSize":  [
+                            1312,
+                            1199
+                        ],
+    "frameSize":  [
+                      512,
+                      512
+                  ],
+    "uniformScale":  0.77134146341463417,
+    "referenceInk128":  [
+                            61,
+                            180,
+                            640,
+                            485
+                        ],
+    "frames":  [
+                   {
+                       "translation":  [
+                                           3,
+                                           74
+                                       ],
+                       "rect":  [
+                                    0,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          0,
+                                          656,
+                                          599
+                                      ],
+                       "index":  0,
+                       "sourceInk128":  [
+                                            61,
+                                            180,
+                                            640,
+                                            485
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            328,
+                                            495
+                                        ],
+                       "ink128":  [
+                                      50,
+                                      213,
+                                      496,
+                                      448
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           3,
+                                           74
+                                       ],
+                       "rect":  [
+                                    512,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          656,
+                                          0,
+                                          656,
+                                          599
+                                      ],
+                       "index":  1,
+                       "sourceInk128":  [
+                                            77,
+                                            146,
+                                            605,
+                                            483
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            328,
+                                            495
+                                        ],
+                       "ink128":  [
+                                      63,
+                                      187,
+                                      469,
+                                      446
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           3,
+                                           32
+                                       ],
+                       "rect":  [
+                                    0,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          599,
+                                          656,
+                                          600
+                                      ],
+                       "index":  2,
+                       "sourceInk128":  [
+                                            99,
+                                            83,
+                                            632,
+                                            456
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            328,
+                                            550
+                                        ],
+                       "ink128":  [
+                                      79,
+                                      96,
+                                      490,
+                                      384
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           3,
+                                           32
+                                       ],
+                       "rect":  [
+                                    512,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          656,
+                                          599,
+                                          656,
+                                          600
+                                      ],
+                       "index":  3,
+                       "sourceInk128":  [
+                                            30,
+                                            45,
+                                            559,
+                                            539
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            328,
+                                            550
+                                        ],
+                       "ink128":  [
+                                      26,
+                                      67,
+                                      434,
+                                      448
+                                  ]
+                   }
+               ],
+    "original":  "exec-526df44b-cda7-4e8e-8680-7af083c6300b.png",
+    "prompt":  "prompts/blood-mirage.md",
+    "tool":  "image_gen.imagegen built-in",
+    "sourceSha256":  "e39aee49daa3ce845277d83d195741e9fd2427d74e43b5a480b0f096c1234e52",
+    "sha256":  "255bb2973d92acf61668944968f6a852219d7365d80088500c609b12532bf8d9"
+}

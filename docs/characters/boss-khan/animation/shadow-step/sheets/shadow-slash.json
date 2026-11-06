@@ -1,0 +1,69 @@
+{
+  "image": "sheets/shadow-slash.png",
+  "source": "source/shadow-step-slash.png",
+  "pixelSize": [
+    512,
+    512
+  ],
+  "sourcePixelSize": [
+    1254,
+    1254
+  ],
+  "frameSize": [
+    512,
+    512
+  ],
+  "uniformScale": 0.4082934609250399,
+  "referenceInk128": [
+    47,
+    318,
+    1198,
+    1043
+  ],
+  "frames": [
+    {
+      "translation": [
+        17,
+        30
+      ],
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "index": 0,
+      "sourceInk128": [
+        47,
+        318,
+        1198,
+        1043
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        585,
+        1043
+      ],
+      "ink128": [
+        37,
+        161,
+        506,
+        456
+      ]
+    }
+  ],
+  "original": "exec-5b3ee1f7-669f-46c6-8c4a-0032c48d6743.png",
+  "prompt": "prompts/shadow-step.md",
+  "tool": "image_gen.imagegen built-in",
+  "sourceSha256": "3aa9d5db6d4f84f1fe81de0ee9c145f675074f662439855ee9312e16e6411857",
+  "sha256": "31e27745f4caebc6e644981de7ae45eb0034984f504844824ab1091f9b972448"
+}

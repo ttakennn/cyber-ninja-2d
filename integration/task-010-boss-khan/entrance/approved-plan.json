@@ -1,0 +1,8 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-18-boss-khan-entrance",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedSheets": ["descent", "draw", "moon", "impact", "cross"],
+  "approval": "Người dùng chốt hoạt ảnh Huyết Nguyệt Giáng Lâm của Huyết Đao Khan.",
+  "runtimeIntegration": "NOT_IMPLEMENTED"
+}

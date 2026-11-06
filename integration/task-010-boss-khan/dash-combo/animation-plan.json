@@ -1,0 +1,43 @@
+{
+  "status": "ART_CANDIDATE_PENDING_USER_REVIEW",
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_150_PERCENT",
+  "approvedCombo": "docs/map01/commits/task-010-21-boss-khan-combo-x-forward",
+  "reviewDirectory": "docs/map01/commits/task-010-22-boss-khan-dash-combo",
+  "targetInkHeightPx": 376.5,
+  "frameSize": [512, 512],
+  "pivot": [256, 456],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_NO_FIT_OF_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "dash": {
+      "source": "source/dash.png",
+      "original": "exec-51b52dbb-3617-4ecc-9ee3-6cab8b47b8f6.png",
+      "iterations": ["source/dash-first.png", "source/dash-light-1.png"],
+      "prompt": "prompts/dash.md",
+      "sourceRects": [[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[887,443,443,444],[1330,443,444,444]],
+      "selectedSourceFrames": [0,1,2,3,6,7],
+      "sourceAnchors": [[221.5,435],[222,435],[221.5,421],[222,419],[221.5,427],[222,432]],
+      "columns": 4,
+      "rows": 2,
+      "count": 6,
+      "referenceFrameIndex": 0,
+      "groundedFrames": [0,1,2,3,4,5],
+      "contactPanelWidth": 440,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440
+    }
+  },
+  "timelineMs": {"dashDuration": 560, "approvedComboDuration": 1350, "previewTotal": 1910},
+  "bodySequence": [
+    {"sheet":"dash","frame":0,"start":0,"end":80},
+    {"sheet":"dash","frame":1,"start":80,"end":160},
+    {"sheet":"dash","frame":2,"start":160,"end":235},
+    {"sheet":"dash","frame":3,"start":235,"end":335},
+    {"sheet":"dash","frame":4,"start":335,"end":430},
+    {"sheet":"dash","frame":5,"start":430,"end":560}
+  ],
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_AI_NO_TARGET_TRACKING_NO_HITBOX_NO_DAMAGE"
+}

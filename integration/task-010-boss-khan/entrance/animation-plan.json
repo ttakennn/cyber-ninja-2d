@@ -1,0 +1,49 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_150_PERCENT",
+  "approvedMotion": "USER_APPROVED_TASK_010_17",
+  "reviewDirectory": "docs/map01/commits/task-010-18-boss-khan-entrance",
+  "targetInkHeightPx": 376.5,
+  "frameSize": [512,512],
+  "pivot": [256,456],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_NO_FIT_OF_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "descent": {"source":"source/descent.png","original":"exec-94d5a9bd-5bc1-42ff-b2d0-b2d04c1968be.png","iterations":["source/descent-first.png"],"alphaEditPrompt":"prompts/descent-alpha-edit.md","prompt":"prompts/descent.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"groundedFrames":[0,1,2,3,4,5,6,7],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":440},
+    "draw": {"source":"source/draw.png","original":"exec-f715c762-41a0-4f45-9760-47c70efd8c81.png","prompt":"prompts/draw.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"referenceFrameIndex":7,"groundedFrames":[0,1,2,3,4,5,6,7],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":440},
+    "moon": {"source":"source/moon.png","original":"exec-258e8692-adee-46a5-a972-b5c3216f0358.png","prompt":"prompts/moon.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"targetCellWidthPx": 400, "sourceAnchorRatio": [0.5,0.5], "pivot": [256,256],"groundedFrames":[],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":280},
+    "cross": {"source":"source/cross.png","original":"exec-9c3366b5-0c80-495d-9083-8b0d598e24ab.png","prompt":"prompts/cross.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"targetCellWidthPx": 380, "sourceAnchorRatio": [0.5,0.5], "pivot": [256,256],"groundedFrames":[],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":280},
+    "impact": {"source":"source/impact.png","original":"exec-498cfee0-f7fe-464c-9b5b-486046e3fb7a.png","prompt":"prompts/impact.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"targetCellWidthPx": 410, "sourceAnchorRatio": [0.5,0.90], "pivot": [256,456],"groundedFrames":[],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":440}
+  },
+  "timelineMs": {
+    "duration": 3000,
+    "bloodMoon": [0,1450],
+    "body": [600,3000],
+    "descentStreak": [1000,1250],
+    "landingRipple": [1200,1850],
+    "ceremonialX": [2050,2750],
+    "neonFlicker": [0,650]
+  },
+  "bodySequence": [
+    {"sheet":"descent","frame":0,"start":600,"end":780,"lift":300},
+    {"sheet":"descent","frame":1,"start":780,"end":880,"lift":300},
+    {"sheet":"descent","frame":2,"start":880,"end":960,"lift":300},
+    {"sheet":"descent","frame":3,"start":960,"end":1040,"lift":260},
+    {"sheet":"descent","frame":4,"start":1040,"end":1120,"lift":150},
+    {"sheet":"descent","frame":5,"start":1120,"end":1260,"lift":0},
+    {"sheet":"descent","frame":6,"start":1260,"end":1450,"lift":0},
+    {"sheet":"descent","frame":7,"start":1450,"end":1600,"lift":0},
+    {"sheet":"draw","frame":0,"start":1600,"end":1700,"lift":0},
+    {"sheet":"draw","frame":1,"start":1700,"end":1830,"lift":0},
+    {"sheet":"draw","frame":2,"start":1830,"end":1950,"lift":0},
+    {"sheet":"draw","frame":3,"start":1950,"end":2080,"lift":0},
+    {"sheet":"draw","frame":4,"start":2080,"end":2200,"lift":0},
+    {"sheet":"draw","frame":5,"start":2200,"end":2350,"lift":0},
+    {"sheet":"draw","frame":6,"start":2350,"end":2550,"lift":0},
+    {"sheet":"draw","frame":7,"start":2550,"end":3000,"lift":0}
+  ],
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_AI_NO_DAMAGE_NO_HITBOX_NO_SPAWN"
+}

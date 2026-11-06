@@ -17,6 +17,11 @@ Quyết định người dùng2026-11-04, áp dụng mọi nhân vật. Kế th�
 5. Khi thay bản cũ bằng v2 đã chọn, production chỉ còn một bản canonical không hậu tố phiên bản nếu người dùng yêu cầu. Bản cũ nằm trong Git/commits/source lịch sử, không trộn vào preview production. Không xoá nhầm atlas debug hoặc asset khác chỉ vì tên cũ.
 6. Cập nhật manifest approval, nguồn/hash/frame/pivot/timing, trạng thái tích hợp, chỉ mục nhân vật và TASK_STATUS/DECISION_LOG. Bản chốt art không chứng nhận physics, input, shader, damage, AI hoặc build/runtime đã nghiệm thu.
 
+## Preview tổng hợp cho nhân vật có nhiều nhóm hoạt ảnh
+
+- Ưu tiên một `animation/preview.html` làm điểm xem chung, có nút chọn động tác cơ bản, màn xuất hiện, đánh thường, di chuyển đặc biệt và từng skill đã chốt. Giữ bộ điều khiển phát/tạm dừng/tua và bảng frame để người dùng review chi tiết.
+- Khi nâng cấp một preview cơ bản đã duyệt thành trang tổng hợp, giữ nguyên bản cơ bản tại `animation/basic-preview.html`; trang tổng hợp mở lại các preview riêng của từng nhóm. Không vẽ lại hoặc đổi nhịp/atlas đã chốt chỉ để gộp giao diện. Mẫu đã được người dùng chọn: `docs/characters/boss-khan/animation/preview.html`. Dùng mẫu này khi chỉnh thư viện Ninja Hỏa ở task tiếp theo, có điều chỉnh phù hợp dữ liệu của Ninja.
+
 ## Nguồn hiện hành
 
 - Ninja Hỏa: docs/characters/ninja/animation/preview.html, production.json; plan integration/ninja-animation-library/production-plan.json. Publisher scripts/publish_ninja_animation_library.mjs chỉ copy các file trong danh sách đã chốt, không xử lý lại ảnh hoặc thay game.

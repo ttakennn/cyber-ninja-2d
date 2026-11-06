@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huyết Đao Khan — review động tác</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #071428; color: #e7edf9; }
+    body { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    h1 { margin-bottom: 4px; }
+    p { color: #b8c7df; line-height: 1.5; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0; }
+    button, select { background: #142a48; color: #f4f7ff; border: 1px solid #587391; border-radius: 7px; padding: 9px 12px; font: inherit; }
+    button:hover { background: #224368; cursor: pointer; }
+    canvas { width: 100%; height: auto; border: 1px solid #40536f; border-radius: 8px; background: #08162d; }
+    .note { font-size: 14px; }
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+    .boards a { color: #b9e6ff; text-decoration: none; }
+    .boards img { width: 100%; display: block; border: 1px solid #304968; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Huyết Đao Khan · động tác cơ bản</h1>
+  <p>Candidate để duyệt art. Boss đứng cao bằng 150% Ninja Hỏa theo chiều cao ảnh tham chiếu. Chọn động tác, tạm dừng hoặc duyệt từng frame để xem dáng thở, bước chân, quỹ đạo nhảy và hồi thế. Nhịp phát cùng độ cao nhảy trên trang chỉ minh họa art, chưa là gameplay.</p>
+  <div class="controls">
+    <label>Động tác <select id="clip"></select></label>
+    <button id="play">Tạm dừng</button>
+    <button id="prev">◀ Frame</button>
+    <button id="next">Frame ▶</button>
+    <label>Tốc độ <select id="speed"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label>
+    <span id="state"></span>
+  </div>
+  <canvas id="stage" width="1100" height="560" aria-label="So kích thước Boss Khan và Ninja Hỏa"></canvas>
+  <p class="note">Đường cyan là mặt đất. Ninja Hỏa bên trái chỉ để so chiều cao; phần boss bên phải là frame đang chọn. Không dùng viền pixel để tạo collider. Không có AI, sát thương hay spawn trong preview.</p>
+  <div class="boards">
+    <a href="locomotion-contact.png"><img src="locomotion-contact.png" alt="Từng frame đứng thở và đi bộ">Đứng thở / đi bộ · 8 frame</a>
+    <a href="run-contact.png"><img src="run-contact.png" alt="Từng frame chạy">Chạy · 8 frame</a>
+    <a href="jump-contact.png"><img src="jump-contact.png" alt="Từng frame nhảy rơi và tiếp đất">Nhảy / rơi / tiếp đất · 8 frame</a>
+    <a href="hurt-contact.png"><img src="hurt-contact.png" alt="Từng frame trúng đòn hồi thế">Trúng đòn / hồi thế · 8 frame</a>
+  </div>
+  <script src="review-data.js"></script>
+  <script>
+    const data = window.bossKhanAnimationReview;
+    const canvas = document.getElementById('stage');
+    const context = canvas.getContext('2d');
+    const clipSelect = document.getElementById('clip');
+    const speedSelect = document.getElementById('speed');
+    const state = document.getElementById('state');
+    const images = {};
+    for (const [name, asset] of Object.entries(data.assets)) {
+      const image = new Image();
+      image.src = asset.image;
+      images[name] = image;
+    }
+    const ninja = new Image();
+    ninja.src = 'assets/ninja-idle.png';
+    for (const [name, clip] of Object.entries(data.clips)) {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = clip.label;
+      clipSelect.append(option);
+    }
+    let index = 0;
+    let elapsed = 0;
+    let previous = 0;
+    let playing = true;
+    function currentClip() { return data.clips[clipSelect.value]; }
+    function draw() {
+      const clip = currentClip();
+      const frameIndex = clip.frames[index];
+      const asset = data.assets[clip.sheet];
+      const image = images[clip.sheet];
+      const ground = 500;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.fillStyle = '#08162d';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.strokeStyle = '#40d4e7';
+      context.lineWidth = 2;
+      context.beginPath(); context.moveTo(36, ground); context.lineTo(1064, ground); context.stroke();
+      if (ninja.complete && ninja.naturalWidth) context.drawImage(ninja, 170 - 192, ground - 289);
+      if (image.complete && image.naturalWidth) {
+        const frame = asset.frames[frameIndex].rect;
+        const lift = clip.motionY ? clip.motionY[index] : 0;
+        context.drawImage(image, frame[0], frame[1], frame[2], frame[3], 730 - data.pivot[0], ground - data.pivot[1] - lift, frame[2], frame[3]);
+      }
+      context.fillStyle = '#cde9f3';
+      context.font = '17px system-ui';
+      context.fillText('Ninja Hỏa · 100%', 60, 535);
+      context.fillText('Huyết Đao Khan · 150%', 645, 535);
+      state.textContent = `Frame ${frameIndex + 1}/8`;
+    }
+    function animate(now) {
+      if (previous) elapsed += (now - previous) * Number(speedSelect.value) * Number(playing);
+      previous = now;
+      const clip = currentClip();
+      while (playing && elapsed >= clip.frameMs[index]) {
+        elapsed -= clip.frameMs[index];
+        if (index === clip.frames.length - 1 && !clip.loop) { playing = false; elapsed = 0; break; }
+        index = (index + 1) % clip.frames.length;
+      }
+      draw();
+      requestAnimationFrame(animate);
+    }
+    document.getElementById('play').onclick = function () { playing = !playing; this.textContent = playing ? 'Tạm dừng' : 'Phát'; elapsed = 0; };
+    document.getElementById('prev').onclick = () => { playing = false; document.getElementById('play').textContent = 'Phát'; index = (index - 1 + currentClip().frames.length) % currentClip().frames.length; elapsed = 0; draw(); };
+    document.getElementById('next').onclick = () => { playing = false; document.getElementById('play').textContent = 'Phát'; index = (index + 1) % currentClip().frames.length; elapsed = 0; draw(); };
+    clipSelect.onchange = () => { index = 0; elapsed = 0; playing = true; document.getElementById('play').textContent = 'Tạm dừng'; draw(); };
+    ninja.onload = draw;
+    for (const image of Object.values(images)) image.onload = draw;
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>

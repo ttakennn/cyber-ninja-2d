@@ -1,0 +1,342 @@
+{
+  "image": "sheets/combo-b.png",
+  "source": "source/combo-b.png",
+  "pixelSize": [
+    2048,
+    1024
+  ],
+  "sourcePixelSize": [
+    1774,
+    887
+  ],
+  "frameSize": [
+    512,
+    512
+  ],
+  "uniformScale": 1.0787965616045845,
+  "referenceInk128": [
+    73,
+    53,
+    392,
+    401
+  ],
+  "frames": [
+    {
+      "translation": [
+        17,
+        16
+      ],
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "index": 0,
+      "sourceInk128": [
+        53,
+        155,
+        421,
+        408
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        222,
+        408
+      ],
+      "ink128": [
+        74,
+        184,
+        471,
+        456
+      ]
+    },
+    {
+      "translation": [
+        15,
+        16
+      ],
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "index": 1,
+      "sourceInk128": [
+        51,
+        137,
+        409,
+        408
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        223,
+        408
+      ],
+      "ink128": [
+        70,
+        164,
+        457,
+        456
+      ]
+    },
+    {
+      "translation": [
+        15,
+        16
+      ],
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "index": 2,
+      "sourceInk128": [
+        34,
+        138,
+        411,
+        408
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        223,
+        408
+      ],
+      "ink128": [
+        52,
+        165,
+        459,
+        456
+      ]
+    },
+    {
+      "translation": [
+        14,
+        18
+      ],
+      "rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "index": 3,
+      "sourceInk128": [
+        62,
+        70,
+        390,
+        406
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        224,
+        406
+      ],
+      "ink128": [
+        81,
+        93,
+        434,
+        456
+      ]
+    },
+    {
+      "translation": [
+        17,
+        28
+      ],
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "index": 4,
+      "sourceInk128": [
+        40,
+        78,
+        389,
+        397
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        222,
+        397
+      ],
+      "ink128": [
+        60,
+        113,
+        437,
+        457
+      ]
+    },
+    {
+      "translation": [
+        15,
+        31
+      ],
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "index": 5,
+      "sourceInk128": [
+        21,
+        101,
+        408,
+        394
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        223,
+        394
+      ],
+      "ink128": [
+        38,
+        140,
+        455,
+        456
+      ]
+    },
+    {
+      "translation": [
+        15,
+        26
+      ],
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "index": 6,
+      "sourceInk128": [
+        42,
+        55,
+        397,
+        399
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        223,
+        399
+      ],
+      "ink128": [
+        60,
+        86,
+        443,
+        457
+      ]
+    },
+    {
+      "translation": [
+        14,
+        23
+      ],
+      "rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "index": 7,
+      "sourceInk128": [
+        73,
+        53,
+        392,
+        401
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        224,
+        401
+      ],
+      "ink128": [
+        93,
+        80,
+        437,
+        456
+      ]
+    }
+  ],
+  "original": "exec-cce4e05b-5c06-4203-afb5-a60b49492a6b.png",
+  "prompt": "prompts/combo-b-x-forward.md",
+  "tool": "image_gen.imagegen built-in",
+  "sourceSha256": "9b332a2b83b37bc78c257faabb4ff1d1bf50a03b3fe23dd596d3378807afef2f",
+  "sha256": "a4e2052225fe562e2dc9c54deb36acdee14324259adf6c57c277a6c9bdadabaf"
+}

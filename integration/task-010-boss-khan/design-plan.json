@@ -1,0 +1,16 @@
+{
+  "status": "USER_APPROVED_CHARACTER_DESIGN",
+  "id": "boss-khan",
+  "name": "Huyết Đao Khan, Sát Thủ Mặt Nạ",
+  "image": "source/boss-khan-v1.png",
+  "original": "exec-888daae1-0a1d-4a71-a6ae-3b3c09dac570.png",
+  "tool": "image_gen.imagegen built-in",
+  "prompt": "prompts/design-v1.md",
+  "reviewDirectory": "docs/map01/commits/task-010-16-boss-khan-design",
+  "reference": "integration/task-010-electric-wolf/source/ninja-idle-reference.png",
+  "neonReference": "docs/characters/neon-shadow/animation/assets/neon-shadow-v1.png",
+  "reviewHeightRatio": 1.5,
+  "reviewDensityPxPerWorldUnit": 160,
+  "artworkApproved": true,
+  "runtimeIntegration": "NOT_IMPLEMENTED"
+}

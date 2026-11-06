@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Huyết Đao Khan — review tạo hình boss Map01</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#071638;color:#e7edf8;font:15px/1.6 system-ui,sans-serif}main{max-width:1360px;margin:auto;padding:24px}h1{margin:4px 0;color:#f1e8e6;font-size:clamp(26px,4vw,42px)}h2{font-size:21px;color:#dceef6}.eyebrow{color:#ff8b96;letter-spacing:.13em;font-size:11px}.lead{max-width:880px;color:#c8d4e9}.toolbar{display:flex;gap:15px;flex-wrap:wrap;align-items:center;margin:16px 0}label{display:inline-flex;gap:7px;align-items:center;cursor:pointer}input{accent-color:#f04d52}.scene{position:relative;height:590px;overflow:hidden;border:1px solid #53617a;border-radius:12px;background:radial-gradient(circle at 75% 25%,#17315d,#0a1835 60%,#07132d)}.scene.light{background:#bdcad7}.ground{position:absolute;bottom:52px;left:0;right:0;height:2px;background:#7085a7}.sprite{position:absolute;width:min(400px,85vw);height:auto;left:50%;bottom:36px;transform:translateX(-50%);pointer-events:none}.ghost{opacity:0;transition:opacity .2s}.ghost.red{filter:brightness(0) saturate(100%) invert(30%) sepia(100%) saturate(3000%) hue-rotate(335deg);transform:translateX(calc(-50% - 54px));}.ghost.cyan{filter:brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(2300%) hue-rotate(145deg);transform:translateX(calc(-50% - 95px));}.scene.trail .ghost.red{opacity:.19}.scene.trail .ghost.cyan{opacity:.11}.caption{position:absolute;left:18px;bottom:12px;padding:5px 9px;background:#071638c9;border:1px solid #586a83;border-radius:5px;color:#dee8f6;font-size:12px}.board{display:block;width:100%;height:auto;border:1px solid #53617a;border-radius:12px}a{color:#8eeaff}.note{border-left:3px solid #f04d52;padding:10px 15px;background:#14213e}small{color:#aebbd1}@media(max-width:600px){main{padding:14px}.scene{height:520px}}
+</style>
+<main><div class="eyebrow">TASK 10.16 · BOSS MAP01 · ART CANDIDATE</div>
+<h1>HUYẾT ĐAO KHAN, SÁT THỦ MẶT NẠ</h1>
+<p class="lead">Tạo hình để duyệt: sát thủ song đao tốc độ cao, áo street-assassin xẻ tà trắng xám, mắt đỏ, hai lưỡi đao cong ánh đỏ–cyan. Chiều cao hiển thị đề xuất bằng 150% Ninja Hỏa, căn cùng mặt đất.</p>
+<div class="toolbar"><label><input id="trail" type="checkbox">Bóng mờ dash minh họa</label><label><input id="light" type="checkbox">Nền sáng để xem silhouette</label></div>
+<div class="scene" id="scene"><div class="ground"></div><img class="sprite ghost cyan" src="assets/boss-khan-v1.png" alt=""><img class="sprite ghost red" src="assets/boss-khan-v1.png" alt=""><img class="sprite" src="assets/boss-khan-v1.png" alt="Tạo hình toàn thân Huyết Đao Khan cầm hai đao cong"><div class="caption">Ảnh gốc RGBA · bóng mờ chỉ minh họa hướng FX, chưa là frame dash</div></div>
+<h2>So chiều cao trên cùng mặt đất</h2>
+<a href="comparison.png"><img class="board" src="comparison.png" alt="Ninja Hỏa 100%, Sát Thủ Bóng Neon 95%, Huyết Đao Khan 150% đứng trên cùng đường nền"></a>
+<p class="note">Cỡ 150% được đặt bằng một hệ số vẽ từ vùng pixel có alpha ≥128 của pose này; ảnh nguồn không bị resize. Chưa có atlas animation, điểm spawn, collider, hitbox, AI hay runtime boss.</p>
+<p><a href="assets/boss-khan-v1.png">Mở PNG gốc</a> · <a href="design.json">Metadata và provenance</a> · <a href="README.md">Báo cáo review</a></p>
+</main>
+<script>
+const scene=document.getElementById('scene');document.getElementById('trail').addEventListener('change',e=>scene.classList.toggle('trail',e.target.checked));document.getElementById('light').addEventListener('change',e=>scene.classList.toggle('light',e.target.checked));
+</script>

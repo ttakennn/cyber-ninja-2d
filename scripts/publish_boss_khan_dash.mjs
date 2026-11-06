@@ -1,0 +1,42 @@
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, cpSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const plan = JSON.parse(readFileSync(resolve(repo, 'integration/task-010-boss-khan/dash-combo/approved-plan.json'), 'utf8'));
+if (plan.status !== 'USER_APPROVED_PRODUCTION_ART') throw new Error('Artwork chưa được chốt');
+const source = resolve(repo, plan.sourceReview), target = resolve(repo, plan.destination);
+const approved = JSON.parse(readFileSync(resolve(source, 'atlas.json'), 'utf8'));
+const base = JSON.parse(readFileSync(resolve(target, 'atlas.json'), 'utf8'));
+const manifest = JSON.parse(readFileSync(resolve(target, 'production.json'), 'utf8'));
+const dash = resolve(target, 'dash');
+mkdirSync(resolve(dash, 'sheets'), { recursive: true });
+mkdirSync(resolve(dash, 'approved'), { recursive: true });
+const hash = file => createHash('sha256').update(readFileSync(file)).digest('hex');
+for (const name of plan.approvedSheets) {
+  const png = resolve(dash, `sheets/${name}.png`);
+  const json = resolve(dash, `sheets/${name}.json`);
+  copyFileSync(resolve(source, `candidate/${name}.png`), png);
+  const metadata = JSON.parse(readFileSync(resolve(source, `candidate/${name}.json`), 'utf8'));
+  metadata.image = `sheets/${name}.png`;
+  writeFileSync(json, JSON.stringify(metadata, null, 2)+'\n');
+  manifest.files[`dash/sheets/${name}.png`] = hash(png);
+  manifest.files[`dash/sheets/${name}.json`] = hash(json);
+  copyFileSync(resolve(source, `${name}-contact.png`), resolve(dash, `${name}-contact.png`));
+  manifest.files[`dash/${name}-contact.png`] = hash(resolve(dash, `${name}-contact.png`));
+  approved.assets[name].image = `sheets/${name}.png`;
+  base.assets[name] = { ...approved.assets[name], image: `dash/sheets/${name}.png` };
+}
+cpSync(resolve(source, 'approved'), resolve(dash, 'approved'), { recursive: true });
+approved.status = plan.status;
+base.dash = { timelineMs: approved.timelineMs, bodySequence: approved.bodySequence, status: plan.status };
+writeFileSync(resolve(dash, 'atlas.json'), JSON.stringify(approved, null, 2)+'\n');
+writeFileSync(resolve(dash, 'review-data.js'), 'window.bossKhanAnimationReview='+JSON.stringify(approved)+';\n');
+let html = readFileSync(resolve(source, 'preview.html'), 'utf8');
+html = html.replace('6 frame candidate', '6 frame đã chốt').replace('Candidate chờ bạn duyệt.', 'Hoạt ảnh lướt đã được người dùng chốt.');
+writeFileSync(resolve(dash, 'preview.html'), html);
+writeFileSync(resolve(target, 'atlas.json'), JSON.stringify(base, null, 2)+'\n');
+manifest.approvedDash = plan.sourceReview;
+writeFileSync(resolve(target, 'production.json'), JSON.stringify(manifest, null, 2)+'\n');
+console.log('Published approved Boss Khan dash without regenerating PNGs.');

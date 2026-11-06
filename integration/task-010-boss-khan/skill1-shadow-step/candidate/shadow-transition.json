@@ -1,0 +1,147 @@
+{
+    "image":  "candidate/shadow-transition.png",
+    "source":  "source/shadow-transition.png",
+    "pixelSize":  [
+                      1024,
+                      1024
+                  ],
+    "sourcePixelSize":  [
+                            1284,
+                            1225
+                        ],
+    "frameSize":  [
+                      512,
+                      512
+                  ],
+    "uniformScale":  0.65420560747663548,
+    "referenceInk128":  [
+                            96,
+                            14,
+                            573,
+                            579
+                        ],
+    "frames":  [
+                   {
+                       "translation":  [
+                                           47,
+                                           71
+                                       ],
+                       "rect":  [
+                                    0,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          0,
+                                          642,
+                                          612
+                                      ],
+                       "index":  0,
+                       "sourceInk128":  [
+                                            96,
+                                            14,
+                                            573,
+                                            579
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            320,
+                                            588
+                                        ],
+                       "ink128":  [
+                                      110,
+                                      81,
+                                      422,
+                                      450
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           47,
+                                           71
+                                       ],
+                       "rect":  [
+                                    512,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          642,
+                                          0,
+                                          642,
+                                          612
+                                      ],
+                       "index":  1,
+                       "sourceInk128":  [
+                                            71,
+                                            15,
+                                            548,
+                                            579
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            320,
+                                            588
+                                        ],
+                       "ink128":  [
+                                      94,
+                                      82,
+                                      405,
+                                      449
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           47,
+                                           70
+                                       ],
+                       "rect":  [
+                                    0,
+                                    512,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          612,
+                                          642,
+                                          613
+                                      ],
+                       "index":  2,
+                       "sourceInk128":  [
+                                            112,
+                                            20,
+                                            583,
+                                            575
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            320,
+                                            590
+                                        ],
+                       "ink128":  [
+                                      121,
+                                      83,
+                                      427,
+                                      446
+                                  ]
+                   }
+               ],
+    "original":  "exec-246c7d1e-93f0-479e-b2a9-0744fdc3b644.png",
+    "prompt":  "prompts/shadow-step.md",
+    "tool":  "image_gen.imagegen built-in",
+    "sourceSha256":  "ade93641074dc5e0b9b3f119185a0cc0533270fbe0e5db2e1d779d8d61c8ee46",
+    "sha256":  "c3a147f84a277fbae225e462d40992574bb5901d2b5f240f83eac7616cef5573"
+}

@@ -1,0 +1,67 @@
+{
+  "status": "ART_CANDIDATE_PENDING_USER_REVIEW",
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_150_PERCENT",
+  "reviewDirectory": "docs/map01/commits/task-010-25-boss-khan-moon-cross",
+  "targetInkHeightPx": 376.5,
+  "frameSize": [512, 512],
+  "pivot": [256, 456],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_NO_FIT_OF_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "aerial": {
+      "source": "source/aerial.png",
+      "original": "exec-82e85754-e675-4684-8169-328a91aefad7.png",
+      "prompt": "prompts/moon-cross.md",
+      "sourceRects": [[0,0,631,623],[631,0,632,623],[0,623,631,623],[631,623,632,623]],
+      "sourceAnchors": [[316,594],[316,594],[316,594],[316,594]],
+      "targetCellWidthPx": 458,
+      "columns": 2,
+      "rows": 2,
+      "count": 4,
+      "referenceFrameIndex": 0,
+      "groundedFrames": [],
+      "contactPanelWidth": 440,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440
+    },
+    "moon-cross": {
+      "source": "source/moon-cross.png",
+      "original": "exec-82035d77-5b5d-4ef6-bd98-a2c630e90ead.png",
+      "prompt": "prompts/moon-cross.md",
+      "sourceRects": [[0,0,630,623],[630,0,631,623],[0,623,630,624],[630,623,631,624]],
+      "sourceAnchors": [[315,312],[315,312],[315,312],[315,312]],
+      "targetCellWidthPx": 495,
+      "pivot": [256,256],
+      "columns": 2,
+      "rows": 2,
+      "count": 4,
+      "referenceFrameIndex": 0,
+      "groundedFrames": [],
+      "contactPanelWidth": 540,
+      "contactPanelHeight": 560,
+      "contactBaseline": 258,
+      "contactLabelY": 525
+    }
+  },
+  "timelineMs": {"previewTotal": 1950, "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY"},
+  "bodySequence": [
+    {"phase":"nhảy lên","sheet":"aerial","frame":0,"start":0,"end":230},
+    {"phase":"tụ năng lượng","sheet":"aerial","frame":1,"start":230,"end":620},
+    {"phase":"nhát chéo đầu","sheet":"aerial","frame":2,"start":620,"end":760},
+    {"phase":"nhát chéo thứ hai","sheet":"aerial","frame":3,"start":760,"end":900},
+    {"phase":"dấu X giữ nhịp","sheet":"aerial","frame":3,"start":900,"end":1110},
+    {"phase":"dấu X phát nổ","sheet":"aerial","frame":3,"start":1110,"end":1360},
+    {"phase":"rơi xuống","sheet":"aerial","frame":0,"start":1360,"end":1600},
+    {"phase":"hồi thế","sheet":"aerial","frame":0,"start":1600,"end":1950}
+  ],
+  "effectSequence": [
+    {"frame":0,"start":620,"end":760},
+    {"frame":1,"start":760,"end":900},
+    {"frame":2,"start":900,"end":1110},
+    {"frame":3,"start":1110,"end":1360}
+  ],
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_AI_NO_HITBOX_NO_DAMAGE_NO_COOLDOWN_RULE"
+}

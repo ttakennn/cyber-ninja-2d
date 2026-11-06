@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huyết Đao Khan — Diệt Nguyệt Thập Tự</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #071327; color: #edf4ff; }
+    body { max-width: 1220px; margin: auto; padding: 24px; }
+    h1 { margin-bottom: 4px; }
+    p { color: #b9c9dc; line-height: 1.5; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0; }
+    button, select { background: #182b46; color: #f4f8ff; border: 1px solid #5c708a; border-radius: 8px; padding: 9px 12px; font: inherit; cursor: pointer; }
+    input[type=range] { flex: 1; min-width: 180px; accent-color: #f04d52; }
+    canvas { display: block; width: 100%; height: auto; border: 1px solid #425779; border-radius: 10px; background: #091831; }
+    .tag { color: #ff9fa8; font-weight: 700; }
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 14px; margin: 20px 0; }
+    .boards a { color: #bce9ff; text-decoration: none; }
+    .boards img { display: block; width: 100%; border: 1px solid #3b506d; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>HUYẾT ĐAO KHAN · DIỆT NGUYỆT THẬP TỰ</h1>
+  <p>Khan bật lên, tụ năng lượng đỏ/cyan vào song đao, tung hai nhát chéo thành dấu X. Dấu X giữ lại một nhịp ngắn trước khi nổ từ tâm sáng trắng. Đây là preview art; nhịp thời gian và kích thước hiệu ứng chỉ để duyệt hình, chưa quyết định hitbox, sát thương hoặc AI.</p>
+  <div class="controls">
+    <button id="play">Tạm dừng</button>
+    <button id="replay">Phát lại</button>
+    <button id="prev">◀ Nhịp</button>
+    <button id="next">Nhịp ▶</button>
+    <label>Tốc độ <select id="speed"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label>
+    <input id="seek" aria-label="Tua hoạt ảnh" type="range" min="0" max="1950" value="0">
+    <span id="clock">0,00 / 1,95s</span>
+  </div>
+  <div class="controls" aria-label="Xem từng nhịp">
+    <button data-jump="100">Nhảy</button>
+    <button data-jump="400">Tụ năng lượng</button>
+    <button data-jump="680">Chém chéo 1</button>
+    <button data-jump="820">Chém chéo 2</button>
+    <button data-jump="980">Dấu X giữ nhịp</button>
+    <button data-jump="1190">Dấu X phát nổ</button>
+  </div>
+  <canvas id="stage" width="1200" height="620" aria-label="Preview Diệt Nguyệt Thập Tự"></canvas>
+  <p><span class="tag" id="phase">Nhảy lên</span> · Ninja Hỏa chỉ là mốc xem tỷ lệ. Dấu X là VFX riêng; Boss vẫn giữ kích thước nhân vật đã chốt.</p>
+  <div class="boards">
+    <a href="aerial-contact.png"><img src="aerial-contact.png" alt="Bốn pose Khan nhảy, tụ lực và chém hai nhát">Art nhân vật trên không</a>
+    <a href="moon-cross-contact.png"><img src="moon-cross-contact.png" alt="Bốn frame vệt chéo, dấu X, giữ lực và nổ">Art dấu X năng lượng</a>
+  </div>
+  <script src="review-data.js"></script>
+  <script>
+    const data = window.bossKhanAnimationReview;
+    const canvas = document.getElementById('stage'), ctx = canvas.getContext('2d');
+    const seek = document.getElementById('seek'), play = document.getElementById('play');
+    const phase = document.getElementById('phase'), clock = document.getElementById('clock');
+    const images = {}, ground = 535, total = data.timelineMs.previewTotal;
+    const beats = [0, 230, 620, 760, 900, 1110, 1360, 1600];
+    let time = 0, playing = true, previous = 0;
+    function load(name, src) {
+      const image = new Image(); image.onload = () => draw(time); image.src = src; images[name] = image;
+    }
+    load('aerial', data.assets.aerial.image);
+    load('moon-cross', data.assets['moon-cross'].image);
+    load('boss', 'assets/boss-khan-v1.png');
+    load('ninja', 'assets/ninja-idle.png');
+    function sprite(sheet, frame, x, y, alpha = 1, scale = 1) {
+      const image = images[sheet], asset = data.assets[sheet];
+      if (!image.complete || !image.naturalWidth) return;
+      const rect = asset.frames[frame].rect, pivot = asset.frames[frame].pivot;
+      ctx.save(); ctx.globalAlpha = alpha; ctx.translate(x, y); ctx.scale(scale, scale);
+      ctx.drawImage(image, rect[0], rect[1], rect[2], rect[3], -pivot[0], -pivot[1], rect[2], rect[3]);
+      ctx.restore();
+    }
+    function ready(x, y, alpha = 1) {
+      if (!images.boss?.complete || !images.boss.naturalWidth) return;
+      const scale = 0.3024096385542169;
+      ctx.save(); ctx.globalAlpha = alpha;
+      ctx.drawImage(images.boss, x - 658 * scale, y - 1267 * scale, 1199 * scale, 1312 * scale);
+      ctx.restore();
+    }
+    function draw(t) {
+      const sky = ctx.createLinearGradient(0, 0, 0, ground);
+      sky.addColorStop(0, '#071632'); sky.addColorStop(1, '#172044');
+      ctx.fillStyle = sky; ctx.fillRect(0, 0, 1200, 620);
+      ctx.fillStyle = '#101d38';
+      for (let x = 0; x < 1200; x += 95) ctx.fillRect(x, 330 + (x * 13 % 80), 78, ground - 330);
+      ctx.fillStyle = '#233252'; ctx.fillRect(0, ground, 1200, 85);
+      ctx.strokeStyle = '#8da8c2'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, ground); ctx.lineTo(1200, ground); ctx.stroke();
+      if (images.ninja?.complete && images.ninja.naturalWidth) {
+        ctx.save(); ctx.globalAlpha = 0.8;
+        ctx.drawImage(images.ninja, 970 - 192, ground - 289, 384, 320); ctx.restore();
+      }
+      ctx.fillStyle = '#bce9ff'; ctx.font = '16px system-ui';
+      ctx.fillText('Ninja Hỏa · mốc preview', 870, ground + 36);
+      if (t >= 620 && t < 1360) {
+        const frame = t < 760 ? 0 : t < 900 ? 1 : t < 1110 ? 2 : 3;
+        const alpha = t < 1360 && t >= 1280 ? (1360 - t) / 80 : 1;
+        sprite('moon-cross', frame, 800, 305, alpha, frame === 3 ? 1.06 : 1);
+      }
+      if (t < 1600) {
+        const frame = t < 230 ? 0 : t < 620 ? 1 : t < 760 ? 2 : t < 1360 ? 3 : 0;
+        const y = t < 230 ? ground - 250 * (t / 230) : t < 1360 ? 285 : 285 + 250 * ((t - 1360) / 240);
+        sprite('aerial', frame, 420, y);
+      } else ready(420, ground);
+      phase.textContent = t < 230 ? 'Khan nhảy lên' : t < 620 ? 'Song đao tụ năng lượng' : t < 760 ? 'Nhát chéo thứ nhất' : t < 900 ? 'Nhát chéo thứ hai · tạo X' : t < 1110 ? 'Dấu X nén sáng · nhịp trễ' : t < 1360 ? 'Dấu X phát nổ' : t < 1600 ? 'Khan rơi xuống' : 'Hồi thế';
+      clock.textContent = (t / 1000).toFixed(2).replace('.', ',') + ' / 1,95s';
+      seek.value = Math.min(total, t);
+    }
+    function tick(now) {
+      if (playing && previous) {
+        time += (now - previous) * Number(document.getElementById('speed').value);
+        if (time > total + 600) time = 0;
+      }
+      previous = now; draw(Math.min(total, time)); requestAnimationFrame(tick);
+    }
+    function step(direction) {
+      const index = beats.findIndex((beat, i) => time >= beat && time < (beats[i + 1] ?? total + 1));
+      time = beats[Math.max(0, Math.min(beats.length - 1, index + direction))];
+      playing = false; play.textContent = 'Phát'; draw(time);
+    }
+    play.onclick = () => { playing = !playing; play.textContent = playing ? 'Tạm dừng' : 'Phát'; previous = 0; };
+    document.getElementById('replay').onclick = () => { time = 0; playing = true; play.textContent = 'Tạm dừng'; previous = 0; draw(0); };
+    document.getElementById('prev').onclick = () => step(-1);
+    document.getElementById('next').onclick = () => step(1);
+    seek.oninput = () => { time = Number(seek.value); playing = false; play.textContent = 'Phát'; draw(time); };
+    document.querySelectorAll('[data-jump]').forEach(button => button.onclick = () => {
+      time = Number(button.dataset.jump); playing = false; play.textContent = 'Phát'; draw(time);
+    });
+    draw(0); requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

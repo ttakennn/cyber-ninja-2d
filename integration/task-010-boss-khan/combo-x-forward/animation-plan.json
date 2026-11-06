@@ -1,0 +1,307 @@
+{
+  "status": "ART_CANDIDATE_PENDING_USER_REVIEW",
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_150_PERCENT",
+  "approvedMotion": "USER_APPROVED_TASK_010_17",
+  "approvedEntrance": "USER_APPROVED_TASK_010_18",
+  "reviewDirectory": "docs/map01/commits/task-010-21-boss-khan-combo-x-forward",
+  "targetInkHeightPx": 376.5,
+  "frameSize": [
+    512,
+    512
+  ],
+  "pivot": [
+    256,
+    456
+  ],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_NO_FIT_OF_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "combo-a": {
+      "source": "source/combo-a.png",
+      "original": "exec-4818a249-bf67-4338-9499-c8ae7892250c.png",
+      "prompt": "prompts/combo-a-revision.md",
+      "sourceRects": [
+        [
+          0,
+          0,
+          443,
+          443
+        ],
+        [
+          443,
+          0,
+          444,
+          443
+        ],
+        [
+          887,
+          0,
+          443,
+          443
+        ],
+        [
+          1330,
+          0,
+          444,
+          443
+        ],
+        [
+          0,
+          443,
+          443,
+          444
+        ],
+        [
+          443,
+          443,
+          444,
+          444
+        ],
+        [
+          887,
+          443,
+          443,
+          444
+        ],
+        [
+          1330,
+          443,
+          444,
+          444
+        ]
+      ],
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "groundedFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "contactPanelWidth": 440,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440,
+      "iterations": [
+        "source/combo-a-first.png",
+        "source/combo-a-reverse.png"
+      ]
+    },
+    "combo-b": {
+      "source": "source/combo-b.png",
+      "original": "exec-cce4e05b-5c06-4203-afb5-a60b49492a6b.png",
+      "prompt": "prompts/combo-b-x-forward.md",
+      "sourceRects": [
+        [
+          0,
+          0,
+          443,
+          443
+        ],
+        [
+          443,
+          0,
+          444,
+          443
+        ],
+        [
+          887,
+          0,
+          443,
+          443
+        ],
+        [
+          1330,
+          0,
+          444,
+          443
+        ],
+        [
+          0,
+          443,
+          443,
+          444
+        ],
+        [
+          443,
+          443,
+          444,
+          444
+        ],
+        [
+          887,
+          443,
+          443,
+          444
+        ],
+        [
+          1330,
+          443,
+          444,
+          444
+        ]
+      ],
+      "columns": 4,
+      "rows": 2,
+      "count": 8,
+      "referenceFrameIndex": 7,
+      "groundedFrames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "contactPanelWidth": 440,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440,
+      "selectedFrames": [
+        4,
+        5
+      ],
+      "sourceComposition": "source/combo-b-before.png: frames 0-3,6-7; source/combo-b-forward-generated.png: frames 4-5; compose-selected-frames.ps1 copies cells without resampling",
+      "iterations": [
+        "source/combo-b-first.png",
+        "source/combo-b-forward-generated.png"
+      ]
+    }
+  },
+  "timelineMs": {
+    "duration": 1350,
+    "hits": [
+      150,
+      375,
+      675,
+      975
+    ],
+    "finalFlash": [
+      975,
+      1215
+    ]
+  },
+  "bodySequence": [
+    {
+      "sheet": "combo-a",
+      "frame": 0,
+      "start": 0,
+      "end": 75,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 1,
+      "start": 75,
+      "end": 150,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 2,
+      "start": 150,
+      "end": 225,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 3,
+      "start": 225,
+      "end": 300,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 4,
+      "start": 300,
+      "end": 375,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 5,
+      "start": 375,
+      "end": 450,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 6,
+      "start": 450,
+      "end": 525,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-a",
+      "frame": 7,
+      "start": 525,
+      "end": 600,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 0,
+      "start": 600,
+      "end": 675,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 1,
+      "start": 675,
+      "end": 750,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 2,
+      "start": 750,
+      "end": 825,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 3,
+      "start": 825,
+      "end": 900,
+      "offsetX": 0
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 4,
+      "start": 900,
+      "end": 975,
+      "offsetX": 18
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 5,
+      "start": 975,
+      "end": 1125,
+      "offsetX": 58
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 6,
+      "start": 1125,
+      "end": 1240,
+      "offsetX": 32
+    },
+    {
+      "sheet": "combo-b",
+      "frame": 7,
+      "start": 1240,
+      "end": 1350,
+      "offsetX": 0
+    }
+  ],
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_DAMAGE_NO_HITBOX_NO_AI"
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huyết Nguyệt Giáng Lâm — Huyết Đao Khan</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #071327; color: #edf4ff; }
+    body { max-width: 1180px; margin: auto; padding: 24px; }
+    h1 { margin-bottom: 4px; }
+    p { color: #b9c9dc; line-height: 1.5; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0; }
+    button, select { background: #182b46; color: #f4f8ff; border: 1px solid #5c708a; border-radius: 8px; padding: 9px 12px; font: inherit; cursor: pointer; }
+    input[type=range] { flex: 1; min-width: 180px; accent-color: #f04d52; }
+    canvas { display: block; width: 100%; height: auto; border: 1px solid #425779; border-radius: 10px; background: #091831; }
+    .tag { color: #ff9fa8; font-weight: 700; }
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 20px 0; }
+    .boards a { color: #bce9ff; text-decoration: none; }
+    .boards img { display: block; width: 100%; border: 1px solid #3b506d; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>HUYẾT NGUYỆT GIÁNG LÂM</h1>
+  <p>Preview art màn xuất hiện của Huyết Đao Khan. Trình tự 3 giây: huyết nguyệt, bóng người trên cao, lao xuống và quỳ tiếp đất, rút song đao chém chữ X, rồi vào thế thủ. Ánh neon nhấp nháy và vệt lao là lớp trình bày của preview; chưa tích hợp map hay AI.</p>
+  <div class="controls">
+    <button id="play">Tạm dừng</button>
+    <button id="replay">Phát lại</button>
+    <label>Tốc độ <select id="speed"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label>
+    <input id="seek" aria-label="Tua hoạt ảnh" type="range" min="0" max="3000" value="0">
+    <span id="clock">0,00 / 3,00s</span>
+  </div>
+  <canvas id="stage" width="1100" height="800" aria-label="Preview hoạt ảnh Huyết Nguyệt Giáng Lâm"></canvas>
+  <p><span class="tag" id="phase">Huyết nguyệt xuất hiện</span> · Art candidate chờ bạn duyệt. Chém X chỉ trình diễn, không gây sát thương. Nhịp 3 giây và vị trí minh họa ở đây chưa là luật spawn/hitbox của game.</p>
+  <div class="boards">
+    <a href="descent-contact.png"><img src="descent-contact.png" alt="Tám frame Huyết Ảnh Giáng Lâm">Giáng xuống · 8 frame</a>
+    <a href="draw-contact.png"><img src="draw-contact.png" alt="Tám frame Song Đao Khai Chiến">Rút đao / thế thủ · 8 frame</a>
+    <a href="moon-contact.png"><img src="moon-contact.png" alt="Tám frame huyết nguyệt">Huyết nguyệt · 8 frame</a>
+    <a href="impact-contact.png"><img src="impact-contact.png" alt="Tám frame năng lượng tiếp đất">Tiếp đất · 8 frame</a>
+    <a href="cross-contact.png"><img src="cross-contact.png" alt="Tám frame vệt chém chữ X">Chém X · 8 frame</a>
+  </div>
+  <script src="review-data.js"></script>
+  <script>
+    const data = window.bossKhanAnimationReview;
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const seek = document.getElementById('seek');
+    const play = document.getElementById('play');
+    const clock = document.getElementById('clock');
+    const phase = document.getElementById('phase');
+    const images = {};
+    for (const [name, asset] of Object.entries(data.assets)) {
+      const image = new Image();
+      image.src = asset.image;
+      image.onload = () => draw(time);
+      images[name] = image;
+    }
+    const ground = 720, bossX = 690;
+    let time = 0, playing = true, previous = 0;
+    function sprite(sheet, frame, x, y, opacity = 1) {
+      const image = images[sheet], asset = data.assets[sheet];
+      if (!image.complete || !image.naturalWidth) return;
+      const rect = asset.frames[frame].rect;
+      const pivot = asset.frames[frame].pivot;
+      ctx.save();
+      ctx.globalAlpha = opacity;
+      ctx.drawImage(image, rect[0], rect[1], rect[2], rect[3], x - pivot[0], y - pivot[1], rect[2], rect[3]);
+      ctx.restore();
+    }
+    function indexInRange(t, start, end) { return Math.max(0, Math.min(7, Math.floor((t - start) / (end - start) * 8))); }
+    function drawBackdrop(t) {
+      const sky = ctx.createLinearGradient(0, 0, 0, ground);
+      sky.addColorStop(0, '#061434'); sky.addColorStop(0.7, '#13214d'); sky.addColorStop(1, '#231b43');
+      ctx.fillStyle = sky; ctx.fillRect(0, 0, 1100, 800);
+      ctx.fillStyle = '#0a1732';
+      for (let x = 0; x < 1100; x += 90) ctx.fillRect(x, 350 + (x * 19 % 95), 72, ground - 350);
+      ctx.fillStyle = '#172445'; ctx.fillRect(0, ground, 1100, 80);
+      ctx.strokeStyle = '#7182a4'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, ground); ctx.lineTo(1100, ground); ctx.stroke();
+      const flicker = t < 650 ? (Math.sin(t * 0.055) > 0.1 ? 0.85 : 0.12) : 0.48;
+      ctx.save(); ctx.shadowBlur = 28; ctx.shadowColor = '#ee3d59';
+      ctx.fillStyle = 'rgba(255,66,88,' + flicker + ')';
+      ctx.fillRect(110, 385, 11, 160); ctx.fillRect(950, 360, 11, 190);
+      ctx.restore();
+      if (t < 350) {
+        const x = -250 + t * 3.9;
+        const beam = ctx.createLinearGradient(x - 180, 0, x + 160, 0);
+        beam.addColorStop(0, 'rgba(238,40,70,0)'); beam.addColorStop(0.6, 'rgba(255,55,82,0.75)'); beam.addColorStop(1, 'rgba(85,240,255,0)');
+        ctx.fillStyle = beam; ctx.fillRect(x - 180, 308, 340, 8);
+      }
+    }
+    function draw(t) {
+      drawBackdrop(t);
+      if (t < 1450) sprite('moon', indexInRange(t, 0, 1450), bossX, 310, 0.9);
+      if (t >= 1000 && t < 1250) {
+        const alpha = 1 - (t - 1000) / 250;
+        const trail = ctx.createLinearGradient(bossX - 80, 200, bossX + 30, 510);
+        trail.addColorStop(0, 'rgba(255,38,76,0)'); trail.addColorStop(0.5, 'rgba(255,48,79,' + (alpha * 0.7) + ')'); trail.addColorStop(1, 'rgba(80,225,242,0)');
+        ctx.strokeStyle = trail; ctx.lineWidth = 15 * alpha;
+        ctx.beginPath(); ctx.moveTo(bossX - 35, 140); ctx.lineTo(bossX + 15, 580); ctx.stroke();
+      }
+      if (t >= 1200 && t < 1850) sprite('impact', indexInRange(t, 1200, 1850), bossX, ground, 0.85);
+      const pose = data.bodySequence.find(item => t >= item.start && t < item.end);
+      if (pose) {
+        if (t >= 1030 && t < 1220) sprite(pose.sheet, pose.frame, bossX - 20, ground - pose.lift - 35, 0.18);
+        sprite(pose.sheet, pose.frame, bossX, ground - pose.lift);
+      }
+      if (t >= 2050 && t < 2750) sprite('cross', indexInRange(t, 2050, 2750), bossX, 525, 0.65);
+      if (t >= 3000) sprite('draw', 7, bossX, ground);
+      phase.textContent = t < 600 ? 'Huyết nguyệt xuất hiện' : t < 1200 ? 'Huyết ảnh giáng lâm' : t < 1800 ? 'Tiếp đất / đứng dậy' : t < 2500 ? 'Song đao khai chiến' : 'Sát khí tan / Combat Ready';
+      clock.textContent = (t / 1000).toFixed(2).replace('.', ',') + ' / 3,00s';
+      seek.value = Math.min(3000, t);
+    }
+    function tick(now) {
+      if (playing && previous) {
+        time += (now - previous) * Number(document.getElementById('speed').value);
+        if (time > 3450) time = 0;
+      }
+      previous = now;
+      draw(Math.min(3000, time));
+      requestAnimationFrame(tick);
+    }
+    play.onclick = () => { playing = !playing; play.textContent = playing ? 'Tạm dừng' : 'Phát'; previous = 0; };
+    document.getElementById('replay').onclick = () => { time = 0; playing = true; play.textContent = 'Tạm dừng'; previous = 0; draw(0); };
+    seek.oninput = () => { time = Number(seek.value); playing = false; play.textContent = 'Phát'; draw(time); };
+    draw(0); requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huyết Đao Khan — thư viện hoạt ảnh</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #071327; color: #e9efff; }
+    * { box-sizing: border-box; }
+    body { max-width: 1380px; margin: auto; padding: 24px; }
+    h1 { margin: 6px 0; color: #ffb6bd; font-size: clamp(24px, 4vw, 38px); }
+    h2 { color: #c2e7f7; font-size: 20px; margin-bottom: 4px; }
+    p { color: #bbc9df; line-height: 1.55; }
+    .eyebrow { color: #8ccddd; font-size: 11px; letter-spacing: .15em; }
+    .note { background: #171f36; border-left: 3px solid #e65e6a; padding: 10px 15px; }
+    .clips { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0; }
+    button { background: #1b2a45; color: #f2f6ff; border: 1px solid #5a6d8c; border-radius: 7px; padding: 9px 12px; font: inherit; cursor: pointer; }
+    button:hover { background: #2a3d61; }
+    button[aria-pressed="true"] { border-color: #ff929c; background: #573044; }
+    .viewer { border: 1px solid #405477; border-radius: 10px; overflow: hidden; background: #071327; }
+    iframe { display: block; width: 100%; height: 900px; border: 0; }
+    a { color: #a8e9fa; }
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px 0; }
+    figure { margin: 0; }
+    .boards img { display: block; width: 100%; border: 1px solid #3b506d; border-radius: 8px; }
+    figcaption { color: #bbc9df; font-size: 13px; padding-top: 5px; }
+    @media (max-width: 700px) { body { padding: 14px; } button { font-size: 13px; } iframe { height: 760px; } }
+  </style>
+</head>
+<body>
+  <div class="eyebrow">TASK10 · BOSS MAP01 · ART ĐÃ DUYỆT</div>
+  <h1>HUYẾT ĐAO KHAN · THƯ VIỆN HOẠT ẢNH</h1>
+  <p>Chọn một nhóm để xem toàn bộ động tác, màn xuất hiện, combo, lướt và ba tuyệt kỹ trên cùng trang. Mỗi nhóm giữ nút phát, tạm dừng, tua và các mốc duyệt frame của bản art đã chốt.</p>
+  <p class="note">Khan cao 150% Ninja Hỏa theo art tham chiếu. Các nhịp và quỹ đạo trong preview chỉ để duyệt hình; chưa tích hợp boss, AI, hitbox hay sát thương vào game. <a href="README.md">Danh mục art và nguồn gốc</a>.</p>
+  <div id="clips" class="clips" aria-label="Chọn nhóm hoạt ảnh"></div>
+  <h2 id="heading"></h2>
+  <p id="description"></p>
+  <p><a id="open" href="basic-preview.html" target="_blank" rel="noopener">Mở nhóm này ở trang riêng</a></p>
+  <div class="viewer"><iframe id="viewer" title="Xem hoạt ảnh Huyết Đao Khan" src="basic-preview.html"></iframe></div>
+  <h2>Bảng frame của nhóm đang chọn</h2>
+  <div id="boards" class="boards"></div>
+  <script>
+    const groups = [
+      { name: 'Cơ bản · 5 động tác', path: 'basic-preview.html', description: 'Đứng/thở, đi bộ, chạy, nhảy/rơi/tiếp đất và trúng đòn/hồi thế.', boards: [['locomotion-contact.png', 'Đứng/thở · đi bộ'], ['run-contact.png', 'Chạy'], ['jump-contact.png', 'Nhảy · rơi · tiếp đất'], ['hurt-contact.png', 'Trúng đòn · hồi thế']] },
+      { name: 'Xuất hiện', path: 'entrance/preview.html', description: 'Huyết Nguyệt Giáng Lâm: hiện thân, đáp đất, rút đao và dấu X nghi thức.', boards: [['entrance/descent-contact.png', 'Hiện thân · đáp đất'], ['entrance/draw-contact.png', 'Rút song đao'], ['entrance/moon-contact.png', 'Huyết nguyệt'], ['entrance/cross-contact.png', 'Dấu X']] },
+      { name: 'Đánh thường · 4 nhát', path: 'combo/preview.html', description: 'Song Đao Liên Trảm với cú chém X vươn người về trước và hồi thế.', boards: [['combo/combo-a-contact.png', 'Đòn 1–3'], ['combo/combo-b-contact.png', 'Đòn X · hồi thế']] },
+      { name: 'Lướt nối combo', path: 'dash/preview.html', description: 'Lướt nhanh tới Ninja Hỏa, để lại vệt sáng nhẹ rồi nối vào combo đã chốt.', boards: [['dash/dash-contact.png', 'Các frame lướt'], ['combo/combo-b-contact.png', 'Kết thúc combo X']] },
+      { name: 'Skill 1 · Ảnh Bộ Đoạn Sát', path: 'shadow-step/preview.html', description: 'Khan hạ người, tan dần, hiện dần ở vị trí mới rồi chém nhanh.', boards: [['shadow-step/shadow-body-contact.png', 'Pose nhân vật'], ['shadow-step/shadow-transition-contact.png', 'Tan · hiện dần'], ['shadow-step/shadow-slash-contact.png', 'Nhát chém']] },
+      { name: 'Skill 2 · Huyết Ảnh Loạn Đao', path: 'blood-mirage/preview.html', description: 'Ba ảo ảnh lao qua sân; Boss thật xuất hiện ở giữa và quét đao rộng.', boards: [['blood-mirage/phantoms-contact.png', 'Ảo ảnh'], ['blood-mirage/finisher-contact.png', 'Boss thật · cú quét']] },
+      { name: 'Skill 3 · Diệt Nguyệt Thập Tự', path: 'moon-cross/preview.html', description: 'Nhảy lên, gom năng lượng, chém hai đường chéo, giữ nhịp rồi dấu X phát nổ.', boards: [['moon-cross/aerial-contact.png', 'Khan trên không'], ['moon-cross/moon-cross-contact.png', 'Dấu X · nén lực · phát nổ']] }
+    ];
+    const clips = document.getElementById('clips'), viewer = document.getElementById('viewer');
+    const heading = document.getElementById('heading'), description = document.getElementById('description');
+    const open = document.getElementById('open'), boards = document.getElementById('boards');
+    const buttons = groups.map((group, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = group.name;
+      button.onclick = () => choose(index);
+      clips.append(button);
+      return button;
+    });
+    function choose(index) {
+      const group = groups[index];
+      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+      heading.textContent = group.name;
+      description.textContent = group.description;
+      open.href = group.path;
+      if (viewer.getAttribute('src') !== group.path) viewer.src = group.path;
+      boards.replaceChildren();
+      for (const [path, label] of group.boards) {
+        const figure = document.createElement('figure'), link = document.createElement('a');
+        const image = document.createElement('img'), caption = document.createElement('figcaption');
+        link.href = path;
+        image.src = path;
+        image.alt = label;
+        image.loading = 'lazy';
+        caption.textContent = label;
+        link.append(image, caption);
+        figure.append(link);
+        boards.append(figure);
+      }
+    }
+    choose(0);
+  </script>
+</body>
+</html>

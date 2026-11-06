@@ -1,0 +1,186 @@
+{
+  "image": "sheets/finisher.png",
+  "source": "source/finisher.png",
+  "pixelSize": [
+    1024,
+    1024
+  ],
+  "sourcePixelSize": [
+    1448,
+    1086
+  ],
+  "frameSize": [
+    512,
+    512
+  ],
+  "uniformScale": 0.6629834254143646,
+  "referenceInk128": [
+    72,
+    55,
+    653,
+    515
+  ],
+  "frames": [
+    {
+      "translation": [
+        24,
+        111
+      ],
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        0,
+        724,
+        543
+      ],
+      "index": 0,
+      "sourceInk128": [
+        72,
+        55,
+        653,
+        515
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        350,
+        520
+      ],
+      "ink128": [
+        72,
+        148,
+        457,
+        452
+      ]
+    },
+    {
+      "translation": [
+        24,
+        111
+      ],
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        724,
+        0,
+        724,
+        543
+      ],
+      "index": 1,
+      "sourceInk128": [
+        60,
+        41,
+        631,
+        515
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        350,
+        520
+      ],
+      "ink128": [
+        64,
+        139,
+        442,
+        452
+      ]
+    },
+    {
+      "translation": [
+        24,
+        111
+      ],
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        543,
+        724,
+        543
+      ],
+      "index": 2,
+      "sourceInk128": [
+        18,
+        64,
+        720,
+        515
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        350,
+        520
+      ],
+      "ink128": [
+        36,
+        154,
+        501,
+        452
+      ]
+    },
+    {
+      "translation": [
+        24,
+        111
+      ],
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        724,
+        543,
+        724,
+        543
+      ],
+      "index": 3,
+      "sourceInk128": [
+        29,
+        79,
+        703,
+        515
+      ],
+      "pivot": [
+        256,
+        456
+      ],
+      "sourceAnchor": [
+        350,
+        520
+      ],
+      "ink128": [
+        44,
+        164,
+        490,
+        452
+      ]
+    }
+  ],
+  "original": "exec-bfa8a09c-53b7-4f4b-9cfe-ddf99ec5ff19.png",
+  "prompt": "prompts/blood-mirage.md",
+  "tool": "image_gen.imagegen built-in",
+  "sourceSha256": "4910a2ebf257c000444d0e535820f5b2c1f4d50045def5b29ca449484fcc5fa7",
+  "sha256": "c2dd83486394e0492cd610bf8007fb17dc67da4bed8886dfbebca57faa9aa848"
+}

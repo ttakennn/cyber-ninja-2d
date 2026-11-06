@@ -1,0 +1,7 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-23-boss-khan-shadow-step",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedSheets": ["shadow-body", "shadow-transition", "shadow-slash"],
+  "approval": "Người dùng chốt Ảnh Bộ Đoạn Sát sau bản sửa Khan tan dần và hiện dần."
+}

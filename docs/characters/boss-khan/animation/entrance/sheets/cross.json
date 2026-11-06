@@ -1,0 +1,342 @@
+{
+  "image": "sheets/cross.png",
+  "source": "source/cross.png",
+  "pixelSize": [
+    2048,
+    1024
+  ],
+  "sourcePixelSize": [
+    1774,
+    887
+  ],
+  "frameSize": [
+    512,
+    512
+  ],
+  "uniformScale": 0.8558558558558559,
+  "referenceInk128": [
+    195,
+    193,
+    258,
+    252
+  ],
+  "frames": [
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "index": 0,
+      "sourceInk128": [
+        195,
+        193,
+        258,
+        252
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        233,
+        231,
+        287,
+        281
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "index": 1,
+      "sourceInk128": [
+        85,
+        74,
+        382,
+        363
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        139,
+        129,
+        393,
+        376
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "index": 2,
+      "sourceInk128": [
+        61,
+        63,
+        387,
+        382
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        119,
+        121,
+        396,
+        392
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "sourceRect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "index": 3,
+      "sourceInk128": [
+        52,
+        50,
+        394,
+        389
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        111,
+        109,
+        402,
+        399
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "index": 4,
+      "sourceInk128": [
+        46,
+        46,
+        402,
+        398
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        106,
+        106,
+        409,
+        407
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "index": 5,
+      "sourceInk128": [
+        57,
+        60,
+        379,
+        377
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        116,
+        118,
+        391,
+        387
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "index": 6,
+      "sourceInk128": [
+        72,
+        73,
+        373,
+        370
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        128,
+        129,
+        384,
+        380
+      ]
+    },
+    {
+      "translation": [
+        66,
+        66
+      ],
+      "rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "sourceRect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "index": 7,
+      "sourceInk128": [
+        97,
+        102,
+        344,
+        346
+      ],
+      "pivot": [
+        256,
+        256
+      ],
+      "sourceAnchor": [
+        222,
+        222
+      ],
+      "ink128": [
+        149,
+        153,
+        360,
+        360
+      ]
+    }
+  ],
+  "original": "exec-9c3366b5-0c80-495d-9083-8b0d598e24ab.png",
+  "prompt": "prompts/cross.md",
+  "tool": "image_gen.imagegen built-in",
+  "sourceSha256": "eeb07464725c2844619f2f4c8cddceb757c842de419032c9361f99bed21a5ca8",
+  "sha256": "0fa910f42b6326a4a20afb2d5c66a55bea7fe2b6e9d6a948bc1e4e8136e8adc5"
+}

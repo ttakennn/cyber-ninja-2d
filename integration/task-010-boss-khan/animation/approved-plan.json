@@ -1,0 +1,9 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-17-boss-khan-motion",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedClips": ["idle","walk","run","jump","hurt"],
+  "approvedSheets": ["locomotion","run","jump","hurt"],
+  "approval": "Người dùng chốt tạo hình v1 và toàn bộ động tác đứng/thở, đi bộ, chạy, nhảy/rơi/tiếp đất, trúng đòn/hồi thế của Task10.17.",
+  "runtimeIntegration": "NOT_IMPLEMENTED"
+}

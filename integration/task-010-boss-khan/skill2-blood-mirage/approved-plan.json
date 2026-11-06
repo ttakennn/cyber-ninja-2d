@@ -1,0 +1,7 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-24-boss-khan-blood-mirage",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedSheets": ["phantoms", "finisher"],
+  "approval": "Người dùng chốt art Huyết Ảnh Loạn Đao không yêu cầu chỉnh sửa."
+}

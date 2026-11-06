@@ -1,0 +1,7 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "sourceReview": "docs/map01/commits/task-010-25-boss-khan-moon-cross",
+  "destination": "docs/characters/boss-khan/animation",
+  "approvedSheets": ["aerial", "moon-cross"],
+  "approval": "Người dùng chốt art Diệt Nguyệt Thập Tự và yêu cầu đưa vào thư viện animation để duyệt tổng hợp trước khi commit."
+}

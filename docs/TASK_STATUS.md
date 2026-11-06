@@ -1,5 +1,7 @@
 # Trạng thái toàn dự án
 
+2026-11-05/Task10-boss-khan-design: đã vẽ [candidate Huyết Đao Khan](map01/commits/task-010-16-boss-khan-design/preview.html), boss song đao trắng xám/đỏ neon/cyan, cao hiển thị150% Ninja Hỏa trong bảng so. Source/prompt/hash ở integration/task-010-boss-khan/, hồ sơ candidate ở characters/boss-khan/. Chờ duyệt tạo hình; chưa animation/dash thật/skills/runtime/spawn/AI/damage, chưa test/build/browser/commit/merge. Trạng thái Bóng Neon đã chốt bên dưới giữ nguyên.
+
 2026-11-04/Task10-neon-production: người dùng chốt toàn bộ Sát Thủ Bóng Neon, gồm Nguyệt Ảnh Hiện Thân. Đã publish [11clip/14sheet](characters/neon-shadow/animation/preview.html) từ snapshot10.15 vào thư viện art production, giữ PNG nguyên byte, chiều cao95%/frame/pivot và nguồn/hash trong production.json. [Lịch sử](map01/commits/task-010-15-neon-shadow-entrance/README.md); chưa tích hợp quái/spawn/AI/damage vào game, chưa test/build/browser/merge/push. Trạng thái chờ duyệt dưới đây là lịch sử.
 
 2026-11-04/Task10-neon-entrance: người dùng chốt hurt, đã promote [production10clip/12sheet](characters/neon-shadow/animation/preview.html). Thêm [Nguyệt Ảnh Hiện Thân](map01/commits/task-010-15-neon-shadow-entrance/preview.html),8pose/8frame khói,1200ms và hold Idle400ms, mắt đỏ/xoay đao/hạ guard, giữ95%/spawn tại chỗ. Mới chờ duyệt; chưa runtime/spawn/input/test/build/browser/commit/merge. Trạng thái hurt chờ duyệt cũ giữ lịch sử.
@@ -61,3 +63,23 @@ Cập nhật 2026-11-02. Baseline code/asset gần nhất4ce0146; task tổ ch�
 | Nghiệm thu tổng thể | Chưa có bằng chứng mới để khoá final production; không lấy log/ảnh cũ chứng nhận baseline hiện tại |
 
 Quy tắc/đường dẫn tài liệu đã tách theo docs/README.md. Không đổi asset, source game hoặc bằng chứng lịch sử. File backgrounds/buildings-shop.png vốn untracked không nằm trong phạm vi task. Chưa commit tài liệu.
+
+Cập nhật 2026-11-05: tạo hình Huyết Đao Khan v1 đã được người dùng chốt ở 150% Ninja Hỏa; [động tác cơ bản](map01/commits/task-010-17-boss-khan-motion/README.md) là candidate đang chờ duyệt. Chưa tích hợp boss vào game, chưa chạy validation trong lượt tạo art.
+
+Cập nhật 2026-11-05/Task10.18: người dùng đã duyệt động tác cơ bản Huyết Đao Khan; bộ ảnh được lưu nguyên byte trong [thư viện production](characters/boss-khan/animation/README.md). [Huyết Nguyệt Giáng Lâm](map01/commits/task-010-18-boss-khan-entrance/README.md) là candidate 3 giây chờ duyệt art. Không đổi runtime/spawn/AI/hitbox; test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-05/Task10.19: người dùng chốt Huyết Nguyệt Giáng Lâm; năm sheet đã sao chép nguyên byte vào [thư viện art production của Khan](characters/boss-khan/animation/README.md). [Song Đao Liên Trảm](map01/commits/task-010-19-boss-khan-combo/README.md) là candidate 16 frame/bốn nhát đang chờ duyệt. Chưa thay runtime, AI, damage/hitbox/spawn; test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-05/Task10.20: đã sửa nhịp [Song Đao Liên Trảm](map01/commits/task-010-20-boss-khan-combo-revision/README.md) theo phản hồi: nhát ngược, lấy đà/lao tới chém X, hồi thế. Candidate mới vẫn chờ duyệt, chưa vào art production/game. Test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-05/Task10.21: đã sửa riêng nhịp lấy đà và [X vươn xa](map01/commits/task-010-21-boss-khan-combo-x-forward/README.md) theo ảnh đánh dấu của người dùng. Hai tay duỗi về trước, các frame khác giữ nguyên từ10.20. Candidate chờ duyệt, chưa vào art production/runtime; test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-05/Task10.22: người dùng chốt [combo X vươn xa](characters/boss-khan/animation/combo/preview.html); hai sheet đã publish nguyên PNG vào art production. Đã tạo [preview lướt nhanh nối combo](map01/commits/task-010-22-boss-khan-dash-combo/preview.html) với sáu pose dash candidate chờ duyệt. Chưa tích hợp AI/gameplay; test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-05/Task10.23: người dùng chốt [lướt nhanh nối combo](characters/boss-khan/animation/dash/preview.html), đã sao chép PNG nguyên byte vào art production. [Ảnh Bộ Đoạn Sát](map01/commits/task-010-23-boss-khan-shadow-step/preview.html) là art candidate mới chờ duyệt; chưa tích hợp boss/AI/dịch chuyển/hitbox/damage vào game. Test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-06/Task10.24: người dùng chốt [Ảnh Bộ Đoạn Sát bản tan/hiện dần](characters/boss-khan/animation/shadow-step/preview.html), đã sao chép ba PNG nguyên byte vào art production. [Huyết Ảnh Loạn Đao](map01/commits/task-010-24-boss-khan-blood-mirage/preview.html) là candidate mới chờ duyệt; chưa tích hợp boss/AI/hitbox/damage. Test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-06/Task10.25: người dùng chốt [Huyết Ảnh Loạn Đao](characters/boss-khan/animation/blood-mirage/preview.html), đã sao chép hai PNG nguyên byte vào art production. [Diệt Nguyệt Thập Tự](map01/commits/task-010-25-boss-khan-moon-cross/preview.html) là candidate mới chờ duyệt; chưa tích hợp boss/AI/hitbox/damage. Test/build/browser NOT_RUN.
+
+Cập nhật 2026-11-06/Task10.26: người dùng chốt Diệt Nguyệt Thập Tự; hai PNG được sao chép nguyên byte vào [art production](characters/boss-khan/animation/moon-cross/README.md). [Preview tổng hợp](characters/boss-khan/animation/preview.html) cho xem động tác cơ bản, màn xuất hiện, combo, lướt và ba skill trên cùng trang. Người dùng đã chọn kiểu preview này và yêu cầu commit; chưa tích hợp runtime, AI, hitbox, damage, spawn. Test/build/browser NOT_RUN.

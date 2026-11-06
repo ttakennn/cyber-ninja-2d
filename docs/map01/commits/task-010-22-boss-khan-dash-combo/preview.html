@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huyết Đao Khan — lướt nhanh + Song Đao Liên Trảm</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #071327; color: #edf4ff; }
+    body { max-width: 1220px; margin: auto; padding: 24px; }
+    h1 { margin-bottom: 4px; }
+    p { color: #b9c9dc; line-height: 1.5; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0; }
+    button, select { background: #182b46; color: #f4f8ff; border: 1px solid #5c708a; border-radius: 8px; padding: 9px 12px; font: inherit; cursor: pointer; }
+    input[type=range] { flex: 1; min-width: 180px; accent-color: #f04d52; }
+    canvas { display: block; width: 100%; height: auto; border: 1px solid #425779; border-radius: 10px; background: #091831; }
+    .tag { color: #ff9fa8; font-weight: 700; }
+    .boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 14px; margin: 20px 0; }
+    .boards a { color: #bce9ff; text-decoration: none; }
+    .boards img { display: block; width: 100%; border: 1px solid #3b506d; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>HUYẾT ĐAO KHAN · LƯỚT NHANH → SONG ĐAO LIÊN TRẢM</h1>
+  <p>Boss hạ trọng tâm, lướt nhanh về phía vị trí Ninja Hỏa với bóng mờ đỏ–cyan nhẹ, hãm lại rồi nối ngay vào combo bốn nhát đã chốt. Vị trí và thời lượng trong preview chỉ giúp duyệt art; chưa phải tốc độ, tầm tấn công hoặc AI trong game.</p>
+  <div class="controls">
+    <button id="play">Tạm dừng</button>
+    <button id="replay">Phát lại</button>
+    <button id="prev">◀ Frame</button>
+    <button id="next">Frame ▶</button>
+    <label>Tốc độ <select id="speed"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label>
+    <input id="seek" aria-label="Tua hoạt ảnh" type="range" min="0" max="1910" value="0">
+    <span id="clock">0,00 / 1,91s</span>
+  </div>
+  <canvas id="stage" width="1200" height="620" aria-label="Preview lướt nhanh rồi đánh combo"></canvas>
+  <p><span class="tag" id="phase">Vào thế</span> · Ninja Hỏa bên phải chỉ đánh dấu vị trí mục tiêu trong preview. Chưa có va chạm, sát thương, hitbox hoặc hành vi đuổi theo người chơi.</p>
+  <div class="boards">
+    <a href="dash-contact.png"><img src="dash-contact.png" alt="Sáu frame lướt nhanh của Khan">Lướt nhanh · 6 frame candidate</a>
+    <a href="approved/combo-a-contact.png"><img src="approved/combo-a-contact.png" alt="Tám frame combo đầu đã chốt">Combo đã chốt · nhịp 1–2</a>
+    <a href="approved/combo-b-contact.png"><img src="approved/combo-b-contact.png" alt="Tám frame combo cuối với X đã chốt">Combo đã chốt · nhịp 3–4</a>
+  </div>
+  <script src="approved/review-data.js"></script>
+  <script>const comboData = window.bossKhanAnimationReview;</script>
+  <script src="review-data.js"></script>
+  <script>
+    const dashData = window.bossKhanAnimationReview;
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const seek = document.getElementById('seek');
+    const play = document.getElementById('play');
+    const phase = document.getElementById('phase');
+    const clock = document.getElementById('clock');
+    const images = {};
+    const ground = 535, startX = 230, stopX = 750, targetX = 1030;
+    const dashDuration = dashData.timelineMs.dashDuration;
+    const total = dashData.timelineMs.previewTotal;
+    const frames = dashData.bodySequence.concat(comboData.bodySequence.map(item => ({ ...item, start: item.start + dashDuration, end: item.end + dashDuration })));
+    let time = 0, playing = true, previous = 0;
+    function load(name, src) {
+      const image = new Image();
+      image.onload = () => draw(time);
+      image.src = src;
+      images[name] = image;
+    }
+    load('dash', dashData.assets.dash.image);
+    for (const name of ['combo-a', 'combo-b']) load(name, 'approved/' + comboData.assets[name].image);
+    load('ninja', 'approved/assets/ninja-idle.png');
+    function bossX(t) {
+      if (t <= 160) return startX;
+      if (t >= 430) return stopX;
+      const progress = (t - 160) / 270;
+      return startX + (stopX - startX) * (progress * progress * (3 - 2 * progress));
+    }
+    function sprite(sheet, frame, x, opacity = 1) {
+      const image = images[sheet], asset = sheet === 'dash' ? dashData.assets.dash : comboData.assets[sheet];
+      if (!image.complete || !image.naturalWidth) return;
+      const rect = asset.frames[frame].rect, pivot = asset.frames[frame].pivot;
+      ctx.save(); ctx.globalAlpha = opacity;
+      ctx.drawImage(image, rect[0], rect[1], rect[2], rect[3], x - pivot[0], ground - pivot[1], rect[2], rect[3]);
+      ctx.restore();
+    }
+    function draw(t) {
+      const sky = ctx.createLinearGradient(0, 0, 0, ground);
+      sky.addColorStop(0, '#071632'); sky.addColorStop(1, '#172044');
+      ctx.fillStyle = sky; ctx.fillRect(0, 0, 1200, 620);
+      ctx.fillStyle = '#101d38';
+      for (let x = 0; x < 1200; x += 95) ctx.fillRect(x, 330 + (x * 13 % 80), 78, ground - 330);
+      ctx.fillStyle = '#233252'; ctx.fillRect(0, ground, 1200, 85);
+      ctx.strokeStyle = '#8da8c2'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, ground); ctx.lineTo(1200, ground); ctx.stroke();
+      if (images.ninja?.complete && images.ninja.naturalWidth) {
+        ctx.save(); ctx.globalAlpha = 0.82;
+        ctx.drawImage(images.ninja, targetX - 192, ground - 289, 384, 320);
+        ctx.restore();
+      }
+      ctx.fillStyle = '#bce9ff'; ctx.font = '16px system-ui';
+      ctx.fillText('Vị trí Ninja Hỏa (minh họa)', targetX - 100, ground + 36);
+      if (t < dashDuration) {
+        const pose = dashData.bodySequence.find(item => t >= item.start && t < item.end) || dashData.bodySequence[5];
+        const x = bossX(t);
+        if (t >= 180 && t < 430) {
+          sprite('dash', pose.frame, x - 56, 0.07);
+          sprite('dash', pose.frame, x - 29, 0.16);
+        }
+        sprite('dash', pose.frame, x);
+        phase.textContent = t < 160 ? 'Nén người' : t < 335 ? 'Lướt nhanh' : t < 430 ? 'Hãm tốc' : 'Vào tầm đánh';
+      } else {
+        const comboTime = Math.min(1349, t - dashDuration);
+        const pose = comboData.bodySequence.find(item => comboTime >= item.start && comboTime < item.end) || comboData.bodySequence[15];
+        sprite(pose.sheet, pose.frame, stopX + (pose.offsetX || 0));
+        phase.textContent = comboTime < 150 ? 'Combo · lấy đà' : comboTime < 300 ? '1 · Chém ngang' : comboTime < 450 ? '2 · Chém ngược' : comboTime < 825 ? '3 · Xoay quét thấp' : comboTime < 975 ? 'Dồn lực song đao' : comboTime < 1125 ? '4 · Lao tới chém X' : 'Hồi thế';
+      }
+      clock.textContent = (t / 1000).toFixed(2).replace('.', ',') + ' / 1,91s';
+      seek.value = Math.min(total, t);
+    }
+    function tick(now) {
+      if (playing && previous) {
+        time += (now - previous) * Number(document.getElementById('speed').value);
+        if (time > total + 350) time = 0;
+      }
+      previous = now;
+      draw(Math.min(total, time));
+      requestAnimationFrame(tick);
+    }
+    function step(direction) {
+      const index = frames.findIndex(item => time >= item.start && time < item.end);
+      time = frames[Math.max(0, Math.min(frames.length - 1, index + direction))].start;
+      playing = false; play.textContent = 'Phát'; draw(time);
+    }
+    play.onclick = () => { playing = !playing; play.textContent = playing ? 'Tạm dừng' : 'Phát'; previous = 0; };
+    document.getElementById('replay').onclick = () => { time = 0; playing = true; play.textContent = 'Tạm dừng'; previous = 0; draw(0); };
+    document.getElementById('prev').onclick = () => step(-1);
+    document.getElementById('next').onclick = () => step(1);
+    seek.oninput = () => { time = Number(seek.value); playing = false; play.textContent = 'Phát'; draw(time); };
+    draw(0); requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "status": "ART_CANDIDATE_PENDING_USER_REVIEW",
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_150_PERCENT",
+  "approvedMotion": "USER_APPROVED_TASK_010_17",
+  "approvedEntrance": "USER_APPROVED_TASK_010_18",
+  "reviewDirectory": "docs/map01/commits/task-010-19-boss-khan-combo",
+  "targetInkHeightPx": 376.5,
+  "frameSize": [512,512],
+  "pivot": [256,456],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_NO_FIT_OF_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "combo-a": {"source":"source/combo-a.png","original":"exec-55e896cb-2642-4dae-a5bd-9d0f6b2c2d7c.png","prompt":"prompts/combo-a.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"groundedFrames":[0,1,2,3,4,5,6,7],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":440},
+    "combo-b": {"source":"source/combo-b.png","original":"exec-d2031a06-a49e-4b93-9b15-4dbd60ed10cf.png","iterations":["source/combo-b-first.png","source/combo-b-cleanup.png"],"alphaEditPrompt":"prompts/combo-b-cleanup.md","edgeEditPrompt":"prompts/combo-b-edge.md","prompt":"prompts/combo-b.md","sourceRects":[[0,0,443,443],[443,0,444,443],[887,0,443,443],[1330,0,444,443],[0,443,443,444],[443,443,444,444],[887,443,443,444],[1330,443,444,444]],"columns":4,"rows":2,"count":8,"referenceFrameIndex":7,"groundedFrames":[0,1,2,3,4,5,6,7],"contactPanelWidth":440,"contactPanelHeight":500,"contactBaseline":440}
+  },
+  "timelineMs": {"duration":1200,"hits":[150,375,675,975],"finalFlash":[975,1140]},
+  "bodySequence": [
+    {"sheet":"combo-a","frame":0,"start":0,"end":75},
+    {"sheet":"combo-a","frame":1,"start":75,"end":150},
+    {"sheet":"combo-a","frame":2,"start":150,"end":225},
+    {"sheet":"combo-a","frame":3,"start":225,"end":300},
+    {"sheet":"combo-a","frame":4,"start":300,"end":375},
+    {"sheet":"combo-a","frame":5,"start":375,"end":450},
+    {"sheet":"combo-a","frame":6,"start":450,"end":525},
+    {"sheet":"combo-a","frame":7,"start":525,"end":600},
+    {"sheet":"combo-b","frame":0,"start":600,"end":675},
+    {"sheet":"combo-b","frame":1,"start":675,"end":750},
+    {"sheet":"combo-b","frame":2,"start":750,"end":825},
+    {"sheet":"combo-b","frame":3,"start":825,"end":900},
+    {"sheet":"combo-b","frame":4,"start":900,"end":975},
+    {"sheet":"combo-b","frame":5,"start":975,"end":1050},
+    {"sheet":"combo-b","frame":6,"start":1050,"end":1125},
+    {"sheet":"combo-b","frame":7,"start":1125,"end":1200}
+  ],
+  "reusedFx": {"source":"docs/characters/boss-khan/animation/entrance/sheets/cross.png","name":"finisher-x","purpose":"review-only final-hit flash; copied without regeneration"},
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_DAMAGE_NO_HITBOX_NO_AI"
+}

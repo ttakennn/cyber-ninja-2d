@@ -1,0 +1,59 @@
+{
+  "status": "ART_CANDIDATE_PENDING_USER_REVIEW",
+  "characterDesign": "USER_APPROVED_V1_HEIGHT_150_PERCENT",
+  "reviewDirectory": "docs/map01/commits/task-010-24-boss-khan-blood-mirage",
+  "targetInkHeightPx": 376.5,
+  "frameSize": [512, 512],
+  "pivot": [256, 456],
+  "densityPxPerWorldUnit": 160,
+  "sourceHipXRatio": 0.5,
+  "scalePolicy": "ONE_UNIFORM_SCALE_PER_SHEET_NO_FIT_OF_INDIVIDUAL_POSES",
+  "tool": "image_gen.imagegen built-in",
+  "sheets": {
+    "phantoms": {
+      "source": "source/phantoms.png",
+      "original": "exec-526df44b-cda7-4e8e-8680-7af083c6300b.png",
+      "prompt": "prompts/blood-mirage.md",
+      "sourceRects": [[0,0,656,599],[656,0,656,599],[0,599,656,600],[656,599,656,600]],
+      "sourceAnchors": [[328,495],[328,495],[328,550],[328,550]],
+      "targetCellWidthPx": 506,
+      "columns": 2,
+      "rows": 2,
+      "count": 4,
+      "referenceFrameIndex": 0,
+      "groundedFrames": [0,1],
+      "contactPanelWidth": 440,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440
+    },
+    "finisher": {
+      "source": "source/finisher.png",
+      "original": "exec-bfa8a09c-53b7-4f4b-9cfe-ddf99ec5ff19.png",
+      "prompt": "prompts/blood-mirage.md",
+      "sourceRects": [[0,0,724,543],[724,0,724,543],[0,543,724,543],[724,543,724,543]],
+      "sourceAnchors": [[350,520],[350,520],[350,520],[350,520]],
+      "targetCellWidthPx": 480,
+      "columns": 2,
+      "rows": 2,
+      "count": 4,
+      "referenceFrameIndex": 0,
+      "groundedFrames": [0,1,2,3],
+      "contactPanelWidth": 440,
+      "contactPanelHeight": 500,
+      "contactBaseline": 440
+    }
+  },
+  "timelineMs": {"previewTotal": 2050, "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY"},
+  "bodySequence": [
+    {"phase":"vào thế","start":0,"end":260},
+    {"phase":"ảo ảnh 1","start":260,"end":730},
+    {"phase":"ảo ảnh 2","start":490,"end":940},
+    {"phase":"ảo ảnh 3","start":700,"end":1090},
+    {"phase":"boss thật xuất hiện","sheet":"finisher","frame":0,"start":1090,"end":1310},
+    {"phase":"lấy đà","sheet":"finisher","frame":1,"start":1310,"end":1520},
+    {"phase":"quét đao rộng","sheet":"finisher","frame":2,"start":1520,"end":1770},
+    {"phase":"thu đao","sheet":"finisher","frame":3,"start":1770,"end":2050}
+  ],
+  "timingStatus": "ART_PREVIEW_ONLY_NOT_GAMEPLAY",
+  "gameplay": "NO_RUNTIME_NO_AI_NO_HITBOX_NO_DAMAGE_NO_REAL_GHOST_DETECTION_RULE"
+}

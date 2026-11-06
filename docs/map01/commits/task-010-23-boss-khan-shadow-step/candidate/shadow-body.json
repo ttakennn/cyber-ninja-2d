@@ -1,0 +1,147 @@
+{
+    "image":  "candidate/shadow-body.png",
+    "source":  "source/shadow-step-poses.png",
+    "pixelSize":  [
+                      2048,
+                      1024
+                  ],
+    "sourcePixelSize":  [
+                            1774,
+                            887
+                        ],
+    "frameSize":  [
+                      512,
+                      512
+                  ],
+    "uniformScale":  0.9250614250614250614250614251,
+    "referenceInk128":  [
+                            81,
+                            20,
+                            419,
+                            426
+                        ],
+    "frames":  [
+                   {
+                       "translation":  [
+                                           51,
+                                           58
+                                       ],
+                       "rect":  [
+                                    0,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          0,
+                                          0,
+                                          443,
+                                          443
+                                      ],
+                       "index":  0,
+                       "sourceInk128":  [
+                                            81,
+                                            20,
+                                            419,
+                                            426
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            221.5,
+                                            430
+                                        ],
+                       "ink128":  [
+                                      126,
+                                      77,
+                                      439,
+                                      452
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           51,
+                                           58
+                                       ],
+                       "rect":  [
+                                    512,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          443,
+                                          0,
+                                          444,
+                                          443
+                                      ],
+                       "index":  1,
+                       "sourceInk128":  [
+                                            71,
+                                            122,
+                                            426,
+                                            426
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            222,
+                                            430
+                                        ],
+                       "ink128":  [
+                                      117,
+                                      171,
+                                      445,
+                                      452
+                                  ]
+                   },
+                   {
+                       "translation":  [
+                                           51,
+                                           61
+                                       ],
+                       "rect":  [
+                                    1024,
+                                    0,
+                                    512,
+                                    512
+                                ],
+                       "sourceRect":  [
+                                          1330,
+                                          443,
+                                          444,
+                                          444
+                                      ],
+                       "index":  2,
+                       "sourceInk128":  [
+                                            63,
+                                            21,
+                                            408,
+                                            424
+                                        ],
+                       "pivot":  [
+                                     256,
+                                     456
+                                 ],
+                       "sourceAnchor":  [
+                                            222,
+                                            427
+                                        ],
+                       "ink128":  [
+                                      110,
+                                      81,
+                                      429,
+                                      454
+                                  ]
+                   }
+               ],
+    "original":  "exec-9fa1603c-ec80-4882-99f0-6b48a8603c75.png",
+    "prompt":  "prompts/shadow-step.md",
+    "tool":  "image_gen.imagegen built-in",
+    "sourceSha256":  "14e52f4a67d28c0a4be31884c39af6bb4ee9360dc96f6eb9c53761add212ac41",
+    "sha256":  "b3a00b33a4172b230afae8400e58935ab1f567bb9a35f06d3f4211c4210d31ca"
+}
