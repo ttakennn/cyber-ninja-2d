@@ -1,6 +1,6 @@
 # Ninja Hỏa — animation chốt cho production
 
-- [Mở preview tổng hợp](preview.html): toàn bộ clip và FX đã chốt, tua/frame kế, tốc độ, nền, so Idle và chế độ ghép minh hoạ hai tuyệt kỹ.
+- [Mở preview tổng hợp](preview.html): chọn nhóm động tác cơ bản, combo, phi tiêu, hai tuyệt kỹ, xuất hiện và hồi sinh theo bố cục đã chọn cho Boss Khan. [Basic preview](basic-preview.html) giữ bộ điều khiển tua/frame kế, tốc độ, nền và so Idle của bản trước; từng nhóm combo/skill dùng cùng renderer với danh sách clip riêng, không đổi ảnh hay metadata.
 - [Thiên Hỏa Giáng Lâm1,65s](heavenly-fire-entrance/preview.html) và [Thiên Hỏa Tái Lâm0,75s](heavenly-fire-respawn/preview.html): art đã chốt, chưa tích hợp spawn/respawn vào game.
 - [Hồ sơ production / nguồn / hash](production.json).
 - [Contract nhân vật hiện hành](../rules/SPRITE_SPEC.md).
@@ -30,4 +30,4 @@ Plan: integration/ninja-animation-library/production-plan.json. scripts/publish_
 
 Artwork mới phải authoring/review trong commits theo task; chỉ copy bộ đã chốt vào đây rồi publish catalog. Hai generator Ninja và Sói Điện đã đổi đường ra authoring về reviewDirectory trong commits; mode publish Sói Điện mới cập nhật production. Mỗi task chọn reviewDirectory riêng để không ghi đè snapshot cũ.
 
-Lịch sử lượt gom: docs/map01/commits/task-010-ninja-production/. Chưa thao tác preview tổng hợp trong trình duyệt; test/build/lint/typecheck/formatter **NOT_RUN**, chưa commit/merge/push. Không thay src/public/assets/physics/input hoặc tích hợp spawn/respawn.
+Lịch sử lượt gom: docs/map01/commits/task-010-ninja-production/. [Lịch sử đổi bố cục preview](../../../map01/commits/task-010-27-ninja-preview-layout/README.md). Đã mở preview file cục bộ trong Chrome, thấy nhóm combo/phi tiêu và Canvas con tải được; chưa duyệt hết các nhóm bằng mắt. Test/build/lint/typecheck/formatter **NOT_RUN**. Không thay src/public/assets/physics/input hoặc tích hợp spawn/respawn.

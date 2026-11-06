@@ -21,6 +21,7 @@ Quyết định người dùng2026-11-04, áp dụng mọi nhân vật. Kế th�
 
 - Ưu tiên một `animation/preview.html` làm điểm xem chung, có nút chọn động tác cơ bản, màn xuất hiện, đánh thường, di chuyển đặc biệt và từng skill đã chốt. Giữ bộ điều khiển phát/tạm dừng/tua và bảng frame để người dùng review chi tiết.
 - Khi nâng cấp một preview cơ bản đã duyệt thành trang tổng hợp, giữ nguyên bản cơ bản tại `animation/basic-preview.html`; trang tổng hợp mở lại các preview riêng của từng nhóm. Không vẽ lại hoặc đổi nhịp/atlas đã chốt chỉ để gộp giao diện. Mẫu đã được người dùng chọn: `docs/characters/boss-khan/animation/preview.html`. Dùng mẫu này khi chỉnh thư viện Ninja Hỏa ở task tiếp theo, có điều chỉnh phù hợp dữ liệu của Ninja.
+- Mọi task chỉnh art, metadata hoặc giao diện preview của nhân vật Map01 đều phải có hồ sơ mới trong `docs/map01/commits/<task-id>/`, kể cả khi chỉ đổi cách xem và không sửa PNG. Ghi file đã đổi, lý do, ảnh hưởng, điều đã kiểm tra/NOT_RUN và link sang production; không dùng thông điệp Git commit thay cho hồ sơ task.
 
 ## Nguồn hiện hành
 
