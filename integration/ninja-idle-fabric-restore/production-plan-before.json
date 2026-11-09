@@ -1,0 +1,97 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "character": "ninja",
+  "productionDirectory": "docs/characters/ninja/animation",
+  "historyDirectory": "docs/map01/commits",
+  "groups": [
+    {
+      "id": "locomotion",
+      "fileSources": { "flame-ninja-atlas.png": "docs/map01/commits/task-010-29-ninja-run-hurt-art/flame-ninja-atlas-candidate.png" },
+      "source": "public/assets/characters/ninja",
+      "files": [
+        "flame-ninja-atlas.png",
+        "animations.json"
+      ]
+    },
+    {
+      "id": "attacks",
+      "source": "public/assets/characters/ninja/attacks",
+      "files": [
+        "manifest.json",
+        "attack_1.json",
+        "attack_1.png",
+        "attack_2.json",
+        "attack_2.png",
+        "attack_3.json",
+        "attack_3.png"
+      ]
+    },
+    {
+      "id": "skills/fire-shuriken",
+      "source": "public/assets/characters/ninja/skills/fire-shuriken",
+      "files": [
+        "manifest.json",
+        "throw.json",
+        "throw.png",
+        "crouch-throw.json",
+        "crouch-throw.png",
+        "projectile.json",
+        "projectile.png"
+      ]
+    },
+    {
+      "id": "skills/special-01",
+      "source": "public/assets/characters/ninja/skills/special-01",
+      "files": [
+        "manifest.json",
+        "cast.json",
+        "cast.png",
+        "orb.json",
+        "orb.png",
+        "explosion.json",
+        "explosion.png"
+      ]
+    },
+    {
+      "id": "skills/nine-dragons",
+      "source": "public/assets/characters/ninja/skills/nine-dragons",
+      "files": [
+        "manifest.json",
+        "cast.json",
+        "cast.png",
+        "dragon.json",
+        "dragon.png",
+        "seal.json",
+        "seal.png",
+        "burst.json",
+        "burst.png",
+        "aura.json",
+        "aura.png"
+      ]
+    }
+  ],
+  "entrances": [
+    {
+      "id": "entrance",
+      "name": "Thiên Hỏa Giáng Lâm",
+      "path": "heavenly-fire-entrance/preview.html",
+      "durationMs": 1650,
+      "plan": "integration/task-010-ninja-entrance/art-plan.json"
+    },
+    {
+      "id": "respawn",
+      "name": "Thiên Hỏa Tái Lâm",
+      "path": "heavenly-fire-respawn/preview.html",
+      "durationMs": 750,
+      "plan": "integration/task-010-ninja-respawn/art-plan.json"
+    }
+  ],
+  "climb": {
+    "selectedRevision": "USER_SELECTED_V2",
+    "canonicalImage": "locomotion/flame-ninja-atlas.png",
+    "source": "integration/ninja-climb",
+    "sha256": "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+    "note": "Hash toàn atlas sau run/hurt đã chốt Task10.29; pixel leo không đổi so bản v2."
+  },
+  "note": "Đi/chạy dùng clip run hiện hành; không có walk riêng. Không tự tạo alias/pose mới. Công cụ này chỉ copy file được chốt, không promote vào runtime."
+}

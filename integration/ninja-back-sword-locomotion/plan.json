@@ -1,0 +1,20 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-37-ninja-back-sword-locomotion",
+  "frameWidth":384,"frameHeight":320,"pivot":[192,289],"pixelsPerWorldUnit":160,
+  "sheets":[
+    {"id":"idle","source":"integration/ninja-back-sword-locomotion/idle-source.png","columns":4,"rows":4,"sourcePivotX":190,"sourceRowGround":[308,306,290,283],"sourceReferenceHeight":269,"targetReferenceHeight":251},
+    {"id":"walk","source":"integration/ninja-back-sword-locomotion/walk-source.png","columns":4,"rows":2,"sourcePivotX":240,"sourceRowGround":[411,413],"sourceReferenceHeight":348,"targetReferenceHeight":248},
+    {"id":"run","source":"integration/ninja-back-sword-locomotion/run-source.png","columns":4,"rows":3,"sourcePivotX":180,"sourceRowGround":[343,337,343],"sourceReferenceHeight":278,"targetReferenceHeight":230}
+  ],
+  "clips":[
+    {"id":"idle","label":"Idle · kiếm sau lưng","sheet":"idle","frames":[0,1,2,3,4,5,6,7],"fps":4,"loop":true,"note":"Đứng thả lỏng, tay phải nhẹ trên chuôi kiếm sau vai, tay trái buông. Thở nhẹ, chân đứng yên.","phases":["Thở ra · thả lỏng","Bắt đầu hít vào","Ngực nở nhẹ","Đỉnh nhịp thở","Thả ngực","Vai hạ nhẹ","Thở ra","Nối về frame đầu"]},
+    {"id":"combatIdle","label":"Idle cảnh giác · gặp quái","sheet":"idle","frames":[8,9,10,11,12,13,14,15],"fps":5,"loop":true,"note":"Hạ trọng tâm, tay phải sẵn trên chuôi kiếm, tay trái giữ guard; kiếm vẫn trong bao. Chưa gắn trigger phát hiện quái.","phases":["Giữ guard","Hít vào","Ngực nở nhẹ","Nén gối nhẹ","Duy trì sẵn sàng","Thở ra","Trả trọng tâm","Nối về guard đầu"]},
+    {"id":"walk","label":"Đi bộ","sheet":"walk","frames":[0,1,2,3,4,5,6,7],"fps":9,"loop":true,"note":"Chu kỳ đi riêng: tiếp gót → nhận lực → chân đi qua → đẩy mũi. Luôn có chân đỡ; không làm chậm clip chạy để giả đi.","phases":["Tiếp gót phải","Nhận lực chân phải","Chân trái đi qua","Đẩy mũi phải","Tiếp gót trái","Nhận lực chân trái","Chân phải đi qua","Đẩy mũi trái → nối vòng"]},
+    {"id":"run","label":"Chạy · 12 frame","sheet":"run","frames":[0,1,2,3,4,5,6,7,8,9,10,11],"fps":15,"loop":true,"note":"Nghiêng người, một tay giữ chuôi sau vai như mẫu; chân đạp/thu/đưa luân phiên, có nhịp bay. Không kéo chân ở frame bay xuống đường đất.","phases":["Chạm chân phải","Nén lực phải","Đạp mũi phải","Bay ngắn · thu chân","Đưa chân trái","Chuẩn bị tiếp trái","Chạm chân trái","Nén lực trái","Đạp mũi trái","Bay ngắn · đổi chân","Đưa chân phải","Chuẩn bị tiếp phải → nối vòng"]}
+  ],
+  "normalization":"One fixed scale per full source sheet; both Idle variants share the same scale. Head-to-foot body references exclude hilt/scarf. Row-floor translation is shared by every frame in a row; airborne run frames are never snapped to floor. No per-frame fit, mirroring or runtime collider changes.",
+  "equipment":"Same original gold-hilt sword, sheathed diagonally on back for all four candidate clips. No duplicate hip scabbard. Sword blade/fire design not changed; blade hidden while sheathed.",
+  "timingStatus":"PREVIEW_PROPOSAL_ONLY",
+  "runtimeStatus":"UNCHANGED"
+}

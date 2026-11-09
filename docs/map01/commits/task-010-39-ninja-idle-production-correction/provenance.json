@@ -1,0 +1,45 @@
+﻿{
+    "reference":  "Sole imagegen reference: six Idle frames cropped directly from current production atlas using production animations.json. No rejected candidates used as imagegen reference.",
+    "files":  [
+                  {
+                      "sha256":  "f7b9c5700e6202d464fb39af3655201f96b282cb4d6bb80ebbe0a09f8df673d4",
+                      "path":  "integration/ninja-idle-production-correction/idle-source.png"
+                  },
+                  {
+                      "sha256":  "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+                      "path":  "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+                  },
+                  {
+                      "sha256":  "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f",
+                      "path":  "docs/characters/ninja/animation/locomotion/animations.json"
+                  },
+                  {
+                      "sha256":  "b441eab5e910bd6714924752a5e3e5045ace21b4ee8484201da37c14cc54cdb5",
+                      "path":  "integration/ninja-idle-production-correction/prompt.txt"
+                  },
+                  {
+                      "sha256":  "962eb47e7ea8f82ab8a600cc19daec724296195291d324ec323d7be105a13ef2",
+                      "path":  "integration/ninja-idle-production-correction/plan.json"
+                  },
+                  {
+                      "sha256":  "aea60da157a728c776d9d1680f9c230960ef793e3aaf8f6ecc3fa828cb758513",
+                      "path":  "integration/ninja-idle-production-correction/preview.js"
+                  },
+                  {
+                      "sha256":  "9337fa6c6a14f5b7fa3392a683830b4ebda6c3a02df2fca0ab5156a895dbd593",
+                      "path":  "scripts/prepare_ninja_idle_production_correction.ps1"
+                  },
+                  {
+                      "sha256":  "682d894ac0cb7bd0bebbdaa56715430b71bdafcb49e0f33bcc1db579d0985361",
+                      "path":  "docs/map01/commits/task-010-39-ninja-idle-production-correction/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "4ab36a0fce447d540f27642289d0885a491ec1b625bd3608f60ddaf784fd4942",
+                      "path":  "docs/map01/commits/task-010-39-ninja-idle-production-correction/production-idle-atlas.png"
+                  }
+              ],
+    "productionChanged":  false,
+    "runtimeChanged":  false,
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "tool":  "image_gen.imagegen"
+}

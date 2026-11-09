@@ -1,0 +1,17 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-38-ninja-upright-locomotion",
+  "frameWidth":384,"frameHeight":320,"pivot":[192,289],"pixelsPerWorldUnit":160,
+  "sheets":[
+    {"id":"idle","source":"integration/ninja-upright-locomotion/idle-source.png","columns":4,"rows":4,"sourcePivotX":192,"sourceRowGround":[276,276,276,277],"sourceReferenceHeight":255,"targetReferenceHeight":251},
+    {"id":"run","source":"integration/ninja-upright-locomotion/run-source.png","columns":4,"rows":3,"sourcePivotX":205,"sourceRowGround":[290,284,289],"sourceReferenceHeight":255,"targetReferenceHeight":251}
+  ],
+  "clips":[
+    {"id":"idle","label":"Idle thở · kiếm sau lưng","sheet":"idle","frames":[0,1,2,3,4,5,6,7],"fps":4,"loop":true,"note":"Giữ dáng đứng và hai tay buông theo Idle gốc. Kiếm/bao kiếm chuyển lên lưng. Ngực thở nhẹ, chân giữ nguyên thế.","phases":["Thả lỏng","Hít vào nhẹ","Ngực nâng nhẹ","Đỉnh nhịp thở","Thở ra nhẹ","Vai thả","Giữ thế đứng","Nối về đầu"]},
+    {"id":"combatIdle","label":"Idle gặp quái · đứng thẳng","sheet":"idle","frames":[8,9,10,11,12,13,14,15],"fps":4,"loop":true,"note":"Người đứng thẳng, tay trái vẫn buông như Idle gốc, không nâng thủ/chùng gối. Khí chất cảnh giác qua ánh nhìn và ngực mở nhẹ; chưa có trigger quái.","phases":["Nhìn thẳng cảnh giác","Hít vào nhẹ","Mở ngực nhẹ","Giữ vẻ điềm tĩnh","Thở ra nhẹ","Thả vai","Giữ ánh nhìn","Nối về đầu"]},
+    {"id":"run","label":"Chạy · sải chân dài","sheet":"run","frames":[0,1,2,3,4,5,6,7,8,9,10,11],"fps":15,"loop":true,"note":"Tay trái đưa ngang ngực, tay phải giữ chuôi sau vai. Chân đạp/duỗi dài hơn bản trước; thân nghiêng gọn. Dùng chung hệ số kích thước với Idle, không phóng theo chiều cao từng pose.","phases":["Chạm đất · chân đỡ","Nhận trọng lượng","Duỗi chân đạp","Bay · mở sải chân","Vươn chân trước","Chuẩn bị tiếp đất","Chân đối bên đỡ","Chuyển trọng lượng","Duỗi chân đối bên","Bay · mở sải đối bên","Thu bước","Chuẩn bị nối vòng"]}
+  ],
+  "normalization":"Both full source sheets share the SAME fixed scale251/255, based on skull-top21 to planted foot275 of new Idle versus original251px. No per-frame or per-clip height fit. Shared row-floor translation retains running flight; frame384x320 and pivot192,289 unchanged. Hood upper20px landmark width: original47, newIdle47, run44 (rotated view; a size check, not proof of pixel-identical anatomy).",
+  "equipment":"One sheathed original gold-hilt sword on back. Both arms down in both Idle variants; right hand near back hilt only while running. No hip sword requested.",
+  "timingStatus":"PREVIEW_PROPOSAL_ONLY","runtimeStatus":"UNCHANGED"
+}

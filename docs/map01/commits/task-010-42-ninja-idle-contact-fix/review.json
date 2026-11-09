@@ -1,0 +1,206 @@
+{
+    "pixelAudit":  [
+                       {
+                           "frame":  0,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  112,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  1,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  158,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  2,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  114,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  3,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  131,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  4,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  146,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  5,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  105,
+                           "abdomenDifferences":  0
+                       }
+                   ],
+    "fps":  7.1429,
+    "loop":  true,
+    "axis":  [
+                 [
+                     174,
+                     22
+                 ],
+                 [
+                     174,
+                     62
+                 ]
+             ],
+    "scope":  "Only remove old grip exterior to near fist and connect back-sword base to scarf/back. Preserve Task10.41 production-derived body, head/eyes, waist, scale, frame order and per-frame shoulder offsets. No publication/runtime changes.",
+    "pivot":  [
+                  192,
+                  289
+              ],
+    "frames":  [
+                   {
+                       "y":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  0
+                   },
+                   {
+                       "y":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  384
+                   },
+                   {
+                       "y":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  768
+                   },
+                   {
+                       "y":  320,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  0
+                   },
+                   {
+                       "y":  320,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  384
+                   },
+                   {
+                       "y":  320,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  768
+                   }
+               ],
+    "attachments":  [
+                        {
+                            "frame":  0,
+                            "shoulderOffset":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordAxisX":  174,
+                            "scarfContactY":  61,
+                            "visibleBottom":  64,
+                            "swordTop":  26
+                        },
+                        {
+                            "frame":  1,
+                            "shoulderOffset":  [
+                                                   2,
+                                                   -1
+                                               ],
+                            "swordAxisX":  176,
+                            "scarfContactY":  58,
+                            "visibleBottom":  61,
+                            "swordTop":  25
+                        },
+                        {
+                            "frame":  2,
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "swordAxisX":  168,
+                            "scarfContactY":  61,
+                            "visibleBottom":  64,
+                            "swordTop":  24
+                        },
+                        {
+                            "frame":  3,
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   0
+                                               ],
+                            "swordAxisX":  168,
+                            "scarfContactY":  62,
+                            "visibleBottom":  65,
+                            "swordTop":  26
+                        },
+                        {
+                            "frame":  4,
+                            "shoulderOffset":  [
+                                                   -8,
+                                                   0
+                                               ],
+                            "swordAxisX":  166,
+                            "scarfContactY":  64,
+                            "visibleBottom":  67,
+                            "swordTop":  26
+                        },
+                        {
+                            "frame":  5,
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "swordAxisX":  168,
+                            "scarfContactY":  61,
+                            "visibleBottom":  64,
+                            "swordTop":  24
+                        }
+                    ],
+    "status":  "CANDIDATE_PENDING_REVIEW"
+}

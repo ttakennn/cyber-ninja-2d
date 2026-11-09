@@ -1,0 +1,30 @@
+[
+  {
+    "path": "scripts/package_ninja_idle_fabric_release.ps1",
+    "sha256": "fbbe3f18c812bd0f221ad3830b7f4cf194cf0e64bca6e0313fb84223d3d3c223"
+  },
+  {
+    "path": "scripts/publish_ninja_idle_fabric_release.mjs",
+    "sha256": "0aa8f212ee212ec30e0c156725a7bee0782a250fdd5e7aa6abc0aaa6e894fa39"
+  },
+  {
+    "path": "scripts/prepare_ninja_idle_fabric_restore.ps1",
+    "sha256": "c3f942b230745b478debd5395cfe8d184274df15b09d5bfa36f7db82bcd515bc"
+  },
+  {
+    "path": "scripts/assemble_ninja_idle_fabric_review.mjs",
+    "sha256": "3131ff61eb5959337dd5cddaa8562b29e7406e48fc9d09f3ab5a2612dd44d6e4"
+  },
+  {
+    "path": "integration/ninja-idle-fabric-restore/plan.json",
+    "sha256": "69850b0618371822237eeeaa4ae210132c6ef0b0711607cf8df771d5812111fe"
+  },
+  {
+    "path": "docs/map01/commits/task-010-46-ninja-idle-fabric-restore/idle-atlas.png",
+    "sha256": "bab3bdcae0ec5868474290070e6cbc36ec46ee54effedb98e374c82c555ed7c4"
+  },
+  {
+    "path": "docs/map01/commits/task-010-46-ninja-idle-fabric-restore/flame-ninja-atlas.png",
+    "sha256": "7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572"
+  }
+]

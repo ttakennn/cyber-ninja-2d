@@ -1,0 +1,282 @@
+{
+    "scope":  "Rebuild body directly from production Idle. Restore original arm/forearm/glove silhouette and original visible torso/waist; guide only in old weapon footprint. Keep back-sword placement/motion from Task10.42. No publishing/runtime.",
+    "pixelAudit":  [
+                       {
+                           "armDifferences":  0,
+                           "frame":  0,
+                           "protectedArmPixels":  2277,
+                           "occludedClothRepairPixels":  1547,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0,
+                           "visibleBodyOutsideWeaponDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  1,
+                           "protectedArmPixels":  2236,
+                           "occludedClothRepairPixels":  1498,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0,
+                           "visibleBodyOutsideWeaponDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  2,
+                           "protectedArmPixels":  2287,
+                           "occludedClothRepairPixels":  1601,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0,
+                           "visibleBodyOutsideWeaponDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  3,
+                           "protectedArmPixels":  2260,
+                           "occludedClothRepairPixels":  1549,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0,
+                           "visibleBodyOutsideWeaponDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  4,
+                           "protectedArmPixels":  2294,
+                           "occludedClothRepairPixels":  1528,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0,
+                           "visibleBodyOutsideWeaponDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  5,
+                           "protectedArmPixels":  2278,
+                           "occludedClothRepairPixels":  1601,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0,
+                           "visibleBodyOutsideWeaponDifferences":  0
+                       }
+                   ],
+    "loop":  true,
+    "fps":  7.1429,
+    "attachments":  [
+                        {
+                            "guideAlignment":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordTop":  26,
+                            "handOffset":  [
+                                               0,
+                                               0
+                                           ],
+                            "shoulderOffset":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "frame":  0,
+                            "visibleBottom":  64,
+                            "forearmOffset":  [
+                                                  0,
+                                                  0
+                                              ],
+                            "hipOffset":  [
+                                              0,
+                                              0
+                                          ],
+                            "swordAxisX":  174
+                        },
+                        {
+                            "guideAlignment":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordTop":  25,
+                            "handOffset":  [
+                                               5,
+                                               -2
+                                           ],
+                            "shoulderOffset":  [
+                                                   2,
+                                                   -1
+                                               ],
+                            "frame":  1,
+                            "visibleBottom":  62,
+                            "forearmOffset":  [
+                                                  5,
+                                                  -2
+                                              ],
+                            "hipOffset":  [
+                                              -1,
+                                              -3
+                                          ],
+                            "swordAxisX":  176
+                        },
+                        {
+                            "guideAlignment":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordTop":  24,
+                            "handOffset":  [
+                                               -2,
+                                               0
+                                           ],
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "frame":  2,
+                            "visibleBottom":  64,
+                            "forearmOffset":  [
+                                                  -5,
+                                                  0
+                                              ],
+                            "hipOffset":  [
+                                              -6,
+                                              -1
+                                          ],
+                            "swordAxisX":  168
+                        },
+                        {
+                            "guideAlignment":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordTop":  26,
+                            "handOffset":  [
+                                               0,
+                                               2
+                                           ],
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   0
+                                               ],
+                            "frame":  3,
+                            "visibleBottom":  65,
+                            "forearmOffset":  [
+                                                  -2,
+                                                  2
+                                              ],
+                            "hipOffset":  [
+                                              -5,
+                                              -1
+                                          ],
+                            "swordAxisX":  168
+                        },
+                        {
+                            "guideAlignment":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordTop":  26,
+                            "handOffset":  [
+                                               -4,
+                                               3
+                                           ],
+                            "shoulderOffset":  [
+                                                   -8,
+                                                   0
+                                               ],
+                            "frame":  4,
+                            "visibleBottom":  67,
+                            "forearmOffset":  [
+                                                  -7,
+                                                  3
+                                              ],
+                            "hipOffset":  [
+                                              -8,
+                                              1
+                                          ],
+                            "swordAxisX":  166
+                        },
+                        {
+                            "guideAlignment":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordTop":  24,
+                            "handOffset":  [
+                                               -2,
+                                               1
+                                           ],
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "frame":  5,
+                            "visibleBottom":  64,
+                            "forearmOffset":  [
+                                                  -3,
+                                                  0
+                                              ],
+                            "hipOffset":  [
+                                              -5,
+                                              -1
+                                          ],
+                            "swordAxisX":  168
+                        }
+                    ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "frames":  [
+                   {
+                       "y":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  0
+                   },
+                   {
+                       "y":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  384
+                   },
+                   {
+                       "y":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  768
+                   },
+                   {
+                       "y":  320,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  0
+                   },
+                   {
+                       "y":  320,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  384
+                   },
+                   {
+                       "y":  320,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "height":  320,
+                       "x":  768
+                   }
+               ]
+}

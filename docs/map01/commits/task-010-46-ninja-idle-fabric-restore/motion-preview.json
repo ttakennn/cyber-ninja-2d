@@ -1,0 +1,7 @@
+{
+  "frames": 6,
+  "delayMilliseconds": 140,
+  "loop": true,
+  "source": "motion-frames/frame-0..5.gif",
+  "purpose": "Art review only; PNG atlas remains source quality."
+}

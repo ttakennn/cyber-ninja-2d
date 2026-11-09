@@ -1,0 +1,81 @@
+﻿{
+    "pixelAudit":  [
+                       {
+                           "headPixelDifferences":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "frame":  0
+                       },
+                       {
+                           "headPixelDifferences":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "frame":  1
+                       },
+                       {
+                           "headPixelDifferences":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "frame":  2
+                       },
+                       {
+                           "headPixelDifferences":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "frame":  3
+                       },
+                       {
+                           "headPixelDifferences":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "frame":  4
+                       },
+                       {
+                           "headPixelDifferences":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "frame":  5
+                       }
+                   ],
+    "files":  [
+                  {
+                      "sha256":  "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+                      "path":  "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+                  },
+                  {
+                      "sha256":  "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f",
+                      "path":  "docs/characters/ninja/animation/locomotion/animations.json"
+                  },
+                  {
+                      "sha256":  "6527d968b1f9fd6901774861547b6ce8fb0e2e013af94aa56592d89aec06b4f2",
+                      "path":  "integration/ninja-idle-vertical-sword/cleanup-source.png"
+                  },
+                  {
+                      "sha256":  "b7e59eef95913dd1b50e7937cf8ec4cd6526b39d4a45d858e267acfe6231810f",
+                      "path":  "integration/ninja-idle-vertical-sword/weapon-source.png"
+                  },
+                  {
+                      "sha256":  "8bbecb0507f18dd0eb1d6bef51dc1bfd8f5777446bbc8ca4fb50669a157cd4da",
+                      "path":  "integration/ninja-idle-vertical-sword/cleanup-prompt.txt"
+                  },
+                  {
+                      "sha256":  "88903bf89517821c7e22c1f455610431eacf537b415bcbf18c9d4b0cf63c6177",
+                      "path":  "integration/ninja-idle-vertical-sword/weapon-prompt.txt"
+                  },
+                  {
+                      "sha256":  "847cabbd3683e1b32de8fedbe79c78715434f4a541a50baec007e024a8dc8f81",
+                      "path":  "integration/ninja-idle-vertical-sword/plan.json"
+                  },
+                  {
+                      "sha256":  "393635a24d1056ff76a4bf63b6f8523bff9a9cfb7487889c55cd62cca0d3d079",
+                      "path":  "scripts/prepare_ninja_idle_vertical_sword.ps1"
+                  },
+                  {
+                      "sha256":  "3735e5c36d41d3b4c283fed12e54fdd052f403c90d5fae6303d043be84a23ae0",
+                      "path":  "docs/map01/commits/task-010-40-ninja-idle-vertical-sword/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "404766859dfabb907f06bd1dc7e48f70cbe3ceb2d9d26718f3c170c116882708",
+                      "path":  "docs/map01/commits/task-010-40-ninja-idle-vertical-sword/back-sword.png"
+                  }
+              ],
+    "productionChanged":  false,
+    "runtimeChanged":  false,
+    "method":  "Imagegen supplies hip cleanup and isolated vertical sword artwork. Deterministic original-pixel preservation during packaging; original body is not resized. Sword is a single rigid layer behind original body.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "tool":  "image_gen.imagegen"
+}

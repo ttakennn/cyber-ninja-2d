@@ -1,0 +1,42 @@
+{
+  "status": "CANDIDATE_SELF_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-47-ninja-idle-sash-alignment",
+  "productionAtlas": "integration/ninja-idle-sash-alignment/production-reference-atlas.png",
+  "productionMetadata": "integration/ninja-idle-sash-alignment/production-reference-animations.json",
+  "previousDirectory": "docs/map01/commits/task-010-46-ninja-idle-fabric-restore",
+  "guide": "integration/ninja-idle-sash-alignment/sash-guide.png",
+  "guideCrop": [
+    160,
+    95,
+    88,
+    88
+  ],
+  "hipOffsets": [
+    [
+      0,
+      0
+    ],
+    [
+      -1,
+      -3
+    ],
+    [
+      -6,
+      -1
+    ],
+    [
+      -5,
+      -1
+    ],
+    [
+      -8,
+      1
+    ],
+    [
+      -5,
+      -1
+    ]
+  ],
+  "scope": "Only waist sash and its 1–2px shirt/hip contact edges. User confirmed the original production also has the sash alignment defect. All other approved details must remain exact. No anatomy, scarf, sword, arm, glove, hanging flap, legs or clip timing changes.",
+  "releaseAuthority": "Existing delegated release authorization continues; current request explicitly corrects the production sash defect and approves all other details unchanged."
+}

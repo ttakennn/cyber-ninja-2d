@@ -1,0 +1,18 @@
+[
+  {
+    "path": "docs/map01/commits/task-010-44-ninja-idle-production-restore/body-atlas.png",
+    "sha256": "50b138b7cef9df6374370ddacef86faf0995d0f0a2512692aac30cf724162bf9"
+  },
+  {
+    "path": "docs/map01/commits/task-010-44-ninja-idle-production-restore/idle-atlas.png",
+    "sha256": "b631f8a8f8fac7631cc4d458d5b41d7833b565454a4a827607c9472ebbf3589f"
+  },
+  {
+    "path": "docs/map01/commits/task-010-44-ninja-idle-production-restore/review.json",
+    "sha256": "7f74c3d32032b9bc2e04bb495ca560b31af9d67f57a4f74774a477244e2f885c"
+  },
+  {
+    "path": "scripts/assemble_ninja_idle_seam_review.mjs",
+    "sha256": "d460b372e0512db1e68fc1645053a10614e05b1c5a59c91300a698e96293bcd2"
+  }
+]

@@ -1,0 +1,53 @@
+﻿{
+    "files":  [
+                  {
+                      "sha256":  "71a775f4075cd16e0275331381d0cad4e4de7a2b837aadaf0657aec4beb3d43a",
+                      "path":  "integration/ninja-back-sword-locomotion/plan.json"
+                  },
+                  {
+                      "sha256":  "8814c11b78996d2e19c219322ee7c1be1f318fb64a70bf129d568cc3fe36714f",
+                      "path":  "integration/ninja-back-sword-locomotion/idle-prompt.txt"
+                  },
+                  {
+                      "sha256":  "2cd5e9e27629daa68a0e6374e5f9fc8b96b368bf3b834028ef9a635112e6bfe6",
+                      "path":  "integration/ninja-back-sword-locomotion/walk-prompt.txt"
+                  },
+                  {
+                      "sha256":  "17f05a6043b7e8bf35c1b1d0e62718ba6ccad20f3ce8e27fa08cb5405d3cae1f",
+                      "path":  "integration/ninja-back-sword-locomotion/run-prompt.txt"
+                  },
+                  {
+                      "sha256":  "6f98240e19c1335528b259a4d20fe49fb257f7c2dc991fef6d387c923be8326e",
+                      "path":  "integration/ninja-back-sword-locomotion/preview.js"
+                  },
+                  {
+                      "sha256":  "f604d60fbd10a70eb0a709b834741d4ace49eacef78c19e53e1841aeb1555c9c",
+                      "path":  "integration/ninja-back-sword-locomotion/idle-source.png"
+                  },
+                  {
+                      "sha256":  "0bf738f92b25803ffc276b53a463ac63825894117eb7bc3ddb90c085d978613e",
+                      "path":  "docs/map01/commits/task-010-37-ninja-back-sword-locomotion/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "16ca8aa8eff0ffee180c1b811c61c0fdf5f353dc7a18bf04c1b075de3027d51d",
+                      "path":  "integration/ninja-back-sword-locomotion/walk-source.png"
+                  },
+                  {
+                      "sha256":  "eee614f7a571ed36b718bfa5d237c0a0becd986059c2267f8cf9677614835818",
+                      "path":  "docs/map01/commits/task-010-37-ninja-back-sword-locomotion/walk-atlas.png"
+                  },
+                  {
+                      "sha256":  "aead799fe6c4ce10af6b56c484bc7c8a38e76e4b88c921f557e268f8fc5e5f96",
+                      "path":  "integration/ninja-back-sword-locomotion/run-source.png"
+                  },
+                  {
+                      "sha256":  "80c13e76a7276eefe76b47f5af5ed01cb5b4fe5855de3d6a242cd78b2ab7c7ee",
+                      "path":  "docs/map01/commits/task-010-37-ninja-back-sword-locomotion/run-atlas.png"
+                  }
+              ],
+    "productionChanged":  false,
+    "runtimeChanged":  false,
+    "referenceTransport":  "Idle: user three pose references plus approved Idle/run. Walk: five most recent images including new Idle. Run: five most recent images including new Idle/walk and user run reference.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "tool":  "image_gen.imagegen"
+}

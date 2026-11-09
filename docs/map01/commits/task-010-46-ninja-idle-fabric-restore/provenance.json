@@ -1,0 +1,114 @@
+﻿{
+    "pixelAudit":  [
+                       {
+                           "armDifferences":  0,
+                           "frame":  0,
+                           "outsideEditVsProductionDifferences":  0,
+                           "editedPixelsVsProduction":  1775,
+                           "protectedArmPixels":  2254,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  1,
+                           "outsideEditVsProductionDifferences":  0,
+                           "editedPixelsVsProduction":  1698,
+                           "protectedArmPixels":  2216,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  2,
+                           "outsideEditVsProductionDifferences":  0,
+                           "editedPixelsVsProduction":  1795,
+                           "protectedArmPixels":  2268,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  3,
+                           "outsideEditVsProductionDifferences":  0,
+                           "editedPixelsVsProduction":  1732,
+                           "protectedArmPixels":  2258,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  4,
+                           "outsideEditVsProductionDifferences":  0,
+                           "editedPixelsVsProduction":  1745,
+                           "protectedArmPixels":  2277,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  5,
+                           "outsideEditVsProductionDifferences":  0,
+                           "editedPixelsVsProduction":  1813,
+                           "protectedArmPixels":  2273,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       }
+                   ],
+    "files":  [
+                  {
+                      "sha256":  "503d5a384af6116ef10c6bb75248060ca47a82fa6d69e1fc5baa7e33638fdaa2",
+                      "path":  "docs/map01/commits/task-010-45-ninja-idle-seam-cleanup/body-atlas.png"
+                  },
+                  {
+                      "sha256":  "1817d70d54cf0346669a6930f70d8e907aa717b77db5cfaf1932158110785c7a",
+                      "path":  "docs/map01/commits/task-010-45-ninja-idle-seam-cleanup/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "cd30e2690d2f27fa43901b3a9c99cacd58684e83768b5e3c42cc9592022c57c6",
+                      "path":  "docs/map01/commits/task-010-45-ninja-idle-seam-cleanup/review.json"
+                  },
+                  {
+                      "sha256":  "3131ff61eb5959337dd5cddaa8562b29e7406e48fc9d09f3ab5a2612dd44d6e4",
+                      "path":  "scripts/assemble_ninja_idle_fabric_review.mjs"
+                  },
+                  {
+                      "sha256":  "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+                      "path":  "integration/ninja-idle-fabric-restore/production-reference-atlas.png"
+                  },
+                  {
+                      "sha256":  "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f",
+                      "path":  "integration/ninja-idle-fabric-restore/production-reference-animations.json"
+                  },
+                  {
+                      "sha256":  "c4a60dc54390662c4668e317c7cc4e686e5f4dfa7bd8ba993e0e19a67ef9111e",
+                      "path":  "integration/ninja-idle-fabric-restore/fabric-guide.png"
+                  },
+                  {
+                      "sha256":  "61377c023107b5f11a21c4d652c76b3fe705aa116fd928d1e73f3fad95bb14b8",
+                      "path":  "docs/map01/commits/task-010-41-ninja-idle-attached-sword/back-sword.png"
+                  },
+                  {
+                      "sha256":  "69850b0618371822237eeeaa4ae210132c6ef0b0711607cf8df771d5812111fe",
+                      "path":  "integration/ninja-idle-fabric-restore/plan.json"
+                  },
+                  {
+                      "sha256":  "0dc8a44f01eb97fcb4a172a145afd4bf34bb791b75c6f950c2d3528cdd22d9a2",
+                      "path":  "integration/ninja-idle-fabric-restore/prompt.txt"
+                  },
+                  {
+                      "sha256":  "c3f942b230745b478debd5395cfe8d184274df15b09d5bfa36f7db82bcd515bc",
+                      "path":  "scripts/prepare_ninja_idle_fabric_restore.ps1"
+                  },
+                  {
+                      "sha256":  "bab3bdcae0ec5868474290070e6cbc36ec46ee54effedb98e374c82c555ed7c4",
+                      "path":  "docs/map01/commits/task-010-46-ninja-idle-fabric-restore/idle-atlas.png"
+                  }
+              ],
+    "method":  "Native production body; surgical textured fabric guide for hidden hip weapons and missing flap, original visible sash pixels, tightened arm silhouette and no leftover grip. Back sword unchanged.",
+    "status":  "SELF_REVIEWED_ART_RELEASE",
+    "releaseEvidence":  "release-evidence.json",
+    "authoringWritesProduction":  false,
+    "phase":  "AUTHORING_ONLY",
+    "runtimeChanged":  false
+}

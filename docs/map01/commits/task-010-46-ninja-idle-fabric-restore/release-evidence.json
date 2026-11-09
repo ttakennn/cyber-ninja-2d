@@ -1,0 +1,53 @@
+{
+  "release": "docs/map01/commits/task-010-46-ninja-idle-fabric-restore/flame-ninja-atlas.png",
+  "stage": "PUBLISHED_ART_SELF_REVIEWED",
+  "idleRgbaDifferencesFromReviewedAtlas": 0,
+  "browser": "BLOCKED_CURRENT_CHROME_URL_UNAVAILABLE",
+  "width": 3136,
+  "authority": "User requested autonomous art review and release once production likeness is met, 2026-11-09; not a claim that the user viewed this revision.",
+  "baseline": "integration/ninja-idle-fabric-restore/production-reference-atlas.png",
+  "releaseSha256": "7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572",
+  "baselineSha256": "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+  "height": 1968,
+  "nonIdleRgbaDifferences": 0,
+  "changedSourceRects": [
+    [
+      4,
+      4
+    ],
+    [
+      396,
+      4
+    ],
+    [
+      788,
+      4
+    ],
+    [
+      1180,
+      4
+    ],
+    [
+      1572,
+      4
+    ],
+    [
+      1964,
+      4
+    ]
+  ],
+  "testBuild": "NOT_RUN",
+  "runtimeChanged": false,
+  "metadataChanged": false,
+  "canonical": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "canonicalSha256": "7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572",
+  "changedAssetFiles": [
+    "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+  ],
+  "unchangedAssetFiles": 39,
+  "metadataFiles": [
+    "docs/characters/ninja/animation/production.json",
+    "docs/characters/ninja/animation/review-data.js",
+    "integration/ninja-animation-library/production-plan.json"
+  ]
+}

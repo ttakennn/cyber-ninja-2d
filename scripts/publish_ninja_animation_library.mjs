@@ -11,9 +11,9 @@ for (const group of plan.groups) {
   const names = group.files;
   if (!Array.isArray(names) || !names.length) throw new Error('Thiếu danh sách file đã duyệt: '+group.id);
   for (const name of names) {
-    const origin = new URL(name, source), target = new URL(name, destination), bytes = readFileSync(origin);
+    const origin = group.fileSources?.[name] ? new URL(group.fileSources[name], repo) : new URL(name, source), target = new URL(name, destination), bytes = readFileSync(origin);
     copyFileSync(origin, target);
-    files.push({ path:group.id+'/'+name, source:group.source+'/'+name, sha256:createHash('sha256').update(bytes).digest('hex') });
+    files.push({ path:group.id+'/'+name, source:group.fileSources?.[name] ?? group.source+'/'+name, sha256:createHash('sha256').update(bytes).digest('hex') });
     if (!name.endsWith('.json')) continue;
     const value = JSON.parse(bytes.toString('utf8'));
     if (value.clips && value.image) sheets[group.id+'/'+name.replace(/\.json$/,'')] = { image:group.id+'/'+value.image, metadata:group.id+'/'+name, sheet:value };
@@ -31,10 +31,10 @@ for (const entrance of plan.entrances) {
     source:entrance.plan.replace(/art-plan\.json$/,'')+asset.source, sha256:asset.sha256 });
 }
 const production = { status:plan.status, character:plan.character, plan:'integration/ninja-animation-library/production-plan.json',
-  artApproval:'USER_APPROVED', runtimeAcceptance:'NOT_RUN_THIS_TASK', climb:plan.climb, files, entrances:plan.entrances,
+  artApproval:plan.idleRelease?.status==='USER_AUTHORIZED_RELEASE_AFTER_SELF_REVIEW'?'USER_APPROVED_BASE_WITH_DELEGATED_IDLE_RELEASE':'USER_APPROVED', idleRelease:plan.idleRelease, runtimeAcceptance:'NOT_RUN_THIS_TASK', climb:plan.climb, files, entrances:plan.entrances,
   notes:[plan.note,'Các manifest/JSON copy nguyên file; đường source/plan lịch sử tính từ repo, không tự chỉnh gameplay.'] };
 writeFileSync(new URL('production.json', out), JSON.stringify(production,null,2)+'\n');
 writeFileSync(new URL('review-data.js', out), 'window.ninjaLibrary='+JSON.stringify({production,sheets,manifests})+';\n');
 copyFileSync(new URL('integration/ninja-climb/climb-poses.png', repo), new URL('locomotion/climb-poses.png', out));
-console.log('Published approved Ninja animation files and preview metadata; PNGs and runtime unchanged.');
+console.log('Published approved Ninja animation files and preview metadata; source PNG bytes preserved, runtime unchanged.');
 

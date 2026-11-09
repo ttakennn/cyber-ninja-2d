@@ -1,0 +1,14 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-39-ninja-idle-production-correction",
+  "source":"integration/ninja-idle-production-correction/idle-source.png",
+  "productionReference":"docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "productionMetadata":"docs/characters/ninja/animation/locomotion/animations.json",
+  "columns":3,"rows":2,"sourcePivotX":286,"sourceHeadY":52,"sourceRowGround":[426,428],
+  "sourceReferenceHeight":374,"targetReferenceHeight":251,
+  "frameWidth":384,"frameHeight":320,"pivot":[192,289],"pixelsPerWorldUnit":160,
+  "fps":7.1429,"loop":true,
+  "swordAxisSource":[[381,68],[201,282]],
+  "scope":"Only relaxed Idle/breathing; enemy-alert Idle and run remain deferred. Production Idle is sole anatomy/clothing/scale reference. No publication/runtime changes.",
+  "normalization":"One fixed uniform scale251/374 for all6poses, based on first production-equivalent skull-to-floor height. No horizontal stretch or independent per-frame fit; ground translation shared by source row. Source first skull52/floor426. Sword axis overlay is a visual review guide, not an automatic geometry acceptance."
+}

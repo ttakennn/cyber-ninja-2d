@@ -1,0 +1,21 @@
+Create a12-frame COMPLETE NINJA RUN/SPRINT CYCLE of EXACT Flame Ninja. Equal4columns x3rows,12 chronological unique frames, transparent RGBA. Reference user's blue ninja run for dynamic leaned posture and physical gait ONLY. Most recent new Flame Ninja Idle/walk lock identity and BACK-SHEATH EQUIPMENT; original Flame Ninja locks pixel illustration/anatomy. Preserve black hood/mask, red scarf/sash, muscular bare arms, sleeveless black/red outfit, dark trousers and silver shin plates. Same head/bone lengths/body mass in all frames, no body inflation or redesign.
+
+One ORIGINAL GOLD-HILT SWORD SHEATHED DIAGONALLY ON BACK, gold hilt above right shoulder and dark scabbard secured behind torso, no sword at hip, no exposed blade or VFX. RIGHT hand holds/lightly stabilizes the back hilt near right shoulder throughout run, like reference user's running pose. Elbow bends naturally behind head/shoulder, no detached arm. LEFT arm makes compact rhythmic counterbalancing swing in front/beside torso. Shoulder/hip counter-rotation contributes force even though right hand steadies weapon. Do not freeze the whole upper body. Scabbard attached to torso, no bouncing sideways or switching side. Red scarf trails left with delayed wave, always connected at neck, no detached red cape shapes.
+
+Lean WHOLE body forward from ankles/hips about20–25degrees, head forward and eyes toward RIGHT, athletic quick ninja silhouette. Powerful alternating hip flexion, trailing toe push and folded recovery heel. Distinct short AIRBORNE PHASES between contacts; no constant foot planted while sprinting, no huge leap or floating. Common virtual floor at84% EACH cell height. Contact soles/toes touch that floor; airborne frames have BOTH feet naturally ABOVE it. Preserve smooth small pelvis/head bob, don't force every frame's lowest boot onto floor. Constant root reference around50%cell width. Only near/far limbs swap, NEVER mirror the entire character to fake other half.
+
+12 chronological phases:
+0 RIGHT forefoot CONTACT in front of pelvis, LEFT leg extends back, left arm forward.
+1 RIGHT knee COMPRESSION/loading, pelvis lowers a little, left heel folds/recovering.
+2 RIGHT toe PUSH-OFF behind pelvis, left thigh drives forward, torso driven forward.
+3 AIRBORNE transition, right heel folds under/back, left knee forward; BOTH boots above floor.
+4 LEFT leg extends toward upcoming contact, right leg recovers, compact opposing left-arm swing.
+5 late LEFT pre-contact, left forefoot approaches floor without exaggerated jump, smooth bridge into6.
+6 LEFT forefoot CONTACT in front of pelvis, RIGHT leg extends behind; opposite-leg counterpart of0 with same facing/equipment.
+7 LEFT knee COMPRESSION/loading, pelvis lowers a little, right heel recovering.
+8 LEFT toe PUSH-OFF behind pelvis, right thigh drives forward.
+9 AIRBORNE transition, left heel folds under/back, right knee forward, both feet above floor.
+10 RIGHT leg reaches for next contact, left leg recovers behind, scarf follows previous motion.
+11 late RIGHT pre-contact, right forefoot approaches floor and flows smoothly back to0.
+
+Feet MUST show distinct opposite-leg contacts and logical toe roll; no repeated first-half poses to fake cycle. Every character, hilt, scabbard, full scarf and all boots fit INSIDE own cell with8% transparent margin; no overlap/cropped feet or handle. Body proportions match new Idle despite naturally lower visible height when leaning/bending legs. True alpha, illustrated textured pixel sprite style, no background/text/grid/numbers/floor shadow or smoke. Clean readable body mechanics and seamless frame11→0 loop.

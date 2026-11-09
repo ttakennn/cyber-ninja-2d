@@ -1,5 +1,11 @@
 # Sprite Spec — riêng nhân vật ninja
 
+Task10.48: người dùng chốt Idle10.47 làm chuẩn production; [approval và nguồn](../../../map01/commits/task-010-48-ninja-idle-production-47/README.md). Dùng chính6frame này khi tham chiếu Idle, giữ384×320/pivot192,289/FPS7.1429. Không tái tạo artwork khi publish hoặc dùng khăn bụng lỗi baseline cũ thay bản đã chốt. Không suy lời chốt Idle thành phê duyệt thêm attack/gặp quái/chạy/runtime.
+
+[Bản chuẩn production người dùng tái xác nhận Task10.43](PRODUCTION_REFERENCE.md): nguồn cụ thể, mặt/mắt/cơ thể/quần áo, kích thước/clip và mốc hash. Đọc cùng spec này trước khi authoring; các candidate Idle/attack vẫn chờ duyệt riêng.
+
+Phản hồi Task10.41: tiếp tục lấy art đã chốt trong `docs/characters/` làm chuẩn, không dùng cơ thể ở candidate để thay danh tính. Idle chuyển kiếm lên lưng hiện vẫn chờ duyệt: kiếm ngắn, chỉ thấy phần đầu phía trên, phần dưới được che; phải bám mốc lưng theo từng frame. Khi sửa vùng kiếm hông cần giữ liên tục bụng/đai/quần áo theo đúng pose production, không vá một mảng vẽ lại lệch scale/vị trí. Review seam và chuyển động thực tế ngoài kiểm tra pixel vùng được giữ; đây là ràng buộc authoring, không phải duyệt candidate10.41 hoặc thay contract/runtime.
+
 Kế thừa [chuẩn sprite chung](../../../rules/SPRITE_SPEC.md). Hồ sơ này theo nhân vật ninja qua mọi map; không buộc các nhân vật mới có cùng danh tính, màu hoặc canvas.
 
 ## Contract ninja hiện hành

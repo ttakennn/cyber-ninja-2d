@@ -1,0 +1,165 @@
+﻿{
+    "attachments":  [
+                        {
+                            "frame":  0,
+                            "shoulderOffset":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "swordAxisX":  174,
+                            "scarfContactY":  61,
+                            "visibleBottom":  64,
+                            "swordTop":  26
+                        },
+                        {
+                            "frame":  1,
+                            "shoulderOffset":  [
+                                                   2,
+                                                   -1
+                                               ],
+                            "swordAxisX":  176,
+                            "scarfContactY":  58,
+                            "visibleBottom":  61,
+                            "swordTop":  25
+                        },
+                        {
+                            "frame":  2,
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "swordAxisX":  168,
+                            "scarfContactY":  61,
+                            "visibleBottom":  64,
+                            "swordTop":  24
+                        },
+                        {
+                            "frame":  3,
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   0
+                                               ],
+                            "swordAxisX":  168,
+                            "scarfContactY":  62,
+                            "visibleBottom":  65,
+                            "swordTop":  26
+                        },
+                        {
+                            "frame":  4,
+                            "shoulderOffset":  [
+                                                   -8,
+                                                   0
+                                               ],
+                            "swordAxisX":  166,
+                            "scarfContactY":  64,
+                            "visibleBottom":  67,
+                            "swordTop":  26
+                        },
+                        {
+                            "frame":  5,
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "swordAxisX":  168,
+                            "scarfContactY":  61,
+                            "visibleBottom":  64,
+                            "swordTop":  24
+                        }
+                    ],
+    "pixelAudit":  [
+                       {
+                           "frame":  0,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  112,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  1,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  158,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  2,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  114,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  3,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  131,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  4,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  146,
+                           "abdomenDifferences":  0
+                       },
+                       {
+                           "frame":  5,
+                           "contactGapPixels":  0,
+                           "headDifferences":  0,
+                           "lowerSwordDifferences":  0,
+                           "beltDifferences":  0,
+                           "oldGripPixelsRemoved":  105,
+                           "abdomenDifferences":  0
+                       }
+                   ],
+    "tool":  "image_gen.imagegen",
+    "files":  [
+                  {
+                      "sha256":  "10c3625ab62f74b51308c57dd9ffee751764be56004d25585c51432a189e017c",
+                      "path":  "integration/ninja-idle-contact-fix/plan.json"
+                  },
+                  {
+                      "sha256":  "347a8fb50750e97b73c47f71606e01e551f693ea81fd32f5db19c9f60fe7095c",
+                      "path":  "integration/ninja-idle-contact-fix/hand-cleanup-source.png"
+                  },
+                  {
+                      "sha256":  "298af65886e104e08f8eb0c903829e954cfa890b0d995f7f1b749512d08fd81f",
+                      "path":  "integration/ninja-idle-contact-fix/prompt.txt"
+                  },
+                  {
+                      "sha256":  "8bd893b546154bcf4578fc5e03c0f0be3e3cde8c6784cb649090892ec0ff1c46",
+                      "path":  "scripts/prepare_ninja_idle_contact_fix.ps1"
+                  },
+                  {
+                      "sha256":  "f0cd82d61d5fecb042b446eccbffcaab839009c464901a752110187384df671f",
+                      "path":  "docs/map01/commits/task-010-41-ninja-idle-attached-sword/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "4290a1cfa742fd41a8dd673c45d702ec7cc86d70d2446a1e5eae70e753f1809e",
+                      "path":  "docs/map01/commits/task-010-42-ninja-idle-contact-fix/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "8e3dd3ef9211d8220ec989fe10db5de3b2753c63152d59f56948c6c0e1a4f9e6",
+                      "path":  "docs/map01/commits/task-010-42-ninja-idle-contact-fix/contact-review.png"
+                  },
+                  {
+                      "sha256":  "925daae4c192c4d396ff56743de42f69f39c4dc9f93a98172ac0dfbd2b012246",
+                      "path":  "docs/map01/commits/task-010-42-ninja-idle-contact-fix/motion-preview.gif"
+                  }
+              ],
+    "method":  "Generated local hand cleanup used as alpha guide only. Original Task10.41 pixels retained; brown old grip removed near fist. Same short rigid sword/shoulder offsets, deeper insertion and per-frame actual scarf contact.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "runtimeChanged":  false,
+    "productionChanged":  false
+}

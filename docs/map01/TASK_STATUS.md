@@ -1,5 +1,27 @@
 # Trạng thái Map01
 
+2026-11-09/Task10.48: [Idle10.47 đã CHỐT/publish production](commits/task-010-48-ninja-idle-production-47/README.md); copy chính xác6frame không vẽ lại, giữ frame/pivot/FPS và pixel ngoài mask khăn bụng.39file asset khác giữ hash. Đã lưu approval/provenance/native atlas; commit theo yêu cầu. Chưa game runtime/test/build/browser/merge/push; attack và các động tác khác giữ trạng thái cũ.
+
+2026-11-09/Task10.46: [Idle đã release art sau tự review](commits/task-010-46-ninja-idle-fabric-restore/README.md) theo yêu cầu mới; tay sạch/vải bụng có nếp/tà đỏ phục hồi. Chỉ6rect Idle trong atlas native đổi; ngoài Idle0RGBA khác,39file khác giữ hash. Giữ baseline gốc/hash và ghi rõ quyền release được giao, không suy người dùng đã xem bản10.46. Browser blocked URL Chrome; test/build/runtime NOT_RUN, chưa commit. Gặp quái/chạy/attack hoãn.
+
+2026-11-08/Task10.45: [Idle sửa mép giáp và đai](commits/task-010-45-ninja-idle-seam-cleanup/README.md) theo hai vùng khoanh10.44; giữ silhouette production, sash mỏng đúng mép gốc, texture nối phần bị che. So3cột/4×/GIF6frame; chờ duyệt, chưa publish/runtime/commit, browser/test/build NOT_RUN. Gặp quái/chạy/attack vẫn hoãn.
+
+2026-11-08/Task10.44: [phục hồi Idle từ production](commits/task-010-44-ninja-idle-production-restore/README.md) sau phản hồi bụng/cánh tay10.42 còn lỗi. Bảo vệ tay gốc từng pose, chỉ phục hồi vùng vũ khí cũ và giữ kiếm sau lưng; có preview3cột/chi tiết4×/GIF6frame. Đã xem PNG/audit; chờ duyệt, chưa publish/runtime/commit. Browser/test/build NOT_RUN. Gặp quái/chạy hoãn;10.42 giữ lịch sử, chưa được duyệt.
+
+2026-11-08/Task10.43: [đọc/ghi nhớ chuẩn Ninja Hỏa production](commits/task-010-43-ninja-production-reference/README.md), nguồn ở docs/characters; ghi chuẩn riêng nhân vật và link AGENTS/spec. Không thay ảnh/metadata/preview/gameplay, không duyệt candidate. Browser/test/build NOT_RUN, chưa commit.
+
+2026-11-08/Task10.42: [sửa hai vùng tay/gốc chuôi](commits/task-010-42-ninja-idle-contact-fix/README.md), xóa cán cũ cạnh găng, chân chuôi chồng sau mép khăn theo6frame. Đã xem crop/atlas và bảng trước/sau, GIF6frame; giữ body/phase/contract. Chờ duyệt, chưa publish/runtime/commit; browser/test/build NOT_RUN. Gặp quái/chạy vẫn chờ.
+
+2026-11-08/Task10.41: [sửa bụng/kiếm ngắn bám pose](commits/task-010-41-ninja-idle-attached-sword/README.md), giữ thân production, chỉ lộ chuôi trên, không lộ đầu bao dưới; kiếm dịch theo vai6frame. Có GIF6frame/chi tiết bụng4×; đã xem ảnh/audit, browser dừng vì công cụ không xác định URL Windows. Chờ duyệt, chưa publish/runtime/commit, test/build NOT_RUN. Gặp quái/chạy vẫn hoãn.
+
+2026-11-08/Task10.40: [giữ mắt gốc và kiếm đứng giữa lưng](commits/task-010-40-ninja-idle-vertical-sword/README.md), nguồn từ đúng atlas production người dùng nêu. Giữ RGBA đầu và vùng không sửa; chỉ phục hồi kiếm hông/lắp kiếm đứng riêng. Auditảnh6frame0pixel khác ở vùng đầu/ngoài vùng cho phép. Đã xem atlas, chờ duyệt; browser/test/build NOT_RUN, chưa publish/runtime/commit. Không sửa gặp quái/chạy.
+
+2026-11-08/Task10.39: [Idle sửa theo production](commits/task-010-39-ninja-idle-production-correction/README.md),6frame/so nguyên mẫu production, chỉnh ống chân/gấu quần và trục kiếm–bao kiếm sau lưng. Chờ duyệt riêng Idle; chưa sửa cảnh giác/chạy. Đã xem comparison/atlas, browser/test/build NOT_RUN; chưa publish/runtime/commit.
+
+2026-11-08/Task10.38: [sửa Idle và chạy Ninja Hỏa](commits/task-010-38-ninja-upright-locomotion/README.md) theo phản hồi bác10.37: hai Idle đứng thẳng/buông tay, chạy sải dài/tay ngang ngực, cùng hệ số kích thước theo Idle gốc. Chờ duyệt; đã xem ảnh, Chrome tải Idle, chưa xác nhận toàn chuyển động. Chưa production/runtime/trigger quái/commit; test/build NOT_RUN.
+
+2026-11-08/Task10.37: [Idle/Idle cảnh giác/Đi/Chạy Ninja Hỏa](commits/task-010-37-ninja-back-sword-locomotion/README.md) là candidate mới, kiếm/bao kiếm sau lưng;8/8/8/12frame, cùng canvas/pivot hiện hành. Đã xem atlas, Chrome tải trang/trạng thái Idle; toàn chuyển động chưa xác nhận đầy đủ. Chưa duyệt/publish/runtime hoặc trigger gặp quái; test/build NOT_RUN, chưa commit. Các candidate attack giữ nguyên.
+
 2026-11-05/Task10-boss-khan-design: [candidate boss Huyết Đao Khan](commits/task-010-16-boss-khan-design/preview.html) và bảng so150% đã tạo theo brief; chưa duyệt, chưa đặt boss trong map. Không đổi level/src/public/physics; chưa animation/skills/AI/damage/runtime/test/build/browser/commit/merge.
 
 2026-11-04/Task10-neon-production: người dùng chốt toàn bộ art Sát Thủ Bóng Neon, gồm Nguyệt Ảnh Hiện Thân. [Production11clip/14sheet](../characters/neon-shadow/animation/preview.html) lấy từ snapshot10.15; tài liệu/manifest ở docs/characters/neon-shadow/. Không đổi map/src/public/physics; chưa spawn/AI/damage/runtime/test/build/browser/merge/push. Mục chờ duyệt dưới đây giữ lịch sử.

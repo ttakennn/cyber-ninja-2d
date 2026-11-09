@@ -1,0 +1,15 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "character": "ninja",
+  "clip": "idle",
+  "selectedRevision": "Task10.47",
+  "approvedAt": "2026-11-09",
+  "authorization": "User explicitly selected10.47 as official production Idle and requested publication plus commit.",
+  "approvedAtlas": "docs/map01/commits/task-010-47-ninja-idle-sash-alignment/idle-atlas.png",
+  "approvedAtlasSha256": "fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940",
+  "baseline": "integration/ninja-idle-sash-alignment/production-reference-atlas.png",
+  "baselineMetadata": "integration/ninja-idle-sash-alignment/production-reference-animations.json",
+  "sashMask": "docs/map01/commits/task-010-47-ninja-idle-sash-alignment/sash-edit-mask.png",
+  "reviewDirectory": "docs/map01/commits/task-010-48-ninja-idle-production-47",
+  "runtimeChanged": false
+}

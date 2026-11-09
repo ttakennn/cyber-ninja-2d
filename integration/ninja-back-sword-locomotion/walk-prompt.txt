@@ -1,0 +1,17 @@
+Create an8-frame COMPLETE WALK CYCLE of EXACT Flame Ninja,4columns x2rows on transparent RGBA. This is slow purposeful WALKING, not sprinting. Use the most recent new Idle/combat sheet as AUTHORITATIVE for character and NEW BACK-SHEATH EQUIPMENT, and original Flame Ninja Idle/run for style/anatomy. Blue ninja images are only movement references. Preserve black/red sleeveless ninja, red scarf/belt, black hood/mask, muscular arms, dark trousers, silver shin guards, identical head/body scale.
+
+One original gold-hilt sword SHEATHED DIAGONALLY ON BACK, hilt above right shoulder, dark scabbard behind torso; no extra hip sword or scabbard, no drawn blade/fire VFX. Scabbard attached to torso securely, not sliding/flipping sides as legs move. Scarf remains distinct, attached at neck, modest trailing ripple left.
+
+Character walks to RIGHT in constant side/three-quarter view, torso nearly upright with slight forward intent. Natural alternating leg and hip motion, opposing arm swing, relaxed bent elbows. Both arms free during ordinary walk; same hand anatomy. Left/right legs genuinely alternate, no mirrored entire character. One foot ALWAYS contacts virtual floor; NO airborne flight or running tuck. Heel-to-toe roll, trailing toe push, relaxed knee clearance. Head stays level with very subtle body bob, not rocking wildly. Same bone lengths, same torso size.
+
+Eight chronological poses left-to-right/top-to-bottom:
+0 RIGHT foot forward HEEL CONTACT, left leg trails with toe contacting floor, left arm forward/right arm back.
+1 weight loads right sole, right knee absorbs slightly, left trailing heel lifts.
+2 LEFT leg passes under pelvis with bent knee, right foot supports, arms pass opposite.
+3 right heel rises onto toe as left leg reaches forward, small natural high point, no airborne gap.
+4 LEFT foot forward HEEL CONTACT, right trailing toe on floor, right arm forward/left arm back.
+5 weight loads left sole, right trailing heel lifts, controlled low point.
+6 RIGHT leg passes under pelvis, left foot supports, arms pass opposite.
+7 left heel rolls toward toe as right leg reaches forward, transition smoothly back to pose0.
+
+Exactly4x2 equal square cells. Fixed common virtual floor at82% cell height across BOTH rows, stable root around50%cell width. Same standing-equivalent anatomy as Idle, body about55%cell height; do not fit every pose individually. Full head, hilt, scabbard, scarf and all boots within each cell with8% transparent margins. Eight different linked phases, not eight nearly identical poses or a mirrored loop. True alpha transparency, no background, text, labels, grid or floor shadow. Illustrated textured pixel sprite style matching approved Flame Ninja.

@@ -1,0 +1,173 @@
+﻿{
+    "pixelAudit":  [
+                       {
+                           "changedSashPixels":  678,
+                           "outsideSashRgbaDifferences":  0,
+                           "frame":  0
+                       },
+                       {
+                           "changedSashPixels":  601,
+                           "outsideSashRgbaDifferences":  0,
+                           "frame":  1
+                       },
+                       {
+                           "changedSashPixels":  633,
+                           "outsideSashRgbaDifferences":  0,
+                           "frame":  2
+                       },
+                       {
+                           "changedSashPixels":  675,
+                           "outsideSashRgbaDifferences":  0,
+                           "frame":  3
+                       },
+                       {
+                           "changedSashPixels":  621,
+                           "outsideSashRgbaDifferences":  0,
+                           "frame":  4
+                       },
+                       {
+                           "changedSashPixels":  607,
+                           "outsideSashRgbaDifferences":  0,
+                           "frame":  5
+                       }
+                   ],
+    "files":  [
+                  {
+                      "sha256":  "7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572",
+                      "path":  "integration/ninja-idle-sash-alignment/production-reference-atlas.png"
+                  },
+                  {
+                      "sha256":  "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f",
+                      "path":  "integration/ninja-idle-sash-alignment/production-reference-animations.json"
+                  },
+                  {
+                      "sha256":  "71611f353a9eb8ebe0ccabf6ea524270c3902c431501bc80c41bc93e1f78a0c9",
+                      "path":  "integration/ninja-idle-sash-alignment/sash-guide.png"
+                  },
+                  {
+                      "sha256":  "21cf3e9bea5ab5a0de6a0add0cfab1c3d9e689880a101536608b97133e5c72f7",
+                      "path":  "integration/ninja-idle-sash-alignment/plan.json"
+                  },
+                  {
+                      "sha256":  "6278f92fd4ab646ec4399d8a7c2e82c58a9b256c968440cfae1c9ceb6314b6d5",
+                      "path":  "integration/ninja-idle-sash-alignment/prompt.txt"
+                  },
+                  {
+                      "sha256":  "961099739b976f36e51ecd01b989c0aed9fff8a82b69a605c18c71bc82833ea8",
+                      "path":  "scripts/prepare_ninja_idle_sash_alignment.ps1"
+                  },
+                  {
+                      "sha256":  "fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940",
+                      "path":  "docs/map01/commits/task-010-47-ninja-idle-sash-alignment/idle-atlas.png"
+                  }
+              ],
+    "registration":  [
+                         {
+                             "hipOffset":  [
+                                               0,
+                                               0
+                                           ],
+                             "guideAlignment":  [
+                                                    0,
+                                                    0
+                                                ],
+                             "waistBounds":  [
+                                                 179,
+                                                 220,
+                                                 128,
+                                                 139
+                                             ],
+                             "frame":  0
+                         },
+                         {
+                             "hipOffset":  [
+                                               -1,
+                                               -3
+                                           ],
+                             "guideAlignment":  [
+                                                    1,
+                                                    0
+                                                ],
+                             "waistBounds":  [
+                                                 180,
+                                                 216,
+                                                 126,
+                                                 137
+                                             ],
+                             "frame":  1
+                         },
+                         {
+                             "hipOffset":  [
+                                               -6,
+                                               -1
+                                           ],
+                             "guideAlignment":  [
+                                                    1,
+                                                    0
+                                                ],
+                             "waistBounds":  [
+                                                 174,
+                                                 212,
+                                                 127,
+                                                 138
+                                             ],
+                             "frame":  2
+                         },
+                         {
+                             "hipOffset":  [
+                                               -5,
+                                               -1
+                                           ],
+                             "guideAlignment":  [
+                                                    0,
+                                                    0
+                                                ],
+                             "waistBounds":  [
+                                                 175,
+                                                 211,
+                                                 125,
+                                                 138
+                                             ],
+                             "frame":  3
+                         },
+                         {
+                             "hipOffset":  [
+                                               -8,
+                                               1
+                                           ],
+                             "guideAlignment":  [
+                                                    1,
+                                                    0
+                                                ],
+                             "waistBounds":  [
+                                                 170,
+                                                 207,
+                                                 129,
+                                                 140
+                                             ],
+                             "frame":  4
+                         },
+                         {
+                             "hipOffset":  [
+                                               -5,
+                                               -1
+                                           ],
+                             "guideAlignment":  [
+                                                    1,
+                                                    0
+                                                ],
+                             "waistBounds":  [
+                                                 175,
+                                                 211,
+                                                 127,
+                                                 138
+                                             ],
+                             "frame":  5
+                         }
+                     ],
+    "status":  "CANDIDATE_SELF_REVIEW",
+    "releaseEvidence":  "release-evidence.json",
+    "authoringWritesProduction":  false,
+    "phase":  "AUTHORING_ONLY",
+    "runtimeChanged":  false
+}

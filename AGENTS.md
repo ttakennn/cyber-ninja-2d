@@ -7,11 +7,15 @@
 - Mọi task: [cấu trúc tài liệu](docs/README.md), [GAME_BIBLE](docs/rules/GAME_BIBLE.md), [TASK_STATUS](docs/TASK_STATUS.md), [DECISION_LOG](docs/DECISION_LOG.md).
 - Task ảnh, UI, môi trường hoặc map: [ART_STYLE_GUIDE chung](docs/rules/ART_STYLE_GUIDE.md), [ATLAS_SPEC chung](docs/rules/ATLAS_SPEC.md), rồi docs/<map-id>/README.md, rules/ và TASK_STATUS.md của đúng map đang làm.
 - Task nhân vật/animation: đọc [SPRITE_SPEC chung](docs/rules/SPRITE_SPEC.md) và hồ sơ docs/characters/<character-id>/ của đúng nhân vật, kể cả khi nhân vật dùng ở map khác. Map01 không sở hữu contract ninja dùng chung.
+- Riêng Ninja Hỏa: đọc [bản chuẩn production đã được người dùng tái xác nhận](docs/characters/ninja/rules/PRODUCTION_REFERENCE.md), xem đúng PNG gốc và metadata trước khi sửa; không lấy candidate đang review thay bản chuẩn.
 - Vòng đời artwork/animation: đọc [ANIMATION_PRODUCTION](docs/rules/ANIMATION_PRODUCTION.md). docs/characters/<id>/animation/ là bản art đã chốt cho production; bản thử, ảnh review và lịch sử task phải lưu trong commits. Không ghi đè production bằng candidate chưa được duyệt.
 - Sau đó đọc source, metadata, generator và báo cáo gần nhất liên quan trước khi sửa. Phải xem PNG tham chiếu khi tạo/chỉnh artwork, không chỉ đọc tên file.
 - Các tài liệu trên mô tả baseline hiện hành. Báo cáo TASK-xxx/RC cũ là lịch sử; đường dẫn v2 trong báo cáo cũ không thay thế đường dẫn canonical. Khi tài liệu và source mâu thuẫn ở điểm ảnh hưởng thiết kế, nêu rõ mâu thuẫn và hỏi trước khi đổi phần đó.
 
 ## Khoá art và kích thước
+
+- Nguồn dự án người dùng xác nhận: `C:\Users\anhthaitrong\Downloads\Games\cyber-ninja-2d`. Art nhân vật đã chốt trong `docs/characters/` là chuẩn tạo hình; candidate trong commits/integration không thay thế chuẩn đó khi chưa được duyệt.
+- Khi sửa animation đã chốt, review cả vùng được sửa: khớp bụng/đai/quần áo qua từng frame và trang bị phải đi theo mốc cơ thể. Kiểm tra pixel vùng được giữ không thay thế việc xem đường nối và vòng chuyển động; không ghép mảng cơ thể lệch vị trí hoặc để trang bị đứng yên trên canvas khi thân cử động.
 
 - Không tự redesign nhân vật, đổi style/palette/chất liệu/góc nhìn, scale, canvas, frame rect, pivot, anchor hoặc atlas đã chốt của map/nhân vật đang chỉnh. Không tự thay bằng asset khác phong cách, hình tạm hoặc ảnh tạo lại gần giống.
 - Chung toàn game: Illustrated textured pixel art, sprite 2D, cùng ngôn ngữ tạo khối/texture và nguyên tắc kỹ thuật. Palette, độ sáng, chủ đề và ánh sáng thuộc từng map; Map02/03 có thể tươi sáng hơn theo brief, không phải sao palette đêm Map01. Không tự recolor asset đã duyệt của map/nhân vật khác để làm map mới.

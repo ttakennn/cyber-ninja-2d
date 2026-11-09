@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-08",
+  "task": "Task10.43 - production reference reaffirmation",
+  "uploadTextMatchesLocal": true,
+  "uploadedAtlasReadDimensions": [
+    2047,
+    1285
+  ],
+  "nativeAtlasDimensions": [
+    3136,
+    1968
+  ],
+  "nativeAtlasMatchesManifest": true,
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 9162,
+      "sha256": "4e279fb8d3869759a6d682945d2d85d0e2ecc44bcc13b302637af3f769489829"
+    },
+    {
+      "path": "docs/characters/ninja/animation/basic-preview.html",
+      "bytes": 15275,
+      "sha256": "5fcf8c34ab580e1a03943c3e3c22657a37eb2f60d67242591144255747263d4e"
+    },
+    {
+      "path": "docs/characters/ninja/animation/preview.html",
+      "bytes": 7300,
+      "sha256": "a95416b25c6f524af22d20734dcc6004f20bf0a60cc07b6728bb689cb3953e35"
+    },
+    {
+      "path": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+      "bytes": 2848173,
+      "sha256": "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba"
+    },
+    {
+      "path": "docs/characters/ninja/animation/locomotion/animations.json",
+      "bytes": 18879,
+      "sha256": "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f"
+    },
+    {
+      "path": "docs/characters/ninja/animation/production.json",
+      "bytes": 10253,
+      "sha256": "848e714d5b493767db25dacc6c390a025c3c41035ee1f1de13e3c70c271c338b"
+    }
+  ],
+  "uploads": [
+    {
+      "name": "AGENTS.md",
+      "library_file_id": "libfile_59106f55cda0819182074da423002b3b"
+    },
+    {
+      "name": "flame-ninja-atlas.png",
+      "library_file_id": "libfile_e440cf9c480c8191a5ea011f52daaa2c"
+    },
+    {
+      "name": "basic-preview.html",
+      "library_file_id": "libfile_1ea8123414cc819182fb6de02e3f9228"
+    },
+    {
+      "name": "preview.html",
+      "library_file_id": "libfile_b41c6d306e208191b6e225f2efba0b95"
+    }
+  ],
+  "artChanged": false,
+  "runtimeChanged": false,
+  "candidatesApproved": false
+}

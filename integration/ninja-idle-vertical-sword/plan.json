@@ -1,0 +1,14 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-40-ninja-idle-vertical-sword",
+  "productionAtlas":"docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "productionMetadata":"docs/characters/ninja/animation/locomotion/animations.json",
+  "cleanupSource":"integration/ninja-idle-vertical-sword/cleanup-source.png",
+  "weaponSource":"integration/ninja-idle-vertical-sword/weapon-source.png",
+  "cleanupScale":0.6711229946524064,"cleanupPivotX":286,"cleanupRowGround":[426,428],"cleanupOffsetY":0,
+  "weaponAxisX":174,"weaponTop":9,"weaponHeight":230,
+  "weaponBand":[160,5,29,240],
+  "hipRepairPolygons":[[[95,150],[140,150],[140,195],[95,195]],[[102,178],[134,157],[143,167],[112,191]],[[154,136],[178,125],[205,128],[205,148],[175,151],[157,161]]],
+  "headAuditRect":[190,30,55,75],
+  "scope":"Relaxed Idle only. Original production pixels copied outside hip repair polygons and vertical sword band. Production head/eyes preserved exactly. New vertical sword artwork is one rigid layer behind body, axis174. No alert/run changes or publication."
+}

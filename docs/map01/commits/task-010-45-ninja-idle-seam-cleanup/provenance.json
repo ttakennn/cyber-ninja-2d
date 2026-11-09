@@ -1,0 +1,112 @@
+﻿{
+    "pixelAudit":  [
+                       {
+                           "armDifferences":  0,
+                           "frame":  0,
+                           "outsideCleanupVisibleChangesVs44":  0,
+                           "cleanupChangedPixels":  10166,
+                           "protectedArmPixels":  2277,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  1,
+                           "outsideCleanupVisibleChangesVs44":  0,
+                           "cleanupChangedPixels":  9501,
+                           "protectedArmPixels":  2236,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  2,
+                           "outsideCleanupVisibleChangesVs44":  0,
+                           "cleanupChangedPixels":  9869,
+                           "protectedArmPixels":  2287,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  3,
+                           "outsideCleanupVisibleChangesVs44":  0,
+                           "cleanupChangedPixels":  10320,
+                           "protectedArmPixels":  2260,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  4,
+                           "outsideCleanupVisibleChangesVs44":  0,
+                           "cleanupChangedPixels":  9308,
+                           "protectedArmPixels":  2294,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       },
+                       {
+                           "armDifferences":  0,
+                           "frame":  5,
+                           "outsideCleanupVisibleChangesVs44":  0,
+                           "cleanupChangedPixels":  9737,
+                           "protectedArmPixels":  2278,
+                           "farArmDifferences":  0,
+                           "headDifferences":  0
+                       }
+                   ],
+    "files":  [
+                  {
+                      "sha256":  "50b138b7cef9df6374370ddacef86faf0995d0f0a2512692aac30cf724162bf9",
+                      "path":  "docs/map01/commits/task-010-44-ninja-idle-production-restore/body-atlas.png"
+                  },
+                  {
+                      "sha256":  "b631f8a8f8fac7631cc4d458d5b41d7833b565454a4a827607c9472ebbf3589f",
+                      "path":  "docs/map01/commits/task-010-44-ninja-idle-production-restore/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "7f74c3d32032b9bc2e04bb495ca560b31af9d67f57a4f74774a477244e2f885c",
+                      "path":  "docs/map01/commits/task-010-44-ninja-idle-production-restore/review.json"
+                  },
+                  {
+                      "sha256":  "d460b372e0512db1e68fc1645053a10614e05b1c5a59c91300a698e96293bcd2",
+                      "path":  "scripts/assemble_ninja_idle_seam_review.mjs"
+                  },
+                  {
+                      "sha256":  "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+                      "path":  "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+                  },
+                  {
+                      "sha256":  "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f",
+                      "path":  "docs/characters/ninja/animation/locomotion/animations.json"
+                  },
+                  {
+                      "sha256":  "8b20d03a09fdc1a676b1515d91d51c9eb3b3730cebdbee9cdecce433e836d5f7",
+                      "path":  "integration/ninja-idle-seam-cleanup/seam-guide.png"
+                  },
+                  {
+                      "sha256":  "61377c023107b5f11a21c4d652c76b3fe705aa116fd928d1e73f3fad95bb14b8",
+                      "path":  "docs/map01/commits/task-010-41-ninja-idle-attached-sword/back-sword.png"
+                  },
+                  {
+                      "sha256":  "560dc048217480ab4859bbe3057e5949bf8c8eefe231d21ad60bd81b13e59203",
+                      "path":  "integration/ninja-idle-seam-cleanup/plan.json"
+                  },
+                  {
+                      "sha256":  "884d4ab3f3fc629c09cd5943d306603b18cb24ca498f6d8843a6d242bc200bd5",
+                      "path":  "integration/ninja-idle-seam-cleanup/prompt.txt"
+                  },
+                  {
+                      "sha256":  "e172c776f0e233cbb0581a01e5b9ed9045f0b55558e144463befe5fa0a936ab7",
+                      "path":  "scripts/prepare_ninja_idle_seam_cleanup.ps1"
+                  },
+                  {
+                      "sha256":  "1817d70d54cf0346669a6930f70d8e907aa717b77db5cfaf1932158110785c7a",
+                      "path":  "docs/map01/commits/task-010-45-ninja-idle-seam-cleanup/idle-atlas.png"
+                  }
+              ],
+    "productionChanged":  false,
+    "method":  "Task44 body; restore native gauntlet alpha corridor and thin visible sash boundary; imagegen only in left occluded sash/cloth. Back sword unchanged.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "runtimeChanged":  false
+}

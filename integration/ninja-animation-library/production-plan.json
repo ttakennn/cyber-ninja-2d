@@ -6,6 +6,7 @@
   "groups": [
     {
       "id": "locomotion",
+      "fileSources": { "flame-ninja-atlas.png": "docs/map01/commits/task-010-48-ninja-idle-production-47/flame-ninja-atlas.png" },
       "source": "public/assets/characters/ninja",
       "files": [
         "flame-ninja-atlas.png",
@@ -89,7 +90,9 @@
     "selectedRevision": "USER_SELECTED_V2",
     "canonicalImage": "locomotion/flame-ninja-atlas.png",
     "source": "integration/ninja-climb",
-    "sha256": "432f63db6c14141940c4bf07e622df55381143348f7dcbde46aaa0013eadf2c2"
+    "sha256": "d5559f90565cdc00eec69d7692eac7e48ce0b6bdd9bd070e59d69d551d523e48",
+    "note": "Whole-atlas hash after user-approved Idle10.47 publication Task10.48; all non-Idle pixels, including climb v2, unchanged."
   },
-  "note": "Đi/chạy dùng clip run hiện hành; không có walk riêng. Không tự tạo alias/pose mới. Công cụ này chỉ copy file được chốt, không promote vào runtime."
+  "note": "Đi/chạy dùng clip run hiện hành; không có walk riêng. Không tự tạo alias/pose mới. Công cụ này chỉ copy file được chốt, không promote vào runtime.",
+  "idleRelease": {"status":"USER_APPROVED_PRODUCTION_ART","selectedRevision":"Task10.47","date":"2026-11-09","scope":"Official Flame Ninja Idle10.47, explicitly approved by user; all non-sash details and other clips unchanged from pre-publish baseline.","reviewer":"user","userViewedThisRevision":true,"evidence":"docs/map01/commits/task-010-48-ninja-idle-production-47/release-evidence.json","reference":"integration/ninja-idle-sash-alignment/production-reference-atlas.png","referenceSha256":"7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572","artwork":"docs/map01/commits/task-010-47-ninja-idle-sash-alignment/idle-atlas.png","artworkSha256":"fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940","runtimeChanged":false,"browser":"NOT_RUN_THIS_TASK"}
 }

@@ -1,0 +1,15 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-41-ninja-idle-attached-sword",
+  "productionAtlas":"docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "productionMetadata":"docs/characters/ninja/animation/locomotion/animations.json",
+  "cleanupSource":"integration/ninja-idle-attached-sword/cleanup-source.png",
+  "weaponSource":"integration/ninja-idle-vertical-sword/weapon-source.png",
+  "cleanupScale":0.6587926509186351,"cleanupPivotX":286,"cleanupRowGround":[432,432],
+  "weaponAxisX":174,"weaponTop":18,"weaponHeight":175,"weaponVisibleBottom":58,
+  "tracking":{"method":"Production shoulder skin centroid in ROI150,75,46,43; cloth excluded. Old weapon gold centroid for hip mask. Cleanup alignment to original right belt per frame.","hipRect":[205,121,22,31]},
+  "repairTubes":[[160,150,185,130,5],[174,153,198,140,5],[165,146,165,146,6],[190,145,198,145,5]],
+  "externalRepairRect":[95,150,45,45],
+  "headAuditRect":[190,30,55,75],"abdomenAuditRect":[194,105,35,23],"beltAuditRect":[204,128,24,17],
+  "scope":"Only Idle. Production body unscaled; repair only old weapon silhouette, preserve original red belt pixels. Sword shortened to175px and only top18..58 visible; per-frame translation attached to production shoulder tracking, no lower protrusion. No production/runtime publication."
+}

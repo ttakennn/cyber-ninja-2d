@@ -1,0 +1,41 @@
+﻿{
+    "files":  [
+                  {
+                      "sha256":  "e2bc3a6428a4ec83076627d33317504d0b7d11a0ca11f4214d25ba81e281e658",
+                      "path":  "integration/ninja-upright-locomotion/plan.json"
+                  },
+                  {
+                      "sha256":  "7690f2bf9f23ea54eec218e50f2099a35664d70db0b97e42865892e92eb41522",
+                      "path":  "integration/ninja-upright-locomotion/idle-prompt.txt"
+                  },
+                  {
+                      "sha256":  "101495c14889eba0f009feb0f1e8370f1aa9a399b97de832fd5aebd34b958a57",
+                      "path":  "integration/ninja-upright-locomotion/run-prompt.txt"
+                  },
+                  {
+                      "sha256":  "70a00116db9dd2d1456bc3c11043038b4b4e7effad16cab192723202310a40d1",
+                      "path":  "integration/ninja-upright-locomotion/preview.js"
+                  },
+                  {
+                      "sha256":  "6cca56118306289f61282371be546cf4c8d24fc3e038b86d2c87c39c23bffbc0",
+                      "path":  "integration/ninja-upright-locomotion/idle-source.png"
+                  },
+                  {
+                      "sha256":  "25bd40589195bc1a02c920bd5e64b43b637ee88ebaaf666e2bedea76a011a627",
+                      "path":  "docs/map01/commits/task-010-38-ninja-upright-locomotion/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "058514ede0be00531973600c1ed4a1e34f3a9fb00899b21fd461bcd00ac05182",
+                      "path":  "integration/ninja-upright-locomotion/run-source.png"
+                  },
+                  {
+                      "sha256":  "dce4d17a210f4d78b742be3a18322876e77d1520a9158a07f7665267afc4c234",
+                      "path":  "docs/map01/commits/task-010-38-ninja-upright-locomotion/run-atlas.png"
+                  }
+              ],
+    "productionChanged":  false,
+    "runtimeChanged":  false,
+    "referenceTransport":  "Idle final: original Idle image only. Run: user run reference, original Idle and initial corrected Idle sheet. Initial Idle retained as discarded source.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "tool":  "image_gen.imagegen"
+}

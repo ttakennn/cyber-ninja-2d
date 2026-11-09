@@ -1,0 +1,9 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-42-ninja-idle-contact-fix",
+  "baseDirectory":"docs/map01/commits/task-010-41-ninja-idle-attached-sword",
+  "handGuide":"integration/ninja-idle-contact-fix/hand-cleanup-source.png",
+  "handCrop":[120,145,55,37],"gloveLeft":[139,144,136,136,135,136],
+  "swordSinkY":8,"contactSearchStart":45,"contactSearchEnd":100,"underlapPixels":3,
+  "scope":"Only remove old grip exterior to near fist and connect back-sword base to scarf/back. Preserve Task10.41 production-derived body, head/eyes, waist, scale, frame order and per-frame shoulder offsets. No publication/runtime changes."
+}

@@ -1,0 +1,241 @@
+﻿{
+    "attachments":  [
+                        {
+                            "swordTop":  18,
+                            "shoulderCenter":  [
+                                                   168.84553775743706,
+                                                   98.529748283752866
+                                               ],
+                            "shoulderOffset":  [
+                                                   0,
+                                                   0
+                                               ],
+                            "hipOffset":  [
+                                              0,
+                                              0
+                                          ],
+                            "visibleBottom":  58,
+                            "cleanupAlignment":  [
+                                                     -2,
+                                                     3
+                                                 ],
+                            "swordAxisX":  174,
+                            "frame":  0
+                        },
+                        {
+                            "swordTop":  17,
+                            "shoulderCenter":  [
+                                                   170.5845974329055,
+                                                   97.602100350058336
+                                               ],
+                            "shoulderOffset":  [
+                                                   2,
+                                                   -1
+                                               ],
+                            "hipOffset":  [
+                                              -1,
+                                              -3
+                                          ],
+                            "visibleBottom":  57,
+                            "cleanupAlignment":  [
+                                                     5,
+                                                     3
+                                                 ],
+                            "swordAxisX":  176,
+                            "frame":  1
+                        },
+                        {
+                            "swordTop":  16,
+                            "shoulderCenter":  [
+                                                   162.38790931989925,
+                                                   96.540302267002517
+                                               ],
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "hipOffset":  [
+                                              -6,
+                                              -1
+                                          ],
+                            "visibleBottom":  56,
+                            "cleanupAlignment":  [
+                                                     8,
+                                                     4
+                                                 ],
+                            "swordAxisX":  168,
+                            "frame":  2
+                        },
+                        {
+                            "swordTop":  18,
+                            "shoulderCenter":  [
+                                                   162.80704041720992,
+                                                   98.6923076923077
+                                               ],
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   0
+                                               ],
+                            "hipOffset":  [
+                                              -5,
+                                              -1
+                                          ],
+                            "visibleBottom":  58,
+                            "cleanupAlignment":  [
+                                                     0,
+                                                     8
+                                                 ],
+                            "swordAxisX":  168,
+                            "frame":  3
+                        },
+                        {
+                            "swordTop":  18,
+                            "shoulderCenter":  [
+                                                   160.56231454005933,
+                                                   98.4406528189911
+                                               ],
+                            "shoulderOffset":  [
+                                                   -8,
+                                                   0
+                                               ],
+                            "hipOffset":  [
+                                              -8,
+                                              1
+                                          ],
+                            "visibleBottom":  58,
+                            "cleanupAlignment":  [
+                                                     6,
+                                                     8
+                                                 ],
+                            "swordAxisX":  166,
+                            "frame":  4
+                        },
+                        {
+                            "swordTop":  16,
+                            "shoulderCenter":  [
+                                                   162.90097799511003,
+                                                   96.6760391198044
+                                               ],
+                            "shoulderOffset":  [
+                                                   -6,
+                                                   -2
+                                               ],
+                            "hipOffset":  [
+                                              -5,
+                                              -1
+                                          ],
+                            "visibleBottom":  56,
+                            "cleanupAlignment":  [
+                                                     8,
+                                                     8
+                                                 ],
+                            "swordAxisX":  168,
+                            "frame":  5
+                        }
+                    ],
+    "pixelAudit":  [
+                       {
+                           "frame":  0,
+                           "differencesOutsideEditableRegions":  0,
+                           "lowerSwordVisiblePixels":  0,
+                           "beltPixelDifferences":  0,
+                           "abdomenPixelDifferences":  0,
+                           "headPixelDifferences":  0
+                       },
+                       {
+                           "frame":  1,
+                           "differencesOutsideEditableRegions":  0,
+                           "lowerSwordVisiblePixels":  0,
+                           "beltPixelDifferences":  0,
+                           "abdomenPixelDifferences":  0,
+                           "headPixelDifferences":  0
+                       },
+                       {
+                           "frame":  2,
+                           "differencesOutsideEditableRegions":  0,
+                           "lowerSwordVisiblePixels":  0,
+                           "beltPixelDifferences":  0,
+                           "abdomenPixelDifferences":  0,
+                           "headPixelDifferences":  0
+                       },
+                       {
+                           "frame":  3,
+                           "differencesOutsideEditableRegions":  0,
+                           "lowerSwordVisiblePixels":  0,
+                           "beltPixelDifferences":  0,
+                           "abdomenPixelDifferences":  0,
+                           "headPixelDifferences":  0
+                       },
+                       {
+                           "frame":  4,
+                           "differencesOutsideEditableRegions":  0,
+                           "lowerSwordVisiblePixels":  0,
+                           "beltPixelDifferences":  0,
+                           "abdomenPixelDifferences":  0,
+                           "headPixelDifferences":  0
+                       },
+                       {
+                           "frame":  5,
+                           "differencesOutsideEditableRegions":  0,
+                           "lowerSwordVisiblePixels":  0,
+                           "beltPixelDifferences":  0,
+                           "abdomenPixelDifferences":  0,
+                           "headPixelDifferences":  0
+                       }
+                   ],
+    "tool":  "image_gen.imagegen",
+    "files":  [
+                  {
+                      "sha256":  "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba",
+                      "path":  "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+                  },
+                  {
+                      "sha256":  "ac417879d1080d3be07739fbdac789c7a7e5b1ef7941b14856e1f16b1358bf1f",
+                      "path":  "docs/characters/ninja/animation/locomotion/animations.json"
+                  },
+                  {
+                      "sha256":  "fac583d09f6cbd90ae94606d33817fa4393f89b7bab75281d1f0749b35522528",
+                      "path":  "integration/ninja-idle-attached-sword/cleanup-source.png"
+                  },
+                  {
+                      "sha256":  "b7e59eef95913dd1b50e7937cf8ec4cd6526b39d4a45d858e267acfe6231810f",
+                      "path":  "integration/ninja-idle-vertical-sword/weapon-source.png"
+                  },
+                  {
+                      "sha256":  "2531e9647f473cf6272cc1f899dfca8fb5b9713cb1ea294ccf6b7c882465d71b",
+                      "path":  "integration/ninja-idle-attached-sword/cleanup-prompt.txt"
+                  },
+                  {
+                      "sha256":  "88903bf89517821c7e22c1f455610431eacf537b415bcbf18c9d4b0cf63c6177",
+                      "path":  "integration/ninja-idle-vertical-sword/weapon-prompt.txt"
+                  },
+                  {
+                      "sha256":  "afd4801a5b424073d321c49c315a02c1c1a74c7f87313c534f2998f4492c969d",
+                      "path":  "integration/ninja-idle-attached-sword/plan.json"
+                  },
+                  {
+                      "sha256":  "02eb89ec210b3cc08cf844180d4c8f62359010ccd9a4145a7df881c01ada541d",
+                      "path":  "scripts/prepare_ninja_idle_attached_sword.ps1"
+                  },
+                  {
+                      "sha256":  "e0bde091fec0f83f73a789992eca938ced80bc4674222e9faf2d3d963e059ea5",
+                      "path":  "scripts/assemble_ninja_idle_review.mjs"
+                  },
+                  {
+                      "sha256":  "f0cd82d61d5fecb042b446eccbffcaab839009c464901a752110187384df671f",
+                      "path":  "docs/map01/commits/task-010-41-ninja-idle-attached-sword/idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "61377c023107b5f11a21c4d652c76b3fe705aa116fd928d1e73f3fad95bb14b8",
+                      "path":  "docs/map01/commits/task-010-41-ninja-idle-attached-sword/back-sword.png"
+                  },
+                  {
+                      "sha256":  "a270d68d45ed9f58f943dcad483712a767d6aafef7c815a83234e236c6b5cc7b",
+                      "path":  "docs/map01/commits/task-010-41-ninja-idle-attached-sword/motion-preview.gif"
+                  }
+              ],
+    "method":  "Fresh imagegen cleanup used only on traced old weapon silhouette; original red cloth preserved. Existing isolated sword shortened and attached by production shoulder tracking, lower section fully occluded. Original body unscaled.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "runtimeChanged":  false,
+    "productionChanged":  false
+}
