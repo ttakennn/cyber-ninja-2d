@@ -31,7 +31,7 @@ for (const entrance of plan.entrances) {
     source:entrance.plan.replace(/art-plan\.json$/,'')+asset.source, sha256:asset.sha256 });
 }
 const production = { status:plan.status, character:plan.character, plan:'integration/ninja-animation-library/production-plan.json',
-  artApproval:plan.idleRelease?.status==='USER_AUTHORIZED_RELEASE_AFTER_SELF_REVIEW'?'USER_APPROVED_BASE_WITH_DELEGATED_IDLE_RELEASE':'USER_APPROVED', idleRelease:plan.idleRelease, runtimeAcceptance:'NOT_RUN_THIS_TASK', climb:plan.climb, files, entrances:plan.entrances,
+  artApproval:plan.idleRelease?.status==='USER_AUTHORIZED_RELEASE_AFTER_SELF_REVIEW'?'USER_APPROVED_BASE_WITH_DELEGATED_IDLE_RELEASE':'USER_APPROVED', idleRelease:plan.idleRelease, combatIdleRelease:plan.combatIdleRelease, runtimeAcceptance:'NOT_RUN_THIS_TASK', climb:plan.climb, files, entrances:plan.entrances,
   notes:[plan.note,'Các manifest/JSON copy nguyên file; đường source/plan lịch sử tính từ repo, không tự chỉnh gameplay.'] };
 writeFileSync(new URL('production.json', out), JSON.stringify(production,null,2)+'\n');
 writeFileSync(new URL('review-data.js', out), 'window.ninjaLibrary='+JSON.stringify({production,sheets,manifests})+';\n');

@@ -1,0 +1,23 @@
+Create a transparent GAME VFX ANIMATION SHEET, ONLY FIRE SWORD SLASH EFFECTS, NO CHARACTER, NO HANDS, NO WEAPON, NO TEXT. Use the original approved Flame Ninja attack's layered fire aesthetic: bright WHITE-GOLD cutting core, rich yellow/orange flame tongues, red ember edges, textured illustrated pixel sprite detail. Do not change into blue/cyan/purple energy or a flat vector swoosh. Latest character sheet is only identity context; no body appears on this VFX sheet.
+
+EXACT GRID: 4 equal square columns x3 equal square rows,12frames total. Each complete effect isolated within its cell with8% fully transparent gutters, no overlap, no clipped tips, no drawn grid. Prefer large high-quality landscape sheet. Each row is a distinct chronological slash direction; columns are four visual stages of THAT SAME slash. Common conceptual sword-hand attachment is LEFT of the curve around25% cell width and60% cell height; leave that attachment region mostly transparent so the character remains visible when layered. All large arcs extend strongly FORWARD to the RIGHT, never encircle a character or become a fireball. Strong long crescent with a pointed bright moving head, widening textured trailing body, tapered fading tail. Preserve clean readable outline despite fire detail. The arcs should be longer than a normal character body width so separate layering is useful.
+
+ROW1 HORIZONTAL SLASH, left to right:
+frame0 emerging short low flame ribbon accelerating toward right.
+frame1 fully extended powerful horizontal crescent, sweeping from left through right at waist/chest height, white-gold leading tip on RIGHT, orange-red fiery wake trails LEFT. Long and wide but open left/center.
+frame2 same sweep travels slightly further down-right and thins, pointed head continues, trailing flame detaches into a few embers.
+frame3 a substantially SMALLER fading trailing fragment and sparse embers; do not keep a full circle/crescent in decay.
+
+ROW2 RISING SLASH from LOWER LEFT toward UPPER RIGHT:
+frame4 small diagonal rising flame.
+frame5 long strong rising crescent curves up-right, bright pointed head UPPER RIGHT and tapered tail lower left. Open inner space, not a closed ring.
+frame6 rising arc continues upward, gets thinner and loses mass at trailing edge.
+frame7 small fading upper-right flame fragments with ample transparency, no full halo.
+
+ROW3 HEAVY DIAGONAL FINISHER from UPPER LEFT to LOWER RIGHT:
+frame8 emerging downward diagonal flame.
+frame9 largest most decisive down-forward crescent, pointed white-gold leading head LOWER RIGHT, thick layered fire wake upper left, very bright and forceful but not an explosion/fireball. Open inner space for arms/body.
+frame10 swept-down follow-through, crescent tail begins breaking up and narrowing near ground.
+frame11 small fading low-right flame/embers only.
+
+VISUAL CONTINUITY within each row: emergence→peak→follow-through→decay, not four identical crescents recolored. Keep same hot fire materials as approved attack reference, strong readable arc trajectories. Actual RGBA transparent background. No black rectangle, no checkerboard drawn. No other colors, UI, guide marks, labels, cast circles, magical symbols, lasers or body silhouettes.

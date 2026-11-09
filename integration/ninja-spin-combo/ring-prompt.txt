@@ -1,0 +1,14 @@
+Create an ORIGINAL TRANSPARENT VFX sprite sheet for Flame Ninja COMBO SPIN TRACE. ONLY the thin circular energy trace, no character, weapon, crescent slash or environment. 8 equally spaced square cells,4columns x2rows. Same illustrated textured pixel style as Flame Ninja, warm PALE GOLD/AMBER with faint orange-red embers. Do NOT use blue/cyan/purple or copy the reference game's colors. This is a SUBTLE delicate circular motion trace around a spinning body, not a shield, explosion, fireball, full fire wheel or magical spell.
+
+Each ring is centered in its cell, diameter72% of cell width, near-circular with very slight vertical ellipse. Actual stroke extremely THIN, around0.5–1% of cell width, sparse dotted fragments and tiny moving hot points. Keep99% of interior fully transparent. NO filled disk, luminous opaque background, thick fiery crescent, runes or large flare. Subtle fine grain, tiny wisps. Circular path should remain easy to see against dark navy when composited at35%opacity. All rings same center/radius, fully within their own cell with12% transparent margins.
+
+Frame0: thin quarter-arc emerging at lower-left and moving clockwise.
+Frame1: half-circle trace grows around left/top, right half mostly transparent.
+Frame2: three-quarter broken ring, tiny bright moving point upper-right, faint dotted tail.
+Frame3: nearly complete delicate ring with small gap lower-right, tiny moving point at right.
+Frame4: complete but lightly broken thin ring, bright moving point lower-right.
+Frame5: same subtle thin circle with gap lower-left, tiny bright point bottom, suggests clockwise orbital continuation.
+Frame6: ring breaks into sparse fine arcs and small ember dots, visibly fading.
+Frame7: only a few tiny fading arc fragments/embers, most outline gone.
+
+Keep consistent size and alignment for animation. True alpha transparency, no black background/checkerboard/text/numbers/grid. No figures or weapon; main fire sword slash already exists separately. The reference thin circular trace surrounding the ninja motivates this composition but this new trace belongs to Flame Ninja's warm palette.

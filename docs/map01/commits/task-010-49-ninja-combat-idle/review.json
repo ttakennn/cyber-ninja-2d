@@ -1,0 +1,259 @@
+{
+    "referenceFps":  7.1429,
+    "pixelAudit":  [
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  5683,
+                           "lowerBodyDifferences":  0,
+                           "frame":  0
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  6955,
+                           "lowerBodyDifferences":  0,
+                           "frame":  1
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7376,
+                           "lowerBodyDifferences":  0,
+                           "frame":  2
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  6993,
+                           "lowerBodyDifferences":  0,
+                           "frame":  3
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7201,
+                           "lowerBodyDifferences":  0,
+                           "frame":  4
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7284,
+                           "lowerBodyDifferences":  0,
+                           "frame":  5
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7217,
+                           "lowerBodyDifferences":  0,
+                           "frame":  6
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7287,
+                           "lowerBodyDifferences":  0,
+                           "frame":  7
+                       }
+                   ],
+    "clips":  {
+                  "combatIdle":  {
+                                     "loop":  true,
+                                     "frames":  [
+                                                    2,
+                                                    3,
+                                                    4,
+                                                    5,
+                                                    6,
+                                                    7
+                                                ],
+                                     "fps":  7.1428571428571432
+                                 },
+                  "combatEnter":  {
+                                      "frameMs":  [
+                                                      100,
+                                                      100
+                                                  ],
+                                      "loop":  false,
+                                      "frames":  [
+                                                     0,
+                                                     1
+                                                 ]
+                                  }
+              },
+    "frameHeight":  320,
+    "runtimeChanged":  false,
+    "frameWidth":  384,
+    "normalization":  [
+                          {
+                              "translation":  [
+                                                  5.9446438157710872,
+                                                  -30.63895486935867
+                                              ],
+                              "scale":  0.29809976247030878,
+                              "controlGround":  1068,
+                              "controlSkullTop":  226,
+                              "source":  "integration/ninja-combat-idle/combat-master.png"
+                          },
+                          {
+                              "controlSkullTop":  52,
+                              "source":  "integration/ninja-combat-idle/combat-enter-source.png",
+                              "translation":  [
+                                                  42.569851052901896,
+                                                  13.23728813559322
+                                              ],
+                              "controlGround":  583,
+                              "scale":  0.47269303201506591,
+                              "cell":  1
+                          },
+                          {
+                              "controlSkullTop":  52,
+                              "source":  "integration/ninja-combat-idle/combat-enter-source.png",
+                              "translation":  [
+                                                  42.510633411418866,
+                                                  13.23728813559322
+                                              ],
+                              "controlGround":  583,
+                              "scale":  0.47269303201506591,
+                              "cell":  2
+                          }
+                      ],
+    "pivot":  {
+                  "y":  289,
+                  "x":  192
+              },
+    "frames":  [
+                   {
+                       "sourceIdleFrame":  0,
+                       "y":  0,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              0,
+                                              0
+                                          ],
+                       "height":  320,
+                       "x":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "Nang tay vao the"
+                   },
+                   {
+                       "sourceIdleFrame":  0,
+                       "y":  0,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              0,
+                                              0
+                                          ],
+                       "height":  320,
+                       "x":  384,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "Dua tay ve chuoi kiem"
+                   },
+                   {
+                       "sourceIdleFrame":  0,
+                       "y":  0,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              0,
+                                              0
+                                          ],
+                       "height":  320,
+                       "x":  768,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "San sang - hit vao"
+                   },
+                   {
+                       "sourceIdleFrame":  1,
+                       "y":  0,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              2,
+                                              -1
+                                          ],
+                       "height":  320,
+                       "x":  1152,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "San sang - nang nguc"
+                   },
+                   {
+                       "sourceIdleFrame":  2,
+                       "y":  320,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              -6,
+                                              -2
+                                          ],
+                       "height":  320,
+                       "x":  0,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "San sang - giu hoi tho"
+                   },
+                   {
+                       "sourceIdleFrame":  3,
+                       "y":  320,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              -6,
+                                              0
+                                          ],
+                       "height":  320,
+                       "x":  384,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "San sang - tho ra"
+                   },
+                   {
+                       "sourceIdleFrame":  4,
+                       "y":  320,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              -8,
+                                              0
+                                          ],
+                       "height":  320,
+                       "x":  768,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "San sang - tha vai"
+                   },
+                   {
+                       "sourceIdleFrame":  5,
+                       "y":  320,
+                       "width":  384,
+                       "shoulderOffset":  [
+                                              -6,
+                                              -2
+                                          ],
+                       "height":  320,
+                       "x":  1152,
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "label":  "San sang - noi vong"
+                   }
+               ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "productionChanged":  false
+}

@@ -1,0 +1,308 @@
+{
+    "pixelAudit":  [
+                       {
+                           "frame":  0,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  8067,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              0,
+                                              0
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  1,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  8145,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              0,
+                                              0
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  2,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  719,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              0,
+                                              0
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  3,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  717,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              0,
+                                              0
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  4,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  701,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              1,
+                                              0
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  5,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  725,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              0,
+                                              1
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  6,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  729,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              -1,
+                                              2
+                                          ],
+                           "lowerBodyDifferences":  0
+                       },
+                       {
+                           "frame":  7,
+                           "detachedComponentsOver3Pixels":  0,
+                           "changedRgbaPixels":  731,
+                           "outsideEditRegionDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "gripOffset":  [
+                                              0,
+                                              2
+                                          ],
+                           "lowerBodyDifferences":  0
+                       }
+                   ],
+    "gripRect":  [
+                     160,
+                     39,
+                     28,
+                     27
+                 ],
+    "entryEnvelope":  [
+                          [
+                              74,
+                              24
+                          ],
+                          [
+                              188,
+                              24
+                          ],
+                          [
+                              188,
+                              76
+                          ],
+                          [
+                              202,
+                              91
+                          ],
+                          [
+                              202,
+                              120
+                          ],
+                          [
+                              185,
+                              125
+                          ],
+                          [
+                              174,
+                              125
+                          ],
+                          [
+                              158,
+                              145
+                          ],
+                          [
+                              74,
+                              145
+                          ]
+                      ],
+    "clips":  {
+                  "combatIdle":  {
+                                     "loop":  true,
+                                     "frames":  [
+                                                    2,
+                                                    3,
+                                                    4,
+                                                    5,
+                                                    6,
+                                                    7
+                                                ],
+                                     "fps":  7.1428571428571432
+                                 },
+                  "combatEnter":  {
+                                      "frameMs":  [
+                                                      100,
+                                                      100
+                                                  ],
+                                      "loop":  false,
+                                      "frames":  [
+                                                     0,
+                                                     1
+                                                 ]
+                                  }
+              },
+    "frameHeight":  320,
+    "runtimeChanged":  false,
+    "frameWidth":  384,
+    "normalization":  {
+                          "grip":  {
+                                       "targetCap":  [
+                                                         173.11111111111111,
+                                                         27
+                                                     ],
+                                       "scale":  0.305352798053528,
+                                       "hoodTop":  228,
+                                       "ground":  1050,
+                                       "cap":  [
+                                                   560.6949806949807,
+                                                   189
+                                               ]
+                                   },
+                          "entry":  {
+                                        "scale":  0.32470892626131953,
+                                        "hoodTop":  85,
+                                        "ground":  858,
+                                        "cell":  [
+                                                     887,
+                                                     887
+                                                 ]
+                                    }
+                      },
+    "pivot":  {
+                  "x":  192,
+                  "y":  289
+              },
+    "frames":  [
+                   {
+                       "sourceIdleFrame":  0,
+                       "y":  0,
+                       "width":  384,
+                       "base50Frame":  0,
+                       "height":  320,
+                       "x":  0,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Nâng tay vào kiếm"
+                   },
+                   {
+                       "sourceIdleFrame":  0,
+                       "y":  0,
+                       "width":  384,
+                       "base50Frame":  0,
+                       "height":  320,
+                       "x":  384,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Đưa tay về chuôi kiếm"
+                   },
+                   {
+                       "sourceIdleFrame":  0,
+                       "y":  0,
+                       "width":  384,
+                       "base50Frame":  0,
+                       "height":  320,
+                       "x":  768,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Sẵn sàng · hít vào"
+                   },
+                   {
+                       "sourceIdleFrame":  1,
+                       "y":  0,
+                       "width":  384,
+                       "base50Frame":  1,
+                       "height":  320,
+                       "x":  1152,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Sẵn sàng · nâng ngực"
+                   },
+                   {
+                       "sourceIdleFrame":  2,
+                       "y":  320,
+                       "width":  384,
+                       "base50Frame":  2,
+                       "height":  320,
+                       "x":  0,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Sẵn sàng · giữ nhịp"
+                   },
+                   {
+                       "sourceIdleFrame":  3,
+                       "y":  320,
+                       "width":  384,
+                       "base50Frame":  3,
+                       "height":  320,
+                       "x":  384,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Sẵn sàng · thở ra"
+                   },
+                   {
+                       "sourceIdleFrame":  4,
+                       "y":  320,
+                       "width":  384,
+                       "base50Frame":  4,
+                       "height":  320,
+                       "x":  768,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Sẵn sàng · thả vai"
+                   },
+                   {
+                       "sourceIdleFrame":  5,
+                       "y":  320,
+                       "width":  384,
+                       "base50Frame":  5,
+                       "height":  320,
+                       "x":  1152,
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "label":  "Sẵn sàng · nối vòng"
+                   }
+               ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "productionChanged":  false
+}

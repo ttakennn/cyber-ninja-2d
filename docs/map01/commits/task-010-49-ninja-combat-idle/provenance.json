@@ -1,0 +1,130 @@
+﻿{
+    "method":  "Imagegen arm pose sources composited only through arm/occlusion masks over exact approved Idle47 breathing frames. One fixed scale per source. No runtime or production replacement.",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "pixelAudit":  [
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  5683,
+                           "lowerBodyDifferences":  0,
+                           "frame":  0
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  6955,
+                           "lowerBodyDifferences":  0,
+                           "frame":  1
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7376,
+                           "lowerBodyDifferences":  0,
+                           "frame":  2
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  6993,
+                           "lowerBodyDifferences":  0,
+                           "frame":  3
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7201,
+                           "lowerBodyDifferences":  0,
+                           "frame":  4
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7284,
+                           "lowerBodyDifferences":  0,
+                           "frame":  5
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7217,
+                           "lowerBodyDifferences":  0,
+                           "frame":  6
+                       },
+                       {
+                           "outsideArmMasksRgbaDifferences":  0,
+                           "protectedHeadDifferences":  0,
+                           "changedArmOcclusionPixels":  7287,
+                           "lowerBodyDifferences":  0,
+                           "frame":  7
+                       }
+                   ],
+    "files":  [
+                  {
+                      "sha256":  "1a9157d0c8833ba634fbb032869e57e62e25012324ae08a38a8ff0eaa80fad04",
+                      "path":  "integration/ninja-combat-idle/plan.json"
+                  },
+                  {
+                      "sha256":  "fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940",
+                      "path":  "integration/ninja-combat-idle/idle47-reference.png"
+                  },
+                  {
+                      "sha256":  "a8a94bd35ded88b6408ceb301e79093b1223a70f59d89b3cb98f0091e66b41f8",
+                      "path":  "integration/ninja-combat-idle/combat-master.png"
+                  },
+                  {
+                      "sha256":  "c2df448b5daeaa33935b5e948170fe2b81b615d62487040dd46253f9bb8d820f",
+                      "path":  "integration/ninja-combat-idle/combat-enter-source.png"
+                  },
+                  {
+                      "sha256":  "fac3693769df96c82d40a2f63237cc2e85314768e6c8f1755f2e89428996cadc",
+                      "path":  "integration/ninja-combat-idle/combat-master-prompt.txt"
+                  },
+                  {
+                      "sha256":  "a749ba4460c6f8176c5f3e6f0e896749a3e3f4c051e8f2e3f0b098304f89a022",
+                      "path":  "integration/ninja-combat-idle/combat-enter-prompt.txt"
+                  },
+                  {
+                      "sha256":  "e5640b05a999c9dc44a6443dc65d535232e010298f44af32d144f2a2cd6f21e2",
+                      "path":  "scripts/prepare_ninja_combat_idle.ps1"
+                  },
+                  {
+                      "sha256":  "ef997f62130a66d65ef95d7bc11091aa479e17401df7631c5ed51cff3b0c5857",
+                      "path":  "docs/map01/commits/task-010-49-ninja-combat-idle/combat-idle-atlas.png"
+                  }
+              ],
+    "normalization":  [
+                          {
+                              "translation":  [
+                                                  5.9446438157710872,
+                                                  -30.63895486935867
+                                              ],
+                              "scale":  0.29809976247030878,
+                              "controlGround":  1068,
+                              "controlSkullTop":  226,
+                              "source":  "integration/ninja-combat-idle/combat-master.png"
+                          },
+                          {
+                              "controlSkullTop":  52,
+                              "source":  "integration/ninja-combat-idle/combat-enter-source.png",
+                              "translation":  [
+                                                  42.569851052901896,
+                                                  13.23728813559322
+                                              ],
+                              "controlGround":  583,
+                              "scale":  0.47269303201506591,
+                              "cell":  1
+                          },
+                          {
+                              "controlSkullTop":  52,
+                              "source":  "integration/ninja-combat-idle/combat-enter-source.png",
+                              "translation":  [
+                                                  42.510633411418866,
+                                                  13.23728813559322
+                                              ],
+                              "controlGround":  583,
+                              "scale":  0.47269303201506591,
+                              "cell":  2
+                          }
+                      ]
+}

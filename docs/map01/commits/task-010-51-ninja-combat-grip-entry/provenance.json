@@ -1,0 +1,50 @@
+{
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "files":  [
+                  {
+                      "sha256":  "9dcb4fd422fe43dd0b679894bd8bc6b94967cc41480e45391313c5b61290fa3f",
+                      "path":  "integration/ninja-combat-idle-grip-entry/plan.json"
+                  },
+                  {
+                      "sha256":  "874380c9dcc0bd10728ec7a86f779220ccdfeda653be2fef0057a5ad82516442",
+                      "path":  "docs/map01/commits/task-010-50-ninja-combat-idle-pose-fix/combat-idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940",
+                      "path":  "integration/ninja-combat-idle/idle47-reference.png"
+                  },
+                  {
+                      "sha256":  "c33df46849bb5d6cff4238adb0f47e8a41d8de958b0b953fecb0f672eed46f3c",
+                      "path":  "integration/ninja-combat-idle-grip-entry/grip-source.png"
+                  },
+                  {
+                      "sha256":  "ca90adcb985d04a4abf9397f2dd5f892bc03cfed296c2d0097d86328d5c26d22",
+                      "path":  "integration/ninja-combat-idle-grip-entry/entry-source.png"
+                  },
+                  {
+                      "sha256":  "f7d31df3945dff1219bc231e3e9fa104c69793c708af7e65623faf17a4603bbb",
+                      "path":  "integration/ninja-combat-idle-grip-entry/ready50-reference-flat.png"
+                  },
+                  {
+                      "sha256":  "c0f0d78d87a37ce2b37f98b52473689e890e4d820cf8cd1e4548a33b0b08b4d5",
+                      "path":  "integration/ninja-combat-idle-grip-entry/entry49-pose-only-reference.png"
+                  },
+                  {
+                      "sha256":  "9cd9ebad0d928d5df864a542ea7212322aa0f6a24202c718b54e9f0c4f6c5a5d",
+                      "path":  "integration/ninja-combat-idle-grip-entry/grip-prompt.txt"
+                  },
+                  {
+                      "sha256":  "7be981c52cf7818b0b761076c1d9f987dbd265605f655a7336ca7906937f477e",
+                      "path":  "integration/ninja-combat-idle-grip-entry/entry-prompt.txt"
+                  },
+                  {
+                      "sha256":  "7201dda0c9f6559b635f0cabfa67f4421d6dae5c8129e9dd105b5f7fbe6bbef7",
+                      "path":  "scripts/prepare_ninja_combat_grip_entry.ps1"
+                  },
+                  {
+                      "sha256":  "ad287263e305ab1b96e2630b03b772ee554166eaffedb0835015ce6fa6d493da",
+                      "path":  "docs/map01/commits/task-010-51-ninja-combat-grip-entry/combat-idle-atlas.png"
+                  }
+              ],
+    "method":  "Retain exact Task50 breathing pixels outside small right-hand rectangle; insert two new right-arm transition poses into one contiguous motion envelope over Task50, preserving protected head and lower body."
+}

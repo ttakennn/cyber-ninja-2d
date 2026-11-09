@@ -1,0 +1,29 @@
+Redraw the Flame Ninja sword combo as a clean professional animation sprite sheet. Referenced images 1 and 2 LOCK the approved character, original GOLD HILT, fiery red-orange sword with brilliant white-gold edge and thick layered orange-red flame arcs. Image 3 locks anatomy, head size, athletic proportions, costume and scarf. Reference 4 is ONLY for strong fluid grounded combat body mechanics; do not copy its character, colors, weapon or art style.
+
+Create EXACTLY 16 unique chronological animation poses, 4 columns x 4 rows, ideally a 2048x2048 transparent PNG. Keep illustrated textured pixel sprite style EXACTLY like Flame Ninja references: black hood and mask, red scarf streaming left, sleeveless black/red outfit, bare muscular arms, red belt, dark pants, silver shin plates, gold-hilt fire sword, hip sheath. All face RIGHT in side-view. One sword total. Two arms and two legs only; hands naturally grip hilt. No extra detached blades or limbs. Powerful nimble ninja movement, deep reaching attacks, hip rotation and weight transfer, never a timid cramped posture. Use one hand or two hands according to the motion. Same body/head scale throughout. No redesign sword or fire aesthetic.
+
+CRITICAL ART FIX: previous sheet flames crossed cell boundaries and became fragments stuck in other frames. EVERY figure AND COMPLETE flame trail must fit entirely inside its own cell, with CLEAR FULLY TRANSPARENT gutters at least 30px (6% cell width) on ALL FOUR sides. ABSOLUTELY NO overlap across cells, NO truncated flame tips, NO stray bits of neighboring figures. Smaller spacious composition if necessary. Each individual frame contains exactly ONE complete character. Distinct transparent gaps between all cells, NO grid or text drawn. Feet baseline 78% of cell height, hip/root at 39% of cell width. Common standing-equivalent body height about 46% of a cell, reference Idle proportions. Evenly spaced cells, fixed virtual floor and scale. Long sweeping fire crescents extend FORWARD to the right but stay inside 94% of cell width; have white-gold hot edge, orange tongues, red embers. Blade direction matches hands and actual sweep.
+
+16 poses, left-to-right then top-to-bottom:
+ROW 1 (poses0-3), FIRST CUT, forceful horizontal:
+0 clean relaxed combat guard, ONE HAND low-forward fire sword, other hand free. Very modest flame only on blade, no active slash halo.
+1 coil hips to left, sword loaded rear-left, free left arm extended as balance, rear leg loaded.
+2 rotate hips and shoulders into sword swing, right sword arm extended forward, free arm sweeps back, flame begins.
+3 decisive far-forward horizontal slash impact at chest height, strong planted front leg, brilliant LONG complete flame crescent to RIGHT, free arm behind, full clear silhouette.
+ROW 2 (poses4-7):
+4 follow-through FIRST cut, torso rotated further right, sword ends low-forward with a SHORTENING flame trail completely within cell. Keep both legs/arms complete and consistent, not cropped, NOT identical to impact. This pose sets up upward cut.
+5 standalone exit halfway from pose4 toward guard0: sword lowering, free arm returns; near-zero residual flame. Clear natural full anatomy, no artifacts, no huge stuck flame.
+6 SECOND CUT windup from low-forward pose4: second hand JOINS hilt, bend knees, shoulders rotate, sword tip at low right, elbows away from chest, not rigid.
+7 TWO HANDS drive a reverse rising slash from low right upwards-forward, extend arms and hips, front knee extends, rising flame begins.
+ROW 3 (poses8-11):
+8 full rising slash impact, both arms reach HIGH-FORWARD RIGHT, broad LONG complete flame crescent arcs upwards, same head/torso proportions.
+9 high follow-through with sword above/right shoulder, wrist and elbow flow directly into overhead third cut, flame thins.
+10 standalone exit from high pose9, blade descends safely forward, second hand releases; return midway toward guard, no giant halo.
+11 THIRD CUT strong overhead load, both hands above/behind head, open elbows, rear leg stores force, blade points backward, free space around face. Same anatomy, not larger.
+ROW 4 (poses12-15):
+12 accelerate powerful TWO-HAND diagonal down-forward cut, hip turn leads shoulders, hands extend away from head, front leg braces, flame starts from upper left toward right.
+13 finisher impact: strong forward lean and long two-hand extension, not a jump. Sword far ahead down-right, BIGGEST brilliant white-gold/orange-red diagonal crescent entirely in RIGHT half of own cell. Strongest visually. No VFX hiding anatomy, no cropped tips.
+14 absorbing follow-through, low-forward sword, hands remain forward, bent front knee absorbs force, arc fading, stance remains grounded and steady.
+15 controlled recover halfway back to guard0, second hand releases for balance, body rises naturally, only modest fire along original blade, no active crescent.
+
+Transitions must read guard→load→accelerate→impact→follow-through→either next cut or recover. Body scale NEVER changes due to arm reach or fire. Pose4 and pose5 MUST be clean complete attractive frames, not damaged fragments. Full real RGBA alpha background, no black background, no checkerboard painted in. No labels, typography, sheet border, shadow floor, UI or environment. Preserve original approved fire sword design and beautiful layered flame energy.

@@ -1,0 +1,44 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-50-ninja-combat-idle-pose-fix",
+  "source": "integration/ninja-combat-idle-pose-fix/pose-proportions-source.png",
+  "sourceGrid": {
+    "columns": 3,
+    "rows": 2
+  },
+  "reference": "integration/ninja-combat-idle/idle47-reference.png",
+  "previous": "docs/map01/commits/task-010-49-ninja-combat-idle/combat-idle-atlas.png",
+  "previousLoop": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "bodyControlHeight": 251,
+  "controlHoodRegion": [
+    0.53,
+    0.08,
+    0.2,
+    0.1
+  ],
+  "targetSoleCenter": 192.5,
+  "targetSoleY": 289,
+  "loopFrameMs": 140,
+  "method": "Six complete coherent redrawn poses; one source scale from first-cell skull-to-sole height; per-cell translation only by sole bounds; no disjoint arm masks, no old arms copied.",
+  "corrections": [
+    "near right elbow near ear level with shallow forearm toward back hilt",
+    "slight backward torso lean",
+    "far left fist at lower chest, separated from waist belt",
+    "no ghost old hand, hanging forearm or detached waist fragments"
+  ],
+  "productionChanged": false,
+  "runtimeChanged": false
+}

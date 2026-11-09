@@ -1,0 +1,50 @@
+{
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "files":  [
+                  {
+                      "sha256":  "2137b6b48b8a7b1e95258c40ce53bec1949fa41e1493f06117fa1d080d7eee9e",
+                      "path":  "integration/ninja-combat-idle-pose-fix/plan.json"
+                  },
+                  {
+                      "sha256":  "da8c5d8a80a7a6ef25c6ac4f70c56aeb260893b6ca46091cfc6327c3a9723485",
+                      "path":  "integration/ninja-combat-idle-pose-fix/pose-source.png"
+                  },
+                  {
+                      "sha256":  "4bb922ea4ee457d12d94fe58bae89296ccf9b20c232b622c7786614c8e69831c",
+                      "path":  "integration/ninja-combat-idle-pose-fix/pose-proportions-source.png"
+                  },
+                  {
+                      "sha256":  "564f693cff0afb32c9f9cfb0271425e57155b66afe53c6e2c1829b221931d38c",
+                      "path":  "integration/ninja-combat-idle-pose-fix/pose-prompt.txt"
+                  },
+                  {
+                      "sha256":  "9ec3b79948aa2291a56a9bde9472f7139dc93bb012a0518936f24c3dc8b88501",
+                      "path":  "integration/ninja-combat-idle-pose-fix/alpha-prompt.txt"
+                  },
+                  {
+                      "sha256":  "9720d07732b9108353e4dd3db091ff6834b8afc6f7457e018ef65b69d67dc580",
+                      "path":  "integration/ninja-combat-idle-pose-fix/proportions-prompt.txt"
+                  },
+                  {
+                      "sha256":  "8991bc92613c27f9bd47c49fc60b6b9b633f5b4152049df90417b9f8b261d7e8",
+                      "path":  "integration/ninja-combat-idle-pose-fix/pose-alpha-source.png"
+                  },
+                  {
+                      "sha256":  "fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940",
+                      "path":  "integration/ninja-combat-idle/idle47-reference.png"
+                  },
+                  {
+                      "sha256":  "ef997f62130a66d65ef95d7bc11091aa479e17401df7631c5ed51cff3b0c5857",
+                      "path":  "docs/map01/commits/task-010-49-ninja-combat-idle/combat-idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "41d6dd591afab5bd393df1e0dd121c6bdb3e2974a5a355a0932dee576249331b",
+                      "path":  "scripts/prepare_ninja_combat_pose_fix.ps1"
+                  },
+                  {
+                      "sha256":  "874380c9dcc0bd10728ec7a86f779220ccdfeda653be2fef0057a5ad82516442",
+                      "path":  "docs/map01/commits/task-010-50-ninja-combat-idle-pose-fix/combat-idle-atlas.png"
+                  }
+              ],
+    "method":  "Six complete coherent redrawn poses; one source scale from first-cell skull-to-sole height; per-cell translation only by sole bounds; no disjoint arm masks, no old arms copied."
+}

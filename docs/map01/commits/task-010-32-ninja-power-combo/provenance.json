@@ -1,0 +1,29 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "tool": "image_gen built-in",
+  "referenceVideo": "https://www.youtube.com/watch?v=1gfD8P0iSHM",
+  "videoReview": "PARTIAL_GAMEPLAY_OBSERVED_NOT_COMPLETE_ANALYSIS",
+  "runtime": "UNCHANGED",
+  "files": [
+    {
+      "path": "integration/ninja-combo-power/combo-source.png",
+      "sha256": "6531dc64c4811c967a6827e4027ac124978c655cebc43a55b33263d404a4268b"
+    },
+    {
+      "path": "docs/map01/commits/task-010-32-ninja-power-combo/combo-atlas.png",
+      "sha256": "2ca82e09f64917b16230ddb5264ab36e1559ae91042dab0181cfc79881808533"
+    },
+    {
+      "path": "docs/map01/commits/task-010-32-ninja-power-combo/reference/attack_1.png",
+      "sha256": "9079109d888d8f8cf758d6d87f47534cf1a5874ab9a26b953cebb9ebfdf8b9b4"
+    },
+    {
+      "path": "docs/map01/commits/task-010-32-ninja-power-combo/reference/attack_2.png",
+      "sha256": "8770b081d7b9dc62e1712ca3cc58acafbc82874b918ecb7349a2cf0a8c3e1077"
+    },
+    {
+      "path": "docs/map01/commits/task-010-32-ninja-power-combo/reference/attack_3.png",
+      "sha256": "a7f09a6ffdd0e6585ea662faf26ec9571ec494e2bffd60c3d33315a7e019fad9"
+    }
+  ]
+}

@@ -30,8 +30,8 @@
 <body>
   <div class="eyebrow">NINJA HỎA · THƯ VIỆN ART PRODUCTION</div>
   <h1>NINJA HỎA · THƯ VIỆN HOẠT ẢNH</h1>
-  <p>Chọn nhóm để xem động tác cơ bản, combo, phi tiêu, hai tuyệt kỹ, xuất hiện và hồi sinh trên cùng trang. Mỗi nhóm giữ điều khiển phát, tạm dừng, tua và xem từng frame.</p>
-  <p class="note">Ảnh, kích thước, pivot và nhịp animation đã chốt được giữ nguyên. Hai màn xuất hiện/hồi sinh chưa tích hợp vào game; quỹ đạo và vật cản trong preview kỹ năng chỉ để duyệt art. <a href="README.md">Danh mục art và nguồn gốc</a>.</p>
+  <p>Chọn nhóm để xem động tác cơ bản, vào thế chiến đấu, combo, phi tiêu, hai tuyệt kỹ, xuất hiện và hồi sinh trên cùng trang. Mỗi nhóm giữ điều khiển phát, tạm dừng, tua và xem từng frame.</p>
+  <p class="note">Ảnh, kích thước, pivot và nhịp animation đã chốt được giữ nguyên. Vào thế chiến đấu và hai màn xuất hiện/hồi sinh chưa tích hợp vào game; quỹ đạo và vật cản trong preview kỹ năng chỉ để duyệt art. <a href="README.md">Danh mục art và nguồn gốc</a>.</p>
   <div id="clips" class="clips" aria-label="Chọn nhóm hoạt ảnh"></div>
   <h2 id="heading"></h2>
   <p id="description"></p>
@@ -41,7 +41,9 @@
   <div id="boards" class="boards"></div>
   <script>
     const groups = [
-      { name: 'Cơ bản · di chuyển/leo/cúi', path: 'basic-preview.html', description: 'Đứng/thở, đi/chạy, nhảy/rơi/tiếp đất, cúi, leo hai chiều/dừng và trúng đòn. Đi/chạy hiện dùng cùng clip run.', boards: [['locomotion/flame-ninja-atlas.png', 'Atlas nhân vật · leo bản v2 đã chốt'], ['locomotion/climb-poses.png', 'Pose leo đã chốt']] },
+      { name: 'Cơ bản · 5 động tác', path: 'basic-preview.html', description: 'Đứng/thở, đi/chạy, nhảy–rơi–tiếp đất, trúng đòn–hồi thế và cúi–giữ. Có điều khiển frame trước/sau.', boards: [['locomotion/flame-ninja-atlas.png', 'Atlas nhân vật · leo bản v2 đã chốt'], ['locomotion/climb-poses.png', 'Pose leo đã chốt']] },
+      { name: 'Vào thế chiến đấu · đã chốt10.51', path: 'combat-idle/preview.html', description: 'Hai nhịp nâng tay/đưa tay về chuôi kiếm, rồi sáu frame giữ thế và thở. Bản10.51 đã được người dùng chốt art, chưa đưa vào game.', boards: [['combat-idle/combat-idle-atlas.png', 'Vào thế chiến đấu ·8frame đã chốt']] },
+      { name: 'Leo thang · 3 động tác', path: 'basic-preview.html?group=climb', description: 'Leo lên, leo xuống và dừng; giữ nguyên bản leo đã chốt.', boards: [['locomotion/climb-poses.png', 'Pose leo đã chốt']] },
       { name: 'Đánh thường · combo 1–2–3', path: 'basic-preview.html?group=combo', description: 'Ba đòn combo giữ tốc độ 0,8 theo bản đã chốt.', boards: [['attacks/attack_1.png', 'Combo 1'], ['attacks/attack_2.png', 'Combo 2'], ['attacks/attack_3.png', 'Combo 3']] },
       { name: 'Phi tiêu Hỏa', path: 'basic-preview.html?group=shuriken', description: 'Phóng khi đứng hoặc cúi và phi tiêu bay; chọn từng sheet để xem frame.', boards: [['skills/fire-shuriken/throw.png', 'Phóng đứng'], ['skills/fire-shuriken/crouch-throw.png', 'Phóng cúi'], ['skills/fire-shuriken/projectile.png', 'Phi tiêu bay']] },
       { name: 'E · Minh Vương Bạo Viêm', path: 'basic-preview.html?group=special', description: 'Bản ghép minh họa cast, cầu hắc hỏa bay và vụ nổ; có thể chọn riêng từng sheet.', boards: [['skills/special-01/cast.png', 'Thi triển'], ['skills/special-01/orb.png', 'Cầu hắc hỏa'], ['skills/special-01/explosion.png', 'Vụ nổ']] },

@@ -14,6 +14,8 @@
 
 ## Khoá art và kích thước
 
+- Khi người dùng gửi ảnh tham khảo tư thế: đối chiếu góc thân, vai–khuỷu–cổ tay, vị trí nắm chuôi và tay trái/phải sinh học trước khi vẽ. Review từng frame ở kích thước thật và phóng lớn trên nền sáng/tối; rà tay cũ còn sót, mảnh ảnh rời, vùng nách/eo, đường nối khăn–đai và điểm tiếp xúc tay–kiếm. Chỉ số0pixel ngoài mask không đủ chứng nhận pose hay chất lượng ghép; không bàn giao chỉ dựa trên audit vùng giữ nguyên.
+
 - Nguồn dự án người dùng xác nhận: `C:\Users\anhthaitrong\Downloads\Games\cyber-ninja-2d`. Art nhân vật đã chốt trong `docs/characters/` là chuẩn tạo hình; candidate trong commits/integration không thay thế chuẩn đó khi chưa được duyệt.
 - Khi sửa animation đã chốt, review cả vùng được sửa: khớp bụng/đai/quần áo qua từng frame và trang bị phải đi theo mốc cơ thể. Kiểm tra pixel vùng được giữ không thay thế việc xem đường nối và vòng chuyển động; không ghép mảng cơ thể lệch vị trí hoặc để trang bị đứng yên trên canvas khi thân cử động.
 

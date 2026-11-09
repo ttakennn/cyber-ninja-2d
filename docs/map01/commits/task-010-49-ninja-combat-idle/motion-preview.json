@@ -1,0 +1,17 @@
+{
+  "steadyLoop": {
+    "file": "motion-preview.gif",
+    "frames": 6,
+    "frameMs": 140
+  },
+  "entryDemo": {
+    "file": "entry-preview.gif",
+    "frames": 14,
+    "entryFrameMs": [
+      100,
+      100
+    ],
+    "readyFrameMs": 140
+  },
+  "purpose": "Artwork review only, no enemy detection/runtime."
+}

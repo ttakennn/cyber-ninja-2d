@@ -1,0 +1,16 @@
+﻿[
+    {
+        "clip":  "run",
+        "scale":  0.72238805970149256,
+        "sourceBaseline":  381,
+        "targetReferenceHeight":  242,
+        "perFrameFit":  false
+    },
+    {
+        "clip":  "hurt",
+        "scale":  0.52731092436974791,
+        "sourceBaseline":  517,
+        "targetReferenceHeight":  251,
+        "perFrameFit":  false
+    }
+]

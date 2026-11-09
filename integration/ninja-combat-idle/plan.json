@@ -1,0 +1,82 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-49-ninja-combat-idle",
+  "reference": "integration/ninja-combat-idle/idle47-reference.png",
+  "referenceApproval": "docs/map01/commits/task-010-48-ninja-idle-production-47/approval.json",
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "pivot": [
+    192,
+    289
+  ],
+  "pixelsPerWorldUnit": 160,
+  "master": {
+    "source": "integration/ninja-combat-idle/combat-master.png",
+    "columns": 1,
+    "rows": 1,
+    "hoodRegion": [
+      0.47,
+      0.14,
+      0.18,
+      0.13
+    ]
+  },
+  "entry": {
+    "source": "integration/ninja-combat-idle/combat-enter-source.png",
+    "columns": 2,
+    "rows": 2,
+    "hoodRegion": [
+      0.47,
+      0.06,
+      0.2,
+      0.19
+    ],
+    "selectedCells": [
+      1,
+      2
+    ]
+  },
+  "shoulderOffsets": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      -6,
+      -2
+    ],
+    [
+      -6,
+      0
+    ],
+    [
+      -8,
+      0
+    ],
+    [
+      -6,
+      -2
+    ]
+  ],
+  "entryFrameMs": [
+    100,
+    100
+  ],
+  "loopFrameMs": 140,
+  "loopBaseFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "identity": "Approved Flame Ninja Idle10.47; blue ninja is pose-only reference. Near right hand on existing back hilt, far left hand in guard.",
+  "normalization": "One fixed scale per source sheet based on its control pose skull-to-foot height251px; translation by existing sword hilt cap. No per-frame body fit. Original Idle47 head/core/lower body retained outside arm/occlusion masks.",
+  "productionChanged": false,
+  "runtimeChanged": false
+}

@@ -1,0 +1,173 @@
+{
+  "kind": "Requested image review and packaging",
+  "browser": "NOT_RUN",
+  "production": {
+    "sha256": "d5559f90565cdc00eec69d7692eac7e48ce0b6bdd9bd070e59d69d551d523e48",
+    "unchanged": true,
+    "path": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+  },
+  "pixelAudit": [
+    {
+      "frame": 0,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 8067,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        0,
+        0
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 1,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 8145,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        0,
+        0
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 2,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 719,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        0,
+        0
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 3,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 717,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        0,
+        0
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 4,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 701,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        1,
+        0
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 5,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 725,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        0,
+        1
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 6,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 729,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        -1,
+        2
+      ],
+      "lowerBodyDifferences": 0
+    },
+    {
+      "frame": 7,
+      "detachedComponentsOver3Pixels": 0,
+      "changedRgbaPixels": 731,
+      "outsideEditRegionDifferences": 0,
+      "protectedHeadDifferences": 0,
+      "gripOffset": [
+        0,
+        2
+      ],
+      "lowerBodyDifferences": 0
+    }
+  ],
+  "labels": [
+    "Nâng tay vào kiếm",
+    "Đưa tay về chuôi kiếm",
+    "Sẵn sàng · hít vào",
+    "Sẵn sàng · nâng ngực",
+    "Sẵn sàng · giữ nhịp",
+    "Sẵn sàng · thở ra",
+    "Sẵn sàng · thả vai",
+    "Sẵn sàng · nối vòng"
+  ],
+  "testBuildLintTypecheckFormatter": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "task50": {
+    "sha256": "874380c9dcc0bd10728ec7a86f779220ccdfeda653be2fef0057a5ad82516442",
+    "unchanged": true,
+    "path": "docs/map01/commits/task-010-50-ninja-combat-idle-pose-fix/combat-idle-atlas.png"
+  },
+  "published": false,
+  "userApproved": false,
+  "uniqueFrames": 8,
+  "gifs": [
+    {
+      "frameMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "decodedFrames": 6,
+      "pixelSize": [
+        1152,
+        900
+      ],
+      "file": "motion-preview.gif"
+    },
+    {
+      "frameMs": [
+        100,
+        100,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "decodedFrames": 14,
+      "pixelSize": [
+        1152,
+        900
+      ],
+      "file": "entry-preview.gif"
+    }
+  ],
+  "atlasPixelSize": [
+    1536,
+    640
+  ]
+}

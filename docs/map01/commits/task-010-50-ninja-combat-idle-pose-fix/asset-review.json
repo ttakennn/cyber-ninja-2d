@@ -1,0 +1,63 @@
+{
+  "canonical": {
+    "path": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+    "sha256": "d5559f90565cdc00eec69d7692eac7e48ce0b6bdd9bd070e59d69d551d523e48",
+    "unchanged": true
+  },
+  "runtime": "NOT_RUN",
+  "detachedFragments": [
+    {
+      "frame": 0,
+      "detachedComponentsOver3Pixels": 0
+    },
+    {
+      "frame": 1,
+      "detachedComponentsOver3Pixels": 0
+    },
+    {
+      "frame": 2,
+      "detachedComponentsOver3Pixels": 0
+    },
+    {
+      "frame": 3,
+      "detachedComponentsOver3Pixels": 0
+    },
+    {
+      "frame": 4,
+      "detachedComponentsOver3Pixels": 0
+    },
+    {
+      "frame": 5,
+      "detachedComponentsOver3Pixels": 0
+    }
+  ],
+  "detachedFragmentThreshold": "8-connected alpha>=64, component size>3px; visual inspection still required",
+  "kind": "Artwork review requested by user",
+  "atlasPixelSize": [
+    1152,
+    640
+  ],
+  "userApproved": false,
+  "testBuildLintTypecheckFormatter": "NOT_RUN",
+  "approvedIdlePixelIdentityClaimed": false,
+  "gif": {
+    "width": 1152,
+    "frameMs": [
+      140,
+      140,
+      140,
+      140,
+      140,
+      140
+    ],
+    "decodedFrames": 6,
+    "height": 880
+  },
+  "framePixelSize": [
+    384,
+    320
+  ],
+  "productionPublished": false,
+  "fullPoseRedraw": true,
+  "browser": "NOT_RUN"
+}

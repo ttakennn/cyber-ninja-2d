@@ -1,0 +1,58 @@
+﻿{
+    "tool":  "image_gen.imagegen",
+    "files":  [
+                  {
+                      "sha256":  "8b0475ef2daed2b9ef84c55f3617c8c0d315321249dab07f433c0699fe9fec5e",
+                      "path":  "integration/ninja-spin-combo/plan.json"
+                  },
+                  {
+                      "sha256":  "cf0343d40d7ca9c3e7449fe9729b09dbd2adeefeff06ec8f6d009419e056c01b",
+                      "path":  "integration/ninja-spin-combo/body-source.png"
+                  },
+                  {
+                      "sha256":  "2f015a6841a88cee0af3d16c62d79079e8b545c788dd08e0a68e7524453baca7",
+                      "path":  "integration/ninja-spin-combo/ring-source.png"
+                  },
+                  {
+                      "sha256":  "210d62297325554bd04f4ba1229427285c38f0f9cd02f15cb736c436c10769ef",
+                      "path":  "integration/ninja-spin-combo/body-prompt.txt"
+                  },
+                  {
+                      "sha256":  "a29dd577a28430d9ae699bccc14f22fae3024c39723261ae1f90107707e07e30",
+                      "path":  "integration/ninja-spin-combo/ring-prompt.txt"
+                  },
+                  {
+                      "sha256":  "77ab5774ec545575fddf8172b16d89024e148d6f932eb60d2833f35158ba3bb0",
+                      "path":  "integration/ninja-spin-combo/preview.js"
+                  },
+                  {
+                      "sha256":  "cd73846f4445299f7fbe7e5990f5bfa10b669c0761b4e527cb25b06914334fc7",
+                      "path":  "docs/map01/commits/task-010-36-ninja-spin-combo/body-atlas.png"
+                  },
+                  {
+                      "sha256":  "8b9e3a37590f81f08eafa431654d0ce2eb40a6113f961a32f5d3f56e98ea6fa4",
+                      "path":  "docs/map01/commits/task-010-36-ninja-spin-combo/combo-ring-atlas.png"
+                  },
+                  {
+                      "sha256":  "9d715a28d199cd73416bbce96bab1ef881102a946a857f1c688672850d17a7b9",
+                      "path":  "docs/map01/commits/task-010-36-ninja-spin-combo/fire-slash-atlas.png"
+                  },
+                  {
+                      "sha256":  "a24a08ddec1280d21b1b390b815b30f34a2a2dd5b24959e9721c22a8ec09d564",
+                      "path":  "docs/map01/commits/task-010-36-ninja-spin-combo/spin-review.png"
+                  }
+              ],
+    "copyMethod":  "ARGB row copy without resampling for preserved slots",
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "referenceTransport":  "Body: five recent images including user spin references, old body/Idle. Ring: last five images including new body.",
+    "baseReview":  "docs/map01/commits/task-010-35-ninja-ground-attacks",
+    "runtimeChanged":  false,
+    "preservedSlots":  [
+                           0,
+                           1,
+                           2,
+                           3,
+                           4,
+                           5
+                       ]
+}

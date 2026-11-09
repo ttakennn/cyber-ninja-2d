@@ -1,0 +1,36 @@
+﻿{
+    "references":  [
+                       "integration/ninja-combo-separated/reference/ground-combo-motion.png",
+                       "docs/map01/commits/task-010-32-ninja-power-combo/combo-atlas.png",
+                       "docs/characters/ninja/animation/attacks/attack_1.png",
+                       "docs/characters/ninja/animation/attacks/attack_3.png",
+                       "integration/ninja-run-hurt-revision/idle-reference.png"
+                   ],
+    "tool":  "image_gen.imagegen",
+    "files":  [
+                  {
+                      "sha256":  "bdef91e6a483b3e28797e4d35c8352b4edf12f58e63ed98069d421565b88a5d0",
+                      "path":  "integration/ninja-combo-separated/combo-source.png"
+                  },
+                  {
+                      "sha256":  "60ca5859cccd49dd26e3b77151c54ca30ea45fc7add9e1c417e1f904e958a47f",
+                      "path":  "integration/ninja-combo-separated/PROMPT.txt"
+                  },
+                  {
+                      "sha256":  "c6af2a09e11fc16cf6cc585c5914bf8155c5f598923405bc5867c07625ba5907",
+                      "path":  "integration/ninja-combo-separated/reference/ground-combo-motion.png"
+                  },
+                  {
+                      "sha256":  "2a692282d2102f912ae64334ece865ccb877feec126d590ba47077337fbeee06",
+                      "path":  "docs/map01/commits/task-010-33-ninja-clean-combo/combo-atlas.png"
+                  }
+              ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "referenceTransport":  "Five recent conversation images; old Task10.32 sheet is a negative reference. Direct Windows paths were rejected by image tool.",
+    "runtimeChanged":  false,
+    "sourcePixelSize":  [
+                            1254,
+                            1254
+                        ],
+    "productionChanged":  false
+}

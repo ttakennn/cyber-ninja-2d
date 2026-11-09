@@ -1,0 +1,58 @@
+﻿{
+    "tool":  "image_gen.imagegen",
+    "fxSourceSize":  [
+                         1448,
+                         1086
+                     ],
+    "runtimeChanged":  false,
+    "artApproval":  "PENDING",
+    "files":  [
+                  {
+                      "sha256":  "441a560a527ac415737a94e5d58269ff883ed724a075dc45a7cc394d5755ba0f",
+                      "path":  "integration/ninja-ground-attacks/body-source.png"
+                  },
+                  {
+                      "sha256":  "1f9debaab4a8f9d91aba74fa6499ff8df9284e9d6873f315e18df71d12c1ffa9",
+                      "path":  "integration/ninja-ground-attacks/fx-source.png"
+                  },
+                  {
+                      "sha256":  "8e22480765991a635bb8f4e2d4477d4740cc48c0ff12dedab2e7275f99322418",
+                      "path":  "integration/ninja-ground-attacks/plan.json"
+                  },
+                  {
+                      "sha256":  "ade90c0c4ac5a040b41f4f94545616cd8deaa7f8a52a0e7d2a0237d4f2dab597",
+                      "path":  "integration/ninja-ground-attacks/body-prompt.txt"
+                  },
+                  {
+                      "sha256":  "80adfb38d77f16050a006be56b4478c3c45d13c271336a6b75876f21f2770708",
+                      "path":  "integration/ninja-ground-attacks/body-fix-prompt.txt"
+                  },
+                  {
+                      "sha256":  "e9393c78d5a5071d1dcb810aed2fe216ed16487369ac35912dcc066b6c80edbe",
+                      "path":  "integration/ninja-ground-attacks/fx-prompt.txt"
+                  },
+                  {
+                      "sha256":  "a0d3cf385a7a7b5cdeef561de46a8314d9186783d5b82872ce9f4450c3a04507",
+                      "path":  "integration/ninja-ground-attacks/preview.js"
+                  },
+                  {
+                      "sha256":  "2315f2970b751cddb85fc44292dc8a8c1e0527b3d7a8064267093f5f606a330a",
+                      "path":  "docs/map01/commits/task-010-35-ninja-ground-attacks/body-atlas.png"
+                  },
+                  {
+                      "sha256":  "9d715a28d199cd73416bbce96bab1ef881102a946a857f1c688672850d17a7b9",
+                      "path":  "docs/map01/commits/task-010-35-ninja-ground-attacks/fire-slash-atlas.png"
+                  },
+                  {
+                      "sha256":  "9016ee3dcfb8ce9309bb8d25307cf2825d9a23281c3cd2c209cd24e98b07a2d9",
+                      "path":  "docs/map01/commits/task-010-35-ninja-ground-attacks/impact-registration.png"
+                  }
+              ],
+    "bodySourceSize":  [
+                           1254,
+                           1254
+                       ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "referenceTransport":  "Conversation images: user marked Ground Attacks, local motion reference, approved attack1 and Idle. Body revision references preceding draft; FX references last five images.",
+    "bodyReviewRound":  2
+}

@@ -1,0 +1,38 @@
+import fs from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const root=new URL('../',import.meta.url),input='integration/ninja-combat-idle-production-51/',library='docs/characters/ninja/animation/';
+const read=p=>fs.readFile(new URL(p,root)),readJson=async p=>JSON.parse((await read(p)).toString('utf8')),write=(p,v)=>fs.writeFile(new URL(p,root),v),json=(p,v)=>write(p,JSON.stringify(v,null,2)+'\n'),hash=b=>createHash('sha256').update(b).digest('hex');
+const plan=await readJson(input+'release-plan.json');
+if(plan.status!=='USER_APPROVED_PRODUCTION_ART'||plan.selectedRevision!=='Task10.51'||plan.runtimeChanged!==false)throw new Error('Explicit art-only approval required.');
+const png=await read(plan.approvedAtlas),reviewBytes=await read(plan.sourceReview+'/review.json'),review=JSON.parse(reviewBytes.toString('utf8'));
+if(hash(png)!==plan.approvedAtlasSha256||hash(reviewBytes)!==plan.approvedReviewMetadataSha256)throw new Error('Approved review files changed.');
+const baseline=await readJson(input+'canonical-before-hashes.json');
+for(const f of baseline)if(hash(await read(f.path))!==f.sha256)throw new Error('Existing production asset changed: '+f.path);
+const locomotion=await readJson(library+'locomotion/animations.json');
+const frame=f=>({x:f.x,y:f.y,width:f.width,height:f.height,sourceWidth:384,sourceHeight:320,offsetX:0,offsetY:0,pivot:f.pivot,label:f.label});
+const animations={version:1,kind:'production',status:plan.status,character:'ninja',selectedRevision:plan.selectedRevision,image:'combat-idle-atlas.png',filter:locomotion.filter,frameWidth:384,frameHeight:320,columns:4,visual:locomotion.visual,clips:{combatEnter:{fps:1000/review.clips.combatEnter.frameMs[0],loop:false,frames:review.clips.combatEnter.frames.map(i=>frame(review.frames[i]))},combatIdle:{fps:review.clips.combatIdle.fps,loop:true,frames:review.clips.combatIdle.frames.map(i=>frame(review.frames[i]))}}};
+if(animations.clips.combatEnter.frames.length!==2||animations.clips.combatIdle.frames.length!==6||animations.clips.combatEnter.fps!==10||Math.abs(animations.clips.combatIdle.fps-1000/140)>1e-10)throw new Error('Reviewed timing/frame count mismatch.');
+const authority={status:plan.status,selectedRevision:plan.selectedRevision,date:plan.approvedAt,reviewer:'user',userViewedThisRevision:true,scope:'Combat entry two frames and combat idle breathing six frames, explicitly approved; no game integration.',sourceReview:plan.sourceReview,artwork:plan.approvedAtlas,artworkSha256:plan.approvedAtlasSha256,metadataSource:plan.sourceReview+'/review.json',metadataSourceSha256:plan.approvedReviewMetadataSha256,preview:'combat-idle/preview.html',evidence:plan.reviewDirectory+'/release-evidence.json',runtimeChanged:false,browser:'NOT_RUN_THIS_TASK'};
+const manifest={version:1,kind:'production',status:plan.status,character:'ninja',approval:authority,assets:{body:{image:'combat-idle-atlas.png',metadata:'animations.json',sha256:plan.approvedAtlasSha256}},sequence:{order:['combatEnter','combatIdle'],entryMs:200,steadyLoopMs:840,loopClip:'combatIdle'},runtimeChanged:false};
+await fs.mkdir(new URL(plan.reviewDirectory+'/',root),{recursive:true});await write(plan.reviewDirectory+'/combat-idle-atlas.png',png);await json(plan.reviewDirectory+'/animations.json',animations);await json(plan.reviewDirectory+'/manifest.json',manifest);await json(plan.reviewDirectory+'/approval.json',{...authority,userInstruction:plan.userInstruction});
+const destination=plan.productionDirectory+'/';await fs.mkdir(new URL(destination,root),{recursive:true});
+const production=await readJson(library+'production.json'),catalogText=(await read(library+'review-data.js')).toString('utf8'),prefix='window.ninjaLibrary=';
+if(!catalogText.startsWith(prefix))throw new Error('Unexpected preview catalog format.');
+const catalog=JSON.parse(catalogText.slice(prefix.length).trim().replace(/;$/,''));
+const newRecords=[];
+for(const name of plan.publishFiles){const source=plan.reviewDirectory+'/'+name,bytes=await read(source);await write(destination+name,bytes);newRecords.push({path:'combat-idle/'+name,source,sha256:hash(bytes)});}
+for(const name of plan.presentationFiles){const bytes=await read(input+name);await write(destination+name,bytes);}
+production.files=production.files.filter(f=>!f.path.startsWith('combat-idle/')).concat(newRecords);production.combatIdleRelease=authority;production.artApproval='USER_APPROVED';
+catalog.production=production;catalog.sheets['combat-idle/animations']={image:'combat-idle/combat-idle-atlas.png',metadata:'combat-idle/animations.json',sheet:animations};catalog.manifests['combat-idle']=manifest;
+await json(library+'production.json',production);await write(library+'review-data.js',prefix+JSON.stringify(catalog)+';\n');
+const libraryPlanText=(await read(plan.libraryPlan)).toString('utf8'),libraryPlan=JSON.parse(libraryPlanText);let next=libraryPlanText;
+const group={id:'combat-idle',source:plan.reviewDirectory,files:plan.publishFiles};
+if(!libraryPlan.groups.some(g=>g.id==='combat-idle')){const groupText=JSON.stringify(group,null,2).split('\n').map(l=>'    '+l).join('\n');next=next.replace(/\r?\n  \],(\r?\n  "entrances":)/,',\n'+groupText+'\n  ],$1');}else if(JSON.stringify(libraryPlan.groups.find(g=>g.id==='combat-idle'))!==JSON.stringify(group))throw new Error('Different combat production source already registered.');
+if(!libraryPlan.combatIdleRelease)next=next.replace(/\r?\n}\s*$/,',\n  "combatIdleRelease": '+JSON.stringify(authority)+'\n}\n');else throw new Error('Combat approval already exists; avoid rewriting another release.');
+const registered=JSON.parse(next);if(!registered.groups.some(g=>g.id==='combat-idle')||registered.combatIdleRelease?.selectedRevision!=='Task10.51')throw new Error('Incomplete production source registration.');
+await write(plan.libraryPlan,next);
+for(const f of baseline)if(hash(await read(f.path))!==f.sha256)throw new Error('Unexpected existing asset modification: '+f.path);
+if(hash(await read(destination+'combat-idle-atlas.png'))!==plan.approvedAtlasSha256)throw new Error('Published PNG differs from approved PNG.');
+const evidence={stage:'PUBLISHED_USER_APPROVED_PRODUCTION_ART',selectedRevision:plan.selectedRevision,canonicalImage:destination+'combat-idle-atlas.png',canonicalSha256:plan.approvedAtlasSha256,approvedPngByteIdentity:true,sourceReviewMetadataByteIdentity:true,canonicalMetadata:destination+'animations.json',frameCount:8,entryFrameMs:[100,100],steadyFrameMs:140,frameWidth:384,frameHeight:320,pivot:plan.pivot,unchangedExistingAssetFiles:baseline.length,unchangedExistingAssets:baseline,newProductionAssetFiles:newRecords,metadataFiles:[library+'production.json',library+'review-data.js',plan.libraryPlan],runtimeChanged:false,browser:'NOT_RUN',testBuildLintTypecheckFormatter:'NOT_RUN'};
+await json(plan.reviewDirectory+'/release-evidence.json',evidence);
+console.log(JSON.stringify({stage:evidence.stage,image:evidence.canonicalImage,sha256:evidence.canonicalSha256,unchangedExistingAssetFiles:baseline.length,newAssetFiles:newRecords.length,runtimeChanged:false}));

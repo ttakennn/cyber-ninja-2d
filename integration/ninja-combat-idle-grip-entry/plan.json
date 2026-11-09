@@ -1,0 +1,112 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-51-ninja-combat-grip-entry",
+  "base": "docs/map01/commits/task-010-50-ninja-combat-idle-pose-fix/combat-idle-atlas.png",
+  "idle": "integration/ninja-combat-idle/idle47-reference.png",
+  "gripSource": "integration/ninja-combat-idle-grip-entry/grip-source.png",
+  "entrySource": "integration/ninja-combat-idle-grip-entry/entry-source.png",
+  "gripHoodRegion": [
+    0.48,
+    0.16,
+    0.17,
+    0.12
+  ],
+  "entryHoodRegion": [
+    0.55,
+    0.08,
+    0.23,
+    0.12
+  ],
+  "nativeCapRegion": [
+    0.39,
+    0.04,
+    0.1,
+    0.14
+  ],
+  "gripCapRegion": [
+    0.36,
+    0.1,
+    0.12,
+    0.13
+  ],
+  "entryCapRegion": [
+    0.37,
+    0.02,
+    0.2,
+    0.23
+  ],
+  "gripRect": [
+    160,
+    39,
+    28,
+    27
+  ],
+  "entryEnvelope": [
+    [
+      74,
+      24
+    ],
+    [
+      188,
+      24
+    ],
+    [
+      188,
+      76
+    ],
+    [
+      202,
+      91
+    ],
+    [
+      202,
+      120
+    ],
+    [
+      185,
+      125
+    ],
+    [
+      174,
+      125
+    ],
+    [
+      158,
+      145
+    ],
+    [
+      74,
+      145
+    ]
+  ],
+  "protectHead": [
+    190,
+    30,
+    56,
+    60
+  ],
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "bodyControlHeight": 251,
+  "entryFrameMs": [
+    100,
+    100
+  ],
+  "loopFrameMs": 140,
+  "labels": [
+    "Nâng tay vào kiếm",
+    "Đưa tay về chuôi kiếm",
+    "Sẵn sàng · hít vào",
+    "Sẵn sàng · nâng ngực",
+    "Sẵn sàng · giữ nhịp",
+    "Sẵn sàng · thở ra",
+    "Sẵn sàng · thả vai",
+    "Sẵn sàng · nối vòng"
+  ],
+  "productionChanged": false,
+  "runtimeChanged": false
+}

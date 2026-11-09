@@ -1,0 +1,24 @@
+{
+  "status": "CANDIDATE_PENDING_USER_REVIEW",
+  "tool": "image_gen built-in",
+  "changedClips": [
+    "run",
+    "hurt"
+  ],
+  "preserved": "All other atlas pixels compared exactly by authoring script",
+  "runtime": "UNCHANGED",
+  "files": [
+    {
+      "path": "integration/ninja-run-hurt-revision/run-source.png",
+      "sha256": "55aca13225421b55aa66080cee69f73126b81ec01486857107ada5fb09386bf2"
+    },
+    {
+      "path": "integration/ninja-run-hurt-revision/hurt-source.png",
+      "sha256": "9fb5d120532acf1619de0ce4ad6f61f89d128bf07da7f678c83ed9c30805a428"
+    },
+    {
+      "path": "docs/map01/commits/task-010-29-ninja-run-hurt-art/flame-ninja-atlas-candidate.png",
+      "sha256": "0f6f86e222f86ceda5cd7849c9b11de64793c3c3c0e233e36fc941684c52eeba"
+    }
+  ]
+}

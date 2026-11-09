@@ -1,0 +1,23 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "tool": "image_gen built-in",
+  "prompts": "integration/ninja-combo-revision/PROMPTS.md",
+  "generator": "scripts/prepare_ninja_combo_revision.ps1",
+  "normalization": "ONE_GLOBAL_TRANSFORM_ALL_16_POSES_NO_PER_FRAME_FIT",
+  "files": [
+    {
+      "path": "integration/ninja-combo-revision/combo-first-source.png",
+      "sha256": "3b1fa84a3c4c59bc520da12a1770abb5ec813d1fb3f23b2bc81e689c9b9b42ee"
+    },
+    {
+      "path": "integration/ninja-combo-revision/combo-source.png",
+      "sha256": "08af7d3f7e76586cd1da399fe67ae682fa660530c91a1197f62997c37b50b5bb"
+    },
+    {
+      "path": "docs/map01/commits/task-010-30-ninja-combo-art/combo-atlas.png",
+      "sha256": "4855957e10f8490169d9cb2a6f10bd2378537f0804c95f10a38894302a7a05fc"
+    }
+  ],
+  "runtime": "UNCHANGED",
+  "browser": "NOT_RUN_CONCURRENT_USER_INPUT"
+}

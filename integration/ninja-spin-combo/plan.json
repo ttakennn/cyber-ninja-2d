@@ -1,0 +1,24 @@
+{
+  "status":"CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory":"docs/map01/commits/task-010-36-ninja-spin-combo",
+  "baseReview":"docs/map01/commits/task-010-35-ninja-ground-attacks",
+  "bodySource":"integration/ninja-spin-combo/body-source.png",
+  "ringSource":"integration/ninja-spin-combo/ring-source.png",
+  "bodySourceScale":1.23,
+  "sourcePivotX":160,
+  "sourceGround":[282,283,282,284,283,280,281,283,274,278,274,276,280,277,278,277],
+  "sourceHands":[[205,210],[223,190],[237,180],[114,166],[166,171],[231,146],[209,211],[196,122],[157,55],[169,46],[156,46],[154,49],[181,158],[214,192],[202,209],[200,192]],
+  "sourceTips":[[286,239],[282,224],[301,211],[20,171],[247,185],[308,152],[273,249],[229,49],[44,63],[60,56],[70,61],[44,70],[238,198],[278,240],[273,252],[269,245]],
+  "labels":["Vào đòn xoay · hạ trọng tâm","Xoay lưng 3/4 · chân trụ","Quay lưng · kiếm theo hông","Nghiêng trái · giữa vòng xoay","Mở ngực 3/4 · tiếp tục xoay","Về hướng đánh · chém ngang","Hãm xoay · kiếm thấp","Nối đòn 3 · đưa kiếm lên","Nạp đòn kết · hai tay","Xoay lưng 3/4 · giữ cán","Quay lưng · kiếm qua đầu","Nghiêng trái · tiếp đà xoay","Mở ngực · bổ về trước","Vươn xa · chạm đòn kết","Chân trụ · hãm lực xoay","Thu kiếm · về guard"],
+  "fxByNewPose":[null,null,null,null,[0,0],[0,1],[0,2],null,null,null,null,null,[2,0],[2,1],[2,2],null],
+  "clips":[
+    {"name":"Chém ngang","frames":[0,1,2,3,4],"frameMs":[70,115,60,95,110],"exitFrames":[5,0],"exitMs":[80,90],"chainWindowMs":[160,410]},
+    {"name":"Xoay người chém ngang","frames":[6,7,8,9,10,11,12,5],"chainFrames":[6,7,8,9,10,11,12,13],"frameMs":[85,65,60,60,65,95,80,70],"exitFrames":[0],"exitMs":[90],"chainWindowMs":[160,480]},
+    {"name":"Xoay người bổ chéo","frames":[14,15,16,17,18,19,20,21,0],"frameMs":[110,65,60,60,65,110,90,80,80],"exitFrames":[],"exitMs":[],"chainWindowMs":null}
+  ],
+  "ring":{"frameSize":512,"frameCount":8,"pivot":[256,256],"centerAboveGround":115,"scale":0.78,"opacity":0.32,"minimumStep":1,"activeFrames":[2,3,4,5],"frameMs":80,"powerUp":false},
+  "singleRecoveryMs":220,
+  "finisherRecoveryMs":320,
+  "queueCapacity":1,
+  "notes":"Keep base body frames0..5 pixel-identical. New sixteen spin poses share one fixed source scale, never mirror entire sprite. Ring starts when step2 actually begins, persists through step3, dissolves in recovery; absent on step1. Preview only, no runtime/buff/damage."
+}

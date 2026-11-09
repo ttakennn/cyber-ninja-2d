@@ -1,10 +1,10 @@
 # Sprite Spec — riêng nhân vật ninja
 
+Task10.52: người dùng chốt Vào thế chiến đấu10.51 cho art production tại [combat-idle/](../animation/combat-idle/README.md). combatEnter2frame100ms/không loop → combatIdle6frame140ms/loop; ô384×320/pivot192,289/160px-unit giữ chuẩn. Đây là sheet riêng đã duyệt, không thay Idle10.47 hoặc atlas locomotion, chưa đưa vào game. [Approval và bằng chứng](../../../map01/commits/task-010-52-ninja-combat-production-51/README.md).
+
 Task10.48: người dùng chốt Idle10.47 làm chuẩn production; [approval và nguồn](../../../map01/commits/task-010-48-ninja-idle-production-47/README.md). Dùng chính6frame này khi tham chiếu Idle, giữ384×320/pivot192,289/FPS7.1429. Không tái tạo artwork khi publish hoặc dùng khăn bụng lỗi baseline cũ thay bản đã chốt. Không suy lời chốt Idle thành phê duyệt thêm attack/gặp quái/chạy/runtime.
 
 [Bản chuẩn production người dùng tái xác nhận Task10.43](PRODUCTION_REFERENCE.md): nguồn cụ thể, mặt/mắt/cơ thể/quần áo, kích thước/clip và mốc hash. Đọc cùng spec này trước khi authoring; các candidate Idle/attack vẫn chờ duyệt riêng.
-
-Phản hồi Task10.41: tiếp tục lấy art đã chốt trong `docs/characters/` làm chuẩn, không dùng cơ thể ở candidate để thay danh tính. Idle chuyển kiếm lên lưng hiện vẫn chờ duyệt: kiếm ngắn, chỉ thấy phần đầu phía trên, phần dưới được che; phải bám mốc lưng theo từng frame. Khi sửa vùng kiếm hông cần giữ liên tục bụng/đai/quần áo theo đúng pose production, không vá một mảng vẽ lại lệch scale/vị trí. Review seam và chuyển động thực tế ngoài kiểm tra pixel vùng được giữ; đây là ràng buộc authoring, không phải duyệt candidate10.41 hoặc thay contract/runtime.
 
 Kế thừa [chuẩn sprite chung](../../../rules/SPRITE_SPEC.md). Hồ sơ này theo nhân vật ninja qua mọi map; không buộc các nhân vật mới có cùng danh tính, màu hoặc canvas.
 
@@ -44,6 +44,8 @@ Leo hiện có 8 slot climbUp +8 slot climbDown, FPS11.1111, cùng pivot. Artwor
 
 ## Sửa pose ninja và sử dụng qua map khác
 
+Phản hồi Task10.41: tiếp tục lấy art đã chốt trong `docs/characters/` làm chuẩn, không dùng cơ thể ở candidate để thay danh tính. Idle chuyển kiếm lên lưng hiện vẫn chờ duyệt: kiếm ngắn, chỉ thấy phần đầu phía trên, phần dưới được che; phải bám mốc lưng theo từng frame. Khi sửa vùng kiếm hông cần giữ liên tục bụng/đai/quần áo theo đúng pose production, không vá một mảng vẽ lại lệch scale/vị trí. Review seam và chuyển động thực tế ngoài kiểm tra pixel vùng được giữ; đây là ràng buộc authoring, không phải duyệt candidate10.41 hoặc thay contract/runtime.
+
 Attack đã được người dùng duyệt riêng: public/assets/characters/ninja/attacks/, ô512×512, pivot(192,353), visual3.2×3.2 vẫn160px/world unit. Đây là sheet đệm cho hiệu ứng, không thay các giá trị ô384×320 của locomotion. Thứ tự frame nguồn đã chọn ở integration/task-009-player-attacks/combo-plan.json; nguồn JSON runtime được sinh bằng scripts/promote_ninja_attacks.mjs. Click trái nối1→2→3, khoảng nghỉ≥0.5s reset1; phần hiện tại chỉ animation, chưa damage/hit detection.
 
 Theo yêu cầu09.18, combo-plan có playbackSpeedMultiplier0.8: cả3đòn phát chậm20% so với candidate đã duyệt, thời lượng tăng25%. Generator sinh speed nguồn×0.8, giữ FPS/frame/pivot và thời gian reset click0.5s. Không áp hệ số này lên skill/locomotion hoặc tự giảm thêm khi sinh lại metadata. Chưa chạy test/build/chơi thử lượt giảm tốc.
@@ -61,3 +63,7 @@ CỬU LONG HỎA TRẬN hiện theo yêu cầu mới: **Q, cỡ vòng2.0×, đ�
 Cast1s khi đứng grounded, giữ thế cắm kiếm và chặn input di chuyển/cúi/nhảy/bám thang cùng các action khác trong cast; physics vẫn chạy. Nén đồng bộ nhịp caster/seal/rồng/burst theo5/7, không bỏ pose. Sau đó aura7s theo tâm collider, di chuyển/action lại bình thường. Cooldown12s từ cast, reset/ngắt không hoàn; E/F không đổi. Lớp sáng vàng kem/cam áp sprite Ninja và phi tiêu/charge/orb/nổ Minh Vương đang hiển thị trong Cửu Long, mờ350ms cuối aura và tắt tại8s; không recolor atlas gốc. Q/E chung một card, cooldown riêng. FX quy đổi từ preview1280×720/camera9unit=80CSSpx-unit, khác160px-unit của caster. Brief125px/3waves/damage/Burn chưa là collider hoặc damage gameplay; quái/boss xử lý sau. Chưa chơi thử/test/build/shader GPU; chưa có pose thu kiếm riêng sau cast.
 
 Với sửa pose: dùng source gốc làm nền, ghép riêng vùng được giao; lưu source tạo/prompt và bản review. Quy trình artwork cần đối chiếu kích thước thật, đầu/hông/chân, RGBA và phần ảnh không được phép đổi. Kiểm tra artwork phục vụ yêu cầu không tự cho phép chạy test/build hoặc thay physics.
+
+Task10.30: art run8frame/hurt4frame Task10.29 đã được chốt và publish tại atlas trong thư viện docs/characters/ninja/animation; public/assets vẫn giữ bản runtime trước đó. Source publisher có fileSources riêng để không ghi đè bộ đã chốt bằng atlas runtime cũ. Leo và các clip khác giữ pixel nguyên bản. Combo art/nhịp mới ở [Task10.30](../../../map01/commits/task-010-30-ninja-combo-art/README.md) là candidate, không thay contract/logic runtime đã ghi ở trên.
+
+Ràng buộc người dùng Task10.31: khi sửa combo không tự redesign cây kiếm Hỏa hoặc chất lửa đã duyệt trong animation/attacks/. Giữ cán vàng/lưỡi hỏa đỏ-cam/lõi trắng vàng, vòng lửa lớn nhiều lớp. Theo cập nhật Task10.32, phối hợp một tay/hai tay tùy nhát chém để tạo lực; không bắt buộc luôn một tay. Hai tay đánh phải mở thế, vươn ra trước, tránh khép nép ôm cán sát ngực. Thay pose không cấp phép đổi vũ khí/VFX. Candidate Task10.30 bị bác, bản thay ở Task10.31 chưa được chốt.

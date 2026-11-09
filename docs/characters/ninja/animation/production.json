@@ -211,6 +211,21 @@
       "path": "heavenly-fire-respawn/assets/ring.png",
       "source": "integration/task-010-ninja-respawn/source/ring.png",
       "sha256": "95a2c49361a174fc3b2d83c6880d6880ed83d73093299abeb66da2d32a8c6a4b"
+    },
+    {
+      "path": "combat-idle/combat-idle-atlas.png",
+      "source": "docs/map01/commits/task-010-52-ninja-combat-production-51/combat-idle-atlas.png",
+      "sha256": "ad287263e305ab1b96e2630b03b772ee554166eaffedb0835015ce6fa6d493da"
+    },
+    {
+      "path": "combat-idle/animations.json",
+      "source": "docs/map01/commits/task-010-52-ninja-combat-production-51/animations.json",
+      "sha256": "5943d7ffaab26d306b44588cd1fd7004becfa61187427d2066c0393696d18f38"
+    },
+    {
+      "path": "combat-idle/manifest.json",
+      "source": "docs/map01/commits/task-010-52-ninja-combat-production-51/manifest.json",
+      "sha256": "817d0a2be758765828469ab8c958c3fb7eb208bbe67f30ca22a6e55e64e5057b"
     }
   ],
   "entrances": [
@@ -245,6 +260,23 @@
     "referenceSha256": "7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572",
     "artwork": "docs/map01/commits/task-010-47-ninja-idle-sash-alignment/idle-atlas.png",
     "artworkSha256": "fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940",
+    "runtimeChanged": false,
+    "browser": "NOT_RUN_THIS_TASK"
+  },
+  "combatIdleRelease": {
+    "status": "USER_APPROVED_PRODUCTION_ART",
+    "selectedRevision": "Task10.51",
+    "date": "2026-11-09",
+    "reviewer": "user",
+    "userViewedThisRevision": true,
+    "scope": "Combat entry two frames and combat idle breathing six frames, explicitly approved; no game integration.",
+    "sourceReview": "docs/map01/commits/task-010-51-ninja-combat-grip-entry",
+    "artwork": "docs/map01/commits/task-010-51-ninja-combat-grip-entry/combat-idle-atlas.png",
+    "artworkSha256": "ad287263e305ab1b96e2630b03b772ee554166eaffedb0835015ce6fa6d493da",
+    "metadataSource": "docs/map01/commits/task-010-51-ninja-combat-grip-entry/review.json",
+    "metadataSourceSha256": "acbcbf1d1d3b2df450ed38dc4fe89f71200521d5ab0d923e39bd5774efafbb8b",
+    "preview": "combat-idle/preview.html",
+    "evidence": "docs/map01/commits/task-010-52-ninja-combat-production-51/release-evidence.json",
     "runtimeChanged": false,
     "browser": "NOT_RUN_THIS_TASK"
   }

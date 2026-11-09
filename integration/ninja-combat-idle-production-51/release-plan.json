@@ -1,0 +1,31 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "selectedRevision": "Task10.51",
+  "approvedAt": "2026-11-09",
+  "approvedBy": "user",
+  "userInstruction": "Oke chốt bản 10.51 là bản production cho nhân vật khi Vào thế chiến đấu, update vào cho production (chưa đưa vào game) + commits tất cả code changes.",
+  "sourceReview": "docs/map01/commits/task-010-51-ninja-combat-grip-entry",
+  "approvedAtlas": "docs/map01/commits/task-010-51-ninja-combat-grip-entry/combat-idle-atlas.png",
+  "approvedAtlasSha256": "ad287263e305ab1b96e2630b03b772ee554166eaffedb0835015ce6fa6d493da",
+  "reviewDirectory": "docs/map01/commits/task-010-52-ninja-combat-production-51",
+  "productionDirectory": "docs/characters/ninja/animation/combat-idle",
+  "libraryPlan": "integration/ninja-animation-library/production-plan.json",
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "runtimeChanged": false,
+  "publishFiles": [
+    "combat-idle-atlas.png",
+    "animations.json",
+    "manifest.json"
+  ],
+  "presentationFiles": [
+    "preview.html",
+    "preview.js",
+    "README.md"
+  ],
+  "approvedReviewMetadataSha256": "acbcbf1d1d3b2df450ed38dc4fe89f71200521d5ab0d923e39bd5774efafbb8b"
+}

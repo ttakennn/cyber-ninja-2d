@@ -1,0 +1,28 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "supersedes": "Task10.30 rejected for weapon/fire redesign and two-handed stance",
+  "tool": "image_gen built-in",
+  "runtime": "UNCHANGED",
+  "files": [
+    {
+      "path": "integration/ninja-combo-one-hand/combo-source.png",
+      "sha256": "339dd9139325943311d4558a385c0b580cae9673cc3f8fca2c646d45ebc2d442"
+    },
+    {
+      "path": "docs/map01/commits/task-010-31-ninja-one-hand-combo/combo-atlas.png",
+      "sha256": "a504dbe5823ee6e3a7fbdcdd58845edc7b3d85940dc5b2068ad76eb867b3be4a"
+    },
+    {
+      "path": "docs/map01/commits/task-010-31-ninja-one-hand-combo/reference/attack_1.png",
+      "sha256": "9079109d888d8f8cf758d6d87f47534cf1a5874ab9a26b953cebb9ebfdf8b9b4"
+    },
+    {
+      "path": "docs/map01/commits/task-010-31-ninja-one-hand-combo/reference/attack_2.png",
+      "sha256": "8770b081d7b9dc62e1712ca3cc58acafbc82874b918ecb7349a2cf0a8c3e1077"
+    },
+    {
+      "path": "docs/map01/commits/task-010-31-ninja-one-hand-combo/reference/attack_3.png",
+      "sha256": "a7f09a6ffdd0e6585ea662faf26ec9571ec494e2bffd60c3d33315a7e019fad9"
+    }
+  ]
+}

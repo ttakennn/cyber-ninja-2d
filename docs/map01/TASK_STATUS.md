@@ -1,5 +1,13 @@
 # Trạng thái Map01
 
+2026-11-09/Task10.52: [Vào thế chiến đấu10.51 đã CHỐT/publish production](commits/task-010-52-ninja-combat-production-51/README.md), PNG nguyên byte;2frame100ms +6frame140ms.40asset cũ giữ hash; source plan/catalog/preview ghi USER_APPROVED. Chỉ art, không đưa game. Commit toàn bộ thay đổi/source/lịch sử đang có theo yêu cầu; các attack đang review không được promote theo lời chốt này. Browser/test/build/runtime NOT_RUN; không merge/push.
+
+2026-11-09/Task10.51: [sửa chiều tay nắm kiếm và thêm hai nhịp vào thế](commits/task-010-51-ninja-combat-grip-entry/preview.html), giữ phần ảnh50 đã được xác nhận sạch.8frame: Nâng tay vào kiếm, Đưa tay về chuôi kiếm,6frame giữ thế/thở. Sáu pose50 chỉ đổi vùng tay nhỏ, các vùng ngoài giữ nguyên; hai khung mới bảo vệ đầu/thân dưới. Có GIF/bảng tay/metadata/nguồn. Chờ duyệt, chưa publish/runtime/commit; đã rà ảnh, browser/test/build NOT_RUN.
+
+2026-11-09/Task10.50: [Idle chiến đấu sửa pose/ảnh dư](commits/task-010-50-ninja-combat-idle-pose-fix/preview.html) thay candidate10.49 bị phản hồi. Vẽ6pose liền khối theo chuẩn10.47, tay cầm kiếm khuỷu cao/cẳng tay thoải, tay trái lên ngực, ngả thân nhẹ sau; cân lại thân–đai. Có so3cột/chi tiết/nền sáng/GIF; đã xem PNG và kiểm tra đóng gói. Chưa duyệt/publish/runtime/commit; browser/test/build NOT_RUN.
+
+2026-11-09/Task10.49: [candidate Idle chiến đấu](commits/task-010-49-ninja-combat-idle/preview.html), lấy đúng Idle10.47 đã chốt làm chuẩn, tham khảo tư thế từ ảnh ninja xanh.2frame đưa tay lên chuôi sau gáy +6frame giữ thế/thở, có so trước/sau và chi tiết3x. [Hồ sơ](commits/task-010-49-ninja-combat-idle/README.md) ghi nguồn/mask/hash; đã xem PNG và kiểm tra đóng gói, browser/test/build NOT_RUN. Chưa duyệt/publish/runtime/commit; không đổi production10.47.
+
 2026-11-09/Task10.48: [Idle10.47 đã CHỐT/publish production](commits/task-010-48-ninja-idle-production-47/README.md); copy chính xác6frame không vẽ lại, giữ frame/pivot/FPS và pixel ngoài mask khăn bụng.39file asset khác giữ hash. Đã lưu approval/provenance/native atlas; commit theo yêu cầu. Chưa game runtime/test/build/browser/merge/push; attack và các động tác khác giữ trạng thái cũ.
 
 2026-11-09/Task10.46: [Idle đã release art sau tự review](commits/task-010-46-ninja-idle-fabric-restore/README.md) theo yêu cầu mới; tay sạch/vải bụng có nếp/tà đỏ phục hồi. Chỉ6rect Idle trong atlas native đổi; ngoài Idle0RGBA khác,39file khác giữ hash. Giữ baseline gốc/hash và ghi rõ quyền release được giao, không suy người dùng đã xem bản10.46. Browser blocked URL Chrome; test/build/runtime NOT_RUN, chưa commit. Gặp quái/chạy/attack hoãn.
@@ -21,6 +29,12 @@
 2026-11-08/Task10.38: [sửa Idle và chạy Ninja Hỏa](commits/task-010-38-ninja-upright-locomotion/README.md) theo phản hồi bác10.37: hai Idle đứng thẳng/buông tay, chạy sải dài/tay ngang ngực, cùng hệ số kích thước theo Idle gốc. Chờ duyệt; đã xem ảnh, Chrome tải Idle, chưa xác nhận toàn chuyển động. Chưa production/runtime/trigger quái/commit; test/build NOT_RUN.
 
 2026-11-08/Task10.37: [Idle/Idle cảnh giác/Đi/Chạy Ninja Hỏa](commits/task-010-37-ninja-back-sword-locomotion/README.md) là candidate mới, kiếm/bao kiếm sau lưng;8/8/8/12frame, cùng canvas/pivot hiện hành. Đã xem atlas, Chrome tải trang/trạng thái Idle; toàn chuyển động chưa xác nhận đầy đủ. Chưa duyệt/publish/runtime hoặc trigger gặp quái; test/build NOT_RUN, chưa commit. Các candidate attack giữ nguyên.
+
+2026-11-08/Task10.36: [xoay người chém + vòng từ đòn2](commits/task-010-36-ninja-spin-combo/README.md) là candidate mới; giữ đòn1 và gameplay. Chrome tải/tua pose lưng body-only; chưa xác nhận toàn vòng/chuyển động/chống spam. Chưa production/runtime, test/build NOT_RUN, chưa commit.
+
+2026-11-08/Task10.35: [Ground Attacks](commits/task-010-35-ninja-ground-attacks/README.md) có16pose body/12FX riêng và preview chống spam, chỉ nhóm trên mặt đất theo lựa chọn người dùng. Chưa runtime/cường hóa/cúi/lướt/treo/tường. Chrome tải trang, demo1850ms; tương tác/độ mượt chưa xác nhận đầy đủ. Chờ duyệt, test/build NOT_RUN, chưa commit; giữ game/level/art production.
+
+2026-11-08/Task10.33: [combo Ninja Hỏa sạch khung](commits/task-010-33-ninja-clean-combo/README.md) có atlas16pose và preview mới, sửa theo đà/thu guard theo yêu cầu cuối. Giữ thiết kế kiếm/lửa, frame/pivot và một scale chung; chưa được duyệt. Không đổi level/gameplay/runtime/production art. Đã xem atlas, chưa xác nhận chuyển động trong browser; test/build NOT_RUN, chưa commit. Các thay đổi có sẵn từ task trước được giữ nguyên.
 
 2026-11-05/Task10-boss-khan-design: [candidate boss Huyết Đao Khan](commits/task-010-16-boss-khan-design/preview.html) và bảng so150% đã tạo theo brief; chưa duyệt, chưa đặt boss trong map. Không đổi level/src/public/physics; chưa animation/skills/AI/damage/runtime/test/build/browser/commit/merge.
 
@@ -107,3 +121,13 @@ Cập nhật 2026-11-06/Task10.25: [Huyết Ảnh Loạn Đao](../characters/bos
 Cập nhật 2026-11-06/Task10.26: [Diệt Nguyệt Thập Tự](../characters/boss-khan/animation/moon-cross/preview.html) đã được người dùng chốt và lưu nguyên PNG vào art production. [Preview tổng hợp Khan](../characters/boss-khan/animation/preview.html) nối các nhóm art đã duyệt; người dùng đã chọn kiểu giao diện này và yêu cầu commit. Chưa tích hợp boss/gameplay; test/build/browser NOT_RUN.
 
 Cập nhật 2026-11-06/Task10.27: [preview Ninja Hỏa](../characters/ninja/animation/preview.html) có trang chọn nhóm và [basic preview](../characters/ninja/animation/basic-preview.html) riêng theo mẫu Khan. [Log thay đổi](commits/task-010-27-ninja-preview-layout/README.md). Mọi task preview/art nhân vật Map01 tiếp tục ghi log trong commits; không sửa PNG/metadata/runtime. Đã mở file cục bộ trong Chrome và thấy nhóm combo, phi tiêu cùng Canvas con tải được; chưa duyệt toàn bộ nhóm bằng mắt. Test/build NOT_RUN.
+
+Task10.28: cập nhật preview Ninja Hỏa với chuỗi cơ bản/combo/phi tiêu và Frame trước/sau. [Hồ sơ](commits/task-010-28-ninja-preview-sequences/README.md). Không đổi art/runtime; browser/test/build NOT_RUN, chờ review.
+
+Task10.29: [candidate Ninja run/hurt](commits/task-010-29-ninja-run-hurt-art/README.md) có preview cũ/mới, chờ duyệt; các clip khác giữ nguyên. Chưa runtime/production/browser/test/build.
+
+Task10.30: publish run/hurt đã chốt vào thư viện Ninja, giữ runtime; [combo candidate](commits/task-010-30-ninja-combo-art/preview.html) gồm16pose và nhịp nối/hồi thế để review. Browser/test/build NOT_RUN, chưa commit.
+
+Task10.31: [preview combo một tay](commits/task-010-31-ninja-one-hand-combo/preview.html) giữ thiết kế kiếm/lửa gốc theo phản hồi, thay candidate Task10.30 bị bác. Chưa chốt/browser/test/build/runtime/commit.
+
+Task10.32: [combo phối hợp lực](commits/task-010-32-ninja-power-combo/preview.html) có một/hai tay tùy đòn, giữ kiếm/lửa tham chiếu cũ; chờ duyệt, chưa runtime/browser preview/test/build/commit.

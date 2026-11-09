@@ -1,0 +1,98 @@
+{
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "character": "ninja",
+  "productionDirectory": "docs/characters/ninja/animation",
+  "historyDirectory": "docs/map01/commits",
+  "groups": [
+    {
+      "id": "locomotion",
+      "fileSources": { "flame-ninja-atlas.png": "docs/map01/commits/task-010-48-ninja-idle-production-47/flame-ninja-atlas.png" },
+      "source": "public/assets/characters/ninja",
+      "files": [
+        "flame-ninja-atlas.png",
+        "animations.json"
+      ]
+    },
+    {
+      "id": "attacks",
+      "source": "public/assets/characters/ninja/attacks",
+      "files": [
+        "manifest.json",
+        "attack_1.json",
+        "attack_1.png",
+        "attack_2.json",
+        "attack_2.png",
+        "attack_3.json",
+        "attack_3.png"
+      ]
+    },
+    {
+      "id": "skills/fire-shuriken",
+      "source": "public/assets/characters/ninja/skills/fire-shuriken",
+      "files": [
+        "manifest.json",
+        "throw.json",
+        "throw.png",
+        "crouch-throw.json",
+        "crouch-throw.png",
+        "projectile.json",
+        "projectile.png"
+      ]
+    },
+    {
+      "id": "skills/special-01",
+      "source": "public/assets/characters/ninja/skills/special-01",
+      "files": [
+        "manifest.json",
+        "cast.json",
+        "cast.png",
+        "orb.json",
+        "orb.png",
+        "explosion.json",
+        "explosion.png"
+      ]
+    },
+    {
+      "id": "skills/nine-dragons",
+      "source": "public/assets/characters/ninja/skills/nine-dragons",
+      "files": [
+        "manifest.json",
+        "cast.json",
+        "cast.png",
+        "dragon.json",
+        "dragon.png",
+        "seal.json",
+        "seal.png",
+        "burst.json",
+        "burst.png",
+        "aura.json",
+        "aura.png"
+      ]
+    }
+  ],
+  "entrances": [
+    {
+      "id": "entrance",
+      "name": "Thiên Hỏa Giáng Lâm",
+      "path": "heavenly-fire-entrance/preview.html",
+      "durationMs": 1650,
+      "plan": "integration/task-010-ninja-entrance/art-plan.json"
+    },
+    {
+      "id": "respawn",
+      "name": "Thiên Hỏa Tái Lâm",
+      "path": "heavenly-fire-respawn/preview.html",
+      "durationMs": 750,
+      "plan": "integration/task-010-ninja-respawn/art-plan.json"
+    }
+  ],
+  "climb": {
+    "selectedRevision": "USER_SELECTED_V2",
+    "canonicalImage": "locomotion/flame-ninja-atlas.png",
+    "source": "integration/ninja-climb",
+    "sha256": "d5559f90565cdc00eec69d7692eac7e48ce0b6bdd9bd070e59d69d551d523e48",
+    "note": "Whole-atlas hash after user-approved Idle10.47 publication Task10.48; all non-Idle pixels, including climb v2, unchanged."
+  },
+  "note": "Đi/chạy dùng clip run hiện hành; không có walk riêng. Không tự tạo alias/pose mới. Công cụ này chỉ copy file được chốt, không promote vào runtime.",
+  "idleRelease": {"status":"USER_APPROVED_PRODUCTION_ART","selectedRevision":"Task10.47","date":"2026-11-09","scope":"Official Flame Ninja Idle10.47, explicitly approved by user; all non-sash details and other clips unchanged from pre-publish baseline.","reviewer":"user","userViewedThisRevision":true,"evidence":"docs/map01/commits/task-010-48-ninja-idle-production-47/release-evidence.json","reference":"integration/ninja-idle-sash-alignment/production-reference-atlas.png","referenceSha256":"7b22406fe0fa5969cc8a84a6661b59b5f8f0ae8f72bc36f80cf7ea3ef409c572","artwork":"docs/map01/commits/task-010-47-ninja-idle-sash-alignment/idle-atlas.png","artworkSha256":"fbf5f1248848835cfb3f6a21deed22ee11dfc85a3ba346be4661d949a40a5940","runtimeChanged":false,"browser":"NOT_RUN_THIS_TASK"}
+}

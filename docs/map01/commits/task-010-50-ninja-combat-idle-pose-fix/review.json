@@ -1,0 +1,277 @@
+{
+    "clips":  {
+                  "combatIdle":  {
+                                     "loop":  true,
+                                     "frames":  [
+                                                    0,
+                                                    1,
+                                                    2,
+                                                    3,
+                                                    4,
+                                                    5
+                                                ],
+                                     "fps":  7.1428571428571432
+                                 }
+              },
+    "frameHeight":  320,
+    "runtimeChanged":  false,
+    "frameWidth":  384,
+    "normalization":  {
+                          "controlSkullTop":  47,
+                          "sourceCell":  [
+                                             512,
+                                             512
+                                         ],
+                          "controlGround":  488,
+                          "method":  "Six complete coherent redrawn poses; one source scale from first-cell skull-to-sole height; per-cell translation only by sole bounds; no disjoint arm masks, no old arms copied.",
+                          "sharedScale":  0.56916099773242634,
+                          "sourcePixelSize":  [
+                                                  1536,
+                                                  1024
+                                              ]
+                      },
+    "pivot":  {
+                  "x":  192,
+                  "y":  289
+              },
+    "frames":  [
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  0,
+                       "label":  "Chien dau - nhip 1",
+                       "sourceIdleFrame":  0,
+                       "sourceTranslation":  [
+                                                 31.427437641723,
+                                                 11.249433106575964
+                                             ],
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "previousFrame":  2
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  384,
+                       "label":  "Chien dau - nhip 2",
+                       "sourceIdleFrame":  1,
+                       "sourceTranslation":  [
+                                                 49.640589569161,
+                                                 11.249433106575964
+                                             ],
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "previousFrame":  3
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  768,
+                       "label":  "Chien dau - nhip 3",
+                       "sourceIdleFrame":  2,
+                       "sourceTranslation":  [
+                                                 68.138321995465,
+                                                 11.249433106575964
+                                             ],
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "previousFrame":  4
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  0,
+                       "label":  "Chien dau - nhip 4",
+                       "sourceIdleFrame":  3,
+                       "sourceTranslation":  [
+                                                 31.427437641723,
+                                                 11.249433106575964
+                                             ],
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "previousFrame":  5
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  384,
+                       "label":  "Chien dau - nhip 5",
+                       "sourceIdleFrame":  4,
+                       "sourceTranslation":  [
+                                                 49.925170068027,
+                                                 11.249433106575964
+                                             ],
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "previousFrame":  6
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  768,
+                       "label":  "Chien dau - nhip 6",
+                       "sourceIdleFrame":  5,
+                       "sourceTranslation":  [
+                                                 67.853741496599,
+                                                 11.249433106575964
+                                             ],
+                       "pivot":  {
+                                     "y":  289,
+                                     "x":  192
+                                 },
+                       "width":  384,
+                       "previousFrame":  7
+                   }
+               ],
+    "assetObservations":  [
+                              {
+                                  "frame":  0,
+                                  "componentsOver3Pixels":  [
+                                                                22388
+                                                            ],
+                                  "detachedComponentsOver3Pixels":  0,
+                                  "sourceSole":  [
+                                                     150,
+                                                     416,
+                                                     488
+                                                 ],
+                                  "sourceTranslation":  [
+                                                            31.427437641723,
+                                                            11.249433106575964
+                                                        ],
+                                  "renderedSole":  [
+                                                       117,
+                                                       268,
+                                                       289
+                                                   ],
+                                  "alphaCorner":  0
+                              },
+                              {
+                                  "frame":  1,
+                                  "componentsOver3Pixels":  [
+                                                                22344
+                                                            ],
+                                  "detachedComponentsOver3Pixels":  0,
+                                  "sourceSole":  [
+                                                     118,
+                                                     384,
+                                                     488
+                                                 ],
+                                  "sourceTranslation":  [
+                                                            49.640589569161,
+                                                            11.249433106575964
+                                                        ],
+                                  "renderedSole":  [
+                                                       117,
+                                                       267,
+                                                       289
+                                                   ],
+                                  "alphaCorner":  0
+                              },
+                              {
+                                  "frame":  2,
+                                  "componentsOver3Pixels":  [
+                                                                22373
+                                                            ],
+                                  "detachedComponentsOver3Pixels":  0,
+                                  "sourceSole":  [
+                                                     86,
+                                                     351,
+                                                     488
+                                                 ],
+                                  "sourceTranslation":  [
+                                                            68.138321995465,
+                                                            11.249433106575964
+                                                        ],
+                                  "renderedSole":  [
+                                                       118,
+                                                       269,
+                                                       289
+                                                   ],
+                                  "alphaCorner":  0
+                              },
+                              {
+                                  "frame":  3,
+                                  "componentsOver3Pixels":  [
+                                                                22257
+                                                            ],
+                                  "detachedComponentsOver3Pixels":  0,
+                                  "sourceSole":  [
+                                                     150,
+                                                     416,
+                                                     488
+                                                 ],
+                                  "sourceTranslation":  [
+                                                            31.427437641723,
+                                                            11.249433106575964
+                                                        ],
+                                  "renderedSole":  [
+                                                       117,
+                                                       268,
+                                                       289
+                                                   ],
+                                  "alphaCorner":  0
+                              },
+                              {
+                                  "frame":  4,
+                                  "componentsOver3Pixels":  [
+                                                                22341
+                                                            ],
+                                  "detachedComponentsOver3Pixels":  0,
+                                  "sourceSole":  [
+                                                     118,
+                                                     383,
+                                                     488
+                                                 ],
+                                  "sourceTranslation":  [
+                                                            49.925170068027,
+                                                            11.249433106575964
+                                                        ],
+                                  "renderedSole":  [
+                                                       117,
+                                                       267,
+                                                       289
+                                                   ],
+                                  "alphaCorner":  0
+                              },
+                              {
+                                  "frame":  5,
+                                  "componentsOver3Pixels":  [
+                                                                22359
+                                                            ],
+                                  "detachedComponentsOver3Pixels":  0,
+                                  "sourceSole":  [
+                                                     87,
+                                                     351,
+                                                     488
+                                                 ],
+                                  "sourceTranslation":  [
+                                                            67.853741496599,
+                                                            11.249433106575964
+                                                        ],
+                                  "renderedSole":  [
+                                                       117,
+                                                       267,
+                                                       289
+                                                   ],
+                                  "alphaCorner":  0
+                              }
+                          ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "productionChanged":  false
+}

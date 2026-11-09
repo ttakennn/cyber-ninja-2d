@@ -1,0 +1,31 @@
+Create a completely NEW professional 16-frame BODY+PHYSICAL SWORD animation sprite sheet for the exact Flame Ninja from the references. Transparent RGBA, square 4x4 grid, 16 equally sized square cells, preferably 2048x2048. This is ART FOR A REVIEWABLE GAME ANIMATION, not a character concept montage.
+
+IDENTITY LOCK: supplied original Flame Ninja Idle/attack images are authoritative for anatomy, texture and costume: athletic muscular ninja, black hood/mask, red scarf and belt, sleeveless black/red outfit, silver shin plates, brown/gold hip sheath. Preserve original GOLD HILT and original RED-ORANGE FIRE SWORD with brilliant narrow WHITE-GOLD blade edge. Do not redesign as silver sword, katana, dual blades or different costume. Illustrated textured pixel sprite look like originals, not smooth 3D, not chibi, not giant bulky torso. All frames have EXACT same head/torso/limb proportions at same scale. Look toward RIGHT in side view. Use the other ninja sprite references ONLY for the body mechanics and decisive reaches, never their costume/weapon.
+
+SEPARATE LAYERS: render BODY and ONE physical sword ONLY. Retain a SMALL flame edge hugging physical sword (the approved fire sword identity), but ABSOLUTELY NO detached slash crescents, wide fire trails, rings, aura, motion streaks, smear duplicates or sparks. Long fire slash VFX will be authored separately. Leave the hands, hilt and blade perfectly readable in EVERY pose.
+
+MECHANICS: exaggerate meaningful HIP AND SHOULDER ROTATION, clear rear-leg load/front-leg brace, opening/closing elbows, purposeful strong forward lean at contact and a clean controlled recovery. Powerful agile swordplay. No timid same-body static stance with only arms changing. Open silhouette changes substantially across load, strike and follow-through WITHOUT changing anatomy. Sword stays connected to SAME RIGHT hand; left hand naturally joins/releases hilt for the rising cut and heavy finisher. Exactly two arms/two legs/one sword, no broken hands or detached blades. Scarf lags BEHIND body motion.
+
+16 chronological poses left-to-right/top-to-bottom:
+ROW1:
+0 COMMON combat guard, knees loose, right hand carries sword low-forward, left hand free.
+1 FIRST CUT wind-up: torso coils left, right sword arm extends behind leftward at hip height, left arm reaches forward for balance, rear knee loads.
+2 FIRST CUT acceleration: hips lead rightward rotation, shoulders follow, right elbow starts extending, blade moves from left toward right horizontally. Left arm counterbalances backward.
+3 FIRST CUT contact: full ONE-HAND long horizontal slash to RIGHT, right arm extended far from chest, strong front knee brace, chest leans forward, rear heel pushes, left arm extends behind. Physical blade must remain a sword, not turn into a fire crescent.
+ROW2:
+4 FIRST CUT follow-through: deeper torso rotation, sword finishes low forward RIGHT, front leg bears weight, left hand is beginning to approach the low hilt for the next rising attack. Different body pose from3.
+5 FIRST CUT standalone recovery: sword retracts toward low guard, hips unwind, left hand free, weight centers; transitional pose before0, not a duplicate.
+6 SECOND CUT wind-up: coherent continuation of4, BOTH hands hold hilt LOW FORWARD away from chest, knees compressed, torso coiled to drive UP-RIGHT; blade tip low-right.
+7 SECOND CUT acceleration: legs extend, hips uncoil, BOTH hands pull blade UPWARD-FORWARD RIGHT, shoulder rotation clear, no jump.
+ROW3:
+8 SECOND CUT contact: both hands fully extended HIGH-FORWARD RIGHT, torso stretched diagonally from planted rear foot, blade points UP-RIGHT. Strong open pose, clear blade tip.
+9 SECOND CUT high follow-through: arms and sword continue above right shoulder, body rotates farther; next motion naturally routes blade above/behind head into third-cut load11.
+10 SECOND CUT standalone recovery: safely lower sword forward, left hand releases, torso unwinds toward guard0.
+11 THIRD CUT loaded anticipation: BOTH hands ABOVE AND BEHIND head, elbows wide, torso coiled back and rear leg loaded. Same head size, slightly upright but no giant body.
+ROW4:
+12 THIRD CUT acceleration: explosive hip/shoulder rotation, BOTH hands bring blade DOWN-FORWARD RIGHT in diagonal path, torso leans, front leg braces.
+13 THIRD CUT contact, STRONGEST POSE: body deeply leans forward, both arms extend decisively far DOWN-RIGHT, planted front knee bent, rear leg pushes long; physical sword fully readable in front. Do NOT simply duplicate12 or shrink head.
+14 THIRD CUT follow-through/braking: blade finishes low-right near knee level, bent knees absorb force, hips settle, hands continue slightly past contact to show weight, no huge height jump.
+15 THIRD CUT controlled recovery: bring sword back toward guard0, left hand releases naturally, torso rises gradually; halfway to0, no instant reset.
+
+COMPOSITION: EACH complete figure including sword must fit entirely in its own cell with 6% fully transparent margins. NO touching cell boundaries, no clipping or cross-cell fragments. Common virtual floor at82% of EACH cell height, common pelvis reference around37% width. Standing-equivalent body height ~50% cell height, preserve scale in crouched/leaning poses rather than making them taller. Reserve right side for long extension. Ankle soles on same virtual floor across all rows; front/back feet can adjust naturally. Center of gravity remains plausible. NO labels, numbers, UI, grids, background, checkerboard or floor shadows. True transparency. Show clean anatomy and hand–hilt continuity in every frame.

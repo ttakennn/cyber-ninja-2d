@@ -1,5 +1,7 @@
 # Quyết định đã chốt
 
+2026-11-09/Task10.52-approved-combat-idle: người dùng CHỐT bản10.51 là production cho Vào thế chiến đấu, yêu cầu chưa đưa vào game và commit tất cả code changes. Đã [publish8frame đã duyệt](map01/commits/task-010-52-ninja-combat-production-51/README.md) nguyên PNG vào docs/characters/ninja/animation/combat-idle/,2frame vào thế +6frame giữ thế/thở. Idle10.47 và40asset production có sẵn giữ nguyên. Commit tất cả thay đổi hiện có bao gồm lịch sử/source/preview candidate; không coi việc commit là phê duyệt attack candidate hoặc nghiệm thu runtime. Không merge/push.
+
 2026-11-09/Task10.48-approved-idle: người dùng xác nhận10.47 là bản chính thức Idle Ninja Hỏa cho production và yêu cầu commit. Đã publish đúng PNG10.47 đã xem, không regenerate; status USER_APPROVED_PRODUCTION_ART, nguồn/hash/approval tại [Task10.48](map01/commits/task-010-48-ninja-idle-production-47/README.md). Chỉ Idle, giữ baseline các clip khác; không suy thành release runtime hoặc duyệt các candidate attack/locomotion khác.
 
 2026-11-09/Task10.46-delegated-release: người dùng chỉ ba lỗi dư cạnh tay/khăn bụng sai/thiếu tà đỏ và giao “tự review tới khi nào thấy giống production thì hãy release”. Đã thực hiện release art riêng Idle sau tự review ảnh6pose, theo **USER_AUTHORIZED_RELEASE_AFTER_SELF_REVIEW**; không coi đây là người dùng trực tiếp duyệt ảnh10.46. Baseline gốc lưu bất biến, ngoài6rect Idle0RGBA khác,39asset khác giữ hash. Không suy thành release runtime/gameplay hoặc duyệt gặp quái/chạy/attack. [Bằng chứng](map01/commits/task-010-46-ninja-idle-fabric-restore/release-evidence.json).
@@ -7,6 +9,10 @@
 2026-11-08/Task10.43-reference: người dùng gửi AGENTS.md, flame-ninja-atlas.png, basic-preview.html, preview.html và yêu cầu đọc/ghi nhớ chuẩn Ninja Hỏa production. Đã đối chiếu3file văn bản với repo và atlas native với production.json, ghi [PRODUCTION_REFERENCE](characters/ninja/rules/PRODUCTION_REFERENCE.md). Chỉ tái xác nhận bộ chuẩn hiện hành, không duyệt candidate Idle/attack hoặc thay art/runtime. [Hồ sơ đọc](map01/commits/task-010-43-ninja-production-reference/README.md).
 
 2026-11-08/Task10.41-requirements: người dùng xác nhận source chính `C:\Users\anhthaitrong\Downloads\Games\cyber-ninja-2d`, art đã chốt trong `docs/characters/` là chuẩn. Yêu cầu sửa riêng Idle: kiếm ngắn chỉ lộ phần đầu, không lộ phần dưới; bụng không ghép lệch; khối cơ thể và kiếm chuyển động đồng bộ. Đã ghi vào AGENTS/spec; chưa duyệt candidate mới hoặc cho publish/runtime. [Hồ sơ](map01/commits/task-010-41-ninja-idle-attached-sword/README.md).
+
+2026-11-08/Task10.36-requirement: người dùng yêu cầu xoay người chém theo ảnh minh hoạ và vòng sáng nhẹ quanh người từ combo đòn2 trở lên. Đã tạo [candidate mới](map01/commits/task-010-36-ninja-spin-combo/README.md) để review; yêu cầu này không chốt art/timing mới, buff hoặc tích hợp runtime.
+
+2026-11-08/Task10.35-scope: người dùng chọn **Ground Attacks trước** qua câu hỏi phạm vi, yêu cầu cơ học cơ thể/tay–kiếm/cung lửa theo giai đoạn, tách FX dài và preview chống spam. Đây là quyết định phạm vi, chưa duyệt candidate mới, timing, buff hoặc triển khai runtime. [Hồ sơ](map01/commits/task-010-35-ninja-ground-attacks/README.md).
 
 2026-11-04/Task10-neon-final-art: người dùng chốt Sát Thủ Bóng Neon sau preview Nguyệt Ảnh Hiện Thân và yêu cầu cập nhật tài liệu production/commit. Publish đúng snapshot10.15 thành11clip/14sheet trong docs/characters/neon-shadow/animation/, giữ chiều cao95% và nguyên byte PNG. Màn xuất hiện1200ms + preview Idle400ms là art; chưa duyệt trigger spawn, AI, damage hay nghiệm thu runtime. [Production](characters/neon-shadow/animation/production.json), [lịch sử](map01/commits/task-010-15-neon-shadow-entrance/README.md).
 
@@ -100,3 +106,9 @@ Sau art cúi dd98497: người dùng duyệt và yêu cầu apply, tốc độ p
 2026-11-06/Task10-boss-khan-library-preview-approved: người dùng chọn mẫu preview tổng hợp kèm `basic-preview.html` riêng của Khan cho thư viện nhân vật, yêu cầu lưu quy ước để dùng khi chỉnh Ninja Hỏa ở task tiếp theo. Quy ước được ghi trong [ANIMATION_PRODUCTION](rules/ANIMATION_PRODUCTION.md). Người dùng yêu cầu commit bộ art Khan với subject/body tiếng Anh chi tiết như commit Sói Điện; không suy thành yêu cầu tích hợp runtime hoặc merge master.
 
 2026-11-06/Task10-ninja-preview-layout: người dùng yêu cầu áp dụng bố cục [preview tổng hợp + basic riêng](characters/ninja/animation/preview.html) của Khan cho Ninja Hỏa. Chỉ đổi giao diện xem, giữ art/metadata và runtime. Người dùng nhắc lại yêu cầu bắt buộc lưu lịch sử mọi task liên quan trong `docs/map01/commits/`; đã ghi rõ trong [ANIMATION_PRODUCTION](rules/ANIMATION_PRODUCTION.md) và tạo [hồ sơ Task10.27](map01/commits/task-010-27-ninja-preview-layout/README.md). Chưa chốt thêm thay đổi gameplay.
+
+Task10.30: người dùng chốt art Đi/chạy và Trúng đòn/hồi thế Task10.29; đã publish đúng atlas vào thư viện docs/characters/ninja/animation, giữ runtime. Người dùng yêu cầu vẽ lại combo đồng nhất tỷ lệ và có hồi thế; art16pose và nhịp mới chỉ là candidate để review, chưa chốt hoặc tích hợp. [Hồ sơ](map01/commits/task-010-30-ninja-combo-art/README.md).
+
+Task10.31: người dùng yêu cầu giữ kiếm/VFX gốc trong animation/attacks/, bác redesign kiếm bạc/lửa mỏng và thế hai tay Task10.30; yêu cầu động tác Ninja mở, nhanh nhẹ, một tay kiếm/tay kia cân bằng. [Bản mới](map01/commits/task-010-31-ninja-one-hand-combo/README.md) chờ duyệt, chưa runtime.
+
+Task10.32: người dùng cho phép phối hợp cả một/hai tay theo nhát chém, muốn mạnh mẽ hơn theo cảm giác video Ninja Gaiden Ragebound; bỏ ràng buộc luôn một tay của lượt trước. Giữ kiếm/VFX gốc. [Candidate mới](map01/commits/task-010-32-ninja-power-combo/README.md) dùng nối theo đà, chưa chốt art/timing/gameplay.

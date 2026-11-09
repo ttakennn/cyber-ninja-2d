@@ -1,0 +1,27 @@
+Draw a NEW body+sword ANIMATION SHEET of EXACT approved Flame Ninja. 16 chronological poses in an evenly spaced 4x4 transparent grid. The supplied Flame Ninja Idle and body sheet LOCK identity, anatomy, scale, costume, original gold-hilt red-orange fire sword. The OTHER blue/green ninja references show SPINNING BODY MECHANICS ONLY. Preserve black hood/mask, red scarf, sleeveless black/red outfit, muscular arms, belt/sheath and silver shin guards. Illustrated textured pixel sprites like originals. No redesign, no silver/blue sword, no dual swords.
+
+THE MAIN REQUIRED CHANGE IS A REAL FULL-BODY TURN THROUGH DIFFERENT VIEWS. This is NOT16 right-facing variants. Make obvious BACK VIEW, LEFT-FACING SIDE VIEW, FRONT THREE-QUARTER VIEW and RIGHT SIDE VIEW in chronological order. Hips, shoulders, head, planted toes/heels and scarf rotate coherently. The chest is NOT visible in back-view poses. Keep anatomical RIGHT HAND continuously gripping the SAME sword through the turn; left hand free for first spin then joins hilt for heavy final. The hip sheath/scarf rotate in 3D with the body; do not mirror an entire sprite to fake a spin. No wrist detachment, extra arms, duplicate swords or broken legs.
+
+BODY AND PHYSICAL SWORD ONLY: narrow red-orange fire edge on actual blade, NO large slash crescents, ring, aura, smoke, disconnected sparks or motion streaks. Separate VFX will be composited. Constant head/torso/limb proportions. Athletic powerful and nimble. Stay grounded, pivot on ball of foot with stepping/weight transfer, NO jumping, levitation or changing body size.
+
+FIRST8poses (rows1-2) = combo STRIKE2, a FULL ROTATIONAL HORIZONTAL SLASH:
+0 Start RIGHT-facing low sword follow-through from preceding horizontal cut; knees flex, left hand free, shoulders begin rotating away, sword arm low-right.
+1 Rotate AWAY into BACK THREE-QUARTER view: far shoulder disappears, torso coils, scarf starts circling; sword right hand sweeps behind hip.
+2 CLEAR FULL BACK VIEW mid-turn: back/shoulder blades and rear of hood fully visible, face/chest NOT visible; planted pivot foot, right sword arm extends outward to carry circular sweep.
+3 CLEAR LEFT-FACING SIDE VIEW at halfway turn: face points LEFT, sword swings to LEFT in right hand, left arm counterbalances; feet naturally crossed/repositioned while grounded, same body scale.
+4 FRONT THREE-QUARTER view continuing SAME turn, chest becomes visible, sword crosses forward around waist toward RIGHT; not a mirrored frame.
+5 RIGHT-facing EXTENDED SPIN SLASH IMPACT: complete turn, strong forward reach with one-hand horizontal sword to RIGHT, front knee braces, torso leans, rear heel pushes, left hand back.
+6 RIGHT-facing LOW FOLLOW-THROUGH and braking, weight on front leg, sword low-right, torso still rotating slightly.
+7 CHAIN TRANSITION: sword routes upward, LEFT hand begins joining hilt above shoulder, open elbows, hips reset for heavy final; coherent continuation of6.
+
+SECOND8poses (rows3-4) = combo STRIKE3, ROTATIONAL HEAVY DIAGONAL FINISHER:
+8 RIGHT-facing overhead two-hand load, blade above/behind head, rear leg loads.
+9 BACK THREE-QUARTER view: hips rotate away, BOTH hands maintain hilt grip, sword travels over shoulder, scarf curls opposite motion.
+10 CLEAR FULL BACK VIEW: hood rear/back muscles visible, both hands swing sword overhead, pivot toes and bent knees show stored force, NO chest/face.
+11 CLEAR LEFT-FACING SIDE VIEW halfway around, two-hand sword overhead/forward LEFT, open elbows and natural torso twist, not levitating.
+12 FRONT THREE-QUARTER view continuing turn toward RIGHT: hips lead, shoulders follow, sword accelerates diagonally DOWN-RIGHT, front foot replants.
+13 RIGHT-facing DECISIVE FAR-FORWARD TWO-HAND DOWNWARD IMPACT: strongest open pose, forward lean, rear leg drives, front knee deeply braces, hands away from chest, sword tip down-right.
+14 RIGHT-facing low braking follow-through: knees absorb force, sword down-forward, torso settles.
+15 Controlled recovery toward original RIGHT-facing low guard: left hand releases, right hand keeps sword, hips center, not identical to14.
+
+Each complete pose and entire blade fit fully in its OWN cell, with at least8% transparent margins on all sides. Equal4x4cells, common floor at82% height, root around45% width to allow LEFT as well as RIGHT sword reach. Standing-equivalent body height ~48% cell height, same anatomy across16. All effects absent except thin actual blade glow. True RGBA alpha, no text/labels/numbers/grid/background/shadows. Prioritize distinct sequential body orientations and clean hand–hilt–blade continuity over decorative fire.

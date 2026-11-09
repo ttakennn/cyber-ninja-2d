@@ -1,0 +1,25 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-33-ninja-clean-combo",
+  "source": "integration/ninja-combo-separated/combo-source.png",
+  "frameSize": 512,
+  "pivot": [192, 353],
+  "pixelsPerWorldUnit": 160,
+  "sourceGrid": [4, 4],
+  "sourceBodyReference": [96, 271],
+  "guardReferenceHeight": 230,
+  "sourcePivotX": 128,
+  "sourceGround": [271, 271, 271, 271, 270, 270, 270, 270, 271, 271, 271, 271, 256, 253, 256, 256],
+  "normalizationNote": "One uniform scale for all sixteen poses, measured on body guard, never on flame bounds. Source cell boundaries use floor(width*column/4). Explicit foot landmarks translate to the same target ground; no per-frame scaling, mirroring, recoloring or connected-component deletion.",
+  "labels": ["Guard chung", "Lấy đà ngang", "Gia tốc chém ngang", "Chạm đòn ngang", "Theo đà ngang", "Thu về guard · đòn 1", "Nạp đòn ngược", "Gia tốc chém lên", "Chạm đòn ngược", "Theo đà cao", "Thu về guard · đòn 2", "Nạp bổ chéo", "Gia tốc bổ chéo", "Chạm đòn kết", "Hãm lực", "Thu về guard · đòn 3"],
+  "clips": [
+    {"name": "Chém ngang", "frames": [0, 1, 2, 3, 4], "frameMs": [65, 100, 60, 80, 100], "exitFrames": [5, 0], "exitMs": [75, 80], "chainWindowMs": [140, 380]},
+    {"name": "Chém ngược lên", "frames": [6, 7, 8, 9], "frameMs": [115, 65, 95, 120], "exitFrames": [10, 0], "exitMs": [85, 80], "chainWindowMs": [120, 370]},
+    {"name": "Bổ chéo kết thúc", "frames": [11, 12, 13, 14, 15, 0], "frameMs": [180, 80, 110, 130, 130, 100], "exitFrames": [], "exitMs": [], "chainWindowMs": null}
+  ],
+  "singleRecoveryMs": 220,
+  "finisherRecoveryMs": 320,
+  "queueCapacity": 1,
+  "timingStatus": "PROPOSED_ART_PREVIEW_ONLY",
+  "artConstraints": "Keep approved Flame Ninja identity, gold-hilt fire sword, white-gold/orange/red layered flames; motion reference only, one/two hands as appropriate. Do not replace approved production or runtime."
+}
