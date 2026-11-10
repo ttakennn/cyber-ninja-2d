@@ -1,0 +1,48 @@
+{
+  "limitations": [
+    "Artwork approximates the30degree guide, not a measured rig",
+    "Repainted anatomy, not pixel-identical approved body",
+    "Phase labels describe review poses; not collision/physics certification"
+  ],
+  "manualImageInspection": [
+    "Native shared-scale comparison to approved51/currentRun",
+    "All12frames dark/light",
+    "Upper body: shoulder-armpit-wrist-hilt/waist seams",
+    "Frame1,9,12 closeups; frame12-to1 in contact sheet"
+  ],
+  "noDetachedComponentsOver3Pixels": true,
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "testBuildLintTypecheckFormatter": "NOT_RUN",
+  "gifs": [
+    {
+      "name": "motion-preview.gif",
+      "durationMs": 670,
+      "frames": 12,
+      "width": 1152,
+      "height": 810
+    },
+    {
+      "name": "run-loop.gif",
+      "durationMs": 670,
+      "frames": 12,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "productionChanged": false,
+  "atlas": {
+    "frameCount": 12,
+    "width": 2304,
+    "height": 640,
+    "pixelFormat": "Format32bppArgb"
+  },
+  "runtimeChanged": false,
+  "browser": "NOT_RUN",
+  "lowerLegEnvelope": {
+    "minimum": 81,
+    "region": "alpha >=128, nativeY >=220; includes shins, not exact sole distance",
+    "maximum": 154
+  },
+  "noAlphaBorderPixels": true,
+  "task": "10.54"
+}

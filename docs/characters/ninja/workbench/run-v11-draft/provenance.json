@@ -1,0 +1,64 @@
+{
+  "route": "host:image_gen",
+  "art_source": "host_image",
+  "apiCalls": false,
+  "videoGeneration": false,
+  "model": "not exposed by host tool",
+  "cost": "not exposed; host subscription route",
+  "initialPrompts": "prompts/group-0.txt through group-3.txt; final calls additionally imposed flat magenta and used preceding group as continuity reference",
+  "attempts": [
+    "group0 initial:alpha/glow rejected",
+    "group0 scale/background edit:halo remained rejected",
+    "group0 flat-magenta edit:selected draft source",
+    "group1 six loop poses:selected draft source",
+    "group2 six continuation poses:near/far unclear, rejected original",
+    "group2 targeted leg-depth edit:selected for diagnostic draft, gait still not approved",
+    "group3 six final loop poses:selected diagnostic draft"
+  ],
+  "files": [
+    {
+      "file": "raw\\group-0-keyed.png",
+      "sha256": "c51affc4f5d5e0cd64bfff1822b8b599aee7f0d00ab56fc817762114babcf9a6"
+    },
+    {
+      "file": "raw\\group-0.png",
+      "sha256": "14950efec53a26e7161bfd0a89c933d6b10f05095acebfdbe76ca5c9eb987226"
+    },
+    {
+      "file": "raw\\group-1-keyed.png",
+      "sha256": "61fb3a12f913a50da0d01e1b7db1e1cc80ba685b270f390291a83cd9f0c3151c"
+    },
+    {
+      "file": "raw\\group-1.png",
+      "sha256": "35bad954258d1d543e662e455da4db1eae99e14401b92e451f523c099f2b5013"
+    },
+    {
+      "file": "raw\\group-2-keyed.png",
+      "sha256": "6a760aa343def31b77d531ccd2c5d4e37f6eea4fca1db537b37c7f08119f9a97"
+    },
+    {
+      "file": "raw\\group-2.png",
+      "sha256": "e2de196abbd495195618d471442151eebcca474b18ad554dbe0f5f29e92f1082"
+    },
+    {
+      "file": "raw\\group-3-keyed.png",
+      "sha256": "3b7fef146fe41d94adf85a434fe200c8678a9dac6b26513a23df0d3ab4634b8c"
+    },
+    {
+      "file": "raw\\group-3.png",
+      "sha256": "c80609328ec4d3fdbfd8fe9d6cea5bcb631aa49faf257033fa18a97a4732fc5a"
+    },
+    {
+      "file": "raw\\rejected-source-0.png",
+      "sha256": "b1d756c39af51acbc420377d40a39714734bbfb53ca12a4b136f5256b29690a1"
+    },
+    {
+      "file": "raw\\rejected-source-1.png",
+      "sha256": "de235505f497877e73bbb916c57cea4b9fe241ab5c11d25c183892c9ae931d0b"
+    },
+    {
+      "file": "raw\\rejected-source-2.png",
+      "sha256": "e5de52b23535c97330bb9774e017a1c379b5740dfb2d944a29b106729575db95"
+    }
+  ]
+}

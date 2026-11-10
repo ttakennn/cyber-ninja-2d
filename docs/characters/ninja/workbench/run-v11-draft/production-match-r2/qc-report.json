@@ -1,0 +1,327 @@
+{
+  "status": "DRAFT_USER_REVIEW_PENDING",
+  "art_source": "host_image",
+  "route": "host:image_gen",
+  "model": "host tool does not disclose",
+  "approved": false,
+  "scope": "Appearance correction02–24: anatomy, exposure, color, texture. Frame01 preserved.",
+  "timing": {
+    "run_start": {
+      "frames": 6,
+      "fps": 10,
+      "durationMs": 600
+    },
+    "run_loop": {
+      "frames": 18,
+      "fps": 20,
+      "durationMs": 900
+    }
+  },
+  "checks": [
+    {
+      "frame": 1,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 100499,
+      "visiblePixels": 22074
+    },
+    {
+      "frame": 2,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 102192,
+      "visiblePixels": 19332
+    },
+    {
+      "frame": 3,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 102328,
+      "visiblePixels": 19267
+    },
+    {
+      "frame": 4,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 101726,
+      "visiblePixels": 19812
+    },
+    {
+      "frame": 5,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 101857,
+      "visiblePixels": 19753
+    },
+    {
+      "frame": 6,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 102119,
+      "visiblePixels": 19525
+    },
+    {
+      "frame": 7,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 96598,
+      "visiblePixels": 24777
+    },
+    {
+      "frame": 8,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 97905,
+      "visiblePixels": 23551
+    },
+    {
+      "frame": 9,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99364,
+      "visiblePixels": 22122
+    },
+    {
+      "frame": 10,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 98108,
+      "visiblePixels": 23294
+    },
+    {
+      "frame": 11,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 98346,
+      "visiblePixels": 23077
+    },
+    {
+      "frame": 12,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 97990,
+      "visiblePixels": 23448
+    },
+    {
+      "frame": 13,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99584,
+      "visiblePixels": 21851
+    },
+    {
+      "frame": 14,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99888,
+      "visiblePixels": 21609
+    },
+    {
+      "frame": 15,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 100262,
+      "visiblePixels": 21251
+    },
+    {
+      "frame": 16,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 100374,
+      "visiblePixels": 21205
+    },
+    {
+      "frame": 17,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 100582,
+      "visiblePixels": 21051
+    },
+    {
+      "frame": 18,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 98958,
+      "visiblePixels": 22491
+    },
+    {
+      "frame": 19,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99333,
+      "visiblePixels": 22053
+    },
+    {
+      "frame": 20,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99780,
+      "visiblePixels": 21644
+    },
+    {
+      "frame": 21,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 100268,
+      "visiblePixels": 21119
+    },
+    {
+      "frame": 22,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 100251,
+      "visiblePixels": 21218
+    },
+    {
+      "frame": 23,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99818,
+      "visiblePixels": 21574
+    },
+    {
+      "frame": 24,
+      "size": [
+        384,
+        320
+      ],
+      "mode": "RGBA",
+      "edgeSolidPixels": 0,
+      "transparentPixels": 99966,
+      "visiblePixels": 21513
+    }
+  ],
+  "productionUnchanged": true,
+  "frame01ExactRGBA": true,
+  "atlasRoundtripExactFrames": 24,
+  "warningsVerbatim": [
+    {
+      "file": "qc/appearance/sheet-qc.json",
+      "id": "torso_drift",
+      "status": "warn",
+      "value": 20.7,
+      "threshold": 2.0,
+      "method": "trunk",
+      "median_x": 202.5,
+      "note": "range of the torso x in game px; scale_frames --root-lock torso-x removes it"
+    },
+    {
+      "file": "qc/appearance/sheet-qc.json",
+      "id": "seam",
+      "status": "warn",
+      "value": 2.43,
+      "threshold": 1.5,
+      "transitions": [
+        [
+          5,
+          6
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "note": "largest frame-to-frame change over the median step; review these joins first"
+    }
+  ],
+  "colorMethod": "Shared OKLab quantile curves per material over ALL23new frames; mapped to actual production locomotion samples. Alpha preserved. Exact original frame01 bypasses transfer.",
+  "visualLimits": [
+    "R2 is visibly narrower/darker and less glossy than V11; not a pixel-identical repaint of production.",
+    "Eye slit, cloth folds, sword hilt and some limb widths remain generated details and require user review.",
+    "Pose sequence is retained, but image regeneration is not a guarantee of exactly identical joints.",
+    "Head QA compares relative scale to median and cannot prove master anatomy.",
+    "No new gait approval, browser playback, production promotion or runtime integration."
+  ]
+}

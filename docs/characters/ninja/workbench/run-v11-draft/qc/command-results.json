@@ -1,0 +1,36 @@
+[
+  {
+    "tool": "sheet_qc spill",
+    "group": 0,
+    "exit": 0,
+    "stdout": "{\"status\": \"pass\", \"check\": \"spill\", \"output\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-0\", \"metadata\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-0\\\\sheet-qc.json\", \"failed\": [], \"warnings\": []}\n",
+    "stderr": ""
+  },
+  {
+    "tool": "sheet_qc spill",
+    "group": 1,
+    "exit": 0,
+    "stdout": "{\"status\": \"pass\", \"check\": \"spill\", \"output\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-1\", \"metadata\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-1\\\\sheet-qc.json\", \"failed\": [], \"warnings\": []}\n",
+    "stderr": ""
+  },
+  {
+    "tool": "sheet_qc spill",
+    "group": 2,
+    "exit": 0,
+    "stdout": "{\"status\": \"pass\", \"check\": \"spill\", \"output\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-2\", \"metadata\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-2\\\\sheet-qc.json\", \"failed\": [], \"warnings\": []}\n",
+    "stderr": ""
+  },
+  {
+    "tool": "sheet_qc spill",
+    "group": 3,
+    "exit": 0,
+    "stdout": "{\"status\": \"pass\", \"check\": \"spill\", \"output\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-3\", \"metadata\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\spill-3\\\\sheet-qc.json\", \"failed\": [], \"warnings\": []}\n",
+    "stderr": ""
+  },
+  {
+    "tool": "sheet_qc frames start",
+    "exit": 1,
+    "stdout": "{\"status\": \"fail\", \"check\": \"frames\", \"output\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\run-start\", \"metadata\": \"C:\\\\Users\\\\anhthaitrong\\\\Downloads\\\\Games\\\\cyber-ninja-2d\\\\docs\\\\characters\\\\ninja\\\\workbench\\\\run-v11-draft\\\\qc\\\\run-start\\\\sheet-qc.json\", \"failed\": [\"identity_head_ratio\"], \"warnings\": [\"torso_drift\"]}\n",
+    "stderr": ""
+  }
+]

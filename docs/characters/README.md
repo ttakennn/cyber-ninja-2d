@@ -1,5 +1,7 @@
 # Hồ sơ nhân vật
 
+[Bản tổng hợp production hiện hành và quy tắc tiếp tục art](PRODUCTION_BASELINE.md): tỷ lệ, style, Idle47/combat51, bộ quái/boss đã chốt và các candidate chưa được publish. Đối chiếu catalog/approval mới nhất trước khi làm.
+
 Áp dụng [Sprite Spec chung](../rules/SPRITE_SPEC.md) và [Art Style chung](../rules/ART_STYLE_GUIDE.md). Mỗi nhân vật có rules/SPRITE_SPEC.md, nguồn metadata/asset và reports/ riêng; có thể thêm TASK_STATUS.md, DECISION_LOG.md khi cần theo dõi độc lập.
 
 - [Ninja hiện tại](ninja/rules/SPRITE_SPEC.md): contract và danh tính đã duyệt, dùng chung qua nhiều map.

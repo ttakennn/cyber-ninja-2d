@@ -7,6 +7,7 @@
 - Mọi task: [cấu trúc tài liệu](docs/README.md), [GAME_BIBLE](docs/rules/GAME_BIBLE.md), [TASK_STATUS](docs/TASK_STATUS.md), [DECISION_LOG](docs/DECISION_LOG.md).
 - Task ảnh, UI, môi trường hoặc map: [ART_STYLE_GUIDE chung](docs/rules/ART_STYLE_GUIDE.md), [ATLAS_SPEC chung](docs/rules/ATLAS_SPEC.md), rồi docs/<map-id>/README.md, rules/ và TASK_STATUS.md của đúng map đang làm.
 - Task nhân vật/animation: đọc [SPRITE_SPEC chung](docs/rules/SPRITE_SPEC.md) và hồ sơ docs/characters/<character-id>/ của đúng nhân vật, kể cả khi nhân vật dùng ở map khác. Map01 không sở hữu contract ninja dùng chung.
+- Đọc [mốc production toàn bộ nhân vật/quái/boss](docs/characters/PRODUCTION_BASELINE.md) trước task art; đối chiếu catalog/approval mới nhất, không dùng candidate hoặc trí nhớ hội thoại thay chuẩn.
 - Riêng Ninja Hỏa: đọc [bản chuẩn production đã được người dùng tái xác nhận](docs/characters/ninja/rules/PRODUCTION_REFERENCE.md), xem đúng PNG gốc và metadata trước khi sửa; không lấy candidate đang review thay bản chuẩn.
 - Vòng đời artwork/animation: đọc [ANIMATION_PRODUCTION](docs/rules/ANIMATION_PRODUCTION.md). docs/characters/<id>/animation/ là bản art đã chốt cho production; bản thử, ảnh review và lịch sử task phải lưu trong commits. Không ghi đè production bằng candidate chưa được duyệt.
 - Sau đó đọc source, metadata, generator và báo cáo gần nhất liên quan trước khi sửa. Phải xem PNG tham chiếu khi tạo/chỉnh artwork, không chỉ đọc tên file.

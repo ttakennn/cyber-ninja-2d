@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ninja Hỏa · Run V11 · Sửa ngoại hình R2</title>
+<style>
+body{margin:24px;background:#14171d;color:#e6e7eb;font:16px system-ui}main{max-width:1100px;margin:auto}h1{font-size:24px}button,select,input{font:inherit;margin:5px;padding:7px}canvas{max-width:100%;border:1px solid #525765;background:#24272e}p{max-width:900px;line-height:1.5}.warn{color:#ffc184}a{color:#81d0ff}.bar{display:flex;flex-wrap:wrap;align-items:center}#scrub{width:380px}#frameInfo{min-height:45px}figure{margin:10px 0}img{max-width:100%}
+</style>
+<main><h1>Ninja Hỏa · Run V11 · Sửa ngoại hình R2</h1>
+<p class="warn">Đã sửa frame 02–24 theo màu sắc, độ sáng và tỷ lệ production; frame 01 giữ nguyên. Chờ bạn xem lại texture, mắt và tỷ lệ từng pose. <a href="../preview.html">So bản V11 trước sửa</a> · <a href="production-comparison.png">Production / cũ / R2</a> · <a href="run-production-comparison.png">So với Run production</a></p>
+<div class="bar"><select id="mode"><option value="combined">Idle → vào chạy → chạy liên tục</option><option value="run_start">RUN_START · 6 frame · 600 ms</option><option value="run_loop">RUN_LOOP · 18 frame · 900 ms</option></select><button id="play">Tạm dừng</button><button id="prev">Frame trước</button><button id="next">Frame sau</button><button id="restart">Từ đầu</button></div>
+<div class="bar"><label>Tốc độ<select id="speed"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label><label>Nền<select id="bg"><option value="dark">Tối</option><option value="light">Sáng</option><option value="checker">Checker</option></select></label><label>Hiển thị<select id="zoom"><option value="1">1×</option><option value="2" selected>2×</option></select></label><label><input id="onion" type="checkbox">Onion-skin</label><label><input id="root" type="checkbox" checked>Pivot / ground</label></div>
+<canvas id="view" width="768" height="640"></canvas>
+<div><input id="scrub" type="range" min="0" max="23" value="0"><span id="counter"></span></div><p id="frameInfo"></p>
+<p>RUN_START chạy một lần; RUN_LOOP lặp. Chế độ ghép chạy sáu frame đầu rồi lặp frame 07–24. Review từng frame trên hai nền và kiểm tra nối 06→07, 12→13, 18→19, 24→07. Nền đứng yên chỉ cho thấy animation tại chỗ; chưa chứng nhận chân không trượt khi nhân vật di chuyển.</p>
+<p><a href="contact-sheet.png">Contact sheet 24 frame</a> · <a href="run_start-once.gif">GIF vào chạy</a> · <a href="run_loop.gif">GIF vòng chạy</a> · <a href="combined.gif">GIF ghép</a> · <a href="QC.md">Báo cáo QC</a> · <a href="animation-timing.json">Timing / đăng ký frame</a></p>
+<figure><img src="contact-sheet.png" alt="24 frame Ninja Hỏa V11 R2"></figure><p>Ba cột bên dưới lần lượt là production, V11 cũ và R2. Cùng tỷ lệ pixel, cùng nền và ground line.</p><figure><img src="production-comparison.png" alt="Production, V11 cũ và bản sửa R2"></figure></main>
+<script src="review-data.js"></script><script>
+const $=id=>document.getElementById(id), canvas=$('view'),ctx=canvas.getContext('2d');
+const frames=window.RUN_V11.frames,images=frames.map(f=>{const im=new Image;im.src=f.file;return im});
+let index=0,playing=true,last=0,elapsed=0;
+const first=()=> $('mode').value==='run_loop'?6:0;
+function advance(delta){const m=$('mode').value;index+=delta;if(index>23)index=m==='run_start'?5:6;if(m==='run_start'&&index>5){index=5;playing=false}if(index<first())index=m==='run_start'?0:23;if(m==='run_start'&&index===5&&delta>0){playing=false;$('play').textContent='Phát'}elapsed=0;}
+function draw(){const z=+$('zoom').value;if(canvas.width!==384*z){canvas.width=384*z;canvas.height=320*z}ctx.setTransform(z,0,0,z,0,0);ctx.globalAlpha=1;ctx.fillStyle=$('bg').value==='light'?'#efefeb':'#24272e';ctx.fillRect(0,0,384,320);if($('bg').value==='checker'){for(let y=0;y<320;y+=16)for(let x=0;x<384;x+=16){ctx.fillStyle=(x/16+y/16)%2?'#858990':'#c4c6ca';ctx.fillRect(x,y,16,16)}}ctx.imageSmoothingEnabled=true;
+if($('onion').checked){ctx.globalAlpha=.22;for(const n of [Math.max(first(),index-1),index===23?6:index+1])if(images[n].complete)ctx.drawImage(images[n],0,0);ctx.globalAlpha=1}if(images[index].complete)ctx.drawImage(images[index],0,0);
+if($('root').checked){ctx.strokeStyle='#70ccd8';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(0,289);ctx.lineTo(384,289);ctx.stroke();ctx.strokeStyle='#ff812f';ctx.beginPath();ctx.moveTo(187,289);ctx.lineTo(197,289);ctx.moveTo(192,284);ctx.lineTo(192,294);ctx.stroke()}
+$('scrub').value=index;$('counter').textContent=`${index+1}/24 · ${frames[index].durationMs} ms`;$('frameInfo').textContent=frames[index].label+' — '+frames[index].pose;}
+function tick(t){if(last&&playing){elapsed+=(t-last)*+$('speed').value;if(elapsed>=frames[index].durationMs){const remainder=elapsed-frames[index].durationMs;advance(1);elapsed=remainder}}last=t;draw();requestAnimationFrame(tick)}
+$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Tạm dừng':'Phát';};$('prev').onclick=()=>{playing=false;advance(-1);$('play').textContent='Phát'};$('next').onclick=()=>{playing=false;advance(1);$('play').textContent='Phát'};$('restart').onclick=()=>{index=first();elapsed=0;playing=true;$('play').textContent='Tạm dừng'};$('mode').onchange=()=>{index=first();elapsed=0;playing=true;$('play').textContent='Tạm dừng';$('scrub').min=first();$('scrub').max=$('mode').value==='run_start'?5:23};$('scrub').oninput=()=>{index=+$('scrub').value;elapsed=0;playing=false;$('play').textContent='Phát'};requestAnimationFrame(tick);
+</script></html>

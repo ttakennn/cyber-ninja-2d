@@ -1,0 +1,82 @@
+{
+  "schema": "generate2dsprite.animation_clips.v2",
+  "frames": [
+    "frames\\frame-01.png",
+    "frames\\frame-02.png",
+    "frames\\frame-03.png",
+    "frames\\frame-04.png",
+    "frames\\frame-05.png",
+    "frames\\frame-06.png",
+    "frames\\frame-07.png",
+    "frames\\frame-08.png",
+    "frames\\frame-09.png",
+    "frames\\frame-10.png",
+    "frames\\frame-11.png",
+    "frames\\frame-12.png",
+    "frames\\frame-13.png",
+    "frames\\frame-14.png",
+    "frames\\frame-15.png",
+    "frames\\frame-16.png",
+    "frames\\frame-17.png",
+    "frames\\frame-18.png",
+    "frames\\frame-19.png",
+    "frames\\frame-20.png",
+    "frames\\frame-21.png",
+    "frames\\frame-22.png",
+    "frames\\frame-23.png",
+    "frames\\frame-24.png"
+  ],
+  "anchor_px": [
+    192,
+    289
+  ],
+  "sampling": "linear",
+  "pixel_art": false,
+  "art_source": "host_image",
+  "body_height_px": 251,
+  "clips": {
+    "run_start": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "duration_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop_policy": "oneshot"
+    },
+    "run_loop": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "ticks": 3,
+      "loop_policy": "cycle"
+    }
+  }
+}

@@ -1,5 +1,9 @@
 # Ninja Hỏa — animation chốt cho production
 
+**Bản chạy đang review — Task 10.54:** [preview 12 frame vẽ lại](../../../map01/commits/task-010-54-ninja-run-compact/preview.html). 10.53 đã bị bác vì sai kích thước/tỷ lệ và mở chân quá rộng. Bản mới đối chiếu trực tiếp chuẩn 10.51 + run production, giữ một tỷ lệ chung, thân hướng tới khoảng 30° và thu gọn vòng chân. Có GIF/tua/chậm/so cùng pixel; chưa chốt production hoặc đưa game. Các mục 10.53 dưới đây là lịch sử trước phản hồi.
+
+**Candidate chạy mới — Task10.53:** [preview riêng](../../../map01/commits/task-010-53-ninja-run-reference/preview.html), lấy tạo hình51 đã chốt và cơ học12pose người dùng gửi.12frame sải chạy, tay phải giữ chuôi sau gáy/tay trái ngang ngực; có so chuẩn51 và run hiện tại, frame trước/sau, ảnh soi và GIF.18FPS là nhịp đề xuất. Chưa duyệt/publish/runtime/commit; production51 và run cũ giữ nguyên. Đã rà ảnh và đóng gói, browser/test/build NOT_RUN.
+
 **Vào thế chiến đấu chính thức:10.51 — người dùng đã CHỐT.** [Preview production](combat-idle/preview.html), [atlas/metadata/approval](combat-idle/README.md), [hồ sơ publish10.52](../../../map01/commits/task-010-52-ninja-combat-production-51/README.md). Hai frame vào thế và sáu frame thở giữ đúng PNG/rect/pivot/timing đã duyệt;40asset cũ không đổi, Idle10.47 vẫn chính thức. Chưa đưa vào game. Các mục candidate49–51 bên dưới giữ lịch sử trước lúc chốt; các candidate attack khác chưa được phê duyệt theo lần này.
 
 **Candidate chiến đấu mới nhất — Task10.51:** [sửa bàn tay và thêm hai khung đầu](../../../map01/commits/task-010-51-ninja-combat-grip-entry/preview.html), giữ tạo hình50 đã được người dùng xác nhận sạch ảnh dư. Tay phải sửa ngón cái/cổ tay;2frame Nâng tay vào kiếm/Đưa tay về chuôi kiếm rồi6frame thở. Ngoài vùng tay sửa, sáu pose50 giữ nguyên RGBA. Đã soi ảnh và đóng gói; chờ duyệt, chưa production/runtime/commit, browser/test/build NOT_RUN.

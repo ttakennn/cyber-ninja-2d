@@ -1,0 +1,62 @@
+{
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "files":  [
+                  {
+                      "sha256":  "7bb528754eaf2dabf150bbffe27f783028464b90e01bd68142af711e9aa74789",
+                      "path":  "integration/ninja-run-combat-reference/plan.json"
+                  },
+                  {
+                      "sha256":  "6c666f638550af164682a11b89f28ec49cc87f1714b04b52d25aeb1732bc2942",
+                      "path":  "integration/ninja-run-combat-reference/run-arm-source.png"
+                  },
+                  {
+                      "sha256":  "4f5a4f0303b062a6a1cb848be8c324c5182d8be7e278dea8d8ef7c997b59a446",
+                      "path":  "integration/ninja-run-combat-reference/run-source.png"
+                  },
+                  {
+                      "sha256":  "3bc08b022634c161d5dfb99f44dc855ba6983429661bc40fea6abc8f394e86e5",
+                      "path":  "integration/ninja-run-combat-reference/run-loop-source.png"
+                  },
+                  {
+                      "sha256":  "fd28c1201005d2c6db8bb45f8c169529037653f32485aeacf1a372e3131d7208",
+                      "path":  "integration/ninja-run-combat-reference/run-arm-prompt.txt"
+                  },
+                  {
+                      "sha256":  "b4cc2501508df0c722de02eec2fd131269f14d6bec977cf11f6be3ee22dabfa0",
+                      "path":  "integration/ninja-run-combat-reference/run-prompt.txt"
+                  },
+                  {
+                      "sha256":  "6354ad1ecfcbf828655f87a8923942bde449b8f00c14be70ef6262bf6cdeb190",
+                      "path":  "integration/ninja-run-combat-reference/run-closure-prompt.txt"
+                  },
+                  {
+                      "sha256":  "eeb723a6e33e0c1f81762ed62b08d004c3010ca2f7140c74b272b85c44d92ef4",
+                      "path":  "integration/ninja-run-combat-reference/source-measurements.json"
+                  },
+                  {
+                      "sha256":  "ad287263e305ab1b96e2630b03b772ee554166eaffedb0835015ce6fa6d493da",
+                      "path":  "docs/characters/ninja/animation/combat-idle/combat-idle-atlas.png"
+                  },
+                  {
+                      "sha256":  "d5559f90565cdc00eec69d7692eac7e48ce0b6bdd9bd070e59d69d551d523e48",
+                      "path":  "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+                  },
+                  {
+                      "sha256":  "5943d7ffaab26d306b44588cd1fd7004becfa61187427d2066c0393696d18f38",
+                      "path":  "docs/characters/ninja/animation/combat-idle/animations.json"
+                  },
+                  {
+                      "sha256":  "3eb2a790e10b21776f8c2609b3a97f0a9c9ccc85a9899c1b18cf79e293e6af3b",
+                      "path":  "integration/ninja-run-combat-reference/reference-contract.json"
+                  },
+                  {
+                      "sha256":  "9701111aee558439c3f072792b1497de4ce2f701732f0e3b72ebf5bad3620ffd",
+                      "path":  "scripts/prepare_ninja_run_combat_reference.ps1"
+                  },
+                  {
+                      "sha256":  "3ab7e0103430483795d1b7c4fc8cf17689201ee9979b425a007ec77409c2b6b2",
+                      "path":  "docs/map01/commits/task-010-53-ninja-run-reference/run-atlas.png"
+                  }
+              ],
+    "method":  "One shared scale from standing control hood-to-sole251px. Horizontal translation per source waist landmark; one shared vertical translation from first run contact for all12frames. Airborne feet are not ground-aligned. Final2source poses ordered by descending foot height to close loop."
+}

@@ -1,0 +1,71 @@
+{
+  "task": "10.57",
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-57-ninja-run-production-geometry",
+  "source": "integration/ninja-run-production-geometry/run-source.png",
+  "sourceSha256": "2a7cd8db5473cb6c9cd42bddf028fc0ae84d39554f700ea0385610c6bc444490",
+  "sourceGrid": {
+    "columns": 4,
+    "rows": 2,
+    "width": 1536,
+    "height": 1024
+  },
+  "scale": 0.8,
+  "verticalTranslation": -66.2,
+  "pelvisTargetX": 192,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "fps": 12,
+  "frameLabels": [
+    "Chân gần đón đất",
+    "Chống – chân xa đi qua",
+    "Chân gần đạp – gối xa tới",
+    "Pha bay chuyển bước",
+    "Chân xa đón đất",
+    "Chống – chân gần đi qua",
+    "Chân xa đạp – gối gần tới",
+    "Pha bay – nối vòng"
+  ],
+  "sourceWaistAnchors": [
+    [
+      192,
+      280
+    ],
+    [
+      171,
+      280
+    ],
+    [
+      171,
+      280
+    ],
+    [
+      175,
+      280
+    ],
+    [
+      194,
+      280
+    ],
+    [
+      182,
+      280
+    ],
+    [
+      174,
+      280
+    ],
+    [
+      181,
+      280
+    ]
+  ],
+  "referenceCombat": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "referenceCombatMetadata": "docs/characters/ninja/animation/locomotion/animations.json",
+  "referenceLocomotion": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "oldRunReference": "integration/ninja-run-production-geometry/reference/run-production.png",
+  "referenceContract": "integration/ninja-run-production-geometry/reference-contract.json",
+  "normalization": "Source target is exact production run enlarged1.25x on padded cells. One inverse0.8 scale for all8 edited frames, commonY-66.2. Per-cell X registration from hood/shoulder/sash landmarks only; no frame-height fitting, no independent scale or vertical foot snapping.8frames/12FPS and384x320/pivot192,289 preserved as candidate contract."
+}

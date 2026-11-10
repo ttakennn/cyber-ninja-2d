@@ -1,0 +1,78 @@
+[
+  {
+    "label": "PRODUCTION IDLE  /  1",
+    "rect": [
+      4,
+      4,
+      384,
+      320
+    ],
+    "alpha1To127Pixels": 1038,
+    "alpha128Pixels": 21343,
+    "alpha128Bounds": [
+      93,
+      27,
+      269,
+      288
+    ],
+    "alpha128Height": 262,
+    "alpha128Width": 177
+  },
+  {
+    "label": "PRODUCTION RUN  /  1",
+    "rect": [
+      2356,
+      4,
+      384,
+      320
+    ],
+    "alpha1To127Pixels": 4903,
+    "alpha128Pixels": 24672,
+    "alpha128Bounds": [
+      70,
+      48,
+      288,
+      288
+    ],
+    "alpha128Height": 241,
+    "alpha128Width": 219
+  },
+  {
+    "label": "CANDIDATE 10.55  /  1",
+    "rect": [
+      0,
+      0,
+      384,
+      320
+    ],
+    "alpha1To127Pixels": 10303,
+    "alpha128Pixels": 18661,
+    "alpha128Bounds": [
+      102,
+      69,
+      269,
+      289
+    ],
+    "alpha128Height": 221,
+    "alpha128Width": 168
+  },
+  {
+    "label": "CANDIDATE 10.55  /  4",
+    "rect": [
+      1152,
+      0,
+      384,
+      320
+    ],
+    "alpha1To127Pixels": 3693,
+    "alpha128Pixels": 17655,
+    "alpha128Bounds": [
+      96,
+      66,
+      271,
+      277
+    ],
+    "alpha128Height": 212,
+    "alpha128Width": 176
+  }
+]

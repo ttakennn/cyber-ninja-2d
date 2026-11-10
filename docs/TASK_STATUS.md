@@ -1,5 +1,11 @@
 # Trạng thái toàn dự án
 
+2026-11-10/Task10.56: [đối chiếu Run10.55 với đúng PNG locomotion production](map01/commits/task-010-56-ninja-run-comparison/README.md) ở cùng pixel/nền sáng-tối.10.55 chưa khớp: thân/chân nhìn ngắn gọn hơn, vai/tay phồng, khăn/màu da/texture khác. Cùng ô/pivot không chứng nhận anatomy; không publish hoặc dùng candidate làm chuẩn mới. Chỉ phân tích/ảnh so/số đo, không sửa atlas/runtime/commit; test/build/browser animation NOT_RUN.
+
+2026-11-09/Task10.54: **10.53 đã bị người dùng bác** vì sai tỷ lệ và sải chân quá rộng. [Bản chạy vẽ lại 12 frame](map01/commits/task-010-54-ninja-run-compact/preview.html) đối chiếu trực tiếp 10.51 và run production: thân theo hướng nghiêng trước khoảng 30° từ phương thẳng đứng, vòng chân gọn, tay phải giữ chuôi sau gáy/tay trái trước ngực. Cả 12 frame dùng chung scale 0,9 theo đối chiếu đầu/thân thật; bỏ cách căn theo pose đứng generate. Có so cùng tỷ lệ pixel, tua/chậm, nền sáng/tối và GIF. Đang chờ review, chưa publish/game/commit; browser/test/build NOT_RUN.
+
+2026-11-09/Task10.53: [candidate chạy mới theo chuẩn51](map01/commits/task-010-53-ninja-run-reference/preview.html), tham khảo12pose ninja xanh người dùng gửi.12frame mới: thân nghiêng tới, tay phải giữ chuôi sau gáy, tay trái ngang ngực, sải chân chống–đạp–bay–đón đất. Dùng một scale từ control251px, không fit bbox từng frame;18FPS đề xuất giữ chu kỳ cũ khoảng0,667s. Có so chuẩn51/chạy cũ/chạy mới, tua/ảnh soi/GIF. Đã rà PNG và đóng gói; chưa production/game/commit, browser/test/build NOT_RUN.
+
 2026-11-09/Task10.52: người dùng CHỐT10.51 làm production cho Vào thế chiến đấu, yêu cầu chưa đưa game và commit tất cả code changes. Đã [publish đúng PNG51](map01/commits/task-010-52-ninja-combat-production-51/README.md) vào combat-idle/,2frame vào thế +6frame thở, không regenerate;40asset production cũ giữ hash, Idle10.47 nguyên vẹn. Catalog/source/approval và preview tổng hợp đã cập nhật. Lưu toàn bộ lịch sử/source/preview đang có vào commit theo yêu cầu; các attack candidate vẫn chưa được duyệt. Game/src/public không đổi; browser/test/build/runtime NOT_RUN, không merge/push.
 
 2026-11-09/Task10.51: người dùng xác nhận50 hết ảnh dư, yêu cầu sửa bàn tay nắm kiếm bị ngược và thêm hai nhịp đầu. [Bản51](map01/commits/task-010-51-ninja-combat-grip-entry/preview.html) có Nâng tay vào kiếm/Đưa tay về chuôi kiếm +6frame thở; sửa ngón cái/cổ tay đúng chiều,0RGBA khác ngoài vùng tay ở sáu pose50. Hai khung mới giữ vùng đầu và thân dưới50; có so tay sáu nhịp/GIF/ảnh sáng. Đã rà ảnh/đóng gói; browser/test/build/runtime NOT_RUN. Chờ duyệt, chưa production/commit; không suy lời khen ảnh sạch thành chốt toàn clip50.
@@ -131,3 +137,6 @@ Task10.30: run/hurt Task10.29 đã chốt và publish thư viện docs (runtime 
 Task10.31: [combo một tay](map01/commits/task-010-31-ninja-one-hand-combo/preview.html) thay hướng Task10.30 bị bác; dùng ba atlas attack gốc làm tham chiếu kiếm/lửa, giữ nhịp hồi thế đề xuất. Chưa duyệt/browser/test/build/runtime/commit.
 
 Task10.32: [combo phối hợp lực](map01/commits/task-010-32-ninja-power-combo/preview.html) có16pose một/hai tay, chainFrames nối theo đà; video tham chiếu được xem một phần qua IAB. Chờ review; preview browser/test/build/runtime/commit NOT_RUN.
+
+2026-11-09/Production recap: đã đối chiếu source hiện hành và ghi mốc art tại [PRODUCTION_BASELINE](characters/PRODUCTION_BASELINE.md). Idle47/combat51 đã chốt; run53 bị bác,54 chờ duyệt. [Hồ sơ lượt tổng hợp](map01/commits/2026-11-09-character-production-recap/README.md). Chỉ cập nhật tài liệu, không đổi artwork/runtime, không commit hoặc chạy test/build.
+

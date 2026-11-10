@@ -1,0 +1,625 @@
+{
+    "productionChanged":  false,
+    "fps":  18,
+    "observations":  [
+                         {
+                             "lowestY":  287,
+                             "sourceRect":  [
+                                                0,
+                                                0,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  105,
+                             "alphaBorderPixels":  0,
+                             "frame":  0,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            80,
+                                            28,
+                                            284,
+                                            287,
+                                            24572,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  2
+                         },
+                         {
+                             "lowestY":  287,
+                             "sourceRect":  [
+                                                384,
+                                                0,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  106,
+                             "alphaBorderPixels":  0,
+                             "frame":  1,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            70,
+                                            28,
+                                            284,
+                                            287,
+                                            23692,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  2
+                         },
+                         {
+                             "lowestY":  287,
+                             "sourceRect":  [
+                                                768,
+                                                0,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  111,
+                             "alphaBorderPixels":  0,
+                             "frame":  2,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            72,
+                                            28,
+                                            284,
+                                            287,
+                                            24204,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  2
+                         },
+                         {
+                             "lowestY":  289,
+                             "sourceRect":  [
+                                                1152,
+                                                0,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  152,
+                             "alphaBorderPixels":  0,
+                             "frame":  3,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            65,
+                                            28,
+                                            284,
+                                            289,
+                                            25088,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  0
+                         },
+                         {
+                             "lowestY":  286,
+                             "sourceRect":  [
+                                                0,
+                                                341,
+                                                384,
+                                                342
+                                            ],
+                             "lowerLegEnvelope":  154,
+                             "alphaBorderPixels":  0,
+                             "frame":  4,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            71,
+                                            28,
+                                            285,
+                                            286,
+                                            24615,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 3.0,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  3
+                         },
+                         {
+                             "lowestY":  287,
+                             "sourceRect":  [
+                                                384,
+                                                341,
+                                                384,
+                                                342
+                                            ],
+                             "lowerLegEnvelope":  97,
+                             "alphaBorderPixels":  0,
+                             "frame":  5,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            70,
+                                            28,
+                                            285,
+                                            287,
+                                            23462,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 3.0,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  2
+                         },
+                         {
+                             "lowestY":  286,
+                             "sourceRect":  [
+                                                768,
+                                                341,
+                                                384,
+                                                342
+                                            ],
+                             "lowerLegEnvelope":  81,
+                             "alphaBorderPixels":  0,
+                             "frame":  6,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            62,
+                                            28,
+                                            285,
+                                            286,
+                                            22915,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 3.0,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  3
+                         },
+                         {
+                             "lowestY":  289,
+                             "sourceRect":  [
+                                                1152,
+                                                341,
+                                                384,
+                                                342
+                                            ],
+                             "lowerLegEnvelope":  133,
+                             "alphaBorderPixels":  0,
+                             "frame":  7,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            55,
+                                            28,
+                                            284,
+                                            289,
+                                            24867,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  0
+                         },
+                         {
+                             "lowestY":  270,
+                             "sourceRect":  [
+                                                0,
+                                                683,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  152,
+                             "alphaBorderPixels":  0,
+                             "frame":  8,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            50,
+                                            26,
+                                            284,
+                                            270,
+                                            25476,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  19
+                         },
+                         {
+                             "lowestY":  286,
+                             "sourceRect":  [
+                                                384,
+                                                683,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  113,
+                             "alphaBorderPixels":  0,
+                             "frame":  9,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            59,
+                                            27,
+                                            284,
+                                            286,
+                                            24749,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  3
+                         },
+                         {
+                             "lowestY":  286,
+                             "sourceRect":  [
+                                                768,
+                                                683,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  97,
+                             "alphaBorderPixels":  0,
+                             "frame":  10,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            55,
+                                            27,
+                                            285,
+                                            286,
+                                            24552,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 3.0,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  3
+                         },
+                         {
+                             "lowestY":  286,
+                             "sourceRect":  [
+                                                1152,
+                                                683,
+                                                384,
+                                                341
+                                            ],
+                             "lowerLegEnvelope":  128,
+                             "alphaBorderPixels":  0,
+                             "frame":  11,
+                             "detachedComponentsOver3Pixels":  0,
+                             "lowerRegionY":  220,
+                             "bounds":  [
+                                            53,
+                                            26,
+                                            284,
+                                            286,
+                                            25484,
+                                            0
+                                        ],
+                             "translation":  [
+                                                 2.1,
+                                                 3.6
+                                             ],
+                             "footPlaneGap":  3
+                         }
+                     ],
+    "task":  "10.54",
+    "reference":  {
+                      "combatIdleFrames":  [
+                                               {
+                                                   "x":  768,
+                                                   "y":  0,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · hít vào"
+                                               },
+                                               {
+                                                   "x":  1152,
+                                                   "y":  0,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · nâng ngực"
+                                               },
+                                               {
+                                                   "x":  0,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · giữ nhịp"
+                                               },
+                                               {
+                                                   "x":  384,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · thở ra"
+                                               },
+                                               {
+                                                   "x":  768,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · thả vai"
+                                               },
+                                               {
+                                                   "x":  1152,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · nối vòng"
+                                               }
+                                           ],
+                      "oldRunFps":  12,
+                      "combatFps":  7.142857142857143
+                  },
+    "frames":  [
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  0,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Chống chân A",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  384,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Thu gót sau",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  768,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Chuyển chân A",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  1152,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đạp chân A",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  1536,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Hạ chân trước",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  1920,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Qua chân B",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  0,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Thu chân B",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  384,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đạp chân B",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  768,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Pha bay ngắn",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  1152,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đón đất B",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  1536,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Thu gót – nối vòng",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  1920,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Chuyển về bước A",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "offsetY":  0
+                   }
+               ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "pivot":  {
+                  "x":  192,
+                  "y":  289
+              },
+    "frameWidth":  384,
+    "normalization":  {
+                          "scale":  0.9,
+                          "verticalTranslation":  3.6,
+                          "method":  "One uniform0.9 scale from source-pixel head/torso comparison against real approved51 and production run. Common Y translation3.6, waist-X anchors only; no generated standing control or frame-height fitting."
+                      },
+    "runtimeChanged":  false,
+    "columns":  6,
+    "image":  "run-atlas.png",
+    "loop":  true,
+    "frameHeight":  320
+}

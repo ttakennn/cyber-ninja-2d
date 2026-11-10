@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "kind": "production",
+  "status": "USER_APPROVED_PRODUCTION_ART",
+  "character": "ninja",
+  "selectedRevision": "Task10.51",
+  "image": "combat-idle-atlas.png",
+  "filter": "linear",
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "columns": 4,
+  "visual": {
+    "width": 2.4,
+    "height": 2,
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    }
+  },
+  "clips": {
+    "combatEnter": {
+      "fps": 10,
+      "loop": false,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Nâng tay vào kiếm"
+        },
+        {
+          "x": 384,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Đưa tay về chuôi kiếm"
+        }
+      ]
+    },
+    "combatIdle": {
+      "fps": 7.142857142857143,
+      "loop": true,
+      "frames": [
+        {
+          "x": 768,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Sẵn sàng · hít vào"
+        },
+        {
+          "x": 1152,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Sẵn sàng · nâng ngực"
+        },
+        {
+          "x": 0,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Sẵn sàng · giữ nhịp"
+        },
+        {
+          "x": 384,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Sẵn sàng · thở ra"
+        },
+        {
+          "x": 768,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Sẵn sàng · thả vai"
+        },
+        {
+          "x": 1152,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          },
+          "label": "Sẵn sàng · nối vòng"
+        }
+      ]
+    }
+  }
+}

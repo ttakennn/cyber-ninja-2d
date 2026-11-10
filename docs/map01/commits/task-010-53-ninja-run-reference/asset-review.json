@@ -1,0 +1,318 @@
+{
+  "canonicalAssets": [
+    {
+      "sha256": "ad287263e305ab1b96e2630b03b772ee554166eaffedb0835015ce6fa6d493da",
+      "unchanged": true,
+      "path": "docs/characters/ninja/animation/combat-idle/combat-idle-atlas.png"
+    },
+    {
+      "sha256": "d5559f90565cdc00eec69d7692eac7e48ce0b6bdd9bd070e59d69d551d523e48",
+      "unchanged": true,
+      "path": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png"
+    }
+  ],
+  "uniqueRunFrames": 12,
+  "gif": {
+    "durationMs": 670.0,
+    "frameMs": [
+      60,
+      50,
+      60,
+      50,
+      60,
+      50,
+      60,
+      50,
+      60,
+      50,
+      60,
+      60
+    ],
+    "decodedFrames": 12
+  },
+  "userApproved": false,
+  "published": false,
+  "calibration": {
+    "hoodTop": 38,
+    "ground": 308,
+    "sourceCell": 0,
+    "method": "One shared scale from standing control hood-to-sole251px. Horizontal translation per source waist landmark; one shared vertical translation from first run contact for all12frames. Airborne feet are not ground-aligned. Final2source poses ordered by descending foot height to close loop.",
+    "sharedVerticalTranslation": 10.111111111111143,
+    "sharedScale": 0.9296296296296296
+  },
+  "browser": "NOT_RUN",
+  "observations": [
+    {
+      "sourceWaist": [
+        157,
+        163
+      ],
+      "sourceRect": [
+        313,
+        0,
+        314,
+        313
+      ],
+      "footGapToPlane": 0,
+      "alphaAtTopLeft": 0,
+      "frame": 0,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        46.04814814814816,
+        10.111111111111143
+      ],
+      "sourceCell": 1,
+      "worldFootLowestY": 289
+    },
+    {
+      "sourceWaist": [
+        149,
+        163
+      ],
+      "sourceRect": [
+        627,
+        0,
+        313,
+        313
+      ],
+      "footGapToPlane": 0,
+      "alphaAtTopLeft": 0,
+      "frame": 1,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        53.4851851851852,
+        10.111111111111143
+      ],
+      "sourceCell": 2,
+      "worldFootLowestY": 289
+    },
+    {
+      "sourceWaist": [
+        151,
+        163
+      ],
+      "sourceRect": [
+        940,
+        0,
+        314,
+        313
+      ],
+      "footGapToPlane": 5,
+      "alphaAtTopLeft": 0,
+      "frame": 2,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        51.62592592592594,
+        10.111111111111143
+      ],
+      "sourceCell": 3,
+      "worldFootLowestY": 284
+    },
+    {
+      "sourceWaist": [
+        153,
+        162
+      ],
+      "sourceRect": [
+        0,
+        313,
+        313,
+        314
+      ],
+      "footGapToPlane": 34,
+      "alphaAtTopLeft": 0,
+      "frame": 3,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        49.76666666666668,
+        10.111111111111143
+      ],
+      "sourceCell": 4,
+      "worldFootLowestY": 255
+    },
+    {
+      "sourceWaist": [
+        152,
+        166
+      ],
+      "sourceRect": [
+        313,
+        313,
+        314,
+        314
+      ],
+      "footGapToPlane": 6,
+      "alphaAtTopLeft": 0,
+      "frame": 4,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        50.69629629629631,
+        10.111111111111143
+      ],
+      "sourceCell": 5,
+      "worldFootLowestY": 283
+    },
+    {
+      "sourceWaist": [
+        150,
+        168
+      ],
+      "sourceRect": [
+        627,
+        313,
+        313,
+        314
+      ],
+      "footGapToPlane": 3,
+      "alphaAtTopLeft": 0,
+      "frame": 5,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        52.55555555555557,
+        10.111111111111143
+      ],
+      "sourceCell": 6,
+      "worldFootLowestY": 286
+    },
+    {
+      "sourceWaist": [
+        154,
+        170
+      ],
+      "sourceRect": [
+        940,
+        313,
+        314,
+        314
+      ],
+      "footGapToPlane": 2,
+      "alphaAtTopLeft": 0,
+      "frame": 6,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        48.83703703703705,
+        10.111111111111143
+      ],
+      "sourceCell": 7,
+      "worldFootLowestY": 287
+    },
+    {
+      "sourceWaist": [
+        156,
+        167
+      ],
+      "sourceRect": [
+        0,
+        627,
+        313,
+        313
+      ],
+      "footGapToPlane": 2,
+      "alphaAtTopLeft": 0,
+      "frame": 7,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        46.97777777777779,
+        10.111111111111143
+      ],
+      "sourceCell": 8,
+      "worldFootLowestY": 287
+    },
+    {
+      "sourceWaist": [
+        158,
+        170
+      ],
+      "sourceRect": [
+        313,
+        627,
+        314,
+        313
+      ],
+      "footGapToPlane": 6,
+      "alphaAtTopLeft": 0,
+      "frame": 8,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        45.11851851851853,
+        10.111111111111143
+      ],
+      "sourceCell": 9,
+      "worldFootLowestY": 283
+    },
+    {
+      "sourceWaist": [
+        156,
+        168
+      ],
+      "sourceRect": [
+        627,
+        627,
+        313,
+        313
+      ],
+      "footGapToPlane": 34,
+      "alphaAtTopLeft": 0,
+      "frame": 9,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        46.97777777777779,
+        10.111111111111143
+      ],
+      "sourceCell": 10,
+      "worldFootLowestY": 255
+    },
+    {
+      "sourceWaist": [
+        155,
+        173
+      ],
+      "sourceRect": [
+        0,
+        940,
+        313,
+        314
+      ],
+      "footGapToPlane": 11,
+      "alphaAtTopLeft": 0,
+      "frame": 10,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        47.90740740740742,
+        10.111111111111143
+      ],
+      "sourceCell": 12,
+      "worldFootLowestY": 278
+    },
+    {
+      "sourceWaist": [
+        155,
+        171
+      ],
+      "sourceRect": [
+        940,
+        627,
+        314,
+        313
+      ],
+      "footGapToPlane": 1,
+      "alphaAtTopLeft": 0,
+      "frame": 11,
+      "detachedComponentsOver3Pixels": 0,
+      "translation": [
+        47.90740740740742,
+        10.111111111111143
+      ],
+      "sourceCell": 11,
+      "worldFootLowestY": 288
+    }
+  ],
+  "runtime": "NOT_RUN",
+  "atlasPixelSize": [
+    2304,
+    640
+  ],
+  "kind": "Requested run art review",
+  "testBuildLintTypecheckFormatter": "NOT_RUN",
+  "previewFps": 18
+}

@@ -1,0 +1,579 @@
+{
+    "productionChanged":  false,
+    "fps":  18,
+    "frameWidth":  384,
+    "reference":  {
+                      "combatIdleFrames":  [
+                                               {
+                                                   "x":  768,
+                                                   "y":  0,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · hít vào"
+                                               },
+                                               {
+                                                   "x":  1152,
+                                                   "y":  0,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · nâng ngực"
+                                               },
+                                               {
+                                                   "x":  0,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · giữ nhịp"
+                                               },
+                                               {
+                                                   "x":  384,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · thở ra"
+                                               },
+                                               {
+                                                   "x":  768,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · thả vai"
+                                               },
+                                               {
+                                                   "x":  1152,
+                                                   "y":  320,
+                                                   "width":  384,
+                                                   "height":  320,
+                                                   "sourceWidth":  384,
+                                                   "sourceHeight":  320,
+                                                   "offsetX":  0,
+                                                   "offsetY":  0,
+                                                   "pivot":  {
+                                                                 "x":  192,
+                                                                 "y":  289
+                                                             },
+                                                   "label":  "Sẵn sàng · nối vòng"
+                                               }
+                                           ],
+                      "oldRunFps":  12,
+                      "combatFps":  7.142857142857143
+                  },
+    "control":  {
+                    "hoodTop":  38,
+                    "ground":  308,
+                    "sourceCell":  0,
+                    "method":  "One shared scale from standing control hood-to-sole251px. Horizontal translation per source waist landmark; one shared vertical translation from first run contact for all12frames. Airborne feet are not ground-aligned. Final2source poses ordered by descending foot height to close loop.",
+                    "sharedVerticalTranslation":  10.111111111111143,
+                    "sharedScale":  0.92962962962962958
+                },
+    "frames":  [
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  0,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Tiếp đất bước A",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  1,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  384,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Chống chân / nén gối",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  2,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  768,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đạp sau / rời đất",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  3,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  1152,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Bay / mở sải",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  4,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  1536,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đưa chân xuống",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  5,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  0,
+                       "height":  320,
+                       "x":  1920,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đón bước B",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  6,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  0,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Tiếp đất bước B",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  7,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  384,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Chống chân / đổi hông",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  8,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  768,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đạp sau lượt hai",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  9,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  1152,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Bay / mở sải lượt hai",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  10,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  1536,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Thu sải / hạ chân",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  12,
+                       "offsetY":  0
+                   },
+                   {
+                       "y":  320,
+                       "height":  320,
+                       "x":  1920,
+                       "offsetX":  0,
+                       "sourceWidth":  384,
+                       "sourceHeight":  320,
+                       "label":  "Đón đất / trả vòng",
+                       "pivot":  {
+                                     "x":  192,
+                                     "y":  289
+                                 },
+                       "width":  384,
+                       "sourceCell":  11,
+                       "offsetY":  0
+                   }
+               ],
+    "status":  "CANDIDATE_PENDING_REVIEW",
+    "pivot":  {
+                  "x":  192,
+                  "y":  289
+              },
+    "columns":  6,
+    "runtimeChanged":  false,
+    "loop":  true,
+    "image":  "run-atlas.png",
+    "observations":  [
+                         {
+                             "sourceWaist":  [
+                                                 157,
+                                                 163
+                                             ],
+                             "sourceRect":  [
+                                                313,
+                                                0,
+                                                314,
+                                                313
+                                            ],
+                             "footGapToPlane":  0,
+                             "alphaAtTopLeft":  0,
+                             "frame":  0,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 46.048148148148158,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  1,
+                             "worldFootLowestY":  289
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 149,
+                                                 163
+                                             ],
+                             "sourceRect":  [
+                                                627,
+                                                0,
+                                                313,
+                                                313
+                                            ],
+                             "footGapToPlane":  0,
+                             "alphaAtTopLeft":  0,
+                             "frame":  1,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 53.4851851851852,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  2,
+                             "worldFootLowestY":  289
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 151,
+                                                 163
+                                             ],
+                             "sourceRect":  [
+                                                940,
+                                                0,
+                                                314,
+                                                313
+                                            ],
+                             "footGapToPlane":  5,
+                             "alphaAtTopLeft":  0,
+                             "frame":  2,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 51.625925925925941,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  3,
+                             "worldFootLowestY":  284
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 153,
+                                                 162
+                                             ],
+                             "sourceRect":  [
+                                                0,
+                                                313,
+                                                313,
+                                                314
+                                            ],
+                             "footGapToPlane":  34,
+                             "alphaAtTopLeft":  0,
+                             "frame":  3,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 49.76666666666668,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  4,
+                             "worldFootLowestY":  255
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 152,
+                                                 166
+                                             ],
+                             "sourceRect":  [
+                                                313,
+                                                313,
+                                                314,
+                                                314
+                                            ],
+                             "footGapToPlane":  6,
+                             "alphaAtTopLeft":  0,
+                             "frame":  4,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 50.69629629629631,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  5,
+                             "worldFootLowestY":  283
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 150,
+                                                 168
+                                             ],
+                             "sourceRect":  [
+                                                627,
+                                                313,
+                                                313,
+                                                314
+                                            ],
+                             "footGapToPlane":  3,
+                             "alphaAtTopLeft":  0,
+                             "frame":  5,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 52.555555555555571,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  6,
+                             "worldFootLowestY":  286
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 154,
+                                                 170
+                                             ],
+                             "sourceRect":  [
+                                                940,
+                                                313,
+                                                314,
+                                                314
+                                            ],
+                             "footGapToPlane":  2,
+                             "alphaAtTopLeft":  0,
+                             "frame":  6,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 48.837037037037049,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  7,
+                             "worldFootLowestY":  287
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 156,
+                                                 167
+                                             ],
+                             "sourceRect":  [
+                                                0,
+                                                627,
+                                                313,
+                                                313
+                                            ],
+                             "footGapToPlane":  2,
+                             "alphaAtTopLeft":  0,
+                             "frame":  7,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 46.977777777777789,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  8,
+                             "worldFootLowestY":  287
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 158,
+                                                 170
+                                             ],
+                             "sourceRect":  [
+                                                313,
+                                                627,
+                                                314,
+                                                313
+                                            ],
+                             "footGapToPlane":  6,
+                             "alphaAtTopLeft":  0,
+                             "frame":  8,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 45.118518518518528,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  9,
+                             "worldFootLowestY":  283
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 156,
+                                                 168
+                                             ],
+                             "sourceRect":  [
+                                                627,
+                                                627,
+                                                313,
+                                                313
+                                            ],
+                             "footGapToPlane":  34,
+                             "alphaAtTopLeft":  0,
+                             "frame":  9,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 46.977777777777789,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  10,
+                             "worldFootLowestY":  255
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 155,
+                                                 173
+                                             ],
+                             "sourceRect":  [
+                                                0,
+                                                940,
+                                                313,
+                                                314
+                                            ],
+                             "footGapToPlane":  11,
+                             "alphaAtTopLeft":  0,
+                             "frame":  10,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 47.907407407407419,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  12,
+                             "worldFootLowestY":  278
+                         },
+                         {
+                             "sourceWaist":  [
+                                                 155,
+                                                 171
+                                             ],
+                             "sourceRect":  [
+                                                940,
+                                                627,
+                                                314,
+                                                313
+                                            ],
+                             "footGapToPlane":  1,
+                             "alphaAtTopLeft":  0,
+                             "frame":  11,
+                             "detachedComponentsOver3Pixels":  0,
+                             "translation":  [
+                                                 47.907407407407419,
+                                                 10.111111111111143
+                                             ],
+                             "sourceCell":  11,
+                             "worldFootLowestY":  288
+                         }
+                     ],
+    "frameHeight":  320
+}

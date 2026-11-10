@@ -1,0 +1,249 @@
+[
+    {
+        "slot":  0,
+        "soleSpan":  [
+                         101,
+                         263
+                     ],
+        "redRunLength":  47,
+        "beltAnchor":  [
+                           185,
+                           143
+                       ],
+        "sourceRect":  [
+                           0,
+                           0,
+                           313,
+                           313
+                       ],
+        "floor":  308
+    },
+    {
+        "slot":  1,
+        "soleSpan":  [
+                         225,
+                         240
+                     ],
+        "redRunLength":  28,
+        "beltAnchor":  [
+                           157,
+                           163
+                       ],
+        "sourceRect":  [
+                           313,
+                           0,
+                           314,
+                           313
+                       ],
+        "floor":  300
+    },
+    {
+        "slot":  2,
+        "soleSpan":  [
+                         134,
+                         173
+                     ],
+        "redRunLength":  27,
+        "beltAnchor":  [
+                           149,
+                           163
+                       ],
+        "sourceRect":  [
+                           627,
+                           0,
+                           313,
+                           313
+                       ],
+        "floor":  300
+    },
+    {
+        "slot":  3,
+        "soleSpan":  [
+                         75,
+                         89
+                     ],
+        "redRunLength":  27,
+        "beltAnchor":  [
+                           151,
+                           163
+                       ],
+        "sourceRect":  [
+                           940,
+                           0,
+                           314,
+                           313
+                       ],
+        "floor":  294
+    },
+    {
+        "slot":  4,
+        "soleSpan":  [
+                         46,
+                         60
+                     ],
+        "redRunLength":  31,
+        "beltAnchor":  [
+                           153,
+                           162
+                       ],
+        "sourceRect":  [
+                           0,
+                           313,
+                           313,
+                           314
+                       ],
+        "floor":  263
+    },
+    {
+        "slot":  5,
+        "soleSpan":  [
+                         214,
+                         230
+                     ],
+        "redRunLength":  26,
+        "beltAnchor":  [
+                           152,
+                           166
+                       ],
+        "sourceRect":  [
+                           313,
+                           313,
+                           314,
+                           314
+                       ],
+        "floor":  294
+    },
+    {
+        "slot":  6,
+        "soleSpan":  [
+                         205,
+                         231
+                     ],
+        "redRunLength":  26,
+        "beltAnchor":  [
+                           150,
+                           168
+                       ],
+        "sourceRect":  [
+                           627,
+                           313,
+                           313,
+                           314
+                       ],
+        "floor":  297
+    },
+    {
+        "slot":  7,
+        "soleSpan":  [
+                         165,
+                         216
+                     ],
+        "redRunLength":  26,
+        "beltAnchor":  [
+                           154,
+                           170
+                       ],
+        "sourceRect":  [
+                           940,
+                           313,
+                           314,
+                           314
+                       ],
+        "floor":  298
+    },
+    {
+        "slot":  8,
+        "soleSpan":  [
+                         117,
+                         163
+                     ],
+        "redRunLength":  26,
+        "beltAnchor":  [
+                           156,
+                           167
+                       ],
+        "sourceRect":  [
+                           0,
+                           627,
+                           313,
+                           313
+                       ],
+        "floor":  298
+    },
+    {
+        "slot":  9,
+        "soleSpan":  [
+                         77,
+                         94
+                     ],
+        "redRunLength":  27,
+        "beltAnchor":  [
+                           158,
+                           170
+                       ],
+        "sourceRect":  [
+                           313,
+                           627,
+                           314,
+                           313
+                       ],
+        "floor":  294
+    },
+    {
+        "slot":  10,
+        "soleSpan":  [
+                         41,
+                         54
+                     ],
+        "redRunLength":  27,
+        "beltAnchor":  [
+                           156,
+                           168
+                       ],
+        "sourceRect":  [
+                           627,
+                           627,
+                           313,
+                           313
+                       ],
+        "floor":  263
+    },
+    {
+        "slot":  11,
+        "soleSpan":  [
+                         226,
+                         244
+                     ],
+        "redRunLength":  27,
+        "beltAnchor":  [
+                           155,
+                           171
+                       ],
+        "sourceRect":  [
+                           940,
+                           627,
+                           314,
+                           313
+                       ],
+        "floor":  299
+    },
+    {
+        "slot":  12,
+        "soleSpan":  [
+                         217,
+                         233
+                     ],
+        "redRunLength":  28,
+        "beltAnchor":  [
+                           155,
+                           173
+                       ],
+        "sourceRect":  [
+                           0,
+                           940,
+                           313,
+                           314
+                       ],
+        "floor":  288
+    }
+]

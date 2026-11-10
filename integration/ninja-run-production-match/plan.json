@@ -1,0 +1,91 @@
+{
+  "task": "10.55",
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-55-ninja-run-production-match",
+  "source": "integration/ninja-run-production-match/run-source.png",
+  "sourceSha256": "b8b57a2fc95eddf2fe8da6804e2543fe97344a2d7e4a2d8f8ed5e42c248b3a8f",
+  "sourceGrid": {
+    "columns": 4,
+    "rows": 3,
+    "width": 1536,
+    "height": 1024
+  },
+  "scale": 0.76,
+  "verticalTranslation": 50.36,
+  "pelvisTargetX": 192,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "fps": 18,
+  "frameLabels": [
+    "Đón bước A",
+    "Chống – thu gót",
+    "Đạp – chuyển chân",
+    "Chuyển chân – hạ bàn chân",
+    "Hạ chân B",
+    "Đón bước B",
+    "Chống chân B",
+    "Chuyển gối B",
+    "Đạp – thu chân",
+    "Pha bay ngắn B",
+    "Hạ chân A",
+    "Nối bước A"
+  ],
+  "sourceWaistAnchors": [
+    [
+      200,
+      163
+    ],
+    [
+      173,
+      163
+    ],
+    [
+      173,
+      163
+    ],
+    [
+      149,
+      163
+    ],
+    [
+      200,
+      163
+    ],
+    [
+      174,
+      163
+    ],
+    [
+      173,
+      163
+    ],
+    [
+      181,
+      163
+    ],
+    [
+      201,
+      163
+    ],
+    [
+      175,
+      163
+    ],
+    [
+      174,
+      163
+    ],
+    [
+      181,
+      163
+    ]
+  ],
+  "referenceCombat": "docs/characters/ninja/animation/combat-idle/combat-idle-atlas.png",
+  "referenceCombatMetadata": "docs/characters/ninja/animation/combat-idle/animations.json",
+  "referenceLocomotion": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "oldRunReference": "integration/ninja-run-production-match/reference/old-run-reference.png",
+  "referenceContract": "integration/ninja-run-production-match/reference-contract.json",
+  "normalization": "One uniform0.76 scale calibrated against approved51 head/arm/torso, commonY50.36. Per-cell X registration follows hood/shoulder/sash landmarks to remove source-grid placement drift; source head-right=[301,274,274,250,301,275,274,282,302,276,275,282]. No per-frame size fitting or per-frameY compensation.11 source cells from run-leg-pass, only cell3 from run-flight-clean-pass. Run projected height differs naturally from standing."
+}

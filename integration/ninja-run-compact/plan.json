@@ -1,0 +1,91 @@
+{
+  "task": "10.54",
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-54-ninja-run-compact",
+  "source": "integration/ninja-run-compact/run-source.png",
+  "sourceSha256": "65c5b8ecd27e01af466837e0acb9cb67bb02d9e67110ed3f5fbf0a9ad76d4650",
+  "sourceGrid": {
+    "columns": 4,
+    "rows": 3,
+    "width": 1536,
+    "height": 1024
+  },
+  "scale": 0.9,
+  "verticalTranslation": 3.6,
+  "pelvisTargetX": 192,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "fps": 18,
+  "frameLabels": [
+    "Chống chân A",
+    "Thu gót sau",
+    "Chuyển chân A",
+    "Đạp chân A",
+    "Hạ chân trước",
+    "Qua chân B",
+    "Thu chân B",
+    "Đạp chân B",
+    "Pha bay ngắn",
+    "Đón đất B",
+    "Thu gót – nối vòng",
+    "Chuyển về bước A"
+  ],
+  "sourceWaistAnchors": [
+    [
+      211,
+      170
+    ],
+    [
+      211,
+      171
+    ],
+    [
+      211,
+      171
+    ],
+    [
+      211,
+      170
+    ],
+    [
+      210,
+      170
+    ],
+    [
+      210,
+      170
+    ],
+    [
+      210,
+      170
+    ],
+    [
+      211,
+      170
+    ],
+    [
+      211,
+      170
+    ],
+    [
+      211,
+      170
+    ],
+    [
+      210,
+      170
+    ],
+    [
+      211,
+      170
+    ]
+  ],
+  "referenceCombat": "docs/characters/ninja/animation/combat-idle/combat-idle-atlas.png",
+  "referenceCombatMetadata": "docs/characters/ninja/animation/combat-idle/animations.json",
+  "referenceLocomotion": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "oldRunReference": "integration/ninja-run-compact/old-run-reference.png",
+  "referenceContract": "integration/ninja-run-compact/reference-contract.json",
+  "normalization": "One uniform0.9 scale from source-pixel head/torso comparison against real approved51 and production run. Common Y translation3.6, waist-X anchors only; no generated standing control or frame-height fitting."
+}

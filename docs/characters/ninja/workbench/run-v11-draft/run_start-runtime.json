@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "kind": "development",
+  "image": "run_start.png",
+  "filter": "linear",
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "columns": 3,
+  "visual": {
+    "width": 2.4,
+    "height": 2,
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    }
+  },
+  "clips": {
+    "run_start": {
+      "fps": 10,
+      "loop": false,
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          }
+        },
+        {
+          "x": 384,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          }
+        },
+        {
+          "x": 768,
+          "y": 0,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          }
+        },
+        {
+          "x": 0,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          }
+        },
+        {
+          "x": 384,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          }
+        },
+        {
+          "x": 768,
+          "y": 320,
+          "width": 384,
+          "height": 320,
+          "sourceWidth": 384,
+          "sourceHeight": 320,
+          "offsetX": 0,
+          "offsetY": 0,
+          "pivot": {
+            "x": 192,
+            "y": 289
+          }
+        }
+      ]
+    }
+  }
+}

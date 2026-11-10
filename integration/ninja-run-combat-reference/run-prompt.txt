@@ -1,0 +1,28 @@
+Create a professional Flame Ninja RUN-CYCLE source sprite sheet for a 2D side-scrolling game. References: the BLUE ninja running sequence is MOVEMENT/BIOMECHANICS ONLY. The RED/BLACK approved Flame Ninja sheet and especially the LAST single red/black figure are the ONLY authority for CHARACTER IDENTITY, muscular bulk, proportions, eye/hood/face, red/black garments, silver gauntlets, short shins, silver shin plates, footwear and correct right-hand sword grip. Never recolor him blue or redesign him.
+
+EXACT SOURCE LAYOUT: square transparent PNG, perfectly regular FOUR columns by FOUR rows, sixteen equal square cells, fixed same camera and identical character scale. THIRTEEN figures total; three cells intentionally empty. Cell order row-major:
+row1 = APPROVED STANDING CONTROL, RUN01, RUN02, RUN03.
+row2 = RUN04, RUN05, RUN06, RUN07.
+row3 = RUN08, RUN09, RUN10, RUN11.
+row4 = RUN12, EMPTY, EMPTY, EMPTY.
+NO text, numbers, labels, frames or grid lines. Control cell must reproduce the LAST approved standing ready figure exactly (right hand gripping hilt behind head, left fist in lower-chest guard) with hood top about18% cell height and soles about83.6% cell height. All12 RUN frames must have the SAME anatomical head size, muscle bulk, torso and shin lengths and global scale as this control; do NOT fit each running bbox to the control height. Run stance naturally has lower head height because of forward lean and stride. Entire scarf, sword hilt and both feet fit in each cell with transparent padding.
+
+RUN DESIGN faithful to blue movement reference: facing RIGHT, 3/4 side-view, FAST low ninja stride. Torso pitches FORWARD20–25degrees from hips, head stays focused right with narrow original eye; not upright jogging, not leaning backward. The near anatomical RIGHT arm stays RAISED BACK: elbow up/back left of head, shallow forearm leading into the right hand which holds the same sheathed sword hilt behind the nape. Correct RIGHT thumb on upper/index side, natural wrist, four fingers wrap hilt; no inverted left-hand grip. Hilt remains one straight brown/gold short handle behind head, moving WITH shoulder/body lean, scabbard/blade hidden behind body. Far LEFT arm is bent across/in front of LOWER CHEST, fist directed forward right around chest height, SMALL controlled pump, NOT down at abdomen and not both arms trailing behind. Preserve hand-sword contact every frame. Exactly two arms, two hands and two legs.
+
+LEG MECHANICS: long OPEN strides like the blue reference, extending shins and rear leg diagonally; avoid an exaggerated high-knee compact jog or heels folded hard to butt in every pose. Knees flex naturally only for loading/passing, then extend for push-off/reach. Two distinct near/far legs retain consistent armor/shading identity. Feet cycle continuously through landing, loading, push-off, air and reach. Hips and shoulders subtly counterrotate5–8degrees; never flip entire character or turn front/back to fake swapped legs.
+Run01: near RIGHT leg reaches forward to first foot contact, far leg long trailing behind, low center.
+Run02: right support leg loads under body, rear left leg starts passing, slight compression.
+Run03: right support leg extends back through push-off, left knee/foot swings forward.
+Run04: FIRST long airborne stride, left leg reaching forward almost straight, right leg extended behind, both soles above ground.
+Run05: left/front leg reaches down, right/rear recovers with moderate knee bend.
+Run06: left front foot lowers toward ground, long near-right rear extension.
+Run07: LEFT front foot contact, right leg trailing; opposite leg phase ofRun01.
+Run08: left stance leg loads, right leg passes forward.
+Run09: left support leg extends back through push-off, right knee/foot advances.
+Run10: SECOND long airborne stride, right leg forward, left leg extended behind, both soles off ground.
+Run11: right/front leg reaches down, left/rear recovers.
+Run12: right foot lowers toward nextRun01 contact, closes the LOOP smoothly. Run12 toRun01 must not snap posture, resize, jump hip position or switch arms.
+
+Run frames have planted support soles on a shared ground baseline at83.6% cell height when in contact, airborne soles naturally above it. Hips translate only a few pixels vertically over cycle, same fixed horizontal pelvis position. DO NOT ground-align both feet in every frame, and do not move the whole figure across cells to simulate running.
+Red scarf streams BACK LEFT with restrained smooth phase-lag ripple, waist tails follow hips without disconnected red debris. Thin red waist sash sits continuously around the SAME short torso as approved. Keep black baggy trousers, original knee positions relative to hips, short armored shins; no stretched calves/longer legs or chunky new body. No visible lower sword at hip, extra hands, old dangling arm, ghost sprite, detached fragments, fire VFX or ground shadows.
+STYLE: exact approved illustrated textured pixel-art quality and palette, crisp clusters and subtle muscular shading, no smooth3D render or chibi redesign. Preserve transparency. Deliver all13figures in exact4x4 layout with three bottom-right cells empty.

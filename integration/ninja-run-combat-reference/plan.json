@@ -1,0 +1,65 @@
+{
+  "status": "CANDIDATE_PENDING_REVIEW",
+  "reviewDirectory": "docs/map01/commits/task-010-53-ninja-run-reference",
+  "source": "integration/ninja-run-combat-reference/run-arm-source.png",
+  "sourceSha256": "6c666f638550af164682a11b89f28ec49cc87f1714b04b52d25aeb1732bc2942",
+  "measurements": "integration/ninja-run-combat-reference/source-measurements.json",
+  "grid": {
+    "columns": 4,
+    "rows": 4
+  },
+  "controlCell": 0,
+  "selectedCells": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    11
+  ],
+  "controlHoodRegion": [
+    0.58,
+    0.06,
+    0.21,
+    0.2
+  ],
+  "bodyControlHeight": 251,
+  "pelvisTargetX": 192,
+  "contactSourceCell": 1,
+  "targetGround": 289,
+  "referenceCombat": "docs/characters/ninja/animation/combat-idle/combat-idle-atlas.png",
+  "referenceCombatMetadata": "docs/characters/ninja/animation/combat-idle/animations.json",
+  "referenceLocomotion": "docs/characters/ninja/animation/locomotion/flame-ninja-atlas.png",
+  "referenceContract": "integration/ninja-run-combat-reference/reference-contract.json",
+  "oldRunReference": "integration/ninja-run-combat-reference/old-run-reference.png",
+  "frameWidth": 384,
+  "frameHeight": 320,
+  "pivot": {
+    "x": 192,
+    "y": 289
+  },
+  "fps": 18,
+  "frameLabels": [
+    "Tiếp đất bước A",
+    "Chống chân / nén gối",
+    "Đạp sau / rời đất",
+    "Bay / mở sải",
+    "Đưa chân xuống",
+    "Đón bước B",
+    "Tiếp đất bước B",
+    "Chống chân / đổi hông",
+    "Đạp sau lượt hai",
+    "Bay / mở sải lượt hai",
+    "Thu sải / hạ chân",
+    "Đón đất / trả vòng"
+  ],
+  "normalization": "One shared scale from standing control hood-to-sole251px. Horizontal translation per source waist landmark; one shared vertical translation from first run contact for all12frames. Airborne feet are not ground-aligned. Final2source poses ordered by descending foot height to close loop.",
+  "productionChanged": false,
+  "runtimeChanged": false
+}

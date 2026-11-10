@@ -1,0 +1,870 @@
+{
+  "status": "DRAFT_REJECTED_FOR_PRODUCTION",
+  "visualApproval": false,
+  "technicalChecks": [
+    {
+      "frame": 1,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 100499,
+      "alphaVisible": 22074,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 2,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 100946,
+      "alphaVisible": 20623,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 3,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 100091,
+      "alphaVisible": 21446,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 4,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 99224,
+      "alphaVisible": 22344,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 5,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 99676,
+      "alphaVisible": 21848,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 6,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 99713,
+      "alphaVisible": 21802,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 7,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 94527,
+      "alphaVisible": 26900,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 8,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95526,
+      "alphaVisible": 25890,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 9,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 96755,
+      "alphaVisible": 24682,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 10,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 94569,
+      "alphaVisible": 26762,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 11,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95211,
+      "alphaVisible": 26132,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 12,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 94838,
+      "alphaVisible": 26504,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 13,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 96101,
+      "alphaVisible": 25336,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 14,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 96216,
+      "alphaVisible": 25177,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 15,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 96701,
+      "alphaVisible": 24701,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 16,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 97830,
+      "alphaVisible": 23667,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 17,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 97696,
+      "alphaVisible": 23809,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 18,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95106,
+      "alphaVisible": 26241,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 19,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 94416,
+      "alphaVisible": 26855,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 20,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95133,
+      "alphaVisible": 26191,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 21,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 96280,
+      "alphaVisible": 25109,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 22,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95541,
+      "alphaVisible": 25786,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 23,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95428,
+      "alphaVisible": 25928,
+      "edgeSolidPixels": 0
+    },
+    {
+      "frame": 24,
+      "mode": "RGBA",
+      "size": [
+        384,
+        320
+      ],
+      "alphaZero": 95066,
+      "alphaVisible": 26242,
+      "edgeSolidPixels": 0
+    }
+  ],
+  "atlasRoundTrip": "24 exact RGBA matches",
+  "idleProductionCopy": "exact RGBA match",
+  "gifDecoded": [
+    {
+      "file": "run_start-once.gif",
+      "decodedFrames": 6,
+      "durationMs": 600,
+      "frameDurations": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "file": "run_loop.gif",
+      "decodedFrames": 18,
+      "durationMs": 900,
+      "frameDurations": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    {
+      "file": "combined.gif",
+      "decodedFrames": 60,
+      "durationMs": 3300,
+      "frameDurations": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ]
+    }
+  ],
+  "warningsVerbatim": [
+    {
+      "file": "qc\\run-loop\\sheet-qc.json",
+      "id": "leg_alternation",
+      "status": "warn",
+      "value": [
+        "near",
+        "near",
+        "unclear",
+        "far",
+        "far",
+        "unclear",
+        "unclear",
+        "unclear",
+        "unclear",
+        "unclear",
+        "near",
+        "near",
+        "near",
+        "near",
+        "near",
+        "near",
+        "unclear",
+        "near"
+      ],
+      "threshold": "lead differs between i and i+n/2",
+      "verdict": "mixed: some half-cycle pairs repeat the lead",
+      "pairs": [
+        [
+          1,
+          10,
+          true
+        ],
+        [
+          3,
+          12,
+          false
+        ],
+        [
+          4,
+          13,
+          false
+        ]
+      ],
+      "mode": "auto-luminance",
+      "near_leading": 9,
+      "unclear": 7,
+      "half_cycle": {
+        "pairs": [
+          {
+            "pair": [
+              0,
+              9
+            ],
+            "iou_best_shift": 0.6361
+          },
+          {
+            "pair": [
+              1,
+              10
+            ],
+            "iou_best_shift": 0.7001
+          },
+          {
+            "pair": [
+              2,
+              11
+            ],
+            "iou_best_shift": 0.6436
+          },
+          {
+            "pair": [
+              3,
+              12
+            ],
+            "iou_best_shift": 0.7753
+          },
+          {
+            "pair": [
+              4,
+              13
+            ],
+            "iou_best_shift": 0.8183
+          },
+          {
+            "pair": [
+              5,
+              14
+            ],
+            "iou_best_shift": 0.8084
+          },
+          {
+            "pair": [
+              6,
+              15
+            ],
+            "iou_best_shift": 0.7487
+          },
+          {
+            "pair": [
+              7,
+              16
+            ],
+            "iou_best_shift": 0.8318
+          },
+          {
+            "pair": [
+              8,
+              17
+            ],
+            "iou_best_shift": 0.7574
+          }
+        ],
+        "adjacent_iou_median": 0.7739,
+        "half_cycle_iou_median": 0.7574
+      },
+      "fix": "regenerate frames 9-17 with NEAR and FAR swapped (attach frames 0-8 and the guide)"
+    },
+    {
+      "file": "qc\\run-loop\\sheet-qc.json",
+      "id": "torso_drift",
+      "status": "warn",
+      "value": 4.55,
+      "threshold": 2.0,
+      "method": "trunk",
+      "median_x": 202.5,
+      "note": "range of the torso x in game px; scale_frames --root-lock torso-x removes it"
+    },
+    {
+      "file": "qc\\run-loop\\sheet-qc.json",
+      "id": "seam",
+      "status": "warn",
+      "value": 1.55,
+      "threshold": 1.5,
+      "transitions": [
+        [
+          8,
+          9
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "note": "largest frame-to-frame change over the median step; review these joins first"
+    },
+    {
+      "file": "qc\\run-start\\sheet-qc.json",
+      "id": "identity_head_ratio",
+      "status": "fail",
+      "value": {
+        "0": 0.958,
+        "1": 0.938,
+        "2": 0.938,
+        "3": 1.042,
+        "4": 1.042,
+        "5": 1.042
+      },
+      "threshold": [
+        0.95,
+        1.05
+      ],
+      "frames": [
+        1,
+        2
+      ],
+      "note": "head scale against the median frame (master template)"
+    },
+    {
+      "file": "qc\\run-start\\sheet-qc.json",
+      "id": "torso_drift",
+      "status": "warn",
+      "value": 25.83,
+      "threshold": 2.0,
+      "method": "trunk",
+      "median_x": 196.8,
+      "note": "range of the torso x in game px; scale_frames --root-lock torso-x removes it"
+    }
+  ],
+  "matte": [
+    {
+      "group": 0,
+      "qa": {
+        "key": [
+          249.0,
+          3.0,
+          250.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0029014759682099156,
+        "semitransparent_fraction": 0.07755523538032488,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 21,
+        "visible_px": 161717,
+        "outer_ring_px": 7927,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      }
+    },
+    {
+      "group": 1,
+      "qa": {
+        "key": [
+          251.0,
+          11.0,
+          251.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.002111111111111111,
+        "semitransparent_fraction": 0.07135379079719058,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 13,
+        "visible_px": 196766,
+        "outer_ring_px": 9000,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      }
+    },
+    {
+      "group": 2,
+      "qa": {
+        "key": [
+          252.0,
+          14.0,
+          251.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0,
+        "semitransparent_fraction": 0.08731548259633455,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 35,
+        "visible_px": 186771,
+        "outer_ring_px": 8968,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      }
+    },
+    {
+      "group": 3,
+      "qa": {
+        "key": [
+          251.0,
+          8.0,
+          250.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0004138216428719222,
+        "semitransparent_fraction": 0.08479320101739583,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 0,
+        "visible_px": 195794,
+        "outer_ring_px": 9666,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      }
+    }
+  ],
+  "perFrameVisualReview": [
+    {
+      "frame": 1,
+      "status": "REFERENCE_ONLY",
+      "issues": []
+    },
+    {
+      "frame": 2,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven."
+      ]
+    },
+    {
+      "frame": 3,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Raised hand approaches handle but transition02->03 remains large."
+      ]
+    },
+    {
+      "frame": 4,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven."
+      ]
+    },
+    {
+      "frame": 5,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven."
+      ]
+    },
+    {
+      "frame": 6,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Start-to-loop upper-body size/placement discontinuity; requires local redrawing."
+      ]
+    },
+    {
+      "frame": 7,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Start-to-loop upper-body size/placement discontinuity; requires local redrawing.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift."
+      ]
+    },
+    {
+      "frame": 8,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift."
+      ]
+    },
+    {
+      "frame": 9,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift."
+      ]
+    },
+    {
+      "frame": 10,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift."
+      ]
+    },
+    {
+      "frame": 11,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift."
+      ]
+    },
+    {
+      "frame": 12,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift."
+      ]
+    },
+    {
+      "frame": 13,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation.",
+        "Inspect adjacent-group join / loop seam and foot clearance; actual generated pose does not necessarily match planned phase."
+      ]
+    },
+    {
+      "frame": 14,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 15,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 16,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation.",
+        "Inspect adjacent-group join / loop seam and foot clearance; actual generated pose does not necessarily match planned phase."
+      ]
+    },
+    {
+      "frame": 17,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 18,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 19,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation.",
+        "Inspect adjacent-group join / loop seam and foot clearance; actual generated pose does not necessarily match planned phase."
+      ]
+    },
+    {
+      "frame": 20,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 21,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 22,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 23,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation."
+      ]
+    },
+    {
+      "frame": 24,
+      "status": "REJECTED_FOR_ACCEPTANCE",
+      "issues": [
+        "Generated musculature, face/eye rendering and smoother cloth differ from exact production texture; identity/scale lock not proven.",
+        "Torso lean appears less than target30degrees; torso/holding arm too static, slight intergroup drift.",
+        "Opposite-leg half-cycle still ambiguous after targeted edit; do not accept gait alternation.",
+        "Inspect adjacent-group join / loop seam and foot clearance; actual generated pose does not necessarily match planned phase."
+      ]
+    }
+  ],
+  "limitations": [
+    "All frames inspected in contact sheet and source groups. This is not proof of physically accurate gait.",
+    "No browser playback or actual in-game travel/foot-slide validation performed.",
+    "24frames delivered as diagnostic draft; rejected poses retained for review, not silently approved."
+  ]
+}
